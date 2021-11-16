@@ -1,0 +1,48 @@
+{
+  "unversionedId": "developer-documentation/2021-11-16-uwl",
+  "id": "developer-documentation/2021-11-16-uwl",
+  "isDocsHomePage": false,
+  "title": "First Blog Post",
+  "description": "Overview",
+  "source": "@site/docs/developer-documentation/2021-11-16-uwl.md",
+  "sourceDirName": "developer-documentation",
+  "slug": "/developer-documentation/first-blog-post",
+  "permalink": "/docs/developer-documentation/first-blog-post",
+  "editUrl": "https://github.com/1KBlockID/devx_frontend/tree/develop/docs/developer-documentation/2021-11-16-uwl.md",
+  "tags": [
+    {
+      "label": "hola",
+      "permalink": "/docs/tags/hola"
+    },
+    {
+      "label": "docusaurus",
+      "permalink": "/docs/tags/docusaurus"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "first-blog-post",
+    "title": "First Blog Post",
+    "authors": {
+      "name": "Gao Wei",
+      "title": "Docusaurus Core Team",
+      "url": "https://github.com/wgao19",
+      "image_url": "https://github.com/wgao19.png"
+    },
+    "tags": [
+      "hola",
+      "docusaurus"
+    ],
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Tutorial Intro",
+    "permalink": "/docs/intro"
+  },
+  "next": {
+    "title": "Universal Web Login",
+    "permalink": "/docs/developer-documentation/uwl2"
+  }
+}

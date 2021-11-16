@@ -1,0 +1,25 @@
+{
+  "unversionedId": "2021-11-16-tesrt",
+  "id": "2021-11-16-tesrt",
+  "isDocsHomePage": false,
+  "title": "tesrt",
+  "description": "test",
+  "source": "@site/docs/2021-11-16-tesrt.md",
+  "sourceDirName": ".",
+  "slug": "/2021-11-16-tesrt",
+  "permalink": "/docs/2021-11-16-tesrt",
+  "editUrl": "https://github.com/1KBlockID/devx_frontend/tree/develop/docs/2021-11-16-tesrt.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "tesrt",
+    "author": "test",
+    "authorURL": "t",
+    "authorFBID": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Translate your site",
+    "permalink": "/docs/tutorial-extras/translate-your-site"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Recent posts",
+  "items": [
+    {
+      "title": "test",
+      "permalink": "/blog/2021/11/16/test"
+    },
+    {
+      "title": "MDX Blog Post",
+      "permalink": "/blog/mdx-blog-post"
+    },
+    {
+      "title": "Welcome",
+      "permalink": "/blog/welcome"
+    },
+    {
+      "title": "Tutorial Intro",
+      "permalink": "/blog/2021/08/08/intro"
+    },
+    {
+      "title": "MDX Blog Post",
+      "permalink": "/blog/mdx-blog-post"
+    }
+  ]
+}

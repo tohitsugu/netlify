@@ -1,0 +1,13 @@
+{
+  "name": "docusaurus",
+  "permalink": "/docs/tags/docusaurus",
+  "docs": [
+    {
+      "id": "developer-documentation/2021-11-16-uwl",
+      "title": "First Blog Post",
+      "description": "Overview",
+      "permalink": "/docs/developer-documentation/first-blog-post"
+    }
+  ],
+  "allTagsPath": "/docs/tags"
+}

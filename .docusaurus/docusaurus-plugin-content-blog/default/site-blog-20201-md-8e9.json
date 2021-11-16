@@ -1,0 +1,30 @@
+{
+  "permalink": "/blog/mdx-blog-post",
+  "editUrl": "https://github.com/1KBlockID/devx_frontend/tree/develop/blog/blog/20201.md",
+  "source": "@site/blog/20201.md",
+  "title": "MDX Blog Post",
+  "description": "Blog posts support Docusaurus Markdown features, such as MDX.",
+  "date": "2021-11-16T18:02:58.133Z",
+  "formattedDate": "November 16, 2021",
+  "tags": [
+    {
+      "label": "docusaurus",
+      "permalink": "/blog/tags/docusaurus"
+    }
+  ],
+  "readingTime": 0.175,
+  "truncated": false,
+  "authors": [
+    {
+      "name": "Sébastien Lorber",
+      "title": "Docusaurus maintainer",
+      "url": "https://sebastienlorber.com",
+      "imageURL": "https://github.com/slorber.png",
+      "key": "slorber"
+    }
+  ],
+  "nextItem": {
+    "title": "Welcome",
+    "permalink": "/blog/welcome"
+  }
+}

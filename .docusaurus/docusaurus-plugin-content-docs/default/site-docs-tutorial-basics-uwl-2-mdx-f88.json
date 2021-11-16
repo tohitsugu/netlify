@@ -1,0 +1,27 @@
+{
+  "unversionedId": "tutorial-basics/uwl2",
+  "id": "tutorial-basics/uwl2",
+  "isDocsHomePage": false,
+  "title": "Universal Web Login",
+  "description": "Overview",
+  "source": "@site/docs/tutorial-basics/uwl2.mdx",
+  "sourceDirName": "tutorial-basics",
+  "slug": "/tutorial-basics/uwl2",
+  "permalink": "/docs/tutorial-basics/uwl2",
+  "editUrl": "https://github.com/1KBlockID/devx_frontend/tree/develop/docs/tutorial-basics/uwl2.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "sidebar_position": 7
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Congratulations!",
+    "permalink": "/docs/tutorial-basics/congratulations"
+  },
+  "next": {
+    "title": "Manage Docs Versions",
+    "permalink": "/docs/tutorial-extras/manage-docs-versions"
+  }
+}

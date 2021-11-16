@@ -1,0 +1,27 @@
+{
+  "unversionedId": "developer-documentation/uwl2",
+  "id": "developer-documentation/uwl2",
+  "isDocsHomePage": false,
+  "title": "Universal Web Login",
+  "description": "Overview",
+  "source": "@site/docs/developer-documentation/uwl2.mdx",
+  "sourceDirName": "developer-documentation",
+  "slug": "/developer-documentation/uwl2",
+  "permalink": "/docs/developer-documentation/uwl2",
+  "editUrl": "https://github.com/1KBlockID/devx_frontend/tree/develop/docs/developer-documentation/uwl2.mdx",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "First Blog Post",
+    "permalink": "/docs/developer-documentation/first-blog-post"
+  },
+  "next": {
+    "title": "Create a Page",
+    "permalink": "/docs/tutorial-basics/create-a-page"
+  }
+}

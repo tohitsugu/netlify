@@ -1,0 +1,17 @@
+{
+  "permalink": "/blog/2021/11/16/test",
+  "editUrl": "https://github.com/1KBlockID/devx_frontend/tree/develop/blog/blog/2021-11-16-test.md",
+  "source": "@site/blog/2021-11-16-test.md",
+  "title": "test",
+  "description": "bla fwf",
+  "date": "2021-11-16T18:32:26.285Z",
+  "formattedDate": "November 16, 2021",
+  "tags": [],
+  "readingTime": 0.02,
+  "truncated": false,
+  "authors": [],
+  "nextItem": {
+    "title": "MDX Blog Post",
+    "permalink": "/blog/mdx-blog-post"
+  }
+}
