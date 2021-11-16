@@ -10,16 +10,16 @@
       "permalink": "/blog/mdx-blog-post"
     },
     {
-      "title": "UWL",
-      "permalink": "/blog/uwl"
-    },
-    {
       "title": "Welcome",
       "permalink": "/blog/welcome"
     },
     {
       "title": "Tutorial Intro",
       "permalink": "/blog/2021/08/08/intro"
+    },
+    {
+      "title": "MDX Blog Post",
+      "permalink": "/blog/mdx-blog-post"
     }
   ]
 }
