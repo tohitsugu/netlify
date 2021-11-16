@@ -1,0 +1,17 @@
+curl --location --request POST 'https://1k-dev.1kosmos.net/api/r2/otp/generate' \
+--header 'Content-Type: application/json' \
+--header 'publickey: KptAI9Vk/79odk5lsWD1DVzI2rkK5ZoLtcbSJqkgT7YdP6UTBszFjPTrDReL9hAPVk0O/40tW6RzVUYqRAKmBg==' \
+--header 'licensekey: ODk2NmJiNWRmNTVhNjJhZs77wQSQjGnFsB22gHPp3bKwaR6tqrWLJOKZQqrFsK0rycfAWr4BQux2dYUYg6rR7fjwlcc=' \
+--header 'requestid: Y2NhZjVkNDk0MTFlM2Y4MrpQcRiKd2CfNTVaa9QUolaQqZVPMKZaLCDWt9SmgfBjCDmDtDVg592woKRj0k6ePhUkNqgGSq8RzIxvUmryau7CmcUVDufyYe6uHGbHDrcag9ImRUmbFlheJIqpq76q6I6h7y+pbvXrMCQeGSU=' \
+--header 'Cookie: INGRESSCOOKIE=23f6cdc32dffa4cafe18f04a31d2e548' \
+--data-raw '{
+	"userId": "ian.french",
+	"userPublicKey_": "KptAI9Vk/79odk5lsWD1DVzI2rkK5ZoLtcbSJqkgT7YdP6UTBszFjPTrDReL9hAPVk0O/40tW6RzVUYqRAKmBg==",
+	"communityId": "60bd9eb9d311d53f58bcc83b",
+    "tenantId": "60bd9eb8d311d53f58bcc83a",
+	"emailTo": "ian.french@1kosmos.com",
+    "smsTo": "14156507258",
+    "smsISDCode": "1",
+    "smsTemplateB64_": "RG8gbm90IHNoYXJlISB7e290cH19IGlzIHlvdXIgT1RQIGZvciBDUk4gdGJkLWJ5LWtvdGFrIHRvIGxvZyBpbnRvIEtvdGFrIE5ldCBCYW5raW5nLiBUbyByZXBvcnQgZnJhdWQsIGNsaWNrIGtvdGFrLmNvbS9mcmF1ZCAtIEtvdGFrIEJhbms=",
+    "trace": true
+}'
