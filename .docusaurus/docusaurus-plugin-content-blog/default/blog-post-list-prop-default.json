@@ -2,6 +2,10 @@
   "title": "Recent posts",
   "items": [
     {
+      "title": "intro",
+      "permalink": "/blog/2021/08/08/intro"
+    },
+    {
       "title": "test",
       "permalink": "/blog/2021/11/16/test"
     },
@@ -12,10 +16,6 @@
     {
       "title": "Welcome",
       "permalink": "/blog/welcome"
-    },
-    {
-      "title": "Tutorial Intro",
-      "permalink": "/blog/2021/08/08/intro"
     },
     {
       "title": "MDX Blog Post",

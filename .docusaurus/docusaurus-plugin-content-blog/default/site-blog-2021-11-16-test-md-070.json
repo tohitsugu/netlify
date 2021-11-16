@@ -10,6 +10,10 @@
   "readingTime": 0.02,
   "truncated": false,
   "authors": [],
+  "prevItem": {
+    "title": "intro",
+    "permalink": "/blog/2021/08/08/intro"
+  },
   "nextItem": {
     "title": "MDX Blog Post",
     "permalink": "/blog/mdx-blog-post"

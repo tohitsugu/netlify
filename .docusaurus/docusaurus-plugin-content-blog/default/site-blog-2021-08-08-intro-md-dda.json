@@ -2,20 +2,16 @@
   "permalink": "/blog/2021/08/08/intro",
   "editUrl": "https://github.com/1KBlockID/devx_frontend/tree/develop/blog/blog/2021-08-08-intro.md",
   "source": "@site/blog/2021-08-08-intro.md",
-  "title": "Tutorial Intro",
-  "description": "Let's discover Docusaurus in less than 5 minutes.",
-  "date": "2021-08-08T00:00:00.000Z",
-  "formattedDate": "August 8, 2021",
+  "title": "intro",
+  "description": "test",
+  "date": "2021-11-16T18:46:27.850Z",
+  "formattedDate": "November 16, 2021",
   "tags": [],
   "readingTime": 0.395,
   "truncated": false,
   "authors": [],
-  "prevItem": {
-    "title": "Welcome",
-    "permalink": "/blog/welcome"
-  },
   "nextItem": {
-    "title": "MDX Blog Post",
-    "permalink": "/blog/mdx-blog-post"
+    "title": "test",
+    "permalink": "/blog/2021/11/16/test"
   }
 }

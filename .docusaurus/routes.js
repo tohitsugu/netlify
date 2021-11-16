@@ -40,7 +40,7 @@ export default [
   },
   {
     path: '/blog',
-    component: ComponentCreator('/blog','e0e'),
+    component: ComponentCreator('/blog','099'),
     exact: true
   },
   {
@@ -70,12 +70,12 @@ export default [
   },
   {
     path: '/blog/mdx-blog-post',
-    component: ComponentCreator('/blog/mdx-blog-post','826'),
+    component: ComponentCreator('/blog/mdx-blog-post','80a'),
     exact: true
   },
   {
     path: '/blog/mdx-blog-post',
-    component: ComponentCreator('/blog/mdx-blog-post','80a'),
+    component: ComponentCreator('/blog/mdx-blog-post','826'),
     exact: true
   },
   {
@@ -85,7 +85,7 @@ export default [
   },
   {
     path: '/blog/tags/docusaurus',
-    component: ComponentCreator('/blog/tags/docusaurus','7d3'),
+    component: ComponentCreator('/blog/tags/docusaurus','d77'),
     exact: true
   },
   {
