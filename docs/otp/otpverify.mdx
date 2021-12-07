@@ -1,0 +1,52 @@
+---
+sidebar_position: 3
+slug: /otp/verify
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+#  Verifying BlockID One-Time Passcodes
+
+## Verifying a One-Time Passcode
+
+
+As part of your sign-in process, users will receive an email containing a one-time passcode. Users will need to enter that one-time passcode on your application or website in order to authenticate their sign-in. 
+
+:::danger
+If an incorrect code is sent more than three times within a 15 (?) minute window, the BlockID User account will be temporarily blocked by our servers. When an account is blocked, users will be unable to send or verify one-time passcodes. Accounts will automatically be unlocked after sixty minutes (?)
+:::
+
+### Using the BlockID SDK
+
+
+<Tabs groupId="operating-systems">
+  <TabItem value="node" label="Node.js">  
+
+```jsx title=OTPProvider.js 
+//content here
+```
+</TabItem>
+ <TabItem value="php" label="PHP" className="gray-text">
+(Coming Soon)
+</TabItem>
+</Tabs>
+
+
+## Unlocking a Locked Account
+
+BlockID Community Administrators can force unlock a one-time passcode for a user by sending an `unlock` request to the **[BlockID Developer API](https://blockid-trial.1kosmos.net/swagger-ui.html)**. 
+
+### Unlocking a Locked Account using the BlockID SDK
+
+<Tabs groupId="operating-systems">
+  <TabItem value="node" label="NodeJS">  
+  ```jsx```	
+</TabItem>
+ <TabItem value="php" label="PHP" className="gray-text">
+(Coming Soon)
+</TabItem>
+</Tabs>
+
+
+

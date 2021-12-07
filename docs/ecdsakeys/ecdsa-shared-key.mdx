@@ -1,0 +1,57 @@
+---
+sidebar_position: 3
+slug: /ecdsa/create-shared-key
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Creating an ECDSA Server Shared Key
+
+## Generating an ECDSA Cryptographic Keypair
+
+//Users can generate a new keypair by using our SDK. This is a command-line application and requires that you have [NodeJS](https://nodejs.org/). 
+
+
+<Tabs groupId="operating-systems">
+  <TabItem value="node" label="NodeJS">  
+
+```js title=keyHelper.js
+var axios = require('axios');
+
+const { createSharedKey,  generateKeyPair } = require('./BIDECDSA');
+
+let myKeySet = generateKeyPair();
+
+const userPrivateKey = myKeySet[0];
+const userPublicKey = myKeySet[1];
+
+
+var serverPublicKeyConfig = {
+  method: 'get',
+  url: 'https://1k-dev.1kosmos.net/api/r1/community/default/publickeys',
+  headers: { 
+    'x-tenanttag': '1kosmos'
+  }
+};
+
+axios(serverPublicKeyConfig)
+.then(function (response) {
+  let serverPublicKey = response.data.publicKey;
+  let serverSharedKey = createSharedKey(userPrivateKey, response.data.publicKey);
+  console.log('User public key: ',userPublicKey);
+  console.log('User private key: ', userPrivateKey);
+  console.log('Server public key: ', serverPublicKey);
+  console.log('Generated server shared key: ', serverSharedKey);
+})
+.catch(function (error) {
+  console.log(error);
+});
+```
+ </TabItem>
+ <TabItem value="php" label="PHP" className="gray-text">
+(Coming Soon)
+</TabItem>
+</Tabs>
+
+
