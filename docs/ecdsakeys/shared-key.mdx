@@ -2,14 +2,25 @@
 sidebar_position: 4
 slug: /ecdsa/shared-key
 ---
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-# ECDSA Shared Key
+# Creating a Shared Key
 
 ## Creating a Shared Key
 
+:::caution
+The **BlockID SDK** handles ECDSA key implementation and is recommended for most users.
+	
+Developers can create their own implementation if they desire but should proceed with caution.  
+:::
+ 
+
+the BlockID SDK . In  most situations, users will ***not*** need create their own **Shared Key**
+
 In addition to the **BlockID Platform Public Key**, the **User Private Key** and the **User Public Key**, the **[BlockID Developer API](https://blockid-trial.1kosmos.net/swagger-ui.html)** requires certain sensitive  to be encrypted with an ECDSA **Shared Key**. 
 
-The **Shared Key** is a cryptographic key that is computed using the **User Private Key** and the **BlockID Platform Public Key** as input. The **Shared Key** can be created using ECDSA node.js libraries 
+The **Shared Key** is a cryptographic key that is computed using the **User Private Key** and the **BlockID Platform Public Key** as input. A **Shared Key** can be created after installing the `blockid-nodejs-helpers` package, which contains, the required ECDSA libraries for node.js. 
 
 
 
@@ -22,25 +33,93 @@ First, we need to install the `blockid-nodejs-helpers` npm package, which contai
 Open your terminal emulator and execute the following command:
 
 
-```bash	title="Terminal Emulator"
+```bash title="Terminal Emulator"
 npm i blockid-nodejs-helpers
 ```
+
 
 This will download and install the ECDSA libraries and some helper files containing all the functions needed to create new keys, or to encrypt and decrypt data.
  
 
 Once the package is installed we can import and use the ECDSA key functions by defining them in a node.js project. 
 
+<Tabs groupId="operating-systems">
+  <TabItem value="node" label="Node.js">  
 
-Create a new node.js file, or edit an existing file, and add the following lines:
+```jsx title="REQUEST"
 
- ```node title="myproject.js"
+const BIDECDSA = require('nodejs-helper-files/BIDECDSA.js');
 const TenantProvider = require('nodejs-helper-files/TenantProvider');
 
-const { publicKey: serverPublicKey } = TenantProvider.getPublicKey();
-
-
+const myKeySet = BIDECDSA.generateKeyPair();
+const userPrivateKey = myKeySet[0];
+const userPublicKey = myKeySet[1];
 ```
+
+</TabItem>
+  <TabItem value="php" label="PHP" className="gray-text">
+(Coming Soon)
+</TabItem>
+</Tabs>
+
+Now that all of our keys are defined, we can create a shared key at the point at it is needed in our code. When communicating with the **[BlockID Developer API](https://blockid-trial.1kosmos.net/swagger-ui.html)** the **Shared Key** is used 
+## Viewing Your Keys
+
+Ordinarily, we do not need to worry about viewing the individual keys so long as they are being implemented correctly in the code.   
+Create a new file, or edit an existing file, and add the following lines:
+
+    
+
+<Tabs groupId="operating-systems">
+  <TabItem value="node" label="Node.js">  
+
+```jsx title="REQUEST"
+const BIDECDSA = require('nodejs-helper-files/BIDECDSA.js');
+const TenantProvider = require('nodejs-helper-files/TenantProvider');
+
+const myKeySet = BIDECDSA.generateKeyPair();
+const userPrivateKey = myKeySet[0];
+const userPublicKey = myKeySet[1];
+
+async function showKeys() {
+	const { publicKey: serverPublicKey } = await TenantProvider.getPublicKey();
+	const serverSharedKey = BIDECDSA.createSharedKey(userPrivateKey, serverPublicKey);
+	console.log('BlockID Platform Key: ', JSON.stringify(serverPublicKey));
+	console.log('Shared Key: ', JSON.stringify(serverSharedKey));
+	console.log('User Private Key: ', JSON.stringify(myKeySet[0]));
+	console.log('User Public Key: ', JSON.stringify(myKeySet[1]));
+}
+showKeys();
+```
+</TabItem>
+  <TabItem value="php" label="PHP" className="gray-text">
+(Coming Soon)
+</TabItem>
+</Tabs>
+
+
+
+
+Now, we can run this code and see all our keys:
+
+    
+
+<Tabs groupId="operating-systems">
+  <TabItem value="node" label="Node.js">  
+
+```bash title=RESPONSE
+node myproject.js
+
+BlockID Platform Key:  "dkW7xYymDr4Rh4wEGazMdtiDzaGQtzgfby7F/z1eJchUjebTmYxkKcW7cHAg12zFWYEeJF9erjwoKw0BOHqtYw=="
+Shared Key:  "eB4SaM0cBJgSmFfVCi+U/LpGDhuSObiIrvjFqubBm2w="
+User Private Key:  "gegXyYzf+VJ7ERmEjt5WjMvupi8drgWE6Ms7A7+s7ps="
+User Public Key:  "VyR0JnE6gYW8axOhDwciiERMDHsNc+FdtPOgpXUHjb+bA5SWMsz3n3L39AaRMSYfhyPMG4bgvvfdO9ddGFbt+A=="
+```
+</TabItem>
+  <TabItem value="php" label="PHP" className="gray-text">
+(Coming Soon)
+</TabItem>
+</Tabs>
 
 
 

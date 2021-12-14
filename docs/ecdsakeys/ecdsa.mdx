@@ -10,14 +10,38 @@ import TabItem from '@theme/TabItem';
 
 ## ECDSA Encryption
 
-The **[BlockID Developer API](https://blockid-trial.1kosmos.net/swagger-ui.html)** requires that all network requests are encrypted using Elliptic Curve Digital Signature Algorithm -- or **ECDSA**. To accomplish this, each user will be issued a cryptographic keypair consisting of a **User Private Key** and a **User Public Key**. These will be generated anew each time you login to the **[BlockID Developer Dashboard](https://1k-dev.1kosmos.net/devportal/)**, and BlockID Community Administrators or other personnel will ***never*** have access to them. Users can also generate their own keypair at any time if they prefer.  
+:::caution
+The **BlockID SDK** handles ECDSA key implementation and is recommended for most users.
+	
+Developers can create their own implementation if they desire but should proceed with caution.  
+:::
+ 
 
-The **[BlockID Developer API](https://blockid-trial.1kosmos.net/swagger-ui.html)** also has it's own keypair, the **BlockID Platform Private Key** and the **BlockID Platform Public Key**. 
+The BlockID Developer API was designed with a heavy emphasis on security, and features end-to-end encryption. All network requests are protected using **E**lliptic **C**urve **D**igital **S**ignature **A**lgorithm -- or **ECDSA** encryption keys.
 
-Users will also need to generate a **Shared Key**. The **Shared Key** is cryptographically generated using a tool by combining the **User Private Key** and the **Server Public Key**.
 
-All network requests to the **[BlockID Developer API](https://blockid-trial.1kosmos.net/swagger-ui.html)** need to encrypted against the **Server Shared Key** before transmission to the API. End-to-end encryption ensures that all communication between users and our API is fully secured to the highest standards. 
+### Key Management
 
+When a user account is created, a cryptographic keypair is made consisting of a **User Private Key** and a **User Public Key**. These keys will be regenerated anew each time the user logins to the **[BlockID Developer Dashboard](https://1k-dev.1kosmos.net/devportal/)**. 
+
+The **[BlockID Developer API](https://blockid-trial.1kosmos.net/swagger-ui.html)** also has it's own keypair, but users and developers will only have access to the BlockID Platform Public Key, also called the **BlockID Platform Key**. 
+
+Finally, there is the **Shared Key**. The **Shared Key** is cryptographically generated against the **User Private Key** and the **BlockID Platform Public Key**.
+
+All network requests to the **[BlockID Developer API](https://blockid-trial.1kosmos.net/swagger-ui.html)** need to encrypted using the **Shared Key** before transmission to the API. 
+
+:::warning 
+BlockID Community Administrators do not have access to user key information. 
+:::
+ 
+
+### Summary
+
+To summarize, the **ECDSA** keys used are: 
+- **User Private Key**
+- **User Public Key**
+- **BlockID Platform Key**
+- **Shared Key**
 
 
 
