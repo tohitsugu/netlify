@@ -22,7 +22,7 @@ const config = {
       '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
+        docs: {[require('docusaurus-remark-plugin-codetabs'), 
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/1KBlockID/devx_frontend/tree/develop/',
