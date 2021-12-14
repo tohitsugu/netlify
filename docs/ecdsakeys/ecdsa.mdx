@@ -6,9 +6,9 @@ slug: /ecdsa
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# ECDSA Public and Private Keys
+# ECDSA Overview
 
-## ECDSA Encryption Overview
+## ECDSA Encryption
 
 The **[BlockID Developer API](https://blockid-trial.1kosmos.net/swagger-ui.html)** requires that all network requests are encrypted using Elliptic Curve Digital Signature Algorithm -- or **ECDSA**. To accomplish this, each user will be issued a cryptographic keypair consisting of a **User Private Key** and a **User Public Key**. These will be generated anew each time you login to the **[BlockID Developer Dashboard](https://1k-dev.1kosmos.net/devportal/)**, and BlockID Community Administrators or other personnel will ***never*** have access to them. Users can also generate their own keypair at any time if they prefer.  
 
@@ -18,10 +18,14 @@ Users will also need to generate a **Shared Key**. The **Shared Key** is cryptog
 
 All network requests to the **[BlockID Developer API](https://blockid-trial.1kosmos.net/swagger-ui.html)** need to encrypted against the **Server Shared Key** before transmission to the API. End-to-end encryption ensures that all communication between users and our API is fully secured to the highest standards. 
 
-//After being decrypted and processed on the server side, the  API response is then encrypted and sent back to the user where it will, ensuring all communication is fully secure and protected. 
+
 
 
 <br/>
 <img src='../../../img/ecdsa/ecdsaprimer.jpg' width='700' align='center' /> 
 <br/>
+
+
+
+
 

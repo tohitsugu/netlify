@@ -1,0 +1,48 @@
+---
+sidebar_position: 4
+slug: /ecdsa/shared-key
+---
+
+# ECDSA Shared Key
+
+## Creating a Shared Key
+
+In addition to the **BlockID Platform Public Key**, the **User Private Key** and the **User Public Key**, the **[BlockID Developer API](https://blockid-trial.1kosmos.net/swagger-ui.html)** requires certain sensitive  to be encrypted with an ECDSA **Shared Key**. 
+
+The **Shared Key** is a cryptographic key that is computed using the **User Private Key** and the **BlockID Platform Public Key** as input. The **Shared Key** can be created using ECDSA node.js libraries 
+
+
+
+Users can generate a new ECSDA **Shared Key**  and view the **BlockID Platform Public Key** with the help of ECDSA node.js libraries created by BlockID for this purpose. 
+
+
+
+First, we need to install the `blockid-nodejs-helpers` npm package, which contains all the necessary ECDSA libraries that we will need. 
+
+Open your terminal emulator and execute the following command:
+
+
+```bash	title="Terminal Emulator"
+npm i blockid-nodejs-helpers
+```
+
+This will download and install the ECDSA libraries and some helper files containing all the functions needed to create new keys, or to encrypt and decrypt data.
+ 
+
+Once the package is installed we can import and use the ECDSA key functions by defining them in a node.js project. 
+
+
+Create a new node.js file, or edit an existing file, and add the following lines:
+
+ ```node title="myproject.js"
+const TenantProvider = require('nodejs-helper-files/TenantProvider');
+
+const { publicKey: serverPublicKey } = TenantProvider.getPublicKey();
+
+
+```
+
+
+
+
+
