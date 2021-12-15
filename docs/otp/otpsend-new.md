@@ -90,3 +90,4 @@ var SDK = require('nodejs-helper-files/OTPProvider.js')
 SDK.GenerateOTP('john.smith', { emailTo: "john.smith@mysite.com", smsTo: "1234567890", smsISDCode: "1" });
 ```
 
+  
