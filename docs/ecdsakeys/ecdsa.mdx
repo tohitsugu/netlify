@@ -17,7 +17,7 @@ Developers can create their own implementation if they desire but should proceed
 :::
  
 
-The BlockID Developer API was designed with a heavy emphasis on security, and features end-to-end encryption. All network requests are protected using **E**lliptic **C**urve **D**igital **S**ignature **A**lgorithm -- or **ECDSA** encryption keys.
+The BlockID Developer API was designed with a heavy emphasis on security, and features **E**lliptic **C**urve **D**igital **S**ignature **A**lgorithm -- or **ECDSA** encryption.  
 
 
 ### Key Management
@@ -26,9 +26,11 @@ When a user account is created, a cryptographic keypair is made consisting of a 
 
 The **[BlockID Developer API](https://blockid-trial.1kosmos.net/swagger-ui.html)** also has it's own keypair, but users and developers will only have access to the BlockID Platform Public Key, also called the **BlockID Platform Key**. 
 
-Finally, there is the **Shared Key**. The **Shared Key** is cryptographically generated against the **User Private Key** and the **BlockID Platform Public Key**.
+Finally, there is the **Shared Key**. The Shared Key is cryptographically generated against the User Private Key and the BlockID Platform Key.
+ 
 
-All network requests to the **[BlockID Developer API](https://blockid-trial.1kosmos.net/swagger-ui.html)** need to encrypted using the **Shared Key** before transmission to the API. 
+All network requests to the [BlockID Developer API](https://blockid-trial.1kosmos.net/swagger-ui.html) need to be encrypted using a valid Shared Key. 
+
 
 :::warning 
 BlockID Community Administrators do not have access to user key information. 

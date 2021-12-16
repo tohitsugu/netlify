@@ -107,7 +107,6 @@ If desired, we can send the one-time passcode to a user's email and phone at the
 
 ```jsx title=MyProject.js
 var OTP = require('nodejs-helper-files/OTPProvider.js')
-
 OTP.GenerateOTP('john.smith', { emailTo: "john.smith@mysite.com", smsTo: "1234567890", smsISDCode: "1" });
 ```
 </TabItem>

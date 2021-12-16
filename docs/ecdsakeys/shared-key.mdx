@@ -5,9 +5,9 @@ slug: /ecdsa/shared-key
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Creating a Shared Key
+# Shared Key
 
-## Creating a Shared Key
+## Shared Key Overview
 
 :::caution
 The **BlockID SDK** handles ECDSA key implementation and is recommended for most users.
@@ -16,62 +16,52 @@ Developers can create their own implementation if they desire but should proceed
 :::
  
 
-the BlockID SDK . In  most situations, users will ***not*** need create their own **Shared Key**
+The **Shared Key** is an ECDSA encryption key that is computed using the **User Private Key** and the **BlockID Platform Key** as input
 
-In addition to the **BlockID Platform Public Key**, the **User Private Key** and the **User Public Key**, the **[BlockID Developer API](https://blockid-trial.1kosmos.net/swagger-ui.html)** requires certain sensitive  to be encrypted with an ECDSA **Shared Key**. 
-
-The **Shared Key** is a cryptographic key that is computed using the **User Private Key** and the **BlockID Platform Public Key** as input. A **Shared Key** can be created after installing the `blockid-nodejs-helpers` package, which contains, the required ECDSA libraries for node.js. 
+All network requests to the **[BlockID Developer API](https://blockid-trial.1kosmos.net/swagger-ui.html)** need to be encrypted using a valid Shared Key. 
 
 
+## Getting Started
 
-Users can generate a new ECSDA **Shared Key**  and view the **BlockID Platform Public Key** with the help of ECDSA node.js libraries created by BlockID for this purpose. 
+### Install the BlockID SDK
+
+The `blockid-nodejs-helpers` npm package contains the BlockID Node.js SDK, as well as all the necessary ECDSA libraries needed for creating keys, and encrypting or decrypting data.  
+
+The `blockid-nodejs-helpers` package can be installed from the command-line with the following command:
 
 
-
-First, we need to install the `blockid-nodejs-helpers` npm package, which contains all the necessary ECDSA libraries that we will need. 
-
-Open your terminal emulator and execute the following command:
-
-
-```bash title="Terminal Emulator"
+```bash 
 npm i blockid-nodejs-helpers
 ```
 
+After installation, the BlockID SDK and ECDCSA ibraries can be found in the `<project root>/.node_modules/blockid-nodejs-helpers` folder.  
 
-This will download and install the ECDSA libraries and some helper files containing all the functions needed to create new keys, or to encrypt and decrypt data.
- 
+## Creating a Shared Key
 
 Once the package is installed we can import and use the ECDSA key functions by defining them in a node.js project. 
 
-<Tabs groupId="operating-systems">
-  <TabItem value="node" label="Node.js">  
 
 ```jsx title="REQUEST"
 
 const BIDECDSA = require('nodejs-helper-files/BIDECDSA.js');
-const TenantProvider = require('nodejs-helper-files/TenantProvider');
+const SDK = require('nodejs-helper-files/BIDSDK.js');
 
 const myKeySet = BIDECDSA.generateKeyPair();
 const userPrivateKey = myKeySet[0];
 const userPublicKey = myKeySet[1];
+const { publicKey: serverPublicKey } = await SDK.getPublicKey();
+const serverSharedKey = BIDECDSA.createSharedKey(userPrivateKey, serverPublicKey);
 ```
 
-</TabItem>
-  <TabItem value="php" label="PHP" className="gray-text">
-(Coming Soon)
-</TabItem>
-</Tabs>
 
-Now that all of our keys are defined, we can create a shared key at the point at it is needed in our code. When communicating with the **[BlockID Developer API](https://blockid-trial.1kosmos.net/swagger-ui.html)** the **Shared Key** is used 
-## Viewing Your Keys
 
-Ordinarily, we do not need to worry about viewing the individual keys so long as they are being implemented correctly in the code.   
+## Viewing the Shared Key
+
+The Shared Key is created at the time it is needed and changes with every network request.    
+[BlockID Developer API](https://blockid-trial.1kosmos.net/swagger-ui.html)    
 Create a new file, or edit an existing file, and add the following lines:
 
     
-
-<Tabs groupId="operating-systems">
-  <TabItem value="node" label="Node.js">  
 
 ```jsx title="REQUEST"
 const BIDECDSA = require('nodejs-helper-files/BIDECDSA.js');
@@ -91,11 +81,6 @@ async function showKeys() {
 }
 showKeys();
 ```
-</TabItem>
-  <TabItem value="php" label="PHP" className="gray-text">
-(Coming Soon)
-</TabItem>
-</Tabs>
 
 
 
@@ -104,8 +89,7 @@ Now, we can run this code and see all our keys:
 
     
 
-<Tabs groupId="operating-systems">
-  <TabItem value="node" label="Node.js">  
+
 
 ```bash title=RESPONSE
 node myproject.js
@@ -115,13 +99,9 @@ Shared Key:  "eB4SaM0cBJgSmFfVCi+U/LpGDhuSObiIrvjFqubBm2w="
 User Private Key:  "gegXyYzf+VJ7ERmEjt5WjMvupi8drgWE6Ms7A7+s7ps="
 User Public Key:  "VyR0JnE6gYW8axOhDwciiERMDHsNc+FdtPOgpXUHjb+bA5SWMsz3n3L39AaRMSYfhyPMG4bgvvfdO9ddGFbt+A=="
 ```
-</TabItem>
-  <TabItem value="php" label="PHP" className="gray-text">
-(Coming Soon)
-</TabItem>
-</Tabs>
 
 
-
+This will download and install the ECDSA libraries and some helper files containing all the functions needed to create new keys, or to encrypt and decrypt data.
+ 
 
 
