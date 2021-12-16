@@ -89,6 +89,7 @@ var SDK = require('nodejs-helper-files/OTPProvider.js')
 SDK.GenerateOTP('john.smith', { emailTo: "john.smith@mysite.com", smsTo: "1234567890", smsISDCode: "1" });
 ```
 
+<<<<<<< HEAD
 ## Troubleshooting
 
 Sometimes the SDK doesn't function as expected and returns an error message.  Common error messages users might see inlcude: 
@@ -123,3 +124,6 @@ Accounts will automatically unlock after fifteen (15) minutes.
 Tenant and community administrators can unlock a user account at any time. See [Unlocking a Locked Account](/docs/otp/verify#Unlock) for more information.   
 
 
+=======
+  
+>>>>>>> 244f3f4fe653cb6149d91d88772a3fe6dcec5c1c
