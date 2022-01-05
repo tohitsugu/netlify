@@ -1,51 +1,40 @@
 ---
 sidebar_position: 2
 slug: /otp
+id: otp1
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-
+import OTPBrowser from './assets/otpbrowser.png'
+import BrowserWindow from '@site/src/components/BrowserWindow';
 
 # OTP Authentication
 
-## One-Time Passcode Overview
 
-BlockID one-time passcodes are a great way to add additional authentication to your login experience. As part of your sign-in process, users will receive an SMS message or an email containing a one-time passcode after entering their username and password. Users will need to verify that one-time passcode on your application or website in order to complete their sign-in. 
+
+BlockID one-time passcodes are a great way to add additional authentication to your login experience. Integration is simple using our SDK and only requires a few lines of code. 
+
+BlockID one-time passcodes work with all valid email addresses. Phone numbers from most countries are currently supported. 
+
+## **How it Works**
+
+As part of your sign-in process, users will receive an SMS message or an email containing a one-time passcode after entering their username and password. 
+
+Users will need to verify that one-time passcode on your application or website to complete their sign-in.
+
+<BrowserWindow url="http://blockid-trial.1kosmos.net/">
+<img src={OTPBrowser} alt="Example banner" />
+</BrowserWindow>
  
 
+One-Time Passcodes can be sent via **[SMS](/docs/otp/request#sending-a-one-time-passcode-via-sms)** or **[Email](/docs/otp/request#sending-a-one-time-passcode-via-email)**. 
 
-One-Time Passcodes can be sent via **[SMS](/docs/otp/send)** or **[Email](/docs/otp/send)**. 
+### Requirements
 
-### Required Information
-
-
-To generate a one time passcode you will need the following information from your **[BlockID Developer Dashboard](https://1k-dev.1kosmos.net/devportal/)**:
-
- - **Community ID**
- - **Your License Key**
- - **Your Request ID**
- - **Your Tenant ID**
- 
-
-You will also need the following **[ECDSA Cryptographic Key](/docs/ecdsa)** information in order to communicate with our API.     
-
- - **User Private Key**
- - **User Public Key**
- - **BlockID Platform Public Key** 
- - **Shared Key**
-
-For more information about ECDSA Keys, please visit **[ECDSA Key Overview](/docs/ecdsa)**  
+- BlockID SDK - installed and initialized with license key and tenant information.
+- Phone number or email address you wish to send the one-time passcode to.
 
 
-Finally, you will also need the **Email** or **Phone Number** of the user you wish to authenticate. 
- 
-
-
-
-
-
-
-
-
+See [Getting Started](/docs/index#gettingstarted) for more information on installing and initializng the BlockID SDK. 
 

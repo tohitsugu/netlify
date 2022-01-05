@@ -1,0 +1,53 @@
+---
+sidebar_position: 2
+slug: /api/ecdsa
+---
+import myImageUrl from './assets/ecdsaprimer.jpg';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# ECDSA Encryption 
+ 
+
+The BlockID Developer API was designed with a heavy emphasis on security, and features **E**lliptic **C**urve **D**igital **S**ignature **A**lgorithm -- or **ECDSA** encryption.  
+
+
+## How it Works 
+
+The BlockID Developer API and our Node.js SDK both use ECDSA cryptographic keys to encrypt and decrypt the data that travels back and forth between BlockID servers and user machines.   
+
+
+### 1. User Keys
+
+When a user account is created, a cryptographic keypair is made consisting of a **user private key** and a **user public key**. These keys will be regenerated anew each time the user logins to the **[BlockID Developer Dashboard](https://1k-dev.1kosmos.net/devportal/)**. 
+
+:::warning 
+BlockID Community and Tenant Administrators do not have access to user key information. 
+:::
+ 
+
+
+### 2. BlockID Platform Keys
+
+The **[BlockID Developer API](https://blockid-trial.1kosmos.net/swagger-ui.html)** also has it's own keypair, and users and developers can access to the BlockID platform public Key, also just called the **BlockID platform key**. 
+
+### 3. Shared Key
+
+Finally, there is a **shared key**. A shared key is cryptographically generated against a user private key and the BlockID platform key.
+
+
+All valid network requests to the [BlockID Developer API](https://blockid-trial.1kosmos.net/swagger-ui.html) are encrypted using a shared key. 
+
+
+
+### ECDSA Primer
+Here is a visual representation of the encryption flow:
+
+<img src={myImageUrl} alt="Example banner" width="700" align="center"/>
+
+
+
+
+
+
+

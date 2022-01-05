@@ -1,123 +1,90 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/nightOwl");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+
+module.exports = {
+  stylesheets: [
+    // String format.
+    "https://docusaurus.io/style.css",
+    // Object format.
+    {
+      href: "http://mydomain.com/style.css",
+    },
+  ],
+};
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Developer Documentation',
-  tagline: '1Kosmos BlockID Developer Portal',
-  //url: 'localhost',
-  url: 'https://pedantic-meitner-00f07f.netlify.app',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: '1kosmos', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
-  themes: ['@docusaurus/theme-live-codeblock'],
+  title: "Developer Documentation",
+  tagline: "1Kosmos BlockID Developer Portal",
+  url: 'https://pedantic-meitner-0011.netlify.app',
+  baseUrl: "/devportal/",
+  onBrokenLinks: "warn",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
+  organizationName: "1kosmos", // Usually your GitHub org/user name.
+  projectName: "devx_frontend", // Usually your repo name.
+  onDuplicateRoutes: "warn",
+
+  themes: ["@docusaurus/theme-live-codeblock"],
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: { 
-          sidebarPath: require.resolve('./sidebars.js'),
+        docs: {
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: 'https://github.com/1KBlockID/devx_frontend/tree/develop/',
+          // editUrl: "https://github.com/1KBlockID/devx_frontend/tree/develop/", we might want this again someday
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/1KBlockID/devx_frontend/tree/develop/blog/',
+            "https://github.com/1KBlockID/devx_frontend/tree/develop/blog/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
   ],
 
-  stylesheets: [
-    "https://fonts.googleapis.com/icon?family=Material+Icons",
-  ],
-
+  stylesheets: ["https://fonts.googleapis.com/icon?family=Material+Icons"],
+  plugins: ["docusaurus-node-polyfills", require.resolve("./src/docuplugin")],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'DevX',
+        title: "Developer",
         logo: {
-          alt: 'BlockID Logo',
-          src: 'img/1klogo.svg',
+          alt: "BlockID Logo",
+          src: "img/1klogo.svg",
         },
-        items: [
-          {
-            type: 'doc',
-            docId: 'uwl2',
-            position: 'left',
-            label: 'Home',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          //{
-          //  href: 'https://github.com/facebook/docusaurus',
-          //  label: 'GitHub',
-          //  position: 'right',
-          //},
-        ],
       },
       footer: {
-        style: 'dark',
+        style: "light",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/uwl2',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              //{
-              //  label: 'Stack Overflow',
-             //   href: 'https://stackoverflow.com/questions/tagged/1kosmos',
-             // },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/1kosmos',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/1kosmos',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/1KBlockID/devx_frontend/tree/develop',
+                label: "Home",
+                to: "/docs/uwl",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} 1Kosmos, Inc. Built with Docusaurus.`,
+        copyright: `© ${new Date().getFullYear()} 1Kosmos Inc., All Rights Reserved. | Privacy Policy | Cookie Policy`,
       },
       prism: {
-        additionalLanguages: ['php'],
-        theme: darkCodeTheme,
+        additionalLanguages: ["php", "java"],
+        theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
 };
+
 module.exports = config;
