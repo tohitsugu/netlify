@@ -20,7 +20,7 @@ const config = {
   title: "Developer Documentation",
   tagline: "1Kosmos BlockID Developer Portal",
   url: 'https://pedantic-meitner-0011.netlify.app',
-  baseUrl: "/devportal/",
+  baseUrl: "/",
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
