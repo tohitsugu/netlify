@@ -1,0 +1,148 @@
+---
+sidebar_position: 2
+slug: /index
+id: index
+---
+
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+
+# BlockID Developer SDK
+
+The BlockID Developer SDK allows you to easily integrate BlockID services into your development platform. We currently support **Node.js**, **PHP**, and **Java**.     
+
+## **Getting Started** {#gettingstarted}
+
+In order to configure and use the SDK, you will need the following information from your **[BlockID Developer Dashboard](https://1k-dev.1kosmos.net/devportal/)**:
+
+ - Your Username
+ - Your License Key
+ - Tenant Domain
+ - Tenant Community Name
+
+
+## **Install the BlockID SDK**
+
+To get started, install the  BlockID SDK for your preferred development environment. The BlockID SDK contains all the necessary libraries and functions needed for secure communication between the BlockID API and user machines.    
+
+<Tabs groupId="OS" className="unique-tabs">
+
+<TabItem value="node" label="Node.js">
+
+#### Install the BlockID SDK for Node.JS
+
+Open a terminal and execute the following command to install the `blockid-nodejs-helpers` npm package, which contains the Node.js SDK :  
+
+
+:::tip Note
+After installation, the BlockID SDK can be found in the `<project root>/node_modules/blockid-nodejs-helpers` folder
+:::
+
+</TabItem>
+
+<TabItem value="php" label="PHP">
+
+#### Install the BlockID SDK for PHP
+
+[Download](https://github.com/1KBlockID/php-helper-files/archive/refs/heads/develop.zip) and unzip the PHP SDK to your project directory.  
+ 
+
+:::warning Caution:
+The PHP SDK requires PHP 5.3.2+ to run.  
+:::#
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+
+#### Install the BlockID SDK for Java
+
+[Download](https://github.com/1KBlockID/java-helper-files/archive/refs/heads/develop.zip) and unzip the Java SDK to your project directory.  
+
+<br />
+
+#### Adding the Java SDK to your Project
+
+- Add repo to your project (as submodule) under path: `main › java › com › bidsdk`
+*(ability to add as gradle dependency will be added soon)*
+- add to your `build.gradle`:
+```java 
+ext {
+	web3jVersion = "4.5.4"
+}
+
+dependencies {
+
+	implementation group: 'org.bitcoinj', name: 'bitcoinj-core', version: '0.15.10'
+	implementation "org.web3j:core:$web3jVersion"
+
+	implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '4.3.1'
+	implementation 'org.apache.httpcomponents:httpclient:4.5.13'
+	implementation 'com.google.code.gson:gson:2.8.6'
+}
+```
+
+
+</TabItem>
+
+</Tabs>
+
+## **Configure the SDK with your Tenant and License Key**
+
+Configure the SDK with your [tenant information and license key](/docs/otp#required-information) found on the [BlockID Developer Dashboard](https://1k-dev.1kosmos.net/devportal/).
+
+
+### Parameters 
+
+- `dns`: tenant domain
+- `communityName`: tenant community name
+- `licenseKey`: BlockID license key  
+
+
+
+### initialization Format
+
+<Tabs groupId="OS" className="unique-tabs">
+<TabItem value="node" label="Node.js SDK">
+
+#### Configuring the BlockID SDK for Node.js
+
+- Initialize the SDK 
+
+```jsx
+const loaded = await bidsdk.setupTenant({dns: "1k-dev.1kosmos.net", communityName: "default"}, "<your license key>")`; 
+```
+</TabItem>
+
+
+<TabItem value="php" label="PHP SDK">
+
+#### Configuring the BlockID SDK for PHP
+
+- Initialize the SDK 
+
+```php
+require_once("./BIDSDK.php");
+require_once("./BIDOTP.php");
+
+BIDSDK::getInstance()->setupTenant($tenant, $license);
+```
+</TabItem>
+
+<TabItem value="java" label="Java SDK">
+
+#### Configuring the BlockID SDK for Java
+
+- Initialize the SDK
+
+```java
+BIDSDK.getInstance().setupTenant(<your tenant>, "<your license key>");
+```
+</TabItem>
+</Tabs>
+
+
+

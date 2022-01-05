@@ -1,5 +1,5 @@
 ---
-title: Markdown page example
+title: Login | BLockID DevX
 ---
 
 # Markdown page example
