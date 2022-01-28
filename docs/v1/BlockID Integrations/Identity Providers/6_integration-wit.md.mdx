@@ -1,0 +1,191 @@
+---
+slug: /v1/integration-with-windows
+id: Z3556b698-4818-461b-8781-ed4911a8f856
+---
+# Integration with Windows
+This document describes the procedure to configure the Windows workstation as a passwordless authentication solution for your organization's users. This integration will allow the users to log in to their Windows workstations leveraging their biometrics. The biometric options include TouchID / FaceID, and LiveID.
+
+**List of Topics:**
+1. [Before you Begin](#BeforeyouBegin)
+2. [Use Cases](#UseCases)
+    * [User Registration](#UserRegistration)
+    * [Windows Login](#WindowsLogin)
+3. [Troubleshooting Steps](#TroubleshootingSteps)
+
+## Before you Begin
+You will need the following resources and privileges to complete this integration:
+
+1. Install the **BlockID Authentication Broker** application on the Linux/Unix server. The BlockID Authentication Broker installation (.zip) file is named as `blockIdSetup-version-number.zip`. To obtain the BlockID Authentication Broker installation file, please contact your 1Kosmos representative. For more information, visit the [Installing BlockID Authentication Broker](https://1kosmos.document360.io/docs/installing-blockid-authentication-broker) topic.
+2. Install the BlockID Credential Provider (CP) application on the Windows workstation. The BlockID CP Executable (.exe) file is named as `blockIdSetup-version number.exe`. To get the **BlockID CP Executable** file, please contact your 1Kosmos representative. For more information, visit the [Installing BlockID Credential Provider](https://1kosmos.document360.io/v1/docs/installing-blockid-credential-provider) topic.
+3. Perform the following NDES setup and configuration:
+    * Active Directory (AD) and Certificate Authority (CA) requirements. For more information, click [here](https://social.technet.microsoft.com/wiki/contents/articles/9063.active-directory-certificate-services-ad-cs-network-device-enrollment-service-ndes.aspx#Setup).
+    * Install and configure the NDES server. For more information, click [here](https://social.technet.microsoft.com/wiki/contents/articles/9063.active-directory-certificate-services-ad-cs-network-device-enrollment-service-ndes.aspx#Deploying_the_Network_Device_Enrollment_Service). 
+    * NDES validation. For more information, click [here](https://social.technet.microsoft.com/wiki/contents/articles/9063.active-directory-certificate-services-ad-cs-network-device-enrollment-service-ndes.aspx#Operational_Guide_for_the_Network_Device_Enrollment_Service).
+4. Mobile Phone: 
+    * iPhone running `IOS 12.3.1` or higher.
+    * Mobile phone running `Android 6.0` or later.
+5. Download and install the BlockID mobile application (Compatible with iOS and Android devices). Visit the **[BlockID for Android](https://play.google.com/store/apps/details?id=com.onekosmos.kernel.blockid)** or **[BlockID for iOS](https://apps.apple.com/us/app/blockid/id1539421428)** links to download the application.
+
+## Use cases
+The use cases that need to be performed are as follows:
+
+1. User Registration
+2. Windows Login
+
+### User Registration
+The user must register with the BlockID mobile application. User registration in BlockID is seamless. A registered user can leverage their biometrics for passwordless authentication. The biometric options include TouchID / FaceID, and LiveID. An example of what user registration looks like can be found [here](https://vimeo.com/425693158). 
+
+Perform the following steps to register a user within the BlockID mobile application:
+
+1. Open the email sent by 1Kosmos on a desktop or laptop browser.
+2. Install BlockID mobile application by scanning one of the following QR codes below:
+![Playstore BlockID.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/Playstore%20BlockID.png)
+
+   ![Appstore BlockID.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/Appstore%20BlockID.png)
+3. Launch the BlockID mobile application and follow the on-screen instructions to register your app with the BlockID platform to enroll your biometrics. Visit the [Enroll Biometrics (TouchID/ FaceID and LiveID) section of BlockID Mobile Application User Guide](https://1kosmos.document360.io/docs/blockid-mobile-application-user-guide#EnrollBio) for step by step understanding of the **Biometrics Enrollment** process within the **BlockID Mobile** application.
+4. Click the personalized magic link (for BlockID Platform) given in the email that says `Click here` on your laptop. The BlockID platform’s single sign on screen is displayed with the **QR code** for your company.  
+3. On the BlockID mobile application’s Home screen, click on the ‘Scan QR’ button.
+4. Scan the QR code. The confirmation pop-up window is displayed asking to `Allow BlockID to access this device’s location?`.
+5. In the confirmation pop-up window, select `Allow only while using the app`. The Authentication screen is displayed with the `Please authenticate using Biometric_option from 1kosmos` message.
+6. Click **Authenticate** and perform the appropriate authentication method. The pop-up window is displayed with `Thank you! You have successfully authenticated to Log In` message upon successful authentication. 
+
+### Windows Login
+The following steps are provided for logging into the Windows workstation using BlockID mobile application. Before performing these steps, you need to install and configure the BlockID Credential Provider (CP) on the client’s Windows workstation. To check the example of a Windows login, click [here](https://player.vimeo.com/video/426247704).
+
+1. On your Windows login screen, click on the `BlockID` option. The login screen is displayed with the QR code to be scanned from your BlockID mobile app.
+2. On the BlockID mobile application’s Home screen, click `Scan QR`. The Confirmation pop-up window is displayed asking to `Allow BlockID to access this device’s location?`.
+3. In the confirmation pop-up window, select `Allow only while using the app`. The Authentication screen is displayed with the `Please authenticate using Biometric_option from 1kosmos` message.
+4. Click **Authenticate** and perform the appropriate authentication method. 
+5. The pop-up window is displayed with **Thank you! You have successfully authenticated to Log In** message upon successful authentication. The app will send the requested data to CP This allows users to log in to their Windows workstation by scanning a QR code.
+6. To unlock your Windows workstation: click on the login name mentioned. The push notification will get sent to you on your mobile device with the message heading "**BlockID authentication request Login Alert**".
+7. Click on the push notification message. This allows users to unlock their workstation via a push notification.
+
+## Troubleshooting Steps
+
+
+<details>
+<summary>
+<b>‘NDES server is not reachable‘ message is displayed and NDES gets disabled.</b>
+</summary>
+#### Cause: 
+When NDES uses a service account to connect and if the service account password has changed or if the service account OU has changed.
+#### Resolution:
+
+1. Navigate to `IIS Manager > Default Apps > SCEP > Properties > Identity`
+2. Select `default identity`
+3. Select `custom`
+4. Enter username and password for NDES service account again
+5. Restart IIS
+
+</details>
+
+
+
+<details>
+<summary>
+<b>"User name and Password Invalid" error message is displayed.</b>
+</summary>
+
+#### Cause:
+The user is trying login to `machine A` through BlockID, and after successful login, the user tries to  access `machine B` using RDP to login through BlockID and vice versa (from `machine B` to `machine A`) by performing the following steps:
+
+#### Step 1
+
+1. Start `VNC > Enter the name of the machine A > Select BlockID option to login > Scan QR and perform BlockID authentication using BlockID app` 
+The user will be logged in to `machine  A` upon successful authentication
+
+2. Start  `RDP > Enter the name of the machine B > Select BlockID option to login > Scan QR and perform BlockID authentication using BlockID app` 
+The user will be logged in to `machine  B` upon successful authentication
+
+#### Step 2:
+
+1. Start `VNC > Enter the name of the `machine B` > Select BlockID option to login > Scan QR and perform BlockID authentication using BlockID app`
+The user will be logged in to `machine  B` upon successful authentication
+
+2. Start  `RDP > Enter the name of the `machine A` > Select `BlockID` option to login > Scan QR and perform BlockID authentication using BlockID app`
+Receives an error message "User name and Password Invalid"
+
+#### Resolution:
+Perform the following steps:
+
+1. Verify the following settings on both the machines:
+
+1. Start `RDP > click on "show options" > navigate to the  Local resources > Local device and resources, click "More" > Verify and select the check box for "Smart Card or Windows Hello for Business" option`
+
+2. Compare the policies configured on `machine A` and `machine B` and request a user to update the group policy settings on `machine B`:
+
+`Log in as admin > open the command prompt > run the "gpupdate" command`
+ 
+</details>
+
+
+
+<details>
+<summary>
+<b>The “Request has expired” message is received when a user tries to log in to / unlock the Windows workstation.</b>
+</summary>
+
+### Log received on BlockID Admin Console
+
+```jsx
+    request TS: {some number}
+    Server TS: {some number}
+    Allowed span: 60
+    
+    Logs received on CP:
+    request has expired
+```
+
+### Cause:
+
+If a computer clock is out of sync with standard time, a request originates from the computer, but when it reaches the console it finds that the request is out of sync. BlockID has a time span of `60 seconds` to allow the request.
+
+### Resolution:
+Change the `config` in Tomcat to allow for more time or reset the computer clock to be in sync with standard time.
+</details>
+
+
+:::(Error) ()
+<details>
+<summary><b>Domain controller rejects the client certificate of the user used for smart card logon.</b></summary>
+<h3>Cause:</h3>Certificates are not available on the Certificate Authority (CA). 
+<h3>Resolution:</h3>
+<ol>
+
+<li>On the desktop > navigate to <I>Start > In the Search box, type `mmc.exe` > Enter</I>.</li>
+<li>In the Microsoft Management Console (MMC) window, navigate to <I>File > Add/Remove Snap-in</I>.</li>
+<li>In the Add or Remove Snap-in window, select `Certificates` Snap-in > click Add.</li>
+<li>In the Certificates snap-in window, select ‘Computer account’.</li>
+<li>In the Select Computer window, select `Local Computer`> click Next > Finish.</li>
+<li>In the Add or Remove Snap-in window, click OK.</li>
+<li>Expand the Certificates Snap-in > right-click on the Personal folder > select All Tasks > click Import.</li>
+<li>In the new Certificate Import wizard, click Next > click Browse to select a .PFX file and click Next.</li>
+<li>Enter the password (in case, you have entered a password while creating a .PFX file).</li>
+<li>Make sure that the option `Mark this key as exportable. This will allow you to back up or transport your keys at a later time.` is selected > click Next.</li>
+<li>Select the appropriate Certificate Store option to save the certificate OR select `Personal` in case of using Web Certificate.</li>
+<li>Click Finish.</li>
+<li>In the Certificate Import Wizard, click OK. The certificate will be displayed in the certificate list.</li>
+</ol>
+</details>
+:::
+
+
+<details>
+<summary>
+<b>The "Error while communicating with https://`tenanturl`/`port`/healthz" message is displayed when a user scans the QR code for logging into the Windows workstation.</b>
+</summary>
+
+### Cause:
+On the Windows workstation, the proxy application URL is configured with "http" whereas in the CP application the proxy URL is configured with "https".
+
+### Resolution:
+
+1. In the BlockID CP console, navigate to `BlockID Configuration > General > BlockID Service > State > click Stop`
+2 Click Apply Changes
+3. In the Settings Saved dialog box, click OK
+4. `Navigate to General > BlockID Service > State` and click Start to start the service
+5. Click Save & Close
+
+</details>
+
+

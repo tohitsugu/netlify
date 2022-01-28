@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Authentication Configuration/Za142b8e4-90fd-4362-a0c0-1501a23cb26b",
+  "id": "v1/BlockID Admin Console/Admin Guide/Authentication Configuration/Za142b8e4-90fd-4362-a0c0-1501a23cb26b",
+  "isDocsHomePage": false,
+  "title": "Software and Hardware OTP Support",
+  "description": "The One Time Passcode (OTP) authentication module implements two-factor identification (2FA) and multi-factor authentication (MFA) authentication to authenticate users when they are logging in to the BlockID Admin Console application. It provides a higher level of security than the traditional authentication method i.e. using username and password. The two-factor authentication method includes entering a username and password as a first factor and an OTP as a second factor.",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/Authentication Configuration/4_software-and-ha.md.mdx",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide/Authentication Configuration",
+  "slug": "/v1/software-and-hardware-otp-support",
+  "permalink": "/docs/v1/software-and-hardware-otp-support",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "slug": "/v1/software-and-hardware-otp-support",
+    "id": "Za142b8e4-90fd-4362-a0c0-1501a23cb26b"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Authentication Scheme",
+    "permalink": "/docs/v1/authentication-scheme"
+  },
+  "next": {
+    "title": "Datastore Configuration",
+    "permalink": "/docs/v1/datastore-configuration-1"
+  }
+}

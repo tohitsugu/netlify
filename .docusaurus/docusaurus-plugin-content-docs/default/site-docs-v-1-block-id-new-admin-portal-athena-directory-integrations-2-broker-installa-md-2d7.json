@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Directory Integrations/broker-installa",
+  "id": "v1/BlockID New Admin Portal (Athena)/Directory Integrations/broker-installa",
+  "isDocsHomePage": false,
+  "title": "broker-installa",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Directory Integrations/2_broker-installa.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Directory Integrations",
+  "slug": "/v1/BlockID New Admin Portal (Athena)/Directory Integrations/broker-installa",
+  "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/Directory Integrations/broker-installa",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Office365 Integration",
+    "permalink": "/docs/v1/office365-integration"
+  },
+  "next": {
+    "title": "Broker Installation",
+    "permalink": "/docs/v1/broker-installation"
+  }
+}

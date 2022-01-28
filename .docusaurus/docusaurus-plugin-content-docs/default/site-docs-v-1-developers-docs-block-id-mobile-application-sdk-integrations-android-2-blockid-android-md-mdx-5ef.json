@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/Z5ad043b7-320f-48c2-9f6d-a1d5d09cc5c9",
+  "id": "v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/Z5ad043b7-320f-48c2-9f6d-a1d5d09cc5c9",
+  "isDocsHomePage": false,
+  "title": "BlockID Android SDK 1.4.1 and 1.4.2",
+  "description": "This document is compatible with Android SDK v1.4.1 and v1.4.2.",
+  "source": "@site/docs/v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/2_blockid-android.md.mdx",
+  "sourceDirName": "v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/Android",
+  "slug": "/v1/blockid-android-sdk-141and142",
+  "permalink": "/docs/v1/blockid-android-sdk-141and142",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/blockid-android-sdk-141and142",
+    "id": "Z5ad043b7-320f-48c2-9f6d-a1d5d09cc5c9"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Admin Console",
+    "permalink": "/docs/v1/blockid-admin-console-api"
+  },
+  "next": {
+    "title": "BlockID Android SDK 1.1.0",
+    "permalink": "/docs/v1/android-110"
+  }
+}

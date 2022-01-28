@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Identity Management/Z625d6a5a-5b85-4db1-9a2f-d03d88f7a7f5",
+  "id": "v1/BlockID Admin Console/Admin Guide/Identity Management/Z625d6a5a-5b85-4db1-9a2f-d03d88f7a7f5",
+  "isDocsHomePage": false,
+  "title": "Role Management",
+  "description": "In Role Management, you can restrict access based on the roles defined within your organization. Role assignment will allow access to some functionalities and prevent access to others.",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/Identity Management/3_role-management.md.mdx",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide/Identity Management",
+  "slug": "/v1/role-management",
+  "permalink": "/docs/v1/role-management",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/v1/role-management",
+    "id": "Z625d6a5a-5b85-4db1-9a2f-d03d88f7a7f5"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "User Management",
+    "permalink": "/docs/v1/user-management"
+  },
+  "next": {
+    "title": "Policy Management",
+    "permalink": "/docs/v1/saml-configuration"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Videos/blockid-solutio",
+  "id": "v1/BlockID Videos/blockid-solutio",
+  "isDocsHomePage": false,
+  "title": "blockid-solutio",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Videos/6_blockid-solutio.md",
+  "sourceDirName": "v1/BlockID Videos",
+  "slug": "/v1/BlockID Videos/blockid-solutio",
+  "permalink": "/docs/v1/BlockID Videos/blockid-solutio",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Tenant On-boarding Process Guide",
+    "permalink": "/docs/v1/internal-process"
+  },
+  "next": {
+    "title": "BlockID Solutions",
+    "permalink": "/docs/v1/blockid-solutions"
+  }
+}

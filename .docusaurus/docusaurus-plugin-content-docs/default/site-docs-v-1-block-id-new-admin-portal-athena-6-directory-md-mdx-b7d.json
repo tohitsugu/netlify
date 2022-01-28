@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Z1d78dd72-0421-42cb-96da-4cb2a59eb0f8",
+  "id": "v1/BlockID New Admin Portal (Athena)/Z1d78dd72-0421-42cb-96da-4cb2a59eb0f8",
+  "isDocsHomePage": false,
+  "title": "Directory",
+  "description": "The administrator can add and manage connections to your user directory sources. This will achieved by adding the directory server details and Service account configurations to establish a connection to the required user directory.",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/6_directory.md.mdx",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)",
+  "slug": "/v1/directory",
+  "permalink": "/docs/v1/directory",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "slug": "/v1/directory",
+    "id": "Z1d78dd72-0421-42cb-96da-4cb2a59eb0f8"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Dashboard",
+    "permalink": "/docs/v1/dashboard"
+  },
+  "next": {
+    "title": "Users",
+    "permalink": "/docs/v1/users"
+  }
+}

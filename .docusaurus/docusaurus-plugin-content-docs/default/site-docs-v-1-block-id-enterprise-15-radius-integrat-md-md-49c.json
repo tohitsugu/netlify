@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/Zaf98a072-ad11-4365-89ed-25875a5ae98d",
+  "id": "v1/BlockID Enterprise/Zaf98a072-ad11-4365-89ed-25875a5ae98d",
+  "isDocsHomePage": false,
+  "title": "Zaf98a072-ad11-4365-89ed-25875a5ae98d",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/15_radius-integrat.md.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/radius-integration-backup",
+  "permalink": "/docs/v1/radius-integration-backup",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "slug": "/v1/radius-integration-backup",
+    "id": "Zaf98a072-ad11-4365-89ed-25875a5ae98d"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "radius-integrat",
+    "permalink": "/docs/v1/BlockID Enterprise/radius-integrat"
+  },
+  "next": {
+    "title": "reports",
+    "permalink": "/docs/v1/BlockID Enterprise/reports"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Identity Management/Z58afb044-8b28-4ffe-b763-85ae2af99494",
+  "id": "v1/BlockID Admin Console/Admin Guide/Identity Management/Z58afb044-8b28-4ffe-b763-85ae2af99494",
+  "isDocsHomePage": false,
+  "title": "Policy Management",
+  "description": "In Policy Management, you can assign one or more policies to the user roles. The policies available on the screen are the pages shown for each functionality. For example, the “admin/authentication_modules” policy is created for the Authentication Modules functionality and any user who has been assigned to this policy can access the Authentication Modules screen within the BlockID Admin Console. You will not be able to create new policies, however, you are allowed to assign the available policies to the required roles. You can also restrict the access of a particular policy to any role.",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/Identity Management/4_saml-configurat.md.mdx",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide/Identity Management",
+  "slug": "/v1/saml-configuration",
+  "permalink": "/docs/v1/saml-configuration",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "slug": "/v1/saml-configuration",
+    "id": "Z58afb044-8b28-4ffe-b763-85ae2af99494"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Role Management",
+    "permalink": "/docs/v1/role-management"
+  },
+  "next": {
+    "title": "Installing BlockID Authentication Broker",
+    "permalink": "/docs/v1/installing-blockid-authentication-broker"
+  }
+}

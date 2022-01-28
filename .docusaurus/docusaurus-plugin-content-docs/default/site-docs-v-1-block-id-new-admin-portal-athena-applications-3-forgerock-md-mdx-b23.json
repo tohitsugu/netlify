@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Applications/Z2227f434-6af5-4c53-aa39-d6e9ff6447ed",
+  "id": "v1/BlockID New Admin Portal (Athena)/Applications/Z2227f434-6af5-4c53-aa39-d6e9ff6447ed",
+  "isDocsHomePage": false,
+  "title": "ForgeRock",
+  "description": "",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Applications/3_forgerock.md.mdx",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Applications",
+  "slug": "/v1/forgerock",
+  "permalink": "/docs/v1/forgerock",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/v1/forgerock",
+    "id": "Z2227f434-6af5-4c53-aa39-d6e9ff6447ed"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "WebAuthn",
+    "permalink": "/docs/v1/webauthn"
+  },
+  "next": {
+    "title": "Manage Applications",
+    "permalink": "/docs/v1/applications"
+  }
+}

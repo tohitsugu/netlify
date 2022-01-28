@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/directory",
+  "id": "v1/BlockID New Admin Portal (Athena)/directory",
+  "isDocsHomePage": false,
+  "title": "directory",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/6_directory.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)",
+  "slug": "/v1/BlockID New Admin Portal (Athena)/directory",
+  "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/directory",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Dashboard",
+    "permalink": "/docs/v1/dashboard"
+  },
+  "next": {
+    "title": "Directory",
+    "permalink": "/docs/v1/directory"
+  }
+}

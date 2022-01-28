@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/blockid-templat",
+  "id": "v1/BlockID Enterprise/blockid-templat",
+  "isDocsHomePage": false,
+  "title": "blockid-templat",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/9_blockid-templat.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/BlockID Enterprise/blockid-templat",
+  "permalink": "/docs/v1/BlockID Enterprise/blockid-templat",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID SDK",
+    "permalink": "/docs/v1/blockid-sdk"
+  },
+  "next": {
+    "title": "BlockID Templates",
+    "permalink": "/docs/v1/blockid-templates"
+  }
+}

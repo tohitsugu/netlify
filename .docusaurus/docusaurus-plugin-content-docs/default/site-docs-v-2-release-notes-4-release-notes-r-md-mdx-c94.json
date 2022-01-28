@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v2/Release Notes/Z0f10a839-2257-4d53-a191-00722c59df7e",
+  "id": "v2/Release Notes/Z0f10a839-2257-4d53-a191-00722c59df7e",
+  "isDocsHomePage": false,
+  "title": "Release Notes R1.02.00",
+  "description": "2021.01.15: Monthly Production release notes",
+  "source": "@site/docs/v2/Release Notes/4_release-notes-r.md.mdx",
+  "sourceDirName": "v2/Release Notes",
+  "slug": "/v2/release-notes-r102",
+  "permalink": "/docs/v2/release-notes-r102",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "slug": "/v2/release-notes-r102",
+    "id": "Z0f10a839-2257-4d53-a191-00722c59df7e"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Release Notes v3",
+    "permalink": "/docs/v2/release-notes-v3"
+  },
+  "next": {
+    "title": "Release Notes R1.02.03",
+    "permalink": "/docs/v2/release-notes-r10300"
+  }
+}

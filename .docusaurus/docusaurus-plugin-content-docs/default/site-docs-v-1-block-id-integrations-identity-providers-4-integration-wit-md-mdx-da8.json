@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Integrations/Identity Providers/Z9f3ceb9a-2550-4d70-a0d3-d4432e92ecfd",
+  "id": "v1/BlockID Integrations/Identity Providers/Z9f3ceb9a-2550-4d70-a0d3-d4432e92ecfd",
+  "isDocsHomePage": false,
+  "title": "Integration with Microsoft ADFS",
+  "description": "This document describes the procedure to configure the BlockID Admin Console as a passwordless authentication solution for the Microsoft Active Directory Federation Services (ADFS) applications. This integration will allow your users to log in to their respective applications using Microsoft ADFS leveraging their biometrics. The biometric options include TouchID / FaceID and LiveID.",
+  "source": "@site/docs/v1/BlockID Integrations/Identity Providers/4_integration-wit.md.mdx",
+  "sourceDirName": "v1/BlockID Integrations/Identity Providers",
+  "slug": "/v1/integration-with-adfs",
+  "permalink": "/docs/v1/integration-with-adfs",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "slug": "/v1/integration-with-adfs",
+    "id": "Z9f3ceb9a-2550-4d70-a0d3-d4432e92ecfd"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Integration with Salesforce",
+    "permalink": "/docs/v1/integration-with-salesforce"
+  },
+  "next": {
+    "title": "Integration PingFederate",
+    "permalink": "/docs/v1/integration-pingfederate"
+  }
+}

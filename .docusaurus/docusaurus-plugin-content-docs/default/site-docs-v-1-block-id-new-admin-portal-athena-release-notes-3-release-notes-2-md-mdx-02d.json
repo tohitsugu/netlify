@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Release Notes/Z7575ff9b-19c0-408e-bf74-0080f94cb7b2",
+  "id": "v1/BlockID New Admin Portal (Athena)/Release Notes/Z7575ff9b-19c0-408e-bf74-0080f94cb7b2",
+  "isDocsHomePage": false,
+  "title": "Release Notes 2021.11.03",
+  "description": "Nov 03, 2021, The 1Kosmos Team",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Release Notes/3_release-notes-2.md.mdx",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Release Notes",
+  "slug": "/v1/release-notes-20211103",
+  "permalink": "/docs/v1/release-notes-20211103",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/v1/release-notes-20211103",
+    "id": "Z7575ff9b-19c0-408e-bf74-0080f94cb7b2"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Broker Installation",
+    "permalink": "/docs/v1/broker-installation"
+  },
+  "next": {
+    "title": "Email Templates",
+    "permalink": "/docs/v1/email-templates"
+  }
+}

@@ -1,0 +1,34 @@
+---
+slug: /v1/scep-configuration
+id: Z141535b4-6b83-4cec-977f-3e5972a7fb7f
+---
+# SCEP Configuration
+When a user tries to enroll in the BlockID mobile app then he/she will get a hash (#) certificate after successfully authenticating in your datastore directory. You can achieve this by either adding the BlockID Broker server configurations or by adding your SCEP server configurations within the SCEP (Simple Certificate Enrollment Protocol) configurations screen. These configuration details are used to deploy certificates to devices with little interaction and no manual uploading of .cert files between systems. It authenticates connections of the BlockID mobile app and BlockID Admin Console.
+
+When the BlockID Broker server configurations option is selected, the broker server will authenticate the user at your datastore directory, later authenticate your connection of the BlockID mobile app and BlockID Admin Console, and provides the hash (#) certificate to that user upon successful authentication.
+
+When the SCEP server configurations option is selected, then the added SCEP server will authenticate the user at your datastore directory, authenticates connections of the BlockID mobile app and BlockID Admin Console will provide the hash (#) certificate to that user upon successful authentication.
+
+To access the SCEP Configuration screen:
+1. Login to **BlockID Admin Console**, navigate to ***Administration Console** >  **Enterprise Configuration** > **SCEP Configuration***.
+
+![SCEPConfigurationscreenSN.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/SCEPConfigurationscreenSN%281%29.jpg)
+
+In **SCEP Configuration**, you will be introduced to view, add, and edit details of the following subsections:
+
+## Intermediary Certificate Authority (CA) Information
+In this section, in the **Paste certificate in PEM format** box, enter the certificate content.
+
+## SCEP Configuration
+In this section, you will be able to add details in the following fields:
+
+* SCEP Server URL
+* SCEP Enrollment Challenge URL
+* Enrollment Template Name
+* Corporate Domain
+* Enrollment Agent Name 
+* Enrollment Agent Password 
+* Retry Count 
+* Retry Interval 
+
+3. Click **Save & Apply**.

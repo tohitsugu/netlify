@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/authenticaition",
+  "id": "v1/BlockID Enterprise/authenticaition",
+  "isDocsHomePage": false,
+  "title": "authenticaition",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/18_authenticaition.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/BlockID Enterprise/authenticaition",
+  "permalink": "/docs/v1/BlockID Enterprise/authenticaition",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 18,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "SCEP Integration",
+    "permalink": "/docs/v1/scep-integration"
+  },
+  "next": {
+    "title": "Authenticaition Modules Configuration",
+    "permalink": "/docs/v1/authenticaition-modules-configuration"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/otp/api2",
+  "id": "api/otp/api2",
+  "isDocsHomePage": false,
+  "title": "One-Time Passcodes",
+  "description": "Generate OTP",
+  "source": "@site/docs/api/otp/otp.mdx",
+  "sourceDirName": "api/otp",
+  "slug": "/api/otp",
+  "permalink": "/docs/api/otp",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "slug": "/api/otp",
+    "id": "api2"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Developer API",
+    "permalink": "/docs/api"
+  },
+  "next": {
+    "title": "ECDSA Encryption",
+    "permalink": "/docs/api/ecdsa"
+  }
+}

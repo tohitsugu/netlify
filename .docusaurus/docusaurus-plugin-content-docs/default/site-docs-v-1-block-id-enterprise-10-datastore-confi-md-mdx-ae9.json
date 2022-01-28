@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/Z799a680d-d99c-4bb2-a3f8-572c221cd8b7",
+  "id": "v1/BlockID Enterprise/Z799a680d-d99c-4bb2-a3f8-572c221cd8b7",
+  "isDocsHomePage": false,
+  "title": "Datastore Configuration",
+  "description": "* * *",
+  "source": "@site/docs/v1/BlockID Enterprise/10_datastore-confi.md.mdx",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/datastore-configuration",
+  "permalink": "/docs/v1/datastore-configuration",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "slug": "/v1/datastore-configuration",
+    "id": "Z799a680d-d99c-4bb2-a3f8-572c221cd8b7"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Templates",
+    "permalink": "/docs/v1/blockid-templates"
+  },
+  "next": {
+    "title": "BlockID Connector Module",
+    "permalink": "/docs/v1/blockid-connector-module"
+  }
+}

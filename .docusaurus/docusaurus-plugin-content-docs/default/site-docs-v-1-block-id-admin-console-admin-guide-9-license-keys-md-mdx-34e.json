@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Z7a9b11c6-1389-4fc0-9299-e6f6f147988c",
+  "id": "v1/BlockID Admin Console/Admin Guide/Z7a9b11c6-1389-4fc0-9299-e6f6f147988c",
+  "isDocsHomePage": false,
+  "title": "License Keys",
+  "description": "In the License Keys screen, you can generate a new license key, and select the required modules to be used for the production and development environments. This license key will be utilized by the BlockID mobile application.",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/9_license-keys.md.mdx",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide",
+  "slug": "/v1/license-keys",
+  "permalink": "/docs/v1/license-keys",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "slug": "/v1/license-keys",
+    "id": "Z7a9b11c6-1389-4fc0-9299-e6f6f147988c"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Analytics and Event Logging",
+    "permalink": "/docs/v1/analytics"
+  },
+  "next": {
+    "title": "White Label Templates",
+    "permalink": "/docs/v1/white-label-templates"
+  }
+}

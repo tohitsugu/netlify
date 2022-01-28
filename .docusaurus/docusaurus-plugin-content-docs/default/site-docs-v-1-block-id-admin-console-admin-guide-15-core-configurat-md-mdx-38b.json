@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Zae0f9f7a-b940-4b56-ad97-f4bfe068397c",
+  "id": "v1/BlockID Admin Console/Admin Guide/Zae0f9f7a-b940-4b56-ad97-f4bfe068397c",
+  "isDocsHomePage": false,
+  "title": "Core Configurations",
+  "description": "The Core Configuration screen allows a Super Administrator to perform multiple configurations within the BlockID Admin Console. In this screen, configure the InterPlanetary File System (IPFS) service endpoints, save the activity certificates, and return the hash of these certificates by configuring InterPlanetary File System (IPFS) service endpoints. Also, add Ethereum service endpoint details to store user details like decentralized identifiers (DID), userid, communityid, level of assurance (LOA), pushid, and the version information on the blockchain.",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/15_core-configurat.md.mdx",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide",
+  "slug": "/v1/core-configurations",
+  "permalink": "/docs/v1/core-configurations",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "slug": "/v1/core-configurations",
+    "id": "Zae0f9f7a-b940-4b56-ad97-f4bfe068397c"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Profile Management",
+    "permalink": "/docs/v1/profile"
+  },
+  "next": {
+    "title": "Glossary",
+    "permalink": "/docs/v1/glossary"
+  }
+}

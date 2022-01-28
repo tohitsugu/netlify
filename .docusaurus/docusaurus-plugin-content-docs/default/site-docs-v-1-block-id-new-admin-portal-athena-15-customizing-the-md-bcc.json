@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/customizing-the",
+  "id": "v1/BlockID New Admin Portal (Athena)/customizing-the",
+  "isDocsHomePage": false,
+  "title": "customizing-the",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/15_customizing-the.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)",
+  "slug": "/v1/BlockID New Admin Portal (Athena)/customizing-the",
+  "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/customizing-the",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Users",
+    "permalink": "/docs/v1/users"
+  },
+  "next": {
+    "title": "Customizing the Branding of your BlockID Login Page",
+    "permalink": "/docs/v1/customizing-the-branding-of-your-blockid-login-page"
+  }
+}

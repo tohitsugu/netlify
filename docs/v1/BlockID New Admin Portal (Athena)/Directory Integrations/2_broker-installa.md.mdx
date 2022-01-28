@@ -1,0 +1,291 @@
+---
+slug: /v1/broker-installation
+id: Z422742d5-e5f4-4563-8b5b-75fe651251fc
+---
+# Broker Installation
+### Overview
+The **BlockID Broker** allows a tenant or community administrator to easily connect and configure an existing **Active Directory (AD)** or **LDAP** user directory to the administration panel with a few simple steps.
+
+![brokeroverview-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/brokeroverview-black.png){height="" width="400"}
+    
+
+
+## Broker Installation Requirements
+:::(Warning)
+**The Linux server hosting the Broker must be a member of your Active Directory domain**
+:::
+
+:::(Info)
+An **Active Directory service account** is required to facilitate interactions between the **broker** and your Directory. **Please create a service account before you begin this process**.
+:::
+
+* The **broker** should be installed on a **server-class Linux system**.
+
+* The machine should have at least **4GB memory** and a moderate amount of free disk space for logs and installation. Running Multiple brokers on the same system is discouraged.
+
+* It is recommended that the installation **not be** performed as the Linux 'root' account.
+
+* The **broker** host server must have a continuous connection to the internet so it can communicate with BlockID. 
+
+## Broker Installation
+
+To install and configure the **broker**, navigate to your tenant or community administrator panel and sign in. 
+
+![brokerpanellogin-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/brokerpanellogin-black.png){height="" width="400"}
+
+
+Follow the instructions for downloading and configuring a broker to connect to an **[LDAP](https://docs.1kosmos.com/v1/docs/broker-installation#LDAP)** or **[Active Directory (AD)](https://docs.1kosmos.com/v1/docs/broker-installation#AD)** broker:
+
+
+### <a name="LDAP"></a> Connect to LDAP Through Broker
+From the main menu, select **Directory Integrations** on the left-hand side of the page. 
+
+Click **Add new directory**. A dropdown menu will display the available options for creating a new user directory. 
+
+
+
+![directoryintegrations-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/directoryintegrations-black.png){height="" width="400"}
+
+
+
+
+To connect to your existing **LDAP** directory using a broker, select:
+    **Connect to LDAP through broker**.
+  
+ Enter a name for to use with your **LDAP directory**.  
+  
+ After reading the installation notes, select **Setup Directory** in the bottom right of the screen.
+
+![brokersetupldap-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/brokersetupldap-black.png){height="" width="400"}
+
+Your new **LDAP** user directory will be displayed. 
+
+####  Connection Information
+Select the **Connection information** tab to configure the directory.
+
+Enter the **connection information** for the **LDAP** broker:
+	
+	
+* **Server protocol type**
+* **Server URL**
+* **Server port**
+* **Base Domain**
+
+![ldapconnectioninfo-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/ldapconnectioninfo-black.png){height="" width="400"}
+
+
+Next, enter the **Service Account Information**	
+* **Service account username**
+* **Service account read only**
+* **Authentication method**
+* **Filter**
+
+![serviceaccountinfo-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/serviceaccountinfo-black.png){height="" width="400"}
+
+After entering the **Service Account Information** click the **Connect** button at the bottom of the screen.
+
+![connect-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/connect-black.png){height="" width="400"}
+
+#### Setup Attributes Mapping
+
+Next, we have to set our **Atrributes Mapping** for the broker to interact with the LDAP Directory. 
+
+Click on the **Attributes mapping** tab and select **Add new mapping**.
+
+![ldapmapping-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/ldapmapping-black.png){height="" width="400"}
+
+
+Enter each of the **Directory Attributes** below then select the corresponding **BlockID Attribute** from the drop-down menu:
+
+| **Directory Attributes** | **BlockIDAttributes** |
+| ---------------------- | ------------------------ |
+| uid                    | uid                      |
+| uid              | username                    |
+| mobile                  |   phone                 |
+| mail                  |    email                  |
+| givenname              |    firstname             |
+| sn               |  lastname                      |
+
+Here is an example of how to add the **uid** attribute:
+
+1. Click  **Add attribute mapping**
+2. Enter ``uid`` in the **Directory attribute** box
+3. Select ``uid`` from the **BlockID attribute** drop-down menu
+4. Click **Create**
+
+![adduid-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/adduid-black.png){height="" width="400"}
+
+Repeat this process for each of the **Directory Attributes**.
+
+![addedldap-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/addedldap-black.png){height="" width="400"}
+
+#### Brokers
+To download the broker, first click on the **Brokers** tab. 
+
+Select the **Brokers** tab and click **Add new broker**
+![brokerdownload1-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/brokerdownload1-black.png){height="" width="400"}
+
+
+After reviewing the information displayed, scroll down to **Linux Compatible Broker** and click **Download Now** to download the broker.
+
+![downloadbrokernow-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/downloadbrokernow-black.png){height="" width="400"}
+
+
+
+Copy the broker to the Linux server that will be running the broker. **Unzip** the broker:
+	`unzip brokername.zip` 
+    
+    
+
+![unziproker2-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/unziproker2-black.png){height="" width="400"}
+
+Start the broker by executing the following command:
+	 `./startBroker.bsh`
+     After executing the broker, follow the on-screen instructions to configure and start the broker service:
+     
+Enter `E` to edit the existing configuration 
+Enter `Y` or `N` to keep or change the current `license key`. The current value is displayed.
+Enter `Y` or `N` to keep or change the current `community id`. The current value is displayed.
+Enter `Y` or `N` to keep or change the current `authmodule id`. The current value is displayed.
+Enter `Y` or `N` to keep or change the current `dns string`. The current value will be displayed.
+Enter `Y` or `N` to keep or change the current `bind password`. The current value is displayed.
+Enter `Y` or `N` to enter a new `proxy URL`. The current value is displayed.
+Enter `Y` or `N` to enter a new `proxy user`. The current value is displayed.
+Enter `Y` or `N` to enter a new `proxy password`. The current value is displayed.
+Enter `S` to Save changes or `D` to Discard changes. 
+ :::(Info)
+ Most users will need to edit the `bind password` and `proxy url`, `proxy username`, `proxy password` settings before starting the service
+ :::
+
+After editing the configuration, the broker will automatically start. 
+![savechanges-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/savechanges-black.png){height="" width="400"}
+
+
+To **stop** the broker, execute the following command:
+	`./stopBroker.bsh` 
+
+Logs will be viewable after starting the broker, in the folder where you unzipped the broker in a new directory labled **logs**.
+
+### <a name="AD"></a> Connect to Active Directory (AD) Using Broker
+
+From the main menu, select **Directory Integrations** on the left-hand side of the page. 
+
+Click **Add new directory**. A dropdown menu will display the available options for creating a new user directory. 
+
+
+![directoryintegrations-1-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/directoryintegrations-1-black.png){height="" width="400"}
+
+
+To connect to your existing **Active Directory** userbase using a broker, select **Connect to AD through broker**.
+  
+ Enter a name for to use with your **AD directory**.  
+  
+ After reading the installation notes, select **Setup Directory** in the bottom right of the screen.
+
+![adsetup-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/adsetup-black.png){height="" width="400"}
+
+
+Your new **AD** user directory will be displayed. Select the **Connection information** tab to configure the directory.
+
+Enter the **connection information** for the **AD** broker:
+	
+	
+* **Server protocol type**
+* **Server URL**
+* **Server port**
+* **Base Domain**
+
+![adconnectioninfo-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/adconnectioninfo-black.png){height="" width="400"}
+
+
+Next, enter the **Service Account Information**	
+* **Service account username**
+* **Service account read only**
+* **Authentication method**
+* **Filter**
+
+![serviceaccountinfo-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/serviceaccountinfo-black.png){height="" width="400"}
+
+After entering the **Service Account Information** click the **Connect** button at the bottom of the screen.
+
+![connect-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/connect-black.png){height="" width="400"}
+
+
+
+#### Setup Attributes Mapping
+
+Next, we have to set our **Atrributes Mapping** for the broker to interact with the AD Directory. 
+
+Click on the **Attributes mapping** tab and select **Add new mapping**.
+
+![addad-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/addad-black.png){height="" width="400"}
+
+
+Select the **Brokers** tab and click **Add new broker**
+![brokerdownload1-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/brokerdownload1-black.png){height="" width="400"}
+
+Enter each of the **Directory Attributes** below then select the corresponding **BlockID Attribute** from the drop-down menu:
+
+| **Directory Attributes** | **BlockIDAttributes** |
+| ---------------------- | ------------------------ |
+| samaccountname                    | uid                      |
+| samaccountname              | username                    |
+| mobile                  |   phone                 |
+| mail                  |    email                  |
+| givenname              |    firstname             |
+| sn               |  lastname                      |
+
+Here is an example of how to add the **samaccountname** attribute:
+
+1. Click  **Add attribute mapping**
+2. Enter ``samaccountname`` in the **Directory attribute** box
+3. Select ``uid`` from the **BlockID attribute** drop-down menu
+4. Click **Create**
+
+![addsam-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/addsam-black.png){height="" width="400"}
+
+
+Repeat this process for each of the **Directory Attributes**.
+
+![addedad2-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/addedad2-black.png){height="" width="400"}
+
+#### Brokers
+To download the broker, first click on the **Brokers** tab. 
+
+Next, click **Add new broker**
+
+![adbrokers.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/adbrokers.png){height="" width="400"}
+
+The **Setup Directory** page is displayed. After reviewing the information displayed, scroll down to **Linux Compatible Broker** and click **Download Now** to download the broker.
+
+![brokerdlad.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/brokerdlad.png){height="" width="400"}
+
+Copy the broker to the Linux server that will be running the broker. **Unzip** the broker:
+	`unzip brokername.zip` 
+![unziproker2.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/unziproker2.png){height="" width="400"}
+
+Start the broker by executing the following command:
+	 `./startBroker.bsh`
+     
+Enter `E` to edit the existing configuration 
+Enter `Y` or `N` to keep or change the current `license key`. The current value is displayed.
+Enter `Y` or `N` to keep or change the current `community id`. The current value is displayed.
+Enter `Y` or `N` to keep or change the current `authmodule id`. The current value is displayed.
+Enter `Y` or `N` to keep or change the current `dns string`. The current value will be displayed.
+Enter `Y` or `N` to keep or change the current `bind password`. The current value is displayed.
+Enter `Y` or `N` to enter a new `proxy URL`. The current value is displayed.
+Enter `Y` or `N` to enter a new `proxy user`. The current value is displayed.
+Enter `Y` or `N` to enter a new `proxy password`. The current value is displayed.
+Enter `S` to Save changes or `D` to Discard changes. 
+ :::(Info)
+ Most users will need to edit the `bind password` and `proxy url`, `proxy username`, `proxy password` settings before starting the service
+ :::
+
+
+After editing the configuration, the broker will automatically start. 
+![savechanges.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/savechanges.png){height="" width="400"}
+
+To **stop** the broker, execute the following command:
+	`./stopBroker.bsh` 
+
+Logs will be viewable after starting the broker, in the folder where you unzipped the broker in a new directory labled **logs**.

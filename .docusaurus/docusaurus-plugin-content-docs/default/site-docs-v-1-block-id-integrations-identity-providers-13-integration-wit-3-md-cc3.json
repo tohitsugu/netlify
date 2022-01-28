@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Integrations/Identity Providers/integration-wit(3)",
+  "id": "v1/BlockID Integrations/Identity Providers/integration-wit(3)",
+  "isDocsHomePage": false,
+  "title": "integration-wit(3)",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Integrations/Identity Providers/13_integration-wit(3).md",
+  "sourceDirName": "v1/BlockID Integrations/Identity Providers",
+  "slug": "/v1/BlockID Integrations/Identity Providers/integration-wit(3)",
+  "permalink": "/docs/v1/BlockID Integrations/Identity Providers/integration-wit(3)",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Integration with Broadcom",
+    "permalink": "/docs/v1/integration-with-broadcom"
+  },
+  "next": {
+    "title": "Integration with Auth0",
+    "permalink": "/docs/v1/integration-with-auth0"
+  }
+}

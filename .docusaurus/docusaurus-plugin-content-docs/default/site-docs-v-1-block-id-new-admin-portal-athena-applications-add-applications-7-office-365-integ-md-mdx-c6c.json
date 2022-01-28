@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/Z1b65946e-a6e7-45a8-8c9b-04d81aa9a32e",
+  "id": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/Z1b65946e-a6e7-45a8-8c9b-04d81aa9a32e",
+  "isDocsHomePage": false,
+  "title": "Office365 Integration",
+  "description": "Prerequisites",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/7_office365-integ.md.mdx",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications",
+  "slug": "/v1/office365-integration",
+  "permalink": "/docs/v1/office365-integration",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "slug": "/v1/office365-integration",
+    "id": "Z1b65946e-a6e7-45a8-8c9b-04d81aa9a32e"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Generic SAML Application",
+    "permalink": "/docs/v1/generic-saml-application"
+  },
+  "next": {
+    "title": "Broker Installation",
+    "permalink": "/docs/v1/broker-installation"
+  }
+}

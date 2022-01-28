@@ -1,0 +1,102 @@
+---
+slug: /v1/technical-guide-for-liveid-driving-license-and-passport-scan-support
+id: Za9fbac75-d4fe-4b03-a2d2-01cc30146c5b
+---
+# Technical Guide for LiveID, Driving License and Passport Scan Support 
+This guide describes the procedures to enroll the user’s liveID (captures the live(real-time) facial images) details, driver’s license (DL), and passport details within the BlockID mobile application. While registering, users are first required to enroll in a new PIN and then enroll their biometrics. The biometric options include TouchID / FaceID, and LiveID. Once enrolled, the Identity Assurance Level (IAL) will be set to 1.
+
+:::(Info) (Note:)
+As a prerequisite to enrolling the Digital Identity Safe documents, users are first required to scan their liveID image. Upon successful scanning, they will be allowed to enroll DL and passport.
+:::
+
+## Prerequisites:
+
+The following system resources are used to complete the enrollment process of the liveID, DL, and passport details:
+
+1. Third-Party APIs:
+    * Microsoft
+    * Melissa
+2. Libraries:
+    * PDF417
+    * MRZ (Machine Readable Zone)
+    * SwiftyTesseract and OCR
+
+## LiveID:
+
+When a user clicks on the LiveID option, the front camera opens up. Perform the following steps:
+
+* Follow the instructions to adjust the face at the center of the scanning box, blink eyes. The camera captures the frames of the scanned live blinking eyes of the user. 
+* In the next scanning box, smile to get the live image captured. This will check whether the user is performing the activities in real-time.
+
+Step by step logical process performed via a BlockID mobile app when a user scans the blinking of the eyes and live smiling face:
+
+1. The Microsoft API matches any frame of the live image with the photograph of the user’s enrolled passport (preferred) if the DL and passport have been already enrolled successfully for the user.
+    :::(Info) (Note:)
+    This happens when a user has previously enrolled the liveID image, DL, and passport and subsequently removes the already enrolled liveID image at a later time.
+    :::
+2. If a user is enrolling the liveID image for the first time, it will enroll the captured liveID image.
+
+## Driving License (DL)
+
+Step by step logical process performed when a user scans a DL:
+1. Front-side scanning:
+    * The camera captures frames of the DL. 
+        :::(Info) (Note:)
+         It uses **OCR** (Optical Character Reader) to scan the text from the captured frames.
+        :::
+    * Processes the captured frames to grab the text and image.
+    * Saves the grabbed text (which is name, address, date of birth (DOB) , expiry date, and so on) in mobile device memory.
+2. Backside scanning:
+    * The camera captures the barcode.
+         :::(Info) (Note:)
+         It uses PDF417 to scan and decode the barcode.
+        :::
+    * Decodes captured barcode. A user will get certain values in the form of a string once the barcode is decoded.
+    * Validates the captured barcode against certain predefined conditions. The conditions to check the barcode with are as follows:
+        * Ensure the first letter of the barcode is `@`. If this condition matches then it will check the next condition, else, reject the barcode stating **it is an invalid document**.
+        * Make sure that the `ANSI<space>/` characters start from the fourth character and the character length is five characters. If this condition matches then it will check the next condition, else, reject the barcode stating **it is an invalid document**.
+        * In the barcode string, ensure that the word `DL` situated at the **21st character place**, and the character length is two characters. If this condition matches then it will check the next condition, else, reject the barcode stating it is an invalid document.
+If all the above conditions match then the barcode is considered valid.
+3. Match the following data of the front side of DL with the data received from the backside of the DL:
+    * First Name
+    * Last Name
+    * DOB
+    * License Number
+    * License Issue Date
+    * License Expiry Date
+
+If the above list of data is matched successfully, then, it checks the confidence level (trust score). If the trust score is **three (3)** or above, then the DL is considered as a valid document and it will get registered or enrolled as a valid identity document in your digital assets. If the trust score is below **three** then it will be considered as an invalid document. Note that, the trust score increases as more fields match from the above-mentioned list. Also, note that a minimum of three fields should match while scanning the DL.
+
+## Passport
+It uses MRZ (Machine Readable Zone) to scan the barcode of the passport. We use MRZ for those countries where MRZ is supported for barcode scanning in the passport.
+ :::(Info) (Note:)
+The passport scanning module will soon cover the enrollment of passports in which the barcode details are not present.
+ :::
+
+Step by step logical process performed when a user scans a passport:
+1. We support front side scanning for a passport.
+    * The camera captures frames of a passport.
+         :::(Info) (Note:)
+      It uses MRZ to scan and decode the barcode.
+         :::
+    * Scans the barcode details including `>` and `<` signs. 
+    * Decode captured barcode.
+
+2. Match the following data of passport with the data obtained and validated from the DL:
+    * Name
+    * DOB
+    * Photograph of a person: To match the photo images of DL and passport, we use Microsoft API. The Microsoft API checks both the photos and sends back the percentages of the IAL level. For example:
+        * If the photo image of the DL and passport matches then the API will return the identity value as True along with a measure (e.g. 60% or 70%) of the Confidence Level. 
+        * If the photographs do not match, then it will return the measure of confidence level by comparing basic human body features (Nose, Eyes, etc.) available in the photographs. 
+        * If the API returns the Identity value as `True` and the matched number of measures of confidence level is **0.25** for the IAL, we enroll the passport.
+
+## Identity Assurance Level (IAL) and Trust Score
+The Assurance Level comes into the picture when the DL, passport, and liveID details of the user match with each other. To enroll the DL and Passport, it is mandatory to enroll the liveID images as well.
+The step by step process to increase the IAL Level is as follows:
+
+1. When a liveID image and the photograph scanned from DL matches successfully, the **IAL** level becomes `1`. 
+2. When a scanned Passport image matches with the liveID image and DL details, the **IAL** level becomes `2`. 
+3. When your **IAL** level is `2` and the application will match the address mentioned in the DL and passport using the **Melissa** API (It is a third-party API and we have its paid version). The application sends the address details such as a passcode, street address, and so on. The Melissa API checks and validates the address and if the address is validated successfully then it returns the **Success** value as **True** the **IAL** level becomes `3`.
+4. When the **IAL** level is `2`, the application will automatically match the address mentioned in the DL (passports do not have an address in the US) against the **Melissa** database leveraging APIs. Upon successful validation, it returns success value as `True`. The IAL now is moved up to `3`.
+
+As many details of the DL and passport match, the trust score will increase accordingly and will return the number of trust score to the user.

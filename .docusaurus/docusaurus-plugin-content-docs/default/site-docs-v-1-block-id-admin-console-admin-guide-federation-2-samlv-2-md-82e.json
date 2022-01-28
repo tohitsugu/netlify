@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Federation/samlv2",
+  "id": "v1/BlockID Admin Console/Admin Guide/Federation/samlv2",
+  "isDocsHomePage": false,
+  "title": "samlv2",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/Federation/2_samlv2.md",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide/Federation",
+  "slug": "/v1/BlockID Admin Console/Admin Guide/Federation/samlv2",
+  "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Federation/samlv2",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "radius-configur",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/radius-configur"
+  },
+  "next": {
+    "title": "user-management",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Identity Management/user-management"
+  }
+}

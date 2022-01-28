@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Platform/internal-proces",
+  "id": "v1/BlockID Platform/internal-proces",
+  "isDocsHomePage": false,
+  "title": "internal-proces",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Platform/3_internal-proces.md",
+  "sourceDirName": "v1/BlockID Platform",
+  "slug": "/v1/BlockID Platform/internal-proces",
+  "permalink": "/docs/v1/BlockID Platform/internal-proces",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Google Cloud Platform: Kubernetes architecture guide for BlockID Platform",
+    "permalink": "/docs/v1/google-cloud-platform-kubernetes-architecture-guide-for-blockid-platform"
+  },
+  "next": {
+    "title": "Tenant On-boarding Process Guide",
+    "permalink": "/docs/v1/internal-process"
+  }
+}

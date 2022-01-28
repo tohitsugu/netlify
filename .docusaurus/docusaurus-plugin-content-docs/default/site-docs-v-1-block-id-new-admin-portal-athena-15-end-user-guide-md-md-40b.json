@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Ze5776a5b-8b2e-498a-9438-c665d9291260",
+  "id": "v1/BlockID New Admin Portal (Athena)/Ze5776a5b-8b2e-498a-9438-c665d9291260",
+  "isDocsHomePage": false,
+  "title": "Ze5776a5b-8b2e-498a-9438-c665d9291260",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/15_end-user-guide.md.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)",
+  "slug": "/v1/end-user-guide",
+  "permalink": "/docs/v1/end-user-guide",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "slug": "/v1/end-user-guide",
+    "id": "Ze5776a5b-8b2e-498a-9438-c665d9291260"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "end-user-guide",
+    "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/end-user-guide"
+  },
+  "next": {
+    "title": "webauthn",
+    "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/webauthn"
+  }
+}

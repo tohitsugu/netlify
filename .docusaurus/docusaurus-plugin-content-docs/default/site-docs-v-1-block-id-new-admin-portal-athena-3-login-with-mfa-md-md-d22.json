@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Z3a4d60f8-4984-4f20-9d87-7d6f0800ed40",
+  "id": "v1/BlockID New Admin Portal (Athena)/Z3a4d60f8-4984-4f20-9d87-7d6f0800ed40",
+  "isDocsHomePage": false,
+  "title": "Z3a4d60f8-4984-4f20-9d87-7d6f0800ed40",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/3_login-with-mfa.md.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)",
+  "slug": "/v1/login-with-mfa",
+  "permalink": "/docs/v1/login-with-mfa",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/v1/login-with-mfa",
+    "id": "Z3a4d60f8-4984-4f20-9d87-7d6f0800ed40"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "login-with-mfa",
+    "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/login-with-mfa"
+  },
+  "next": {
+    "title": "create-native-u",
+    "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/create-native-u"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "api/ecdsa/shared-key",
+  "id": "api/ecdsa/shared-key",
+  "isDocsHomePage": false,
+  "title": "Shared Key",
+  "description": "Shared Key Overview",
+  "source": "@site/docs/api/ecdsa/shared-key.mdx",
+  "sourceDirName": "api/ecdsa",
+  "slug": "/ecdsa/shared-key",
+  "permalink": "/docs/ecdsa/shared-key",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "slug": "/ecdsa/shared-key"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "User Private and Public Keys",
+    "permalink": "/docs/api/ecdsa/keys"
+  },
+  "next": {
+    "title": "Requesting a One-Time Passcode",
+    "permalink": "/docs/otp/request"
+  }
+}

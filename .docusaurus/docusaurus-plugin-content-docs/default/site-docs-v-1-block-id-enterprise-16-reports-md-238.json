@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/reports",
+  "id": "v1/BlockID Enterprise/reports",
+  "isDocsHomePage": false,
+  "title": "reports",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/16_reports.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/BlockID Enterprise/reports",
+  "permalink": "/docs/v1/BlockID Enterprise/reports",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 16,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "RADIUS Integration - Temp",
+    "permalink": "/docs/v1/radius-integration-backup"
+  },
+  "next": {
+    "title": "Reports",
+    "permalink": "/docs/v1/reports"
+  }
+}

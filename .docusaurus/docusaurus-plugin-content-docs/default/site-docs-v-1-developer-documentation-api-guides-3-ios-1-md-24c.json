@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/Developer Documentation/API Guides/ios-1",
+  "id": "v1/Developer Documentation/API Guides/ios-1",
+  "isDocsHomePage": false,
+  "title": "ios-1",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/Developer Documentation/API Guides/3_ios-1.md",
+  "sourceDirName": "v1/Developer Documentation/API Guides",
+  "slug": "/v1/Developer Documentation/API Guides/ios-1",
+  "permalink": "/docs/v1/Developer Documentation/API Guides/ios-1",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "android-1",
+    "permalink": "/docs/v1/Developer Documentation/API Guides/android-1"
+  },
+  "next": {
+    "title": "test",
+    "permalink": "/docs/v1/Developer Documentation/Mobile/test"
+  }
+}

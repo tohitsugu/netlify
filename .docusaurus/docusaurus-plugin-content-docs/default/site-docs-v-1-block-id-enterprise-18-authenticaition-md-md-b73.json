@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/Z92800745-18bb-430d-bf5b-e1eee691515a",
+  "id": "v1/BlockID Enterprise/Z92800745-18bb-430d-bf5b-e1eee691515a",
+  "isDocsHomePage": false,
+  "title": "Z92800745-18bb-430d-bf5b-e1eee691515a",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/18_authenticaition.md.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/authenticaition-modules-configuration",
+  "permalink": "/docs/v1/authenticaition-modules-configuration",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 18,
+  "frontMatter": {
+    "slug": "/v1/authenticaition-modules-configuration",
+    "id": "Z92800745-18bb-430d-bf5b-e1eee691515a"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "authenticaition",
+    "permalink": "/docs/v1/BlockID Enterprise/authenticaition"
+  },
+  "next": {
+    "title": "item-4",
+    "permalink": "/docs/v1/BlockID Enterprise/item-4"
+  }
+}

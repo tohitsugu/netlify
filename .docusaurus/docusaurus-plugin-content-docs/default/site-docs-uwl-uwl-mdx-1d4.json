@@ -1,0 +1,28 @@
+{
+  "unversionedId": "uwl/uwl1",
+  "id": "uwl/uwl1",
+  "isDocsHomePage": false,
+  "title": "Universal Web Login",
+  "description": "BlockID universal web login (UWL) is a flexible authentication framework for web and mobile applications that ensures the highest level of assurance by reaching IAL3 and AAL3levels per the NIST 800-63-3 guidelines.",
+  "source": "@site/docs/uwl/uwl.mdx",
+  "sourceDirName": "uwl",
+  "slug": "/uwl",
+  "permalink": "/docs/uwl",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "slug": "/uwl",
+    "id": "uwl1"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Developer SDK",
+    "permalink": "/docs/index"
+  },
+  "next": {
+    "title": "Block ID Proof of Concept (POC) Guide",
+    "permalink": "/docs/v1/block-id-proof-of-concept-poc-guide"
+  }
+}

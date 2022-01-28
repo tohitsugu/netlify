@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/Z511546c0-7f2c-4674-975e-40aa2e25c21e",
+  "id": "v1/BlockID Enterprise/Z511546c0-7f2c-4674-975e-40aa2e25c21e",
+  "isDocsHomePage": false,
+  "title": "Z511546c0-7f2c-4674-975e-40aa2e25c21e",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/19_item-4.md.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/item-4",
+  "permalink": "/docs/v1/item-4",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 19,
+  "frontMatter": {
+    "slug": "/v1/item-4",
+    "id": "Z511546c0-7f2c-4674-975e-40aa2e25c21e"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "item-4",
+    "permalink": "/docs/v1/BlockID Enterprise/item-4"
+  },
+  "next": {
+    "title": "11_1kmodule",
+    "permalink": "/docs/v1/BlockID Enterprise/11_1kmodule"
+  }
+}

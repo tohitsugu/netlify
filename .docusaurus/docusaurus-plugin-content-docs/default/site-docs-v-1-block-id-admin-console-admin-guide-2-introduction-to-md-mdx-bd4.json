@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Zed134fc4-c6c0-4fb3-81b4-f56b0b452242",
+  "id": "v1/BlockID Admin Console/Admin Guide/Zed134fc4-c6c0-4fb3-81b4-f56b0b452242",
+  "isDocsHomePage": false,
+  "title": "Introduction to BlockID Admin Console",
+  "description": "BlockID Admin Console is designed to enhance the security of your corporate network and enterprise applications by eliminating login credentials (usernames and passwords) and the need for separate multi-factor authentication (MFA) solutions. It is a next-generation identity and leverages biometrics authentication and blockchain technology to verify the identity of a user who tries to access your network or applications. It is a cloud-based solution that is customizable, fully integrated with leading access management, and single-sign-on (SSO) solutions including active directory (AD).",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/2_introduction-to.md.mdx",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide",
+  "slug": "/v1/introduction-to-blockid-admin-console",
+  "permalink": "/docs/v1/introduction-to-blockid-admin-console",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/introduction-to-blockid-admin-console",
+    "id": "Zed134fc4-c6c0-4fb3-81b4-f56b0b452242"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "User Onboarding Process Guide",
+    "permalink": "/docs/v1/user-onboarding-process-guide"
+  },
+  "next": {
+    "title": "Administration Console",
+    "permalink": "/docs/v1/administration-console"
+  }
+}

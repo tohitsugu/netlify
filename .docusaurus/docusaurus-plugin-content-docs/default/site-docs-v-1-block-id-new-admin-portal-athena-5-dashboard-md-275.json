@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/dashboard",
+  "id": "v1/BlockID New Admin Portal (Athena)/dashboard",
+  "isDocsHomePage": false,
+  "title": "dashboard",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/5_dashboard.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)",
+  "slug": "/v1/BlockID New Admin Portal (Athena)/dashboard",
+  "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/dashboard",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Create Native User",
+    "permalink": "/docs/v1/create-native-user"
+  },
+  "next": {
+    "title": "Dashboard",
+    "permalink": "/docs/v1/dashboard"
+  }
+}

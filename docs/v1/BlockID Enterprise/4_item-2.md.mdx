@@ -1,0 +1,90 @@
+---
+slug: /v1/item-2
+id: Ze2ca47b8-8cdf-4ee0-84fd-0b744e7e317d
+---
+# User Administration
+
+## Portions of the Administration portal are not functional at this time
+* * *
+:::(Info) ([User Managment](#Usermanagment))
+User management provides the ability for administrators to manage user access to various IT resources like systems, devices, applications, storage systems, networks, SaaS services, and more. User management is a core part to 1Kosmos - BlockID's service. 1Kosmos - BlockID provides the simplest and easiest to use user interface tools to help administrators manage user identities including password resets, creating and provisioning, blocking and deleting users.
+:::
+:::(Info) ([Role Managment](#Rolemanagment))
+Role-based access control (RBAC) is a method of restricting network access based on the roles of individual users within an enterprise. RBAC lets employees have access rights only to the information they need to do their jobs and prevents them from accessing information that doesn't pertain to them.
+:::
+
+:::(Info) ([Policy Managment](#Policymanagment))
+Policy management is the process of creating, communicating, and maintaining policies and procedures within an organization. Policies are critical to the organization as they establish boundaries of behavior for individuals, processes, relationships, and transactions. 
+:::
+
+## <a name = "Usermanagment"></a>User Managment Configuration 
+#### How to Manage Users
+
+Note: This task can only be performed for users that are utilize the 1Kosoms LDAP or are using a customers LDAP that grants read/wright privledges 
+
+#### Adding User(s)
+* Select User Managment under Adentity Management
+* Select Create Identity or Import Users From CSV
+* Enter User Profile Details that were created under [Datastore Configuration](https://1kosmos.document360.io/v1/docs/datastore-configuration){target="_blank"}
+* Minimum fields required are First Name, Last Name, UserID, Email address
+* Select Next
+* Create Password either manually or generate one via the Admin Portal
+* * Password Policy can be enforced via the customer LDAP or via the [1K User Directgory Module](https://1kosmos.document360.io/v1/docs/1kmodule){target="_blank"}
+* * Forced Password Change can be selected at next login
+* Select Finished
+
+* If creating users via the Bulk Load methoud, the .csv file can be downloaded from the CSV button
+* Minimum fields required are First Name, Last Name, UserID, Email address
+* Once the Bulkload file has been saved it can be imported 
+* **
+#### Modify User
+* Select User Managment under Adentity Management
+* Find User
+* Select Edit <First name, Last Name> Details
+* Change users Information
+* Select Update User
+
+#### Delete User
+* Select User Managment under Adentity Management
+* Find User
+* Select Edit <First name, Last Name> Details
+* Select Delete Profile
+* Confirm and select OK
+
+
+## <a name = "Rolemanagment"></a>Role Managment Configuration 
+#### How to Manage User Roles
+
+* Select Identity Management drop down, select Role Managment
+* Select User
+* Select Edit
+* Select the drop down and pick from the following
+    * Application Administrator
+    * User Administrator
+    * Helpdesk Administrator
+*    Save
+
+
+## <a name = "Policymanagment"></a>Policy Managment Configuration 
+#### How to manage User Policies
+This is where you can customize what Administrative task can be assigned to your Administrators or Help Desk
+
+*  User Management
+* Role Management
+* Policy Management
+* SAML configuration
+* Oauth configuration
+* OIDC configuration
+* EULA templates
+* Authentication Modules
+* Authentication Scheme
+* Admin templates
+* Email templates
+* Login templates
+* Datastore configuration
+* License Keys
+* Profile templates
+* Page templates
+* Comunity creation 
+* [Analytics](https://1kosmos.document360.io/v1/docs/reports){target="_blank"}
+

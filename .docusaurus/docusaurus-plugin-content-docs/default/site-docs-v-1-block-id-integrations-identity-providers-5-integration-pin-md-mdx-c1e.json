@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Integrations/Identity Providers/Zb71e5fd8-fb17-4e19-b274-eaa5ddff808e",
+  "id": "v1/BlockID Integrations/Identity Providers/Zb71e5fd8-fb17-4e19-b274-eaa5ddff808e",
+  "isDocsHomePage": false,
+  "title": "Integration PingFederate",
+  "description": "This document describes the procedure to configure the BlockID Admin Console as a passwordless authentication solution for the PingFederate protected applications. This integration will allow your users to log in to their respective applications using PingFederate leveraging their biometrics. The biometric options include TouchID / FaceID and LiveID.",
+  "source": "@site/docs/v1/BlockID Integrations/Identity Providers/5_integration-pin.md.mdx",
+  "sourceDirName": "v1/BlockID Integrations/Identity Providers",
+  "slug": "/v1/integration-pingfederate",
+  "permalink": "/docs/v1/integration-pingfederate",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "slug": "/v1/integration-pingfederate",
+    "id": "Zb71e5fd8-fb17-4e19-b274-eaa5ddff808e"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Integration with Microsoft ADFS",
+    "permalink": "/docs/v1/integration-with-adfs"
+  },
+  "next": {
+    "title": "Integration with Windows",
+    "permalink": "/docs/v1/integration-with-windows"
+  }
+}

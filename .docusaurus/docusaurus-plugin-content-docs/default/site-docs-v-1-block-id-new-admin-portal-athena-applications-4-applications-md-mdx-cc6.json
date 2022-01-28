@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Applications/Zf25ccde9-c352-4019-9bdb-79a93d60e5d8",
+  "id": "v1/BlockID New Admin Portal (Athena)/Applications/Zf25ccde9-c352-4019-9bdb-79a93d60e5d8",
+  "isDocsHomePage": false,
+  "title": "Manage Applications",
+  "description": "",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Applications/4_applications.md.mdx",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Applications",
+  "slug": "/v1/applications",
+  "permalink": "/docs/v1/applications",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "slug": "/v1/applications",
+    "id": "Zf25ccde9-c352-4019-9bdb-79a93d60e5d8"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "ForgeRock",
+    "permalink": "/docs/v1/forgerock"
+  },
+  "next": {
+    "title": "Okta",
+    "permalink": "/docs/v1/okta"
+  }
+}

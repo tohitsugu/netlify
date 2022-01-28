@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Videos/Zaf53f9dd-e489-49c7-856a-6bffdcce964f",
+  "id": "v1/BlockID Videos/Zaf53f9dd-e489-49c7-856a-6bffdcce964f",
+  "isDocsHomePage": false,
+  "title": "BlockID User Journey",
+  "description": "This section contains BlockID User Journey videos for  workforce as well as Customers.",
+  "source": "@site/docs/v1/BlockID Videos/6_blockid-user-jo.md.mdx",
+  "sourceDirName": "v1/BlockID Videos",
+  "slug": "/v1/blockid-user-journey",
+  "permalink": "/docs/v1/blockid-user-journey",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "slug": "/v1/blockid-user-journey",
+    "id": "Zaf53f9dd-e489-49c7-856a-6bffdcce964f"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Solutions",
+    "permalink": "/docs/v1/blockid-solutions"
+  },
+  "next": {
+    "title": "Getting Started with Videos",
+    "permalink": "/docs/v1/getting-started-with-videos"
+  }
+}

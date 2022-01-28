@@ -1,0 +1,26 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/Ze8b54d7e-4975-4d52-ac78-ab02bf47ec5a",
+  "id": "v1/BlockID Enterprise/Ze8b54d7e-4975-4d52-ac78-ab02bf47ec5a",
+  "isDocsHomePage": false,
+  "title": "1K User Directory Module",
+  "description": "* * *",
+  "source": "@site/docs/v1/BlockID Enterprise/11_1kmodule.md.mdx",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/1kmodule",
+  "permalink": "/docs/v1/1kmodule",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "slug": "/v1/1kmodule",
+    "id": "Ze8b54d7e-4975-4d52-ac78-ab02bf47ec5a"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "RADIUS Integrations",
+    "permalink": "/docs/v1/item-4"
+  },
+  "next": {
+    "title": "Integration with PingFederate",
+    "permalink": "/docs/v1/integration-with-pingfederate"
+  }
+}

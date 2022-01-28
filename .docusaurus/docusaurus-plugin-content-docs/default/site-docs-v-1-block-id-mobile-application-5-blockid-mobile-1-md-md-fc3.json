@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Mobile Application/Z176afd32-63ff-4637-bad8-731c3f01ae46",
+  "id": "v1/BlockID Mobile Application/Z176afd32-63ff-4637-bad8-731c3f01ae46",
+  "isDocsHomePage": false,
+  "title": "Z176afd32-63ff-4637-bad8-731c3f01ae46",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Mobile Application/5_blockid-mobile-(1).md.md",
+  "sourceDirName": "v1/BlockID Mobile Application",
+  "slug": "/v1/blockid-mobile-application-user-guide-2",
+  "permalink": "/docs/v1/blockid-mobile-application-user-guide-2",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "slug": "/v1/blockid-mobile-application-user-guide-2",
+    "id": "Z176afd32-63ff-4637-bad8-731c3f01ae46"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "blockid-mobile-(1)",
+    "permalink": "/docs/v1/BlockID Mobile Application/blockid-mobile-(1)"
+  },
+  "next": {
+    "title": "Zcf2a3abc-5b16-4aa5-9281-4023959f8301",
+    "permalink": "/docs/v1/blockid-mobile-application-user-guide-1"
+  }
+}

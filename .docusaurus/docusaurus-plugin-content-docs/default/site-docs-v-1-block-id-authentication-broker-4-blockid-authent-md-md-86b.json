@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Authentication Broker/Zd1256c41-99d9-4b0a-8a6c-48d13a499fa8",
+  "id": "v1/BlockID Authentication Broker/Zd1256c41-99d9-4b0a-8a6c-48d13a499fa8",
+  "isDocsHomePage": false,
+  "title": "Zd1256c41-99d9-4b0a-8a6c-48d13a499fa8",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Authentication Broker/4_blockid-authent.md.md",
+  "sourceDirName": "v1/BlockID Authentication Broker",
+  "slug": "/v1/blockid-authentication-broker-user-guide",
+  "permalink": "/docs/v1/blockid-authentication-broker-user-guide",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "slug": "/v1/blockid-authentication-broker-user-guide",
+    "id": "Zd1256c41-99d9-4b0a-8a6c-48d13a499fa8"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "blockid-authent",
+    "permalink": "/docs/v1/BlockID Authentication Broker/blockid-authent"
+  },
+  "next": {
+    "title": "upgrading-block",
+    "permalink": "/docs/v1/BlockID Authentication Broker/upgrading-block"
+  }
+}

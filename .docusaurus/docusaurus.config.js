@@ -1,27 +1,30 @@
 export default {
   "title": "Developer Documentation",
   "tagline": "1Kosmos BlockID Developer Portal",
-  "url": "https://cranky-wing-7e4cda.netlify.app",
+  "url": "https://pedantic-meitner-0011.netlify.app",
   "baseUrl": "/",
-  "onBrokenLinks": "throw",
+  "onBrokenLinks": "warn",
   "onBrokenMarkdownLinks": "warn",
   "favicon": "img/favicon.ico",
   "organizationName": "1kosmos",
-  "projectName": "netlify",
+  "projectName": "devx_frontend",
+  "onDuplicateRoutes": "warn",
+  "themes": [
+    "@docusaurus/theme-live-codeblock"
+  ],
   "presets": [
     [
       "@docusaurus/preset-classic",
       {
         "docs": {
-          "sidebarPath": "/Users/ianfrench/Downloads/devx-front-tohit/netlify/sidebars.js",
-          "editUrl": "https://github.com/1KBlockID/devx_frontend/tree/develop/"
+          "sidebarPath": "/Users/ifrench/netlify2/netlify/sidebars.js"
         },
         "blog": {
           "showReadingTime": true,
           "editUrl": "https://github.com/1KBlockID/devx_frontend/tree/develop/blog/"
         },
         "theme": {
-          "customCss": "/Users/ianfrench/Downloads/devx-front-tohit/netlify/src/css/custom.css"
+          "customCss": "/Users/ifrench/netlify2/netlify/src/css/custom.css"
         }
       }
     ]
@@ -29,105 +32,53 @@ export default {
   "stylesheets": [
     "https://fonts.googleapis.com/icon?family=Material+Icons"
   ],
+  "plugins": [
+    "docusaurus-node-polyfills",
+    "/Users/ifrench/netlify2/netlify/src/docuplugin.js"
+  ],
   "themeConfig": {
     "navbar": {
-      "title": "DevX",
+      "title": "Developer",
       "logo": {
         "alt": "BlockID Logo",
         "src": "img/1klogo.svg"
       },
-      "items": [
-        {
-          "type": "doc",
-          "docId": "intro",
-          "position": "left",
-          "label": "Tutorial"
-        },
-        {
-          "to": "/blog",
-          "label": "Blog",
-          "position": "left"
-        },
-        {
-          "href": "https://github.com/facebook/docusaurus",
-          "label": "GitHub",
-          "position": "right"
-        }
-      ],
-      "hideOnScroll": false
+      "hideOnScroll": false,
+      "items": []
     },
     "footer": {
-      "style": "dark",
+      "style": "light",
       "links": [
         {
           "title": "Docs",
           "items": [
             {
-              "label": "Tutorial",
-              "to": "/docs/intro"
-            }
-          ]
-        },
-        {
-          "title": "Community",
-          "items": [
-            {
-              "label": "Stack Overflow",
-              "href": "https://stackoverflow.com/questions/tagged/1kosmos"
-            },
-            {
-              "label": "Discord",
-              "href": "https://discordapp.com/invite/1kosmos"
-            },
-            {
-              "label": "Twitter",
-              "href": "https://twitter.com/1kosmos"
-            }
-          ]
-        },
-        {
-          "title": "More",
-          "items": [
-            {
-              "label": "Blog",
-              "to": "/blog"
-            },
-            {
-              "label": "GitHub",
-              "href": "https://github.com/1KBlockID/devx_frontend/tree/develop"
+              "label": "Home",
+              "to": "/docs/uwl"
             }
           ]
         }
       ],
-      "copyright": "Copyright © 2021 My Project, Inc. Built with Docusaurus."
+      "copyright": "© 2022 1Kosmos Inc., All Rights Reserved. | Privacy Policy | Cookie Policy"
     },
     "prism": {
       "additionalLanguages": [
-        "php"
+        "php",
+        "java"
       ],
       "theme": {
         "plain": {
-          "color": "#F8F8F2",
-          "backgroundColor": "#282A36"
+          "color": "#d6deeb",
+          "backgroundColor": "#011627"
         },
         "styles": [
           {
             "types": [
-              "prolog",
-              "constant",
-              "builtin"
+              "changed"
             ],
             "style": {
-              "color": "rgb(189, 147, 249)"
-            }
-          },
-          {
-            "types": [
-              "inserted",
-              "function"
-            ],
-            "style": {
-              "color": "rgb(80, 250, 123)"
+              "color": "rgb(162, 191, 252)",
+              "fontStyle": "italic"
             }
           },
           {
@@ -135,44 +86,17 @@ export default {
               "deleted"
             ],
             "style": {
-              "color": "rgb(255, 85, 85)"
+              "color": "rgba(239, 83, 80, 0.56)",
+              "fontStyle": "italic"
             }
           },
           {
             "types": [
-              "changed"
+              "inserted",
+              "attr-name"
             ],
             "style": {
-              "color": "rgb(255, 184, 108)"
-            }
-          },
-          {
-            "types": [
-              "punctuation",
-              "symbol"
-            ],
-            "style": {
-              "color": "rgb(248, 248, 242)"
-            }
-          },
-          {
-            "types": [
-              "string",
-              "char",
-              "tag",
-              "selector"
-            ],
-            "style": {
-              "color": "rgb(255, 121, 198)"
-            }
-          },
-          {
-            "types": [
-              "keyword",
-              "variable"
-            ],
-            "style": {
-              "color": "rgb(189, 147, 249)",
+              "color": "rgb(173, 219, 103)",
               "fontStyle": "italic"
             }
           },
@@ -181,15 +105,104 @@ export default {
               "comment"
             ],
             "style": {
-              "color": "rgb(98, 114, 164)"
+              "color": "rgb(99, 119, 119)",
+              "fontStyle": "italic"
             }
           },
           {
             "types": [
-              "attr-name"
+              "string",
+              "url"
             ],
             "style": {
-              "color": "rgb(241, 250, 140)"
+              "color": "rgb(173, 219, 103)"
+            }
+          },
+          {
+            "types": [
+              "variable"
+            ],
+            "style": {
+              "color": "rgb(214, 222, 235)"
+            }
+          },
+          {
+            "types": [
+              "number"
+            ],
+            "style": {
+              "color": "rgb(247, 140, 108)"
+            }
+          },
+          {
+            "types": [
+              "builtin",
+              "char",
+              "constant",
+              "function"
+            ],
+            "style": {
+              "color": "rgb(130, 170, 255)"
+            }
+          },
+          {
+            "types": [
+              "punctuation"
+            ],
+            "style": {
+              "color": "rgb(199, 146, 234)"
+            }
+          },
+          {
+            "types": [
+              "selector",
+              "doctype"
+            ],
+            "style": {
+              "color": "rgb(199, 146, 234)",
+              "fontStyle": "italic"
+            }
+          },
+          {
+            "types": [
+              "class-name"
+            ],
+            "style": {
+              "color": "rgb(255, 203, 139)"
+            }
+          },
+          {
+            "types": [
+              "tag",
+              "operator",
+              "keyword"
+            ],
+            "style": {
+              "color": "rgb(127, 219, 202)"
+            }
+          },
+          {
+            "types": [
+              "boolean"
+            ],
+            "style": {
+              "color": "rgb(255, 88, 116)"
+            }
+          },
+          {
+            "types": [
+              "property"
+            ],
+            "style": {
+              "color": "rgb(128, 203, 196)"
+            }
+          },
+          {
+            "types": [
+              "namespace"
+            ],
+            "style": {
+              "color": "rgb(178, 204, 214)"
             }
           }
         ]
@@ -303,6 +316,9 @@ export default {
     "tableOfContents": {
       "minHeadingLevel": 2,
       "maxHeadingLevel": 3
+    },
+    "liveCodeBlock": {
+      "playgroundPosition": "bottom"
     }
   },
   "baseUrlIssueBanner": true,
@@ -313,10 +329,7 @@ export default {
     ],
     "localeConfigs": {}
   },
-  "onDuplicateRoutes": "warn",
   "customFields": {},
-  "plugins": [],
-  "themes": [],
   "titleDelimiter": "|",
   "noIndex": false
 };

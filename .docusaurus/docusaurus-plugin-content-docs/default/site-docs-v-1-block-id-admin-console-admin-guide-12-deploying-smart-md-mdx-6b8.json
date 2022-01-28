@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Zd550fe55-bd79-412a-b949-d477e7545e41",
+  "id": "v1/BlockID Admin Console/Admin Guide/Zd550fe55-bd79-412a-b949-d477e7545e41",
+  "isDocsHomePage": false,
+  "title": "Deploying Smart Contract",
+  "description": "In the traditional approach, when we store data on the blockchain, everyone can see that data. However, in multi-tenancy, we only allow a tenant to view their data and not other tenants’ data on the blockchain. The smart contract is the mechanism with which an application can interact with the blockchain to store data and perform a transaction in an encrypted form.",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/12_deploying-smart.md.mdx",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide",
+  "slug": "/v1/deploying-smart-contract",
+  "permalink": "/docs/v1/deploying-smart-contract",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "slug": "/v1/deploying-smart-contract",
+    "id": "Zd550fe55-bd79-412a-b949-d477e7545e41"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Tenant Management",
+    "permalink": "/docs/v1/tenant-management"
+  },
+  "next": {
+    "title": "Community Management",
+    "permalink": "/docs/v1/community-management"
+  }
+}

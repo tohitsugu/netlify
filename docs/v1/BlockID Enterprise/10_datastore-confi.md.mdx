@@ -1,0 +1,43 @@
+---
+slug: /v1/datastore-configuration
+id: Z799a680d-d99c-4bb2-a3f8-572c221cd8b7
+---
+# Datastore Configuration
+
+* * *
+:::(Info) ([Datastore Configuration](#DatastoreConfiguration))
+The Data Store is repository of information about the authenticated user. Data Store's come in 2 flavor's. A centralized datastore and a decentralized datastore. Decentralized data store's cannot be controlled, modified or tampered with by the organization. Only the user would have control over the data associated with a decentralized session. This section enabled you to map the authenticated decentralized user's attributes (post user-consent) to a web session.
+:::
+
+:
+
+
+
+## <a name = "DatastoreConfiguration"></a>Datastore Configuration
+#### How to setup the Datastore Configuration
+This section enabled you to map the authenticated decentralized user's attributes (post user-consent) to a web session. 
+
+There are two colums to map out to:
+Note: These Scopes and Directory Attributes cannot be modified 
+
+
+| Scopes |Directory Attributes |
+| --- | --- |
+| firstname | givenname |
+| locality | l |
+| middlename | initials |
+| lastnanme | mobile |
+| phone | mobile |
+| postalcode | postalCode |
+| streetaddress | postaladdress |
+| state | st |
+| email | mail |
+
+
+
+
+Once set you can save the Datastore
+
+
+
+

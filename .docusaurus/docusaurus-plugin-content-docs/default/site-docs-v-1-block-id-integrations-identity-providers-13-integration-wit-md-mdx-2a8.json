@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Integrations/Identity Providers/Z3ec44e40-4852-4fc4-884c-598943e2182d",
+  "id": "v1/BlockID Integrations/Identity Providers/Z3ec44e40-4852-4fc4-884c-598943e2182d",
+  "isDocsHomePage": false,
+  "title": "Integration with ForgeRock",
+  "description": "This document describes the procedure to configure the BlockID Admin Console as a passwordless authentication solution for the ForgeRock protected applications. This integration will allow your users to log in to their respective applications using ForgeRock leveraging their biometrics. The biometric options include TouchID / FaceID and LiveID.",
+  "source": "@site/docs/v1/BlockID Integrations/Identity Providers/13_integration-wit.md.mdx",
+  "sourceDirName": "v1/BlockID Integrations/Identity Providers",
+  "slug": "/v1/integration-with-forgerock",
+  "permalink": "/docs/v1/integration-with-forgerock",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {
+    "slug": "/v1/integration-with-forgerock",
+    "id": "Z3ec44e40-4852-4fc4-884c-598943e2182d"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Integration with CyberArk Idaptive Identity",
+    "permalink": "/docs/v1/integration-with-cyberark-idaptive-identity"
+  },
+  "next": {
+    "title": "Integration with CyberArk",
+    "permalink": "/docs/v1/integration-with-cyberark"
+  }
+}

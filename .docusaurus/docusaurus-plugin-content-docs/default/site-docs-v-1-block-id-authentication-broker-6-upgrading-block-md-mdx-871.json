@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Authentication Broker/Z3ecf8e77-a029-4bfe-96d4-999e92d1484a",
+  "id": "v1/BlockID Authentication Broker/Z3ecf8e77-a029-4bfe-96d4-999e92d1484a",
+  "isDocsHomePage": false,
+  "title": "Upgrading BlockID Authentication Broker",
+  "description": "This document is to upgrade your 1Kosmos BlockID Authentication Brokers to the latest version. In order to ensure this is seamless, download the latest broker, and perform the following steps for the upgrade. The following steps will assist you in manually installing the broker for LDAP/AD connectivity.",
+  "source": "@site/docs/v1/BlockID Authentication Broker/6_upgrading-block.md.mdx",
+  "sourceDirName": "v1/BlockID Authentication Broker",
+  "slug": "/v1/upgrading-blockid-authentication-broker",
+  "permalink": "/docs/v1/upgrading-blockid-authentication-broker",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "slug": "/v1/upgrading-blockid-authentication-broker",
+    "id": "Z3ecf8e77-a029-4bfe-96d4-999e92d1484a"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Authentication Broker - User Guide",
+    "permalink": "/docs/v1/blockid-authentication-broker-user-guide"
+  },
+  "next": {
+    "title": "Installing BlockID Credential Provider",
+    "permalink": "/docs/v1/installing-blockid-credential-provider"
+  }
+}

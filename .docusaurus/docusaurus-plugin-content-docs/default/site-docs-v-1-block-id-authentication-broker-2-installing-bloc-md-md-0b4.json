@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Authentication Broker/Zdae9610f-aaf7-4309-82e7-14a40f70d02a",
+  "id": "v1/BlockID Authentication Broker/Zdae9610f-aaf7-4309-82e7-14a40f70d02a",
+  "isDocsHomePage": false,
+  "title": "Zdae9610f-aaf7-4309-82e7-14a40f70d02a",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Authentication Broker/2_installing-bloc.md.md",
+  "sourceDirName": "v1/BlockID Authentication Broker",
+  "slug": "/v1/installing-blockid-authentication-broker",
+  "permalink": "/docs/v1/installing-blockid-authentication-broker",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/installing-blockid-authentication-broker",
+    "id": "Zdae9610f-aaf7-4309-82e7-14a40f70d02a"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "installing-bloc",
+    "permalink": "/docs/v1/BlockID Authentication Broker/installing-bloc"
+  },
+  "next": {
+    "title": "internal-doc-bl",
+    "permalink": "/docs/v1/BlockID Authentication Broker/internal-doc-bl"
+  }
+}

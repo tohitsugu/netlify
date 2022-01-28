@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/active-director",
+  "id": "v1/BlockID Enterprise/active-director",
+  "isDocsHomePage": false,
+  "title": "active-director",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/13_active-director.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/BlockID Enterprise/active-director",
+  "permalink": "/docs/v1/BlockID Enterprise/active-director",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Connector Module",
+    "permalink": "/docs/v1/blockid-connector-module"
+  },
+  "next": {
+    "title": "AD or LDAP server Configuration",
+    "permalink": "/docs/v1/active-directory-or-ldap-server-configuration"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Settings/email-templates",
+  "id": "v1/BlockID New Admin Portal (Athena)/Settings/email-templates",
+  "isDocsHomePage": false,
+  "title": "email-templates",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Settings/2_email-templates.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Settings",
+  "slug": "/v1/BlockID New Admin Portal (Athena)/Settings/email-templates",
+  "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/Settings/email-templates",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Release Notes 2021.11.03",
+    "permalink": "/docs/v1/release-notes-20211103"
+  },
+  "next": {
+    "title": "Zca39865e-e604-4ebb-a452-c585064e42a0",
+    "permalink": "/docs/v1/email-templates"
+  }
+}

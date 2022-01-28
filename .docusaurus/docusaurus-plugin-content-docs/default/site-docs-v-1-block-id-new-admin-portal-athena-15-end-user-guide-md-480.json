@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/end-user-guide",
+  "id": "v1/BlockID New Admin Portal (Athena)/end-user-guide",
+  "isDocsHomePage": false,
+  "title": "end-user-guide",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/15_end-user-guide.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)",
+  "slug": "/v1/BlockID New Admin Portal (Athena)/end-user-guide",
+  "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/end-user-guide",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Customizing the Branding of your BlockID Login Page",
+    "permalink": "/docs/v1/customizing-the-branding-of-your-blockid-login-page"
+  },
+  "next": {
+    "title": "End User Guide",
+    "permalink": "/docs/v1/end-user-guide"
+  }
+}

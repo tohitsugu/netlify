@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Z2cd6493e-3d85-4c46-91d5-0b93e239b73c",
+  "id": "v1/BlockID New Admin Portal (Athena)/Z2cd6493e-3d85-4c46-91d5-0b93e239b73c",
+  "isDocsHomePage": false,
+  "title": "Z2cd6493e-3d85-4c46-91d5-0b93e239b73c",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/2_introduction-to.md.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)",
+  "slug": "/v1/introduction-to-athena-admin-portal",
+  "permalink": "/docs/v1/introduction-to-athena-admin-portal",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/introduction-to-athena-admin-portal",
+    "id": "Z2cd6493e-3d85-4c46-91d5-0b93e239b73c"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "introduction-to",
+    "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/introduction-to"
+  },
+  "next": {
+    "title": "login-with-mfa",
+    "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/login-with-mfa"
+  }
+}

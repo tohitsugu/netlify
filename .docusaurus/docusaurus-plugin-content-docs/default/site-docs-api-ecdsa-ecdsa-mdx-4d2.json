@@ -1,0 +1,27 @@
+{
+  "unversionedId": "api/ecdsa/ecdsa",
+  "id": "api/ecdsa/ecdsa",
+  "isDocsHomePage": false,
+  "title": "ECDSA Encryption",
+  "description": "The BlockID Developer API was designed with a heavy emphasis on security, and features Elliptic Curve Digital Signature Algorithm -- or ECDSA encryption.",
+  "source": "@site/docs/api/ecdsa/ecdsa.mdx",
+  "sourceDirName": "api/ecdsa",
+  "slug": "/api/ecdsa",
+  "permalink": "/docs/api/ecdsa",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "slug": "/api/ecdsa"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "One-Time Passcodes",
+    "permalink": "/docs/api/otp"
+  },
+  "next": {
+    "title": "User Private and Public Keys",
+    "permalink": "/docs/api/ecdsa/keys"
+  }
+}

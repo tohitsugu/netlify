@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/introduction-to",
+  "id": "v1/BlockID Admin Console/Admin Guide/introduction-to",
+  "isDocsHomePage": false,
+  "title": "introduction-to",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/2_introduction-to.md",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide",
+  "slug": "/v1/BlockID Admin Console/Admin Guide/introduction-to",
+  "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/introduction-to",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "User Onboarding Process Guide",
+    "permalink": "/docs/v1/user-onboarding-process-guide"
+  },
+  "next": {
+    "title": "administration-",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/administration-"
+  }
+}

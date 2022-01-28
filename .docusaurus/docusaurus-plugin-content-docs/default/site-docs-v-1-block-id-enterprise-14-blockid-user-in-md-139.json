@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/blockid-user-in",
+  "id": "v1/BlockID Enterprise/blockid-user-in",
+  "isDocsHomePage": false,
+  "title": "blockid-user-in",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/14_blockid-user-in.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/BlockID Enterprise/blockid-user-in",
+  "permalink": "/docs/v1/BlockID Enterprise/blockid-user-in",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 14,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "AD or LDAP server Configuration",
+    "permalink": "/docs/v1/active-directory-or-ldap-server-configuration"
+  },
+  "next": {
+    "title": "BlockID User Interface Templates",
+    "permalink": "/docs/v1/blockid-user-interface-templates"
+  }
+}

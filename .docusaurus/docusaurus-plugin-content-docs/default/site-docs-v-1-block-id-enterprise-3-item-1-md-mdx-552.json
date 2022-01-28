@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/Z38fac216-edc6-4cd7-9303-dd6476fa2123",
+  "id": "v1/BlockID Enterprise/Z38fac216-edc6-4cd7-9303-dd6476fa2123",
+  "isDocsHomePage": false,
+  "title": "Dashboard",
+  "description": "If you have any questions that are not addressed in the sections below, please send us an email at info@1kosmos.com",
+  "source": "@site/docs/v1/BlockID Enterprise/3_item-1.md.mdx",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/item-1",
+  "permalink": "/docs/v1/item-1",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/v1/item-1",
+    "id": "Z38fac216-edc6-4cd7-9303-dd6476fa2123"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Release Notes",
+    "permalink": "/docs/v1/release-notes"
+  },
+  "next": {
+    "title": "User Administration",
+    "permalink": "/docs/v1/item-2"
+  }
+}

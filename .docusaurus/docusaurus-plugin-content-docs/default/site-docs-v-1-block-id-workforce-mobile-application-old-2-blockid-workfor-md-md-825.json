@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Workforce Mobile Application - Old/Z1c4ca517-b3ce-483d-bb35-35a78f78747e",
+  "id": "v1/BlockID Workforce Mobile Application - Old/Z1c4ca517-b3ce-483d-bb35-35a78f78747e",
+  "isDocsHomePage": false,
+  "title": "Z1c4ca517-b3ce-483d-bb35-35a78f78747e",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Workforce Mobile Application - Old/2_blockid-workfor.md.md",
+  "sourceDirName": "v1/BlockID Workforce Mobile Application - Old",
+  "slug": "/v1/blockid-workforce-mobile-application-user-guideold",
+  "permalink": "/docs/v1/blockid-workforce-mobile-application-user-guideold",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/blockid-workforce-mobile-application-user-guideold",
+    "id": "Z1c4ca517-b3ce-483d-bb35-35a78f78747e"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "blockid-workfor",
+    "permalink": "/docs/v1/BlockID Workforce Mobile Application - Old/blockid-workfor"
+  },
+  "next": {
+    "title": "getting-started",
+    "permalink": "/docs/v1/Developer's Docs/getting-started"
+  }
+}

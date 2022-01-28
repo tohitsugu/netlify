@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Z7e31aeb3-0c73-401d-966e-f212a480b00d",
+  "id": "v1/BlockID Admin Console/Admin Guide/Z7e31aeb3-0c73-401d-966e-f212a480b00d",
+  "isDocsHomePage": false,
+  "title": "White Label Templates",
+  "description": "BlockID’s White Label feature provides a way to customize the look and feel of the GUI for the specific pages as described below. It provides templates with the settings to give administrators the ability to add their CSS style code and brand it as per their requirement.",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/10_white-label-tem.md.mdx",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide",
+  "slug": "/v1/white-label-templates",
+  "permalink": "/docs/v1/white-label-templates",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {
+    "slug": "/v1/white-label-templates",
+    "id": "Z7e31aeb3-0c73-401d-966e-f212a480b00d"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "License Keys",
+    "permalink": "/docs/v1/license-keys"
+  },
+  "next": {
+    "title": "Tenant Management",
+    "permalink": "/docs/v1/tenant-management"
+  }
+}

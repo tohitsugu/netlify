@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Videos/Z44a1fb86-80c5-4675-88ae-f97f9ce1fe8d",
+  "id": "v1/BlockID Videos/Z44a1fb86-80c5-4675-88ae-f97f9ce1fe8d",
+  "isDocsHomePage": false,
+  "title": "BlockID Solutions",
+  "description": "This section contains BlockID solution videos for  workforce as well as Customers.",
+  "source": "@site/docs/v1/BlockID Videos/6_blockid-solutio.md.mdx",
+  "sourceDirName": "v1/BlockID Videos",
+  "slug": "/v1/blockid-solutions",
+  "permalink": "/docs/v1/blockid-solutions",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "slug": "/v1/blockid-solutions",
+    "id": "Z44a1fb86-80c5-4675-88ae-f97f9ce1fe8d"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Tenant On-boarding Process Guide",
+    "permalink": "/docs/v1/internal-process"
+  },
+  "next": {
+    "title": "BlockID User Journey",
+    "permalink": "/docs/v1/blockid-user-journey"
+  }
+}

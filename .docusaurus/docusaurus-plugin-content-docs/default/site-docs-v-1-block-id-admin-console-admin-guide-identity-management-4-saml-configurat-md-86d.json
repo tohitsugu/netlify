@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Identity Management/saml-configurat",
+  "id": "v1/BlockID Admin Console/Admin Guide/Identity Management/saml-configurat",
+  "isDocsHomePage": false,
+  "title": "saml-configurat",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/Identity Management/4_saml-configurat.md",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide/Identity Management",
+  "slug": "/v1/BlockID Admin Console/Admin Guide/Identity Management/saml-configurat",
+  "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Identity Management/saml-configurat",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "role-management",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Identity Management/role-management"
+  },
+  "next": {
+    "title": "Installing BlockID Authentication Broker",
+    "permalink": "/docs/v1/installing-blockid-authentication-broker"
+  }
+}

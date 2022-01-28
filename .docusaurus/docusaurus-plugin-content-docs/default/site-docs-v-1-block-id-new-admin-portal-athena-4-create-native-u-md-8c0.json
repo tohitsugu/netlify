@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/create-native-u",
+  "id": "v1/BlockID New Admin Portal (Athena)/create-native-u",
+  "isDocsHomePage": false,
+  "title": "create-native-u",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/4_create-native-u.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)",
+  "slug": "/v1/BlockID New Admin Portal (Athena)/create-native-u",
+  "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/create-native-u",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Login",
+    "permalink": "/docs/v1/login-with-mfa"
+  },
+  "next": {
+    "title": "Create Native User",
+    "permalink": "/docs/v1/create-native-user"
+  }
+}

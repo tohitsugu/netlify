@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/item-2",
+  "id": "v1/BlockID Enterprise/item-2",
+  "isDocsHomePage": false,
+  "title": "item-2",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/4_item-2.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/BlockID Enterprise/item-2",
+  "permalink": "/docs/v1/BlockID Enterprise/item-2",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Dashboard",
+    "permalink": "/docs/v1/item-1"
+  },
+  "next": {
+    "title": "User Administration",
+    "permalink": "/docs/v1/item-2"
+  }
+}

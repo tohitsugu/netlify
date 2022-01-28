@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Authentication Broker/Z4ed1cc7a-deb7-4515-acb5-3e4cae005a0e",
+  "id": "v1/BlockID Authentication Broker/Z4ed1cc7a-deb7-4515-acb5-3e4cae005a0e",
+  "isDocsHomePage": false,
+  "title": "Internal Guide - BlockID Authentication Broker",
+  "description": "This is an internal guide created with the detailed troubleshooting steps for each issue or error that may occur while installing and using the BlockID Authentication Broker. It also covers a few FAQs related to the broker functionalities.",
+  "source": "@site/docs/v1/BlockID Authentication Broker/3_internal-doc-bl.md.mdx",
+  "sourceDirName": "v1/BlockID Authentication Broker",
+  "slug": "/v1/internal-doc-blockid-authentication-broker",
+  "permalink": "/docs/v1/internal-doc-blockid-authentication-broker",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/v1/internal-doc-blockid-authentication-broker",
+    "id": "Z4ed1cc7a-deb7-4515-acb5-3e4cae005a0e"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Installing BlockID Authentication Broker",
+    "permalink": "/docs/v1/installing-blockid-authentication-broker"
+  },
+  "next": {
+    "title": "BlockID Authentication Broker - User Guide",
+    "permalink": "/docs/v1/blockid-authentication-broker-user-guide"
+  }
+}

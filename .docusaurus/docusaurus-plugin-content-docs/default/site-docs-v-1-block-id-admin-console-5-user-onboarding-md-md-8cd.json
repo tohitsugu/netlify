@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Za1235e1f-bb47-411c-9367-464867d5276b",
+  "id": "v1/BlockID Admin Console/Za1235e1f-bb47-411c-9367-464867d5276b",
+  "isDocsHomePage": false,
+  "title": "Za1235e1f-bb47-411c-9367-464867d5276b",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/5_user-onboarding.md.md",
+  "sourceDirName": "v1/BlockID Admin Console",
+  "slug": "/v1/user-onboarding-process-guide",
+  "permalink": "/docs/v1/user-onboarding-process-guide",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "slug": "/v1/user-onboarding-process-guide",
+    "id": "Za1235e1f-bb47-411c-9367-464867d5276b"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "user-onboarding",
+    "permalink": "/docs/v1/BlockID Admin Console/user-onboarding"
+  },
+  "next": {
+    "title": "introduction-to",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/introduction-to"
+  }
+}

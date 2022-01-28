@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Authentication Broker/Zd1256c41-99d9-4b0a-8a6c-48d13a499fa8",
+  "id": "v1/BlockID Authentication Broker/Zd1256c41-99d9-4b0a-8a6c-48d13a499fa8",
+  "isDocsHomePage": false,
+  "title": "BlockID Authentication Broker - User Guide",
+  "description": "The BlockID Authentication Broker is a lightweight JAVA application that provides a mechanism, communicates outbound only, and handles the flow of encrypted traffic between the Credential Provider (on Windows), Network Device Enrollment Service (NDES), Active Directory (AD), and the 1Kosmos cloud.",
+  "source": "@site/docs/v1/BlockID Authentication Broker/4_blockid-authent.md.mdx",
+  "sourceDirName": "v1/BlockID Authentication Broker",
+  "slug": "/v1/blockid-authentication-broker-user-guide",
+  "permalink": "/docs/v1/blockid-authentication-broker-user-guide",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "slug": "/v1/blockid-authentication-broker-user-guide",
+    "id": "Zd1256c41-99d9-4b0a-8a6c-48d13a499fa8"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Internal Guide - BlockID Authentication Broker",
+    "permalink": "/docs/v1/internal-doc-blockid-authentication-broker"
+  },
+  "next": {
+    "title": "Upgrading BlockID Authentication Broker",
+    "permalink": "/docs/v1/upgrading-blockid-authentication-broker"
+  }
+}

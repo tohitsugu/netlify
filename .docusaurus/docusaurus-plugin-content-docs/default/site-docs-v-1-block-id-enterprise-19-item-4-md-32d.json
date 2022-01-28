@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/item-4",
+  "id": "v1/BlockID Enterprise/item-4",
+  "isDocsHomePage": false,
+  "title": "item-4",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/19_item-4.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/BlockID Enterprise/item-4",
+  "permalink": "/docs/v1/BlockID Enterprise/item-4",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 19,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Authenticaition Modules Configuration",
+    "permalink": "/docs/v1/authenticaition-modules-configuration"
+  },
+  "next": {
+    "title": "RADIUS Integrations",
+    "permalink": "/docs/v1/item-4"
+  }
+}

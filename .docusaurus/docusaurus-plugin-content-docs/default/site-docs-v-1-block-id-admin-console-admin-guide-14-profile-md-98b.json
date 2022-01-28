@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/profile",
+  "id": "v1/BlockID Admin Console/Admin Guide/profile",
+  "isDocsHomePage": false,
+  "title": "profile",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/14_profile.md",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide",
+  "slug": "/v1/BlockID Admin Console/Admin Guide/profile",
+  "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/profile",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 14,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "community-manag",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/community-manag"
+  },
+  "next": {
+    "title": "core-configurat",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/core-configurat"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/Z4796fbda-3683-4105-b792-f4ffe05bb3db",
+  "id": "v1/BlockID Enterprise/Z4796fbda-3683-4105-b792-f4ffe05bb3db",
+  "isDocsHomePage": false,
+  "title": "BlockID Connector Module",
+  "description": "* * *",
+  "source": "@site/docs/v1/BlockID Enterprise/12_blockid-connect.md.mdx",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/blockid-connector-module",
+  "permalink": "/docs/v1/blockid-connector-module",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "slug": "/v1/blockid-connector-module",
+    "id": "Z4796fbda-3683-4105-b792-f4ffe05bb3db"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Datastore Configuration",
+    "permalink": "/docs/v1/datastore-configuration"
+  },
+  "next": {
+    "title": "AD or LDAP server Configuration",
+    "permalink": "/docs/v1/active-directory-or-ldap-server-configuration"
+  }
+}

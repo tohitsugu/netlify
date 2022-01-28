@@ -1,0 +1,89 @@
+---
+slug: /v2/release-notes-r10300
+id: Z89a4e212-0c52-480e-8072-3d62e7106a82
+---
+# Release Notes R1.02.03
+#### 2021.03.10: Monthly Production release notes
+This release note includes the following releases:
+1. Generally Available Features
+2. Bug Fixes
+
+## Generally Available Features
+* * *
+### New Features
+#### Windows Credential Provider (CP): version 06.07.6013DE08
+
+1. Introduced the RDPHelper utility to support remote workstations logins through Remote Desktop Protocol (RDP).
+2. A new script is available to install and configure the BlockID Windows CP from the command prompt.
+3. ECDSA key generation logic has been added to the installation step.
+4. MAC: Passwordless login with QR code
+ 
+* * *
+### Feature Enhancements
+#### BlockID Admin Console (R1.02.05)
+
+1. **SAML redesign**: Introduction of the following columns in the datastore config:
+    * **Attribute Source**: 
+        * Enables the admins to set attributes as "Directory" or "Ledger".
+        * Ensures that the value goes to the Ethereum (Ledger) or LDAP/AD (Directory) attribute based on the dropdown. The Ledger or directory checks where the value of that attribute is fetched from not where it goes.
+    * **Default**: 
+        * Allows the admin to set a static value for a datastore attribute.
+        * If the session (AD | Etherum) has info, use the live value else set the session with static (default) value configured against the datastore attribute.
+    * A datastore attribute that was previously mapped to a claim (identity provider/service provider) is now removed, any IDP claims that may be mapped to this attribute must be unmapped (not removed).
+    * Removing any IDP claim will result in the removal of any mapped SP claims.
+
+2. **ETH sync cron**:
+    *  This validates the integration between the eth-async cron job and the API it interacts with on the BlockID Admin Console and responsible for processing POI (Proof of Identity) and PON (Proof of Name) transactions to Ethereum.
+3. **Event logging**: It is responsible for covering the logging requirements for the BlockID Admin Console. This feature performs the following actions:
+    * Identify a suitable framework
+    * Implement logs for primary APIs specifically in use by mobile apps
+    * Provides a list of registered users (DID) and failed logins (non-Windows) in a given period.
+    * Log an event in the following conditions:
+        * When a new invitation is sent to a user for onboarding
+        * When a user is onboarded via user-onboarding or by SCEP enrollment or by linking an account
+        * When a login action is performed via:
+            * The login page on the BlockID Admin Console
+            * QR scan on the BlockID Admin Console
+            * Mobile application in response to a QR scan on a third-party site.
+    * When a login attempt fails on the BlockID Admin Console
+    * When a login attempt fails on r1 /authenticate or v3 /SCEP endpoints.
+4. **Access Code Redemption (ACR)/magic link**:
+    *  A magic link must be able to bind to specific brands of the BlockID mobile app. For example, a VID magic link will open with Verizon branded app, a Jefferies magic link will open with Jefferies branded app, and so on. The new ACR magic link: `https://{current-tenant-first-dns}/acr?code=xxxxx`
+2.	ACR component will be hosted with each instance and not just root.
+3.	The following properties have been added to the `application.properties` in the BlockID Admin Console
+a.	`ios.file.association`
+b.	`android.file.association`
+
+5. **Security update**: Prevent non-admin users from changing username/email from their profile. 
+    * The Edit User option from the User Management page has now been removed. All user profile updates will now be carried out only by administrators via the User Management page.
+6. **Matches UWL workflow**: Updates performed in the BlockID Admin Console to match UWL (Universal Web Login) workflows. If the userID is not provided OR the provided userID is not linked to the DID, gets a “You are not authorized to access this application.” message. QR code renews the session on dismissing the message. 
+7. **License support for NationalID**: 
+    * This feature allows root-admin to manage NationalID as a license module via License Create OR Update screen on the BlockID Admin Console.
+    * Updates performed in the doc register/unregister API to allow NationalID registration.
+
+ #### Micro Services
+1. **License API**: A License Management Service which will be a central repository for all licenses that enable applications to communicate with one another within the BlockID platform.
+2. **Sessions API**: Provides a central service where active user sessions can be managed and application(s) can safely exchange data with requesting third-party partner sites.
+3. **CaaS API**: A service to manage configurations required by the BlockID platform that enables applications to GET/SET Key/Value based config attributes.
+
+#### BlockID mobile application
+1. Ability to enroll the NationalID
+2. e-Passport - Passport scanning now supports reading digitally signed data from RFID chip embedded in a Biometric passport))
+3. Brand specific application UX - Brands now have more control of the user experiences for their branded BlockID mobile application during onboarding.
+4. BlockID SDKs including documentation
+
+
+## Bug Fixes
+* * *
+#### BlockID Admin Console (R1.02.05)
+
+1. **The BlockID Authentication Broker calls AD too frequently**: The broker was making excessive calls to check if the directory server is AD. This was causing a variation in the number of users fetched in case the call fails due to intermittent network issues, or directory server load, which causes the subsequent `getUserDetails` calls to fail because the filter is incorrect for AD. 
+2. **Broker pagination fixes**: The BlockID Admin Console or broker fetching all the records when talking to AD/LDAP and stepping through in a loop to collect the requested page. This caused the UI to hang when AD/LDAP has more than a thousand users.
+3. **Public resources not getting loaded**: Public pages not loading when the user is not logged in, the user should be able to see the public pages without logging in but instead were getting forwarded to the logout page.
+
+#### Windows Credential Provider (CP): version 06.07.6013DE08
+
+1. Correction of the error message displays on receiving credentials of persona that belongs to a different tenant.
+2. Handled .Net Framework exception error on Windows Server 2012 R2.
+
+* * * 

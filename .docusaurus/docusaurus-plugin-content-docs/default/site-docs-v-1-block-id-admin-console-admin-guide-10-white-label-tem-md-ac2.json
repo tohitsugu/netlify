@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/white-label-tem",
+  "id": "v1/BlockID Admin Console/Admin Guide/white-label-tem",
+  "isDocsHomePage": false,
+  "title": "white-label-tem",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/10_white-label-tem.md",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide",
+  "slug": "/v1/BlockID Admin Console/Admin Guide/white-label-tem",
+  "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/white-label-tem",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "license-keys",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/license-keys"
+  },
+  "next": {
+    "title": "tenant-manageme",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/tenant-manageme"
+  }
+}

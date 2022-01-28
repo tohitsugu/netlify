@@ -1,0 +1,250 @@
+---
+slug: /v1/analytics
+id: Z93c052e9-c576-4fc4-8642-ea84578f6a60
+---
+
+# Analytics and Event Logging
+The Analytics dashboard is a business intelligence analytics engine that gives you an overview of the activity and security of your environment. It uses the elastic search to display reports and give you insights based on pre-defined System Log queries. It provides insight into how end-users are utilizing apps, services, and detects any potential security risks.
+
+To view the Insights, Reports, and System Logs available in the Analytics dashboard, perform the following steps:
+1. Login to **BlockID Admin Console**, navigate to ***Administration Console** > **Analytics***. 
+
+![AnalyticsscreenNew.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/AnalyticsscreenNew.jpg)
+
+
+2. In the **Analytics Dashboard** screen, you will be able to view the number of graphs and charts with statistical and numerical data, that shows:
+ 
+-  The Activity Hits Map highlights all geographical locations of users who have performed activities in the BlockID Admin Console. These activity hits will be added using the latitude and longitude information of each user’s geographical location. 
+
+- The Line graph displays all the actions performed by users within 24 hours.
+
+## System Logs
+In the **Analytics Dashboard** screen, click on the **System Logs** option. The **System Logs** screen is displayed with the list of the Device ID and activity details of all the users who have logged into the BlockID Admin Console.
+
+![SystemLogsAnalyticsNew.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/SystemLogsAnalyticsNew%281%29.jpg)
+
+You can view logs created for each user activity and a detailed description of each user activity. These logs are generated in JSON format and each page shows 250 log entries.
+
+This screen shows the following types of event log reports:
+1.	User Login Report
+2.	Invitation for Onboarding Report
+3.	User Onboarding Report
+
+### User Login Report
+This log report is generated when a user logs into the BlockID Admin Console (tenant) during a specified period (Sign-in count per user). A user may log in through `direct access to the tenant` or `SSO access (For example, SAML)`. In both cases, the user authenticates via multiple factors which may include QR scan, authN (which will be followed by OTP). Let’s check each login case in detail:
+
+#### Direct access to the tenant
+In this case, a user will log in to the tenant using their login credentials or via scanning the QR code.  
+
+<h5>Login using credentials</h5> 
+The following information will be recorded when logging in using login credentials:
+
+<h6>Baseline information</h6>
+This information will be recorded in all the cases. 
+
+```json
+  type:	        "event"
+  eventName:	"E_LOGIN_ATTEMPT"
+  timestamp:	"string ts"
+  epoc_time:    number / in seconds
+  server_ip:	"string eg: 10.10.10.10"
+  service_name: "string eg: adminconsole"
+  tenant_id:    "string 56827876827683785"
+  tenant_dns:   "string: this is dns used in browser eg:<customer>.1kosmos.net"
+  tenant_tag:   "string eg: 1kosmos"
+  community_id: "string db id"
+  user_id:      "string username"
+  user_firstname: 	"string from ad"
+  user_lastname:      "string from ad"
+  user_email:         string from ad"
+  user_status:        string as in ad  
+  caller_ip	        "eg: user's browser ip"
+  caller_user_agent:  "eg: user's browser or mobile user agent"
+```
+
+<h6>Method of attempt</h6> 
+This is additional information the report include which provides details like SSO method and authentication methods used for login and many more.
+
+```json
+   sso_method: "none | saml"
+   serviceProvider: "string: entityId"
+   relayState: "string relayState"
+   auth_method1: "qr | push | authn"
+   auth_method2: "totp | hardware_otp | none"
+   auth_session: "qr | push | browser sessionId"
+```
+
+<h6>Result of attempt</h6>
+This is additional information the report includes which provides the status of the login whether the login is successful or not.
+
+```json
+   status: true | false
+   message: "string error in case of a failed attempt"
+```
+<h5>Login using QR code scan</h5> 
+In this case, the user scans a QR code using BlockID mobile app and will record the following additional information which must also be recorded with the “login” event along with the above information mentioned in the **[Login using credentials](#LoginCred)** case.
+
+```json
+  license_hash: "string: sha256 hash in case a mobile app scanned QR code"
+  authenticator_version: "string app version"
+  authenticator_id: "string mobile app's bundle id"
+  authenticator_name: "string mobile app's brand name"
+  authenticator_os: "string IOS / Android" 
+  person_id:        "string"  
+  person_publickey: "string"
+  person_ial:       "string as reverted by mobile" //
+  user_ial:         "string" as recorded in PoN
+  user_lat:         "string IF available from mobile"
+  user_lon:         "string IF available from mobile"
+```
+
+#### SSO Attempt:
+In this case, a user will log in to their websites or applications and get redirected to their BlockID Admin Console application to log in and authenticate themselves. This will record the SSO method, service provider information in the “**[Method of attempt](#MethodofAttemptLogin)**” section along with the remaining information recorded in the **[Direct access to the tenant](#DirectAccess)** topic.
+
+### Invitation for Onboarding Report
+When a user is invited for onboarding, an event will be recorded in the event logs. A user will be invited using one of the following ways:
+1.	User Management screen of BlockID Admin Console application 
+2.	 Access Code Redemption (ACR) APIs
+
+#### User Management screen of the BlockID Admin Console application
+
+In this case, the Administrator will invite users to onboard them into their BlockID Admin Console tenant application. The `Onboard User` option is available in the `BlockID Admin Console > Identity Management > User Management` screen. The following information will be recorded for this case:
+
+<h6>Baseline information</h6>
+This information will be recorded for both ways of inviting users. 
+
+```json
+  type:	        "event"
+  eventName:	"E_USER_INVITED"
+  timestamp:	"string ts"
+  epoc_time:    number / in seconds
+  server_ip:	"string eg: 10.10.10.10"
+  service_name: "string eg: adminconsole"
+              //empty for api invocation.
+  tenant_id:    "string 56827876827683785"
+  tenant_dns:   "string: this is dns used in browser eg:<customer>.1kosmos.net"
+  tenant_tag:   "string eg: 1kosmos"
+  community_id: "string db id"
+  user_id:      "string username"
+  caller_ip	        "string"
+  caller_user_agent:  "string"
+```
+<h6>Method of attempt</h6>
+This is additional information the report includes which provides details like invite method, invite id and email, and authentication methods used in the invite process.
+
+```json
+   invite_method: "acr",
+   invite_email: "$useremail where the invite was sent"
+   invite_id: "$uuid",
+   auth_method1: "otp | authn"
+   auth_method2: "email or phone number where the OTP will be sent" //in case of 'authn' this will remain empty
+```
+
+<h6>Result of attempt</h6> 
+The following indexes will be defined in the event:
+
+```json
+   community_id
+   tenant_id
+   user_id 
+  eventName 
+```
+
+#### Access Code Redemption (ACR) APIs
+In this case, the user will be invited via the ACR APIs and this will record the following additional information which must also be recorded along with the above information mentioned in the **[User Management screen of the BlockID Admin Console application](#UserMgmt)** case.
+
+```json
+license_hash: "string: sha256 hash in case a mobile app scanned QR code"
+              //API license used
+              //when used via admin UI, leave this empty
+```
+
+### User Onboarding Report
+When a user is onboarded, an event will be recorded in the event logs. A user-person linking will be performed in one of the following ways:
+
+1.	Via the magic link: 
+    * via OTP
+    * via AuthN
+2.	Via ACR APIs invitation
+    * SCEP
+    * non-SCEP
+
+
+#### Via the magic link:
+In this case, a user clicks on the magic link to onboard into their BlockID Admin Console tenant application. The following information will be recorded for this case:
+
+<h6>Baseline information</h6>
+This information will be recorded for onbaorded users using both the above ways. 
+
+```json
+type:	        "event"
+  eventName:	"E_USER_ONBOARDED"
+  timestamp:	"string ts"
+  epoc_time:    number / in seconds
+  server_ip:	"string eg: 10.10.10.10"
+  service_name: "string eg: adminconsole"
+              //empty for api invocation.
+  tenant_id:    "string 56827876827683785"
+  tenant_dns:   "string: this is dns used in browser eg:<customer>.1kosmos.net"
+  tenant_tag:   "string eg: 1kosmos"
+  community_id: "string db id"
+  user_id:      "string username"
+  user_firstname: 	"string from ad"
+  user_lastname:      "string from ad"
+  user_email:         string from ad"
+  user_status:        string as in ad  
+  caller_ip	        "eg: user's browser ip"
+  caller_user_agent:  "eg: user's browser or mobile user agent"
+```
+<h6>Method of attempt</h6>
+This is additional information the report includes which provides details like onboarding method, invite id and onboarding email, and authentication methods used in the onboarding process.
+
+```json
+   onboarding_method: "acr | self-service | adminconsole",
+                    //'self-service' represents +Add Account 
+                    //'adminconsole' when login to adminConsole using QR
+   onboard_email: "$useremail where the invite was sent for acr"
+   invite_id: "$uuid", //empty for self-service
+   auth_method1: "otp | authn | none" (eg: self-service will be authn, ACR will be {code.authType})
+   auth_method2: "email or phone number where the otp was sent"//in case of 'authn' this will remain empty
+```
+
+<h6>Result of attempt</h6>
+The following indexes will be defined in the event:
+
+```json
+community_id
+tenant_id
+user_id
+eventName 
+```
+
+#### Via ACR APIs Invitation: 
+In this case, the user will be invited via the ACR APIs and onboarded by adding an account using BlockID mobile app and scanning the QR. This will record the following additional information which must also be recorded along with the above information mentioned in the **[Via the magic link](#Magiclink)** case.
+
+```json
+  license_hash: "string: sha256 hash in case a mobile app scanned QR code"
+              //API license used
+              //when used via admin UI, leave this empty
+  authenticator_version: "string app version"
+  authenticator_id: "string mobile app's bundle id"
+  authenticator_name: "string mobile app's brand name"
+  authenticator_os: "string IOS / Android" 
+  person_id:        "string"  
+  person_publickey: "string"
+  person_ial:       "string as reverted by mobile" 
+  user_ial:         "string" as recorded in PoN
+  user_lat:         "string IF available from mobile"
+  user_lon:         "string IF available from mobile"
+```
+
+- **Show entries**: Select the appropriate number to view those many entries on the entire screen.
+
+- **Search**: Enter the appropriate ID that you want to view from the entire list.
+
+- Click on any record to see the complete view of that activity.
+
+![SystemLogsAnalyticsNewwithlogviewforselectedID.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/SystemLogsAnalyticsNewwithlogviewforselectedID%282%29.jpg)
+
+- Click **Cancel** to close the window.
+

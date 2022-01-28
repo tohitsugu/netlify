@@ -1,0 +1,32 @@
+---
+slug: /v1/item-4
+id: Z511546c0-7f2c-4674-975e-40aa2e25c21e
+---
+# RADIUS Integrations
+The RADIUS (Remote Authentication Dial In User Service) protocol has been traditionally used to authenticate and provision dial up clients. Additionally it performs accounting services for the same clients. RADIUS services fall under the category of AAA (Authentication, Authorization, and Accounting). This protocol is the de facto industry standard for these services. 1Kosmos - BlockID's RADIUS service is compliant with IETF RFC 2865 and 2866. It is intended to be used for virtual private network (VPN) access. 1Kosmos - BlockID's RADIUS server provides a single point authentication and accounting services for dialup systems, wireless LANs, and applications. It's the standard method of integrating a diverse collection of authentication methods into one server. It does this by providing a highly standardized way for any RADIUS client in any device or application to use diverse back. 1Kosmos - BlockID's RADIUS products have the designation EAR99 from the US Commerce Department under the Bureau of Industry and Security-(BIS) and the Encryption and Export Administration Regulations (EAR). 
+:::
+
+
+## <a name = "RADIUSConfiguration"></a>RADIUS Configuration
+#### How to setup the RADIUS configuration
+
+
+Select Administration Console > Auth Configuration > Authentication Modules
+Radius Authenticaion Module
+This will move the module to the Enabled Authentiction Modules
+
+* Select the Edit & Configure This Module icon on the Radius Authenticaion Module
+* The following parameters can be configured
+    * Primary Radius Server IP address or the Fully Qualified Domain Name (prefered)
+    * Secondary Radius Server IP address or the Fully Qualified Domain Name (prefered)
+    * Shared Secret
+    * Port Number 
+        * 1812 Standard 
+        * 1645 Old Standard
+        * Custom Port Number
+    * Timeout
+    * Health check interval
+*  Save the settings
+
+        
+        

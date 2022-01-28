@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Z2cd6493e-3d85-4c46-91d5-0b93e239b73c",
+  "id": "v1/BlockID New Admin Portal (Athena)/Z2cd6493e-3d85-4c46-91d5-0b93e239b73c",
+  "isDocsHomePage": false,
+  "title": "Introduction to Athena Admin Portal",
+  "description": "Athena Admin Portal is a trial experience designed for clients to experience the world of passwordless login. As an administrator, you will have access to the following core modules:",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/2_introduction-to.md.mdx",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)",
+  "slug": "/v1/introduction-to-athena-admin-portal",
+  "permalink": "/docs/v1/introduction-to-athena-admin-portal",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/introduction-to-athena-admin-portal",
+    "id": "Z2cd6493e-3d85-4c46-91d5-0b93e239b73c"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Mobile Application User Guide",
+    "permalink": "/docs/v1/blockid-mobile-application-user-guide"
+  },
+  "next": {
+    "title": "Login",
+    "permalink": "/docs/v1/login-with-mfa"
+  }
+}

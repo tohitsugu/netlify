@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Integrations/Zfe8fbb9a-e6cd-4663-a4d0-9b961faaa57c",
+  "id": "v1/BlockID Integrations/Zfe8fbb9a-e6cd-4663-a4d0-9b961faaa57c",
+  "isDocsHomePage": false,
+  "title": "Integration with PingFederate",
+  "description": "This document describes the procedure to configure the BlockID Admin Console as a passwordless authentication solution for your organization's PingFederate users. This integration will allow your users to log in to their PingFederate account leveraging their biometrics. The biometric options include Fingerprint, Voice, or Face.",
+  "source": "@site/docs/v1/BlockID Integrations/5_integration-wit.md.mdx",
+  "sourceDirName": "v1/BlockID Integrations",
+  "slug": "/v1/integration-with-pingfederate",
+  "permalink": "/docs/v1/integration-with-pingfederate",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "slug": "/v1/integration-with-pingfederate",
+    "id": "Zfe8fbb9a-e6cd-4663-a4d0-9b961faaa57c"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "1K User Directory Module",
+    "permalink": "/docs/v1/1kmodule"
+  },
+  "next": {
+    "title": "Intergration with Okta",
+    "permalink": "/docs/v1/intergration-with-okta"
+  }
+}

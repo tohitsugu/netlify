@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Directory Integrations/Z422742d5-e5f4-4563-8b5b-75fe651251fc",
+  "id": "v1/BlockID New Admin Portal (Athena)/Directory Integrations/Z422742d5-e5f4-4563-8b5b-75fe651251fc",
+  "isDocsHomePage": false,
+  "title": "Broker Installation",
+  "description": "Overview",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Directory Integrations/2_broker-installa.md.mdx",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Directory Integrations",
+  "slug": "/v1/broker-installation",
+  "permalink": "/docs/v1/broker-installation",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/broker-installation",
+    "id": "Z422742d5-e5f4-4563-8b5b-75fe651251fc"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Office365 Integration",
+    "permalink": "/docs/v1/office365-integration"
+  },
+  "next": {
+    "title": "Release Notes 2021.11.03",
+    "permalink": "/docs/v1/release-notes-20211103"
+  }
+}

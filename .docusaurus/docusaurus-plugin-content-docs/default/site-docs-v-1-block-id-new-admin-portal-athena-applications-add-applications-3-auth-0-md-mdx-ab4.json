@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/Z6afecf9d-3c6f-418b-9aab-c0c99d48009b",
+  "id": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/Z6afecf9d-3c6f-418b-9aab-c0c99d48009b",
+  "isDocsHomePage": false,
+  "title": "Auth0",
+  "description": "This document describes the procedure to configure your organization's Auth0 application within the Athena Admin portal to use it as a passwordless authentication solution for your organization's Auth0 users. This integration will allow your users to log in to their Auth0 account leveraging their biometrics. The biometric options include TouchID / FaceID and LiveID.",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/3_auth0.md.mdx",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications",
+  "slug": "/v1/auth0",
+  "permalink": "/docs/v1/auth0",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/v1/auth0",
+    "id": "Z6afecf9d-3c6f-418b-9aab-c0c99d48009b"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Okta",
+    "permalink": "/docs/v1/okta"
+  },
+  "next": {
+    "title": "Salesforce",
+    "permalink": "/docs/v1/salesforce"
+  }
+}

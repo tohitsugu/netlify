@@ -1,0 +1,39 @@
+./BlockID Admin Console/Admin Guide/10_white-label-tem.md.mdx
+./BlockID Admin Console/Admin Guide/11_tenant-manageme.md.mdx
+./BlockID Admin Console/Admin Guide/12_deploying-smart.md.mdx
+./BlockID Admin Console/Admin Guide/14_profile.md.mdx
+./BlockID Admin Console/Admin Guide/15_core-configurat.md.mdx
+./BlockID Admin Console/Admin Guide/3_administration-.md.mdx
+./BlockID Admin Console/Admin Guide/8_analytics.md.mdx
+./BlockID Admin Console/Admin Guide/9_license-keys.md.mdx
+./BlockID Admin Console/Admin Guide/Authentication Configuration/2_authentication-.md.mdx
+./BlockID Admin Console/Admin Guide/Authentication Configuration/3_authentication-.md.mdx
+./BlockID Admin Console/Admin Guide/Enterprise Configuration/2_datastore-confi.md.mdx
+./BlockID Admin Console/Admin Guide/Enterprise Configuration/3_scep-configurat.md.mdx
+./BlockID Admin Console/Admin Guide/Enterprise Configuration/4_radius-configur.md.mdx
+./BlockID Admin Console/Admin Guide/Federation/2_samlv2.md.mdx
+./BlockID Admin Console/Admin Guide/Identity Management/2_user-management.md.mdx
+./BlockID Admin Console/Admin Guide/Identity Management/3_role-management.md.mdx
+./BlockID Admin Console/Admin Guide/Identity Management/4_saml-configurat.md.mdx
+./BlockID Credential Provider/3_core-concepts-o.md.mdx
+./BlockID Integrations/Identity Providers/13_integration-wit(1).md.mdx
+./BlockID Integrations/Identity Providers/13_integration-wit(4).md.mdx
+./BlockID Integrations/Identity Providers/13_integration-wit.md.mdx
+./BlockID Integrations/Identity Providers/2_intergration-wi.md.mdx
+./BlockID Integrations/Identity Providers/3_integration-wit.md.mdx
+./BlockID Integrations/Identity Providers/5_integration-pin.md.mdx
+./BlockID Integrations/Identity Providers/7_integration-wit.md.mdx
+./BlockID Integrations/PAM (Privilege Account Management)/6_integration-wit.md.mdx
+./BlockID New Admin Portal (Athena)/15_customizing-the.md.mdx
+./BlockID New Admin Portal (Athena)/4_create-native-u.md.mdx
+./BlockID New Admin Portal (Athena)/6_directory.md.mdx
+./BlockID New Admin Portal (Athena)/Applications/Add Applications/2_okta.md.mdx
+./BlockID New Admin Portal (Athena)/Applications/Add Applications/3_auth0.md.mdx
+./BlockID New Admin Portal (Athena)/Applications/Add Applications/4_salesforce.md.mdx
+./BlockID New Admin Portal (Athena)/Applications/Add Applications/5_gsuite.md.mdx
+./BlockID New Admin Portal (Athena)/Applications/Add Applications/6_generic-saml-ap.md.mdx
+./BlockID New Admin Portal (Athena)/Applications/Add Applications/7_office365-integ.md.mdx
+./BlockID New Admin Portal (Athena)/Settings/3_blockid-attribu.md.mdx
+./BlockID Platform/2_google-cloud-pl.md.mdx
+./BlockID Workforce Mobile Application - Old/2_blockid-workfor.md.mdx
+./BlockID Workforce Mobile Application/3_blockid-workfor.md.mdx

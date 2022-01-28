@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/Zb1219c14-5779-44cf-b31c-f9c189ac2e35",
+  "id": "v1/BlockID Enterprise/Zb1219c14-5779-44cf-b31c-f9c189ac2e35",
+  "isDocsHomePage": false,
+  "title": "Zb1219c14-5779-44cf-b31c-f9c189ac2e35",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/16_reports.md.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/reports",
+  "permalink": "/docs/v1/reports",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 16,
+  "frontMatter": {
+    "slug": "/v1/reports",
+    "id": "Zb1219c14-5779-44cf-b31c-f9c189ac2e35"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "reports",
+    "permalink": "/docs/v1/BlockID Enterprise/reports"
+  },
+  "next": {
+    "title": "scep-integratio",
+    "permalink": "/docs/v1/BlockID Enterprise/scep-integratio"
+  }
+}

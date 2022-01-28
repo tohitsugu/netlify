@@ -26,6 +26,19 @@
       "type": "package",
       "name": "@docusaurus/theme-classic",
       "version": "2.0.0-beta.8"
+    },
+    "docusaurus-node-polyfills": {
+      "type": "package",
+      "name": "docusaurus-node-polyfills",
+      "version": "1.0.0"
+    },
+    "custom-docusaurus-plugin": {
+      "type": "project"
+    },
+    "docusaurus-theme-live-codeblock": {
+      "type": "package",
+      "name": "@docusaurus/theme-live-codeblock",
+      "version": "2.0.0-beta.8"
     }
   }
 }

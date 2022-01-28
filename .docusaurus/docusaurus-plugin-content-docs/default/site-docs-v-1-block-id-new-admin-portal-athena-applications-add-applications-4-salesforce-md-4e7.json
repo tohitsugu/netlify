@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/salesforce",
+  "id": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/salesforce",
+  "isDocsHomePage": false,
+  "title": "salesforce",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/4_salesforce.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications",
+  "slug": "/v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/salesforce",
+  "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/salesforce",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Auth0",
+    "permalink": "/docs/v1/auth0"
+  },
+  "next": {
+    "title": "Salesforce",
+    "permalink": "/docs/v1/salesforce"
+  }
+}

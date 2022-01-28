@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Z3a4d60f8-4984-4f20-9d87-7d6f0800ed40",
+  "id": "v1/BlockID New Admin Portal (Athena)/Z3a4d60f8-4984-4f20-9d87-7d6f0800ed40",
+  "isDocsHomePage": false,
+  "title": "Login",
+  "description": "1. Login with MFA",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/3_login-with-mfa.md.mdx",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)",
+  "slug": "/v1/login-with-mfa",
+  "permalink": "/docs/v1/login-with-mfa",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/v1/login-with-mfa",
+    "id": "Z3a4d60f8-4984-4f20-9d87-7d6f0800ed40"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Introduction to Athena Admin Portal",
+    "permalink": "/docs/v1/introduction-to-athena-admin-portal"
+  },
+  "next": {
+    "title": "Create Native User",
+    "permalink": "/docs/v1/create-native-user"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Videos/introduction-to",
+  "id": "v1/BlockID Videos/introduction-to",
+  "isDocsHomePage": false,
+  "title": "introduction-to",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Videos/6_introduction-to.md",
+  "sourceDirName": "v1/BlockID Videos",
+  "slug": "/v1/BlockID Videos/introduction-to",
+  "permalink": "/docs/v1/BlockID Videos/introduction-to",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Getting Started with Videos",
+    "permalink": "/docs/v1/getting-started-with-videos"
+  },
+  "next": {
+    "title": "Introduction to BlockID",
+    "permalink": "/docs/v1/introduction-to-blockid"
+  }
+}

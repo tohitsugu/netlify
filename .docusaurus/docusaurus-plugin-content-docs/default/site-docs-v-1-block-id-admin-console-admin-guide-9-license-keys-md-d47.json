@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/license-keys",
+  "id": "v1/BlockID Admin Console/Admin Guide/license-keys",
+  "isDocsHomePage": false,
+  "title": "license-keys",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/9_license-keys.md",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide",
+  "slug": "/v1/BlockID Admin Console/Admin Guide/license-keys",
+  "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/license-keys",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "analytics",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/analytics"
+  },
+  "next": {
+    "title": "white-label-tem",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/white-label-tem"
+  }
+}

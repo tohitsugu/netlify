@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Videos/Z1c76219c-f543-48bc-9e97-e34a21736bc4",
+  "id": "v1/BlockID Videos/Z1c76219c-f543-48bc-9e97-e34a21736bc4",
+  "isDocsHomePage": false,
+  "title": "Z1c76219c-f543-48bc-9e97-e34a21736bc4",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Videos/6_getting-started.md.md",
+  "sourceDirName": "v1/BlockID Videos",
+  "slug": "/v1/getting-started-with-videos",
+  "permalink": "/docs/v1/getting-started-with-videos",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "slug": "/v1/getting-started-with-videos",
+    "id": "Z1c76219c-f543-48bc-9e97-e34a21736bc4"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "getting-started",
+    "permalink": "/docs/v1/BlockID Videos/getting-started"
+  },
+  "next": {
+    "title": "introduction-to",
+    "permalink": "/docs/v1/BlockID Videos/introduction-to"
+  }
+}

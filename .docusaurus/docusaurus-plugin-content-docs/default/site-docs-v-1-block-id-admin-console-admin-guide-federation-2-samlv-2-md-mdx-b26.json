@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Federation/Z95a7773e-d1ff-426e-9b30-912215063609",
+  "id": "v1/BlockID Admin Console/Admin Guide/Federation/Z95a7773e-d1ff-426e-9b30-912215063609",
+  "isDocsHomePage": false,
+  "title": "SAML Configurations",
+  "description": "The Security Assertion Markup Language (SAML) integration screen allows you to add your identity provider (IDP)’s information and set its authorization and configuration details. After adding these IDP details, provide these configurations to your service providers (SP). Here, the identity provider is the BlockID Admin Console application. It allows you to import one or more service providers and add their configurations to integrate with your identity provider.",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/Federation/2_samlv2.md.mdx",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide/Federation",
+  "slug": "/v1/samlv2",
+  "permalink": "/docs/v1/samlv2",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/samlv2",
+    "id": "Z95a7773e-d1ff-426e-9b30-912215063609"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Radius Configuration",
+    "permalink": "/docs/v1/radius-configuration"
+  },
+  "next": {
+    "title": "User Management",
+    "permalink": "/docs/v1/user-management"
+  }
+}

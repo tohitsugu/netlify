@@ -1,0 +1,125 @@
+---
+slug: /v1/okta
+id: Z869ef4f5-309a-4480-a715-6c7a4148d3f9
+---
+# Okta
+
+This document describes the procedure to configure your organization's Okta application within the Athena Admin portal to use it as a passwordless authentication solution for your organization's Okta users. This integration will allow your users to log in to their Okta account leveraging their biometrics. The biometric options include TouchID / FaceID and LiveID.
+
+### Before you Begin
+You will need the following resources and privileges to complete this integration:
+1. Admin access to the following:
+    * **Athena Admin portal**: If your organization is not registered with the Athena Admin portal, visit the **[Sign Up](https://www.1kosmos.com/blockid-free-trial)** page for your organization’s Athena Admin portal registration. The 1Kosmos representative will create an account for your respective organization within the Athena Admin portal. Ensure the email address used to log in to this portal is the same as the one used to log in to Okta.
+    * **Okta Admin domain**. You can visit the [Okta Developer](https://developer.okta.com) site for Okta Admin domain registration. 
+2. Install on your mobile device:
+    * BlockID mobile application (Compatible with iOS and Android devices). Visit the **[BlockID for Android](https://play.google.com/store/apps/details?id=com.onekosmos.kernel.blockid)** or **[BlockID for iOS](https://apps.apple.com/us/app/blockid/id1539421428)** to download the application.
+
+### Assumptions
+* With the above prerequisites, you should now successfully be registered and be able to login to:
+    * Athena Admin portal
+    * Okta Admin domain
+* Installed and registered the BlockID mobile application.
+    * Launch the BlockID mobile application and follow the on-screen instructions to register your app with the BlockID Platform to enroll your biometrics. Visit the [Enroll Biometrics (TouchID/ FaceID and LiveID) section of the BlockID mobile application User Guide](https://1kosmos.document360.io/docs/blockid-mobile-application-user-guide#EnrollBio) for step by step understanding of the Biometrics Enrollment process within the BlockID mobile application.
+
+Perform the following tasks to enable this integration:
+
+1. Okta Admin domain configurations
+2. Athena Admin portal configurations
+
+**List of Topics:**
+
+1. [Okta Admin domain configurations](#Oktaconfig)
+    a. [Create Okta API Token](#OktaAPItoken)
+2. [Athena Admin portal configurations](#Athenaconfig)
+3. [Okta Admin domain configurations for auto-generated SP configuration by Athena Admin portal](#Oktaconfig1)
+4. [Test the SAML Single Sign-On Connection](#TestSAML)
+
+## <a name = "Oktaconfig"></a>Okta Admin domain configurations
+
+These configurations need to be performed before integrating your Okta application into the Athena Admin portal.
+
+:::(Warning) (Note:)
+The following steps will be performed by your Okta administrator. 
+:::
+
+1. Log in to your **Okta** site and navigate to the Admin console.
+2. Copy and save your Okta admin domain URL to use it while performing Okta integration in the Athena Admin portal. For example, `https://<your_domain>-admin.okta.com`.
+
+### <a name = "OktaAPItoken"></a>Create Okta API Token
+
+You will also need an Okta API token to use while performing Okta integration into the Athena Admin portal. 
+
+1, In the Okta Admin console screen, navigate to ***Security > API > Tokens***.
+
+![APIToken1.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/APIToken1.png)
+
+2. In the **Tokens** tab, click **Create Token**. 
+
+![APIToken2.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/APIToken2.png)
+
+3. In the **Create Token** dialog box:
+    * Enter the token name for the API and click **Create Token**. The **Token created successfully!** message is displayed with the newly created token value.
+
+    ![APIToken3.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/APIToken3.png)
+
+    
+    * Click the **Copy** option for the token value to copy the token details and save it to use while performing Okta integration in the Athena Admin portal.
+    * Click **OK, got it**.
+
+## <a name = "Athenaconfig"></a>Athena Admin portal configurations
+
+This is a one-click app Okta integration which will automatically generate a Service Provider (SP) configuration in Okta with the name `BlockID`.
+
+:::(Warning) (Note:)
+The following steps will be performed by your Athena Admin portal administrator. The credentials provided during one-click integration are one-time use only. BlockID does not store these credentials, thus it is recommended to change the passwords and revoke tokens after completion of the one-click integration. To perform more configurations to the Okta SP SAML integration, visit the Okta Admin console and perform the changes. 
+:::
+
+1. Login to the Athena Admin portal, navigate to ***Applications > Add Application***.
+
+![AddNewApplications.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/AddNewApplications.jpg)
+
+2. In the **Add new applications** screen, click on the **Add integration** link for the **Okta SAML** option from the **Pre-built integrations** section.
+
+![OktaAthenaaddapp.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/OktaAthenaaddapp%281%29.png)
+ 
+3.  In the **Okta** screen, enter the following values:
+    *  **Application Name**: Enter the name for your Okta application.
+    *  In the **Service provider info** section:
+        *  **Okta Domain**: Enter your saved Okta admin domain URL as mentioned in the [Okta Admin domain configurations](#Oktaconfig) topic.
+        *  **Okta Api Token**: Enter the Okta API token created and saved described in the [Okta Admin domain configurations](#Oktaconfig) topic. 
+    *  Click **Connect**. This will add your Okta application and automatically generate an SP configuration in Okta with the name `BlockID`.
+
+![okta_after_creation.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/okta_after_creation.png)
+
+## <a name = "Oktaconfig1"></a>Okta Admin domain configurations for auto-generated SP configuration by Athena Admin portal
+
+These are optional configurations that can be performed after creating the one-click app Okta integration into the Athena Admin portal.
+
+:::(Warning) (Note:)
+The following steps will be performed by your Okta administrator. 
+:::
+
+Routing Rules allow you to add user criteria based on the user's location, device, email domain, attributes, to evaluate end-users before redirecting them to the identity providers.
+
+1. Log in to your **Okta** site and navigate to the Admin console.
+2. Navigate to ***Security** > **Identity Providers** > **Routing Rules** > **Add Routing Rule***.
+3. In the **Add Rule** pop-up window, enter the following details:
+    * **Rule Name**:  Enter the appropriate rule name.
+    * **User’s IP is**:  `Anywhere`.
+    * **User’s device platform**:  `Any device`.
+    * **User is accessing**:  `Any application`.
+    * **User matches**: `Anything`.
+	    In this, select the required condition available from the list and add value as per the selected option. For example, select the **User Attribute** option and add value as **j.doe** and save. Hence, a user whose name starts with **j.doe** will only be allowed to redirect to your Okta site and other users will not be able to access this Okta site as the **BlockID Admin Console** will restrict access.
+    * **Use this identity provider**: `BlockID`. The name got created for the auto-generated IDP created using the Athena Admin portal.
+3. Click **Create Rule** > click **Activate**.
+
+Hence, whenever any user tries to sign in, the added active routing rule checks the criteria and allows users to access the identity provider’s site if the criteria match. Meanwhile, you can still log in to Okta using the Okta login screen by visiting `{your-okta-domain}/login/default`.
+
+## <a name = "TestSAML"></a>Test the SAML Single Sign-On Connection section
+
+1. In your browser, enter your Okta application's domain URL. You will be redirected to the Athena Admin portal login screen with the barcode to be scanned from your BlockID mobile app.
+2. On the BlockID mobile application’s Home screen, click `Scan QR`.
+3. Scan the QR code. The confirmation pop-up window is displayed asking to `Allow BlockID to access this device’s location?`.
+4. In the confirmation pop-up window, select `Allow only while using the app`. The Authentication screen is displayed with the `Please authenticate using <Biometric_option> from 1kosmos` message.
+5. Click **Authenticate** and perform the appropriate authentication method. The pop-up window is displayed with `Thank you! You have successfully authenticated to Log In` message upon successful authentication.
+6. You will be logged in to your organization’s **Okta** application.

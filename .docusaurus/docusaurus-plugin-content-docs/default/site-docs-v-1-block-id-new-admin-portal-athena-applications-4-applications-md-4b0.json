@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Applications/applications",
+  "id": "v1/BlockID New Admin Portal (Athena)/Applications/applications",
+  "isDocsHomePage": false,
+  "title": "applications",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Applications/4_applications.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Applications",
+  "slug": "/v1/BlockID New Admin Portal (Athena)/Applications/applications",
+  "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/Applications/applications",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "ForgeRock",
+    "permalink": "/docs/v1/forgerock"
+  },
+  "next": {
+    "title": "Manage Applications",
+    "permalink": "/docs/v1/applications"
+  }
+}

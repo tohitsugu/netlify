@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v2/BlockID FAQ/faqs-related-to",
+  "id": "v2/BlockID FAQ/faqs-related-to",
+  "isDocsHomePage": false,
+  "title": "faqs-related-to",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v2/BlockID FAQ/3_faqs-related-to.md",
+  "sourceDirName": "v2/BlockID FAQ",
+  "slug": "/v2/BlockID FAQ/faqs-related-to",
+  "permalink": "/docs/v2/BlockID FAQ/faqs-related-to",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "frequently-aske",
+    "permalink": "/docs/v2/BlockID FAQ/frequently-aske"
+  },
+  "next": {
+    "title": "internal-faq-gu",
+    "permalink": "/docs/v2/BlockID FAQ/internal-faq-gu"
+  }
+}

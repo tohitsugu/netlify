@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Z7c0cce22-baef-425d-a641-0833fa934825",
+  "id": "v1/BlockID Admin Console/Z7c0cce22-baef-425d-a641-0833fa934825",
+  "isDocsHomePage": false,
+  "title": "Z7c0cce22-baef-425d-a641-0833fa934825",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/3_installing-bloc.md.md",
+  "sourceDirName": "v1/BlockID Admin Console",
+  "slug": "/v1/installing-blockid-admin-console",
+  "permalink": "/docs/v1/installing-blockid-admin-console",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/v1/installing-blockid-admin-console",
+    "id": "Z7c0cce22-baef-425d-a641-0833fa934825"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "installing-bloc",
+    "permalink": "/docs/v1/BlockID Admin Console/installing-bloc"
+  },
+  "next": {
+    "title": "user-onboarding",
+    "permalink": "/docs/v1/BlockID Admin Console/user-onboarding"
+  }
+}

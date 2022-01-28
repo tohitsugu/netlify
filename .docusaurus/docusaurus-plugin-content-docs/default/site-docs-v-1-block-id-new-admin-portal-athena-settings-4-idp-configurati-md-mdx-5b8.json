@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Settings/Zb2cb8a21-b17f-43f4-b5af-6d2d4fdd089c",
+  "id": "v1/BlockID New Admin Portal (Athena)/Settings/Zb2cb8a21-b17f-43f4-b5af-6d2d4fdd089c",
+  "isDocsHomePage": false,
+  "title": "IdP Configuration",
+  "description": "",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Settings/4_idp-configurati.md.mdx",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Settings",
+  "slug": "/v1/idp-configuration",
+  "permalink": "/docs/v1/idp-configuration",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "slug": "/v1/idp-configuration",
+    "id": "Zb2cb8a21-b17f-43f4-b5af-6d2d4fdd089c"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Attributes",
+    "permalink": "/docs/v1/blockid-attributes"
+  },
+  "next": {
+    "title": "Google Cloud Platform: Kubernetes architecture guide for BlockID Platform",
+    "permalink": "/docs/v1/google-cloud-platform-kubernetes-architecture-guide-for-blockid-platform"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Zb17b8cd6-f8b7-41c5-a294-400c23d8540d",
+  "id": "v1/BlockID New Admin Portal (Athena)/Zb17b8cd6-f8b7-41c5-a294-400c23d8540d",
+  "isDocsHomePage": false,
+  "title": "Create Native User",
+  "description": "1. Go to Users > All Users > Choose Directory 'Internal User Store' > Create new User.",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/4_create-native-u.md.mdx",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)",
+  "slug": "/v1/create-native-user",
+  "permalink": "/docs/v1/create-native-user",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "slug": "/v1/create-native-user",
+    "id": "Zb17b8cd6-f8b7-41c5-a294-400c23d8540d"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Login",
+    "permalink": "/docs/v1/login-with-mfa"
+  },
+  "next": {
+    "title": "Dashboard",
+    "permalink": "/docs/v1/dashboard"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/gsuite",
+  "id": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/gsuite",
+  "isDocsHomePage": false,
+  "title": "gsuite",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/5_gsuite.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications",
+  "slug": "/v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/gsuite",
+  "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/gsuite",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Salesforce",
+    "permalink": "/docs/v1/salesforce"
+  },
+  "next": {
+    "title": "G Suite",
+    "permalink": "/docs/v1/gsuite"
+  }
+}

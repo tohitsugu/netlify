@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Workforce Mobile Application/Z3b2417a4-ac73-4efb-b302-57fa6dab8658",
+  "id": "v1/BlockID Workforce Mobile Application/Z3b2417a4-ac73-4efb-b302-57fa6dab8658",
+  "isDocsHomePage": false,
+  "title": "BlockID Workforce Mobile Application User Guide",
+  "description": "This document describes the procedures to:",
+  "source": "@site/docs/v1/BlockID Workforce Mobile Application/3_blockid-workfor.md.mdx",
+  "sourceDirName": "v1/BlockID Workforce Mobile Application",
+  "slug": "/v1/blockid-workforce-mobile-application-user-guide-1",
+  "permalink": "/docs/v1/blockid-workforce-mobile-application-user-guide-1",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/v1/blockid-workforce-mobile-application-user-guide-1",
+    "id": "Z3b2417a4-ac73-4efb-b302-57fa6dab8658"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Introduction to BlockID",
+    "permalink": "/docs/v1/introduction-to-blockid"
+  },
+  "next": {
+    "title": "BlockID Workforce Mobile Application - User Guide - old",
+    "permalink": "/docs/v1/blockid-workforce-mobile-application-user-guideold"
+  }
+}

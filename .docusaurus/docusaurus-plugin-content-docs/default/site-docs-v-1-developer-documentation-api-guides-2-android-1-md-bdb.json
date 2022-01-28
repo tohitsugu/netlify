@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/Developer Documentation/API Guides/android-1",
+  "id": "v1/Developer Documentation/API Guides/android-1",
+  "isDocsHomePage": false,
+  "title": "android-1",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/Developer Documentation/API Guides/2_android-1.md",
+  "sourceDirName": "v1/Developer Documentation/API Guides",
+  "slug": "/v1/Developer Documentation/API Guides/android-1",
+  "permalink": "/docs/v1/Developer Documentation/API Guides/android-1",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "android-100",
+    "permalink": "/docs/v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/android-100"
+  },
+  "next": {
+    "title": "ios-1",
+    "permalink": "/docs/v1/Developer Documentation/API Guides/ios-1"
+  }
+}

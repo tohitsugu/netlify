@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Integrations/Identity Providers/integration-pin",
+  "id": "v1/BlockID Integrations/Identity Providers/integration-pin",
+  "isDocsHomePage": false,
+  "title": "integration-pin",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Integrations/Identity Providers/5_integration-pin.md",
+  "sourceDirName": "v1/BlockID Integrations/Identity Providers",
+  "slug": "/v1/BlockID Integrations/Identity Providers/integration-pin",
+  "permalink": "/docs/v1/BlockID Integrations/Identity Providers/integration-pin",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Integration with Microsoft ADFS",
+    "permalink": "/docs/v1/integration-with-adfs"
+  },
+  "next": {
+    "title": "Integration PingFederate",
+    "permalink": "/docs/v1/integration-pingfederate"
+  }
+}

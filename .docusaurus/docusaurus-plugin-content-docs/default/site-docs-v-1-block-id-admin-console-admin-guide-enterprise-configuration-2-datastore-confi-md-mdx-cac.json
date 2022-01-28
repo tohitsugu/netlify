@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/Z2c4107d7-4c41-4262-9b56-4a069828fd1b",
+  "id": "v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/Z2c4107d7-4c41-4262-9b56-4a069828fd1b",
+  "isDocsHomePage": false,
+  "title": "Datastore Configuration",
+  "description": "In Datastore Configuration, the specified fields are used to show user details within the Admin Console’s User Profile or User Management screen. These scope fields are mapped to your datastore (AD/LDAP) directory fields. Meanwhile, if you have changed any of your directory field names at your end then you can update those names mapped to the respective scope fields under the Datastore Configurations screen.",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/2_datastore-confi.md.mdx",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide/Enterprise Configuration",
+  "slug": "/v1/datastore-configuration-1",
+  "permalink": "/docs/v1/datastore-configuration-1",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/datastore-configuration-1",
+    "id": "Z2c4107d7-4c41-4262-9b56-4a069828fd1b"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Software and Hardware OTP Support",
+    "permalink": "/docs/v1/software-and-hardware-otp-support"
+  },
+  "next": {
+    "title": "SCEP Configuration",
+    "permalink": "/docs/v1/scep-configuration"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Integrations/Identity Providers/integration-wit(1)",
+  "id": "v1/BlockID Integrations/Identity Providers/integration-wit(1)",
+  "isDocsHomePage": false,
+  "title": "integration-wit(1)",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Integrations/Identity Providers/13_integration-wit(1).md",
+  "sourceDirName": "v1/BlockID Integrations/Identity Providers",
+  "slug": "/v1/BlockID Integrations/Identity Providers/integration-wit(1)",
+  "permalink": "/docs/v1/BlockID Integrations/Identity Providers/integration-wit(1)",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Integration with G Suite",
+    "permalink": "/docs/v1/integration-with-gsuite"
+  },
+  "next": {
+    "title": "Integration with Oracle IDCS (Identity Cloud Service)",
+    "permalink": "/docs/v1/integration-with-oracle-idcs-identity-cloud-service"
+  }
+}

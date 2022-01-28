@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/blockid-connect",
+  "id": "v1/BlockID Enterprise/blockid-connect",
+  "isDocsHomePage": false,
+  "title": "blockid-connect",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/12_blockid-connect.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/BlockID Enterprise/blockid-connect",
+  "permalink": "/docs/v1/BlockID Enterprise/blockid-connect",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Datastore Configuration",
+    "permalink": "/docs/v1/datastore-configuration"
+  },
+  "next": {
+    "title": "BlockID Connector Module",
+    "permalink": "/docs/v1/blockid-connector-module"
+  }
+}

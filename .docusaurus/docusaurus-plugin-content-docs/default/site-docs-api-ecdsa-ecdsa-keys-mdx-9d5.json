@@ -1,0 +1,27 @@
+{
+  "unversionedId": "api/ecdsa/ecdsa-keys",
+  "id": "api/ecdsa/ecdsa-keys",
+  "isDocsHomePage": false,
+  "title": "User Private and Public Keys",
+  "description": "Generating a User Private Key and Public Key",
+  "source": "@site/docs/api/ecdsa/ecdsa-keys.mdx",
+  "sourceDirName": "api/ecdsa",
+  "slug": "/api/ecdsa/keys",
+  "permalink": "/docs/api/ecdsa/keys",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "slug": "/api/ecdsa/keys"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "ECDSA Encryption",
+    "permalink": "/docs/api/ecdsa"
+  },
+  "next": {
+    "title": "Shared Key",
+    "permalink": "/docs/ecdsa/shared-key"
+  }
+}

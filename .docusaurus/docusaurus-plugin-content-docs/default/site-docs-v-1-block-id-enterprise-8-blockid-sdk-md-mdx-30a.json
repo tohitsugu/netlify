@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/Z5d0bfa4f-1fee-452d-ab9f-6643ff470f58",
+  "id": "v1/BlockID Enterprise/Z5d0bfa4f-1fee-452d-ab9f-6643ff470f58",
+  "isDocsHomePage": false,
+  "title": "BlockID SDK",
+  "description": "One Kosmos SDK is a part of family of SDKs developed by OneKosmos - BlockID for optical text recognition, barcode scanning, ID document scanning and many others.",
+  "source": "@site/docs/v1/BlockID Enterprise/8_blockid-sdk.md.mdx",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/blockid-sdk",
+  "permalink": "/docs/v1/blockid-sdk",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "slug": "/v1/blockid-sdk",
+    "id": "Z5d0bfa4f-1fee-452d-ab9f-6643ff470f58"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Authentication Scheme Configuration",
+    "permalink": "/docs/v1/authentication-scheme-configuration"
+  },
+  "next": {
+    "title": "BlockID Templates",
+    "permalink": "/docs/v1/blockid-templates"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Platform/Zf3f90934-5f97-46a4-a2bf-8b101c4aee00",
+  "id": "v1/BlockID Platform/Zf3f90934-5f97-46a4-a2bf-8b101c4aee00",
+  "isDocsHomePage": false,
+  "title": "Zf3f90934-5f97-46a4-a2bf-8b101c4aee00",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Platform/2_google-cloud-pl.md.md",
+  "sourceDirName": "v1/BlockID Platform",
+  "slug": "/v1/google-cloud-platform-kubernetes-architecture-guide-for-blockid-platform",
+  "permalink": "/docs/v1/google-cloud-platform-kubernetes-architecture-guide-for-blockid-platform",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/google-cloud-platform-kubernetes-architecture-guide-for-blockid-platform",
+    "id": "Zf3f90934-5f97-46a4-a2bf-8b101c4aee00"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "google-cloud-pl",
+    "permalink": "/docs/v1/BlockID Platform/google-cloud-pl"
+  },
+  "next": {
+    "title": "internal-proces",
+    "permalink": "/docs/v1/BlockID Platform/internal-proces"
+  }
+}

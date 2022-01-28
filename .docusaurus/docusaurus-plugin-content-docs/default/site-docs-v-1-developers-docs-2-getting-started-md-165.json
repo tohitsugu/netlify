@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/Developer's Docs/getting-started",
+  "id": "v1/Developer's Docs/getting-started",
+  "isDocsHomePage": false,
+  "title": "getting-started",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/Developer's Docs/2_getting-started.md",
+  "sourceDirName": "v1/Developer's Docs",
+  "slug": "/v1/Developer's Docs/getting-started",
+  "permalink": "/docs/v1/Developer's Docs/getting-started",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Workforce Mobile Application - User Guide - old",
+    "permalink": "/docs/v1/blockid-workforce-mobile-application-user-guideold"
+  },
+  "next": {
+    "title": "Getting Started",
+    "permalink": "/docs/v1/getting-started"
+  }
+}

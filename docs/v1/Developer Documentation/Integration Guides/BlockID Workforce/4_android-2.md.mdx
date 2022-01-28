@@ -1,0 +1,433 @@
+---
+slug: /v1/android-2
+id: Z84b846a1-7451-45fd-90e0-40f33d176310
+---
+# Android
+This document describes the procedure to configure the BlockID Workforce Android SDK into your organization's application. This integration will allow your users to use the features provided within the Android SDK of the BlockID Workforce mobile application. The features include enrollment of the user’s LiveID (captures the live (real-time) facial images) details, VoiceID, Fingerprint, and PIN, etc.
+
+## Before you Begin
+You will need the following resource to complete this integration:
+* Android Studio 4.0 or higher preferably
+
+## SDK Information
+
+### Structure
+
+1. The user app will communicate through SDK via the `Bridge` class. The `Bridge` class contains several functions that do the action in the SDK and return the result to the user.
+2. The SDK exposes various interfaces that the user can implement to get responses (success and error) for various actions like face enrollment, voice enrollment, etc.
+3. SDK has a class `OneKosmosSDKResponse` which will sometimes be used to send responses to the app. OneKosmosSDKResponse consists of 3 parameters:
+    * **Code** - An int that conveys the response code.
+    * **Message** - String which conveys the response message.
+    * **Data** - JSONObject which encapsulates any additional information about the response.
+
+### Interfaces
+
+1. `ILicenseCheckListener`: Listens for the status of license validity.
+2. `IAddPersona`: Listens to the status of add persona call.
+3. `IBiometricResponseListener`: Listens for the response of fingerprint verification in devices with a fingerprint sensor. Else, listens to the response of pin, pattern, or password verification on devices lacking fingerprint sensor.
+6. `IFaceResponseListener`: Listens to the status of face enrollment and face comparison.
+7. `IVoiceResponseListener`: Listens to the response of voice enrollment and voice comparison.
+8. `IFCMListener`: Listens to FCM notification received by the app.
+9. `ILoginObserver`: Used while QR Code scanning to listen for type of authentication e.g. fingerprint, pin, face, or voice.
+10. `IResetAdCredentials`: Listens for the response of resetting active directory credentials.
+1. `ITotpResponseListener`: Listens to totp generation.
+
+There are two sets of configurations that need to be performed to enable this integration:
+
+1. Configure BlockID Workforce Android SDK within the project
+2. BlockID Workforce Android SDK API Configuration
+
+**List of Topics:**
+1. [Configure BlockID Workforce Android SDK within the project](#ConfigureSDK)
+    * [SDK Integration into the Project](#SDKIntegration)
+        * [Integration of OneKosmosSDK-Release.aar file into the project](#SDKIntegrationfile)
+        * [Add SDK dependency in project's Build.gradle file](#SDKIntegrationSDKdep)
+    * [Add dependencies in Project’s Build.gradle](#SDKIntegrationSDKdepM)
+    * [Initialize the BlockID SDK](#SDKIntegrationIntializesdk)
+    * [Grant Permissions to the BlockID SDK](#SDKIntegrationPermission)
+2. [BlockID Workforce Android SDK API Configuration](#SDKAPIConfiguration)
+    * [Base URL (Tenant) Dialog](#SDKAPIConfigurationBaseURL)
+    * [License Check](#SDKAPIConfigurationLicenseCheck)
+    * [Add Persona](#SDKAPIConfigurationAddPersona)
+    * [Pin Enrollment](#SDKAPIConfigurationPINEnrollment)
+    * [Voice Enrollment](#SDKAPIConfigurationVoiceEnrollment)
+    * [Add Personas](#SDKAPIConfigurationAddPersonas)
+    * [Reset App Data](#SDKAPIConfigurationResetAppData)
+    * [Reset Active Directory Credentials](#SDKAPIConfigurationResetADCredentials)
+    * [Scan QR Code](#SDKAPIConfigurationScanQR)
+    * [Notification](#SDKAPIConfigurationNotifications)
+    * [TOTP](#SDKAPIConfigurationTOTP)
+    * [Login Methods](#SDKAPIConfigurationLoginMethods)
+        * [Fingerprint Login](#SDKAPIConfigurationLoginMethodsFingerprint)
+        * [Pin Login](#SDKAPIConfigurationLoginMethodsPin)
+        * [Face Login](#SDKAPIConfigurationLoginMethodsFace)
+        * [Voice Login](#SDKAPIConfigurationLoginMethodsVoice)
+
+## <a name = "ConfigureSDK"></a>BlockID SDK Setup
+
+### <a name = "SDKIntegration"></a>SDK Integration into the Project
+
+#### <a name = "SDKIntegrationfile"></a>Integration of OneKosmosSDK-Release.aar file into the project
+
+1. Start the Android Studio.
+2. Navigate to ***File > Project Structure > Modules***.
+3. Click on the `+` icon.
+4. Click `Choose import .JAR/.AAR`.
+5. Locate the `OneKosmosSDK-Release.aar` file and click **Apply**.
+6. Navigate to ***File > Project Structure > Dependencies***
+7. Select `app`.
+8. In the declared dependencies tab, click `+`.
+9. Click **Module dependency**.
+10. Select `OneKosmosSDK-Release`.
+11. Click **Apply**
+12. Click **OK**. The build process for the project starts.
+
+#### <a name = "SDKIntegrationSDKdep"></a>Add SDK dependency in project`s Build.gradle file
+
+```json
+implementation project(path: ':OneKosmosSDK-release');
+```
+
+### <a name = "SDKIntegrationSDKdepM"> </a>Add dependencies in Project’s Build.gradle
+Add the following dependencies on your app’s build.gradle file:
+
+1. implementation ‘androidx.biometric:biometric:1.0.1’: Fingerprint authentication.
+2. implementation 'com.google.firebase:firebase-messaging:20.1.0' - Firebase Cloud Messaging.
+3. implementation 'com.karumi:dexter:4.2.0' - Permissions library used by SDK.
+4. implementation 'com.google.android.gms:play-services-vision:19.0.0' - Face, smile and blink  detection.
+5. implementation ‘org.java-websocket:Java-WebSocket:1.3.0’ - Sending data after QR Code scanning.
+6. implementation 'org.web3j:core:3.3.1-android' - Ethereum library.
+7. implementation 'org.bitcoinj:bitcoinj-core:0.15.4' - Bitcoin library.
+8. implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0' - Network library.
+9. implementation 'com.squareup.retrofit2:converter-gson:2.3.0' - Network library.
+10. implementation 'com.squareup.okhttp3:logging-interceptor:4.2.1' - Network library.
+1. implementation 'com.squareup.okhttp3:okhttp:4.2.1' - Network library.
+2. implementation 'javax.annotation:javax.annotation-api:1.2' - Annotation library.
+
+### <a name = "SDKIntegrationIntializesdk"> </a>Initialize the BlockID SDK
+Perform the following steps to initialize the SDK within the Application class:
+
+1. The user application needs to have one class extended from the `android.app.Application` class.
+2. Initialize the SDK in this class by calling the `Bridge.initialise(Application app)` method.
+3. To communicate with SDK, call the static method `getInstance()` of a `Bridge` class. This method will return the `Bridge` class object. Run the following command to initialize the SDK within the Application class:
+```json
+Bridge.initialise();
+```
+### <a name = "SDKIntegrationPermission"> </a>Grant Permissions to the BlockID SDK
+1. The app needs to ask for Location permissions (`android.permission.ACCESS_FINE_LOCATION`).
+**Location** permission is required because the app has to send `latitude` and `longitude` in every API request. If the user denies the Location permission, `latitude` and `longitude` can be `0`.
+2. SDK will handle permissions for **Camera**(`android.permission.CAMERA`) and **Audio** recording(`android.permission.RECORD_AUDIO`). Camera permission is required for Q**R code scanning** and **face enrollment**. Audio recording permission is required for **voice enrollment**.
+
+
+## <a name = "SDKAPIConfiguration"> </a>SDK API Configuration
+
+### <a name = "SDKAPIConfigurationBaseURL"> </a>Base URL (Tenant) Dialog
+
+1. The app needs to present a tenant dialog to the user in which the user will enter the base URL. This base URL will then be used for calling all the APIs.
+2. When a user enters the base URL, call the following functions in SDK to save the base URL:
+    *  Tenant URL: 
+        ```json
+        Bridge.setTenantUrl(String argTenantUrl);
+         ```
+
+       **Request Params description**: 
+       | Params | Description |
+       | ----------- | ----------- |
+       | argTenantUrl | Base URL is entered by the user. For example, `docs.cloud.com` |
+
+    * Set URL Parameters:
+    ```json
+    Bridge.setUrlParams(String argProtocolType, String argTenant, String argCommunity, String argProductKey);
+    ```
+   **Request Params description**: 
+   | Params | Description |
+   | ----------- | ----------- |
+   | argProtocolType | protocol type e.g. http://, https:// |
+   | argTenant | base URL. For example, docs.cloud.com |
+   | argCommunity | community name. For example,  mobile, consumer. |
+   | argProductKey | product key. For example, `5678-1234-0987` |
+:::(Info) (Note:)
+The base URL must be set only once during the lifetime of the app.
+:::
+
+### <a name = "SDKAPIConfigurationLicenseCheck"> </a>License Check
+
+1. After asking for permissions and setting the base URL, the next step is to check the validity of the license.
+2. For this, implement the interface `ILicenseCheckListener` in an Activity, and from that Activity, call the following method:
+
+    ```json
+    generateCredentials(Activity argActivity, ILicenseCheckListener argLicenseCheckResponseListener, Location argLocation, IErrorListener argErrorListener); 
+    ```
+    **Request Params description**: 
+   | Params | Description |
+   | ----------- | ----------- |
+   | argActivity | Activity from which generateCredentials() is called. |
+   | argLicenseCheckResponseListener | A class that will receive a response of license check. |
+   | argLocation | Current location with latitude and longitude. |
+   | argErrorListener | A class that will listen for errors during the license check. |
+3. The response will be received in method `onLicenseCheckValid(boolean argValue)`
+where the `argValue - is either true or false`.
+`True` indicates license check success.
+ `False` indicates license check failure.
+:::(Info) (Note:)
+This API needs to be called every time the app launches.
+:::
+
+### <a name = "SDKAPIConfigurationAddPersona"> </a>Add Persona
+
+1. The user needs to add at least one persona to proceed. Each persona has a name and password associated with it. 
+2. Get the name and password from the user and call the following method:
+    ```json
+     addPersona(Activity argActivity, String argPersonaName, String argPersonaPass, Location argLocation, IAddPersona argAddPersonaObs);
+    ```
+
+    **Request Params description**: 
+   | Params | Description |
+   | ----------- | ----------- |
+   | argActivity | Activity reference. |
+   | argPersonaName | Persona name. |
+   | argPersonaPass | Persona password. |
+   | argLocation | Current location with latitude and longitude. |
+   | argAddPersonaObs | A class that will receive the response of addPersona API by implementing the IAddPersona interface. |
+3. To call this method, implement the interface `IAddPersona`. `IAddPersona` has two methods that need overriding i.e. `onAddPersona (OneKosmosSDKResponse argResponse)` and `onAddPersonaError (Throwable argThrowable)`.
+    * `argResponse` - is an object of class `OneKosmosSDKResponse` which is a public class in SDK.
+    * `argResponse.getCode()` can have following values:
+        * `IAddPersona.RESPONSE_CODE.SUCCESS` - Indicates the success of addPersona API.
+        * `IAddPersona.RESPONSE_CODE.FAILURE` - Indicates the failure of addPersona API.
+
+### <a name = "SDKAPIConfigurationPINEnrollment"> </a>Pin Enrollment
+
+The app is expected to show the user two numeric Edit fields each of 8-digits. The app must perform some basic operations on the Edit field data to check if the Edit fields are empty. If data in both the Edit fields match, the app should call the following  method:
+```json
+Bridge.savePin(String argPin);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| argPin | It is the Pin that a user wants to set for accessing the app.|
+
+:::(Info) (Note:)
+This Pin is only for the app and different from the device pin which is enrolled in device settings.
+:::
+
+### <a name = "SDKAPIConfigurationFaceEnrollment"> </a>Face Enrollment
+
+1. Implement the interface `IFaceResponseListener` and override its methods `onFaceEnrollmentResponse()` & `onFaceComparisonResponse()`.
+2. `onFaceEnrollmentResponse(OneKosmosSDKResponse argResponse)`
+    * `argResponse` - `OneKosmosSDKResponse` object containing response.
+    * Compare `argResponse.getCode()` to `IFaceResponseListener.ENROLLMENT.RESPONSE_CODE.SUCCESS` or `IFaceResponseListener.ENROLLMENT.RESPONSE_CODE.FAILURE` to determine the result.
+3. `onFaceComparisonResponse(OneKosmosSDKResponse argResponse)`
+    :::(Info) (Note:)
+    This method is relevant only to face comparison. Hence, not discussed here in detail. See the **Login Methods** topic for the detailed description.
+    :::
+4. For Face enrollment, call the following method:
+```json
+Bridge.enrollFace(Activity argActivity, Location argLocation, IFaceResponseListener argFaceResponseListener);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| argActivity | Activity reference. |
+| argLocation | Current location with latitude and longitude. |
+| argFaceResponseListener | A class that will receive a response of the `enrollFace()` API by implementing the `IFaceResponseListener` interface. |
+
+### <a name = "SDKAPIConfigurationVoiceEnrollment"> </a>Voice Enrollment
+
+1. Implement the interface IVoiceResponseListener and override its methods `onVoiceSuccess(OneKosmosSDKResponse argResponse)` and `onVoiceError(OneKosmosSDKResponse argResponse)`.
+2. `onVoiceSuccess(OneKosmosSDKResponse argResponse)` 
+3. `argResponse` - 
+    * `OneKosmosSDKResponse` object containing response.
+    * Compare `argResponse.getCode()` to `Utils.IApiResponseCode.RESPONSE_CODE_SUCCESS` or  `Utils.IApiResponseCode.RESPONSE_CODE_FAILURE` to determine the result.
+4. `onVoiceError(OneKosmosSDKResponse argResponse)`
+   * `argResponse` - `OneKosmosSDKResponse` object containing response.
+5. For Voice enrollment run the following method:
+```json
+Bridge.enrollVoice(Activity argActivity, IVoiceResponseListener argVoiceResponseListener, Location argLocation);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| argActivity | Activity reference. |
+| argLocation | Current location with latitude and longitude. |
+| argVoiceResponseListener | A class that will receive a response of the `enrollVoice()` API by implementing the `IVoiceResponseListener` interface. |
+
+### <a name = "SDKAPIConfigurationAddPersonas"> </a>Add Personas
+1. Implement the interface IAddPersona and override its methods `onAddPersona(OneKosmosSDKResponse argResponse)` and `onAddPersonaError(Throwable argThrowable)`
+2. `onAddPersona(OneKosmosSDKResponse argResponse)` 
+   * `argResponse` - `OneKosmosSDKResponse` object containing response.
+   * Compare `argResponse.getCode()` to `IAddPersona.RESPONSE_CODE.SUCCESS` or 
+`IAddPersona.RESPONSE_CODE.FAILURE`
+to determine the result.
+3. `onAddPersonaError(Throwable argThrowable)`
+   * `argThrowable` - Throwable object passed to the app.
+4. To Add persona call the following method:
+```json
+Bridge.addPersona(Activity argActivity, String argPersonaName, String argPersonaPass, Location argLocation, IAddPersona argAddPersonaObs);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| argActivity | Activity reference. |
+| argPersonaName | Persona name. |
+| argPersonaPass | Persona password. |
+| argLocation | Current location with latitude and longitude. |
+| argAddPersonaObs | A class that will receive a response of the `addPersona()` API by implementing the `IAddPersona` interface.|
+
+### <a name = "SDKAPIConfigurationResetAppData"> </a>Reset App Data
+For resetting data stored by SDK, the app needs to call the following method:
+```json
+ Bridge.deleteData(); 
+ ```
+This method will return a boolean value. If it is `True`, data deletion is successful. If it is `false`, it indicates an error during the data deletion.
+
+### <a name = "SDKAPIConfigurationResetADCredentials"> </a>Reset Active Directory Credentials
+1. Interface to implement: `IResetAdCredentials`
+2. Methods to override: 
+    * `onResetAdCredentials(OneKosmosSDKResponse argResponse)`
+    * `onResetAdCredentialsError(Throwable argThrowable)`
+3. `onResetAdCredentials(OneKosmosSDKResponse argResponse)`
+    * `argResponse` - `OneKosmosSDKResponse` object
+    * `argResponse.getCode()` contains code which should be compared with `IResetAdCredentials.RESPONSE_CODE.SUCCESS` or `IResetAdCredentials.RESPONSE_CODE.FAILURE` to determine status of the operation.
+
+### <a name = "SDKAPIConfigurationScanQR"> </a>Scan QR Code
+1. QR code scanning requires authentication from the user. Authentication can be of four types:
+    * Fingerprint / Biometric
+    * Pin
+    * Face
+    * Voice
+2. Implement the interface `ILoginObserver` and override the methods `displayFingerPrintVerifUI()`, `displayPinVerificationUI()`, `void displayFaceVerificationUI()`, `displayVoiceVerificationUI()`.
+3. The app will receive a callback in the following methods after scanning the QR code:
+    * `displayFingerPrintVerifUI()` - When the authentication type requested by QR code is fingerprint.
+    * `displayPinVerificationUI()` - When the authentication type requested by QR code is a pin.
+    * `displayFaceVerificationUI()` - When authentication type requested by QR code is face.
+    * `displayVoiceVerificationUI()` - When the authentication type requested by QR code is voice.
+4. The app is supposed to follow the procedure for login as mentioned in the **Login Methods** topic, call the methods mentioned for each type of login, and implement the interfaces mentioned.
+
+### <a name = "SDKAPIConfigurationNotifications"> </a>Notification
+1. SDK will implement **FCM (Firebase Messaging Service)** and pass on the notification part (`RemoteMessage.Notification`) of the FCM message to the app.
+2. The app is required to listen to FCM messages by implementing the interface `IFCMListener`.
+3. `IFCMListener` has only one method i.e. `onFCMMessageReceived(RemoteMessage.Notification argNotification)`.
+4. `onFCMMessageReceived(RemoteMessage.Notification argNotification)`
+    * `argNotification`: Contains the information which app needs to create a notification and show on the UI e.g. notification title, body etc.
+5. Currently, FCM login only supports authentication via fingerprint. To listen to the response of login via fingerprint, implement the interface `IBiometricResponseListener` and override its methods i.e. `onAuthSuccess()`, `onAuthFailed()` & `onAuthError()`.
+    * `onAuthSuccess()`: is called by SDK when biometric authentication is successful.
+    * `onAuthFailed()`: is called by SDK when biometric authentication fails.
+    * `onAuthError()`: is called by SDK when some error occurs during biometric authentication e.g. Biometric authentication is canceled.
+6. When the user attends to the notification, and requests to be logged into the app, call the following method: 
+    ```json
+    Bridge.displayFingerPrintCaptureDialog(Activity argActivity, IBiometricResponseListener argObserver, String argPersona);
+    ```
+
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| argActivity | Activity reference. |
+| argObserver | A class that implements IBiometricResponseListener. |
+| argPersona | The name of the persona user wants to log in with. |
+
+### <a name = "SDKAPIConfigurationTOTP"> </a>TOTP
+1. Interface to implement: `ITotpResponseListener`
+2. Methods to override: 
+    * `onTotpResponseSuccess(OneKosmosSDKResponse argResponse)`
+    * `onTotpResponseError(OneKosmosSDKResponse argResponse)`
+
+3. `onTotpResponseSuccess(OneKosmosSDKResponse argResponse)`
+    * `argResponse.getData()` will return JSONObject in the format `{"lengthOfTotp":10,"remainingSecond":20,"second":"30","totp":"937422"}`
+4. Method to call: 
+```json
+Bridge.generateTOtp(ITotpResponseListener argTotpResponseListener);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| argTotpResponseListener | Class which implements ITotpResponseListener. |
+
+### <a name = "SDKAPIConfigurationLoginMethods"> </a>Login Methods
+#### <a name = "SDKAPIConfigurationLoginMethodsFingerprint"> </a>Fingerprint Login
+1. Login via fingerprint /biometric authentication is done by checking user fingerprints against those enrolled in the device.
+2. App class needs to implement the interface IBiometricResponseListener
+and override its methods i.e. onAuthSuccess(), onAuthFailed() & onAuthError().
+    * `onAuthSuccess()` - is called by SDK when biometric authentication is successful.
+    * `onAuthFailed()` - is called by SDK when biometric authentication fails.
+    * `onAuthError()` - is called by SDK when some error occurs during biometric authentication e.g. Biometric authentication is cancelled.
+
+3. When the user requests to be logged into the app, call the following method:
+```json
+Bridge.displayFingerPrintCaptureDialog(Activity argActivity, IBiometricResponseListener argObserver, String argPersona);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| argActivity | Activity reference. |
+| argObserver | A class that implements IBiometricResponseListener. |
+| argPersona | Must be null. |
+4. SDK will check if the phone has a fingerprint sensor.
+    * If `yes`, a biometric prompt will be shown.
+    * If not, the user will be asked to authenticate himself using Pin, Pattern, or Password.
+    * If none of the Pin, Pattern, or Password is enrolled, SDK will direct the user to Device settings where one of the locking/authentication types needs to be set.
+:::(Info) (Note:)
+Pin here is a device pin and is different than that mentioned in the **PIN Enrollment** topic above.
+:::
+
+#### <a name = "SDKAPIConfigurationLoginMethodsPin"> </a>Pin Login
+The app should allow the user to enter an 8-digit pin and check it against the pin received by calling the following method:
+```json
+Bridge.getPin();
+```
+If pin matching is successful, allow the user to access the app.
+
+#### <a name = "SDKAPIConfigurationLoginMethodsFace"> </a>Face Login
+1. Implement the interface `IFaceResponseListener` and override its methods and override its methods `onFaceEnrollmentResponse()` and `onFaceComparisonResponse()`.
+2. `onFaceEnrollmentResponse(OneKosmosSDKResponse argResponse)`
+   * `argResponse` - `OneKosmosSDKResponse` object containing response.
+   * Compare `argResponse.getCode()` to `IFaceResponseListener.ENROLLMENT.RESPONSE_CODE.SUCCESS` or 
+`IFaceResponseListener.ENROLLMENT.RESPONSE_CODE.FAILURE` to determine the result.
+3. `onFaceComparisonResponse(OneKosmosSDKResponse argResponse)`
+   * `argResponse` - `OneKosmosSDKResponse` object containing response.
+   * Compare `argResponse.getCode()` to `IFaceResponseListener.COMPARISON.RESPONSE_CODE.SUCCESS` or 
+`IFaceResponseListener.COMPARISON.RESPONSE_CODE.FAILURE` to determine the result.
+4. Call the following method:
+```json
+Bridge.enrollFace(Activity argActivity, Location argLocation, IFaceResponseListener argFaceResponseListener);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| argActivity | Activity reference. |
+| argLocation | Current location with latitude and longitude.|
+| argFaceResponseListener | A class that will receive a response of the enrollFace() API by implementing the IFaceResponseListener interface. |
+
+:::(Info) (Note:)
+For face comparison, the app is required to call the `enrollFace()` method followed by the `compareFace()` method.
+:::
+5. Call the following method:
+```json
+Bridge.compareFace(Activity argActivity, IFaceResponseListener argFaceResponseListener, Location argLocation);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| argActivity | Activity reference. |
+| argFaceResponseListener | Class which will receive response of compareFace() API by implementing IFaceResponseListener interface. |
+| argLocation | Current location with latitude and longitude.|
+
+#### <a name = "SDKAPIConfigurationLoginMethodsVoice"> </a>Voice Login
+1. Implement the interface `IVoiceResponseListener` and override its methods `onVoiceSuccess(OneKosmosSDKResponse argResponse)` and `onVoiceError(OneKosmosSDKResponse argResponse)`.
+2. onVoiceSuccess(OneKosmosSDKResponse argResponse) 
+    * `argResponse` - `OneKosmosSDKResponse` object containing response.
+    * Compare `argResponse.getCode()` to `Utils.IApiResponseCode.RESPONSE_CODE_SUCCESS` or 
+`Utils.IApiResponseCode.RESPONSE_CODE_FAILURE` to determine the result.
+3. `onVoiceError(OneKosmosSDKResponse argResponse)`
+    * `argResponse` - `OneKosmosSDKResponse` object containing response.
+4. Call the following method: 
+```json
+Bridge.verifyVoiceOnLogin(Activity argActivity, IVoiceResponseListener argVoiceResponseListener, Location argLocation);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| argActivity | Activity reference. |
+| argVoiceResponseListener | Class which will receive response of verifyVoiceOnLogin() API by implementing IVoiceResponseListener interface. |
+| argLocation | Current location with latitude and longitude.|
+
+

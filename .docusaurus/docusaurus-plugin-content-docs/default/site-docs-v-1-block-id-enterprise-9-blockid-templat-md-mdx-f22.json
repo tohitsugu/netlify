@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/Z6b864555-b7e0-48b4-8cbb-90a21ed91e14",
+  "id": "v1/BlockID Enterprise/Z6b864555-b7e0-48b4-8cbb-90a21ed91e14",
+  "isDocsHomePage": false,
+  "title": "BlockID Templates",
+  "description": "1. Login Templates",
+  "source": "@site/docs/v1/BlockID Enterprise/9_blockid-templat.md.mdx",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/blockid-templates",
+  "permalink": "/docs/v1/blockid-templates",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "slug": "/v1/blockid-templates",
+    "id": "Z6b864555-b7e0-48b4-8cbb-90a21ed91e14"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID SDK",
+    "permalink": "/docs/v1/blockid-sdk"
+  },
+  "next": {
+    "title": "Datastore Configuration",
+    "permalink": "/docs/v1/datastore-configuration"
+  }
+}

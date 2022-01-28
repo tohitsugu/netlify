@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Integrations/integration-wit",
+  "id": "v1/BlockID Integrations/integration-wit",
+  "isDocsHomePage": false,
+  "title": "integration-wit",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Integrations/5_integration-wit.md",
+  "sourceDirName": "v1/BlockID Integrations",
+  "slug": "/v1/BlockID Integrations/integration-wit",
+  "permalink": "/docs/v1/BlockID Integrations/integration-wit",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Technical Guide for LiveID, Driving License and Passport Scan Support",
+    "permalink": "/docs/v1/technical-guide-for-liveid-driving-license-and-passport-scan-support"
+  },
+  "next": {
+    "title": "Integration with PingFederate",
+    "permalink": "/docs/v1/integration-with-pingfederate"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Authentication Broker/installing-bloc",
+  "id": "v1/BlockID Authentication Broker/installing-bloc",
+  "isDocsHomePage": false,
+  "title": "installing-bloc",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Authentication Broker/2_installing-bloc.md",
+  "sourceDirName": "v1/BlockID Authentication Broker",
+  "slug": "/v1/BlockID Authentication Broker/installing-bloc",
+  "permalink": "/docs/v1/BlockID Authentication Broker/installing-bloc",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "saml-configurat",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Identity Management/saml-configurat"
+  },
+  "next": {
+    "title": "Installing BlockID Authentication Broker",
+    "permalink": "/docs/v1/installing-blockid-authentication-broker"
+  }
+}

@@ -1,0 +1,489 @@
+---
+slug: /v2/frequently-asked-questions-faq
+id: Za49f1bb3-aba5-47e6-9a66-1248143e8c67
+---
+# Frequently Asked Questions (FAQs)
+
+This page will answer questions with respect to the BlockID platform. If you have any questions that are not addressed in the sections below, please send us an email at <info@1kosmos.com>
+
+:::(Error) ()
+## General
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>What is 1Kosmos BlockID?</b></summary>
+<br />
+1Kosmos BlockID provides cloud-based identity solutions that leverage biometrics for passwordless user authentication. It uses Blockchain technology for secure and passwordless access to the applications.
+</details>
+:::
+:::(Warning) ()
+<details>
+<summary><b>What is the licensing model for 1Kosmos BlockID?</b></summary>
+<br />
+
+1Kosmos BlockID has three separate offerings and each offering has a different pricing plan. Please contact <sales@1kosmos.com> for further pricing information.
+</details>
+:::
+
+:::tip 
+<details>
+<summary>
+<b>Where can I obtain more information about 1Kosmos BlockID?</b>
+</summary>
+
+<br />
+    
+Visit the **Why BlockID**, **Solutions**, and **Insights** sections from the [1Kosmos](https://www.1kosmos.com/) site. Also, visit the 1Kosmos [BlockID Documentation](https://1kosmos.document360.io/docs) site for in-depth information on each BlockID product. Please contact us on info@1kosmos.com for further information.
+</details>
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>How can I register for the 1Kosmos BlockID Webinars?</b></summary>
+<br />
+ 
+Check out our [Webinar](https://www.1kosmos.com/insights/webinars) page to access the existing webinars and register for the upcoming webinars.
+</details>
+:::
+:::(Warning) ()
+<details>
+<summary><b>How can I get a Free Trial of the 1Kosmos BlockID solutions?</b></summary>
+<br />
+    
+Visit the [BlockID Free Trial](https://www.1kosmos.com/blockid-free-trial) page and **Sign up** to get a free trial of our 1Kosmos BlockID solutions.
+</details>
+:::
+:::(Warning) ()
+<details>
+<summary><b>What categories of applications are allowed to integrate with BlockID?</b></summary>
+<br />
+ 
+1Kosmos BlockID integrates with numerous cloud applications, leading SSO and cloud platforms, along with PAM technologies, Hardware Tokens, Operating Systems, and Remote Access providers. Check out our [Integrations](https://www.1kosmos.com/workforce-solutions/integrations) page to check the list of categories of applications 1Kosmos BlockID can integrate.
+</details>
+:::
+
+:::(Warning) ()    
+<details>
+<summary><b>Is 1Kosmos General Data Protection Regulation (GDPR) compliant?</b>
+</summary>
+<br />
+
+The 1Kosmos platform is built with the [Privacy by Design](https://gdpr-info.eu/issues/privacy-by-design/) term of [GDPR](https://gdpr-info.eu/). The Information storage is de-risked with user-managed encryption and adheres to [GDPR Article 25](https://gdpr-info.eu/issues/privacy-by-design/).
+</details>
+:::
+
+
+* * * 
+:::(Error) ()
+## BlockID Platform
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>How does BlockID handle multiple identities?</b></summary>
+<br />
+BlockID manages a concept called "<b>User Personas</b>". Multiple identities of a user can be mapped to multiple personas and be under a single master user profile called "<b>Person</b>".
+</details>
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>What happens if the user loses their mobile device?</b></summary>
+<br />
+The information on the BlockID platform can all be recovered using a recovery phrase and your biometric. A user can download a new version of the app on their new mobile device and then enter their recovery phrase, authenticate with their biometrics to get access to their identity vault.
+</details>
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>What is the Universal Web Login capability within BlockID?</b></summary>
+<br />
+The process will take less than 30 minutes to set up, and involves downloading the BlockID Login integration SDK onto the site. This will then allow the site to generate a QR code that can then be scanned by the user using their mobile device.
+</details>
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>Using the BlockID platform, who is bearing the cost of fraud and the cost of errors?</b></summary>
+<br />
+This product interacts with the existing security system and fraud prevention of the commercial enterprise. A service provider will bear the cost of any fraud. However, replacing credentials with biometrics and moving the repository from a single database to a blockchain significantly reduces the risk of fraud and the cost of errors.
+</details>
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>What standards does BlockID follow?</b></summary>
+<br />
+We follow W3C, FIDO2, NIST IAL, and AAL standards.
+</details>
+:::
+ 
+:::(Warning) ()
+<details>
+<summary><b>What protocols/algorithms for fingerprint, voice, and facial recognition do you use?</b></summary>
+<br />
+We use the inbuilt biometrics, if available, for the fingerprint. For the voice and matching the facial biometrics to your vault, we use our BlockID facial and voice metrics that use Microsoft Cognitive Artificial Intelligence (AI).
+</details>
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>As the platform evolves, how do you update the biometrics to the latest version?</b></summary>
+<br />
+If the biometrics are updated, BlockID releases a new version of the mobile app and will be updated on every user's smartphone as part of their app update process.
+</details>
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>Is there any possibility to reverse engineer your Identity on BlockID?</b></summary>
+<br />
+No, the data is stored in an encrypted format using ECDSA encryption.
+</details>
+:::
+:::(Warning) ()
+<details>
+<summary><b>Which part of the architecture requires us to interact with the browser?</b></summary>
+<br />
+The architecture that interacts with a web browser is when the QR code is presented on screen. The data that is transmitted isn't browser-specific, currently uses javascript.
+</details>
+:::
+:::(Warning) ()
+<details>
+<summary><b>What is the QR code needed for?</b></summary>
+<br />
+The QR code is needed to initialize the app to know what information is being asked for and which service and scope it is being provided to.
+</details>
+:::
+:::(Warning) ()
+<details>
+<summary><b>What data is captured as part of the QR code?</b></summary>
+<br />
+A QR code consists of four main data elements. These are:
+<ul>
+<li><b>Scope</b> - A scope details what needs to be queried from the user's identity safe from the mobile device. Typically this would consist of First Name, Last Name, UserId, Date of Birth, etc.
+</li>
+<li><b>Factor</b></li> - Factor identifies which type of biometric the user needs must provide to authenticate, i.e., either the face, fingerprint, or voice. 
+<li><b>Public Key</b></li> - This is the public key of the requesting party.
+<li><b>URL</b></li> - The URL specifies the endpoint that the mobile app will need to use to send the authentication request to.
+</ul>
+</details>
+:::
+:::(Warning) ()
+<details>
+<summary><b>Can BlockID be used without a QR code?</b></summary>
+<br />
+Yes, BlockID can work without a QR Code. It supports legacy username & password, USERNAME+PUSH, external systems, and tokens such as RADIUS, Yubikey, SecurID, and OneSpan. For a passwordless experience, a QR code allows the end-user to authenticate into any system, whether it is the first time or a repeat login. Without a QR code, a legacy method of "linking" becomes necessary. Thus, a QR code is recommended to make the customer experience better and more secure.
+</details>
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>How does the 1Kosmos platform separate tenant data?</b></summary>
+<br />
+BlockID segregates the data for each tenant in their own permission blockchain. This keeps logical and physical data seperation for each tenant.
+</details>
+:::
+:::(Warning) ()
+<details>
+<summary><b>What is needed in the customer environment for workforce use cases?</b></summary>
+<br />
+There are two applications needed in a customer environment
+<ul>
+<li><b>BlockID Authentication Broker</b> - This is the single interface that allows us to communicate with AD.
+<ul>
+<li>This allows us to communicate with the Microsoft NDES service to issue smartcard certificates.
+</li>
+</ul>
+</li>
+</ul>
+Also, the BlockID Workforce mobile application needs to be downloaded and used by individual users.
+</details>
+:::
+:::(Warning) ()
+
+<details>
+<summary><b>Is there any client user data that an administrator can have access to?</b>
+</summary>
+<br />
+1Kosmos cannot see any user data as it is not stored in our cloud.
+<ul>
+<li> User private data is protected with the user's private key which resides on their phone.</li>
+<li> No AD or other <b>internal</b> company data is stored in the cloud.</li>
+<li> Many other products will copy your AD user attributes to their cloud. BlockID does not.</li>
+</ul>
+</details>
+:::
+:::(Warning) ()
+<details>
+<summary><b>What are the Authentication Schemes?</b></summary>
+<br />
+Authentication schemes are used to authenticate users into the platform. An authentication scheme can be configured for tenants (Customers) based on their needs. For example, <b>Customer 1</b> can use <b>Active Directory (AD)</b> while <b>Customer 2</b> can use <b>1Kosmos User Directory (1KUD)</b>.
+</details>
+:::
+:::(Warning) ()
+<details>
+<summary><b>Can I log into the 1Kosmos platform with an Active Directory (AD) account?</b></summary>
+<br />
+Yes, once the platform is configured with a client AD, the accounts associated with that Active Directory can be used to authenticate within the platform.
+</details>
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>Does 1Kosmos have access or able to log in to the tenants’ admin page? Can customers completely remove 1KUD once they set up their AD?</b></summary>
+<br />
+1KUD is for the customers who do not have an LDAP or AD server of their own (or do not wish to self manage the user details anymore) and want us to store their legacy users. They could configure BlockID to communicate with the local AD where they store their own user base.
+</details>
+:::
+:::(Warning) ()
+<details>
+<summary><b>Can we customize the login page for customers?</b></summary>
+<br />
+Yes, the login pages are customizable.
+</details>
+:::
+
+:::(Error) ()
+## BlockID Mobile Application
+:::
+:::(Warning) ()
+<details>
+<summary><b>What is the minimum version of the operating system for Android or iOS required to run the app?</b>
+</summary>
+<br />
+To run the BlockID mobile app, we need an iPhone running on <b>IOS 12.3.1</b> or higher and an Android mobile phone running on <b>Android 6.0 or later</b>.
+</details>
+:::    
+
+:::(Warning) ()
+<details>
+<summary><b>What does BlockID have for backup and recovery?</b>
+</summary>
+<br />
+BlockID provides a Service Level Agreement (SLA) availability of 99.8%. Our service manages our deployment for our customers across regions and provides automated backup and recovery.
+</details>
+:::    
+    
+:::(Warning) ()
+<details>
+<summary><b>What would be the workflow where BlockID has been implemented on a system of an employee who is on leave and another person needs to access that system officially (with the credentials of that person who is on leave).</b>
+</summary>
+<br />
+In this case, get the Admin login credentials (username and password) from IT after respective approvals are in place.
+</details>
+:::     
+    
+:::(Error) ()
+## BlockID Verify
+:::
+:::(Warning) ()
+<details>
+<summary><b>How do you verify addresses in developing countries?</b>
+</summary>
+<br />
+Similar to the United States, BlockID Verify will need to integrate with a source of truth from that country. This integration can be configured on the platform.
+</details>
+:::    
+:::(Warning) ()    
+<details>
+<summary><b>Is the NIST standard the only scoring methodology in BlockID?</b>
+</summary>
+<br />
+BlockID also includes an identity trust score that factors NIST as well as other parameters. Both the assurance level of NIST and the trust score for a user is available.
+</details>
+:::
+:::(Warning) ()    
+<details>
+<summary><b>Has BlockID been rated by any agency such as NIST?</b>
+</summary>
+<br />
+We use the guidelines set forth by NIST 800 63-3.
+</details>
+:::
+:::(Warning) ()    
+<details>
+<summary><b>What are your sources for Document Verification?</b>
+</summary>
+<br />
+A typical document verification platform is a central entity that allows BlockID to verify authenticity through an API. Some examples include AAMVA, Melissa, IDDataWeb, etc. They vary depending on the country of origin. Each system of record is from an issuing authority.
+</details>
+:::
+:::(Warning) ()    
+<details>
+<summary><b>How do you handle address verification and what happens if you do not have a match?</b>
+</summary>
+<br />
+We verify addresses with third party services (US Postal Service + Melissa). If there isn't a match, it triggers a manual process where additional documentation is requested from utilities and/or phone services and matched.
+</details>
+:::
+:::(Error) ()  
+## BlockID Consumer
+:::
+:::(Warning) ()    
+<details>
+<summary><b>How can BlockID be deployed to evade Google’s “control of your search identity”? Or Facebook’s “control of your social identity”?</b>
+</summary>
+<br />
+By not having any log-ins from Google or Facebook, you will not be using the same log-ins that allow those, and other companies, to track which pages you are using while browsing in a private or incognito mode with access to your web applications. All information about the user will be stored in an identity vault.
+</details>
+:::
+:::(Warning) ()    
+<details>
+<summary><b>How does BlockID Consumer eliminate multiple credentials?  How would BlockID work across multiple eCommerce sites?</b>
+</summary>
+<br />
+A single BlockID credential can be used to authenticate across multiple sites. This is possible because the single credential resides on the blockchain. This is in contrast with having a credential stored in the individual website's databases.
+</details>
+:::
+:::(Warning) ()    
+<details>
+<summary><b>How does the user control what information is shared with service providers?</b>
+</summary>
+<br />
+BlockID uses a concept of scopes which includes all the user information criteria. As part of the scope, every data request from a service provider has to have one or multiple scopes defined. So, for example, if a website is requesting a user credential for logon, the user would see that the website is asking for their "FirstName" and "LastName" as part of the scope in the request.
+</details>
+:::
+:::(Warning) ()    
+<details>
+<summary><b>Can an eCommerce site or Retailer see all my info?</b>
+</summary>
+<br />
+Only if the information is explicitly shared by the user. All the information shared by the user would be shown as part of the scope defined in the request.
+</details>
+:::
+:::(Error) () 
+## BlockID Workforce
+:::
+:::(Warning) ()    
+<details>
+<summary><b>Is BlockID compliant with FIDO2?</b>
+</summary>
+<br />
+Yes, the BlockID solution is compliant with FIDO2 UAF.
+</details>
+:::
+:::(Warning) ()    
+<details>
+<summary><b>How do I authenticate if I'm on my PC and not my mobile device?</b>
+</summary>
+<br />
+BlockID can be used to authenticate a user using an OTP which can be generated and emailed to a user if a mobile device is not present. We only recommend using this solution if you are using MFA with a legacy system.
+</details>
+:::
+:::(Warning) ()    
+<details>
+<summary><b>Does BlockID auto pop up asking the user to update the password in a password reset scenario?</b>
+</summary>
+<br />
+The user gets a popup on windows ahead of time-based on the policy set for the organization. They can either reset the password on Windows or the BlockID app.
+</details>
+:::
+:::(Warning) ()    
+<details>
+<summary><b>Can BlockID be used for applications that do not authenticate against AD?</b>
+</summary>
+<br />
+The application can leverage BlockID and can integrate using SAML.
+</details>
+:::
+:::(Warning) ()    
+<details>
+<summary><b>What happens when an employee leaves the organization and has been using a personal mobile for authentication using BlockID?</b>
+</summary>
+<br />
+The BlockID app is disabled upon disabling the AD account of the employee.
+</details>
+:::
+:::(Warning) ()    
+<details>
+<summary><b>How will BlockID be leveraged in a secure white room type scenario where cell phones may not be allowed inside?</b>
+</summary>
+<br />
+This is a part of our roadmap where biometric-based authentication can be leveraged via laptops/workstations so that mobile phones will not be a dependency.
+</details>
+:::
+:::(Warning) ()    
+<details>
+<summary><b>What does BlockID leverage for Push Notifications?</b>
+</summary>
+<br />
+BlockID uses Apple Push Notification Service (APNS) on iOS devices, or via Firebase Cloud Messaging (FCM) on Android devices.
+</details>
+:::
+:::(Warning) ()    
+<details>
+<summary><b>Is there an SDK available to integrate with an existing mobile application?</b>
+</summary>
+<br />
+Yes, BlockID does have an SDK to integrate with mobile application.
+</details>
+:::
+:::(Warning) ()    
+<details>
+<summary><b>Can a user register for BlockID on two or more devices?</b>
+</summary>
+<br />
+Yes, a user could have multiple devices. The Private Key is unique to each registration for the user. The DID will be created per device registered and mapped to the same userID.
+</details>
+:::
+:::(Error) ()   
+## FAQ BlockID Authentication Broker
+:::
+:::(Warning) ()    
+<details>
+<summary><b>Why do I need a BlockID Authentication Broker on-site?</b>
+</summary>
+<br />
+A BlockID Authentication Broker is installed on a client environment to allow the BlockID Admin Console (running in the cloud) to communicate within a client’s environment. All connections made by the Broker are outbound and there is no need for any inbound connectivity into the company's network. The BlockID Authentication Broker communicates **outbound** only and handles the flow of encrypted traffic between the Credential Provider (on windows), NDES, AD, and the 1Kosmos cloud.
+</details>
+:::
+:::(Warning) ()    
+<details>
+<summary><b>Do I need to open any external > inbound ports or DMZ hosts for the 1Kosmos environment?</b>
+</summary>
+<br />
+No - no firewall ports or network changes are required.
+</details>
+:::
+:::(Warning) ()    
+<details>
+<summary><b>Will the BlockID Authentication Broker be able to communicate over a proxy?</b>
+</summary>
+<br />
+Yes - the BlockID Authentication Broker is proxy enabled and supports proxy authentication. Both the BlockID Authentication Broker and BlockID Credential Provider (for Windows workstations) can use a proxy to talk to the 1Kosmos cloud.
+</details>
+:::
+:::(Warning) ()    
+<details>
+<summary><b>Are BlockID Authentication Broker's highly available for failover/BCP/DR?</b>
+</summary>
+<br />
+Yes - they can be deployed to be as highly available as the customer needs. 
+</details>
+:::
+:::(Warning) ()    
+<details>
+<summary><b>How is the BlockID Authentication Broker's made highly available?</b>
+</summary>
+<br />
+Multiple instances of the broker can run in parallel. There is no need for a load balancer as they handle the communication between the client environment and the 1Kosmos cloud automatically. 
+</details>
+:::
+:::(Warning) ()    
+<details>
+<summary><b>Are any AD usernames and passwords stored in clear text on the BlockID Authentication Broker (in a file for example)?</b>
+</summary>
+<br />
+1Kosmos does not store any username and password especially if the configuration is set up with Active Directory. We only use the BlockID Authentication Broker to authenticate the user and not to store the credentials. 
+</details>
+:::
+:::(Warning) ()    
+<details>
+<summary><b>Should the customer have the technical expertise to configure the broker and other configurations within BlockID?</b>
+</summary>
+<br />
+The configuration that is done on the BlockID platform is straightforward. The detailed guides are also available for a user to perform the configuration by themselves. The setup in the BlockID platform can be done in minutes.
+</details>
+:::

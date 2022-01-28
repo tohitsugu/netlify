@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/Z707bbbf3-7895-45bd-8b00-c4c64f09641b",
+  "id": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/Z707bbbf3-7895-45bd-8b00-c4c64f09641b",
+  "isDocsHomePage": false,
+  "title": "G Suite",
+  "description": "This document describes the procedure to configure your organization's G Suite domain within the Athena Admin portal to use it as a passwordless authentication solution for your organization's G Suite users. This integration will allow your users to log in to their G Suite account leveraging their biometrics. The biometric options include TouchID / FaceID and LiveID.",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/5_gsuite.md.mdx",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications",
+  "slug": "/v1/gsuite",
+  "permalink": "/docs/v1/gsuite",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "slug": "/v1/gsuite",
+    "id": "Z707bbbf3-7895-45bd-8b00-c4c64f09641b"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Salesforce",
+    "permalink": "/docs/v1/salesforce"
+  },
+  "next": {
+    "title": "Generic SAML Application",
+    "permalink": "/docs/v1/generic-saml-application"
+  }
+}

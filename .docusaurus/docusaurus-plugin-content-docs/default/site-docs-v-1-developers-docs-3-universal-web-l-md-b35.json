@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/Developer's Docs/universal-web-l",
+  "id": "v1/Developer's Docs/universal-web-l",
+  "isDocsHomePage": false,
+  "title": "universal-web-l",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/Developer's Docs/3_universal-web-l.md",
+  "sourceDirName": "v1/Developer's Docs",
+  "slug": "/v1/Developer's Docs/universal-web-l",
+  "permalink": "/docs/v1/Developer's Docs/universal-web-l",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/docs/v1/getting-started"
+  },
+  "next": {
+    "title": "Universal Web Login (UWL) Guide",
+    "permalink": "/docs/v1/universal-web-login-uwl-guide"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Settings/idp-configurati",
+  "id": "v1/BlockID New Admin Portal (Athena)/Settings/idp-configurati",
+  "isDocsHomePage": false,
+  "title": "idp-configurati",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Settings/4_idp-configurati.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Settings",
+  "slug": "/v1/BlockID New Admin Portal (Athena)/Settings/idp-configurati",
+  "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/Settings/idp-configurati",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Zc1f22108-c5aa-4b1c-b3d5-c2cf705d1fbb",
+    "permalink": "/docs/v1/blockid-attributes"
+  },
+  "next": {
+    "title": "Zb2cb8a21-b17f-43f4-b5af-6d2d4fdd089c",
+    "permalink": "/docs/v1/idp-configuration"
+  }
+}

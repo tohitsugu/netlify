@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Settings/Zca39865e-e604-4ebb-a452-c585064e42a0",
+  "id": "v1/BlockID New Admin Portal (Athena)/Settings/Zca39865e-e604-4ebb-a452-c585064e42a0",
+  "isDocsHomePage": false,
+  "title": "Email Templates",
+  "description": "",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Settings/2_email-templates.md.mdx",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Settings",
+  "slug": "/v1/email-templates",
+  "permalink": "/docs/v1/email-templates",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/email-templates",
+    "id": "Zca39865e-e604-4ebb-a452-c585064e42a0"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Release Notes 2021.11.03",
+    "permalink": "/docs/v1/release-notes-20211103"
+  },
+  "next": {
+    "title": "BlockID Attributes",
+    "permalink": "/docs/v1/blockid-attributes"
+  }
+}

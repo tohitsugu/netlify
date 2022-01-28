@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/item-1",
+  "id": "v1/BlockID Enterprise/item-1",
+  "isDocsHomePage": false,
+  "title": "item-1",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/3_item-1.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/BlockID Enterprise/item-1",
+  "permalink": "/docs/v1/BlockID Enterprise/item-1",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Release Notes",
+    "permalink": "/docs/v1/release-notes"
+  },
+  "next": {
+    "title": "Dashboard",
+    "permalink": "/docs/v1/item-1"
+  }
+}

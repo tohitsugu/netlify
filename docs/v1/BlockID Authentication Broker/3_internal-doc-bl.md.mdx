@@ -1,0 +1,87 @@
+---
+slug: /v1/internal-doc-blockid-authentication-broker
+id: Z4ed1cc7a-deb7-4515-acb5-3e4cae005a0e
+---
+# Internal Guide - BlockID Authentication Broker
+This is an internal guide created with the detailed troubleshooting steps for each issue or error that may occur while installing and using the BlockID Authentication Broker. It also covers a few FAQs related to the broker functionalities.
+
+## Troubleshooting Steps:
+1. Check the log file for the server and broker immediately after starting the broker and server.
+    * Run `tail -f /opt/tomcat/logs/catalina.out`
+2. If the broker is not connected and you are not receiving the **PING** and **PONG** messages in the `default.log` file in the logs folder, then perform the following steps:
+   * Check the broker URL is entered correctly in the Broker configuration.
+   * Check whether the proxy is preventing the broker from communicating with the tenant.
+     * Check the proxy logs and allow the broker to communicate with the tenant.
+   * During authentication, if the user is not getting authenticated successfully in the BlockID Admin Console:
+     * In the broker logs, check if the broker can connect to Active Directory (AD).
+   * Check if the broker can connect to CA and NDES servers properly.
+3. To check whether the broker is running or not:
+   * Navigate to the Broker Configuration screen and refresh the screen to check whether it has got stopped or not.
+   * Check the broker logs:
+        * Run `tail -f logs/default.log`
+   * The broker is a java application, hence, to check whether any JAVA process is running on the Unix machine: 
+        * Run  `ps -ef | grep java`
+            This will show you all the java processes that are running on the Unix machine.
+  
+4. **PING/PONG Connections (Keep-alive messages)**: To check if the broker is continuously connected to the BlockID Admin Console server: 
+   * The broker first connects to the internet through various firewalls and later connects to the BlockID Admin Console within the enterprise. Various firewalls exist between the two endpoints (BlockID Authentication Broker and BlockID Admin Console). These firewalls and load balancers sometimes terminate the connection, and the BlockID Admin Console will not be able to communicate with the broker when the connection gets terminated. Therefore, we have a keep-alive message. The broker will send **PING** messages to the admin console and the admin console will send **PONG** messages to the broker every **60** seconds (default time). To change the default keep-alive connection time between broker and BlockID Admin Console server:
+   * Run `tail -f logs/default.log`  
+   * Stop the broker:
+       * Run `sh stopClient.bsh`
+   * Check the BlockID Admin Console's server logs: 
+       * You will receive a connection not found message.
+   * Check whether any broker is running or not:
+        * Run `ps -ef | grep java`
+   * For example, to start it, to run on port `8081` and for every `20` seconds: 
+     * Run `sh startClient.bsh -p 8081 -t 20`
+ 5. **Broker Configurations**: To check the broker configurations in the configurations file i.e., `default.yml` file:
+    * Stop the broker:
+       * Run `sh stopClient.bsh`
+    * Check and open the broker files: 
+        * Run `ls -lrt`
+    * To open the conf folder: 
+        * Run `cd conf`
+    * To open the configuration files: 
+        * Run: `ls -lrt`
+            * When you install the broker for the first time there is no file called `default.yml` in the `conf` folder as it does not exist and start it and check the configuration folder there will not be any `default.yml` file. 
+            * To rename the file: 
+                * Run `mv default.yml <other_name>.yml`
+6. Perform broker configurations for the first time:
+   *  Login to **BlockID Admin Console**, navigate to ***Administration Console** >  **Auth Configuration** > **Authentication Modules***.
+   * Enable the **Authentication Broker** module and get the broker URL.
+   * Install the broker > check the logs on server > go to the configuration screen for the broker and add in the ***Broker > Websocket config***.
+   * To connect the broker to AD: 
+       * Add the LDAP AD details to the broker > LDAP AD configuration.
+   * To connect to SECP - Add the NDES server endpoint within the organization so that you can get a certificate for the user and pass it back to the BlockID mobile application.
+    * In the broker configuration screen, click **Submit**.
+    * Check the broker and server logs for start, create a connection then the broker will send **PING** and receive **PONG** after successful configuration with the intended Admin Console.
+    * In the **BlockID Admin Console**, navigate to ***Administration Console** >  **Auth Configuration** > **Authentication Modules*** click on the already enabled broker module and the status is shown as **connected**.
+    * Go to ***Administration Console** >  **Auth Configuration** > **Authentication Schemes  > default scheme**** > add **broker** from the list and select **required**.
+        :::(Info) (Note:)
+      If you enable the broker after the install and configurations then click refresh on the broker configuration screen and the status will be seen as **connected** for the broker module within the **BlockID Admin Console**.
+        :::
+ 
+7. When the broker is connected but the user is unable to login to console or the broker has not started properly:
+    * Gets error of pid, for example, the error received for **broker2** is `“Broker appears to already (pid-<processid number>) pid file (<home/ec2-user/broker/broker2/pid/default.pid>) exists”`
+8. If broker config already includes the existing configurations then change the name of the config file: 
+    * In this case, remove the stale `default.pid` file and start the broker again.
+   9. If broker config already has details, change the name of the config file.
+10. **Database Check**: 
+    * Check the number of brokers currently connected to the admin console.
+    * Check the `database adminconsole_v3.broker ` connections.
+
+    
+## FAQs
+#### Why is BlockID Authentication Broker only supported by Unix/Linux servers currently?
+The work is in progress and the broker will soon be supported on Windows OS.
+ 
+#### What is it necessary to specify a broker on a different port number when the default port 8081 is already mentioned?
+This occurs when:
+* The organization is already using the same port for another application.
+* Any existing application is running on the same port
+* The broker is not allowed to use port 8081. 
+So, in these cases, we can specify any other port to run the broker.
+
+#### If there are multiple brokers connected to the Admin Console, which broker will the Admin Console communicate with?
+The BlockID Admin Console will randomly select any broker and establish a connection with it at a time (until that broker stops working) out of the number of connected brokers. 
+

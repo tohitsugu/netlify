@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/Z92800745-18bb-430d-bf5b-e1eee691515a",
+  "id": "v1/BlockID Enterprise/Z92800745-18bb-430d-bf5b-e1eee691515a",
+  "isDocsHomePage": false,
+  "title": "Authenticaition Modules Configuration",
+  "description": "* * *",
+  "source": "@site/docs/v1/BlockID Enterprise/18_authenticaition.md.mdx",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/authenticaition-modules-configuration",
+  "permalink": "/docs/v1/authenticaition-modules-configuration",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 18,
+  "frontMatter": {
+    "slug": "/v1/authenticaition-modules-configuration",
+    "id": "Z92800745-18bb-430d-bf5b-e1eee691515a"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "SCEP Integration",
+    "permalink": "/docs/v1/scep-integration"
+  },
+  "next": {
+    "title": "RADIUS Integrations",
+    "permalink": "/docs/v1/item-4"
+  }
+}
