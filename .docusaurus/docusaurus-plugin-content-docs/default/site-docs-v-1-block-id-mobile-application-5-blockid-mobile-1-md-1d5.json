@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Mobile Application/blockid-mobile-(1)",
+  "id": "v1/BlockID Mobile Application/blockid-mobile-(1)",
+  "isDocsHomePage": false,
+  "title": "blockid-mobile-(1)",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Mobile Application/5_blockid-mobile-(1).md",
+  "sourceDirName": "v1/BlockID Mobile Application",
+  "slug": "/v1/BlockID Mobile Application/blockid-mobile-(1)",
+  "permalink": "/docs/v1/BlockID Mobile Application/blockid-mobile-(1)",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "blockid-mobile-",
+    "permalink": "/docs/v1/BlockID Mobile Application/blockid-mobile-"
+  },
+  "next": {
+    "title": "BlockId Mobile Application User Guide 2",
+    "permalink": "/docs/v1/blockid-mobile-application-user-guide-2"
+  }
+}

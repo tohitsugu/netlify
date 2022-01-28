@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Z5b05adf4-5ae3-4801-974c-f0813c6a1139",
+  "id": "v1/BlockID Admin Console/Admin Guide/Z5b05adf4-5ae3-4801-974c-f0813c6a1139",
+  "isDocsHomePage": false,
+  "title": "Community Management",
+  "description": "In the BlockID Admin Console screen, administrators can add a new community under their tenancy for each of their clients. The default will be created for each tenant. Onboarding a new community (or client) enables the community to leverage all the features and functionalities of this platform yet maintain security by logical isolation of all service components. The tenant’s DNS name will be the same for each of the communities. The service components are listed below:",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/13_community-manag.md.mdx",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide",
+  "slug": "/v1/community-management",
+  "permalink": "/docs/v1/community-management",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {
+    "slug": "/v1/community-management",
+    "id": "Z5b05adf4-5ae3-4801-974c-f0813c6a1139"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Deploying Smart Contract",
+    "permalink": "/docs/v1/deploying-smart-contract"
+  },
+  "next": {
+    "title": "Profile Management",
+    "permalink": "/docs/v1/profile"
+  }
+}

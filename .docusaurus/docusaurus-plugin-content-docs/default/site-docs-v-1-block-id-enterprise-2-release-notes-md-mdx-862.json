@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/Z4c532f57-96a5-4690-9344-5cc15ba3bcad",
+  "id": "v1/BlockID Enterprise/Z4c532f57-96a5-4690-9344-5cc15ba3bcad",
+  "isDocsHomePage": false,
+  "title": "Release Notes",
+  "description": "2020.05.12: Monthly Production release notes",
+  "source": "@site/docs/v1/BlockID Enterprise/2_release-notes.md.mdx",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/release-notes",
+  "permalink": "/docs/v1/release-notes",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/release-notes",
+    "id": "Z4c532f57-96a5-4690-9344-5cc15ba3bcad"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Technical Guide for LiveID, Driving License and Passport Scan Support",
+    "permalink": "/docs/v1/technical-guide-for-liveid-driving-license-and-passport-scan-support"
+  },
+  "next": {
+    "title": "Dashboard",
+    "permalink": "/docs/v1/item-1"
+  }
+}

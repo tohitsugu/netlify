@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/administration-",
+  "id": "v1/BlockID Admin Console/Admin Guide/administration-",
+  "isDocsHomePage": false,
+  "title": "administration-",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/3_administration-.md",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide",
+  "slug": "/v1/BlockID Admin Console/Admin Guide/administration-",
+  "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/administration-",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "introduction-to",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/introduction-to"
+  },
+  "next": {
+    "title": "analytics",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/analytics"
+  }
+}

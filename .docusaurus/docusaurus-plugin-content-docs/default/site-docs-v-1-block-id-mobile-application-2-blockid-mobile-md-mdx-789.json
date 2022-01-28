@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Mobile Application/Z393b7007-2e70-4e0a-82ed-c235005a8c28",
+  "id": "v1/BlockID Mobile Application/Z393b7007-2e70-4e0a-82ed-c235005a8c28",
+  "isDocsHomePage": false,
+  "title": "BlockID Mobile Application User Guide",
+  "description": "This document is compatible with BlockID v1.5.2.",
+  "source": "@site/docs/v1/BlockID Mobile Application/2_blockid-mobile-.md.mdx",
+  "sourceDirName": "v1/BlockID Mobile Application",
+  "slug": "/v1/blockid-mobile-application-user-guide",
+  "permalink": "/docs/v1/blockid-mobile-application-user-guide",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/blockid-mobile-application-user-guide",
+    "id": "Z393b7007-2e70-4e0a-82ed-c235005a8c28"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "1K User Directory Module",
+    "permalink": "/docs/v1/1kmodule"
+  },
+  "next": {
+    "title": "BlockID Mobile Application User Guide",
+    "permalink": "/docs/v1/blockid-mobile-application-user-guide-1"
+  }
+}

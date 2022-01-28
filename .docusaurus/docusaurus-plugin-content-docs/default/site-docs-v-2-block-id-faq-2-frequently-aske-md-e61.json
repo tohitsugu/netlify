@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v2/BlockID FAQ/frequently-aske",
+  "id": "v2/BlockID FAQ/frequently-aske",
+  "isDocsHomePage": false,
+  "title": "frequently-aske",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v2/BlockID FAQ/2_frequently-aske.md",
+  "sourceDirName": "v2/BlockID FAQ",
+  "slug": "/v2/BlockID FAQ/frequently-aske",
+  "permalink": "/docs/v2/BlockID FAQ/frequently-aske",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "ios-2",
+    "permalink": "/docs/v1/Developer Documentation/Integration Guides/BlockID Workforce/ios-2"
+  },
+  "next": {
+    "title": "faqs-related-to",
+    "permalink": "/docs/v2/BlockID FAQ/faqs-related-to"
+  }
+}

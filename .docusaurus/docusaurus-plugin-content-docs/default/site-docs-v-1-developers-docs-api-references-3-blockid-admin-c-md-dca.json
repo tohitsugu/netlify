@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/Developer's Docs/API References/blockid-admin-c",
+  "id": "v1/Developer's Docs/API References/blockid-admin-c",
+  "isDocsHomePage": false,
+  "title": "blockid-admin-c",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/Developer's Docs/API References/3_blockid-admin-c.md",
+  "sourceDirName": "v1/Developer's Docs/API References",
+  "slug": "/v1/Developer's Docs/API References/blockid-admin-c",
+  "permalink": "/docs/v1/Developer's Docs/API References/blockid-admin-c",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Universal Web Login (UWL) Guide",
+    "permalink": "/docs/v1/universal-web-login-uwl-guide"
+  },
+  "next": {
+    "title": "blockid-ios-sdk",
+    "permalink": "/docs/v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/iOS/blockid-ios-sdk"
+  }
+}

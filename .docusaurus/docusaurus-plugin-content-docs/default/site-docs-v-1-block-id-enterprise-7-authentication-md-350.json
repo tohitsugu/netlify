@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/authentication-",
+  "id": "v1/BlockID Enterprise/authentication-",
+  "isDocsHomePage": false,
+  "title": "authentication-",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/7_authentication-.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/BlockID Enterprise/authentication-",
+  "permalink": "/docs/v1/BlockID Enterprise/authentication-",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "OTP Module Configuration",
+    "permalink": "/docs/v1/one-time-passcode-module-configuration"
+  },
+  "next": {
+    "title": "Authentication Scheme Configuration",
+    "permalink": "/docs/v1/authentication-scheme-configuration"
+  }
+}

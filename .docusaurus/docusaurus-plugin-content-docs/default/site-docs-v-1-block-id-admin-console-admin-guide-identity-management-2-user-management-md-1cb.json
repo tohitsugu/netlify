@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Identity Management/user-management",
+  "id": "v1/BlockID Admin Console/Admin Guide/Identity Management/user-management",
+  "isDocsHomePage": false,
+  "title": "user-management",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/Identity Management/2_user-management.md",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide/Identity Management",
+  "slug": "/v1/BlockID Admin Console/Admin Guide/Identity Management/user-management",
+  "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Identity Management/user-management",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "samlv2",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Federation/samlv2"
+  },
+  "next": {
+    "title": "role-management",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Identity Management/role-management"
+  }
+}

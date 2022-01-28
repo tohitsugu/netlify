@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/Z25a9c9c7-35f3-49da-a124-347bc514c42a",
+  "id": "v1/BlockID Enterprise/Z25a9c9c7-35f3-49da-a124-347bc514c42a",
+  "isDocsHomePage": false,
+  "title": "Z25a9c9c7-35f3-49da-a124-347bc514c42a",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/7_authentication-.md.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/authentication-scheme-configuration",
+  "permalink": "/docs/v1/authentication-scheme-configuration",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "slug": "/v1/authentication-scheme-configuration",
+    "id": "Z25a9c9c7-35f3-49da-a124-347bc514c42a"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "authentication-",
+    "permalink": "/docs/v1/BlockID Enterprise/authentication-"
+  },
+  "next": {
+    "title": "blockid-sdk",
+    "permalink": "/docs/v1/BlockID Enterprise/blockid-sdk"
+  }
+}

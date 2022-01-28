@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Integrations/Remote Access/Za4b469f7-7ac3-45f9-8e46-75267cf6a1a8",
+  "id": "v1/BlockID Integrations/Remote Access/Za4b469f7-7ac3-45f9-8e46-75267cf6a1a8",
+  "isDocsHomePage": false,
+  "title": "Integration with VMware",
+  "description": "This document describes the procedure to configure the BlockID Admin Console as a passwordless authentication solution for your organization's VMware users. This integration will allow your users to log in to  the VMware application account leveraging their biometrics. The biometric options include TouchID / FaceID and LiveID.",
+  "source": "@site/docs/v1/BlockID Integrations/Remote Access/7_integration-wit(1).md.mdx",
+  "sourceDirName": "v1/BlockID Integrations/Remote Access",
+  "slug": "/v1/integration-with-vmware",
+  "permalink": "/docs/v1/integration-with-vmware",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "slug": "/v1/integration-with-vmware",
+    "id": "Za4b469f7-7ac3-45f9-8e46-75267cf6a1a8"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Integration with Zscaler",
+    "permalink": "/docs/v1/integration-with-zscaler"
+  },
+  "next": {
+    "title": "Integration with Appgate",
+    "permalink": "/docs/v1/integration-with-appgate"
+  }
+}

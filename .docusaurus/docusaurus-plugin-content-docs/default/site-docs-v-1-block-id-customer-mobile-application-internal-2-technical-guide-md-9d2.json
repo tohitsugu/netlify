@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Customer Mobile Application - Internal/technical-guide",
+  "id": "v1/BlockID Customer Mobile Application - Internal/technical-guide",
+  "isDocsHomePage": false,
+  "title": "technical-guide",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Customer Mobile Application - Internal/2_technical-guide.md",
+  "sourceDirName": "v1/BlockID Customer Mobile Application - Internal",
+  "slug": "/v1/BlockID Customer Mobile Application - Internal/technical-guide",
+  "permalink": "/docs/v1/BlockID Customer Mobile Application - Internal/technical-guide",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Internal Guide - BlockID Credential Provider",
+    "permalink": "/docs/v1/internal-guide-blockid-credential-provider"
+  },
+  "next": {
+    "title": "Technical Guide for LiveID, Driving License and Passport Scan Support",
+    "permalink": "/docs/v1/technical-guide-for-liveid-driving-license-and-passport-scan-support"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Identity Management/role-management",
+  "id": "v1/BlockID Admin Console/Admin Guide/Identity Management/role-management",
+  "isDocsHomePage": false,
+  "title": "role-management",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/Identity Management/3_role-management.md",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide/Identity Management",
+  "slug": "/v1/BlockID Admin Console/Admin Guide/Identity Management/role-management",
+  "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Identity Management/role-management",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "user-management",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Identity Management/user-management"
+  },
+  "next": {
+    "title": "saml-configurat",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Identity Management/saml-configurat"
+  }
+}

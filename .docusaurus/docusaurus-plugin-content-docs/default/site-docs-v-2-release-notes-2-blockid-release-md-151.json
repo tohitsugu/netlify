@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v2/Release Notes/blockid-release",
+  "id": "v2/Release Notes/blockid-release",
+  "isDocsHomePage": false,
+  "title": "blockid-release",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v2/Release Notes/2_blockid-release.md",
+  "sourceDirName": "v2/Release Notes",
+  "slug": "/v2/Release Notes/blockid-release",
+  "permalink": "/docs/v2/Release Notes/blockid-release",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "internal-faq-gu",
+    "permalink": "/docs/v2/BlockID FAQ/internal-faq-gu"
+  },
+  "next": {
+    "title": "release-notes-v",
+    "permalink": "/docs/v2/Release Notes/release-notes-v"
+  }
+}

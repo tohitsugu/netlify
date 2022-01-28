@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/Z3aa42d95-3943-4e1a-ae91-853b67fb6632",
+  "id": "v1/BlockID Enterprise/Z3aa42d95-3943-4e1a-ae91-853b67fb6632",
+  "isDocsHomePage": false,
+  "title": "Z3aa42d95-3943-4e1a-ae91-853b67fb6632",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/5_item-3.md.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/item-3",
+  "permalink": "/docs/v1/item-3",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "slug": "/v1/item-3",
+    "id": "Z3aa42d95-3943-4e1a-ae91-853b67fb6632"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "item-3",
+    "permalink": "/docs/v1/BlockID Enterprise/item-3"
+  },
+  "next": {
+    "title": "one-time-passco",
+    "permalink": "/docs/v1/BlockID Enterprise/one-time-passco"
+  }
+}

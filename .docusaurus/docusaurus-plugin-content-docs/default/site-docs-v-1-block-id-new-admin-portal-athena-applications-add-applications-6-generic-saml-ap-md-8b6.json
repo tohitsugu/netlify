@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/generic-saml-ap",
+  "id": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/generic-saml-ap",
+  "isDocsHomePage": false,
+  "title": "generic-saml-ap",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/6_generic-saml-ap.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications",
+  "slug": "/v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/generic-saml-ap",
+  "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/generic-saml-ap",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "G Suite",
+    "permalink": "/docs/v1/gsuite"
+  },
+  "next": {
+    "title": "Generic SAML Application",
+    "permalink": "/docs/v1/generic-saml-application"
+  }
+}

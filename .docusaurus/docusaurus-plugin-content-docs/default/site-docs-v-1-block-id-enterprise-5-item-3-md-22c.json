@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/item-3",
+  "id": "v1/BlockID Enterprise/item-3",
+  "isDocsHomePage": false,
+  "title": "item-3",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/5_item-3.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/BlockID Enterprise/item-3",
+  "permalink": "/docs/v1/BlockID Enterprise/item-3",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "User Administration",
+    "permalink": "/docs/v1/item-2"
+  },
+  "next": {
+    "title": "Federation Integrations",
+    "permalink": "/docs/v1/item-3"
+  }
+}

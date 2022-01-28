@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Zbbef109e-a47f-4212-b34d-5829f6792676",
+  "id": "v1/BlockID Admin Console/Admin Guide/Zbbef109e-a47f-4212-b34d-5829f6792676",
+  "isDocsHomePage": false,
+  "title": "Glossary",
+  "description": "C | D | I | L | S |",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/16_glossary.md.mdx",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide",
+  "slug": "/v1/glossary",
+  "permalink": "/docs/v1/glossary",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 16,
+  "frontMatter": {
+    "slug": "/v1/glossary",
+    "id": "Zbbef109e-a47f-4212-b34d-5829f6792676"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Core Configurations",
+    "permalink": "/docs/v1/core-configurations"
+  },
+  "next": {
+    "title": "Authentication Modules",
+    "permalink": "/docs/v1/authentication-modules"
+  }
+}

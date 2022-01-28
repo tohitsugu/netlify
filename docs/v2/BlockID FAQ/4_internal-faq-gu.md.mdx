@@ -1,0 +1,150 @@
+---
+slug: /v2/internal-faq-guide-for-blockid-product-suite
+id: Zb0eccd8d-dfdc-48d7-bf4a-2444bd2c7822
+---
+# Internal FAQ guide for BlockID Product Suite
+This is an internal FAQ guide that includes responses to:
+
+1. Sales and marketing related questions
+2. Internal queries that are encountered at the time of Proof of Concepts
+
+:::(Info) (Note:)
+These FAQs are generally asked questions by the client and not directly related to any particular BlockID product suite’s workflow or configuration.
+:::
+
+:::(Error) ()
+## BlockID Customer Mobile Application
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>Do we currently support India based Driving License and Passports including overt security templates?</b></summary>
+<br />
+Yes. We do support the scanning of India based Driving License and Passports including overt security templates.
+</details>
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>If the client has PDF417, will they be able to read a Driving License?</b></summary>
+<br />
+Yes, the application uses PDF417 to scan and decode the barcode.
+</details>
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>BlockID integration capability - Are we able to integrate with SAP?</b></summary>
+<br />
+*Not yet answered*
+</details>
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>BlockID integration capability - Are we able to integrate with SAP?</b></summary>
+<br />
+*Not yet answered*
+</details>
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>What data is captured as part of the QR code?<br />
+<ul>
+<li>Cisco ACS (access control system) - authentication, authorization, and accounting (AAA) platform.</li>
+<li>Avaya</li>
+</ul></b></summary>
+<br />
+ *Not yet answered*
+</details>
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>Do we have an interface technical overview document somewhere?</b></summary>
+<br />
+
+Please refer to the following link for all technical overview and integration guides:
+[Integration Guides](https://1kosmos.document360.io/docs/intergration-with-okta)
+</details>
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>Do we support periodic authentication challenges thrown when the session is active (Example: Hourly, twice hourly, etc.)?</b></summary>
+<br />
+We can do step-up authentication at a transactional level. As an example: If a user logs in using TouchID and transfers money, the user can be prompted to step up and authenticate using their FaceID. If they transfer money in excess of 1 Million USD, they could be asked to step up and authenticate using their LiveID.
+</details>
+:::
+:::(Warning) ()
+<details>
+<summary><b>What happens when a GIF with eyes blinking and a smile is used for FaceID authentication?</b></summary>
+<br />
+It will fail the FaceID authentication. We have a test scheduled with a 3rd party lab called iBETA.com. One the next release is ready we will engage with them and they will do liveness pen-testing. Once we have that certificate, it will help allay these concerns.
+</details>
+:::
+
+:::(Error) ()
+## BlockID Platform
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>Does the AD user’s private certificate (obtained from the NDES/AD server) get written to IPFS on the Blockchain?</b></summary>
+<br />
+No, the AD user’s private certificate gets saved on the mobile phone in the enclave. Only the public key will be stored in the IPFS on the Blockchain. The IPFS hash is associated with the proof of identity (name) smart contract on the ethereum.
+</details>
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>What happens to the AD user’s private certificate which is saved on the mobile phone when the mobile phone is lost or stolen?</b></summary>
+<br />
+In this situation, the new private certificate will be issued to you and the old private certificate will no longer be valid.
+</details>
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>What is the ROI on the solution?</b></summary>
+<br />
+The following metrics can be targeted in a production deployment:
+    <br />
+<ul>
+<li><b>Help Desk Metrics:</b></li>
+   <ul>
+<li>Total annual account unlocks</li>
+   <li>Total annual password resets</li>
+     </ul>  
+<li><b>User Experience Metrics:</b></li>
+   <ul>
+<li>Time taken to authenticate</li>
+<li>Time taken to unlock/reset passwords</li>
+       </ul>
+<li><b>Infrastructure Costs:</b></li>
+    <ul>
+<li>The cost for secondary MFA systems can be reduced or removed.</li>
+        </ul>
+    </ul>
+</details>
+:::
+:::(Warning) ()
+<details>
+<summary><b>Do you code to industry standards, and, if yes, which standards do we use?</b></summary>
+<br />
+Yes. *Standards (not yet answered)*?
+</details>
+:::
+
+:::(Warning) ()
+<details>
+<summary><b>1Kosmos will have NO way to log into the tenant's admin page? Can customers completely remove 1KUD once they set up their AD?</b></summary>
+<br />
+Customers do not need 1KUD. They could configure BlockID to communicate with the local AD where they house their user base. 1KUD is for customers who want us to house their legacy users and do not have an LDAP or AD server of their own (or do not want to self manage anymore).
+</details>
+:::
+
+
+
+

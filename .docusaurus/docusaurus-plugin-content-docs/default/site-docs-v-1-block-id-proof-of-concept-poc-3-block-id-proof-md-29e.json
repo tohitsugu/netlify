@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/Block ID Proof of Concept (POC)/block-id-proof-",
+  "id": "v1/Block ID Proof of Concept (POC)/block-id-proof-",
+  "isDocsHomePage": false,
+  "title": "block-id-proof-",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/Block ID Proof of Concept (POC)/3_block-id-proof-.md",
+  "sourceDirName": "v1/Block ID Proof of Concept (POC)",
+  "slug": "/v1/Block ID Proof of Concept (POC)/block-id-proof-",
+  "permalink": "/docs/v1/Block ID Proof of Concept (POC)/block-id-proof-",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Universal Web Login",
+    "permalink": "/docs/uwl"
+  },
+  "next": {
+    "title": "Block ID Proof of Concept (POC) Guide",
+    "permalink": "/docs/v1/block-id-proof-of-concept-poc-guide"
+  }
+}

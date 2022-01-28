@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Identity Management/Z0e74df61-4182-40d7-b7f2-a1a670207b0a",
+  "id": "v1/BlockID Admin Console/Admin Guide/Identity Management/Z0e74df61-4182-40d7-b7f2-a1a670207b0a",
+  "isDocsHomePage": false,
+  "title": "User Management",
+  "description": "In User Management, you are able to view users from different datastore sources configured for your organization by selecting the desired datastore option from the source list. You can view your directory tree (DIT) created with different categories of child directories in which users can be grouped as per their access.",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/Identity Management/2_user-management.md.mdx",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide/Identity Management",
+  "slug": "/v1/user-management",
+  "permalink": "/docs/v1/user-management",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/user-management",
+    "id": "Z0e74df61-4182-40d7-b7f2-a1a670207b0a"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "SAML Configurations",
+    "permalink": "/docs/v1/samlv2"
+  },
+  "next": {
+    "title": "Role Management",
+    "permalink": "/docs/v1/role-management"
+  }
+}

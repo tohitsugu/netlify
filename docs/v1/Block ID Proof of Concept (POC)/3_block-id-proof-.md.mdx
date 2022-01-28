@@ -1,0 +1,105 @@
+---
+slug: /v1/block-id-proof-of-concept-poc-guide
+id: Zdc4e6f74-2f4f-4d54-9357-2b53866c9b17
+---
+# Block ID Proof of Concept (POC) Guide
+It is our understanding that this project is much more than a Proof of Concept. It is designed to be a hands-on, practical exercising of the technology and processes needed to validate the solution will work both technically as well as for the business. With this in mind, we want the solution design to reflect the end-state architecture needed to effectively scale as well as address the unique needs of managing acquired entities.
+
+Together, the entire process of registering and authenticating users will be addressed in a robust, scalable, and flexible manner. 
+
+The solution provides a platform that resolves the root cause for IT expenditure, employee frustration, and large-scale breaches – usernames and passwords. BlockID provides a password-less and credential-less platform that is easy to deploy and intuitive to the user.
+
+Each stakeholder will refer to the **Verification of POC Prerequisites and Installation Inputs** section that includes the following tabs:
+
+1. **Verifying Prerequisites:** This tab comprises a list of prerequisites with steps detailed to verify and confirm each step (for each prerequisite). 
+2. **Installation Inputs:** This tab contains a detailed description of attributes and values to enter for those attributes while configuring **BlockID Authentication Broker** and **BlockID Credential Provider** applications post-installation.
+3. **NDES Validation:** This tab explains the steps to validate the NDES service connectivity and the ability to issue the certificate on behalf of each user.
+
+This document includes the following sections:
+1. List of prerequisites
+2. Verifying prerequisites and their requirements
+3. Adding values within the input attributes of each installed application
+4. Use cases
+5. Acknowledgment of POC completion
+
+## List of Prerequisites
+<table>
+  <tbody>
+    <tr>
+      <th>Sr. No.</th>
+      <th>Module Name</th>
+      <th>Requirements</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td align="center">Windows Workstation</td>
+      <td>
+          <ol>
+            <li>H/W Requirements:</li>
+        <ul>
+          <li>4+ GB RAM</li>
+          <li>2 CPU Cores</li>
+           <li>20 GB disk space</li>
+          <li>Workstation: Windows 7 or 10</li>
+        </ul>
+           <li>S/W Requirements:</li>
+               <ul>
+          <li>Operating System: Windows 7 or higher</li>
+          <li>Remote Login Software such as the VNC server pre-installed so that the user can navigate to the Windows logon screen.</li>
+           <li>Internet access from Windows Workstation. Internet access could be through the proxy.</li>
+          <li>If the proxy requires authentication, please obtain the credentials for the Windows workstation to authenticate.</li>
+        </ul>
+        </ol>
+         </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Linux/Unix Server for Broker</td>
+      <td>
+            <ol>
+            <li>H/W Requirements:</li>
+        <ul>
+          <li>8+ GB RAM</li>
+          <li>4 CPU Cores</li>
+           <li>30 GB disk space</li>
+        </ul>
+           <li>S/W Requirements:</li>
+               <ul>
+          <li>Operating System: Linux (supports only Linux), RHEL 7 and above</li>
+          <li>JAVA - Open JDK 1.9 or higher</li>
+           <li>Internet Access is required for the broker to communicate with the platform on the cloud. Internet access could be through the proxy.</li>
+          <li>If the proxy requires authentication, please obtain the credentials for the BlockID Broker to authenticate.</li>
+        </ul>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Mobile Phone</td>
+      <td>
+          <ol>
+            <li>iPhone running IOS 12.3.1 or higher.</li>
+            <li>Mobile Phone running Android 6.0 or later.</li>
+           </ol>
+       </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Active Directory (AD) and Certificate Authority (CA) Requirements</td>
+      <td>
+          <ol>
+            <li>One AD domain that is accessible from the POC machine(s).</li>
+            <li>Domain joined workstation that is joined to the above AD domain.</li>
+              <li>Certificate authority joined/trusted by the domain.</li>
+            <li>NDES service installed and enabled on the certificate authority.</li>
+              <li>NDES service to be accessible from the POC machines.</li>
+            <li>NDES service account with the ability to request certificates on the user’s behalf.</li>
+              <li>SmartCardLogon template enabled with the NDES Service account having authority to request and issue certificates on behalf of the user.</li>
+            <li>OU with POC users.</li>
+              <li>AD Service account with the read/write permissions (Read user, read user attributes, reset the password for user) to the POC OU.</li>
+            <li>AD user account (test account) for validation of functionality.</li>
+           </ol>
+      </td>
+    </tr>
+  </tbody>
+</table>

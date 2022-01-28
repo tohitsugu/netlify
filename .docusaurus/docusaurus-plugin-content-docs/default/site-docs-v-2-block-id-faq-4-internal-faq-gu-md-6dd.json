@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v2/BlockID FAQ/internal-faq-gu",
+  "id": "v2/BlockID FAQ/internal-faq-gu",
+  "isDocsHomePage": false,
+  "title": "internal-faq-gu",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v2/BlockID FAQ/4_internal-faq-gu.md",
+  "sourceDirName": "v2/BlockID FAQ",
+  "slug": "/v2/BlockID FAQ/internal-faq-gu",
+  "permalink": "/docs/v2/BlockID FAQ/internal-faq-gu",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "faqs-related-to",
+    "permalink": "/docs/v2/BlockID FAQ/faqs-related-to"
+  },
+  "next": {
+    "title": "blockid-release",
+    "permalink": "/docs/v2/Release Notes/blockid-release"
+  }
+}

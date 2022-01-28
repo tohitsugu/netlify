@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/login-with-mfa",
+  "id": "v1/BlockID New Admin Portal (Athena)/login-with-mfa",
+  "isDocsHomePage": false,
+  "title": "login-with-mfa",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/3_login-with-mfa.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)",
+  "slug": "/v1/BlockID New Admin Portal (Athena)/login-with-mfa",
+  "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/login-with-mfa",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Introduction to Athena Admin Portal",
+    "permalink": "/docs/v1/introduction-to-athena-admin-portal"
+  },
+  "next": {
+    "title": "Login",
+    "permalink": "/docs/v1/login-with-mfa"
+  }
+}

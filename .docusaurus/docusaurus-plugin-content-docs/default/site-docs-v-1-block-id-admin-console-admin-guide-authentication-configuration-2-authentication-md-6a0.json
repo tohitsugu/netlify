@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Authentication Configuration/authentication-",
+  "id": "v1/BlockID Admin Console/Admin Guide/Authentication Configuration/authentication-",
+  "isDocsHomePage": false,
+  "title": "authentication-",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/Authentication Configuration/2_authentication-.md",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide/Authentication Configuration",
+  "slug": "/v1/BlockID Admin Console/Admin Guide/Authentication Configuration/authentication-",
+  "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Authentication Configuration/authentication-",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "glossary",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/glossary"
+  },
+  "next": {
+    "title": "software-and-ha",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Authentication Configuration/software-and-ha"
+  }
+}

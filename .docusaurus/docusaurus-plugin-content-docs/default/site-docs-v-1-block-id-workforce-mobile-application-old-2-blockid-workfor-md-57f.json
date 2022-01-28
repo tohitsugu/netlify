@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Workforce Mobile Application - Old/blockid-workfor",
+  "id": "v1/BlockID Workforce Mobile Application - Old/blockid-workfor",
+  "isDocsHomePage": false,
+  "title": "blockid-workfor",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Workforce Mobile Application - Old/2_blockid-workfor.md",
+  "sourceDirName": "v1/BlockID Workforce Mobile Application - Old",
+  "slug": "/v1/BlockID Workforce Mobile Application - Old/blockid-workfor",
+  "permalink": "/docs/v1/BlockID Workforce Mobile Application - Old/blockid-workfor",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Workforce Mobile Application User Guide",
+    "permalink": "/docs/v1/blockid-workforce-mobile-application-user-guide-1"
+  },
+  "next": {
+    "title": "BlockID Workforce Mobile Application - User Guide - old",
+    "permalink": "/docs/v1/blockid-workforce-mobile-application-user-guideold"
+  }
+}

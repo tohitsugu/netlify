@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/Zaf98a072-ad11-4365-89ed-25875a5ae98d",
+  "id": "v1/BlockID Enterprise/Zaf98a072-ad11-4365-89ed-25875a5ae98d",
+  "isDocsHomePage": false,
+  "title": "RADIUS Integration - Temp",
+  "description": "BlockID provides the ability for organizations to manage authorization and access to on-premises applications and resources using the RADIUS protocol. BlockID provides a RADIUS Server Agent that organizations can deploy to delegate authentication to BlockID. Admins can configure sign-on policies to RADIUS-protected applications just as they would any other application.",
+  "source": "@site/docs/v1/BlockID Enterprise/15_radius-integrat.md.mdx",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/radius-integration-backup",
+  "permalink": "/docs/v1/radius-integration-backup",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "slug": "/v1/radius-integration-backup",
+    "id": "Zaf98a072-ad11-4365-89ed-25875a5ae98d"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID User Interface Templates",
+    "permalink": "/docs/v1/blockid-user-interface-templates"
+  },
+  "next": {
+    "title": "Reports",
+    "permalink": "/docs/v1/reports"
+  }
+}

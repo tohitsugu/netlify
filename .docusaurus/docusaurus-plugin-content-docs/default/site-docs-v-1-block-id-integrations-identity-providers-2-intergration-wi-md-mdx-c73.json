@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Integrations/Identity Providers/Z0010fc32-8540-4be0-98fd-831958d61e23",
+  "id": "v1/BlockID Integrations/Identity Providers/Z0010fc32-8540-4be0-98fd-831958d61e23",
+  "isDocsHomePage": false,
+  "title": "Intergration with Okta",
+  "description": "This document describes the procedure to configure the BlockID Admin Console as a passwordless authentication solution for your organization's Okta users. This integration will allow your users to log in to their Okta account leveraging their biometrics. The biometric options include TouchID / FaceID and LiveID.",
+  "source": "@site/docs/v1/BlockID Integrations/Identity Providers/2_intergration-wi.md.mdx",
+  "sourceDirName": "v1/BlockID Integrations/Identity Providers",
+  "slug": "/v1/intergration-with-okta",
+  "permalink": "/docs/v1/intergration-with-okta",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/intergration-with-okta",
+    "id": "Z0010fc32-8540-4be0-98fd-831958d61e23"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Integration with PingFederate",
+    "permalink": "/docs/v1/integration-with-pingfederate"
+  },
+  "next": {
+    "title": "Integration with Salesforce",
+    "permalink": "/docs/v1/integration-with-salesforce"
+  }
+}

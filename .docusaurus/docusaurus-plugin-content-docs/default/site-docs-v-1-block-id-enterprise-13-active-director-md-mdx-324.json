@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/Z934eca85-9d9c-45b3-8587-3db8ce6dfd9c",
+  "id": "v1/BlockID Enterprise/Z934eca85-9d9c-45b3-8587-3db8ce6dfd9c",
+  "isDocsHomePage": false,
+  "title": "AD or LDAP server Configuration",
+  "description": "* * *",
+  "source": "@site/docs/v1/BlockID Enterprise/13_active-director.md.mdx",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/active-directory-or-ldap-server-configuration",
+  "permalink": "/docs/v1/active-directory-or-ldap-server-configuration",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {
+    "slug": "/v1/active-directory-or-ldap-server-configuration",
+    "id": "Z934eca85-9d9c-45b3-8587-3db8ce6dfd9c"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Connector Module",
+    "permalink": "/docs/v1/blockid-connector-module"
+  },
+  "next": {
+    "title": "BlockID User Interface Templates",
+    "permalink": "/docs/v1/blockid-user-interface-templates"
+  }
+}

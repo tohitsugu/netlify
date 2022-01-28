@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/datastore-confi",
+  "id": "v1/BlockID Enterprise/datastore-confi",
+  "isDocsHomePage": false,
+  "title": "datastore-confi",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/10_datastore-confi.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/BlockID Enterprise/datastore-confi",
+  "permalink": "/docs/v1/BlockID Enterprise/datastore-confi",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 10,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Templates",
+    "permalink": "/docs/v1/blockid-templates"
+  },
+  "next": {
+    "title": "Datastore Configuration",
+    "permalink": "/docs/v1/datastore-configuration"
+  }
+}

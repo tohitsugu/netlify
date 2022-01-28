@@ -1,0 +1,28 @@
+{
+  "unversionedId": "otp/otp3",
+  "id": "otp/otp3",
+  "isDocsHomePage": false,
+  "title": "Verifying One-Time Passcodes",
+  "description": "Use the BlockID SDK to verify the six-digit one-time passcode you received via SMS or email.",
+  "source": "@site/docs/otp/otp-verify.mdx",
+  "sourceDirName": "otp",
+  "slug": "/otp/verify",
+  "permalink": "/docs/otp/verify",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "slug": "/otp/verify",
+    "id": "otp3"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "OTP Authentication",
+    "permalink": "/docs/otp"
+  },
+  "next": {
+    "title": "BlockID Developer SDK",
+    "permalink": "/docs/index"
+  }
+}

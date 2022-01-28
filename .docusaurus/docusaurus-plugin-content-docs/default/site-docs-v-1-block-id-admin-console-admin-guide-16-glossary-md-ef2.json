@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/glossary",
+  "id": "v1/BlockID Admin Console/Admin Guide/glossary",
+  "isDocsHomePage": false,
+  "title": "glossary",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/16_glossary.md",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide",
+  "slug": "/v1/BlockID Admin Console/Admin Guide/glossary",
+  "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/glossary",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 16,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "core-configurat",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/core-configurat"
+  },
+  "next": {
+    "title": "authentication-",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Authentication Configuration/authentication-"
+  }
+}

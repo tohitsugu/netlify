@@ -1,0 +1,125 @@
+---
+slug: /v1/blockid-workforce-mobile-application-user-guideold
+id: Z1c4ca517-b3ce-483d-bb35-35a78f78747e
+---
+# BlockID Workforce Mobile Application - User Guide - old
+This document describes the procedures to:
+
+1. Download, install and configure the **BlockID Workforce** mobile app
+2. Login to the **BlockID Admin Console** by scanning QR Code using **BlockID Workforce** mobile app
+3. Login to the **Windows Workstation** using **BlockID Workforce** mobile app via:
+    * [QR Code scan](#QRcode)
+    * [Push Notifications](#Push)
+4. Multiple Persona enrollment support within the **BlockID Workforce** mobile app
+
+
+## <a name = "InstallBW"></a>Install and Configure BlockID Workforce mobile app
+
+1. Download and install the BlockID Workforce mobile app (Compatible with iOS and Android devices) on your mobile device. 
+   * Visit the Playstore’s link for BlockID Workforce mobile app for Android:
+        `https://play.google.com/store/apps/details?id=com.onekosmos.blockid.enterprise`
+    * Visit the Appstore’s link for BlockID Workforce mobile app for iOS:
+`https://apps.apple.com/us/app/blockid-workforce/id1491341550`
+2. From your BlockID Workforce mobile app:
+    ![1.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%283%29.png){height="300" width=""}
+3. Add the following URLs:
+   * Enter the `root URL`, `root TAG`, `tenant URL`, and the `tenant TAG` assigned for your tenant’s BlockID Admin Console. For example, `1k-uat.1kosmos.net`, `1kosmos`, `<tenant>-uat.1kosmos.net`, and `<tenanttag>`.
+   * Click **Save Configurations**.
+    
+    ![2.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%284%29.png){height="300" width=""}
+    
+   * Enter the **UserID** and **Password** of your **AD** user account.
+   * Click **Register using credentials.**
+
+## <a name = "LoginBAC"></a>Login to BlockID Admin Console by scanning QR Code using BlockID Workforce mobile app
+
+The below-mentioned steps are for performing QR code login to the BlockID Admin Console. 
+
+
+1. In the browser, add the Login URL of your **BlockID Admin Console** in the address bar. For example, `testconnect.onekosmos.com`
+
+    ![BlockIDWorkforceWebApplication.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/BlockIDWorkforceWebApplication.jpg)
+
+    * Click **Login with BlockID**. The Login screen is displayed with the QR code to be scanned from your **BlockID Workforce** mobile app.
+
+![WindowsLoginBarcode.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%285%29.png)
+
+2. From your **BlockID Workforce** mobile app: 
+   * Click on the **QR code** option and scan the QR code available in the BlockID Admin Console.
+
+![1.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/1.jpg){height="300" width=""}
+
+3. Enter the required authentication details to grant access.
+4. In the Login screen for BlockID Admin Console, click **Link User**.
+
+![LinkUserscreen.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/LinkUserscreen.jpg){height="200" width=""}
+
+This will link your **BlockID Workforce** mobile app credentials to **BlockID Admin Console** and provide login upon the successful user authentication.
+
+## <a name = "LoginWW"></a>Login to Windows Workstation 
+
+The following steps are provided for logging into the Windows workstation using BlockID. Before performing these steps, you need to install and configure the **BlockID Credential Provider (CP)** on the client’s Windows workstation. Visit the [Installing BlockID Credential Provider](https://1kosmos.document360.io/v1/docs/installing-blockid-credential-provider) topic for step by step understanding of installation and configuration of the **BlockID Credential Provider** application.
+
+
+1. On the **Windows Login** screen, you can see the **BlockID** option available with the other options for logging into your machine.
+
+:::(Info) (Note:)
+Once the **BlockID Credential Provider (CP)** is installed, the user will see the “**BlockID**” option on their **Windows Login** screen.
+:::
+
+![WindowsWorkstationbeforelogin.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%286%29.png)
+
+
+2. Log in to your machine using your Windows credentials (username and password).
+3. Double-click on the **BlockID CP** shortcut option on your **Desktop** or navigate to ***Windows Start > BlockID > BlockID***.
+4. **Block Configuration** window:
+   * **BlockID Configurations** tab: Whenever you are performing any changes in the configurations, stop the service from ***General tab > BlockID Service > State > Stop***.
+        * **Transport Protocol**: This field indicates whether the **BlockID CP** should communicate with the Console using the **HyperText Transfer Protocol (HTTP)** or **Secure HyperText Transfer Protocol (HTTPS)**. By default, the **HTTP** option is selected. It is recommended that you use the **HTTPS** option to be deployed within your environment. Based on the user selection, these values are auto-populated. For example, if the user selects **Secure HyperText Transfer Protocol (HTTPS)** then the WebSocket protocol is switched to "Secured WebSocket" and the port is populated to "443". Similar for HTTP, WebSocket switches to  **WebSocket** and the port is populated to "80".
+
+     * **WebSocket Protocol**: This parameter indicates whether the BlockID CP should communicate with the BlockID Admin Console using **WebSocket** or **Secure WebSocket**. By default, the **WebSocket** option is selected.
+     * **Port**: As per the selection of Transport Protocol, the corresponding port option is displayed.
+     * **Tenant ID**: Add the **URL** of your tenant. For example, `testconnect.onekosmos.com`. This is a **DNS** name of the Tenant for the BlockID Admin Console.
+     * **Community ID**: Enter the name of your community with which the BlockID CP needs to communicate. By default, it is the `default` community.
+     * **Auth Type**: Enter the preferred authentication type. By default, the option added here is `Fingerprint`. You can add other authorization options (Pin, Face, Voice) as per the requirement.
+     * **Timeout in secs(5 to 240)**: Enter the time in seconds. This is the timeout setting for how long the BlockID CP will wait for a communication response from the BlockID Admin Console. By default, the value is `45` and it is the recommended value.
+     * * **Connection Timeout (2 to 10)**: Enter the time in seconds. This is the timeout setting for how long the BlockID CP will wait for a WebSocket connection to establish.
+      * **Ping Cycle (10 to 30)**: Enter the time in seconds within the range of 10 to 30 seconds. This is the interval in which the CP will send PING messages to the Admin Console.
+     * **Ping Retries (2 to 5)**: Enter the number ranging between 2 to 5. It is the number of times CP sends PINGs and waits on the connection before it is terminated. For example, if it is set as 2 and the CP doesn't get a response after 2 consecutive PINGs it will disconnect the connection with the workstation.
+     * **Custom Error Message**: Add your error response message. If there is an error in the functionality of the CP, this error message will be shown to the user on the **Windows Login** screen. By default, it is set to **Error while receiving  a response**.            
+     * **Elliptic Curve Digital Signature Algorithm Configuration**: The **Private Key** and **Public Key** fields’ values are auto-populated and are disabled for modification. These fields are given for troubleshooting purposes.
+
+![CPConfig.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/CPConfig.jpg)
+
+  * Click **Apply Changes**.
+  * In the **Settings Saved** dialog box, click **OK**.
+5. Navigate to ***General > BlockID Service > State*** and click **Start** to start the service.
+6. Click **Save & Close**.
+7. In order to verify the changes, sign out from the Windows screen, and navigate to the Windows Login screen.
+The BlockID CP option is available with the latest added message of the day.
+
+### <a name = "QRcode"></a> Scanning QR Code using BlockID Workforce mobile app
+1. On your Windows Login screen, click on the **BlockID CP** option. The Login screen is displayed with the **QR code** to be scanned from your BlockID Workforce mobile app.
+
+![WindowsLoginBarcode.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%288%29.png)
+
+2. From your **BlockID Workforce** mobile app: 
+    * Scan the barcode available on the Windows Login screen and authenticate using the required biometrics.
+
+The app will send the requested data to the **BlockID Credential Provider**.  This allows users to **login** to their workstation by scanning a QR code and **unlock** their workstation via a push notification.
+
+### <a name = "Push"></a>Using Push Notifications received by the BlockID Workforce mobile app
+In order to make Push notifications work, make sure the Push Notification details are configured for iOS and Android applications within your BlockID Admin Console. 
+Please complete the steps given detailed in the [Administration Console](https://1kosmos.document360.io/v1/docs/administration-console)  topic for configuring Push Notification details. 
+
+1. Lock your Windows Workstation and on the **Windows Login** screen, click on the **BlocKID** icon with your **login name** mentioned. The push notification will get sent to you on your mobile device with the message heading as "BlockID authentication request Login Alert".
+2. Click on the push notification message.
+3. Click on the **Login with Fingerprint** (option added under ***BlockID Configuration > BlockID Configuration Parameters > Auth Type***) option.
+4. Provide your biometric authentication details. The app will send the requested data to the **BlockID Credential Provider**.  This allows users to **login** to their workstation by scanning a QR code and **unlocking** their workstation via a push notification.
+
+## Multiple Persona enrollment support within the BlockID Workforce mobile app
+To enroll more than one personas (User profiles), perform the following steps:
+1. In the BlockID Workforce mobile app, click ADD PERSONAS.
+2. Enter the **UserID** and **Password** of the AD user account for the new persona.
+3. Click **Add**. The newly added persona will be located in the Personas list.
+
+

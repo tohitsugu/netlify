@@ -1,0 +1,1281 @@
+---
+slug: /v1/android
+id: Zb472749f-bb61-44eb-8fac-031da891f016
+---
+# Android
+This document describes the procedure to configure the BlockID Customer Android SDK into your organization's application. This integration will allow your users to use the features provided within the Android SDK of the BlockID Customer mobile application. The features include enrollment of the user’s LiveID (captures the live (real-time) facial images) details, Fingerprint, PIN, Driving License (DL), and Passport details, etc.
+
+## Before you Begin
+You will need the following resource to complete this integration:
+* Android Studio 4.0 or higher preferably
+
+There are two sets of configurations that need to be performed to enable this integration:
+
+1. Configure BlockID Android SDK within the project
+2. BlockID Android SDK API Configuration
+
+**List of Topics:**
+1. [Configure BlockID Android SDK within the project](#ConfigureSDK)
+    * [SDK Integration into the Project](#SDKIntegration)
+        * [Integration of OneKosmosSDK-Release.aar file into the project](#SDKIntegrationfile)
+        * [Add SDK dependency in the Build.gradle file](#SDKIntegrationSDKdep)
+     * [Add dependencies in Project’s Build.gradle](#SDKIntegrationSDKdepM)
+     * [Configurations within coreconfig.properties file](#SDKIntegrationCoreconfig)
+     * [Configurations within uiconfig.properties file](#SDKIntegrationuiconfig)
+     * [Initialize the BlockID SDK](#SDKIntegrationIntializesdk)
+2. [BlockID Android SDK API Configuration](#SDKAPIConfiguration)
+    * [BlockID SDK Generic Callback Response Listener](#SDKAPIConfigurationCallbackResListener)
+     * [User Registration Module](#SDKAPIConfigurationUserRegistration)
+         * [Get User Registration status](#SDKAPIConfigurationUserRegistrationstatus)
+         * [User EULA Agreement](#SDKAPIConfigurationUserRegistrationEULA)
+         * [Get Mnemonic Phrases](#SDKAPIConfigurationUserRegistrationmnemonic)
+         * [PIN Enrollment](#SDKAPIConfigurationUserRegistrationPin)
+         * [Set and Get Firebase Access Token](#SDKAPIConfigurationUserRegistrationFirebasetoken)
+         * [Get Application’s Playstore URL](#SDKAPIConfigurationUserRegistrationplaystoreURL)
+     * [Login Module](#SDKAPIConfigurationLoginmodule)
+         * [Pin Login](#SDKAPIConfigurationLoginmodulePin)
+         * [Face Login](#SDKAPIConfigurationLoginmoduleFace)
+         * [FingerPrint Login](#SDKAPIConfigurationLoginmoduleFingerprint)
+         * [Get Security check status](#SDKAPIConfigurationLoginmoduleSecurityCheck)
+         * [Get available login types](#SDKAPIConfigurationLoginmoduleGetLogintype)
+     * [Enrolment Module](#SDKAPIConfigurationEnrolmentmodule)
+         * [Face Enrolment](#SDKAPIConfigurationEnrolmentmoduleFaceEnrolment)
+         * [Finger Enrolment](#SDKAPIConfigurationEnrolmentmoduleFingerEnrolment)
+         * [Pin Enrolment](#SDKAPIConfigurationEnrolmentmodulePINEnrolment)
+         * [Driving Licence Enrolment](#SDKAPIConfigurationEnrolmentmoduleDLEnrolment)
+         * [Passport Enrolment](#SDKAPIConfigurationEnrolmentmodulePassportEnrolment)
+         * [Remove Enrolled Face](#SDKAPIConfigurationEnrolmentmoduleRemoveFace)
+         * [Remove Enrolled Fingerprint](#SDKAPIConfigurationEnrolmentmoduleRemoveFingerprint)
+         * [Remove Enrolled Passport](#SDKAPIConfigurationEnrolmentmoduleRemovepassport)
+         * [Remove Enrolled Driver License](#SDKAPIConfigurationEnrolmentmoduleRemoveDL)
+         * [Generate TOTP](#SDKAPIConfigurationEnrolmentmoduleGenerateTOTP)
+         * [Get Transaction List](#SDKAPIConfigurationEnrolmentmoduleGetTransaction)
+         * [Address Verification](#SDKAPIConfigurationEnrolmentmoduleAddressVerification)
+         * [Get License module config](#SDKAPIConfigurationEnrolmentmoduleGetLicensemodule)
+         * [Get Driver License Data](#SDKAPIConfigurationEnrolmentmoduleGetDLdata)
+         * [Get Passport Data](#SDKAPIConfigurationEnrolmentmoduleGetPassportdata)
+         * [Enroll Health Card](#SDKAPIConfigurationEnrolmentmoduleEnrollHealthCard)
+         * [Enroll Immunity Certificate](#SDKAPIConfigurationEnrolmentmoduleEnrollImmunityCert)
+         * [Remove Health Card](#SDKAPIConfigurationEnrolmentmoduleRemoveHealthCard)
+         * [Remove Immunity Certificate](#SDKAPIConfigurationEnrolmentmoduleRemoveImmunityCert)
+         * [Get User Profile](#SDKAPIConfigurationEnrolmentmoduleGetUserProfile)
+     * [Account Restore Feature](#SDKAPIConfigurationAccountRestoreFeature)
+         * [Verify User Account](#SDKAPIConfigurationAccountRestoreFeatureVerifyAccount)
+         * [Face Login for Account Restore](#SDKAPIConfigurationAccountRestoreFaceLogin)
+         * [PIN Login for Account Restore](#SDKAPIConfigurationAccountRestorePINLogin)
+         * [Document Expiry Feature](#SDKAPIConfigurationAccountRestoreDocExpiry)
+     * [QR Code Login Module](#SDKAPIConfigurationQRCodeLoginModule)
+         * [QR Code Scan](#SDKAPIConfigurationQRCodeLoginModuleQRCodeScan)
+         * [QR Code Notification](#SDKAPIConfigurationQRCodeLoginModuleQRCodeNotification)
+     * [Crypto Utility](#SDKAPIConfigurationCryptoUtility)   
+         * [Get App Public Key](#SDKAPIConfigurationCryptoUtilityGetAppPublickey)
+         * [Encrypt with Custom Public Key](#SDKAPIConfigurationCryptoUtilitycustomPublickey)
+         * [Decrypt with Custom Public Key](#SDKAPIConfigurationCryptoUtilityDecryptcustomPublickey)
+     * [SDK Locking Mechanism for the security](#SDKAPIConfigurationSDKlock)
+
+## <a name = "ConfigureSDK"></a>BlockID SDK Setup
+
+### <a name = "SDKIntegration"></a>SDK Integration into the Project
+
+#### <a name = "SDKIntegrationfile"></a>Integration of OneKosmosSDK-Release.aar file into the project
+
+Perform the following steps to integrate the OneKosmosSDK-Release.aar file into your app’s project:
+
+1. Start the Android Studio.
+2. Navigate to ***File > Project Structure > Modules***.
+3. Click on the `+` icon.
+4. Click `Choose import .JAR/.AAR`.
+5. Locate the `OneKosmosSDK-Release.aar` file and click **Apply**.
+6. Navigate to ***File > Project Structure > Dependencies***
+7. Select `app`.
+8. In the declared dependencies tab, click `+`.
+9. Click **Module dependency**.
+10. Select `OneKosmosSDK-Release`.
+11. Click **Apply**
+12. Click **OK**. The build process for the project starts.
+
+#### <a name = "SDKIntegrationSDKdep"></a>Add SDK dependency in project`s Build.gradle file
+Use the following code to add OneKosmosSDK-Release.aar dependency into your project’s Build.gradle file:
+
+```json
+implementation project(path: ':OneKosmosSDK-release');
+```
+
+### <a name = "SDKIntegrationSDKdepM"> </a>Add dependencies in Project’s Build.gradle
+Add the following dependencies on your app’s build.gradle file:
+```json
+implementation 'androidx.preference:preference:1.1.0'
+   implementation 'com.google.android.material:material:1.0.0'
+   implementation 'androidx.annotation:annotation:1.1.0'
+   def security_version = "1.0.0-alpha02"
+   implementation "androidx.security:security-crypto:$security_version"
+   implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+   // to create user wallet
+   implementation 'org.web3j:core:3.3.1-android'
+   // to generate mnemonics
+   implementation('org.bitcoinj:bitcoinj-core:0.14.7') {
+       exclude group: 'com.google.protobuf', module: 'protobuf-java'
+   }
+   // Gson dependency for JSON Parsing
+   implementation 'com.google.code.gson:gson:2.8.5'
+    // firebase analytics dependency
+   implementation 'com.google.firebase:firebase-analytics:17.2.1'
+   // firebase messaging dependency
+   implementation 'com.google.firebase:firebase-messaging:20.0.1'
+  // firebase Crashlytics dependency.
+   implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
+   // to get user location
+   implementation 'com.google.android.gms:play-services-gcm:17.0.0'
+   implementation 'com.google.android.gms:play-services-location:17.0.0'
+   implementation 'com.nabinbhandari.android:permissions:3.8'
+   // to check if device is rooted 
+   implementation 'com.scottyab:rootbeer-lib:0.0.7'
+   // to make API call 
+   implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+   implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+   implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+   implementation 'com.squareup.okhttp3:okhttp:3.12.3'
+   implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+   // Rx java
+   implementation 'io.reactivex.rxjava2:rxjava:2.1.9'
+   implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+   implementation "androidx.security:security-crypto:1.0.0-alpha02"
+   implementation 'commons-codec:commons-codec:1.5'
+   // for Passport scanning
+   implementation 'com.rmtheis:tess-two:9.0.0'
+   implementation 'org.jmrtd:jmrtd:0.5.13'
+   implementation 'org.innovatrics.mrz:mrz-java:0.4'
+   implementation 'com.android.volley:volley:1.1.1'
+   implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+   implementation 'androidx.lifecycle:lifecycle-viewmodel:2.2.0'
+   implementation 'com.mikepenz:iconics-core:2.5.8@aar'
+   implementation 'com.mikepenz:devicon-typeface:2.0.0.1@aar'
+   implementation('com.mikepenz:aboutlibraries:5.5.7@aar') {
+       transitive = true
+   }
+   implementation 'com.squareup.okhttp3:okhttp:4.2.1'
+   implementation 'com.squareup.okhttp3:logging-interceptor:4.2.1'
+   implementation 'com.google.android.gms:play-services-maps:17.0.0'
+   // NFC scanner
+   implementation 'com.android.support:multidex:1.0.3'
+   implementation 'net.sf.scuba:scuba-sc-android:0.0.20'
+   implementation 'com.madgag.spongycastle:prov:1.54.0.0'
+   implementation 'edu.ucar:jj2000:5.2'
+   implementation 'com.github.mhshams:jnbis:1.1.0'
+   // google vision api
+   implementation 'com.google.android.gms:play-services-vision:19.0.0'
+   implementation 'com.microsoft.projectoxford:face:1.4.3'
+   implementation 'com.google.code.gson:gson:2.8.5'
+   implementation 'javax.annotation:javax.annotation-api:1.2'
+   implementation 'org.apache.httpcomponents:httpclient-android:4.3.5.1'
+   implementation('org.apache.httpcomponents:httpmime:4.3') {
+       exclude module: "httpclient"
+   }
+   // Biometric
+   implementation "androidx.biometric:biometric:1.0.1"
+
+// Otp Api network Call
+implementation "com.amitshekhar.android:android-networking:1.0.2"
+
+
+```
+### <a name = "SDKIntegrationCoreconfig"> </a>Configurations within coreconfig.properties file
+For API calls, BlockID SDK provides a configuration file named `coreconfig.properties` inside the project’s assets folder to add the API Information. In this **coreconfig.properties** file, add the following parameters:
+```json
+protocoltype=https://
+tanentname=<company1>.1kosmos.net
+urlport=8080
+communityname=default
+tenanttag=1kosmos
+isportavailable=false
+productkey = ‘CUSTOMER_PRODUCT_KEY’
+```
+In this file, you can also modify the value of these parameters and set your domain information. The application will use the above default values if the values of these parameters are not modified.
+
+### <a name = "SDKIntegrationuiconfig"> </a>Configurations within uiconfig.properties file
+The BlockID SDK also allows you to change the theme of your application. To access this feature, create a file named `uiconfig.properties`, inside the `assets` folder of the application. Perform the changes in the following fields:
+
+1. Application Logo (image name should be icon_app.png)
+2. Alert icon for dialog (image name should be ic_alert.png)
+3. Dialog button text color
+4. Progress Dialog Color
+5. App icon for Dialog (image name should be icon_app.png)
+6. Button Enable and Disable Color
+7. Internet Alert dialog icon (image name should be ic_no_internet.png)
+8. QR Code login screen background color/icon (if you are providing the background image then, the image name should be qr_logo_app.png)
+
+The default theme values for the BlockID SDK specified within the `uiconfig.properties` are as follows:
+
+```json
+disableColor=#D2D2D2
+enableColor=#000000
+progressIconColor=#000000
+alertDialogTextColor=#000000
+isInternetIconAvailable=true
+isDialogAppIconAvailable=true
+isDialogAlertIconAvailable=true
+appLogo=true
+# **** QR Login Screen resources ****
+# If you're providing header image for QR Login Screen
+qrLoginBgImg = true
+# If you're providing bg color value for QR Login parent layout, comment for BlockID App
+# For auth-type layout, progress icon color will be used.
+qrLoginBgColor = #b8bdc4
+```
+If you don’t modify any value or add the file, the above default values will be used for the application theme.
+
+### <a name = "SDKIntegrationIntializesdk"> </a>Initialize the BlockID SDK
+Use the following code to initialize the SDK within the Application class:
+```json
+BlockIDSdk.initialize(getApplicationContext());
+```
+
+## <a name = "SDKAPIConfiguration"> </a>SDK API Configuration
+
+### <a name = "SDKAPIConfigurationCallbackResListener"> </a>BlockID SDK Generic Callback Response Listener
+This generic request-response listener is used when a call is made from the app side to fetch results from the SDK to the app. Implement this `OnSdkResponseListener` interface in the activities within your app to get the results from SDK. The interface includes two overridden methods for success and error responses.
+```json
+void onResponseSuccess(BlockIDResponse response, String apiName);
+void onResponseError(BlockIDResponse response);
+```
+This `BlockIDResponse` will contain three parameters.
+
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| Response Code | Success/Error Codes |
+| Response Data | SDK API response has an object type field 'data' to provide the user with relevant information about any response code. |
+| Response Message | Network API response data or SDK API response msg to provide information about different success/error codes. This is of type String. |
+
+### <a name = "SDKAPIConfigurationUserRegistration"> </a>User Registration Module
+
+#### <a name = "SDKAPIConfigurationUserRegistrationstatus"> </a>Get User Registration status
+In your Splash Activity (Launching screen of your application), use the following code:
+
+```json
+SdkRegistrationFactory.getInstance().getRegistrationStatus(this, this, mLatitude , mLongitude );
+```
+
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| this | Current Activity Context |
+| this | The object of OnSdkResponseListener that is the current activity |
+| mLatitude | Current Location Latitude |
+| mLongitude | Current Location Longitude |
+
+* It will verify all prerequisites on the SDK side, return different Response codes to your application, and proceed with the application accordingly.
+* Implement the `OnSdkResponseListener` interface in your Activity and fetch the response code inside `onResponseSuccess()` and check the user’s registration status.
+* The `onResponseSuccess()` method is used within the client's application. A user can decide what action to perform next with the application based on the response code received inside the `onResponseSuccess()` method.
+
+Different response codes and their meaning are mentioned below:
+| Response Code | Description |
+| ----------- | ----------- |
+| 1002  | The device is rooted. |
+| 1003  | The PIN is not enrolled in the device. |
+| 1004  | The Fingerprint is not enrolled in the device. |
+| 1005 | The Operating System (OS) is not updated. |
+| 1011 | The EULA agreement is not accepted. |
+| 1010 | The User Registration process is not completed. |
+| 1012 | The Mnemonic phrases are not accepted. |
+| 1013 | The Mnemonic phrases are accepted. |
+| 200 | The Registration process is completed. |
+
+Based on these response codes, you can decide to open an error popup/ next activity/ toast on your screen.
+
+#### <a name = "SDKAPIConfigurationUserRegistrationEULA"> </a>User EULA Agreement
+
+Use the following code to allow the user to accept EULA agreement via BlockID SDK and implement the `OnSdkResponseListener` interface in your activity.
+
+```json
+new SdkEULASetup().setupEULA(this, this, mLatitude, mLongitude, mEulaUrl);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| this | Current Activity Context |
+| this | The object of OnSdkResponseListener that is the current activity |
+| mLatitude | Current Location Latitude |
+| mLongitude | Current Location Longitude |
+| mEulaUrl | EULA URL (param type - String) |
+
+This command displays a EULA popup with the user agreement details. When a user accepts the agreement, it returns a success response code inside the `onResponseSuccess()` method, and you are allowed to tap the next screen. In case of any failure, the response will be sent in `onResponseError()`.
+
+#### <a name = "SDKAPIConfigurationUserRegistrationmnemonic"> </a>Get Mnemonic Phrases
+
+The twelve (12) words unique Mnemonic phrases are generated for each user. These phrases are generated inside the BlockID SDK. You can get the list and show it to the users in any Activity/Fragment so they can save these phrases and use them to recover their accounts in the future.
+
+To get the phrases list, use the following code:
+
+
+```json
+SdkEnrolmentStatusFactory.getInstance().getMnemonicPhraseList();
+```
+This will return a String type of array. Once the user has accepted or saved the Mnemonic phrases and moved to the next step, use the following code to inform the SDK about the accepted phrases.
+
+```json
+SdkModuleConfig.getInstance().setMneumonicPhraseCaptured(true);
+```
+
+#### <a name = "SDKAPIConfigurationUserRegistrationPin"> </a>PIN Enrollment
+
+For user registration, BlockID SDK provides PIN login as the default login method. For example, if the activity name is `PinEnrollmentActivity`, you need to implement the `OnSdkResponseListener` interface in your activity.
+
+For this feature, you need to ask the user to enter N-Digit PIN two times and use the following code for PIN registration:
+
+
+```json
+SdkRegistrationFactory.getInstance().enrollPIN(mPINValue1, mPINValue2, this,this, mLatitude, mLongitude);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| mPINValue1 | The string value of first time entered PIN |
+| mPINValue2 | The string value of the second time entered PIN |
+| this | Current Activity Context |
+| this | The object of OnSdkResponseListener that is the current Activity |
+| mLatitude | Current Location Latitude |
+| mLongitude | Current Location Longitude |
+
+
+If the PIN matches and the user has been registered successfully, the result will appear in `onResponseSuccess()` else a callback will occur in `onResponseError()`.
+
+| Response Code | Description |
+| ----------- | ----------- |
+| 1111  | The PIN enrollment is successful. |
+| 100  | The PIN entered is wrong. Please check the PIN and try again. |
+| 111  | An Internet connection is not available. |
+
+#### <a name = "SDKAPIConfigurationUserRegistrationFirebasetoken"> </a>Set and Get Firebase Access Token
+During the Registration flow, save the `Firebase Access` token in the BlockID SDK to enable push notification services. To save and get Access Token, use the following code:
+
+```json
+SdkRegistrationFactory.getInstance().setFcmAccessToken(token);
+SdkRegistrationFactory.getInstance().getFcmAccessToken(token);
+```
+
+#### <a name = "SDKAPIConfigurationUserRegistrationplaystoreURL"> </a>Get Application’s Play Store URL
+
+Use the following code, to get the Play Store URL of the app:
+
+```json
+SdkRegistrationFactory.getInstance().getAppPlayStoreUrl();
+```
+
+### <a name = "SDKAPIConfigurationLoginmodule"> </a>Login Module
+
+:::(Info) (Note:)
+Check Internet connectivity before performing the following login procedures.
+:::
+
+#### <a name = "SDKAPIConfigurationLoginmodulePin"> </a>Pin Login
+
+* API name: `PIN_LOGIN`
+* Implement the `OnSdkResponseListener` interface that contains two overridden methods to handle your success and failure conditions regarding the PIN login API:
+    * `void onResponseSuccess(BlockIDResponse response, String apiName);`
+    * `void onResponseError(BlockIDResponse response);`
+
+
+| Response Code | Description |
+| ----------- | ----------- |
+| 1112  | Log in with the PIN is successful. |
+| 100  | The PIN entered is wrong. Please check the PIN and try again. |
+| 100  | PIN enrollment is not completed. Please proceed with the Registration. |
+| 100  | PIN for Login can not be empty. |
+| 111  | An Internet connection is not available. |
+
+Use the following command for PIN login:
+
+```json
+SdkLoginServiceFactory.getInstance().loginWithPin(Activity, pin, onSdkResponseListener);
+```
+
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| Activity | Current activity |
+| Pin  | Enter 8 digit PIN |
+| OnSdkResponseListener | The object of OnSdkResponseListener that is the current activity |
+
+#### <a name = "SDKAPIConfigurationLoginmoduleFace"> </a>Face Login
+
+* API name: `FACE_LOGIN` 
+* Implement the `OnSdkResponseListener` interface that contains two overridden methods to handle your success and failure conditions:
+    * `void onResponseSuccess(BlockIDResponse response, String apiName);`
+    * `void onResponseError(BlockIDResponse response);`
+
+You will get the success and failure conditions regarding Face login API.
+
+| Response Code | Description |
+| ----------- | ----------- |
+| 200  | Login with Face ID is successful. |
+| 100  | Login using Face ID is failed, Face ID does not match. |
+| 1039  | Face login requires camera permission and read/write external storage. Please allow permission. |
+| 1018  | Please enroll the Face ID. |
+| 1021  | The license key for the Face ID module is not valid. |
+
+Use the following command for Face login:
+```json
+SdkLoginServiceFactory.getInstance().loginWithFace(Activity, onSdkResponseListener);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| Activity | Current activity |
+| OnSdkResponseListener | The object of OnSdkResponseListener that is the current Activity |
+
+#### <a name = "SDKAPIConfigurationLoginmoduleFingerprint"> </a>Fingerprint Login
+
+* Api name: `FINGERPRINT_LOGIN` 
+* Implement the `OnSdkResponseListener` interface that contains two overridden methods to handle your success and failure conditions regarding Fingerprint login API:
+    * `void onResponseSuccess(BlockIDResponse response, String apiName);`
+    * `void onResponseError(BlockIDResponse response);`
+
+| Response Code | Description |
+| ----------- | ----------- |
+| 200  | The Fingerprint login is successful. |
+| 100  | The Fingerprint login is failed. |
+| 1014  | Please enroll for a Fingerprint. |
+
+#### <a name = "SDKAPIConfigurationLoginmoduleSecurityCheck"> </a>Get Security check status
+
+* Implement the `OnSdkResponseListener` interface that contains the following two overridden methods to handle the success and failure conditions regarding the Get Security Check Status API:
+    * `void onResponseSuccess(BlockIDResponse response, String apiName);`
+    * `void onResponseError(BlockIDResponse response);`
+
+
+| Response Code | Description |
+| ----------- | ----------- |
+| 1002  | Your device is rooted. |
+| 1003  | The device is not secured. |
+| 1004  | The device Fingerprint is not set. |
+
+Use the following code:
+```json
+SdkLoginServiceFactory.getInstance().securityChecksStatus(Activity, onSdkResponseListener);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| Activity | Current activity |
+| OnSdkResponseListener | The object of OnSdkResponseListener that is the current activity |
+
+#### <a name = "SDKAPIConfigurationLoginmoduleGetLogintype"> </a>Get available login types
+
+Use the following code:
+```json
+SdkLoginServiceFactory.getInstance().getRegisteredLoginTypeStatus();
+```
+
+This method returns a BlockIDResponse. BlockID Response class contain JSON Object with
+`{"faceLogin":true,"fingerprintLogin":true,"pinLogin":true}` value.
+
+### <a name = "SDKAPIConfigurationEnrolmentmodule"> </a>Enrolment Module
+
+#### <a name = "SDKAPIConfigurationEnrolmentmoduleFaceEnrolment"> </a>Face Enrolment:
+
+* API Name: `ENROLL_FACE`
+* Implement the OnSdkResponseListener interface that contains the following two overridden methods to handle the success and failure conditions regarding face enrolment API:
+    * `void onResponseSuccess(BlockIDResponse response, String apiName);`
+    * `void onResponseError(BlockIDResponse response);`
+
+| Response Code | Description |
+| ----------- | ----------- |
+| 200  | SUCCESS. |
+| 1018  | Please enroll the Face ID. |
+| 1019  | The Face ID is already enrolled. |
+| 1020  | Face enrollment requires camera permission and read/write external storage, Please allow permissions.|
+| 1021  |  The license key for the Face module is not valid. |
+
+Before starting the enrolment, first, check the following Face enrolment permissions:
+
+*  CAMERA
+*  WRITE_EXTERNAL_STORAGE
+*  READ_EXTERNAL_STORAGE
+
+After the permission check, use the following code:
+
+```json
+SdkEnrolmentFactory.getInstance().faceEnrolment(Activity, OnSdkResponseListener, Latitude,                   Longitude, int scrBgClr);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| Activity | The object of the current activity |
+| OnSdkResponseListener | The object of OnSdkResponseListener that is the current Activity |
+| Latitude | The object of current location Latitude |
+| Longitude | The object of current location Longitude |
+| scrBgClr | Face enrollment screen header/footer view background-color |
+
+:::(Info) (Note:)
+To use SDK’s default color, add `zero`/ `0` as the default value for color parameters.
+:::
+
+To check whether the face is enrolled or not, use the following code:
+```json
+SdkEnrolmentFactory.getInstance().isFaceEnrolled();
+```
+It will return a `Boolean` value for whether the face is enrolled or not.
+
+#### <a name = "SDKAPIConfigurationEnrolmentmoduleFingerEnrolment"> </a>Finger Enrolment
+* API Name: `ENROLL_FINGERPRINT`
+* Implement the `OnSdkResponseListener` interface that contains the following two overridden methods to handle the success and failure conditions regarding Finger enrollment API:
+    * `void onResponseSuccess(BlockIDResponse response, String apiName);`
+    * `void onResponseError(BlockIDResponse response);`
+
+| Response Code | Description |
+| ----------- | ----------- |
+| 200  | SUCCESS. |
+| 1014  | Please enroll for Fingerprint. |
+| 1015  |  The Fingerprint is already enrolled. |
+| 1031  | The license key for the Finger module is not valid.
+
+After the permission check, use the following code:
+```json
+SdkEnrolmentFactory.getInstance().fingerPrintEnrolment(Activity,OnSdkResponseListener, Latitude,Longitude);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| Activity | The object of current activity |
+| OnSdkResponseListener | The object of the OnSdkResponseListener |
+| Latitude | The object of current location Latitude |
+| Longitude | The object of current location Longitude |
+
+To check whether the Fingerprint is enrolled or not, use this method:
+
+```json
+SdkEnrolmentFactory.getInstance().isFingerPrintEnrolled();
+```
+
+It will return a `Boolean` value for whether the finger is enrolled or not.
+
+#### <a name = "SDKAPIConfigurationEnrolmentmodulePINEnrolment"> </a>Pin Enrolment
+* API Name: `ENROLL_PIN`
+* Implement the `OnSdkResponseListener` interface that contains the following two overridden methods to handle the success and failure conditions regarding PIN enrolment API:
+    * `void onResponseSuccess(BlockIDResponse response, String apiName);`
+    * `void onResponseError(BlockIDResponse response);`
+
+
+| Response Code | Description |
+| ----------- | ----------- |
+| 200  | SUCCESS. |
+
+After the permission check, use the following code:
+```json
+SdkRegistrationFactory.getInstance().enrollPIN(PINValue1,PINValue2, Activity, OnSdkResponseListener, Latitude, Longitude);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| PINValue1 | First time entered PIN value |
+| PINValue2 |  Second time entered Confirm PIN value |
+| Activity | The object of the current activity |
+| OnSdkResponseListener | The object of OnSdkResponseListener that is the current activity |
+| Latitude | The object of current location Latitude |
+| Longitude | The object of current location Longitude |
+
+
+To check whether the pin is enrolled or not, use this method:
+```json
+SdkEnrolmentFactory.getInstance().isPinEnrolled();
+```
+It will return a `Boolean` value for whether the PIN is enrolled or not.
+
+#### <a name = "SDKAPIConfigurationEnrolmentmoduleDLEnrolment"> </a>Driving Licence Enrolment
+
+* API Name: `ENROLL_DRIVER_LICENSE`
+* Implement the `OnSdkResponseListener` interface that contains the following two overridden methods to handle the success and failure conditions regarding Driving license enrolment API:
+    * `void onResponseSuccess(BlockIDResponse response, String apiName);`
+    * `void onResponseError(BlockIDResponse response);`
+
+| Response Code | Description |
+| ----------- | ----------- |
+| 200  | SUCCESS. |
+| 1022  | The Driver’s License is already enrolled. |
+| 1023  | The license key for the Driver License module is not valid. |
+| 1024  | Driver License enrollment requires camera permission and read/write external storage. Please allow permission. |
+| 1033  | Driver License Front and Back data don’t match. Please scan again! |
+| 1034  | The Driver License is already expired. |
+| 1040  | The Driver License’s scanned barcode is not valid. |
+
+Before starting the enrolment, check the following Driver License enrolment permissions:
+
+* CAMERA
+* WRITE_EXTERNAL_STORAGE
+* READ_EXTERNAL_STORAGE
+
+After the permission check, use the following code:
+```json
+SdkEnrolmentFactory.getInstance().driverLicenseEnrolment(Activity, OnSdkResponseListener, Latitude, Longitude, int scrBgClr, int btnBgClr, int btnTxtClr);
+```
+
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| Activity | The object of the current activity |
+| OnSdkResponseListener | The object of OnSdkResponseListener that is the current activity |
+| Latitude | The object of current location Latitude |
+| Longitude | The object of current location Longitude |
+| scrBgClr  | DL Tutorial screen background-color |
+| btnBgClr  |  DL Tutorial screen button background color |
+| btnTxtClr  | DL Tutorial screen button text font color |
+
+:::(Info) (Note:)
+To use SDK’s default color, add `zero`/ `0` as the default value for color parameters.
+:::
+
+To check whether the DL is enrolled or not, use the following code:
+```json 
+SdkEnrolmentFactory.getInstance().isDLEnrolled();
+```
+
+It will return a `Boolean` value for whether the DL is enrolled or not.
+To check whether the DL is expired or not, use the following code:
+
+```json
+SdkDocExpiryFactory.getInstance().ifDLExpired();
+```
+
+And to whether the DL is about to expire, use the following code:
+```json
+SdkDocExpiryFactory.getInstance().ifDlAboutToExpire();
+```
+
+#### <a name = "SDKAPIConfigurationEnrolmentmodulePassportEnrolment"> </a>Passport Enrolment
+Implement the OnSdkResponseListener interface that contains the following two overridden methods to handle the success and failure conditions regarding Passport enrolment API:
+* `void onResponseSuccess(BlockIDResponse response, String apiName);`
+* `void onResponseError(BlockIDResponse response);`
+
+| Response Code | Description |
+| ----------- | ----------- |
+| 200  | SUCCESS. |
+| 1025  | The Passport is already enrolled. |
+| 1026  | License key for the Passport module not valid. |
+| 1027  | Passport enrollment requires camera permission and read/write external storage. Please allow permission. |
+| 1035  | The Passport is already expired. |
+
+Before starting the enrolment, check the following Passport enrolment permissions:
+
+* CAMERA
+* WRITE_EXTERNAL_STORAGE
+* READ_EXTERNAL_STORAGE
+
+After the permission check, use the following code:
+```json
+SdkEnrolmentFactory.getInstance().passportEnrolment(Activity, OnSdkResponseListener, Latitude, Longitude, int scrBgClr, int btnBgClr, int btnTxtClr);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| Activity | The object of the current activity |
+| OnSdkResponseListener | The object of OnSdkResponseListener that is the current activity |
+| Latitude | The object of current location Latitude |
+| Longitude | The object of current location Longitude |
+| scrBgClr  | Passport Tutorial screen background-color |
+| btnBgClr  | Passport DL Tutorial screen button background-color |
+| btnTxtClr  | Passport Tutorial screen button text font color |
+
+:::(Info) (Note:)
+To use SDK’s default color, add `zero`/`0` as the default value for color parameters.
+:::
+
+To check whether the Passport is enrolled or not, use this method:
+
+```json
+SdkEnrolmentFactory.getInstance().isPPEnrolled();
+```
+It will return a `Boolean` value for whether the Passport is enrolled or not.
+Check whether the Passport is expired or not, use the following code:
+
+```json
+SdkDocExpiryFactory.getInstance().ifPPExpired();
+```
+And to whether the passport is about to expire, use the following code:
+
+```json
+SdkDocExpiryFactory.getInstance().ifPPAboutToExpire();
+```
+
+#### <a name = "SDKAPIConfigurationEnrolmentmoduleRemoveFace"> </a>Remove Enrolled Face
+
+* API Name: `REMOVE_FACE`
+* Implement the `OnSdkResponseListener` interface that contains two overridden methods to handle your success and failure conditions regarding Remove enrolled face API:
+    * `void onResponseSuccess(BlockIDResponse response, String apiName);`
+    * `void onResponseError(BlockIDResponse response);`
+
+
+Before removing, it is important to check if the Face ID is already enrolled. In order to check, use the following code:
+```json
+SdkEnrolmentFactory.getInstance().removeFace(Activity,OnSdkResponseListener, Latitude, Longitude);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| Activity | The object of the current activity |
+| OnSdkResponseListener | The object of OnSdkResponseListener that is the current activity |
+| Latitude | The object of current location Latitude |
+| Longitude | The object of current location Longitude |
+
+#### <a name = "SDKAPIConfigurationEnrolmentmoduleRemoveFingerprint"> </a>Remove Enrolled Fingerprint
+
+* API Name: `REMOVE_FINGERPRINT`
+* Implement the `OnSdkResponseListener` interface that contains the following two overridden methods to handle the success and failure conditions  regarding Remove enrolled finger API:
+    * `void onResponseSuccess(BlockIDResponse response, String apiName);
+    * `void onResponseError(BlockIDResponse response);`
+
+Before removing, it is important to check if the Fingerprint is already enrolled. In order to check, use the following code:
+```json
+SdkEnrolmentFactory.getInstance().removeFingerPrint(Activity,OnSdkResponseListener, Latitude,Longitude);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| Activity | The object of the current activity |
+| OnSdkResponseListener | The object of OnSdkResponseListener that is the current activity |
+| Latitude | The object of current location Latitude |
+| Longitude | The object of current location Longitude |
+
+#### <a name = "SDKAPIConfigurationEnrolmentmoduleRemovepassport"> </a>Remove Enrolled Passport
+
+* API Name: `REMOVE_PASSPORT`
+* Implement the `OnSdkResponseListener` interface that contains the following two overridden methods to handle the success and failure conditions regarding Remove enrolled Passport API:
+    * `void onResponseSuccess(BlockIDResponse response, String apiName);`
+    * `void onResponseError(BlockIDResponse response);`
+
+Before removing, it is important to check if the Passport is already enrolled. In order to check, use the following code:
+```json
+SdkEnrolmentFactory.getInstance().removePassport(Activity,OnSdkResponseListener, Latitude, Longitude);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| Activity | The object of the current activity |
+| OnSdkResponseListener | The object of OnSdkResponseListener that is the current activity |
+| Latitude | The object of current location Latitude |
+| Longitude | The object of current location Longitude |
+
+#### <a name = "SDKAPIConfigurationEnrolmentmoduleRemoveDL"> </a>Remove Enrolled Driver License
+
+* API Name: `REMOVE_DRIVER_LICENSE`
+* Implement the `OnSdkResponseListener` interface that contains the following two overridden methods to handle the success and failure conditions regarding removing enrolled DL API:
+    * `void onResponseSuccess(BlockIDResponse response, String apiName);`
+    * `void onResponseError(BlockIDResponse response);`
+
+
+Before removing, it is important to check if the DL is already enrolled. In order to check, use the following code:
+```json
+SdkEnrolmentFactory.getInstance().removeDriverLicense(Activity,OnSdkResponseListener,  Latitude, Longitude);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| Activity | The object of the current activity |
+| OnSdkResponseListener | The object of OnSdkResponseListener that is the current activity |
+| Latitude | The object of current location Latitude |
+| Longitude | The object of current location Longitude |
+
+#### <a name = "SDKAPIConfigurationEnrolmentmoduleGenerateTOTP"> </a>Generate TOTP
+
+* API Name: `GET_TOTP`
+* Implement the `OnSdkResponseListener` interface that contains the following two overridden methods to handle the success and failure conditions regarding the Get TOTP API:
+    * `void onResponseSuccess(BlockIDResponse response, String apiName);`
+    * `void onResponseError(BlockIDResponse response);`
+
+
+| Response Code | Description |
+| ----------- | ----------- |
+| 200  | SUCCESS. |
+
+In the `onResponseSuccess` the `BlockIDResponse.getData()` will return Json Object.Json Object contains `totp` and `remainingSecond`.
+
+* “totp” has the String value of TOTP.
+* "remainingSecond" has a long value. By using it you can start the timer.
+
+Use the following code to generate the TOTP:
+```json
+SdkEnrolmentFactory.getInstance().generateTotp(onSdkResponseListener);
+```
+
+#### <a name = "SDKAPIConfigurationEnrolmentmoduleGetTransaction"> </a>Get Transaction List
+This method gives you a transaction list that has a PIN, Face, Passport, DL, and Fingerprint enrollment details.
+
+Use the following code:
+```json
+SdkEnrolmentFactory.getInstance().getTransaction();
+```
+It will return an ArrayList of JSON objects.
+The JSON Object contains the following keys: 
+| Key | Value |
+| ----------- | ----------- |
+| body  | Contain message |
+| status  | true (Transaction accepted)/false (Transaction reject) |
+| entityType  | transactions |
+| andTimestamp  | The time when a transaction is added. |
+
+**Get Notification List via BlockId SDK:**
+:::(Error) (Info:)
+This part is under development.
+:::
+
+Use the following code:
+```json
+SdkEnrolmentFactory.getInstance().getNotification();
+```
+
+#### <a name = "SDKAPIConfigurationEnrolmentmoduleAddressVerification"> </a>Address Verification
+* API name: `ADDRESS_VERIFICATION`
+* Implement the `OnSdkResponseListener` interface that contains two overridden methods to handle your success and failure conditions regarding Address Verification API:
+     * `void onResponseSuccess(BlockIDResponse response, String apiName);`
+     * `void onResponseError(BlockIDResponse response);`
+
+| Response Code | Description |
+| ----------- | ----------- |
+| 1029  | Address verification failed |
+| 200  | Address Verification is done successfully. |
+
+Use the following code: 
+```json
+SdkEnrolmentFactory.getInstance().callAddressVerificationAPI(Activity, onSdkResponseListener, Latitude, Longitude);
+```
+
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| Activity | Current activity |
+| OnSdkResponseListener | The object of OnSdkResponseListener that is the current activity |
+| Latitude | Current location Latitude |
+| Longitude | Current location Longitude |
+
+#### <a name = "SDKAPIConfigurationEnrolmentmoduleGetLicensemodule"> </a>Get License module config
+* API name: `GET_LICENSE_MODULE_CONFIG` 
+This method gives module details. The module is enabled or not based on the license key.
+* Implement the `OnSdkResponseListener` interface which contains two override methods to handle your success and failure conditions regarding the Get License Module Config API:
+    * `void onResponseSuccess (BlockIDResponse response, String apiName)`
+    * `void onResponseError (BlockIDResponse response)`
+
+| Response Code | Description |
+| ----------- | ----------- |
+| 100  | Failed |
+| 200  | SUCCESS |
+
+Use the following code:  
+```json
+SdkEnrolmentFactory.getInstance().getLicenseModuleConfig(onSdkResponseListener);
+```
+* OnSdkResponseListener: object of the OnSdkResponseListener.
+In the Block ID response, `getData` will return Json Object.Json Object contains "value".
+
+| Key | Value |
+| ----------- | ----------- |
+| ENABLE_DRIVING_LICENSE | true(Enable)/false(Disable) |
+| ENABLE_PASSPORT  | true(Enable)/false(Disable) |
+| ENABLE_EMAIL | true(Enable)/false(Disable) |
+| ENABLE_FACE_ENROLL  | true(Enable)/false(Disable) |
+| ENABLE_PHONE_NUMBER  | true(Enable)/false(Disable) |
+| ENABLE_MELLISA_VERIFICATION  | true(Enable)/false(Disable) |
+| ENABLE_HEALTH_CARD_ENROLL  | true(Enable)/false(Disable) |
+| ENABLE_IMMUNITY_CERTIFICATE_ENROLL | true(Enable)/false(Disable) |
+
+#### <a name = "SDKAPIConfigurationEnrolmentmoduleGetDLdata"> </a>Get Driver License Data
+
+This method returns the object of class `DriverLicenseData` if a Driving License is enrolled.
+
+Use the following code: 
+```json
+DriverLicenseData driverLicenseData = SdkEnrolmentFactory.getInstance().getDLData(activityContext);
+```
+For example, `driverLicenseData.getFirstName()` will return **First Name** of Driver License.
+
+Likewise, the other fields can also be retrieved.
+
+#### <a name = "SDKAPIConfigurationEnrolmentmoduleGetPassportdata"> </a>Get Passport Data
+
+This method returns the object of class `PassportData` if a passport is enrolled.
+
+Use the following code: 
+```json
+PassportData passportData= SdkEnrolmentFactory.getInstance().getPPData(activityContext);
+```
+For example, `passportData.getFirstName()` will return **First Name** on passport.
+
+Likewise, the other fields can also be retrieved.
+
+#### <a name = "SDKAPIConfigurationEnrolmentmoduleEnrollHealthCard"> </a>Enroll Health Card
+* API Name: `ENROLL_HEALTH_CARD`
+* Implement the `OnSdkResponseListener` interface that contains two overridden methods to handle your success and failure conditions regarding Health Card enrolment API:
+    * `void onResponseSuccess(BlockIDResponse response, String apiName);`
+    * `void onResponseError(BlockIDResponse response);`
+
+
+| Response Code | Description |
+| ----------- | ----------- |
+| 200  | SUCCESS |
+| 1045  | License Key invalid for Health Card. |
+| 1046  | Camera permission is not allowed for Health Card. |
+
+Before starting the enrolment, check the health card enrolment permission which is the following:
+
+* CAMERA
+* WRITE_EXTERNAL_STORAGE
+* READ_EXTERNAL_STORAGE
+
+After the permission check, use the following code: 
+```json
+SdkEnrolmentFactory.getInstance().healthCardEnrolment (Activity, OnSdkResponseListener, Latitude, Longitude, int scrBgClr, int btnBgClr, int btnTxtClr);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| Activity | The object of the current activity |
+| OnSdkResponseListener | The object of OnSdkResponseListener that is the current activity |
+| Latitude | The object of the current location Latitude |
+| Longitude | The object of the current location Longitude |
+| scrBgClr  | Health Card Tutorial screen background-color |
+| btnBgClr  | Health Card Tutorial screen button background-color |
+| btnTxtClr  | Health Card Tutorial screen button background-color |
+
+:::(Info) (Note:)
+To use SDK’s default color, add `zero`/ `0`  as the default value for color parameters.
+:::
+
+To check whether the Health Card is enrolled or not, use the following code:
+```json
+SdkEnrolmentFactory.getInstance().isHealthCardEnrolled();
+```
+It will return a `Boolean` value for whether the health card is enrolled or not.
+
+#### <a name = "SDKAPIConfigurationEnrolmentmoduleEnrollImmunityCert"> </a>Enroll Immunity Certificate
+
+* API Name: `ENROLL_IMMUNITY_CERT`
+* Implement the `OnSdkResponseListener` interface that contains two overridden methods to handle your success and failure conditions the Immunity Certificate Enrolment API:
+    * `void onResponseSuccess(BlockIDResponse response, String apiName);`
+    * `void onResponseError(BlockIDResponse response);`
+
+| Response Code | Description |
+| ----------- | ----------- |
+| 200  | SUCCESS |
+| 1047  | License Key is invalid for Immunity certificate. |
+| 1047  | Camera permission is not allowed for the immunity certificate. |
+
+Before starting the enrolment first check the following immunity certificate enrolment permissions:
+
+* CAMERA
+* WRITE_EXTERNAL_STORAGE
+* READ_EXTERNAL_STORAGE
+
+After the permission check, use the following code: 
+```json
+SdkEnrolmentFactory.getInstance().immunityCardEnrolment (Activity, OnSdkResponseListener, Latitude, Longitude, int scrBgClr, int btnBgClr, int btnTxtClr);
+```
+
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| Activity | The object of the current activity |
+| OnSdkResponseListener | The object of OnSdkResponseListener that is the current activity |
+| Latitude | The object of the current location Latitude |
+| Longitude | The object of the current location Longitude |
+| scrBgClr  | Immunity Card Tutorial screen background-color |
+| btnBgClr  | Immunity Card Tutorial screen button background-color |
+| btnTxtClr  | Immunity Card Tutorial screen button background-color |
+
+:::(Info) (Note:)
+To use SDK’s default color, add `zero`/ `0`  as the default value for color parameters.
+:::
+
+To check whether the immunity certificate is enrolled or not, use the following code: 
+```json
+SdkEnrolmentFactory.getInstance().isImmunityCertifcateRegistered();
+```
+It will return a `Boolean` value for whether the Immunity Certificate is enrolled or not.
+
+#### <a name = "SDKAPIConfigurationEnrolmentmoduleRemoveHealthCard"> </a>Remove Health Card
+
+* API Name: `REMOVE_HEALTH_CARD`
+* Implement the `OnSdkResponseListener` interface that contains two overridden methods to handle your success and failure conditions regarding Remove enrolled Health Card API:
+    * `void onResponseSuccess(BlockIDResponse response, String apiName);`
+    * `void onResponseError(BlockIDResponse response);`
+
+Before removing, it is important to check if the Health Card is already enrolled. In order to check, use the following code:
+```json
+SdkEnrolmentFactory.getInstance().removeHealthCard(activity, onSdkResponseListener, latitude, longitude);
+```
+
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| Activity | The object of the current activity |
+| OnSdkResponseListener | The object of OnSdkResponseListener that is the current activity |
+| Latitude | The object of the current location Latitude |
+| Longitude | The object of the current location Longitude |
+
+#### <a name = "SDKAPIConfigurationEnrolmentmoduleRemoveImmunityCert"> </a>Remove Immunity Certificate
+
+* API Name: “REMOVE_IMMUNITY_CERT”
+* Implement the `OnSdkResponseListener` interface that contains two overridden methods to handle your success and failure conditions regarding removing the enrolled immunity certificate API:
+    * `void onResponseSuccess(BlockIDResponse response, String apiName);`
+    * `void onResponseError(BlockIDResponse response);`
+
+Before removing, it is important to check if the Immunity Certificate is already enrolled. In order to check, use the following code:
+```json
+SdkEnrolmentFactory.getInstance().removeImmunityCard(activity, onSdkResponseListener, latitude, longitude);
+```
+
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| Activity | The object of the current activity |
+| OnSdkResponseListener | The object of OnSdkResponseListener that is the current activity |
+| Latitude | The object of the current location Latitude |
+| Longitude | The object of the current location Longitude |
+
+#### <a name = "SDKAPIConfigurationEnrolmentmoduleGetUserProfile"> </a>Get User Profile
+
+To get the User’s profile information, you can make a direct call to the BlockID SDK.
+
+1. User Name (returns String)
+```json
+SdkUserProfileFactory.getInstance().getUserProfile().getUserName();
+```
+2. Trust Score  (returns int)
+```json
+SdkUserProfileFactory.getInstance().getUserProfile().getTrustScore();
+```
+3. User DID  (returns String)
+```json
+SdkUserProfileFactory.getInstance().getUserProfile().getUserDid();
+```
+4. User Profile Pic (returns Bitmap)
+```json
+SdkUserProfileFactory.getInstance().getUserProfile().getProfileImg();
+```
+5. User IAL (returns String)
+```json
+SdkUserProfileFactory.getInstance().getUserProfile().getIal();
+```
+
+### <a name = "SDKAPIConfigurationAccountRestoreFeature"> </a>Account Restore Feature
+
+#### <a name = "SDKAPIConfigurationAccountRestoreFeatureVerifyAccount"> </a>Verify User Account
+
+To Restore the User Account, create a string type of ArrayList of 12 words Mnemonic phrases and pass it to the BlockID SDK as follow:
+
+```json
+SdkRestoreAccountFactory.getInstance().verifyUserAccount(this, this, phrasesList, mLatitude, mLongitude);
+```
+
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| this | Current Activity Context |
+| this | The object of OnSdkResponseListener that is the current activity |
+| phrasesList  | String type ArrayList of Mnemonic Phrases |
+| Latitude | Current location Latitude |
+| Longitude | Current location Longitude |
+
+Using the above command, the Account Restore process will be started using the phrases you pass to the SDK.
+Once you have implemented the `OnSdkResponseListener` interface in your activity, you will get a callback in `onResponseSuccess()` if Account Restore is successful.
+
+**Response Codes for Account Restore Success:**
+
+| Response Code | Description |
+| ----------- | ----------- |
+| 3001  | Initialising Face Login for Account Restore. |
+| 3002  | Face Login is Successful for Account Restore. |
+| 3003  | Face Login Failed for Account Restore. |
+| 3010  | Initializing PIN Login for Account Restore. |
+| 3011  | PIN Login is Successful for Account Restore. |
+| 3012  | PIN Login Failed for Account Restore. |
+
+**Response Codes for Account Restore Error**:
+
+| Response Code | Description |
+| ----------- | ----------- |
+| 3013  | DID is not registered with our database. |
+| 3014  | Mnemonic phrases are invalid.|
+
+Once the **Account Restore** API has been called successfully and user data is received properly. You need to log in to the application using Face/PIN, and the data will be restored only if you will be logged in successfully using any of these login methods.
+In `onResponseSuccess()`, you will get a response code for each login method initialization/success and error.
+
+#### <a name = "SDKAPIConfigurationAccountRestoreFaceLogin"> </a>Face Login for Account Restore:
+
+To Initialise Face Login for Account Restore, ask for Runtime Permission for Camera, Read and Write external storage, and use the following code:
+
+```json
+SdkRestoreLoginFactory.getInstance().restoreLoginWithFace(this, this); 
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| this | Current Activity Context |
+| this | The object of OnSdkResponseListener that is the current Activity |
+
+#### <a name = "SDKAPIConfigurationAccountRestorePINLogin"> </a>PIN Login for Account Restore
+
+For PIN Login for Account Restore, use the following code:
+```json
+SdkRestoreLoginFactory.getInstance().restoreLoginWithPin(this, mEnteredPin, this, mLatitude, mLongitude);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| this | Current Activity Context |
+| mEnteredPin  | The string value of the entered PIN |
+| this | The object of OnSdkResponseListener that is the current activity |
+| mLatitude  | Current Location Latitude |
+| mLongitude  | Current Location Longitude |
+
+#### <a name = "SDKAPIConfigurationAccountRestoreDocExpiry"> </a>Document Expiry Feature
+
+To check if the digital document (DL/PP) uploaded by the user, has expired/ about to expire in a certain number of days or is perfectly fine, use the following code in your activity/fragment.
+```json
+SdkDocExpiryFactory.getInstance().getDocumentExpiryStatus(this);
+```
+
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| this | Current Activity Context |
+
+Using the above command, document status will be calculated and based on the status, a different alert popup will be shown on the screen. Also, if you want to know the expiry status of Driver License/Passport, use the following code:
+```json
+   boolean ifPPExpired = SdkDocExpiryFactory.getInstance().ifPPExpired();
+   boolean ifDLExpired = SdkDocExpiryFactory.getInstance().ifDLExpired();
+   boolean ifPPAboutExpired = SdkDocExpiryFactory.getInstance().ifPPAboutToExpire();
+   boolean ifDLAboutExpired = SdkDocExpiryFactory.getInstance().ifDlAboutToExpire();
+   ```
+   
+### <a name = "SDKAPIConfigurationQRCodeLoginModule"> </a>QR Code Login Module
+
+#### <a name = "SDKAPIConfigurationQRCodeLoginModuleQRCodeScan"> </a>QR Code Scan
+
+* Implement the `OnSdkResponseListener` interface that contains two overridden methods to handle your success and failure conditions regarding the QR code scanning API:
+    * `void onResponseSuccess(BlockIDResponse response, String apiName);`
+    * `void onResponseError(BlockIDResponse response);`
+
+Before starting the enrolment first check the passport enrolment permission which is the following:
+* CAMERA
+
+After permission check, use the following code to scan the QR code:
+```json
+SdkQrCodeScanFactory.getInstance().scanQrCode(Activity, OnSdkResponseListener, Latitude,   Longitude, int toolbarClr, int scrBtnBgClr, int scrBtnTxtClr);
+```
+
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| Activity | The object of the current activity |
+| OnSdkResponseListener | The object of OnSdkResponseListener that is the current activity
+ |
+| Latitude | object of the current location Latitude |
+| Longitude | object of the current location Longitude |
+| toolbarClr | QR code scan screen toolbar color |
+| scrBtnBgClr | authentication screen button background-color |
+| scrBtnTxtClr | authentication screen button text color |
+
+:::(Info) (Note:)
+To use SDK’s default color, add `zero`/ `0`  as the default value for color parameters.
+:::
+
+#### <a name = "SDKAPIConfigurationQRCodeLoginModuleQRCodeNotification"> </a>QR Code Notification
+
+1. Implement the `OnSdkResponseListener` interface that contains two overridden methods to handle your success and failure conditions regarding the QR code notification API:
+    * `void onResponseSuccess(BlockIDResponse response, String apiName);`
+    * `void onResponseError(BlockIDResponse response);`
+
+2. Check whether the notification is empty or not. If the notification is not empty, use the following code:
+```json
+SdkQrCodeScanFactory.getInstance().qrCodeNotification(Activity, Latitude, Longitude, Notify);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| Activity | The object of the current activity |
+| Latitude | The object of the current location Latitude |
+| Longitude | The object of the current location Longitude |
+| Notify-String | The object of notification string |
+
+### <a name = "SDKAPIConfigurationCryptoUtility"> </a>Crypto Utility
+
+#### <a name = "SDKAPIConfigurationCryptoUtilityGetAppPublickey"> </a>Get App Public Key (returns String)
+
+Use the following code:
+```json
+SdkCryptoFactory.getInstance().getAppPublicKey().getIal();
+```
+
+#### <a name = "SDKAPIConfigurationCryptoUtilitycustomPublickey"> </a>Encrypt with Custom Public Key
+
+Use the following code:
+```json
+SdkCryptoFactory.getInstance().encryptWithCustomPublicKey(String public_key,String  input_strting);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| public_key | The input string will be encrypted using this Public key. |
+| input_string  | String to be encrypted.
+|
+
+#### <a name = "SDKAPIConfigurationCryptoUtilityDecryptcustomPublickey"> </a>Decrypt with Custom Public Key (returns String)
+Use the following code:
+```json
+SdkCryptoFactory.getInstance().decryptWithCustomPublicKey(String public_key,String  input_strting);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| public_key | The input string will be decrypted using this public key. |
+| input_string  | String to be decrypted. |
+
+### <a name = "SDKAPIConfigurationSDKlock"> </a>SDK Locking Mechanism for the security
+
+* To prevent any kind of unauthorized access to the SDK, there is a locking mechanism implemented in the BlockID SDK.
+* The SDK will always be in the locked state. So, to unlock the SDK one has to do the successful login/register by any mode. After that, the SDK will be unlocked and all the APIs will be accessible.
+* If the SDK is locked and someone tries to access the API, it will show the message as “Unauthorized access”.
+* For security purposes, on the app side, the developers have to lock the SDK again, when the app goes in the background or the user is directed to the Login screen.
+* Check SDK lock status before calling any enrollment APIs of SDK for security purposes.
+
+The following are the APIs exposed to the application:
+
+1. Lock SDK:
+```json
+BlockIDSdk.lockSDK();
+```
+2. Get the status of the SDK:
+```json
+BlockID.isUnlocked();
+```
+
+### <a name = "SDKAPIConfigurationSDKVerifyOTP"> </a>SDK Verify OTP Mechanism
+In this mechanism, you will be able to verify the OTP sent to the user’s phone number.
+
+Use the following code: 
+```json
+OtpUtility.getInstance(context).verifyOTP(otpcode, clientTenant,OnSdkResponseListener);
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| context | Value of the context where this method is called like Activity or fragment. |
+| otpcode  | String value (OTP code) has been received on the user phone number.|
+| clientTenant | The value of an object contains following.|
+
+```json
+new BIDTenant(tenantTag, community, dns);
+```
+
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| tenantTag | The string value of the client tenant tag. |
+| Community | The string value of the client instance community.|
+| DNS | The string value of the client instance DNS.|
+| OnSdkResponseListener | Value of an instance of a listener called `OnSdkResponseListener`.|
+
+When the OTP is received by the user, the `blockidResponse` object in onSuccess method of the listener will receive either of the following messages after the OTP verification process is completed.
+
+* `False`: when the OTP verification is incorrect.
+* `True`: when the OTP verification is correct.
+

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Ze3a67a1a-0728-4ed6-b42b-d040c4a89d6e",
+  "id": "v1/BlockID New Admin Portal (Athena)/Ze3a67a1a-0728-4ed6-b42b-d040c4a89d6e",
+  "isDocsHomePage": false,
+  "title": "Ze3a67a1a-0728-4ed6-b42b-d040c4a89d6e",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/15_webauthn.md.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)",
+  "slug": "/v1/webauthn",
+  "permalink": "/docs/v1/webauthn",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "slug": "/v1/webauthn",
+    "id": "Ze3a67a1a-0728-4ed6-b42b-d040c4a89d6e"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "webauthn",
+    "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/webauthn"
+  },
+  "next": {
+    "title": "forgerock",
+    "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/Applications/forgerock"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Integrations/Identity Providers/integration-wit",
+  "id": "v1/BlockID Integrations/Identity Providers/integration-wit",
+  "isDocsHomePage": false,
+  "title": "integration-wit",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Integrations/Identity Providers/7_integration-wit.md",
+  "sourceDirName": "v1/BlockID Integrations/Identity Providers",
+  "slug": "/v1/BlockID Integrations/Identity Providers/integration-wit",
+  "permalink": "/docs/v1/BlockID Integrations/Identity Providers/integration-wit",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Integration with Windows",
+    "permalink": "/docs/v1/integration-with-windows"
+  },
+  "next": {
+    "title": "Integration with G Suite",
+    "permalink": "/docs/v1/integration-with-gsuite"
+  }
+}

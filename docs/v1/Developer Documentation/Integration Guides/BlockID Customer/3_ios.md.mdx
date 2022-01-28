@@ -1,0 +1,921 @@
+---
+slug: /v1/ios
+id: Zbb76e7b9-89ce-4d65-a64b-29ec220cf034
+---
+# iOS
+This document describes the procedure to configure the BlockID Consumer iOS SDK into your organization's application. This integration will allow your developers to use the features provided within the iOS SDK of the BlockID Consumer mobile application. The features include enrollment of the user’s FaceID (captures the live (real-time) facial images) details, Driving License (DL), and Passport details.
+
+## Before you Begin
+You will need the following resources to complete this integration:
+
+* Xcode 11.0 or higher
+* Cocoapods 1.8.4 or higher
+* iOS 11 or higher
+
+There are two sets of configurations that need to be performed to enable this integration:
+
+1. Configure BlockID Consumer iOS SDK within the project
+2. BlockID Consumer iOS SDK API Configuration
+
+**List of Topics:**
+1. [BlockID Consumer iOS SDK integration within the project](#ConfigureSDK)
+    * [Configurations within Info.plist file](#ConfigureSDKInfofile)
+     * [Add Frameworks](#ConfigureSDKAddFrameworks)
+    * [Add Cocoapods](#ConfigureSDKAddCocoapods)
+    * [Add Assets](#ConfigureSDKAddAssets)
+2. [BlockID Consumer iOS SDK API Configuration](#iOSAPIConfiguration)
+    * [API Configuration](#APIConfiguration)
+    * [Security Checks](#APIConfigurationSecurityCheck)
+        * [Device Trust](#APIConfigurationSecurityCheckDevice)
+        * [Security Lock Enabled / Disable](#APIConfigurationSecurityCheckDeviceSecLock)
+        * [Biometric Enabled / Disable](#APIConfigurationSecurityCheckDeviceBio)
+        * [BlockID Request](#APIConfigurationSecurityCheckBIDReq)
+            * [Register Tenant](#APIConfigurationSecurityCheckBIDReqRegTenant)
+            * [EULA](#APIConfigurationSecurityCheckBIDReqEULA)
+            * [Register User for Wallet Creation](#APIConfigurationSecurityCheckBIDReqwallet)
+            * [Get Mnemonics](#APIConfigurationSecurityCheckBIDReqMnemonics)
+            * [Restore Account](#APIConfigurationSecurityCheckBIDReqRestoreAcc)
+        * [Identity Safe](#APIConfigurationSecurityCheckIdentitySafe)
+            * [Driver License](#APIConfigurationSecurityCheckIdentitySafeDL)
+            * [Enroll Passport](#APIConfigurationSecurityCheckIdentitySafepassport)
+            * [Enroll Health Card](#APIConfigurationSecurityCheckIdentitySafeHealthcard)
+            * [Enroll Immunity Card](#APIConfigurationSecurityCheckIdentitySafeimmunitycard)
+            * [Enroll Face](#APIConfigurationSecurityCheckIdentitySafeFace)
+            * [Enroll Biometrics](#APIConfigurationSecurityCheckIdentitySafeBiometric)
+         * [Identity verification](#APIConfigurationSecurityCheckIdentityVerification)
+             * [Verify Address](#APIConfigurationSecurityCheckIdentityVerificationAddress)
+          * [Transaction & Notifications](#APIConfigurationSecurityCheckTransactionNotification)
+          * [QRCode Scan](#APIConfigurationSecurityCheckQRcodescan)
+              * [Scan QR Code](#APIConfigurationSecurityCheckQRcodescanScan)
+              * [Send Data To Websockets](#APIConfigurationSecurityCheckSenddatatoWebsockets)
+           * [Application Login](#APIConfigurationSecurityCheckAppLogin)
+               * [Login With Face](#APIConfigurationSecurityCheckAppLoginFace)
+               * [Login With TouchID / FaceID](#APIConfigurationSecurityCheckAppLoginTouchIDorFaceID)
+               * [Login With PIN](#APIConfigurationSecurityCheckAppLoginPIN)
+            * [User Information](#APIConfigurationSecurityCheckUserInformation)
+
+## <a name = "ConfigureSDK"></a>BlockID Consumer iOS SDK integration within the project
+
+### <a name = "ConfigureSDKInfofile"></a>Configurations within Info.plist file of the project
+
+1. Add the permission properties to access the following options:
+    * `Camera` - To Scan the documents as for the face enrollment of the user.
+    * `Face ID` - To enroll biometrics of the user which will help in a faster login process.
+    * `Location When In Use` - Location access permission is required to use the application.
+    * `Photo Library` - To save images of mnemonics in the gallery for future use.
+
+2. Add the following property to read `NFC` tag and scan `RFID` of a Passport to fetch data:
+```jsx
+<key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+<array>
+<string>A0000002471001</string>
+</array>
+```
+
+### <a name = "ConfigureSDKAddFrameworks"></a>Add Frameworks
+
+1. In the *General > Frameworks, Libraries and Embedded Content* section of the project: 
+    * Add the following list of frameworks to access all the features SDK provides and select the Embed & Sign option from the Embed column for all the added frameworks as shown in the following Figure:
+        * `OneKosmosSDK.framework`
+        * `OpenSSL.framework`
+        * `Secp256k1_ios.framework`
+        * `Result.framework`
+        * `PromiseKit.framework`
+        * `ProjectOxfordFace.framework`
+        * `Alamofire.framework`
+        * `StompClientLib.framework`
+        * `SocketRocket.framework
+        * After adding the above frameworks
+    * Add the following frameworks to access the `mapkit` and `corelocation` features:
+        * `MapKit.framework`
+        * `CoreLocation.framework`
+
+### <a name = "ConfigureSDKAddCocoapods"></a>Add Cocoapods
+
+Add the following pods to the podfile of the project and install those pods:
+```jsx
+   pod 'jsxyTesseract',    '2.1.0'
+  pod 'UIImage-Resize'
+  pod 'ImageDetect'
+  pod 'GPUImage2', :podspec => './GPUImage2.podspec'
+  pod 'TrustWalletCore', ‘1.0.3’
+  pod ‘Gemini'
+  pod 'OpenSSL-Universal’
+```
+
+Set following jsx language versions of the pods installed:
+```jsx
+`jsxyTesseract` - `jsx 4.2`
+`UIImage-Resize` - `jsx 4.2`
+`ImageDetect` - `jsx 4.2`
+`GPUImage2` - `jsx 4.0`
+```
+
+### <a name = "ConfigureSDKAddAssets"></a>Add Assets
+
+1. `barcodeOverlay` - an overlay image for a QR code scan.
+2. `barcode.png` - an image representing the location of the barcode while scanning the DL. 
+3. `face_overlay` - an overlay image for the facial scan of the user.
+4. `close_circle` - an image that will be used as a `Cancel` button image on DL and Passport enrolment overlay views.
+5. `nfc-scan` - an image to inform users on how to place a Passport for scanning using the NFC feature of the device.
+6. `placeholder_male_icon` - male placeholder image
+7. `placeholder_female_icon` - female placeholder image
+8. `user` - user icon placeholder image
+
+:::(Info) (Note:)
+Use the above names to add images and add these assets within the integrated SDK before running the XCode project.
+:::
+
+## <a name = "iOSAPIConfiguration"></a> iOS API Configuration
+
+### <a name = "APIConfiguration"></a>API Configuration
+
+Configure the following APIs:
+
+```jsx
+public class Tenant {
+    static var K_IS_HTTPS = true
+    static var K_COMMUNITY = "default"
+    static var K_TENANT = "1k-dev.1kosmos.net"
+    static var K_TENANT_TAG = "TENANT_TAG"
+    static var K_PORT =  0
+    static var LICENSEKEY = "TENANT_LICENSEY_KEY"
+    static var eulaURL = “TENANT_EULA_URL”
+}
+```
+### <a name = "APIConfigurationSecurityCheck"></a>Security Checks
+Security checks of the app are based on the following parameters:
+
+1. Device is Jailbroken
+2. Local Authentication enabled / Security Lock
+3. Biometric enabled
+
+#### <a name = "APIConfigurationSecurityCheckDevice"></a>Device Trust
+Use this function to check the trust score of the device.
+
+**Declaration**:
+```jsx
+public class func checkDeviceTrust();
+```
+
+**Usage**:
+```jsx
+let securityCheck = SecurityCheck();
+return securityCheck.checkDeviceTrust();
+```
+ #### <a name = "APIConfigurationSecurityCheckDeviceSecLock"></a>Security Lock Enabled / Disable 
+
+Use this function to check if the security lock is enabled/disabled in the iPhone settings.
+
+**Declaration**:
+```jsx
+public class func isScreenLockNotEnabled();
+```
+
+**Usage**:
+```jsx
+let securityCheck = SecurityCheck();
+return securityCheck.isScreenLockNotEnabled();
+```
+
+ #### <a name = "APIConfigurationSecurityCheckDeviceBio"></a>Biometric Enabled / Disable 
+
+Use this function to check if the iPhone's biometric is enabled/disabled in settings:
+
+**Declaration**:
+```jsx
+public class func isBiometricNotEnabled();
+```
+
+**Usage**:
+```jsx
+let securityCheck = SecurityCheck();
+Return securityCheck.isBiometricNotEnabled();
+```
+#### <a name = "APIConfigurationSecurityCheckBIDReq"></a> BlockID request	
+
+The BlockID class is used to set up Tenant, Protocol, and Community for the whole application. Use this function to check if the user is registered or not.
+
+ #### <a name = "APIConfigurationSecurityCheckBIDReqRegTenant"></a> Register Tenant 
+Use this function to initialize the `registerTenant` to register a user within the BlockID Admin Console.
+
+**Declaration**:
+```jsx
+public class func BlockIDRequest.registerTenant(argTenant: tenantDNS, argTenantTag: tenantTag, argCommunity: Tenant.K_COMMUNITY, argIsHttps: isHttps, argPort: Tenant.K_PORT, argLicense:Tenant.LICENSEKEY, argLat: AppDelegate.shared().lat, argLong: AppDelegate.shared().long, viewController: vc!, onCompletion: {(success, message) in
+onCompletion(success, message)
+})
+};
+
+```
+
+**Usage**:
+```jsx
+BlockIDRequest.registerTenant(argTenant: Tenant.K_TENANT, argTenantTag: Tenant.K_TENANT_TAG, argCommunity: Tenant.K_COMMUNITY, argIsHttps: Tenant.K_IS_HTTPS, argPort: Tenant.K_PORT, argLicense:Tenant.LICENSEKEY, argLat: AppDelegate.shared().lat, argLong: AppDelegate.shared().long, viewController: vc!, onCompletion: {(success, message) in onCompletion(success,message)
+});
+
+```
+
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| argTenant | Tenant name i.e. domain name eg. (`console.onekosmos.com`) |
+| argTenantTag | Tenant Tag |
+| argCommunity | Community name |
+| argIsHttps | If API supports `https` value should be `true` or `false`|
+| argPort | If API requires port |
+| argLicense | License key |
+| argLat | Latitude of location |
+| argLong | Longitude of location |
+| viewController | self |
+| onCompletion | On the success of the register tenant class, the result will be true or false. If the tenant is registered and the user gets enrolled in the system, the function will return true or it will return false.|
+
+ #### <a name = "APIConfigurationSecurityCheckBIDReqEULA"></a> EULA 
+
+Use this function to get an End User License Agreement (EULA).
+
+**Declaration**:
+```jsx
+public func fetchEULAurl(eulaURL: String, clouser: @escaping(_ success: Bool,_ message: String, _ data: String) -> Void){}
+```
+
+**Usage**:
+```jsx
+OnekosmosRequest().fetchEULAurl(eulaURL : String) { [weak self](success, message, data) in }
+```
+ #### <a name = "APIConfigurationSecurityCheckBIDReqwallet"></a>Register User for Wallet Creation 
+
+Use this function to register a user and create an Ethereum wallet. This will generate wallet key-pairs and mnemonic phrases.
+**Declaration**:
+```jsx
+public class func registerUser(viewController:UIViewController,onCompletion:@escaping(_ success:Bool, _ message:String)->Void){}
+```
+
+**Usage**:
+```jsx
+BlockIDRequest.registerUser(viewController: vc!, onCompletion: {
+            (success,msg) in
+            onCompletion(success,msg)
+        })
+```
+
+ #### <a name = "APIConfigurationSecurityCheckBIDReqMnemonics"></a>Get Mnemonics 
+
+Use this function to get the list of mnemonics created for the wallet, display it to the user, and provide the copy or save options.
+
+**Declaration**:
+```jsx
+RegisterDid().getMnemonicStr();
+```
+
+**Usage**:
+```jsx
+if let mnemonicStr = registerDid?.getMnemonicStr(){
+	return mnemonicStr
+}
+```
+
+ #### <a name = "APIConfigurationSecurityCheckBIDReqRestoreAcc"></a>Restore Account 
+
+Use this function to restore a wallet using the mnemonics list.
+
+**Global Variable declaration**:
+`var restoreAccount:RestoreAccount?`
+
+**Declaration**:
+```jsx
+public func importWallet(mnemonic: String, encrypPass: String = "");
+```
+
+**Usage**:
+```jsx
+restoreAccount = RestoreAccount(restoreDelegate: self, vc: self, primaryTheme: UIColor.black)
+restoreAccount?.importWallet(mnemonic: mnemonicString);
+```
+
+**RestoreAccountCallback Delegates:**
+```jsx
+func successRestoreAccount() //success callback after restoring account
+func failureRestoreAcccount(msg: String) // failed to restore account
+```
+
+#### <a name = "APIConfigurationSecurityCheckIdentitySafe"></a>Identity Safe
+
+ #### <a name = "APIConfigurationSecurityCheckIdentitySafeDL"></a>Driver License 
+
+#### Enroll Driver License 
+Use this function to enroll the user’s DL in the application.
+
+**Global Variable declaration**
+var drivingLicense: DrivingLicense?
+
+**Declaration**:
+```jsx
+public func scanDriverLicense(){};
+```
+
+**Usage**:
+```jsx
+do {
+		drivingLicense = try DrivingLicense(vc: self, drivingLicenseDelegate: self)
+		drivingLicense?.scanDriverLicense()
+	} catch  let error  {
+		self.showAlertMessage(title: error.localizedDescription, message: "")
+	}
+```
+
+#### Removal of Driver License 
+
+**Usage:**
+```jsx
+do {
+	drivingLicense = try DrivingLicense(vc: self, drivingLicenseDelegate: self)
+	drivingLicense?.removeEnrolledDriverLicense(onCompletion: {[unowned self]
+		(success,msg) in
+			// do further coding
+		})
+} catch {	
+	self.showAlertMessage(title: error.localizedDescription, message: "")
+}
+```
+#### Get Driver License Details 
+
+Use this function to get the DL details of the user.
+
+**Variable declaration:**
+
+`let onekosmosutil : OneKosmosUtil?`
+
+**Declaration:**
+```jsx
+public func getDriverLicenseData() -> (data: DriverLicenseData, errMsg: String){}
+```
+**Usage** 
+```jsx
+onekosmosutil = onekosmosutil()
+	let (dlData, errorString) = onekosmosutil?.getDriverLicenseData()
+```
+#### To check if Driver License Enrolled 
+Use this function to check the enrollment status of a DL. It returns the value as `true` or `false`. 
+
+**Declaration:**
+```jsx
+public func isDrivingLicenseEnrolled(){};
+```
+**Usage:** 
+```jsx
+let driverLicenseModel = DriverLicenseModel()
+	return driverLicenseModel.isDrivingLicenseEnrolled()
+```
+#### Driver License Delegates 
+
+ ```jsx
+func drivingLicenseCancel() //scanning cancelled callback
+drivingLicenseFailure(errorTitle: String, errorMsg: String) //enrollment failed callback
+func drivingLicenseSuccess(msg: String) //enrollment success callback
+```
+ #### <a name = "APIConfigurationSecurityCheckIdentitySafepassport"></a>Enroll Passport 
+Use this function to enroll the user’s Passport in the application.
+
+**Global Variable declaration**
+`var passport : PassportScan?`
+
+**Declaration:**
+```jsx
+	public func scanPassport(){};
+```
+
+**Usage:**
+```jsx
+	do{
+		try passport = PassportScan(vc: self, passportDelegate: self)
+		passport?.scanPassport()
+	}
+	catch{
+		self.showAlertMessage( title: "", message: error.localizedDescription)
+	}
+```
+
+#### Removal Of Passport 
+Use this function to remove the enrolled Passport.
+
+**Declaration**:
+```jsx
+public func removeEnrolledPassport(){};
+```
+**Usage:**
+```jsx
+	do {
+		try passport = PassportScan(vc: self, passportDelegate: self)
+		passport?.removeEnrolledPassport(onCompletion: {[unowned self]
+			(success,msg) in
+				// do further coding
+			})
+	} catch {	
+		self.showAlertMessage(title: error.localizedDescription, message: "")
+	}
+```
+#### Get Passport Details 
+Use this function to get the enrolled Passport details.
+**Variable declaration:**
+
+`let onekosmosutil : OneKosmosUtil?`
+
+**Declaration:**
+```jsx    
+public func getPPData() -> (PassportData?, String){};
+ ```
+**Usage:** 
+```jsx
+onekosmosutil = onekosmosutil();
+	let (passportData, errorString) = onekosmosutil?.getPPData();
+```
+
+#### To check if passport Enrolled 
+Use this function to check the enrollment status of the Passport. It returns the value as `true` or `false`.
+**Declaration:**
+```jsx
+	public func isPassportEnrolled(){};
+ ```
+**Usage:** 
+```jsx
+let passportModel = Passport();
+return passportModel.isPassportEnrolled();	
+```
+#### Passport Delegates: 
+ ```jsx
+func passportCancel()	//scanning cancelled callback
+func passportFailed(msg: String, title: String) //enrollment failed callback
+func passportSuccess(msg: String) //enrollment success callback
+```
+
+ #### <a name = "APIConfigurationSecurityCheckIdentitySafeHealthcard"></a>Enroll Health Card 
+
+#### Enroll HealthCard  
+Use this function to enroll the Health Card in the application.
+
+**Usage:** 
+```jsx
+let vc = HealthCardViewController.init(nibName: "HealthCardViewController", bundle: nil)
+	vc.modalPresentationStyle = .fullScreen
+	vc.delegate = self
+	present(vc, animated: true, completion: nil);
+```
+#### Save Of HealthCard 
+Save HealthCard through SDK.
+
+**Usage:** 
+
+```jsx	HealthCardHelper.saveScanHealthCard(frontImage: frontImage, backImage: backImage) { 
+	(success, msg) in
+	});
+```
+#### Removal Of HealthCard 
+
+Use this function to remove the enrolled Health Card from the application.
+
+**Declaration:**
+```jsx
+public func removeScanHealthCard(){};
+```
+**Usage:** 
+```jsx
+do {
+		HealthCardHelper?.removeScanHealthCard(onCompletion: {[unowned self]
+			(success,msg) in
+				// do further coding
+			})
+	} catch {	
+		self.showAlertMessage(title: error.localizedDescription, message: "")
+	}
+```
+	
+##### HealthCard Delegates:
+
+```jsx
+func dismissHealthCard()	//scanning cancelled callback
+func healthCardScanData(frontImage: UIImage?, backImage: UIImage?) // health card scanned data
+```
+
+##### To check if HealthCard Enrolled:
+
+Use this function to check the enrollment status of the Health Card. It returns the value as `true` or `false`
+
+**Declaration:**
+```jsx
+public func isHealthCardEnrolled(){};
+```
+
+**Usage:** 
+```jsx
+return HealthCardHelper.isHealthCardEnrolled();
+```
+
+#### Enroll Immunity Card
+Use this function to enroll an Immunity Card in the application.
+
+**Usage:** 
+```jsx
+let vc = ImmunityCardViewController.init(nibName: "ImmunityCardViewController", bundle: nil)
+	vc.modalPresentationStyle = .fullScreen
+	vc.delegate = self
+	present(vc, animated: true, completion: nil)
+```
+
+#### Save Of ImmunityCard
+
+Use this function to save the Immunity Card within the application.
+
+**Usage:** 
+```jsx
+ImmunityHelper.saveImmunityCard(frontImage: frontImage) { (success, msg) in
+
+	})
+```
+#### Removal Of ImmunityCard:
+Use this function to remove the enrolled Immunity Card.
+    
+**Declaration:**
+```jsx
+public func removeImmunityCard(){};
+```    
+**Usage:** 
+```jsx
+	do {
+		ImmunityHelper.removeImmunityCard { (success, msg) in
+		// do further coding
+		})
+	} catch {	
+		self.showAlertMessage(title: error.localizedDescription, message: "")
+	}
+```
+#### ImmunityCard Delegates
+ ```jsx
+func dissmissImmunityCard()	//scanning cancelled callback
+func immunityCertiScanData(_ scanImage: UIImage)// health card scanned data
+```
+
+#### To check if ImmunityCard Enrolled 
+Use this function to check the enrollment status of the Immunity Card within the application. It returns the value as `true` or `false`.
+**Declaration:**
+```jsx
+public func isImmunityCardEnrolled(){};
+```
+**Usage:**
+```jsx
+return ImmunityHelper.isImmunityCardEnrolled();
+```
+
+ #### Enroll Face 
+
+Use this function to enroll the Face ID in the application.
+
+**Global Variable declaration:**
+```jsx
+var faceRecognitionView :FaceRecognizerView?;
+```
+**Declaration:**
+```jsx
+public func enrollFace(){};
+```    
+**Usage:** 
+```jsx
+do {
+	faceRecognitionView = try FaceRecognizerView(vc: self, isFaceEnroll: true)
+	faceRecognitionView?.delegate = self
+	faceRecognitionView?.enrollFace()
+} catch  let error  {
+	self.showAlertMessage(title: error.localizedDescription, message: "")
+}
+```
+#### Removal Of Face Enrolled: 
+Use this function to remove the enrolled Face ID.
+**Declaration:**
+	jsx
+public func removeFaceData(){};
+**Usage:**
+```jsx
+faceRecognitionView =  FaceRecognizerView()
+faceRecognitionView?.delegate = self
+faceRecognitionView?.removeFaceData(onCompletion: {[unowned self] success,msg in
+         		// do further 
+})
+```
+
+ 
+#### Face Delegates: 
+```jsx 
+func faceFailed(msg: String) // something went wrong in face
+func successFaceEnrolled(msg: String) // face enrolled successfully
+func faceEnrollFailed(msg: String, data: Data) // failed face enrolled
+func successFaceCompare()
+func faceCompareFailed(msg: String, data: Data)
+```
+
+#### To check if Face Enrolled 
+Use this function to check the face enrollment status within the application. It returns the value as `true` or `false`.
+ 
+**Declaration:**
+```jsx
+public func isFacialRecognitionEnrolled(){};
+```    
+**Usage:** 
+```jsx
+let faceRecognizerView = FaceRecognizerView()
+	return faceRecognizerView.isFacialRecognitionEnrolled()
+```
+
+ #### <a name = "APIConfigurationSecurityCheckIdentitySafeBiometric"></a>Enroll Biometrics 
+#### Enroll Biometrics 
+Use this function to enroll the Biometrics in the application. Depending on the iPhone model type, it will select the system Biometrics. For example, for the `iPhone x` model, it will ask for FaceID.
+
+**Global Variable declaration:**
+`var finger: FingerViewHelper?`
+
+**Declaration:**
+```jsx
+public func enrollBiometric(){};
+```
+**Usage:**
+```jsx
+finger = FingerViewHelper(vc: self)
+	finger?.enrollBiometric(completion: {(success,int,msg)  in
+		//do further 
+	})
+```
+#### Removal Of Biometric Enrolled 
+Use this function to remove the enrolled Biometrics from the application.
+
+**Declaration:**
+```jsx
+public func removeBiometric(){};
+```
+**Usage:**
+```jsx
+	finger = FingerViewHelper(vc: self)
+	finger?.removeBiometric(completion: {(success,int,msg)  in
+		//do further 
+	})
+```
+#### To check if Biometric Enrolled 
+Use this function to check the enrollment status for the user’s biometrics within the application. It returns the value as `true` or `false`.
+ 
+**Declaration:**
+```jsx
+	public func isBiometricEnrolled(){};
+```
+
+**Usage:**
+```jsx
+let fingerViewHelper = FingerViewHelper(vc:UIViewController())
+	return fingerViewHelper.isBiometricEnrolled()
+```
+
+ #### <a name = "APIConfigurationSecurityCheckIdentitySafePin"></a>Enroll Pin 
+#### Enroll Pin  
+Use this function to enroll PIN in the application.
+**Declaration:**
+```jsx
+public func setPinEnrolled(){};
+```
+**Usage:** 
+```jsx
+User().setPinEnrolled(pin: self.pinSecond,vc:self, onCompletion: { 
+		[unowned self] (success,msg) in 
+			//do  further
+	})
+```
+#### To Get Enrolled Pin 
+Use this function to get the enrolled PIN details.
+**Declaration:**
+```jsx
+public func getPinEnrolled(){};
+```    
+**Usage:**
+```jsx
+	var user =  User()
+	user?.getPinEnrolled()
+```    
+#### To Check if Pin is enrolled 
+Use this function to check the PIN enrollment status within the application. It returns the value as `true` or `false`.
+
+**Declaration:**
+```jsx
+public func isPinEnrolled(){};
+```    
+
+**Usage:** 
+```jsx
+	var user =  User()
+	user?.isPinEnrolled()
+```
+
+#### <a name = "APIConfigurationSecurityCheckIdentityVerification"></a>Identity verification
+
+ #### <a name = "APIConfigurationSecurityCheckIdentityVerificationAddress"></a>Verify Address 
+
+To increase the level of assurance to Three(3) users need to verify their address. Before verifying the address, the users are required to enroll their Driver’s License, Passport, and Face. Once all faces are matched and enrolled, the user can verify the address details. Use this function to verify the address details.
+
+**Global Variable declaration:**
+```jsx
+var verifyAddress : VerifyAddress!
+```    
+**Declaration:**
+```jsx
+public func callVeriifyAddress(){};
+```    
+**Usage:** 
+```jsx
+do {
+		verifyAddress = try VerifyAddress(vc: self,verifyAddressdelegate:self)
+		try verifyAddress?.callVeriifyAddress()
+	} catch {
+		self.showAlertMessage(title: LicenseDataError.invalidLicenseKeyException.description, message: "")
+}
+```
+**Delegates:**
+```jsx
+func updateVerifyAddressResponse(isFor: String)
+func updateVerifyAddressFailure(isFor: String, errorMsg: String)
+func removeFacePoppedController()
+```
+
+#### <a name = "APIConfigurationSecurityCheckTransactionNotification"></a>Transaction & Notifications
+
+Use this function to get transactions and notifications lists that got executed while the user enrolls documents and assets into the application.
+
+ #### <a name = "APIConfigurationSecurityCheckTransactionNotificationUserTransactions"></a>Get User Transactions 
+
+**Global Variable declaration:**
+```jsx
+	var transactionNotificationAttr : TransactionNotificationModel?
+```
+**Declaration:**
+```jsx
+public func getUserTransaction(type: Const.NotificationEntityType)-> TransactionNotificationModel? {}
+```
+**Usage:**
+```jsx
+var transactionNotificationAttr = User().getUserTransaction(type: Const.NotificationEntityType.transaction)
+if let notifications = transactionNotificationAttr?.transactionNotification?.notifications{
+            // return notifications array
+        }
+if let transactions = transactionNotificationAttr?.transactionNotification?.transactions{
+            // return transactions array
+        }
+```
+
+#### <a name = "APIConfigurationSecurityCheckQRcodescan"></a>QRCode Scan
+
+ #### <a name = "APIConfigurationSecurityCheckQRcodescanScan"></a>Scan QR Code 
+Use this function to scan the QR code using the application.
+**Global Variable declaration:**
+```jsx
+var qrCode:QRCode?
+```
+**Declaration:**
+```jsx
+@objc public func scanQRActionForPairing() {};
+```
+**Usage:**
+```jsx
+qrCode = QRCode(vc: self, scopeEncryption: qrScopeEncryptType.qrPublicKey)
+qrCode?.delegate = self
+qrCode?.scanQRActionForPairing()
+ ```
+#### QRCodeCallback Delegates: 
+```jsx
+func authenticateWithScopesVC(scopesArr:NSMutableArray, qrJsonModel:QRJsonModel, vc:UIViewController) // provide qr scopes and data in JSON model
+func scanSuccessForQR() // qrcode scan success after auth validation
+func biometricScanForQRFailed(errorMsg:String) //biometrics failed while authenticating qr.
+```
+ 
+ #### <a name = "APIConfigurationSecurityCheckSenddatatoWebsockets"></a>Send Data To Websockets 
+Use this function to send data to the websocket to complete the QR scan process.
+
+**Declaration:**
+```jsx
+public func qrcodeConnectToWebSocket(forDataToSend dataJSON: OneKosmosSDK.QRJsonModel);
+```
+**Usage:**
+```jsx       
+qrcode?.qrcodeConnectToWebSocket(forDataToSend: qrJsonModel)
+```
+
+#### <a name = "APIConfigurationSecurityCheckAppLogin"></a>Application Login
+
+There are four methods to login into the application.
+
+ #### <a name = "APIConfigurationSecurityCheckAppLoginFace"></a>Login With Face 
+Use this function to login to the application using the Face ID enrolled in facial recognition.
+
+**Global Variable declaration:**
+```jsx
+var faceRecognitionView : FaceRecognizerView?
+```
+**Declaration:**
+```jsx
+public func enrollFace(){};
+```
+**Usage:** 
+```jsx
+do{
+		faceRecognitionView = try FaceRecognizerView(vc: self, isFaceEnroll: false)	
+		faceRecognitionView?.delegate = self	
+		faceRecognitionView?.enrollFace()
+}
+catch  let error  {
+		self.showAlertMessage(title: error.localizedDescription, message: "")
+}
+
+```
+#### Face Delegates: 
+ ```jsx
+func faceFailed(msg: String)//if something went wrong in face
+func successFaceEnrolled(msg: String)
+func faceEnrollFailed(msg: String, data: Data)
+func successFaceCompare() //this will be used in login
+func faceCompareFailed(msg: String, data: Data) //this will be used in login
+```
+
+ #### <a name = "APIConfigurationSecurityCheckAppLoginTouchIDorFaceID"></a>Login With TouchID / FaceID 
+
+Use this function to login to the application using the Fingerprint or faceID registered.
+**Declaration**
+```jsx
+public func loginWithBiometric(){};
+```    
+**Usage:** 
+```jsx
+let fingerViewHelper = FingerViewHelper(vc:self)
+	fingerViewHelper.loginWithBiometric(completion: {
+		(success,int,msg) in
+		//on success login do next function
+	})
+```    
+ #### <a name = "APIConfigurationSecurityCheckAppLoginPIN"></a>Login With PIN 
+
+Use this function to check the input values of the PIN against the already enrolled PIN. To get the PIN enrolled, use the following function:
+```jsx
+let user = User()
+user?.getPinEnrolled()
+```
+
+#### <a name = "APIConfigurationSecurityCheckUserInformation"></a>User Information
+In this section, the following list of functions will be used to get the user’s information, Trust score, DID, level of assurance details and verify OTP details.
+ #### To get user information like name, photo and so on: 
+```jsx
+let user = User()
+let userData = user.getUserInfo()
+let userImage = userData.userImage
+let userName = userData.username
+```
+ #### To get Trust Score: 
+```jsx
+let assurance = AssuranceLevel()
+assuranceLevel.getTrustScore()
+```
+
+ #### To get user DID: 
+```jsx
+let user = User()
+user.getDid()
+```
+
+ #### To get level of assurance: 
+```jsx
+let assurance = AssuranceLevel()
+return assurance.getLevelOfAssurance()
+```
+ #### To get App Public Key 
+```jsx
+let onekosmosutil = OneKosmosUtil()
+return assurance.getAppPublicKey()
+```
+ #### To get Decrypted String 
+```jsx
+let onekosmosutil = OneKosmosUtil()
+return onekosmosutil.decyptString(publicKey: String, data: String)
+```
+
+	
+ #### To get Encrypted String 
+```jsx
+let onekosmosutil = OneKosmosUtil()
+return onekosmosutil.encryptString(publicKey: String, data: String)
+```
+
+ #### To Verify OTP 
+
+Use the following function to verify the OTP sent to the user’s phone number.
+
+```jsx
+OnekosmosRequest().verifyOtp(otp: String, tenanturl: String, tenantTag: String, tenantCommunity: String){ (success, msg) in
+                                 };
+```
+
+For example:
+```jsx
+OnekosmosRequest().verifyOtp(otp: "221235", tenanturl: "https://1k-dev.1kosmos.net", tenantTag: "1kosmos", tenantCommunity: "default"){ (success, msg) in
+                                 };
+```                                 
+

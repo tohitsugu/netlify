@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Integrations/Identity Providers/Ze28be7cb-f7cc-45a6-8e44-8137ae7e9747",
+  "id": "v1/BlockID Integrations/Identity Providers/Ze28be7cb-f7cc-45a6-8e44-8137ae7e9747",
+  "isDocsHomePage": false,
+  "title": "Integration with G Suite",
+  "description": "This guide describes the procedure to configure the BlockID Admin Console as a passwordless authentication solution for your G Suite users. This integration will allow your users to log in to their G Suite account leveraging their biometrics. The biometric options include TouchID / FaceID and LiveID.",
+  "source": "@site/docs/v1/BlockID Integrations/Identity Providers/7_integration-wit.md.mdx",
+  "sourceDirName": "v1/BlockID Integrations/Identity Providers",
+  "slug": "/v1/integration-with-gsuite",
+  "permalink": "/docs/v1/integration-with-gsuite",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "slug": "/v1/integration-with-gsuite",
+    "id": "Ze28be7cb-f7cc-45a6-8e44-8137ae7e9747"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Integration with Windows",
+    "permalink": "/docs/v1/integration-with-windows"
+  },
+  "next": {
+    "title": "Integration with Oracle IDCS (Identity Cloud Service)",
+    "permalink": "/docs/v1/integration-with-oracle-idcs-identity-cloud-service"
+  }
+}

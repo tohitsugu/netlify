@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Integrations/Identity Providers/Z3556b698-4818-461b-8781-ed4911a8f856",
+  "id": "v1/BlockID Integrations/Identity Providers/Z3556b698-4818-461b-8781-ed4911a8f856",
+  "isDocsHomePage": false,
+  "title": "Integration with Windows",
+  "description": "This document describes the procedure to configure the Windows workstation as a passwordless authentication solution for your organization's users. This integration will allow the users to log in to their Windows workstations leveraging their biometrics. The biometric options include TouchID / FaceID, and LiveID.",
+  "source": "@site/docs/v1/BlockID Integrations/Identity Providers/6_integration-wit.md.mdx",
+  "sourceDirName": "v1/BlockID Integrations/Identity Providers",
+  "slug": "/v1/integration-with-windows",
+  "permalink": "/docs/v1/integration-with-windows",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "slug": "/v1/integration-with-windows",
+    "id": "Z3556b698-4818-461b-8781-ed4911a8f856"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Integration PingFederate",
+    "permalink": "/docs/v1/integration-pingfederate"
+  },
+  "next": {
+    "title": "Integration with G Suite",
+    "permalink": "/docs/v1/integration-with-gsuite"
+  }
+}

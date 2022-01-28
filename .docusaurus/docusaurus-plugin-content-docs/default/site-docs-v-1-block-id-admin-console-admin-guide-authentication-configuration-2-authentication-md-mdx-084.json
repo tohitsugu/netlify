@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Authentication Configuration/Zb59060b5-cc5e-48a5-8474-432054668177",
+  "id": "v1/BlockID Admin Console/Admin Guide/Authentication Configuration/Zb59060b5-cc5e-48a5-8474-432054668177",
+  "isDocsHomePage": false,
+  "title": "Authentication Modules",
+  "description": "The Authentication modules options are used to authenticate a user while logging in into the BlockID Admin Console application. There are three default authentication modules available during the installation process: Microsoft Active Directory, Lightweight Directory Services, and BlockID Connector. You can select one option out of Microsoft Active Directory (AD) and Lightweight Directory Services (LDAP) modules as per the datastore you own and both follow the same authentication process that is logging in by entering a username and password. The BlockID Connector module will enable you to perform authentication by allowing you to scan the QR code from your BlockID mobile application.",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/Authentication Configuration/2_authentication-.md.mdx",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide/Authentication Configuration",
+  "slug": "/v1/authentication-modules",
+  "permalink": "/docs/v1/authentication-modules",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/authentication-modules",
+    "id": "Zb59060b5-cc5e-48a5-8474-432054668177"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Glossary",
+    "permalink": "/docs/v1/glossary"
+  },
+  "next": {
+    "title": "Authentication Scheme",
+    "permalink": "/docs/v1/authentication-scheme"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Authentication Broker/internal-doc-bl",
+  "id": "v1/BlockID Authentication Broker/internal-doc-bl",
+  "isDocsHomePage": false,
+  "title": "internal-doc-bl",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Authentication Broker/3_internal-doc-bl.md",
+  "sourceDirName": "v1/BlockID Authentication Broker",
+  "slug": "/v1/BlockID Authentication Broker/internal-doc-bl",
+  "permalink": "/docs/v1/BlockID Authentication Broker/internal-doc-bl",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Installing BlockID Authentication Broker",
+    "permalink": "/docs/v1/installing-blockid-authentication-broker"
+  },
+  "next": {
+    "title": "Internal Guide - BlockID Authentication Broker",
+    "permalink": "/docs/v1/internal-doc-blockid-authentication-broker"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Videos/Zaf53f9dd-e489-49c7-856a-6bffdcce964f",
+  "id": "v1/BlockID Videos/Zaf53f9dd-e489-49c7-856a-6bffdcce964f",
+  "isDocsHomePage": false,
+  "title": "Zaf53f9dd-e489-49c7-856a-6bffdcce964f",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Videos/6_blockid-user-jo.md.md",
+  "sourceDirName": "v1/BlockID Videos",
+  "slug": "/v1/blockid-user-journey",
+  "permalink": "/docs/v1/blockid-user-journey",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "slug": "/v1/blockid-user-journey",
+    "id": "Zaf53f9dd-e489-49c7-856a-6bffdcce964f"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "blockid-user-jo",
+    "permalink": "/docs/v1/BlockID Videos/blockid-user-jo"
+  },
+  "next": {
+    "title": "getting-started",
+    "permalink": "/docs/v1/BlockID Videos/getting-started"
+  }
+}

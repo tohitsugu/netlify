@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Zb8579a30-ee26-4d7b-b4c1-2e9a32c62711",
+  "id": "v1/BlockID Admin Console/Admin Guide/Zb8579a30-ee26-4d7b-b4c1-2e9a32c62711",
+  "isDocsHomePage": false,
+  "title": "Administration Console",
+  "description": "The Administration Console is a landing page that provides a quick view of multiple sections available within the BlockID Admin Console application. To check the Administration Console screen, log in to the BlockID Admin Console application as an Administrator, the Administration Console screen is displayed.",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/3_administration-.md.mdx",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide",
+  "slug": "/v1/administration-console",
+  "permalink": "/docs/v1/administration-console",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/v1/administration-console",
+    "id": "Zb8579a30-ee26-4d7b-b4c1-2e9a32c62711"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Introduction to BlockID Admin Console",
+    "permalink": "/docs/v1/introduction-to-blockid-admin-console"
+  },
+  "next": {
+    "title": "Analytics and Event Logging",
+    "permalink": "/docs/v1/analytics"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/Zd8371067-2e6a-4730-9ef7-289dcab8c344",
+  "id": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/Zd8371067-2e6a-4730-9ef7-289dcab8c344",
+  "isDocsHomePage": false,
+  "title": "Salesforce",
+  "description": "This document describes the procedure to configure your organization's Salesforce application within the Athena Admin portal to use it as a passwordless authentication solution for your organization's Salesforce users. This integration will allow your users to log in to their Salesforce account leveraging their biometrics. The biometric options include TouchID / FaceID and LiveID.",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/4_salesforce.md.mdx",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications",
+  "slug": "/v1/salesforce",
+  "permalink": "/docs/v1/salesforce",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "slug": "/v1/salesforce",
+    "id": "Zd8371067-2e6a-4730-9ef7-289dcab8c344"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Auth0",
+    "permalink": "/docs/v1/auth0"
+  },
+  "next": {
+    "title": "G Suite",
+    "permalink": "/docs/v1/gsuite"
+  }
+}

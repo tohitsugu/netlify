@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/Developer Documentation/Mobile/Z88d6b9e5-5521-4678-aa13-5285436ebc5d",
+  "id": "v1/Developer Documentation/Mobile/Z88d6b9e5-5521-4678-aa13-5285436ebc5d",
+  "isDocsHomePage": false,
+  "title": "test",
+  "description": "2. Ienstall the BlockID mobile application",
+  "source": "@site/docs/v1/Developer Documentation/Mobile/3_test.md.mdx",
+  "sourceDirName": "v1/Developer Documentation/Mobile",
+  "slug": "/v1/test",
+  "permalink": "/docs/v1/test",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/v1/test",
+    "id": "Z88d6b9e5-5521-4678-aa13-5285436ebc5d"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "iOS",
+    "permalink": "/docs/v1/ios-1"
+  },
+  "next": {
+    "title": "Android",
+    "permalink": "/docs/v1/android-2"
+  }
+}

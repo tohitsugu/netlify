@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Z1d78dd72-0421-42cb-96da-4cb2a59eb0f8",
+  "id": "v1/BlockID New Admin Portal (Athena)/Z1d78dd72-0421-42cb-96da-4cb2a59eb0f8",
+  "isDocsHomePage": false,
+  "title": "Z1d78dd72-0421-42cb-96da-4cb2a59eb0f8",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/6_directory.md.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)",
+  "slug": "/v1/directory",
+  "permalink": "/docs/v1/directory",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "slug": "/v1/directory",
+    "id": "Z1d78dd72-0421-42cb-96da-4cb2a59eb0f8"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "directory",
+    "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/directory"
+  },
+  "next": {
+    "title": "users",
+    "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/users"
+  }
+}

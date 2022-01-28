@@ -1,0 +1,303 @@
+---
+slug: /v1/ios-2
+id: Zbdaddfbc-c6b9-4fc2-bd42-35c3c77b0956
+---
+# iOS
+This document describes the procedure to configure the BlockID Workforce iOS SDK into your organization's application. This integration will allow your users to use the features provided within the iOS SDK of the BlockID Workforce mobile application. The features include enrollment of the user’s LiveID (captures the live (real-time) facial images) details, Fingerprint, and PIN, etc.
+
+## Before you Begin
+You will need the following resources to complete this integration:
+
+* Xcode 11.0 or higher
+* Cocoapods 1.8.4 or higher
+* iOS 11 or higher
+
+**List of Topics:**
+1. [Security Check](#SecurityCheck)
+    * [Device Jailbroken](#DeviceJailbroken)
+2. [Framework Integration into the Project](#FrameworkIntegration)
+    * [Initialize BlockID Request](#InitializeBlockIDReq)
+         * [Register Tenant](#InitializeBlockIDReqRegisterTenant)
+3. [Register screen](#RegisterScreen)
+    * [Personas Available/Added](#RegisterScreenPersonas)
+    * [Add Personas](#AddPersonas)
+    * [Get List of Personas](#GetPersonas)
+4. [Biometrics](#Biometric)
+    *  [Login/Enroll Using Bometrics](#BiometricLogin)
+    *  [Biometric Errors](#BiometricErrors)
+    *  [Is Biometric Enrolled](#IsBiometricEnrolled)
+5. [PIN Enrollment](#PINEnrollment)
+    * [Check If PIN is Enrolled](#PINEnrollmentCheck)
+    *  [Enroll PIN](#PINEnrollmentEnroll)
+    *  [Get Enrolled Pin](#PINEnrollmentGetEnroll)
+6. [Face Enrollment](#FaceEnrollment)
+    * [Check If Face is enrolled](#FaceEnrollmentCheck)
+    * [Enroll Face](#FaceEnrollmentEnrollFace)
+    * [Login using Face](#FaceEnrollmentLoginFace)
+4. [QR Code Login](#QRCodeLogin)
+    * [TOTP](#QRCodeLoginTOTP)
+ 
+## <a name = "SecurityCheck"></a>Security Check
+
+Security check of the app is based on the below parameters:
+
+1. Device is Jailbroken
+2. Local Authentication enabled
+3. Biometric enabled
+4. App Version updated
+
+### <a name = "DeviceJailbroken"></a>Device Jailbroken
+
+If the device is jailbroken.
+**Declaration**:
+```swift
+public class func isDeviceJailbroken();
+```
+**Usage**:
+```swift
+let securityCheck = SecurityCheck()
+return securityCheck.isDeviceJailbroken()
+```
+
+## <a name = "FrameworkIntegration"></a>Framework Integration into the Project
+
+### <a name = "InitializeBlockIDReq"></a>Initialize BlockID Request
+
+The BlockID class is used to set up Tenant, protocol, Community for the whole application. To get if the user is registered.
+
+#### <a name = "InitializeBlockIDReqRegisterTenant"></a>Register Tenant
+Use this function to initialize the `registerTenant` to register a user to the BlockID Admin Console.
+
+**Declaration**:
+```swift
+public class func registerTenant(argTenant:String, argCommunity: String,argIsHttps:Bool,argPort:Int,argLicense:String, lat: Double, long: Double,onCompletion completionBlock:@escaping(_ retSuccess : Bool, _ retMessage : String)->Void);
+```
+
+**Usage**:
+```swift
+BlockIDRequest.registerTenant(argTenant: Enterprise.K_TENANT, argCommunity: Enterprise.K_COMMUNITY, argIsHttps: Enterprise.K_IS_HTTPS, argPort: Enterprise.K_PORT, argLicense:Enterprise.K_PORT, lat: Double, long: Double,onCompletion: {(success, message) in          
+})
+```
+
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| argTenant | Tenant name i.e. domain name. For example, (`console.onekosmos.com`) |
+| argCommunity | Community name |
+| argIsHttps | If API supports `https`. The value should be true or false. |
+| argPort | If API requires port |
+| argLicense | License key |
+| argLat | Latitude of location |
+| argLong | Longitude of location |
+| onCompletion | On successful implementation of register tenant class, the result will be `true` or `false`. If the tenant is registered and the user gets enrolled in the system, the function will return `true` or it will return `false`. |
+
+## <a name = "RegisterScreen"></a>Register screen
+Use this function to initialize the `registerTenant` to register a user to the BlockID Admin Console.
+
+### <a name = "RegisterScreenPersonas"></a>Personas Available/Added
+
+Use this function to check if the user is added persona to the application. Persona is nothing but the AD / LDAP user. These personas are used to get logged into Windows, Linux, or web login.
+
+**Declaration**:
+```swift
+public class func isPersonaAvailable()->Bool[};
+```
+
+**Usage**:
+```swift
+BlockIDRequest.isPersonaAvailable()
+```
+
+### <a name = "AddPersonas"></a>Add Personas
+
+This function adds personas ie AD/LDAP users to the BlockID Enterprise Application. To add personas while app installation and also to add multiple personas.
+
+**Declaration**:
+```swift
+public class func addPersonas(argUserID:String, argPwd:String, onCompletion:@escaping(_ success:Bool, _ message:String)->Void);
+```
+
+**Usage**:
+```swift
+BlockIDRequest.addPersonas(argUserID: tmpUserID, argPwd: tmpPwd, onCompletion: {(success, message) in})
+```
+
+### <a name = "GetPersonas"></a>Get List of Personas
+
+This function adds personas ie AD/LDAP users to the BlockID Enterprise Application. To add personas while app installation and also to add multiple personas.
+
+**Declaration**:
+```swift
+public class func addPersonas(argUserID:String, argPwd:String, onCompletion:@escaping(_ success:Bool, _ message:String)->Void)
+```
+
+**Usage**:
+```swift
+BlockIDRequest.addPersonas(argUserID: tmpUserID, argPwd: tmpPwd, onCompletion: {(success, message) in})
+```
+## <a name = "Biometric"></a>Biometrics
+`BiometricHelper` is the class which displays the device authentication. Initialize this helper with the current view controller.
+
+### <a name = "BiometricLogin"></a>Login/Enroll Using Bometrics
+This function displays the system default biometric authentication for the device if the device supports a **FIngerprint** or **Face** or **PIN**. 
+
+Initialize the class with the current view controller, where the biometric login option is given.
+
+**Declaration**:
+```swift
+Public func loginWithBiometric(completion completionBlock:@escaping(_ staus:Bool,_ code:Int, _ msg:String)->Void){}
+```
+
+**Usage**:
+```swift
+let biometric = BiometricHelper(vc: vc)
+biometric.loginWithBiometric(completion: {(retStatus,code,retMsg ) in})
+```
+**Request Params description**: 
+| Params | Description |
+| ----------- | ----------- |
+| vc | UIViewController, where the biometric class is used. |
+
+**Return Parameters:**
+
+
+### <a name = "BiometricErrors"> </a> Biometric Errors
+
+* `BiometricHelper.BiometricError.biometricError`: If user cancels Biometric.
+* `BiometricHelper.BiometricError.biometricNotAvailable`: If Biometric is not available in the device.
+
+* `BiometricHelper.BiometricError.biometricFailed1`
+* `BiometricHelper.BiometricError.biometricFailed2`
+* `BiometricHelper.BiometricError.biometricFailed3`: If Biometric is failed.
+
+### <a name = "IsBiometricEnrolled"></a>Is Biometric Enrolled
+
+This function returns if the Biometric is enrolled for the application.
+
+**Declaration**:
+```swift
+Public func isBiometricEnrolled()->Bool
+```
+
+**Usage**:
+```swift
+let biometric = BiometricHelper(vc: vc)
+biometric->isBiometricEnrolled()->Bool
+```
+
+## <a name = "PINEnrollment"></a>PIN Enrollment
+
+### <a name = "PINEnrollmentCheck"></a>Check If PIN is Enrolled
+
+This function checks if pin is enrolled for the BlockID Admin Console.
+
+**Declaration**:
+```swift
+public class func isPinEnrolled()
+```
+
+**Usage**:
+```swift
+BlockIDRequest.isPinEnrolled()
+```
+
+### <a name = "PINEnrollmentEnroll"></a>Enroll PIN
+This function Enrolls pin to the application.
+
+**Declaration**:
+```swift
+public class func enrollPin(passcode:String,onCompletion:@escaping(_ success:Bool,_ message:String)->Void)
+```
+
+**Usage**:
+```swift
+BlockIDRequest.updatePinData(passcode: String, onCompletion: {(status,msg) in })
+```
+
+### <a name = "PINEnrollmentGetEnroll"></a>Get Enrolled Pin
+This function returns the enrolled pin for the biometric application.
+
+**Declaration**:
+```swift
+public class func getPinEnrolled()
+```
+
+**Usage**:
+```swift
+BlockIDRequest.getPinEnrolled()
+```
+
+## <a name = "FaceEnrollment"></a>Face Enrollment
+FaceRecognizerView class helps to check if the face is enrolled, enroll the user’s face.
+
+### <a name = "FaceEnrollmentCheck"></a>Check If Face is enrolled
+
+This function checks if face is enrolled for the BlockID Admin Console application.
+
+**Declaration**:
+```swift
+Public func isFacialRecognitionEnrolled()->Bool
+```
+
+**Usage**:
+```swift
+let faceRecognizerView = FaceRecognizerView()
+return faceRecognizerView.isFacialRecognitionEnrolled()
+```
+### <a name = "FaceEnrollmentEnrollFace"></a>Enroll Face
+
+This function enrolls face for the enterprise application. Create an object for FaceRecognizerView() helper, set delegates to self, and call function enrollFace.
+
+**Declaration**:
+```swift
+Public func enrollFace();
+```
+
+**Usage**:
+```swift
+var faceRecognitionView :FaceRecognizerView?
+faceRecognitionView = FaceRecognizerView(vc: self, isDetection: true)
+faceRecognitionView?.delegate = self
+faceRecognitionView?.enrollFace()
+```
+
+**Delegates**
+```swift
+updateUserFailureResponse(errCode errorCode:Int,isFor:String,errorTitle:String,errorMsg:String)
+unlockDidEnd(withImage image:UIImage)
+unlockDiCancel()
+removeFacePoppedController()
+```
+
+### <a name = "FaceEnrollmentLoginFace"></a>Login using Face
+
+This function logins using the enrolled face for the enterprise application. Create an object for `FaceLogin()` helper, set delegates to self, and call function enrollFace.
+
+**Declaration**:
+```swift
+Public func loadEnrolledFace();
+```
+
+**Usage**:
+```swift
+var faceLogin :FaceLogin?
+faceLogin = FaceLogin(vc: self, isDetection: true)
+faceLogin?.delegate = self
+faceLogin?.loadEnrolledFace()
+```
+
+## <a name = "QRCodeLogin"></a>QR Code Login
+
+### <a name = "QRCodeLoginTOTP"></a>TOTP
+
+**Declaration**:
+```swift
+Public func getTotp()->String
+```
+
+**Usage**:
+```swift
+let totp = Totp()
+Let totp = totp.getTotp()
+```
+

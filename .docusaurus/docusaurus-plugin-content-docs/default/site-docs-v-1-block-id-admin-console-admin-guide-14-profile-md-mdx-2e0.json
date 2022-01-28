@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Z0fad9c80-7f85-4880-9cf5-5b8a12a9986e",
+  "id": "v1/BlockID Admin Console/Admin Guide/Z0fad9c80-7f85-4880-9cf5-5b8a12a9986e",
+  "isDocsHomePage": false,
+  "title": "Profile Management",
+  "description": "Profile Management allows you to manage your profile and view your primary details like first name, last name, mobile, and email addresses. It also allows you to view and update additional information related to your profile such as basic profile details, password details, number of sites approved by you, and lists of active access tokens and refresh tokens.",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/14_profile.md.mdx",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide",
+  "slug": "/v1/profile",
+  "permalink": "/docs/v1/profile",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 14,
+  "frontMatter": {
+    "slug": "/v1/profile",
+    "id": "Z0fad9c80-7f85-4880-9cf5-5b8a12a9986e"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Community Management",
+    "permalink": "/docs/v1/community-management"
+  },
+  "next": {
+    "title": "Core Configurations",
+    "permalink": "/docs/v1/core-configurations"
+  }
+}

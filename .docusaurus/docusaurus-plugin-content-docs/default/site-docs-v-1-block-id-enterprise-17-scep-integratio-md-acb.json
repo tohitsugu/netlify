@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/scep-integratio",
+  "id": "v1/BlockID Enterprise/scep-integratio",
+  "isDocsHomePage": false,
+  "title": "scep-integratio",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/17_scep-integratio.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/BlockID Enterprise/scep-integratio",
+  "permalink": "/docs/v1/BlockID Enterprise/scep-integratio",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 17,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Reports",
+    "permalink": "/docs/v1/reports"
+  },
+  "next": {
+    "title": "SCEP Integration",
+    "permalink": "/docs/v1/scep-integration"
+  }
+}

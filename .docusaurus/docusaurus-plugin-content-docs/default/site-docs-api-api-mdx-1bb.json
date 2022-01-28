@@ -1,0 +1,24 @@
+{
+  "unversionedId": "api/api1",
+  "id": "api/api1",
+  "isDocsHomePage": false,
+  "title": "BlockID Developer API",
+  "description": "The BlockID Developer API provides operations to interact with all BlockID applications and services. Designed to be secure and scalable, our language-agnostic API uses ECDSA encryption and implements modern REST principles according to OpenAPI Specification standards.",
+  "source": "@site/docs/api/api.mdx",
+  "sourceDirName": "api",
+  "slug": "/api",
+  "permalink": "/docs/api",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "slug": "/api",
+    "id": "api1"
+  },
+  "sidebar": "mySidebar",
+  "next": {
+    "title": "One-Time Passcodes",
+    "permalink": "/docs/api/otp"
+  }
+}

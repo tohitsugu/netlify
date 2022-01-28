@@ -1,0 +1,32 @@
+---
+slug: /v1/scep-integration
+id: Z92901538-52ae-4c81-91f5-7a286cb937f8
+---
+# SCEP Integration
+If you have any questions that are not addressed in the sections below, please send us an email at [info@1kosmos.com](info@1kosmos.com)
+
+
+
+:::(Info) ([SCEP Configuration](#SCEPConfiguration))
+BlockID supports the Simple Certificate Enrollment Protocol (SCEP). SCEP uses the Certification Authority (CA) certificate to secure the message exchange for the Certificate Signing Request (CSR). BlockID supports PKCS#12 certificate requests as well. BlockID could either act as the root CA or be an intermediary CA. In order to be an intermediary CA you would need to import the intermediary CA PFX certificates.
+:::
+
+
+## <a name = "SCEPConfiguration"></a>SCEP Configuration
+#### How to setup the SCEP configuration
+
+Select Administration Console > Enterprise Configuration > SCEP Configuration
+
+
+
+SCEP configuration requires the following from the Customer:
+
+•	SCEP Server URL
+•	SCEP Enrollment Challenge URL
+•	Enrollment Template Name
+•	Corporate Domain
+•	Enrollment Agent Name 
+•	Enrollment Agent Password 
+•	Retry Count 
+•	Retry Interval 
+

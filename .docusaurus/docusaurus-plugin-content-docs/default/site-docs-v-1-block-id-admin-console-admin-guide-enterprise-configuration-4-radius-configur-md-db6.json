@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/radius-configur",
+  "id": "v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/radius-configur",
+  "isDocsHomePage": false,
+  "title": "radius-configur",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/4_radius-configur.md",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide/Enterprise Configuration",
+  "slug": "/v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/radius-configur",
+  "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/radius-configur",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "scep-configurat",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/scep-configurat"
+  },
+  "next": {
+    "title": "samlv2",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Federation/samlv2"
+  }
+}

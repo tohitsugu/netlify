@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Authentication Broker/Zdae9610f-aaf7-4309-82e7-14a40f70d02a",
+  "id": "v1/BlockID Authentication Broker/Zdae9610f-aaf7-4309-82e7-14a40f70d02a",
+  "isDocsHomePage": false,
+  "title": "Installing BlockID Authentication Broker",
+  "description": "A BlockID Authentication Broker is installed on a client environment to allow the BlockID Admin Console (running in the cloud) to communicate within a client’s environment. All connections made by the broker are outbound and there is no need for any inbound connectivity into the company's network. The BlockID Authentication Broker is a lightweight JAVA application that provides a mechanism, communicates outbound only, and handles the flow of encrypted traffic between the Credential Provider (on Windows), Network Device Enrollment Service (NDES), Active Directory (AD), and the 1Kosmos cloud.",
+  "source": "@site/docs/v1/BlockID Authentication Broker/2_installing-bloc.md.mdx",
+  "sourceDirName": "v1/BlockID Authentication Broker",
+  "slug": "/v1/installing-blockid-authentication-broker",
+  "permalink": "/docs/v1/installing-blockid-authentication-broker",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/installing-blockid-authentication-broker",
+    "id": "Zdae9610f-aaf7-4309-82e7-14a40f70d02a"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Policy Management",
+    "permalink": "/docs/v1/saml-configuration"
+  },
+  "next": {
+    "title": "Internal Guide - BlockID Authentication Broker",
+    "permalink": "/docs/v1/internal-doc-blockid-authentication-broker"
+  }
+}

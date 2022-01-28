@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/blockid-sdk",
+  "id": "v1/BlockID Enterprise/blockid-sdk",
+  "isDocsHomePage": false,
+  "title": "blockid-sdk",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/8_blockid-sdk.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/BlockID Enterprise/blockid-sdk",
+  "permalink": "/docs/v1/BlockID Enterprise/blockid-sdk",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Authentication Scheme Configuration",
+    "permalink": "/docs/v1/authentication-scheme-configuration"
+  },
+  "next": {
+    "title": "BlockID SDK",
+    "permalink": "/docs/v1/blockid-sdk"
+  }
+}

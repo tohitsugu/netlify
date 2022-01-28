@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Videos/Ze715d0da-ad84-487c-a729-1b6e8267cb5c",
+  "id": "v1/BlockID Videos/Ze715d0da-ad84-487c-a729-1b6e8267cb5c",
+  "isDocsHomePage": false,
+  "title": "Ze715d0da-ad84-487c-a729-1b6e8267cb5c",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Videos/6_introduction-to.md.md",
+  "sourceDirName": "v1/BlockID Videos",
+  "slug": "/v1/introduction-to-blockid",
+  "permalink": "/docs/v1/introduction-to-blockid",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "slug": "/v1/introduction-to-blockid",
+    "id": "Ze715d0da-ad84-487c-a729-1b6e8267cb5c"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "introduction-to",
+    "permalink": "/docs/v1/BlockID Videos/introduction-to"
+  },
+  "next": {
+    "title": "blockid-workfor",
+    "permalink": "/docs/v1/BlockID Workforce Mobile Application/blockid-workfor"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/Ze12c6643-599c-41b6-b85d-1bcdb6691b0f",
+  "id": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/Ze12c6643-599c-41b6-b85d-1bcdb6691b0f",
+  "isDocsHomePage": false,
+  "title": "Generic SAML Application",
+  "description": "This document describes the procedure to configure your organization's application within the Athena Admin portal to use it as a passwordless authentication solution for your organization's application users. This integration will allow your users to log in to their application's account leveraging their biometrics. The biometric options include TouchID / FaceID and LiveID.",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/6_generic-saml-ap.md.mdx",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications",
+  "slug": "/v1/generic-saml-application",
+  "permalink": "/docs/v1/generic-saml-application",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "slug": "/v1/generic-saml-application",
+    "id": "Ze12c6643-599c-41b6-b85d-1bcdb6691b0f"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "G Suite",
+    "permalink": "/docs/v1/gsuite"
+  },
+  "next": {
+    "title": "Office365 Integration",
+    "permalink": "/docs/v1/office365-integration"
+  }
+}

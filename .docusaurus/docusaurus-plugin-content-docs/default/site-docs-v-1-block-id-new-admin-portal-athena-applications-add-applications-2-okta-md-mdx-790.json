@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/Z869ef4f5-309a-4480-a715-6c7a4148d3f9",
+  "id": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/Z869ef4f5-309a-4480-a715-6c7a4148d3f9",
+  "isDocsHomePage": false,
+  "title": "Okta",
+  "description": "This document describes the procedure to configure your organization's Okta application within the Athena Admin portal to use it as a passwordless authentication solution for your organization's Okta users. This integration will allow your users to log in to their Okta account leveraging their biometrics. The biometric options include TouchID / FaceID and LiveID.",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/2_okta.md.mdx",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications",
+  "slug": "/v1/okta",
+  "permalink": "/docs/v1/okta",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/okta",
+    "id": "Z869ef4f5-309a-4480-a715-6c7a4148d3f9"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Manage Applications",
+    "permalink": "/docs/v1/applications"
+  },
+  "next": {
+    "title": "Auth0",
+    "permalink": "/docs/v1/auth0"
+  }
+}

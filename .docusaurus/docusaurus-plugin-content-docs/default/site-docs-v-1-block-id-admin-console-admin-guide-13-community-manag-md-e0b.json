@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/community-manag",
+  "id": "v1/BlockID Admin Console/Admin Guide/community-manag",
+  "isDocsHomePage": false,
+  "title": "community-manag",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/13_community-manag.md",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide",
+  "slug": "/v1/BlockID Admin Console/Admin Guide/community-manag",
+  "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/community-manag",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "deploying-smart",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/deploying-smart"
+  },
+  "next": {
+    "title": "profile",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/profile"
+  }
+}

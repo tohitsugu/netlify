@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/datastore-confi",
+  "id": "v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/datastore-confi",
+  "isDocsHomePage": false,
+  "title": "datastore-confi",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/2_datastore-confi.md",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide/Enterprise Configuration",
+  "slug": "/v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/datastore-confi",
+  "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/datastore-confi",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "software-and-ha",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Authentication Configuration/software-and-ha"
+  },
+  "next": {
+    "title": "scep-configurat",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/scep-configurat"
+  }
+}

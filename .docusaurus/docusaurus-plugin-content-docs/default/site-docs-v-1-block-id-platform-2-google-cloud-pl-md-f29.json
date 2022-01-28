@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Platform/google-cloud-pl",
+  "id": "v1/BlockID Platform/google-cloud-pl",
+  "isDocsHomePage": false,
+  "title": "google-cloud-pl",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Platform/2_google-cloud-pl.md",
+  "sourceDirName": "v1/BlockID Platform",
+  "slug": "/v1/BlockID Platform/google-cloud-pl",
+  "permalink": "/docs/v1/BlockID Platform/google-cloud-pl",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "idp-configurati",
+    "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/Settings/idp-configurati"
+  },
+  "next": {
+    "title": "Google Cloud Platform: Kubernetes architecture guide for BlockID Platform",
+    "permalink": "/docs/v1/google-cloud-platform-kubernetes-architecture-guide-for-blockid-platform"
+  }
+}

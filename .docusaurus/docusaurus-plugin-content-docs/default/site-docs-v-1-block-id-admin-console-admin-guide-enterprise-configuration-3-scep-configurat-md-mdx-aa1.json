@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/Z141535b4-6b83-4cec-977f-3e5972a7fb7f",
+  "id": "v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/Z141535b4-6b83-4cec-977f-3e5972a7fb7f",
+  "isDocsHomePage": false,
+  "title": "SCEP Configuration",
+  "description": "When a user tries to enroll in the BlockID mobile app then he/she will get a hash (#) certificate after successfully authenticating in your datastore directory. You can achieve this by either adding the BlockID Broker server configurations or by adding your SCEP server configurations within the SCEP (Simple Certificate Enrollment Protocol) configurations screen. These configuration details are used to deploy certificates to devices with little interaction and no manual uploading of .cert files between systems. It authenticates connections of the BlockID mobile app and BlockID Admin Console.",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/3_scep-configurat.md.mdx",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide/Enterprise Configuration",
+  "slug": "/v1/scep-configuration",
+  "permalink": "/docs/v1/scep-configuration",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/v1/scep-configuration",
+    "id": "Z141535b4-6b83-4cec-977f-3e5972a7fb7f"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Datastore Configuration",
+    "permalink": "/docs/v1/datastore-configuration-1"
+  },
+  "next": {
+    "title": "Radius Configuration",
+    "permalink": "/docs/v1/radius-configuration"
+  }
+}

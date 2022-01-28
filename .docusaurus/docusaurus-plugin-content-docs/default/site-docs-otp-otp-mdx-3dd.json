@@ -1,0 +1,28 @@
+{
+  "unversionedId": "otp/otp1",
+  "id": "otp/otp1",
+  "isDocsHomePage": false,
+  "title": "OTP Authentication",
+  "description": "BlockID one-time passcodes are a great way to add additional authentication to your login experience. Integration is simple using our SDK and only requires a few lines of code.",
+  "source": "@site/docs/otp/otp.mdx",
+  "sourceDirName": "otp",
+  "slug": "/otp",
+  "permalink": "/docs/otp",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "slug": "/otp",
+    "id": "otp1"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Requesting a One-Time Passcode",
+    "permalink": "/docs/otp/request"
+  },
+  "next": {
+    "title": "Verifying One-Time Passcodes",
+    "permalink": "/docs/otp/verify"
+  }
+}

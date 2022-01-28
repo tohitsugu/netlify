@@ -1,0 +1,44 @@
+---
+slug: /v1/internal-process
+id: Z7801b653-f505-4c6b-93b4-ac8bd32c228f
+---
+# Tenant On-boarding Process Guide
+This document describes the procedure to onboard a tenant in the BlockID Admin Console for both the 1Kosmos as well as the customer.
+Within the **1Kosmos environment**, there are several steps that need to be performed.  You’ll need to install the **BlockID Admin Console** application, perform the necessary core configurations, and add a new tenant and perform the required tenant configurations before handing over the new tenant to the customer.
+
+Within the **Customer’s environment**, once you have been granted **BlockID Admin Console** access, install the **BlockID Authentication Broker** application and the **BlockID Credential Provider** applications. After installation, perform the necessary configurations to communicate with the BlockID platform. Additionally, use remote desktop session software like **VNC** to access a machine from your local workstation.
+
+There are two sets of configurations that need to be performed to accomplish the tenant’s on-boarding process:
+1. [Configurations at 1Kosmos environment](#1Ksteps)
+2. [Configurations within the BlockID Admin Console at customer’s environment](#TenantConfig)
+
+## <a name = "1Ksteps"></a>Configurations at 1Kosmos environment
+Perform the following steps:
+
+1. Install the **BlockID Admin Console** application. To check the BlockID Admin Console’s installation steps, visit the [Installing BlockID Admin Console](#InstallBlockIDAdminConsole) topic. The BlockID Admin Console is installed successfully.
+2. Log in to **BlockID Admin Console** using the default user that is `1kadmin`.
+3. Perform the necessary core configurations. Visit the [Core Configurations](https://1kosmos.document360.io/v1/docs/core-configurations) topic, to get a deeper understanding of these configurations. 
+4. In the **Administration Console** screen, click on the **Deploy Smart Contract** button to deploy a smart contract and validate the smart contract deployment for `ProofofName` and `ProofofValidity`. To learn more about the smart contract deployment process, check the [Deploying Smart Contract](https://1kosmos.document360.io/v1/docs/Deploy-Smart-Contract) topic.
+5. Add a new tenant for the particular client. Visit the [Tenant Management](https://1kosmos.document360.io/v1/docs/tenant-management) topic, to get detailed information on managing tenants.
+6. From the **Tenants** list, click on the newly onboarded tenant. The instance of the Administration Console screen is displayed with the community as `default` for the selected tenant.
+7. In the Administration Console screen, click on the **Deploy Smart Contract** button to deploy a smart contract for the tenant. To learn more about the smart contract deployment process, check the [Deploying Smart Contract](https://1kosmos.document360.io/v1/docs/Deploy-Smart-Contract) topic.
+8. Navigate to ***Administration Console** >  **Auth Configuration** > **Authentication Modules***  and enable the **1K User Directory (1KUD)** authentication module. Visit the [Authentication Modules](https://1kosmos.document360.io/v1/docs/authentication-modules) topic to get a detailed understanding of adding the authentication modules.
+9. In the Administration Console screen, add the **Push Notification configurations** for the tenant. Visit the [Administration Console](https://1kosmos.document360.io/v1/docs/administration-console) topic, to get a detailed understanding of configuring Push Notifications.
+10. Navigate to ***Administration Console** > **License Keys***, generate a new license key, and perform the necessary configurations to it. Additionally, perform the required change in the database. Visit the [License Keys](https://1kosmos.document360.io/v1/docs/license-keys) topic to get a detailed understanding of each task.
+1. Navigate to ***Administration Console** >  **Auth Configuration** > **Authentication Scheme***  to add an additional authentication scheme named `admin` and add `1KUD` authentication module within that scheme. This will be used to create the **admin URL** for each tenant. Within that admin URL, the user will be authenticated using **1KUD** as all the users in the 1KUD are the admin users. Do not change any details in the `default` authentication scheme. Visit the [Authentication Scheme](https://1kosmos.document360.io/v1/docs/authentication-scheme) topic to get a detailed understanding of adding the authentication schemes.
+2. Navigate to ***Administration Console** > **Identity Management** > **User Management*** and a new administrator user for the tenant. Visit the [User Management](https://1kosmos.document360.io/v1/docs/user-management) topic to check the steps for adding a user and managing the user details.
+3. Navigate to ***Administration Console** > **Identity Management** > **Role  Management*** and assign a role as a **`Tenant Administrator`** for the added user. Visit the [Role Management](https://1kosmos.document360.io/v1/docs/role-management) topic to assign and manage the roles to the users.
+4.  Logout and log in using the onboarded tenant admin user credentials on their URL `<customer_tenant>.1kosmos.net/default/login?service=admin`
+5. After the successful login, provide the credentials to the customer and ask them to use the username and password or log in using the “**Login with BlockID**” option which is QR code. For the QR code login, you will need a BlockID mobile app.
+
+## <a name = "TenantConfig"></a>Configurations within the BlockID Admin Console at customer’s environment
+Perform the following steps:
+
+1. To get the URL and Admin user credentials of your BlockID Admin Console, please contact your 1Kosmos representative.
+2. Login to your BlockID Admin Console using the Admin user credentials.
+3. From the top right corner, click on the **User Account** list (third list) and click **Profile**, click Password Management and reset the password.
+4. Contact your 1Kosmos representative to get the BlockID Authentication Broker installation file, install the broker application, and perform the required configurations within your broker application. Visit the [Installing BlockID Authentication Broker](https://1kosmos.document360.io/v1/docs/installing-blockid-authentication-broker) topic for information on how to install and configure the BlockID Authentication Broker application.
+5. Contact your 1Kosmos representative to get the **BlockID Credential Provider (CP)** Installation file, install the CP application, and perform the required configurations within your CP application and Windows workstation. Visit the [Installing BlockID Credential Provider](https://1kosmos.document360.io/v1/docs/installing-blockid-credential-provider) topic for step by step understanding of installation and configuration of the BlockID Credential Provider application.
+6. Install and use a remote desktop session software like VNC to access a machine from your local workstation.
+7. Test the VNC connectivity and login to your workstation.
+8. Download and install the BlockID mobile application to test passwordless login to your BlockID Admin Console. Visit the [Login using BlockID mobile application](https://docs.1kosmos.com/docs/blockid-mobile-application-user-guide#a-nameloginusingqr-datatomarkpass-alogin-to-the-blockid-admin-console-by-scanning-the-qr-code) topic for information on how to and configure the BlockID mobile application and for information about how to log in to your BlockID Admin Console by scanning the QR code.

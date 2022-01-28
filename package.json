@@ -26,6 +26,7 @@
     "axios": "^0.21.1",
     "classnames": "^2.3.1",
     "clsx": "^1.1.1",
+    "core-js": "3.4",
     "crypto-browserify": "3.12.0",
     "date-fns": "^2.25.0",
     "docusaurus-node-polyfills": "1.0.0",

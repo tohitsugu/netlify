@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/scep-configurat",
+  "id": "v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/scep-configurat",
+  "isDocsHomePage": false,
+  "title": "scep-configurat",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/3_scep-configurat.md",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide/Enterprise Configuration",
+  "slug": "/v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/scep-configurat",
+  "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/scep-configurat",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "datastore-confi",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/datastore-confi"
+  },
+  "next": {
+    "title": "radius-configur",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/radius-configur"
+  }
+}

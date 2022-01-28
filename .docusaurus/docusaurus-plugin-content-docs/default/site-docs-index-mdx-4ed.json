@@ -1,0 +1,28 @@
+{
+  "unversionedId": "index",
+  "id": "index",
+  "isDocsHomePage": false,
+  "title": "BlockID Developer SDK",
+  "description": "The BlockID Developer SDK allows you to easily integrate BlockID services into your development platform. We currently support Node.js, PHP, and Java.",
+  "source": "@site/docs/index.mdx",
+  "sourceDirName": ".",
+  "slug": "/index",
+  "permalink": "/docs/index",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "slug": "/index",
+    "id": "index"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Verifying One-Time Passcodes",
+    "permalink": "/docs/otp/verify"
+  },
+  "next": {
+    "title": "Universal Web Login",
+    "permalink": "/docs/uwl"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v2/BlockID FAQ/Zb0eccd8d-dfdc-48d7-bf4a-2444bd2c7822",
+  "id": "v2/BlockID FAQ/Zb0eccd8d-dfdc-48d7-bf4a-2444bd2c7822",
+  "isDocsHomePage": false,
+  "title": "Internal FAQ guide for BlockID Product Suite",
+  "description": "This is an internal FAQ guide that includes responses to:",
+  "source": "@site/docs/v2/BlockID FAQ/4_internal-faq-gu.md.mdx",
+  "sourceDirName": "v2/BlockID FAQ",
+  "slug": "/v2/internal-faq-guide-for-blockid-product-suite",
+  "permalink": "/docs/v2/internal-faq-guide-for-blockid-product-suite",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "slug": "/v2/internal-faq-guide-for-blockid-product-suite",
+    "id": "Zb0eccd8d-dfdc-48d7-bf4a-2444bd2c7822"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "FAQ's related to the BlockID Product Suite",
+    "permalink": "/docs/v2/faqs-related-to-the-blockid-product-suite"
+  },
+  "next": {
+    "title": "BlockID Release Notes",
+    "permalink": "/docs/v2/blockid-release-notes"
+  }
+}

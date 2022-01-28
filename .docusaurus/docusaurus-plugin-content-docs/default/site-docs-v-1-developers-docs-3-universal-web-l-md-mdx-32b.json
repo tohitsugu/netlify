@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/Developer's Docs/Z4cf8b1b1-6f1b-4f4a-b70c-0b5ccf378bdf",
+  "id": "v1/Developer's Docs/Z4cf8b1b1-6f1b-4f4a-b70c-0b5ccf378bdf",
+  "isDocsHomePage": false,
+  "title": "Universal Web Login (UWL) Guide",
+  "description": "BlockID’s Universal Web Login (UWL) is a flexible authentication framework for all your websites and applications that ensures the highest level of assurance by reaching IAL3 and AAL3 levels per the NIST 800-63-3 guidelines. It augments or replaces the traditional username, password & MFA-based login with a passwordless experience by leveraging the user’s biometrics using BlockID mobile app. The biometric options include TouchID / FaceID, and LiveID (true biometrics).",
+  "source": "@site/docs/v1/Developer's Docs/3_universal-web-l.md.mdx",
+  "sourceDirName": "v1/Developer's Docs",
+  "slug": "/v1/universal-web-login-uwl-guide",
+  "permalink": "/docs/v1/universal-web-login-uwl-guide",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/v1/universal-web-login-uwl-guide",
+    "id": "Z4cf8b1b1-6f1b-4f4a-b70c-0b5ccf378bdf"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/docs/v1/getting-started"
+  },
+  "next": {
+    "title": "BlockID Admin Console",
+    "permalink": "/docs/v1/blockid-admin-console-api"
+  }
+}

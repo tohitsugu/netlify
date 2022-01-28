@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Authentication Broker/upgrading-block",
+  "id": "v1/BlockID Authentication Broker/upgrading-block",
+  "isDocsHomePage": false,
+  "title": "upgrading-block",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Authentication Broker/6_upgrading-block.md",
+  "sourceDirName": "v1/BlockID Authentication Broker",
+  "slug": "/v1/BlockID Authentication Broker/upgrading-block",
+  "permalink": "/docs/v1/BlockID Authentication Broker/upgrading-block",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Authentication Broker - User Guide",
+    "permalink": "/docs/v1/blockid-authentication-broker-user-guide"
+  },
+  "next": {
+    "title": "Upgrading BlockID Authentication Broker",
+    "permalink": "/docs/v1/upgrading-blockid-authentication-broker"
+  }
+}

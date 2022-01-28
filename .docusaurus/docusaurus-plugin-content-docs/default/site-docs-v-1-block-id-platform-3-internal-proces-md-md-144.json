@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Platform/Z7801b653-f505-4c6b-93b4-ac8bd32c228f",
+  "id": "v1/BlockID Platform/Z7801b653-f505-4c6b-93b4-ac8bd32c228f",
+  "isDocsHomePage": false,
+  "title": "Z7801b653-f505-4c6b-93b4-ac8bd32c228f",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Platform/3_internal-proces.md.md",
+  "sourceDirName": "v1/BlockID Platform",
+  "slug": "/v1/internal-process",
+  "permalink": "/docs/v1/internal-process",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/v1/internal-process",
+    "id": "Z7801b653-f505-4c6b-93b4-ac8bd32c228f"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "internal-proces",
+    "permalink": "/docs/v1/BlockID Platform/internal-proces"
+  },
+  "next": {
+    "title": "blockid-solutio",
+    "permalink": "/docs/v1/BlockID Videos/blockid-solutio"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Z93c052e9-c576-4fc4-8642-ea84578f6a60",
+  "id": "v1/BlockID Admin Console/Admin Guide/Z93c052e9-c576-4fc4-8642-ea84578f6a60",
+  "isDocsHomePage": false,
+  "title": "Analytics and Event Logging",
+  "description": "The Analytics dashboard is a business intelligence analytics engine that gives you an overview of the activity and security of your environment. It uses the elastic search to display reports and give you insights based on pre-defined System Log queries. It provides insight into how end-users are utilizing apps, services, and detects any potential security risks.",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/8_analytics.md.mdx",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide",
+  "slug": "/v1/analytics",
+  "permalink": "/docs/v1/analytics",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "slug": "/v1/analytics",
+    "id": "Z93c052e9-c576-4fc4-8642-ea84578f6a60"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Administration Console",
+    "permalink": "/docs/v1/administration-console"
+  },
+  "next": {
+    "title": "License Keys",
+    "permalink": "/docs/v1/license-keys"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/iOS/blockid-ios-sdk",
+  "id": "v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/iOS/blockid-ios-sdk",
+  "isDocsHomePage": false,
+  "title": "blockid-ios-sdk",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/iOS/2_blockid-ios-sdk.md",
+  "sourceDirName": "v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/iOS",
+  "slug": "/v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/iOS/blockid-ios-sdk",
+  "permalink": "/docs/v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/iOS/blockid-ios-sdk",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "blockid-admin-c",
+    "permalink": "/docs/v1/Developer's Docs/API References/blockid-admin-c"
+  },
+  "next": {
+    "title": "ios-110",
+    "permalink": "/docs/v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/iOS/ios-110"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Authentication Broker/blockid-authent",
+  "id": "v1/BlockID Authentication Broker/blockid-authent",
+  "isDocsHomePage": false,
+  "title": "blockid-authent",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Authentication Broker/4_blockid-authent.md",
+  "sourceDirName": "v1/BlockID Authentication Broker",
+  "slug": "/v1/BlockID Authentication Broker/blockid-authent",
+  "permalink": "/docs/v1/BlockID Authentication Broker/blockid-authent",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Internal Guide - BlockID Authentication Broker",
+    "permalink": "/docs/v1/internal-doc-blockid-authentication-broker"
+  },
+  "next": {
+    "title": "BlockID Authentication Broker - User Guide",
+    "permalink": "/docs/v1/blockid-authentication-broker-user-guide"
+  }
+}

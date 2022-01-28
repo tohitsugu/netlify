@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Integrations/Zfe8fbb9a-e6cd-4663-a4d0-9b961faaa57c",
+  "id": "v1/BlockID Integrations/Zfe8fbb9a-e6cd-4663-a4d0-9b961faaa57c",
+  "isDocsHomePage": false,
+  "title": "Zfe8fbb9a-e6cd-4663-a4d0-9b961faaa57c",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Integrations/5_integration-wit.md.md",
+  "sourceDirName": "v1/BlockID Integrations",
+  "slug": "/v1/integration-with-pingfederate",
+  "permalink": "/docs/v1/integration-with-pingfederate",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "slug": "/v1/integration-with-pingfederate",
+    "id": "Zfe8fbb9a-e6cd-4663-a4d0-9b961faaa57c"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "integration-wit",
+    "permalink": "/docs/v1/BlockID Integrations/integration-wit"
+  },
+  "next": {
+    "title": "intergration-wi",
+    "permalink": "/docs/v1/BlockID Integrations/Identity Providers/intergration-wi"
+  }
+}

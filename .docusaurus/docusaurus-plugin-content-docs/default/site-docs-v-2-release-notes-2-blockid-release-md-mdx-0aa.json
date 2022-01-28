@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v2/Release Notes/Z158204c7-a371-44d5-bf91-23aa80e7fff4",
+  "id": "v2/Release Notes/Z158204c7-a371-44d5-bf91-23aa80e7fff4",
+  "isDocsHomePage": false,
+  "title": "BlockID Release Notes",
+  "description": "2020",
+  "source": "@site/docs/v2/Release Notes/2_blockid-release.md.mdx",
+  "sourceDirName": "v2/Release Notes",
+  "slug": "/v2/blockid-release-notes",
+  "permalink": "/docs/v2/blockid-release-notes",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v2/blockid-release-notes",
+    "id": "Z158204c7-a371-44d5-bf91-23aa80e7fff4"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Internal FAQ guide for BlockID Product Suite",
+    "permalink": "/docs/v2/internal-faq-guide-for-blockid-product-suite"
+  },
+  "next": {
+    "title": "Release Notes v3",
+    "permalink": "/docs/v2/release-notes-v3"
+  }
+}

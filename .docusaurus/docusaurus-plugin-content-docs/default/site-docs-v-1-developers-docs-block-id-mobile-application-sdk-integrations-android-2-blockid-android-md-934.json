@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/blockid-android",
+  "id": "v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/blockid-android",
+  "isDocsHomePage": false,
+  "title": "blockid-android",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/2_blockid-android.md",
+  "sourceDirName": "v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/Android",
+  "slug": "/v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/blockid-android",
+  "permalink": "/docs/v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/blockid-android",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "ios-100",
+    "permalink": "/docs/v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/iOS/ios-100"
+  },
+  "next": {
+    "title": "android-110",
+    "permalink": "/docs/v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/android-110"
+  }
+}

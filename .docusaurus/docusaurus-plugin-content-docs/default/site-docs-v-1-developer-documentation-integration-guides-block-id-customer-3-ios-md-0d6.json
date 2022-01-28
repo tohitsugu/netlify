@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/Developer Documentation/Integration Guides/BlockID Customer/ios",
+  "id": "v1/Developer Documentation/Integration Guides/BlockID Customer/ios",
+  "isDocsHomePage": false,
+  "title": "ios",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/Developer Documentation/Integration Guides/BlockID Customer/3_ios.md",
+  "sourceDirName": "v1/Developer Documentation/Integration Guides/BlockID Customer",
+  "slug": "/v1/Developer Documentation/Integration Guides/BlockID Customer/ios",
+  "permalink": "/docs/v1/Developer Documentation/Integration Guides/BlockID Customer/ios",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "android",
+    "permalink": "/docs/v1/Developer Documentation/Integration Guides/BlockID Customer/android"
+  },
+  "next": {
+    "title": "android-2",
+    "permalink": "/docs/v1/Developer Documentation/Integration Guides/BlockID Workforce/android-2"
+  }
+}

@@ -1,0 +1,89 @@
+---
+slug: /v2/release-notes-v3
+id: Zd4c725d7-840f-4e0e-a801-c775c6e281a8
+---
+# Release Notes v3
+#### 2020.05.12: Monthly Production release notes
+* Features may not be available in all BlockID Products.
+
+General Available Features
+Architecture Enhancements
+
+### Generally Available Features
+
+* * *
+#### New Features
+
+**Support for RADIUS Server Authentication**
+BlockID Admin Console can now accept RADIUS authentication requests from clients and enable secure logon with addition OTP
+
+**BlockID Broker**
+BlockID Admin Console enables remote authentication with on-premise directories without requiring site-site VPN
+
+**Decentralized ID Resolver**
+BlockID driver resolving DID's created by the BlockID that conforms to the Distributed Identity Foundation framework
+
+**User Management**
+BlockID Admin Console now supports user management with full scale RBAC enabling administrators to control granular access to the admin console
+
+**Enterprise Windows Logon**
+
+Ability to logon to windows workstation using BlockID Workforce App. A credential provider needs to be available on the windows workstation to support this. A sample video of this feature is available [here](https://www.youtube.com/watch?v=U8EapZIPDw4) 
+
+**Push Notification**
+
+BlockID Admin console now supports the ability to send device push notifications when the user initiates a logon process. This will be available along with the ability for a user to scan the QR code
+
+**Password Reset**
+
+A user can reset their enterprise Active Directory password through the BlockID Workforce App
+
+* * *
+#### Feature Enhancements
+
+**User Management**
+Support for management of users across multiple sources
+Modification of user data in the data store directly
+Administration to allow managing user LOA
+
+**Biometric Verification**
+New consent screen for user to validate prior to capturing biometrics data
+
+**FAQ**
+A new list of FAQ available through the API console with the ability for every community to manage their own FAQ
+
+**Drivers License Scan**
+On the BlockID Consumer App, image of the Drivers license will be displayed indicating when the front and the back  would need to scanned
+
+**Attribute exchange**
+Ability to configure and send attributes as part of SAML request by a web application
+
+* * *
+
+### Architecture Enhancements
+
+
+#### Stateless Architecture
+Support for stateless sessions across the entire platform. Enables seamless session transference across both on-prem and SaaS subscriptions and higher scalability
+
+#### Websockets
+Modification of communication from mobile app and web properties to web sockets. Enables secure commnication to intended endpoints through the platform. e.g. workstation logon
+
+#### Linkage of Identity attributes via smart contracts
+Storage of identity attributes has been migrated to use smart contracts thereby enabling secure storage on the distributed ledger. The smart contracts can be unique to each community with varying attributes being collected about the identity
+
+* * *
+
+### Bug Fixes
+
+**SAML Logout**
+Logout from a SAML application redirects to 1Kosmos API Gateway Admin console. This issue has been addressed
+
+**Handle Exceptions**
+When an invalid transaction id is passed in the URL, the exception should be properly handled with the proper message shown on the page
+
+**User Management Errors**
+Display an error message 'no users are found according to the filters' in Directory Tree (DIT) on the user management page.
+
+**QR Code on Internet Explorer 11**
+Fixed the error of not displaying the QR code and even admin console on IE 11

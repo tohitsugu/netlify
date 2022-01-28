@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Authentication Configuration/software-and-ha",
+  "id": "v1/BlockID Admin Console/Admin Guide/Authentication Configuration/software-and-ha",
+  "isDocsHomePage": false,
+  "title": "software-and-ha",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/Authentication Configuration/4_software-and-ha.md",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide/Authentication Configuration",
+  "slug": "/v1/BlockID Admin Console/Admin Guide/Authentication Configuration/software-and-ha",
+  "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Authentication Configuration/software-and-ha",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "authentication-",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Authentication Configuration/authentication-"
+  },
+  "next": {
+    "title": "datastore-confi",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/datastore-confi"
+  }
+}

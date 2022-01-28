@@ -1,0 +1,74 @@
+---
+slug: /v1/blockid-authentication-broker-user-guide
+id: Zd1256c41-99d9-4b0a-8a6c-48d13a499fa8
+---
+# BlockID Authentication Broker - User Guide
+The BlockID Authentication Broker is a lightweight JAVA application that provides a mechanism, communicates outbound only, and handles the flow of encrypted traffic between the Credential Provider (on Windows), Network Device Enrollment Service (NDES), Active Directory (AD), and the 1Kosmos cloud.
+
+This document describes the following fundamental concepts supported by the BlockID Authentication Broker:
+
+1. Multiple Broker Support
+2. Broker Legacy AD Password Reset Support
+
+
+## Multiple Broker Support
+1Kosmos provides multiple brokers setup for BlockID Admin Console. To achieve this, install each broker on a separate Linux/Unix machine, and in each broker configuration, add the same broker auth module’s WebSocket URL and AD/LDAP details of BlockID Admin Console. 
+
+When a BlockID Admin Console is connected to multiple brokers, it will detect if a broker is brought off-line and automatically route requests to the other connected brokers. Also, additional brokers can be added to the system to provide additional performance and availability. 
+
+The BlockID Admin Console will randomly select any broker and establish a connection with it at a time (until that broker stops working) out of the number of linked brokers. This allows the BlockID Admin Console to provide a high level of performance and uptime that cannot be achieved when just a single broker is providing service.
+
+The BlockID Admin Console will detect if a broker is brought off-line or stopped and automatically route the requests to the other linked brokers. Also, additional brokers can be added to the system to provide additional performance and availability.
+
+
+:::(Info) (Note:)
+To Install and configure more than one broker for best performance and availability, they should all be on separate Linux/Unix machines.
+
+To get the detailed steps on installation and configuration of BlockID Authentication Broker, visit its [Installation Guide](https://1kosmos.document360.io/docs/en/installing-blockid-authentication-broker).
+:::
+
+To configure multiple brokers support for the BlockID Admin Console:
+
+1. BlockID Admin Console configurations:
+    * Login to the BlockID Admin Console.
+    * Navigate to ***Administration Console > Auth Configuration > Authentication Modules***.
+    * From the Enabled Authentication Modules section, click on the Edit & Configure this Module ![EditandConfigurethisModuleicon](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/EditandConfigurethisModuleicon.jpg) icon for the enabled authentication broker module.
+    * Copy the websocket URL generated for the broker and save it.
+
+2. Broker configurations:
+    * On the Linux/Unix server, start the BlockID Authentication Broker.
+    * Open the web browser, enter the Broker Server FQDN URL that is `http://<BROKER_SERVER_HOSTNAME>:<port>` in the Address bar, and press Enter. The Configure Websocket Client application screen is displayed. This is the enterprise screen to configure the broker.
+    * In the Configure Websocket Client application screen:
+        * Navigate to ***LDAP or AD Configurations > BlockID Broker Core Config > Broker WebSocket***, enter the same websocket URL copied from the BlockID Admin console.
+        * Navigate to ***LDAP or AD Configurations >  LDAP or AD Configuration***, enter the similar AD configuration details added within the other brokers LDAP section.
+        * Click `Submit`.
+
+:::(Error) (Info:)
+Note that, multiple brokers should include the same WebSocket configurations to provide support to the same BlockID Admin Console.
+:::
+
+## Broker Legacy AD Password Reset Support
+
+This feature allows the user to reset his/her password. For example, the BlockID mobile app has a reset credentials feature, that would use the password reset if the broker was configured for the authentication. The BlockID Admin console also has a password reset feature. The broker searches for the user using the config parameters and if the searched user is found, the broker binds it as the administrative user to the configured directory and modifies the password of the user.
+
+:::(Info) (Note:)
+Active Directory password resets always require an **SSL/TLS connection** from the broker to the AD server. LDAP directories may or may not require SSL/TLS depending on how they are configured.
+:::
+
+To reset the password, perform the following steps:
+1. From the BlockID app:
+    * Open the BlockID mobile app, click `RESET AD CREDENTIALS`.
+        * **Update password for below userid**: It shows the username of the persona.
+        * **New Password**: Enter the new password.
+        * **Confirm Password**: Enter the new password again.
+        * Click `Reset Ad Credentials`. This will reset the password for the selected persona within the application.
+2. From the BlockID Admin Console:
+    * Login to BlockID Admin Console.
+    * From the top right corner, click on the **User Account** list (third list) and click **Profile**.
+    * Click on the **Password Management** tab. 
+    * In the Password Management tab:
+        * **Password**: Enter the new password.
+        * **Confirm Password**: Enter the new password again.
+        * Click **Update Password**. This will update the password for the selected user profile within the application.
+
+

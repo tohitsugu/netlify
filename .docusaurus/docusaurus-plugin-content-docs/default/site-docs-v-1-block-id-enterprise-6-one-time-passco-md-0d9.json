@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/one-time-passco",
+  "id": "v1/BlockID Enterprise/one-time-passco",
+  "isDocsHomePage": false,
+  "title": "one-time-passco",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/6_one-time-passco.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/BlockID Enterprise/one-time-passco",
+  "permalink": "/docs/v1/BlockID Enterprise/one-time-passco",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Federation Integrations",
+    "permalink": "/docs/v1/item-3"
+  },
+  "next": {
+    "title": "OTP Module Configuration",
+    "permalink": "/docs/v1/one-time-passcode-module-configuration"
+  }
+}

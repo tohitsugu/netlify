@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/users",
+  "id": "v1/BlockID New Admin Portal (Athena)/users",
+  "isDocsHomePage": false,
+  "title": "users",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/8_users.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)",
+  "slug": "/v1/BlockID New Admin Portal (Athena)/users",
+  "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/users",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Directory",
+    "permalink": "/docs/v1/directory"
+  },
+  "next": {
+    "title": "Users",
+    "permalink": "/docs/v1/users"
+  }
+}

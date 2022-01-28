@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Platform/Zf3f90934-5f97-46a4-a2bf-8b101c4aee00",
+  "id": "v1/BlockID Platform/Zf3f90934-5f97-46a4-a2bf-8b101c4aee00",
+  "isDocsHomePage": false,
+  "title": "Google Cloud Platform: Kubernetes architecture guide for BlockID Platform",
+  "description": "The BlockID platform introduces multi-tenancy in the application which means the application will logically have multiple tenants for each tenant of the customer. It also includes a single tenancy model for those customers who want to act as the only tenant within the application. This document explains the BlockID platform architecture in Kubernetes (K8) on the Google Cloud Platform (GCP).",
+  "source": "@site/docs/v1/BlockID Platform/2_google-cloud-pl.md.mdx",
+  "sourceDirName": "v1/BlockID Platform",
+  "slug": "/v1/google-cloud-platform-kubernetes-architecture-guide-for-blockid-platform",
+  "permalink": "/docs/v1/google-cloud-platform-kubernetes-architecture-guide-for-blockid-platform",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/google-cloud-platform-kubernetes-architecture-guide-for-blockid-platform",
+    "id": "Zf3f90934-5f97-46a4-a2bf-8b101c4aee00"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "IdP Configuration",
+    "permalink": "/docs/v1/idp-configuration"
+  },
+  "next": {
+    "title": "Tenant On-boarding Process Guide",
+    "permalink": "/docs/v1/internal-process"
+  }
+}

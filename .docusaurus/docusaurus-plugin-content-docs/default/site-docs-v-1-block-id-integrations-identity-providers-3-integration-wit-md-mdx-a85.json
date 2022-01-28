@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Integrations/Identity Providers/Z8c31c0dd-dd72-4b22-bee5-16a3cbedee0b",
+  "id": "v1/BlockID Integrations/Identity Providers/Z8c31c0dd-dd72-4b22-bee5-16a3cbedee0b",
+  "isDocsHomePage": false,
+  "title": "Integration with Salesforce",
+  "description": "This document describes the procedure to configure BlockID Admin Console as a passwordless authentication solution for your organization's Salesforce users. This integration will allow your users to log in to their Salesforce account leveraging their biometrics. The biometric options include TouchID / FaceID and LiveID.",
+  "source": "@site/docs/v1/BlockID Integrations/Identity Providers/3_integration-wit.md.mdx",
+  "sourceDirName": "v1/BlockID Integrations/Identity Providers",
+  "slug": "/v1/integration-with-salesforce",
+  "permalink": "/docs/v1/integration-with-salesforce",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/v1/integration-with-salesforce",
+    "id": "Z8c31c0dd-dd72-4b22-bee5-16a3cbedee0b"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Intergration with Okta",
+    "permalink": "/docs/v1/intergration-with-okta"
+  },
+  "next": {
+    "title": "Integration with Microsoft ADFS",
+    "permalink": "/docs/v1/integration-with-adfs"
+  }
+}

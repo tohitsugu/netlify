@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Settings/blockid-attribu",
+  "id": "v1/BlockID New Admin Portal (Athena)/Settings/blockid-attribu",
+  "isDocsHomePage": false,
+  "title": "blockid-attribu",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Settings/3_blockid-attribu.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Settings",
+  "slug": "/v1/BlockID New Admin Portal (Athena)/Settings/blockid-attribu",
+  "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/Settings/blockid-attribu",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Zca39865e-e604-4ebb-a452-c585064e42a0",
+    "permalink": "/docs/v1/email-templates"
+  },
+  "next": {
+    "title": "Zc1f22108-c5aa-4b1c-b3d5-c2cf705d1fbb",
+    "permalink": "/docs/v1/blockid-attributes"
+  }
+}

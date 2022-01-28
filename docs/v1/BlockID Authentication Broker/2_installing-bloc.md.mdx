@@ -1,0 +1,103 @@
+---
+slug: /v1/installing-blockid-authentication-broker
+id: Zdae9610f-aaf7-4309-82e7-14a40f70d02a
+---
+# Installing BlockID Authentication Broker
+A BlockID Authentication Broker is installed on a client environment to allow the BlockID Admin Console (running in the cloud) to communicate within a client’s environment. All connections made by the broker are outbound and there is no need for any inbound connectivity into the company's network. The BlockID Authentication Broker is a lightweight JAVA application that provides a mechanism, communicates outbound only, and handles the flow of encrypted traffic between the Credential Provider (on Windows), Network Device Enrollment Service (NDES), Active Directory (AD), and the 1Kosmos cloud.
+
+BlockID Authentication Broker is a proxy enabled, supports proxy authentication, and uses a proxy to connect to the 1Kosmos cloud.
+
+## Prerequisites:
+You will need the following resources and privileges to complete this installation:
+
+1. OS - Linux (supports only Linux), RHEL 7 and above
+2. JAVA - Open JDK 1.9 or higher
+3. RAM - 2 GB (Minimum)
+4. Two Virtual CPUs
+
+## Permissions:
+
+1. Permissions to the **installation** folder and install the BlockID Authentication Broker application on the **Linux** server.
+2. Outbound internet access and permission to communicate with the tenant URL on TCP ports `80` and `443`.
+3. Proxy URL in case the enterprise requires that the BlockID Authentication Broker communicate outbound through a proxy.
+4. Non-authenticated proxy connection.
+5. Authentication credentials for non-proxy connection.
+
+
+:::(Info) (Note:)
+The BlockID Authentication Broker Installation (.zip) file is named as `blockIdSetup-<version number>.zip`. To get the BlockID Authentication Broker installation file, please contact your 1Kosmos representative.
+:::
+
+## <a name = "websocketURL"></a> Enable Authentication Broker module and obtain websocket URL from the BlockID Admin Console:
+
+1. Login to your **BlockID Admin Console**, navigate to ***Administration Console** >  **Auth Configuration** > **Authentication Modules***.
+2. From the **All Authentication Modules** section, click on the **Add this Module** ![Addicon](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/Addicon.jpg) icon for the Authentication Broker module. The **Authentication Broker** module is displayed in the **Enabled Authentication Modules** section.
+3. Click on the **Edit & Configure this Module** ![EditandConfigurethisModuleicon](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/EditandConfigurethisModuleicon.jpg) icon for that module.
+4. In the Authentication Broker screen, click **Enable**.
+    * Copy the URL generated for the broker websocket and save it.
+
+## Installation Steps:
+1. Place and unzip the **BlockID Authentication Broker Installation** file within a particular folder on the **Linux** server. This will create the following folders and files within the main folder where the installation file is placed:
+   * **Folders**:
+        * **Conf**: This folder contains the configuration files in the `<configurations_filename>.yml` format. For example, `default.yml`.
+        * **Libs**: This folder contains the required libraries to run the broker.
+        * **Logs**: This folder contains the default.log file with all the logs.
+        * **Pid**: The broker uses this folder during runtime. 
+
+   * Files: 
+        * **startClient.bsh**: This is a script file to start the broker.
+        * **stopClient.bsh**: This is a script file to stop the Broker.
+
+2. On the **Linux** server: 
+    * To start the BlockID Authentication Broker:
+      * Run `./startClient.bsh` to start the broker.
+        The `-P` regulates the port on which the broker will be running. By default, the port is `8081`, you can specify this while running  `./startClient.bsh`.
+3. Open the web browser, enter the **Broker Server FQDN** URL that is `http://<BROKER_SERVER_HOSTNAME>:8081` in the Address bar, and press **Enter**. The **Configure Websocket Client application** screen is displayed. This is the enterprise screen to configure the **Broker**.
+4. In the Configure Websocket Client application screen, it is mandatory to fill in details in all the fields given in the following tabs.
+   * In the **LDAP or AD Configurations** tab:
+     * In the **BlockID Broker Core Config** section:
+       * **Broker port**: Specify the port number on which the broker is running.
+       * **Broker websocket**: Enter the websocket URL. This URL is obtained from the BlockID Admin Console application. To check the steps for getting the websocket URL, visit the [Enable Authentication Broker module and obtain Websocket URL from the BlockID Admin Console](#websocketURL) topic.
+       * **Broker Proxy Url**: Enter the URL of a proxy server through which the broker can communicate with the Tenant.
+     * In the **LDAP or AD Configuration** section, enter your AD configuration details.
+   * In the **SCEP Configuration** tab, enter your SCEP and NDES server configuration details.
+   * Click **Submit**.
+5. To verify that the BlockID Authentication Broker has started successfully:
+   * Run the  `tail -f logs/default.log` command. You will get the default connection logs that show the connection has been established to the broker, the broker has started up successfully, and the broker can communicate with the tenant.  
+        * For example, you will get the following logs:
+        `isHealthyProxy checking host: <YOUR_TENANT_URL> using proxyUrl: <YOUR_PROXY_URL>`
+        `MessageHandlerTask PING`
+        `MessageHandlerTask PONG received from server`
+
+6. To establish a successful connection between the BlockID Authentication Broker and the tenant, you need to perform the following tasks in the BlockID Admin Console:
+      * Navigate to ***Administration Console** >  **Auth Configuration** > **Authentication Scheme***.
+           * Click on the **Edit** button for the default authentication scheme.
+            * **Select Modules**: select `broker`.
+            * **Select Criteria**: select `Required`.
+            * Click **Save**. 
+       * Navigate to ***Administration Console** >  **Enterprise Configuration** > **SCEP Configuration***, enable the **Simple Certificate Enrollment Protocol Broker** option and click **Save & Apply**. The BlockID Authentication Broker has successfully been installed and configured on your server.
+7. Follow the below steps to install and configure the second broker:
+    * You will require a different server to install a second broker. Perform the **BlockID Authentication Broker** installation steps.
+    * Perform the AD/LDAP configurations in the **Configure Websocket Client** application screen of your broker.
+    * Note that, there is no need to perform any configurations in the BlockID Admin Console.
+
+## Test the Broker Connection:
+
+1. In your browser, enter your tenant’s URL for the BlockID Admin Console.
+2. In the login screen, enter your AD username and password details. The **BlockID Authentication Broker** will authenticate your details against your AD and grant access to the  BlockID Admin Console upon successful authentication.
+
+## Troubleshooting Steps:
+1. If BlockID Authentication Broker is not connected and you are not receiving the PING and PONG messages in the default.log file in the logs folder, then perform the following steps:
+   * Check the broker URL is entered correctly in the broker configuration.
+   * Check whether the proxy is preventing the broker from communicating with the tenant.
+     * Check the **Proxy** logs and allow the broker to communicate with the tenant.
+   * During authentication, if the user is not getting authenticated successfully in the BlockID Admin Console:
+     * In the broker logs, check if the broker can connect to Active Directory (AD).
+   * Check if the broker can connect to CA and NDES servers properly.
+2. To check whether the broker is running or not:
+   * Navigate to the **Broker Configuration** screen and refresh the screen to check whether it has got stopped or not.
+   * Check the broker logs:
+        * Run `tail -f logs/default.log`
+   * The broker is a java application, hence, to check whether any JAVA process is running on the Unix machine: 
+        * Run  `ps -ef | grep java`
+            This will show you all the java processes that are running on the Unix machine.

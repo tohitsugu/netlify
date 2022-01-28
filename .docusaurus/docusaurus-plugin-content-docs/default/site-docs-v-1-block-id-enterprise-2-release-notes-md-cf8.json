@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/release-notes",
+  "id": "v1/BlockID Enterprise/release-notes",
+  "isDocsHomePage": false,
+  "title": "release-notes",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/2_release-notes.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/BlockID Enterprise/release-notes",
+  "permalink": "/docs/v1/BlockID Enterprise/release-notes",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Mobile Application User Guide",
+    "permalink": "/docs/v1/blockid-mobile-application-user-guide-1"
+  },
+  "next": {
+    "title": "Release Notes",
+    "permalink": "/docs/v1/release-notes"
+  }
+}

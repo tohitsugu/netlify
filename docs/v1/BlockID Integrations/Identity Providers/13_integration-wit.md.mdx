@@ -1,0 +1,155 @@
+---
+slug: /v1/integration-with-forgerock
+id: Z3ec44e40-4852-4fc4-884c-598943e2182d
+---
+# Integration with ForgeRock
+This document describes the procedure to configure the BlockID Admin Console as a passwordless authentication solution for the ForgeRock protected applications. This integration will allow your users to log in to their respective applications using ForgeRock leveraging their biometrics. The biometric options include TouchID / FaceID and LiveID.
+
+### Before you Begin
+You will need the following resources and privileges to complete this integration:
+1. Admin access to the following:
+    * BlockID Tenant: If your organization is not registered for the BlockID tenant, visit the **[Sign Up](https://www.1kosmos.com/blockid-free-trial)** page to set up a free BlockID tenant for your organization. The 1Kosmos representative will create a tenant URL, community, tenant tag, and a license key for your respective organization within the BlockID platform.
+    *   ForgeRock application that supports SAML integration
+2. Install on your mobile device:
+    * BlockID mobile application (Compatible with iOS and Android devices). Visit **[BlockID for Android](https://play.google.com/store/apps/details?id=com.onekosmos.kernel.blockid)** or **[BlockID for iOS](https://apps.apple.com/us/app/blockid/id1539421428)** to download the application.
+
+### Assumptions
+
+1.	With the above prerequisites, you should now successfully be registered and be able to login to:
+    * BlockID Admin Console application. Ensure the email address used to log in to this application is the same as the one used to log in to the ForgeRock account.
+2.	Installed and registered the BlockID mobile application.
+    * Launch the BlockID mobile application and follow the on-screen instructions to register your app with the BlockID platform to enroll your biometrics. Visit the [Enroll Biometrics (TouchID/ FaceID and LiveID) section of the BlockID Mobile Application User Guide]( https://docs.1kosmos.com/docs/blockid-mobile-application-user-guide#EnrollBio) for step by step understanding of the biometrics enrollment process within the BlockID mobile application.
+
+There are two sets of configurations that need to be performed to enable this integration:
+
+1. Install and configure the ForgeRock connector
+2. Test the ForgeRock protected application login
+
+**List of Topics:**
+
+1. [Install and configure the ForgeRock connector](#ForgerockIDP)
+2. [Test the ForgeRock protected application login](#TestSAML)
+
+## <a name = "ForgeRockIDP"></a>Install and configure the ForgeRock connector
+
+1. Create a custom authentication node or customize zero page login node. Refer to the [Preparing For Nodes](https://backstage.forgerock.com/docs/am/7.1/auth-nodes/preparing-for-nodes.html) guide to create a custom node.
+2. The custom node action process method should accept the `BlockIDAuthn` parameter. The following   mentioned code accepts the parameter and processes the result.
+
+```json
+    boolean hasBlockID = false;
+        String BlockIDAuthn = context.request.servletRequest.getParameter("BlockIDAuthn");
+        System.out.println("1:" + context.request.servletRequest.getParameterValues("BlockIDAuthn"));
+        if(BlockIDAuthn!=null ) {
+        	hasBlockID = true;
+        }
+   	System.out.println("hasBlockID:" + hasBlockID );
+        Enumeration<String> params =  context.request.servletRequest.getParameterNames(); 
+        while(params.hasMoreElements()){
+         String paramName = params.nextElement();
+         System.out.println("Parameter Name - "+paramName+", Value - "+ context.request.servletRequest.getParameter(paramName));
+        }        
+        if(hasBlockID) {        	
+        	System.out.println("Setting username:" + BlockIDAuthn );        	
+        	System.out.println("Username obtained");   	
+        	     	BlockIDSDK2 sdk = new BlockIDSDK2(null,null,null);
+        	String decodedString = new String(Base64.getDecoder().decode(BlockIDAuthn.getBytes()));
+        	System.out.println("decodedString:" +decodedString);        	
+        	 String userName = sdk.extractUsername(decodedString);
+        	     	  JsonValue sharedState = context.sharedState.copy();
+              JsonValue transientState = context.transientState.copy();
+              updateStateIfPresentForBlockID(context, true, config.usernameHeader(), USERNAME, sharedState,userName);
+                           String realm = context.sharedState.get(REALM).asString();
+              System.out.println("Setting header");
+              return goTo(true)
+                      .withUniversalId(identityUtils.getUniversalId(userName, realm, IdType.USER))
+                      .replaceSharedState(sharedState).replaceTransientState(transientState).build();
+        
+        }
+```
+
+3. Add the following jar files in the `<Forgerock home>/WEB_INF/lib` location: 
+    * `bcpkix-jdk15on-1.63.jar` 
+    * `bcprov-ext-jdk15on-1.63.jar` 
+    * `bcprov-jdk15on-1.63.jar` 
+    * `BlockIDCryptoHelper.jar` 
+    * `java-json.jar`
+
+4. Add the `BlockIDECDSAHelper.java` and `blockid.properties` in the same package of the **custom node** file.
+
+:::(Info) (Note:)
+Make sure, the blockid.properties file has contents as per the environment, public & private keys, licensekey, and tenant details would change from customer to customer.
+:::
+
+5. Save and compile **custom node**, `BlockIDSDK2.java`, `BlockIDECDSAHelper.java`, and `blockid.properties`.
+6. Package the class files and properties file in `auth-nodes-7.1.0.jar`.
+7. Copy the `auth-nodes-7.1.0.jar`in `<Forgerock home>/WEB_INF/lib`.
+8. Restart the tomcat server.
+9. Login to the **Forgerock AM** using **amadmin**.
+
+![Realms.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/Realms.jpg)
+
+10. From the **Realms** screen, select your realm.
+![Realms1.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/Realms1.jpg)
+
+
+11. From the **Realms Overview** screen:
+    * Click **Authentication Trees**.
+    * Click **Create new tree**.
+12. Create a new tree with a custom node created.
+![customNode.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/customNode.jpg)
+
+13. To customize the UI, check the [UI Customizing Layout](https://backstage.forgerock.com/docs/am/7/ui-customization-guide/ui-customizing-layout.html) guide.
+14. Open the `<FORGEROCK_HOME>/XUI/index.html` site and add the following value in the header:
+
+```javascript
+<script type="text/javascript" src="https://uwldemo.blockid.co/demo3/phpsdk/blockid.js"></script>
+```
+
+:::(Info) (Note:)
+The URL mentioned in the above script is for example. The actual URL may differ based on where the SDK is hosted.
+:::
+
+15. Open the `DataStore1.html` file. For example, `<FORGEROCK_HOME>/XUI/themes/default/templates/openam/authn/DataStore1.html. 
+    * Add the following `div` anywhere to display the **QR code**.
+       
+        ```html
+        <div id="qrcode" style="z-index: 1;position:relative;margin:10px" align="center">
+        ```
+    
+    * Add the following script:
+
+   ```javascript
+    <script type="text/javascript">
+
+        function createSession() {
+                createNewSession("Fingerprint", "firstname,did,userIdList", "qrcode",null
+                , function(result, error) {client_dataRecieved(result)}
+                )
+        }
+        function client_dataRecieved(result) {
+
+                let str = JSON.stringify(result, null, 4);
+                var aurl="http://forgerock.blockid.co/XUI/?realm=/&service=BlockIDTree&BlockIDAuthn="+window.btoa(str);
+                window.location.href = aurl;
+
+        }
+        createSession();
+    </script>
+   ```
+    
+16. Save and close the file.
+17. Deploy the UI changes using `yarn` build.
+18. Refresh the **ForgeRock AM** login screen. The QR code to scan is displayed on the **ForgeRock AM** login screen.
+
+![ForgeRock.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/ForgeRock.jpg)
+
+
+## <a name = "TestSAML"></a>Test the ForgeRock protected application login
+
+1.	In your browser, enter your organization’s ForgeRock  protected application. The application is displayed with the barcode to be scanned from your BlockID mobile app.
+2. On the BlockID mobile application’s Home screen, click ‘Scan QR’.
+3. Scan the QR code. The confirmation pop-up window is displayed asking to `Allow BlockID to access this device’s location?`.
+4. In the confirmation pop-up window, select `Allow only while using the app`. The Authentication screen is displayed with the `Please authenticate using <Biometric_option> from 1kosmos` message.
+5. Click **Authenticate** and perform the appropriate authentication method. The pop-up window is displayed with `Thank you! You have successfully authenticated to Log In` message upon successful authentication.
+6. You will be logged in to your **ForgeRock** protected account.
+

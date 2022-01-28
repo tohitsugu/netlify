@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Integrations/Identity Providers/intergration-wi",
+  "id": "v1/BlockID Integrations/Identity Providers/intergration-wi",
+  "isDocsHomePage": false,
+  "title": "intergration-wi",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Integrations/Identity Providers/2_intergration-wi.md",
+  "sourceDirName": "v1/BlockID Integrations/Identity Providers",
+  "slug": "/v1/BlockID Integrations/Identity Providers/intergration-wi",
+  "permalink": "/docs/v1/BlockID Integrations/Identity Providers/intergration-wi",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "integration-wit(2)",
+    "permalink": "/docs/v1/BlockID Integrations/Remote Access/integration-wit(2)"
+  },
+  "next": {
+    "title": "Intergration with Okta",
+    "permalink": "/docs/v1/intergration-with-okta"
+  }
+}

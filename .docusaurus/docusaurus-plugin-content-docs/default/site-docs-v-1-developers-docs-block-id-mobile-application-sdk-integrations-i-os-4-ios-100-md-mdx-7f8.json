@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/iOS/Z84d4c499-cc83-4de1-93fc-1d36b53511e9",
+  "id": "v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/iOS/Z84d4c499-cc83-4de1-93fc-1d36b53511e9",
+  "isDocsHomePage": false,
+  "title": "BlockID iOS SDK 1.0.0",
+  "description": "This document describes the procedure to configure the BlockID iOS SDK into your application. This integration will allow your users to use the features provided within the iOS SDK of the BlockID mobile application. The features include enrollment of the user’s LiveID (captures the live (real-time) facial images) details, Fingerprint, PIN, Driver's License (DL), and Passport details, etc. Also, it has various types of authentication mechanisms by which a user can log in to the organization’s target systems.",
+  "source": "@site/docs/v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/iOS/4_ios-100.md.mdx",
+  "sourceDirName": "v1/Developer's Docs/BlockID Mobile Application/SDK Integrations/iOS",
+  "slug": "/v1/ios-100",
+  "permalink": "/docs/v1/ios-100",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "slug": "/v1/ios-100",
+    "id": "Z84d4c499-cc83-4de1-93fc-1d36b53511e9"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID iOS SDK 1.1.0",
+    "permalink": "/docs/v1/ios-110"
+  },
+  "next": {
+    "title": "Android",
+    "permalink": "/docs/v1/android-1"
+  }
+}

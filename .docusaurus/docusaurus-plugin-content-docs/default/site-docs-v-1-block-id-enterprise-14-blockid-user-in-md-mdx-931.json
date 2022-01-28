@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/Za8e8b2e2-3664-4427-8698-3f3694563445",
+  "id": "v1/BlockID Enterprise/Za8e8b2e2-3664-4427-8698-3f3694563445",
+  "isDocsHomePage": false,
+  "title": "BlockID User Interface Templates",
+  "description": "1. Login Templates",
+  "source": "@site/docs/v1/BlockID Enterprise/14_blockid-user-in.md.mdx",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/blockid-user-interface-templates",
+  "permalink": "/docs/v1/blockid-user-interface-templates",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 14,
+  "frontMatter": {
+    "slug": "/v1/blockid-user-interface-templates",
+    "id": "Za8e8b2e2-3664-4427-8698-3f3694563445"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "AD or LDAP server Configuration",
+    "permalink": "/docs/v1/active-directory-or-ldap-server-configuration"
+  },
+  "next": {
+    "title": "RADIUS Integration - Temp",
+    "permalink": "/docs/v1/radius-integration-backup"
+  }
+}

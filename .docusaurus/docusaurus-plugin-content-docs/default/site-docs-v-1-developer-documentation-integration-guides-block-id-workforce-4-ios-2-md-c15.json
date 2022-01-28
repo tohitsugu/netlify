@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/Developer Documentation/Integration Guides/BlockID Workforce/ios-2",
+  "id": "v1/Developer Documentation/Integration Guides/BlockID Workforce/ios-2",
+  "isDocsHomePage": false,
+  "title": "ios-2",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/Developer Documentation/Integration Guides/BlockID Workforce/4_ios-2.md",
+  "sourceDirName": "v1/Developer Documentation/Integration Guides/BlockID Workforce",
+  "slug": "/v1/Developer Documentation/Integration Guides/BlockID Workforce/ios-2",
+  "permalink": "/docs/v1/Developer Documentation/Integration Guides/BlockID Workforce/ios-2",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "android-2",
+    "permalink": "/docs/v1/Developer Documentation/Integration Guides/BlockID Workforce/android-2"
+  },
+  "next": {
+    "title": "frequently-aske",
+    "permalink": "/docs/v2/BlockID FAQ/frequently-aske"
+  }
+}

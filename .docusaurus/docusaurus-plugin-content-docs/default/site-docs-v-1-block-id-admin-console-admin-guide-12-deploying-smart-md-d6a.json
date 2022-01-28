@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/deploying-smart",
+  "id": "v1/BlockID Admin Console/Admin Guide/deploying-smart",
+  "isDocsHomePage": false,
+  "title": "deploying-smart",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/12_deploying-smart.md",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide",
+  "slug": "/v1/BlockID Admin Console/Admin Guide/deploying-smart",
+  "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/deploying-smart",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "tenant-manageme",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/tenant-manageme"
+  },
+  "next": {
+    "title": "community-manag",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/community-manag"
+  }
+}

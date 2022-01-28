@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/okta",
+  "id": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/okta",
+  "isDocsHomePage": false,
+  "title": "okta",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/2_okta.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Applications/Add Applications",
+  "slug": "/v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/okta",
+  "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/Applications/Add Applications/okta",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Manage Applications",
+    "permalink": "/docs/v1/applications"
+  },
+  "next": {
+    "title": "Okta",
+    "permalink": "/docs/v1/okta"
+  }
+}

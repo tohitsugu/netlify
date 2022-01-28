@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Settings/Zc1f22108-c5aa-4b1c-b3d5-c2cf705d1fbb",
+  "id": "v1/BlockID New Admin Portal (Athena)/Settings/Zc1f22108-c5aa-4b1c-b3d5-c2cf705d1fbb",
+  "isDocsHomePage": false,
+  "title": "BlockID Attributes",
+  "description": "To enable passwordless login for SAML applications, it is necessary to provide additional context to the target application so the user may be correctly authorized to work within the application.",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/Settings/3_blockid-attribu.md.mdx",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)/Settings",
+  "slug": "/v1/blockid-attributes",
+  "permalink": "/docs/v1/blockid-attributes",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/v1/blockid-attributes",
+    "id": "Zc1f22108-c5aa-4b1c-b3d5-c2cf705d1fbb"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Email Templates",
+    "permalink": "/docs/v1/email-templates"
+  },
+  "next": {
+    "title": "IdP Configuration",
+    "permalink": "/docs/v1/idp-configuration"
+  }
+}

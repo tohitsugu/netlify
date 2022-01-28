@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/Zf0b79811-4794-4756-b45d-896cd766ec6d",
+  "id": "v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/Zf0b79811-4794-4756-b45d-896cd766ec6d",
+  "isDocsHomePage": false,
+  "title": "Radius Configuration",
+  "description": "The RADIUS (Remote Authentication Dial-In User Service) protocol is used to authenticate and provision dial-up clients. It also performs accounting services for the same clients. The BlockID RADIUS server provides single-point authentication and accounting services for dialup systems, wireless LANs, and applications.",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/Enterprise Configuration/4_radius-configur.md.mdx",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide/Enterprise Configuration",
+  "slug": "/v1/radius-configuration",
+  "permalink": "/docs/v1/radius-configuration",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "slug": "/v1/radius-configuration",
+    "id": "Zf0b79811-4794-4756-b45d-896cd766ec6d"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "SCEP Configuration",
+    "permalink": "/docs/v1/scep-configuration"
+  },
+  "next": {
+    "title": "SAML Configurations",
+    "permalink": "/docs/v1/samlv2"
+  }
+}

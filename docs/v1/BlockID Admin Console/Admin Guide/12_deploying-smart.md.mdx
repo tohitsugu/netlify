@@ -1,0 +1,26 @@
+---
+slug: /v1/deploying-smart-contract
+id: Zd550fe55-bd79-412a-b949-d477e7545e41
+---
+# Deploying Smart Contract
+In the traditional approach, when we store data on the blockchain, everyone can see that data. However, in multi-tenancy, we only allow a tenant to view their data and not other tenants’ data on the blockchain. The smart contract is the mechanism with which an application can interact with the blockchain to store data and perform a transaction in an encrypted form.
+The smart contract will allow you to browse the DID (Decentralized Identifier) but won’t show what particular DID performs which transaction as it is in encrypted and encoded format. Therefore, you will not know what the transaction was and what happened in that transaction. It will show that DID1 and DID2 have exchanged the transactions but not the information that was in the transaction. The smart contract will perform an encryption mechanism on top of the blockchain.
+
+Each newly added tenant has two smart contracts:
+1. The **Proof of Name** smart contract, which is shown in the Administration Console screen, allows the tenant to store the identity details of the user such as "DID value", "First name", "Last name" (all details collected from scanning the driving license, passport and all of the biometric information. As each tenant has its **Proof of Name** smart contract, it will store all of the above information and it will be accessible to that tenant.
+
+2. The second smart contract is **Proof of Validity**, not unique to the tenant. This contract is specifically being deployed for receiving verifiable claims, for example, a claim from your University to verify your conferred degree. The Proof of Validity smart contract is used to store these claims which are associated with the particular user on the blockchain and will be accessible only when the user gives consent to the other user to view those claims. In this, the issuer will issue the claim, verify the claim, and confirm it on the blockchain. It provides the separation of identity and separation of claims that the user is carrying among themselves.
+
+To deploy these smart contracts for the newly added tenant:
+
+1. Login to **BlockID Admin Console**.
+2. From the top right corner, click on the **Tenants** list (first list). 
+3. From the list of added tenants, click on the newly added tenant.
+4. In the **Administration Console** screen, click “**Deploy Smart Contract**” from the Smart contract details section. Both the “**Proof of Name**” and Proof of validity smart contracts will be deployed for the tenant. 
+5. Click on the “**Proof of Name**” smart contract address link on the Administration Console screen to view the **DID** and transaction details. 
+
+![SmartContractProofofName.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/SmartContractProofofName.jpg)
+
+In the **Core Configurations** screen, click on the **Proof of Validity** smart contract address link to view the **DID** and transaction details.
+
+![CoreConfigurationsScreenwithProofofValiditySmartContractNew.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/CoreConfigurationsScreenwithProofofValiditySmartContractNew%281%29.jpg)

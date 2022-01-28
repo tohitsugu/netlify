@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Zb17b8cd6-f8b7-41c5-a294-400c23d8540d",
+  "id": "v1/BlockID New Admin Portal (Athena)/Zb17b8cd6-f8b7-41c5-a294-400c23d8540d",
+  "isDocsHomePage": false,
+  "title": "Zb17b8cd6-f8b7-41c5-a294-400c23d8540d",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/4_create-native-u.md.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)",
+  "slug": "/v1/create-native-user",
+  "permalink": "/docs/v1/create-native-user",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "slug": "/v1/create-native-user",
+    "id": "Zb17b8cd6-f8b7-41c5-a294-400c23d8540d"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "create-native-u",
+    "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/create-native-u"
+  },
+  "next": {
+    "title": "dashboard",
+    "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/dashboard"
+  }
+}

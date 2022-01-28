@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/Block ID Proof of Concept (POC)/Zdc4e6f74-2f4f-4d54-9357-2b53866c9b17",
+  "id": "v1/Block ID Proof of Concept (POC)/Zdc4e6f74-2f4f-4d54-9357-2b53866c9b17",
+  "isDocsHomePage": false,
+  "title": "Zdc4e6f74-2f4f-4d54-9357-2b53866c9b17",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/Block ID Proof of Concept (POC)/3_block-id-proof-.md.md",
+  "sourceDirName": "v1/Block ID Proof of Concept (POC)",
+  "slug": "/v1/block-id-proof-of-concept-poc-guide",
+  "permalink": "/docs/v1/block-id-proof-of-concept-poc-guide",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/v1/block-id-proof-of-concept-poc-guide",
+    "id": "Zdc4e6f74-2f4f-4d54-9357-2b53866c9b17"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "block-id-proof-",
+    "permalink": "/docs/v1/Block ID Proof of Concept (POC)/block-id-proof-"
+  },
+  "next": {
+    "title": "installing-bloc",
+    "permalink": "/docs/v1/BlockID Authentication Broker/installing-bloc"
+  }
+}

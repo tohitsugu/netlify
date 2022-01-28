@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/Z9725f068-c919-4fc9-a454-053fa9382a2f",
+  "id": "v1/BlockID New Admin Portal (Athena)/Z9725f068-c919-4fc9-a454-053fa9382a2f",
+  "isDocsHomePage": false,
+  "title": "Z9725f068-c919-4fc9-a454-053fa9382a2f",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/15_customizing-the.md.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)",
+  "slug": "/v1/customizing-the-branding-of-your-blockid-login-page",
+  "permalink": "/docs/v1/customizing-the-branding-of-your-blockid-login-page",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "slug": "/v1/customizing-the-branding-of-your-blockid-login-page",
+    "id": "Z9725f068-c919-4fc9-a454-053fa9382a2f"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "customizing-the",
+    "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/customizing-the"
+  },
+  "next": {
+    "title": "end-user-guide",
+    "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/end-user-guide"
+  }
+}

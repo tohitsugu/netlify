@@ -1,0 +1,28 @@
+{
+  "unversionedId": "otp/otp2",
+  "id": "otp/otp2",
+  "isDocsHomePage": false,
+  "title": "Requesting a One-Time Passcode",
+  "description": "Use the BlockID SDK to request a one-time passcode to your user's phone number or email address.",
+  "source": "@site/docs/otp/otp-request.mdx",
+  "sourceDirName": "otp",
+  "slug": "/otp/request",
+  "permalink": "/docs/otp/request",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "slug": "/otp/request",
+    "id": "otp2"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Shared Key",
+    "permalink": "/docs/ecdsa/shared-key"
+  },
+  "next": {
+    "title": "OTP Authentication",
+    "permalink": "/docs/otp"
+  }
+}

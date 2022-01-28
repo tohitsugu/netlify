@@ -1,0 +1,114 @@
+---
+slug: /v1/integration-with-cisco-check-point
+id: Zcc4b90f6-9a8e-413c-a39c-24f028a44f76
+---
+# Integration with CISCO Check Point
+This document describes the procedure to configure the BlockID Admin Console as a passwordless authentication solution for your organization's CISCO Check Point users. This integration will allow your users to log in to the Check Point account leveraging their biometrics. The biometric options include TouchID / FaceID and LiveID.
+
+### Before you Begin
+You will need the following resources and privileges to complete this integration:
+1. Admin access to the following:
+    * BlockID Tenant: If your organization is not registered for the BlockID tenant, visit the **[Sign Up](https://www.1kosmos.com/blockid-free-trial)** page to set up a free BlockID tenant for your organization. The 1Kosmos representative will create a tenant URL, community, tenant tag, and a license key for your respective organization within the BlockID platform.
+    *   Check Point R80 application
+    *   Make sure that you have the common RADIUS application UDP port and secret key values.
+2. Install on your mobile device:
+    * BlockID mobile application (Compatible with iOS and Android devices). Visit **[BlockID for Android](https://play.google.com/store/apps/details?id=com.onekosmos.kernel.blockid)** or **[BlockID for iOS](https://apps.apple.com/us/app/blockid/id1539421428)** to download the application.
+
+### Assumptions
+
+1.	With the above prerequisites, you should now successfully be registered and be able to log in to:
+    * BlockID Admin Console application. Ensure the email address used to log in to this application is the same as the one used to log in to the Check Point account.
+2.	Installed and registered the BlockID mobile application.
+    * Launch the BlockID mobile application and follow the on-screen instructions to register your app with the BlockID platform to enroll your biometrics. Visit the [Enroll Biometrics (TouchID/ FaceID and LiveID) section of the BlockID Mobile Application User Guide]( https://docs.1kosmos.com/docs/blockid-mobile-application-user-guide#EnrollBio) for step by step understanding of the biometrics enrollment process within the BlockID mobile application.
+
+There are two sets of configurations that need to be performed to enable this integration:
+
+1. Configure your BlockID Radius server within the Check Point application.
+2. Test the SAML Single Sign-On Connection.
+
+**List of Topics:**
+
+1. [Configure your BlockID Radius server within the Check Point application](#CheckpointIDP)
+   a. [Define a RADIUS server object](#RadiusServerIDP)
+   b. [Configure a policy to use RADIUS authentication](#RadiuspolicyIDP)
+   c. [Configure browser access within the Check Point Mobile Access SSL VPN portal](#RadiusbrowserIDP)
+2. [Test the SAML Single Sign-On Connection](#TestSAML)
+
+## <a name = "CheckpointIDP"></a>Configure your BlockID Radius server within the Check Point application
+
+
+:::(Warning) (Note:)
+The following steps will be performed by your Check Point administrator. Get the Radius server's IP address and shared secret that belongs to 1Kosmos to configure the BlockID Radius server within your company's Check Point application account.
+:::
+
+
+### <a name = "RadiusServerIDP"></a>Define a RADIUS server object
+
+1. Open the Check Point SmartConsole application.
+2. From the upper left menu, navigate to ***New object > New Host***.
+3. In the **New Host** window, enter the following details:
+    * **Name**: Enter the appropriate name for the host where the RADIUS server is installed. For example, **1Kosmos**.
+    * **IPv4 address**: Enter the IP address of the host where the RADIUS server is installed.
+    * Click **OK**.
+4. From the upper left menu, navigate to ***New object > More object types > Server > More New RADIUS***.
+5. In the **RADIUS** window, enter the following details:
+    * **Name**: Enter the appropriate name for the RADIUS server.
+    * **Host**: Select the host name added in the above steps.
+    * **Service**: Select the service option to match the UDP port number set in your RADIUS app.
+    * **Shared Secret**: Enter the RADIUS Secret provided by the 1Kosmos team.
+    * **Version**: Select **RADIUS Ver 2.0**.
+    * **Protocol**: Select **PAP**.
+    * **Priority**: Select **1**. It is the default value. You can select other priorities when using multiple RADIUS servers.
+    * Click **OK**.
+6. From the upper left menu, navigate to **Global Properties > Advances > SecuRemote/SecuClient**, select **add_radius_groups**, and click **OK**.
+7. To define the RADIUS user groups, from the upper left menu, navigate to ***New object > more object types > user > new user group***.
+    * Enter the name of the group in the following format: `RAD_<group name to which the RADIUS users belong>`.
+    * Ensure the group is empty. Click **OK**, click **Close**.
+
+### <a name = "RadiuspolicyIDP"></a>Configure a policy to use RADIUS authentication
+
+#### Remote Access VPN client Example
+
+1. In the Check Point SmartConsole, from the left pane, click on the **GATEWAYS & SERVICES** option.
+2. Click on **Edit** (Pencil icon) to edit your gateway object.
+3. In the **Check Point Gateway** window for the selected gateway, perform the following configurations:
+    * From the left pane, navigate to ***General Properties > Network Security*** and select **IPSec VPN**.
+    * From the left pane, navigate to ***IPSec VPN > Link Selection***, update the gateway address to use the external gateway address.
+    * From the left pane, navigate to ***VPN Clients > Office Mode***, and enable **Allow Office Mode to all users** option
+        * Select the `CP_default_Office_Mode_addresses_pool object` option. It is selected by default.
+    * Navigate to ***VPN Clients > Authentication > Settings***.
+        * In the **Single Authentication Clients Settings** dialog box, perform the following configurations:
+            * **Authentication method**: Select **RADIUS**.
+            * **Server**: Select the RADIUS server name.
+            * Click **OK**.
+4. In the Check Point SmartConsole, from the left pane, navigate to ***SECURITY POLICIES > Access Control > Access Tools VPN Communities > VPN Communities***.
+5. Double-click to open the **RemoteAccess** community and click **+** (plus) to add the gateway.
+6. Click on the **Participant User Groups** tab, make sure the **All Users** option is selected.
+
+### <a name = "RadiusbrowserIDP"></a>Configure browser access within the Check Point Mobile Access SSL VPN portal
+
+1. In the Check Point SmartConsole, from the left pane, navigate to ***SECURITY POLICIES > Access Control***.
+2. Right-click the **Access Control Policy** and select **Edit Policy**. 
+3. In the **Policy** window, select the check box for **Access Control Layer**, and select **Edit Layer**.
+4. In the **Layer Editor** window, select the check box for **Mobile Access**.
+5. In the Check Point SmartConsole, from the left pane, navigate to ***SECURITY POLICIES > Mobile Access Control***, and click on the **Open the Mobile Access Policy in SmartDashboard** link.
+6. In the Check Point SmartConsole, from the lower left corner, click on the **Users** object. 
+    * Right-click on the **External User Profiles** and navigate to ***New External User Profile > Match all users***.
+    * In the **External User Profile Properties** dialog box, perform the following configurations:
+        * From the left pane, click **Authentication**.
+        * From the **Authentication Scheme**, select **RADIUS**.
+        * Select the RADIUS server that you have configured and click **OK**:
+    * Click **OK**.
+7. Click the **Menu** button, select ***File > Update***. 
+8. Close the **SmartDashboard**.
+9. In the **Check Point SmartConsole**, click **Install Policy** to publish the changes and install the policy on the **R80** gateway.
+
+## <a name = "TestSAML"></a>Test the SAML Single Sign-On Connection
+
+1.	In your browser, open your Check Point URL.
+    * **Username**: Enter the username.
+    * **Password**:  Enter the password.
+    * Enter the Time-based OTP (**TOTP**) displayed on the BlockID mobile app.
+    * Click **Login**.
+2. You will be logged in to your **Check Point** account.
+

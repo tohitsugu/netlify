@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID New Admin Portal (Athena)/webauthn",
+  "id": "v1/BlockID New Admin Portal (Athena)/webauthn",
+  "isDocsHomePage": false,
+  "title": "webauthn",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID New Admin Portal (Athena)/15_webauthn.md",
+  "sourceDirName": "v1/BlockID New Admin Portal (Athena)",
+  "slug": "/v1/BlockID New Admin Portal (Athena)/webauthn",
+  "permalink": "/docs/v1/BlockID New Admin Portal (Athena)/webauthn",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "End User Guide",
+    "permalink": "/docs/v1/end-user-guide"
+  },
+  "next": {
+    "title": "WebAuthn",
+    "permalink": "/docs/v1/webauthn"
+  }
+}

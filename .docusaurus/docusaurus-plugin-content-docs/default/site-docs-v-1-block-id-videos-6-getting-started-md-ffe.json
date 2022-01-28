@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Videos/getting-started",
+  "id": "v1/BlockID Videos/getting-started",
+  "isDocsHomePage": false,
+  "title": "getting-started",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Videos/6_getting-started.md",
+  "sourceDirName": "v1/BlockID Videos",
+  "slug": "/v1/BlockID Videos/getting-started",
+  "permalink": "/docs/v1/BlockID Videos/getting-started",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID User Journey",
+    "permalink": "/docs/v1/blockid-user-journey"
+  },
+  "next": {
+    "title": "Getting Started with Videos",
+    "permalink": "/docs/v1/getting-started-with-videos"
+  }
+}

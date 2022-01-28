@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/core-configurat",
+  "id": "v1/BlockID Admin Console/Admin Guide/core-configurat",
+  "isDocsHomePage": false,
+  "title": "core-configurat",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/15_core-configurat.md",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide",
+  "slug": "/v1/BlockID Admin Console/Admin Guide/core-configurat",
+  "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/core-configurat",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "profile",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/profile"
+  },
+  "next": {
+    "title": "glossary",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/glossary"
+  }
+}

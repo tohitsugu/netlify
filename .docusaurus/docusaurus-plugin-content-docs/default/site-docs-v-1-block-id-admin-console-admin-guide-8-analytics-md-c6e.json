@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Admin Guide/analytics",
+  "id": "v1/BlockID Admin Console/Admin Guide/analytics",
+  "isDocsHomePage": false,
+  "title": "analytics",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Admin Console/Admin Guide/8_analytics.md",
+  "sourceDirName": "v1/BlockID Admin Console/Admin Guide",
+  "slug": "/v1/BlockID Admin Console/Admin Guide/analytics",
+  "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/analytics",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "administration-",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/administration-"
+  },
+  "next": {
+    "title": "license-keys",
+    "permalink": "/docs/v1/BlockID Admin Console/Admin Guide/license-keys"
+  }
+}

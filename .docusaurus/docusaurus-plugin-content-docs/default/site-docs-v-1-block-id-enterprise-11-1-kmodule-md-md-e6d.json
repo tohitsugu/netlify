@@ -1,0 +1,26 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/Ze8b54d7e-4975-4d52-ac78-ab02bf47ec5a",
+  "id": "v1/BlockID Enterprise/Ze8b54d7e-4975-4d52-ac78-ab02bf47ec5a",
+  "isDocsHomePage": false,
+  "title": "Ze8b54d7e-4975-4d52-ac78-ab02bf47ec5a",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/11_1kmodule.md.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/1kmodule",
+  "permalink": "/docs/v1/1kmodule",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "slug": "/v1/1kmodule",
+    "id": "Ze8b54d7e-4975-4d52-ac78-ab02bf47ec5a"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "11_1kmodule",
+    "permalink": "/docs/v1/BlockID Enterprise/11_1kmodule"
+  },
+  "next": {
+    "title": "Z393b7007-2e70-4e0a-82ed-c235005a8c28",
+    "permalink": "/docs/v1/blockid-mobile-application-user-guide"
+  }
+}

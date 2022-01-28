@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Videos/blockid-user-jo",
+  "id": "v1/BlockID Videos/blockid-user-jo",
+  "isDocsHomePage": false,
+  "title": "blockid-user-jo",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Videos/6_blockid-user-jo.md",
+  "sourceDirName": "v1/BlockID Videos",
+  "slug": "/v1/BlockID Videos/blockid-user-jo",
+  "permalink": "/docs/v1/BlockID Videos/blockid-user-jo",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Solutions",
+    "permalink": "/docs/v1/blockid-solutions"
+  },
+  "next": {
+    "title": "BlockID User Journey",
+    "permalink": "/docs/v1/blockid-user-journey"
+  }
+}

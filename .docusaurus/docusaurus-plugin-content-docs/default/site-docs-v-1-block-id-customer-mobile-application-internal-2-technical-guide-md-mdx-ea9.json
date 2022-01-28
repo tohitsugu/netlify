@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Customer Mobile Application - Internal/Za9fbac75-d4fe-4b03-a2d2-01cc30146c5b",
+  "id": "v1/BlockID Customer Mobile Application - Internal/Za9fbac75-d4fe-4b03-a2d2-01cc30146c5b",
+  "isDocsHomePage": false,
+  "title": "Technical Guide for LiveID, Driving License and Passport Scan Support",
+  "description": "This guide describes the procedures to enroll the user’s liveID (captures the live(real-time) facial images) details, driver’s license (DL), and passport details within the BlockID mobile application. While registering, users are first required to enroll in a new PIN and then enroll their biometrics. The biometric options include TouchID / FaceID, and LiveID. Once enrolled, the Identity Assurance Level (IAL) will be set to 1.",
+  "source": "@site/docs/v1/BlockID Customer Mobile Application - Internal/2_technical-guide.md.mdx",
+  "sourceDirName": "v1/BlockID Customer Mobile Application - Internal",
+  "slug": "/v1/technical-guide-for-liveid-driving-license-and-passport-scan-support",
+  "permalink": "/docs/v1/technical-guide-for-liveid-driving-license-and-passport-scan-support",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/technical-guide-for-liveid-driving-license-and-passport-scan-support",
+    "id": "Za9fbac75-d4fe-4b03-a2d2-01cc30146c5b"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Internal Guide - BlockID Credential Provider",
+    "permalink": "/docs/v1/internal-guide-blockid-credential-provider"
+  },
+  "next": {
+    "title": "Release Notes",
+    "permalink": "/docs/v1/release-notes"
+  }
+}

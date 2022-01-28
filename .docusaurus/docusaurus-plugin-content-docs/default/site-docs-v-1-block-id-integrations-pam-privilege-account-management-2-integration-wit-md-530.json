@@ -1,0 +1,24 @@
+{
+  "unversionedId": "v1/BlockID Integrations/PAM (Privilege Account Management)/integration-wit",
+  "id": "v1/BlockID Integrations/PAM (Privilege Account Management)/integration-wit",
+  "isDocsHomePage": false,
+  "title": "integration-wit",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Integrations/PAM (Privilege Account Management)/2_integration-wit.md",
+  "sourceDirName": "v1/BlockID Integrations/PAM (Privilege Account Management)",
+  "slug": "/v1/BlockID Integrations/PAM (Privilege Account Management)/integration-wit",
+  "permalink": "/docs/v1/BlockID Integrations/PAM (Privilege Account Management)/integration-wit",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Integration with CyberArk",
+    "permalink": "/docs/v1/integration-with-cyberark"
+  },
+  "next": {
+    "title": "integration-wit(1)",
+    "permalink": "/docs/v1/BlockID Integrations/PAM (Privilege Account Management)/integration-wit(1)"
+  }
+}

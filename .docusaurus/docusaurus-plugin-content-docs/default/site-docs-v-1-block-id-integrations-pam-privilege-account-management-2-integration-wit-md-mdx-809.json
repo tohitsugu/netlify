@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Integrations/PAM (Privilege Account Management)/Z660bdd75-9447-48fe-84e8-b26029d4f403",
+  "id": "v1/BlockID Integrations/PAM (Privilege Account Management)/Z660bdd75-9447-48fe-84e8-b26029d4f403",
+  "isDocsHomePage": false,
+  "title": "Integration with CyberArk",
+  "description": "This document describes the procedure to configure the BlockID Admin Console as a passwordless authentication solution for your organization's CyberArk Privileged Access Security (PAS) users. This integration will allow your users to log in to CyberArk Password Vault Web Access (PVWA) application  leveraging their biometrics. The biometric options include TouchID / FaceID and LiveID.",
+  "source": "@site/docs/v1/BlockID Integrations/PAM (Privilege Account Management)/2_integration-wit.md.mdx",
+  "sourceDirName": "v1/BlockID Integrations/PAM (Privilege Account Management)",
+  "slug": "/v1/integration-with-cyberark",
+  "permalink": "/docs/v1/integration-with-cyberark",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/integration-with-cyberark",
+    "id": "Z660bdd75-9447-48fe-84e8-b26029d4f403"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Integration with ForgeRock",
+    "permalink": "/docs/v1/integration-with-forgerock"
+  },
+  "next": {
+    "title": "Integration with Thycotic",
+    "permalink": "/docs/v1/integration-with-thycotic"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/Z4c532f57-96a5-4690-9344-5cc15ba3bcad",
+  "id": "v1/BlockID Enterprise/Z4c532f57-96a5-4690-9344-5cc15ba3bcad",
+  "isDocsHomePage": false,
+  "title": "Z4c532f57-96a5-4690-9344-5cc15ba3bcad",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/2_release-notes.md.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/release-notes",
+  "permalink": "/docs/v1/release-notes",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/release-notes",
+    "id": "Z4c532f57-96a5-4690-9344-5cc15ba3bcad"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "release-notes",
+    "permalink": "/docs/v1/BlockID Enterprise/release-notes"
+  },
+  "next": {
+    "title": "item-1",
+    "permalink": "/docs/v1/BlockID Enterprise/item-1"
+  }
+}

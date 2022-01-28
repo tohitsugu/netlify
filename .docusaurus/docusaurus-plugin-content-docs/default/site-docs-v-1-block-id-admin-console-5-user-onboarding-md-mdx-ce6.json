@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Admin Console/Za1235e1f-bb47-411c-9367-464867d5276b",
+  "id": "v1/BlockID Admin Console/Za1235e1f-bb47-411c-9367-464867d5276b",
+  "isDocsHomePage": false,
+  "title": "User Onboarding Process Guide",
+  "description": "The BlockID Admin Console provides features to onboard new users for passwordless login to their windows workstation and various web applications. These users can be onboarded from different datastores within your organization.",
+  "source": "@site/docs/v1/BlockID Admin Console/5_user-onboarding.md.mdx",
+  "sourceDirName": "v1/BlockID Admin Console",
+  "slug": "/v1/user-onboarding-process-guide",
+  "permalink": "/docs/v1/user-onboarding-process-guide",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "slug": "/v1/user-onboarding-process-guide",
+    "id": "Za1235e1f-bb47-411c-9367-464867d5276b"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Installing BlockID Admin Console",
+    "permalink": "/docs/v1/installing-blockid-admin-console"
+  },
+  "next": {
+    "title": "Introduction to BlockID Admin Console",
+    "permalink": "/docs/v1/introduction-to-blockid-admin-console"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "unversionedId": "v1/BlockID Enterprise/11_1kmodule",
+  "id": "v1/BlockID Enterprise/11_1kmodule",
+  "isDocsHomePage": false,
+  "title": "11_1kmodule",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v1/BlockID Enterprise/11_1kmodule.md",
+  "sourceDirName": "v1/BlockID Enterprise",
+  "slug": "/v1/BlockID Enterprise/11_1kmodule",
+  "permalink": "/docs/v1/BlockID Enterprise/11_1kmodule",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "RADIUS Integrations",
+    "permalink": "/docs/v1/item-4"
+  },
+  "next": {
+    "title": "1K User Directory Module",
+    "permalink": "/docs/v1/1kmodule"
+  }
+}

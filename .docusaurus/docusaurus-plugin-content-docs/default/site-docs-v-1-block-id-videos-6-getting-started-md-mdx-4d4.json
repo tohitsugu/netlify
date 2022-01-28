@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/BlockID Videos/Z1c76219c-f543-48bc-9e97-e34a21736bc4",
+  "id": "v1/BlockID Videos/Z1c76219c-f543-48bc-9e97-e34a21736bc4",
+  "isDocsHomePage": false,
+  "title": "Getting Started with Videos",
+  "description": "1.\tIntroduction to BlockID",
+  "source": "@site/docs/v1/BlockID Videos/6_getting-started.md.mdx",
+  "sourceDirName": "v1/BlockID Videos",
+  "slug": "/v1/getting-started-with-videos",
+  "permalink": "/docs/v1/getting-started-with-videos",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "slug": "/v1/getting-started-with-videos",
+    "id": "Z1c76219c-f543-48bc-9e97-e34a21736bc4"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID User Journey",
+    "permalink": "/docs/v1/blockid-user-journey"
+  },
+  "next": {
+    "title": "Introduction to BlockID",
+    "permalink": "/docs/v1/introduction-to-blockid"
+  }
+}

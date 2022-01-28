@@ -1,0 +1,20 @@
+{
+  "unversionedId": "v2/Release Notes/release-notes-r",
+  "id": "v2/Release Notes/release-notes-r",
+  "isDocsHomePage": false,
+  "title": "release-notes-r",
+  "description": "Metadata_Start",
+  "source": "@site/docs/v2/Release Notes/4_release-notes-r.md",
+  "sourceDirName": "v2/Release Notes",
+  "slug": "/v2/Release Notes/release-notes-r",
+  "permalink": "/docs/v2/Release Notes/release-notes-r",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {},
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "release-notes-v",
+    "permalink": "/docs/v2/Release Notes/release-notes-v"
+  }
+}

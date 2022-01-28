@@ -1,0 +1,27 @@
+{
+  "unversionedId": "v1/Developer Documentation/API Guides/Zca8a6c76-a618-4590-b15c-67f5a9718752",
+  "id": "v1/Developer Documentation/API Guides/Zca8a6c76-a618-4590-b15c-67f5a9718752",
+  "isDocsHomePage": false,
+  "title": "Android",
+  "description": "",
+  "source": "@site/docs/v1/Developer Documentation/API Guides/2_android-1.md.mdx",
+  "sourceDirName": "v1/Developer Documentation/API Guides",
+  "slug": "/v1/android-1",
+  "permalink": "/docs/v1/android-1",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/android-1",
+    "id": "Zca8a6c76-a618-4590-b15c-67f5a9718752"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Workforce Mobile Application - User Guide - old",
+    "permalink": "/docs/v1/blockid-workforce-mobile-application-user-guideold"
+  },
+  "next": {
+    "title": "iOS",
+    "permalink": "/docs/v1/ios-1"
+  }
+}
