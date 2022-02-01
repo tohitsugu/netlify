@@ -33,13 +33,13 @@ The software OTP options include **Email OTP Delivery Configuration**, **SMS OTP
 1. In the **Email OTP Delivery Configuration** section, enter the following details to enable the **Email OTP** authentication option:
     * **Protocol**: Select the appropriate protocol type.
     * **Auth**: Select the `TRUE` or `FALSE` option.
-    :::(Info) (Info:)
+    :::tip
     This will be configured by the client. This field will be dependent on the host that the client uses and whether it requires authentication. If it requires authentication, the username and password fields for authentication will be provided below.
     :::
     * **Host**: Enter the host URL `<Protocol>.<Domain>.com` from where the emails will be sent to authenticate users. For example, `smtp.socketlabs.com`.
     * **Port**: Select the desired port option from where the BlockID Admin Console will communicate with the host. 
     * **From Email Address**: Enter the email address from which the email OTP will be sent to users.
-    :::(Warning) (Note:)
+    :::caution Note:
     This will be a prior SMTP configuration and may vary for each community.
     :::
     * **Username**: Enter the username of the email host server account.
@@ -59,7 +59,7 @@ The Hardware OTP settings include the Hardware Token Configuration section.
 In the **Hardware Token Configuration** section, enter the following details to enable the **Hardware OTP** authentication option:
 * **Domain**: Enter the domain URL that is managing the hardware authentication.
 
-:::(Info) (Note:)
+:::tip Note:
 Admin access is granted to the community admin on the Onespan server. The community admin can add/remove/bulk load tokens to a user account that is created on the Onespan server for the user(s). In the future, the Onespan function will be embedded into BlockID.
 :::
 

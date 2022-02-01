@@ -146,7 +146,7 @@ Bridge.initialise();
    | argTenant | base URL. For example, docs.cloud.com |
    | argCommunity | community name. For example,  mobile, consumer. |
    | argProductKey | product key. For example, `5678-1234-0987` |
-:::(Info) (Note:)
+:::tip  Note:
 The base URL must be set only once during the lifetime of the app.
 :::
 
@@ -169,7 +169,7 @@ The base URL must be set only once during the lifetime of the app.
 where the `argValue - is either true or false`.
 `True` indicates license check success.
  `False` indicates license check failure.
-:::(Info) (Note:)
+:::tip  Note:
 This API needs to be called every time the app launches.
 :::
 
@@ -206,7 +206,7 @@ Bridge.savePin(String argPin);
 | ----------- | ----------- |
 | argPin | It is the Pin that a user wants to set for accessing the app.|
 
-:::(Info) (Note:)
+:::tip  Note:
 This Pin is only for the app and different from the device pin which is enrolled in device settings.
 :::
 
@@ -217,7 +217,7 @@ This Pin is only for the app and different from the device pin which is enrolled
     * `argResponse` - `OneKosmosSDKResponse` object containing response.
     * Compare `argResponse.getCode()` to `IFaceResponseListener.ENROLLMENT.RESPONSE_CODE.SUCCESS` or `IFaceResponseListener.ENROLLMENT.RESPONSE_CODE.FAILURE` to determine the result.
 3. `onFaceComparisonResponse(OneKosmosSDKResponse argResponse)`
-    :::(Info) (Note:)
+    :::tip  Note:
     This method is relevant only to face comparison. Hence, not discussed here in detail. See the **Login Methods** topic for the detailed description.
     :::
 4. For Face enrollment, call the following method:
@@ -365,7 +365,7 @@ Bridge.displayFingerPrintCaptureDialog(Activity argActivity, IBiometricResponseL
     * If `yes`, a biometric prompt will be shown.
     * If not, the user will be asked to authenticate himself using Pin, Pattern, or Password.
     * If none of the Pin, Pattern, or Password is enrolled, SDK will direct the user to Device settings where one of the locking/authentication types needs to be set.
-:::(Info) (Note:)
+:::tip  Note:
 Pin here is a device pin and is different than that mentioned in the **PIN Enrollment** topic above.
 :::
 
@@ -397,7 +397,7 @@ Bridge.enrollFace(Activity argActivity, Location argLocation, IFaceResponseListe
 | argLocation | Current location with latitude and longitude.|
 | argFaceResponseListener | A class that will receive a response of the enrollFace() API by implementing the IFaceResponseListener interface. |
 
-:::(Info) (Note:)
+:::tip  Note:
 For face comparison, the app is required to call the `enrollFace()` method followed by the `compareFace()` method.
 :::
 5. Call the following method:
