@@ -5,7 +5,7 @@ id: Za9fbac75-d4fe-4b03-a2d2-01cc30146c5b
 # Technical Guide for LiveID, Driving License and Passport Scan Support 
 This guide describes the procedures to enroll the user’s liveID (captures the live(real-time) facial images) details, driver’s license (DL), and passport details within the BlockID mobile application. While registering, users are first required to enroll in a new PIN and then enroll their biometrics. The biometric options include TouchID / FaceID, and LiveID. Once enrolled, the Identity Assurance Level (IAL) will be set to 1.
 
-:::(Info) (Note:)
+:::tip Note:
 As a prerequisite to enrolling the Digital Identity Safe documents, users are first required to scan their liveID image. Upon successful scanning, they will be allowed to enroll DL and passport.
 :::
 
@@ -31,7 +31,7 @@ When a user clicks on the LiveID option, the front camera opens up. Perform the 
 Step by step logical process performed via a BlockID mobile app when a user scans the blinking of the eyes and live smiling face:
 
 1. The Microsoft API matches any frame of the live image with the photograph of the user’s enrolled passport (preferred) if the DL and passport have been already enrolled successfully for the user.
-    :::(Info) (Note:)
+    :::tip Note:
     This happens when a user has previously enrolled the liveID image, DL, and passport and subsequently removes the already enrolled liveID image at a later time.
     :::
 2. If a user is enrolling the liveID image for the first time, it will enroll the captured liveID image.
@@ -41,14 +41,14 @@ Step by step logical process performed via a BlockID mobile app when a user scan
 Step by step logical process performed when a user scans a DL:
 1. Front-side scanning:
     * The camera captures frames of the DL. 
-        :::(Info) (Note:)
+        :::tip Note:
          It uses **OCR** (Optical Character Reader) to scan the text from the captured frames.
         :::
     * Processes the captured frames to grab the text and image.
     * Saves the grabbed text (which is name, address, date of birth (DOB) , expiry date, and so on) in mobile device memory.
 2. Backside scanning:
     * The camera captures the barcode.
-         :::(Info) (Note:)
+         :::tip Note:
          It uses PDF417 to scan and decode the barcode.
         :::
     * Decodes captured barcode. A user will get certain values in the form of a string once the barcode is decoded.
@@ -69,14 +69,14 @@ If the above list of data is matched successfully, then, it checks the confidenc
 
 ## Passport
 It uses MRZ (Machine Readable Zone) to scan the barcode of the passport. We use MRZ for those countries where MRZ is supported for barcode scanning in the passport.
- :::(Info) (Note:)
+ :::tip Note:
 The passport scanning module will soon cover the enrollment of passports in which the barcode details are not present.
  :::
 
 Step by step logical process performed when a user scans a passport:
 1. We support front side scanning for a passport.
     * The camera captures frames of a passport.
-         :::(Info) (Note:)
+         :::tip Note:
       It uses MRZ to scan and decode the barcode.
          :::
     * Scans the barcode details including `>` and `<` signs. 

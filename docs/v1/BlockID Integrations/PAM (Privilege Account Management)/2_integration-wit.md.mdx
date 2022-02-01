@@ -41,7 +41,7 @@ b. [Relying Party Trust configurations](#CyberarkIDPRelyingparty)
 5. [Test the SAML Single Sign-On Connection](#TestSAML)
 
 ## <a name = "CyberarkIDP"></a>Configure your BlockID Tenant as an Identity Provider (IDP) within CyberArk PVWA
-:::(Warning) (Note:)
+:::tip Note:
 Steps mentioned in the guide are given as per the workflow provided in the CyberArk PAS V10.8.0.
 :::
 
@@ -60,7 +60,7 @@ The PVWA is a web application that is deployed on each Windows server for an ent
 
 1. From the `PasswordVault` installation folder, make a copy of the `saml.config.template` file, and rename the copy to `saml.config`.
 
-:::(Info) (your title goes here)
+:::tip 
 The default location of the `PasswordVault` installation folder is `\Inetpub\wwwroot\PasswordVault`.
 :::
 
@@ -138,7 +138,7 @@ The SAMLv2 screen is displayed.
     * Map the `nameIdentifier` to `winlogin`.
     * Click **Save**.
 
-:::(Info) (Note:)
+:::tip Note:
 These mapped fields will be available in the ***SAMLv2 > Service Providers > SP Assertion Claims Mapping*** tab for the imported service provider.
 :::
 
@@ -147,7 +147,7 @@ These mapped fields will be available in the ***SAMLv2 > Service Providers > SP 
 1.	In the **SAMLv2** screen, click **Service Providers**.
 2.	On the **Service Providers List** screen, from the **One-Click Rapid Service Provider Onboarding** section, click on the **CyberArk PVWA** option.
 3.	In the **Onboard CyberArk PVWA** as a SAMLv2 Service Provider** window, enter details for the following fields:
-    :::(Info) (Note:)
+    :::tip Note:
     In case, if your client do not share their CyberArk PVWA's XML metadata file to 1Kosmos, get the **Entity ID** and **Login URL** (SAML Assertion Consumer Service URL) details of their CyberArk PVWA. 
     :::
     * **Application Label**: Enter the appropriate name for your organization’s CyberArk PVWA application as a service provider.

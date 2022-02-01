@@ -21,7 +21,7 @@ The BlockID Admin Console will randomly select any broker and establish a connec
 The BlockID Admin Console will detect if a broker is brought off-line or stopped and automatically route the requests to the other linked brokers. Also, additional brokers can be added to the system to provide additional performance and availability.
 
 
-:::(Info) (Note:)
+:::tip Note:
 To Install and configure more than one broker for best performance and availability, they should all be on separate Linux/Unix machines.
 
 To get the detailed steps on installation and configuration of BlockID Authentication Broker, visit its [Installation Guide](https://1kosmos.document360.io/docs/en/installing-blockid-authentication-broker).
@@ -43,7 +43,7 @@ To configure multiple brokers support for the BlockID Admin Console:
         * Navigate to ***LDAP or AD Configurations >  LDAP or AD Configuration***, enter the similar AD configuration details added within the other brokers LDAP section.
         * Click `Submit`.
 
-:::(Error) (Info:)
+:::caution Info:
 Note that, multiple brokers should include the same WebSocket configurations to provide support to the same BlockID Admin Console.
 :::
 
@@ -51,7 +51,7 @@ Note that, multiple brokers should include the same WebSocket configurations to 
 
 This feature allows the user to reset his/her password. For example, the BlockID mobile app has a reset credentials feature, that would use the password reset if the broker was configured for the authentication. The BlockID Admin console also has a password reset feature. The broker searches for the user using the config parameters and if the searched user is found, the broker binds it as the administrative user to the configured directory and modifies the password of the user.
 
-:::(Info) (Note:)
+:::tip Note:
 Active Directory password resets always require an **SSL/TLS connection** from the broker to the AD server. LDAP directories may or may not require SSL/TLS depending on how they are configured.
 :::
 

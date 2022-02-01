@@ -18,7 +18,7 @@ The Logical workflow to read .pac file or the manual proxy details in CP is as f
 1. The CP will check the proxy details within the ***BlockID Configuration window > Advanced tab***.
     * If the URL is a Proxy URL, the CP will use this URL to connect to the BlockID Admin console.
     
-    :::(Info) (Note:)
+    :::tip Note:
     Direct proxy may or may not use the login credentials for authentication.
     :::
     * If the URL is a .pac file: The .pac file is accessible only when you are connected to the company’s VPN.
@@ -26,7 +26,7 @@ The Logical workflow to read .pac file or the manual proxy details in CP is as f
         * If CP will not be able to access the .pac file: It will establish a direct connection to the BlockID Admin console.
      * If the proxy details are not configured:  It is confirmed that you are not connected to the company's VPN OR maybe the proxy is not set for that organization. The CP will establish a direct connection to the BlockID Admin console.
 
-:::(Error) (Alert:)
+:::caution Alert:
  In any of the above cases, if the connection fails, it displays a connection error. (The Connection cannot be established.)
 :::
 
