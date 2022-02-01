@@ -1,0 +1,137 @@
+---
+sidebar_position: 2
+slug: /api/idverify
+id: id1
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# BlockID Identity Verification 
+
+BlockID identity verification performs single-source KYC and anti-money laundering verification, delivering a one-stop compliance solution to customers and developers. We combine digital identity checks with reports from credit bureaus, eKYC verifiers, DMVs, and global watchlist data to deliver comprehensive one-stop identity verification with a bring-your-own KYC provider model.
+
+BlockID Identity Verification is used to authenticate documents such as passports, driver’s licenses,  and ID cards, as well as personally identifiable information, such as social security numbers, tax ID numbers, and birth records. 
+
+The new BlockID Developer API extends our complete identity verification services to others, allowing developers to verify identity documents and personally identifiable information in real-time.  Developers can choose the identity assurance their applications need right up to and including KYC, [NIST 800 63-3 standards](https://pages.nist.gov/800-63-3/sp800-63-3.html) for Identity Assurance Level 2 (IAL2), and Authentication Assurance Level 2 (AAL2).
+
+
+## **How it Works**
+
+Users will need to download and install the BlockID mobile application. When users first setup the application they will go through a brief onboaridng process to create a private key, enroll their biometric data with TouchID/FaceID, and a liveness verification scan using LiveID. LiveID uses a combination of biometric data, machine learning, and artifical intelligence to ensure that the user is real, human, and not a bot or somebody trying to spoof their identity.
+
+Next, identity documents such as passports and drivers licenses are enrolled through the mobile application. The documents are visually validated with LiveID and realtime biometrics against the picture extracted from the document. The information on the documents is then verified with the issuing authority. 
+
+Users can also include data from non-physical IDs, such as telco account numbers and banking credentials  For additional use cases, you can also verify a user's social security number with the Social Security Administration, as well as other information - a popular healthcare use case is to verify if a user is indeed a physician by validating their NPIN (National Physician Information Number).
+
+The more information that is added and verified, the more complete the identity assurance level will be, as defined by [NIST](https://pages.nist.gov/800-63-3/sp800-63-3.html) 
+
+
+Once verified, your users will their digital identity for account login or transaction approval rather than a username and password. This not only provides users with a positive experience, but the organization also benefits from a high level of certainty for who is at the other end of the digital connection.
+
+## **Identity Verification API**
+
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+    {children}
+  </span>
+);
+
+<Highlight color="#d62718">POST</Highlight> <code>/verify</code>
+
+Verify an identity document.
+
+### Parameters
+
+
+**licenseKey** <text className="gray-text"> string </text><br/>
+Your BlockID license key. 
+
+**dvcID** <text className="gray-text"> string </text><br/>
+Document dvcID
+
+**verifications** <text className="gray-text"> string array ['dl_verify', 'face_liveness', 'face_compare', 'ssn_verify'] </text><br/>
+
+Type of verifications being performed 
+
+**document** <text className="gray-text"> id: string, type: string</text><br/>
+
+### Example Request
+
+```jsx 
+{
+    "dvcID": "11232",
+    "verifications": "['dl_verify', 'face_liveness', 'face_compare', 'ssn_verify']",
+    "document": {
+        "id": "E2793411",
+        "type": "California Drivers License"
+    }
+}
+```
+
+
+
+
+:::tip  
+Visit the [Developer Dashboard](https://1k-dev.1kosmos.net/devportal/) to view tenant information
+::: 
+
+
+### Server Response
+
+<Tabs groupId="responses" className="unique-tabs">
+
+  <TabItem value="200" label="200">
+
+```jsx title="200 Success"
+
+{
+  "data": "xxxxxxxxxx/xxxxxxxxxxxxxxxxxxxxxx=",
+  "publicKey": "xxxxxxxxxx/xxxxxxxxxxxxxxxxxxxxxx="
+}
+```
+  </TabItem>
+
+  <TabItem value="401" label="401">
+
+```jsx title="401 Unauthorized"
+
+{
+    "error_code": 401,
+    "message":"Unauthorized"
+}
+
+```
+  </TabItem>
+
+  <TabItem value="403" label="403">
+
+```jsx title="403 Forbidden"
+
+{
+    "error_code": 403,
+    "message":"Forbidden"
+}
+
+```
+  </TabItem>
+
+  <TabItem value="404" label="404">
+
+```jsx title="404 Not Found"
+
+{
+    "error_code": 404,
+    "message":"Not Found"
+}
+
+```
+  </TabItem>
+</Tabs>
+
