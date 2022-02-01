@@ -37,9 +37,13 @@
     "component": "component---site-src-pages-register-js-81-f-03a",
     "config": "config---login-5-e-9-d49"
   },
-  "/docs-a58": {
+  "/docs-60c": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
+  },
+  "/docs/-4fd": {
+    "component": "component---theme-doc-item-178-a40",
+    "content": "content---docs-index-4-ed-714"
   },
   "/docs/api-f43": {
     "component": "component---theme-doc-item-178-a40",
@@ -60,10 +64,6 @@
   "/docs/ecdsa/shared-key-e05": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-ecdsa-shared-key-63-f-aa3"
-  },
-  "/docs/index-29c": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-index-4-ed-714"
   },
   "/docs/otp-480": {
     "component": "component---theme-doc-item-178-a40",

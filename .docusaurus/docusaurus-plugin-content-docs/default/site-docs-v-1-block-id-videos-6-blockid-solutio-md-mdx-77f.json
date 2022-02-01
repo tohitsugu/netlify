@@ -17,8 +17,8 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "Tenant On-boarding Process Guide",
-    "permalink": "/docs/v1/internal-process"
+    "title": "IdP Configuration",
+    "permalink": "/docs/v1/idp-configuration"
   },
   "next": {
     "title": "BlockID User Journey",

@@ -15,7 +15,7 @@
           "sidebarFilePath": "/Users/ifrench/netlify2/netlify/sidebars.js",
           "contentPath": "/Users/ifrench/netlify2/netlify/docs",
           "contentPathLocalized": "/Users/ifrench/netlify2/netlify/i18n/en/docusaurus-plugin-content-docs/current",
-          "mainDocId": "api/api1",
+          "mainDocId": "index",
           "docs": [
             {
               "unversionedId": "api/api1",
@@ -36,6 +36,10 @@
                 "id": "api1"
               },
               "sidebar": "mySidebar",
+              "previous": {
+                "title": "BlockID Developer SDK",
+                "permalink": "/docs/"
+              },
               "next": {
                 "title": "One-Time Passcodes",
                 "permalink": "/docs/api/otp"
@@ -158,24 +162,20 @@
               "description": "The BlockID Developer SDK allows you to easily integrate BlockID services into your development platform. We currently support Node.js, PHP, and Java.",
               "source": "@site/docs/index.mdx",
               "sourceDirName": ".",
-              "slug": "/index",
-              "permalink": "/docs/index",
+              "slug": "/",
+              "permalink": "/docs/",
               "tags": [],
               "version": "current",
-              "sidebarPosition": 2,
+              "sidebarPosition": 1,
               "frontMatter": {
-                "sidebar_position": 2,
-                "slug": "/index",
+                "sidebar_position": 1,
+                "slug": "/",
                 "id": "index"
               },
               "sidebar": "mySidebar",
-              "previous": {
-                "title": "Verifying One-Time Passcodes",
-                "permalink": "/docs/otp/verify"
-              },
               "next": {
-                "title": "Universal Web Login",
-                "permalink": "/docs/uwl"
+                "title": "BlockID Developer API",
+                "permalink": "/docs/api"
               }
             },
             {
@@ -258,8 +258,8 @@
                 "permalink": "/docs/otp"
               },
               "next": {
-                "title": "BlockID Developer SDK",
-                "permalink": "/docs/index"
+                "title": "Universal Web Login",
+                "permalink": "/docs/uwl"
               }
             },
             {
@@ -282,8 +282,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "BlockID Developer SDK",
-                "permalink": "/docs/index"
+                "title": "Verifying One-Time Passcodes",
+                "permalink": "/docs/otp/verify"
               },
               "next": {
                 "title": "Block ID Proof of Concept (POC) Guide",
@@ -1150,8 +1150,8 @@
                 "permalink": "/docs/v1/internal-guide-blockid-credential-provider"
               },
               "next": {
-                "title": "Release Notes",
-                "permalink": "/docs/v1/release-notes"
+                "title": "Integration with PingFederate",
+                "permalink": "/docs/v1/integration-with-pingfederate"
               }
             },
             {
@@ -1308,8 +1308,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Technical Guide for LiveID, Driving License and Passport Scan Support",
-                "permalink": "/docs/v1/technical-guide-for-liveid-driving-license-and-passport-scan-support"
+                "title": "BlockID Mobile Application User Guide",
+                "permalink": "/docs/v1/blockid-mobile-application-user-guide"
               },
               "next": {
                 "title": "Dashboard",
@@ -1635,8 +1635,8 @@
                 "permalink": "/docs/v1/item-4"
               },
               "next": {
-                "title": "Integration with PingFederate",
-                "permalink": "/docs/v1/integration-with-pingfederate"
+                "title": "Google Cloud Platform: Kubernetes architecture guide for BlockID Platform",
+                "permalink": "/docs/v1/google-cloud-platform-kubernetes-architecture-guide-for-blockid-platform"
               }
             },
             {
@@ -2198,8 +2198,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "1K User Directory Module",
-                "permalink": "/docs/v1/1kmodule"
+                "title": "Technical Guide for LiveID, Driving License and Passport Scan Support",
+                "permalink": "/docs/v1/technical-guide-for-liveid-driving-license-and-passport-scan-support"
               },
               "next": {
                 "title": "Intergration with Okta",
@@ -2229,8 +2229,8 @@
                 "permalink": "/docs/v1/integration-with-cisco-check-point"
               },
               "next": {
-                "title": "Introduction to Athena Admin Portal",
-                "permalink": "/docs/v1/introduction-to-athena-admin-portal"
+                "title": "Release Notes",
+                "permalink": "/docs/v1/release-notes"
               }
             },
             {
@@ -2256,8 +2256,8 @@
                 "permalink": "/docs/v1/generic-saml-application"
               },
               "next": {
-                "title": "Broker Installation",
-                "permalink": "/docs/v1/broker-installation"
+                "title": "Release Notes 2021.11.03",
+                "permalink": "/docs/v1/release-notes-20211103"
               }
             },
             {
@@ -2468,12 +2468,12 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Office365 Integration",
-                "permalink": "/docs/v1/office365-integration"
-              },
-              "next": {
                 "title": "Release Notes 2021.11.03",
                 "permalink": "/docs/v1/release-notes-20211103"
+              },
+              "next": {
+                "title": "Email Templates",
+                "permalink": "/docs/v1/email-templates"
               }
             },
             {
@@ -2495,12 +2495,12 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Broker Installation",
-                "permalink": "/docs/v1/broker-installation"
+                "title": "Office365 Integration",
+                "permalink": "/docs/v1/office365-integration"
               },
               "next": {
-                "title": "Email Templates",
-                "permalink": "/docs/v1/email-templates"
+                "title": "Broker Installation",
+                "permalink": "/docs/v1/broker-installation"
               }
             },
             {
@@ -2526,8 +2526,8 @@
                 "permalink": "/docs/v1/blockid-attributes"
               },
               "next": {
-                "title": "Google Cloud Platform: Kubernetes architecture guide for BlockID Platform",
-                "permalink": "/docs/v1/google-cloud-platform-kubernetes-architecture-guide-for-blockid-platform"
+                "title": "BlockID Solutions",
+                "permalink": "/docs/v1/blockid-solutions"
               }
             },
             {
@@ -2576,8 +2576,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Release Notes 2021.11.03",
-                "permalink": "/docs/v1/release-notes-20211103"
+                "title": "Broker Installation",
+                "permalink": "/docs/v1/broker-installation"
               },
               "next": {
                 "title": "BlockID Attributes",
@@ -2630,8 +2630,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "BlockID Mobile Application User Guide",
-                "permalink": "/docs/v1/blockid-mobile-application-user-guide"
+                "title": "Tenant On-boarding Process Guide",
+                "permalink": "/docs/v1/internal-process"
               },
               "next": {
                 "title": "Login",
@@ -2850,8 +2850,8 @@
                 "permalink": "/docs/v1/google-cloud-platform-kubernetes-architecture-guide-for-blockid-platform"
               },
               "next": {
-                "title": "BlockID Solutions",
-                "permalink": "/docs/v1/blockid-solutions"
+                "title": "Introduction to Athena Admin Portal",
+                "permalink": "/docs/v1/introduction-to-athena-admin-portal"
               }
             },
             {
@@ -2873,8 +2873,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "IdP Configuration",
-                "permalink": "/docs/v1/idp-configuration"
+                "title": "1K User Directory Module",
+                "permalink": "/docs/v1/1kmodule"
               },
               "next": {
                 "title": "Tenant On-boarding Process Guide",
@@ -2927,8 +2927,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Tenant On-boarding Process Guide",
-                "permalink": "/docs/v1/internal-process"
+                "title": "IdP Configuration",
+                "permalink": "/docs/v1/idp-configuration"
               },
               "next": {
                 "title": "BlockID User Journey",
@@ -3116,8 +3116,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "iOS",
-                "permalink": "/docs/v1/ios-2"
+                "title": "test",
+                "permalink": "/docs/v1/test"
               },
               "next": {
                 "title": "iOS",
@@ -3147,8 +3147,8 @@
                 "permalink": "/docs/v1/android"
               },
               "next": {
-                "title": "Frequently Asked Questions (FAQs)",
-                "permalink": "/docs/v2/frequently-asked-questions-faq"
+                "title": "Android",
+                "permalink": "/docs/v1/android-2"
               }
             },
             {
@@ -3170,8 +3170,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "test",
-                "permalink": "/docs/v1/test"
+                "title": "iOS",
+                "permalink": "/docs/v1/ios"
               },
               "next": {
                 "title": "iOS",
@@ -3201,8 +3201,8 @@
                 "permalink": "/docs/v1/android-2"
               },
               "next": {
-                "title": "Android",
-                "permalink": "/docs/v1/android"
+                "title": "Frequently Asked Questions (FAQs)",
+                "permalink": "/docs/v2/frequently-asked-questions-faq"
               }
             },
             {
@@ -3229,7 +3229,7 @@
               },
               "next": {
                 "title": "Android",
-                "permalink": "/docs/v1/android-2"
+                "permalink": "/docs/v1/android"
               }
             },
             {
@@ -3252,7 +3252,7 @@
               "sidebar": "mySidebar",
               "previous": {
                 "title": "iOS",
-                "permalink": "/docs/v1/ios"
+                "permalink": "/docs/v1/ios-2"
               },
               "next": {
                 "title": "FAQ's related to the BlockID Product Suite",
@@ -3421,6 +3421,10 @@
           "sidebars": {
             "mySidebar": [
               {
+                "type": "doc",
+                "id": "index"
+              },
+              {
                 "type": "category",
                 "label": "BlockID Developer API",
                 "collapsible": true,
@@ -3483,10 +3487,6 @@
                     "id": "otp/otp3"
                   }
                 ]
-              },
-              {
-                "type": "doc",
-                "id": "index"
               },
               {
                 "type": "category",
@@ -3716,86 +3716,6 @@
                   },
                   {
                     "type": "category",
-                    "label": "BlockID Enterprise",
-                    "collapsible": true,
-                    "collapsed": true,
-                    "items": [
-                      {
-                        "type": "doc",
-                        "id": "v1/BlockID Enterprise/Z4c532f57-96a5-4690-9344-5cc15ba3bcad"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v1/BlockID Enterprise/Z38fac216-edc6-4cd7-9303-dd6476fa2123"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v1/BlockID Enterprise/Ze2ca47b8-8cdf-4ee0-84fd-0b744e7e317d"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v1/BlockID Enterprise/Z3aa42d95-3943-4e1a-ae91-853b67fb6632"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v1/BlockID Enterprise/Z21a482f2-363d-4686-b219-d71e9df36bb5"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v1/BlockID Enterprise/Z25a9c9c7-35f3-49da-a124-347bc514c42a"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v1/BlockID Enterprise/Z5d0bfa4f-1fee-452d-ab9f-6643ff470f58"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v1/BlockID Enterprise/Z6b864555-b7e0-48b4-8cbb-90a21ed91e14"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v1/BlockID Enterprise/Z799a680d-d99c-4bb2-a3f8-572c221cd8b7"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v1/BlockID Enterprise/Z4796fbda-3683-4105-b792-f4ffe05bb3db"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v1/BlockID Enterprise/Z934eca85-9d9c-45b3-8587-3db8ce6dfd9c"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v1/BlockID Enterprise/Za8e8b2e2-3664-4427-8698-3f3694563445"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v1/BlockID Enterprise/Zaf98a072-ad11-4365-89ed-25875a5ae98d"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v1/BlockID Enterprise/Zb1219c14-5779-44cf-b31c-f9c189ac2e35"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v1/BlockID Enterprise/Z92901538-52ae-4c81-91f5-7a286cb937f8"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v1/BlockID Enterprise/Z92800745-18bb-430d-bf5b-e1eee691515a"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v1/BlockID Enterprise/Z511546c0-7f2c-4674-975e-40aa2e25c21e"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v1/BlockID Enterprise/Ze8b54d7e-4975-4d52-ac78-ab02bf47ec5a"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
                     "label": "BlockID Integrations",
                     "collapsible": true,
                     "collapsed": true,
@@ -3924,6 +3844,102 @@
                   },
                   {
                     "type": "category",
+                    "label": "BlockID Enterprise",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "v1/BlockID Enterprise/Z4c532f57-96a5-4690-9344-5cc15ba3bcad"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "v1/BlockID Enterprise/Z38fac216-edc6-4cd7-9303-dd6476fa2123"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "v1/BlockID Enterprise/Ze2ca47b8-8cdf-4ee0-84fd-0b744e7e317d"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "v1/BlockID Enterprise/Z3aa42d95-3943-4e1a-ae91-853b67fb6632"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "v1/BlockID Enterprise/Z21a482f2-363d-4686-b219-d71e9df36bb5"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "v1/BlockID Enterprise/Z25a9c9c7-35f3-49da-a124-347bc514c42a"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "v1/BlockID Enterprise/Z5d0bfa4f-1fee-452d-ab9f-6643ff470f58"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "v1/BlockID Enterprise/Z6b864555-b7e0-48b4-8cbb-90a21ed91e14"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "v1/BlockID Enterprise/Z799a680d-d99c-4bb2-a3f8-572c221cd8b7"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "v1/BlockID Enterprise/Z4796fbda-3683-4105-b792-f4ffe05bb3db"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "v1/BlockID Enterprise/Z934eca85-9d9c-45b3-8587-3db8ce6dfd9c"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "v1/BlockID Enterprise/Za8e8b2e2-3664-4427-8698-3f3694563445"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "v1/BlockID Enterprise/Zaf98a072-ad11-4365-89ed-25875a5ae98d"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "v1/BlockID Enterprise/Zb1219c14-5779-44cf-b31c-f9c189ac2e35"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "v1/BlockID Enterprise/Z92901538-52ae-4c81-91f5-7a286cb937f8"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "v1/BlockID Enterprise/Z92800745-18bb-430d-bf5b-e1eee691515a"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "v1/BlockID Enterprise/Z511546c0-7f2c-4674-975e-40aa2e25c21e"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "v1/BlockID Enterprise/Ze8b54d7e-4975-4d52-ac78-ab02bf47ec5a"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "BlockID Platform",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "v1/BlockID Platform/Zf3f90934-5f97-46a4-a2bf-8b101c4aee00"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "v1/BlockID Platform/Z7801b653-f505-4c6b-93b4-ac8bd32c228f"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
                     "label": "BlockID New Admin Portal (Athena)",
                     "collapsible": true,
                     "collapsed": true,
@@ -4014,18 +4030,6 @@
                       },
                       {
                         "type": "category",
-                        "label": "Directory Integrations",
-                        "collapsible": true,
-                        "collapsed": true,
-                        "items": [
-                          {
-                            "type": "doc",
-                            "id": "v1/BlockID New Admin Portal (Athena)/Directory Integrations/Z422742d5-e5f4-4563-8b5b-75fe651251fc"
-                          }
-                        ]
-                      },
-                      {
-                        "type": "category",
                         "label": "Release Notes",
                         "collapsible": true,
                         "collapsed": true,
@@ -4033,6 +4037,18 @@
                           {
                             "type": "doc",
                             "id": "v1/BlockID New Admin Portal (Athena)/Release Notes/Z7575ff9b-19c0-408e-bf74-0080f94cb7b2"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "category",
+                        "label": "Directory Integrations",
+                        "collapsible": true,
+                        "collapsed": true,
+                        "items": [
+                          {
+                            "type": "doc",
+                            "id": "v1/BlockID New Admin Portal (Athena)/Directory Integrations/Z422742d5-e5f4-4563-8b5b-75fe651251fc"
                           }
                         ]
                       },
@@ -4055,22 +4071,6 @@
                             "id": "v1/BlockID New Admin Portal (Athena)/Settings/Zb2cb8a21-b17f-43f4-b5af-6d2d4fdd089c"
                           }
                         ]
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
-                    "label": "BlockID Platform",
-                    "collapsible": true,
-                    "collapsed": true,
-                    "items": [
-                      {
-                        "type": "doc",
-                        "id": "v1/BlockID Platform/Zf3f90934-5f97-46a4-a2bf-8b101c4aee00"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v1/BlockID Platform/Z7801b653-f505-4c6b-93b4-ac8bd32c228f"
                       }
                     ]
                   },
@@ -4164,22 +4164,6 @@
                         "items": [
                           {
                             "type": "category",
-                            "label": "BlockID Workforce",
-                            "collapsible": true,
-                            "collapsed": true,
-                            "items": [
-                              {
-                                "type": "doc",
-                                "id": "v1/Developer Documentation/Integration Guides/BlockID Workforce/Z84b846a1-7451-45fd-90e0-40f33d176310"
-                              },
-                              {
-                                "type": "doc",
-                                "id": "v1/Developer Documentation/Integration Guides/BlockID Workforce/Zbdaddfbc-c6b9-4fc2-bd42-35c3c77b0956"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "category",
                             "label": "BlockID Customer",
                             "collapsible": true,
                             "collapsed": true,
@@ -4191,6 +4175,22 @@
                               {
                                 "type": "doc",
                                 "id": "v1/Developer Documentation/Integration Guides/BlockID Customer/Zbb76e7b9-89ce-4d65-a64b-29ec220cf034"
+                              }
+                            ]
+                          },
+                          {
+                            "type": "category",
+                            "label": "BlockID Workforce",
+                            "collapsible": true,
+                            "collapsed": true,
+                            "items": [
+                              {
+                                "type": "doc",
+                                "id": "v1/Developer Documentation/Integration Guides/BlockID Workforce/Z84b846a1-7451-45fd-90e0-40f33d176310"
+                              },
+                              {
+                                "type": "doc",
+                                "id": "v1/Developer Documentation/Integration Guides/BlockID Workforce/Zbdaddfbc-c6b9-4fc2-bd42-35c3c77b0956"
                               }
                             ]
                           }

@@ -60,8 +60,14 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','a58'),
+    component: ComponentCreator('/docs','60c'),
     routes: [
+      {
+        path: '/docs/',
+        component: ComponentCreator('/docs/','4fd'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
       {
         path: '/docs/api',
         component: ComponentCreator('/docs/api','f43'),
@@ -89,12 +95,6 @@ export default [
       {
         path: '/docs/ecdsa/shared-key',
         component: ComponentCreator('/docs/ecdsa/shared-key','e05'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/index',
-        component: ComponentCreator('/docs/index','29c'),
         exact: true,
         'sidebar': "mySidebar"
       },

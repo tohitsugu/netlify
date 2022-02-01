@@ -8,7 +8,7 @@
           "label": "Next",
           "isLast": true,
           "path": "/docs",
-          "mainDocId": "api/api1",
+          "mainDocId": "index",
           "docs": [
             {
               "id": "api/api1",
@@ -37,7 +37,7 @@
             },
             {
               "id": "index",
-              "path": "/docs/index",
+              "path": "/docs/",
               "sidebar": "mySidebar"
             },
             {

@@ -21,7 +21,7 @@
     "permalink": "/docs/v1/internal-guide-blockid-credential-provider"
   },
   "next": {
-    "title": "Release Notes",
-    "permalink": "/docs/v1/release-notes"
+    "title": "Integration with PingFederate",
+    "permalink": "/docs/v1/integration-with-pingfederate"
   }
 }

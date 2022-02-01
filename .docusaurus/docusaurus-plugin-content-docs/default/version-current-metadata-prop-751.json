@@ -9,6 +9,11 @@
   "docsSidebars": {
     "mySidebar": [
       {
+        "type": "link",
+        "label": "BlockID Developer SDK",
+        "href": "/docs/"
+      },
+      {
         "type": "category",
         "label": "BlockID Developer API",
         "collapsible": true,
@@ -79,11 +84,6 @@
             "href": "/docs/otp/verify"
           }
         ]
-      },
-      {
-        "type": "link",
-        "label": "BlockID Developer SDK",
-        "href": "/docs/index"
       },
       {
         "type": "category",
@@ -346,104 +346,6 @@
           },
           {
             "type": "category",
-            "label": "BlockID Enterprise",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "Release Notes",
-                "href": "/docs/v1/release-notes"
-              },
-              {
-                "type": "link",
-                "label": "Dashboard",
-                "href": "/docs/v1/item-1"
-              },
-              {
-                "type": "link",
-                "label": "User Administration",
-                "href": "/docs/v1/item-2"
-              },
-              {
-                "type": "link",
-                "label": "Federation Integrations",
-                "href": "/docs/v1/item-3"
-              },
-              {
-                "type": "link",
-                "label": "OTP Module Configuration",
-                "href": "/docs/v1/one-time-passcode-module-configuration"
-              },
-              {
-                "type": "link",
-                "label": "Authentication Scheme Configuration",
-                "href": "/docs/v1/authentication-scheme-configuration"
-              },
-              {
-                "type": "link",
-                "label": "BlockID SDK",
-                "href": "/docs/v1/blockid-sdk"
-              },
-              {
-                "type": "link",
-                "label": "BlockID Templates",
-                "href": "/docs/v1/blockid-templates"
-              },
-              {
-                "type": "link",
-                "label": "Datastore Configuration",
-                "href": "/docs/v1/datastore-configuration"
-              },
-              {
-                "type": "link",
-                "label": "BlockID Connector Module",
-                "href": "/docs/v1/blockid-connector-module"
-              },
-              {
-                "type": "link",
-                "label": "AD or LDAP server Configuration",
-                "href": "/docs/v1/active-directory-or-ldap-server-configuration"
-              },
-              {
-                "type": "link",
-                "label": "BlockID User Interface Templates",
-                "href": "/docs/v1/blockid-user-interface-templates"
-              },
-              {
-                "type": "link",
-                "label": "RADIUS Integration - Temp",
-                "href": "/docs/v1/radius-integration-backup"
-              },
-              {
-                "type": "link",
-                "label": "Reports",
-                "href": "/docs/v1/reports"
-              },
-              {
-                "type": "link",
-                "label": "SCEP Integration",
-                "href": "/docs/v1/scep-integration"
-              },
-              {
-                "type": "link",
-                "label": "Authenticaition Modules Configuration",
-                "href": "/docs/v1/authenticaition-modules-configuration"
-              },
-              {
-                "type": "link",
-                "label": "RADIUS Integrations",
-                "href": "/docs/v1/item-4"
-              },
-              {
-                "type": "link",
-                "label": "1K User Directory Module",
-                "href": "/docs/v1/1kmodule"
-              }
-            ]
-          },
-          {
-            "type": "category",
             "label": "BlockID Integrations",
             "collapsible": true,
             "collapsed": true,
@@ -594,6 +496,122 @@
           },
           {
             "type": "category",
+            "label": "BlockID Enterprise",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Release Notes",
+                "href": "/docs/v1/release-notes"
+              },
+              {
+                "type": "link",
+                "label": "Dashboard",
+                "href": "/docs/v1/item-1"
+              },
+              {
+                "type": "link",
+                "label": "User Administration",
+                "href": "/docs/v1/item-2"
+              },
+              {
+                "type": "link",
+                "label": "Federation Integrations",
+                "href": "/docs/v1/item-3"
+              },
+              {
+                "type": "link",
+                "label": "OTP Module Configuration",
+                "href": "/docs/v1/one-time-passcode-module-configuration"
+              },
+              {
+                "type": "link",
+                "label": "Authentication Scheme Configuration",
+                "href": "/docs/v1/authentication-scheme-configuration"
+              },
+              {
+                "type": "link",
+                "label": "BlockID SDK",
+                "href": "/docs/v1/blockid-sdk"
+              },
+              {
+                "type": "link",
+                "label": "BlockID Templates",
+                "href": "/docs/v1/blockid-templates"
+              },
+              {
+                "type": "link",
+                "label": "Datastore Configuration",
+                "href": "/docs/v1/datastore-configuration"
+              },
+              {
+                "type": "link",
+                "label": "BlockID Connector Module",
+                "href": "/docs/v1/blockid-connector-module"
+              },
+              {
+                "type": "link",
+                "label": "AD or LDAP server Configuration",
+                "href": "/docs/v1/active-directory-or-ldap-server-configuration"
+              },
+              {
+                "type": "link",
+                "label": "BlockID User Interface Templates",
+                "href": "/docs/v1/blockid-user-interface-templates"
+              },
+              {
+                "type": "link",
+                "label": "RADIUS Integration - Temp",
+                "href": "/docs/v1/radius-integration-backup"
+              },
+              {
+                "type": "link",
+                "label": "Reports",
+                "href": "/docs/v1/reports"
+              },
+              {
+                "type": "link",
+                "label": "SCEP Integration",
+                "href": "/docs/v1/scep-integration"
+              },
+              {
+                "type": "link",
+                "label": "Authenticaition Modules Configuration",
+                "href": "/docs/v1/authenticaition-modules-configuration"
+              },
+              {
+                "type": "link",
+                "label": "RADIUS Integrations",
+                "href": "/docs/v1/item-4"
+              },
+              {
+                "type": "link",
+                "label": "1K User Directory Module",
+                "href": "/docs/v1/1kmodule"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "label": "BlockID Platform",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Google Cloud Platform: Kubernetes architecture guide for BlockID Platform",
+                "href": "/docs/v1/google-cloud-platform-kubernetes-architecture-guide-for-blockid-platform"
+              },
+              {
+                "type": "link",
+                "label": "Tenant On-boarding Process Guide",
+                "href": "/docs/v1/internal-process"
+              }
+            ]
+          },
+          {
+            "type": "category",
             "label": "BlockID New Admin Portal (Athena)",
             "collapsible": true,
             "collapsed": true,
@@ -701,19 +719,6 @@
               },
               {
                 "type": "category",
-                "label": "Directory Integrations",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
-                  {
-                    "type": "link",
-                    "label": "Broker Installation",
-                    "href": "/docs/v1/broker-installation"
-                  }
-                ]
-              },
-              {
-                "type": "category",
                 "label": "Release Notes",
                 "collapsible": true,
                 "collapsed": true,
@@ -722,6 +727,19 @@
                     "type": "link",
                     "label": "Release Notes 2021.11.03",
                     "href": "/docs/v1/release-notes-20211103"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Directory Integrations",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Broker Installation",
+                    "href": "/docs/v1/broker-installation"
                   }
                 ]
               },
@@ -747,24 +765,6 @@
                     "href": "/docs/v1/idp-configuration"
                   }
                 ]
-              }
-            ]
-          },
-          {
-            "type": "category",
-            "label": "BlockID Platform",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "Google Cloud Platform: Kubernetes architecture guide for BlockID Platform",
-                "href": "/docs/v1/google-cloud-platform-kubernetes-architecture-guide-for-blockid-platform"
-              },
-              {
-                "type": "link",
-                "label": "Tenant On-boarding Process Guide",
-                "href": "/docs/v1/internal-process"
               }
             ]
           },
@@ -867,24 +867,6 @@
                 "items": [
                   {
                     "type": "category",
-                    "label": "BlockID Workforce",
-                    "collapsible": true,
-                    "collapsed": true,
-                    "items": [
-                      {
-                        "type": "link",
-                        "label": "Android",
-                        "href": "/docs/v1/android-2"
-                      },
-                      {
-                        "type": "link",
-                        "label": "iOS",
-                        "href": "/docs/v1/ios-2"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
                     "label": "BlockID Customer",
                     "collapsible": true,
                     "collapsed": true,
@@ -898,6 +880,24 @@
                         "type": "link",
                         "label": "iOS",
                         "href": "/docs/v1/ios"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "BlockID Workforce",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "link",
+                        "label": "Android",
+                        "href": "/docs/v1/android-2"
+                      },
+                      {
+                        "type": "link",
+                        "label": "iOS",
+                        "href": "/docs/v1/ios-2"
                       }
                     ]
                   }

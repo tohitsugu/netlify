@@ -17,8 +17,8 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "1K User Directory Module",
-    "permalink": "/docs/v1/1kmodule"
+    "title": "Technical Guide for LiveID, Driving License and Passport Scan Support",
+    "permalink": "/docs/v1/technical-guide-for-liveid-driving-license-and-passport-scan-support"
   },
   "next": {
     "title": "Intergration with Okta",

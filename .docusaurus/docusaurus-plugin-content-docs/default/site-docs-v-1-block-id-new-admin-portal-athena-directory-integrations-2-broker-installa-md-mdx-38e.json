@@ -17,11 +17,11 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "Office365 Integration",
-    "permalink": "/docs/v1/office365-integration"
-  },
-  "next": {
     "title": "Release Notes 2021.11.03",
     "permalink": "/docs/v1/release-notes-20211103"
+  },
+  "next": {
+    "title": "Email Templates",
+    "permalink": "/docs/v1/email-templates"
   }
 }
