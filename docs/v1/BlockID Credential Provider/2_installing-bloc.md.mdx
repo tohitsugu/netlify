@@ -28,7 +28,7 @@ To get the BlockID CP Executable file, please contact your 1Kosmos representativ
 2. Follow the instructions in the Setup wizard. 
     * While CP installation, the **BlockID Virtual Smart Card driver** installation pop-up is displayed. Click **OK** to install a BlockID virtual smart card reader service along with the CP on the Windows workstation. The virtual smart card reader handles all the smart card calls for CP to read the user certificate.
 The BlockID CP is installed successfully.
-:::(Info) (Note:)
+:::tip Note:
 It is mandatory to restart the workstation after the installation of BlockID CP.
 ::: 
 
@@ -52,7 +52,7 @@ It is mandatory to restart the workstation after the installation of BlockID CP.
             * **State**: After the **BlockID CP** installation, this service will be available in the **Windows workstation** by default. The default **state** of the service is “**running**”. It should be in the ‘**running**’ state to make it work on the Windows Login screen. Click **Stop** to bring the service to the **Stopped** state whenever you are modifying the configurations. After the modification is done, click **Start** to start the service again.
        * **Credential Provider BlockID Status**: Use the default settings for the below-mentioned options.
              * **Registered**: The **Yes** value indicates that BlockID CP has been registered as a service and has a registry entry within the workstation. It also checks whether it is registered within the BlockID Admin Console or not. It is recommended to uninstall BlockID CP instead of clicking on the **Unregister** button. 
-            :::(Warning) (Info)
+            :::caution Info:
             The Unregister button is given for future functionality where you can selectively unregister the BlockID CP application from your workstation.
             :::
 
@@ -63,7 +63,7 @@ It is mandatory to restart the workstation after the installation of BlockID CP.
             * **Username**: Enter the username.
             * **Password**: Enter the password.
 
-         :::(Info) (Note:)
+         :::tip Note:
         The rest of the settings shown in this tab are disabled for now and will be used for future functionalities.
         :::
    * **BlockID Configurations** tab: Whenever you are performing any changes in the configurations, stop the service from the ***General** tab > BlockID Service > State > click **Stop***.

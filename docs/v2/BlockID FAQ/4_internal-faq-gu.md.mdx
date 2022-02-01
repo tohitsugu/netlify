@@ -8,15 +8,15 @@ This is an internal FAQ guide that includes responses to:
 1. Sales and marketing related questions
 2. Internal queries that are encountered at the time of Proof of Concepts
 
-:::(Info) (Note:)
+:::tip Note:
 These FAQs are generally asked questions by the client and not directly related to any particular BlockID product suite’s workflow or configuration.
 :::
 
-:::(Error) ()
+:::caution 
 ## BlockID Customer Mobile Application
 :::
 
-:::(Warning) ()
+:::tip Warning:
 <details>
 <summary><b>Do we currently support India based Driving License and Passports including overt security templates?</b></summary>
 <br />
@@ -24,7 +24,7 @@ Yes. We do support the scanning of India based Driving License and Passports inc
 </details>
 :::
 
-:::(Warning) ()
+:::tip Warning:
 <details>
 <summary><b>If the client has PDF417, will they be able to read a Driving License?</b></summary>
 <br />
@@ -32,7 +32,7 @@ Yes, the application uses PDF417 to scan and decode the barcode.
 </details>
 :::
 
-:::(Warning) ()
+:::tip Warning:
 <details>
 <summary><b>BlockID integration capability - Are we able to integrate with SAP?</b></summary>
 <br />
@@ -40,7 +40,7 @@ Yes, the application uses PDF417 to scan and decode the barcode.
 </details>
 :::
 
-:::(Warning) ()
+:::tip Warning:
 <details>
 <summary><b>BlockID integration capability - Are we able to integrate with SAP?</b></summary>
 <br />
@@ -48,7 +48,7 @@ Yes, the application uses PDF417 to scan and decode the barcode.
 </details>
 :::
 
-:::(Warning) ()
+:::tip Warning:
 <details>
 <summary><b>What data is captured as part of the QR code?<br />
 <ul>
@@ -60,7 +60,7 @@ Yes, the application uses PDF417 to scan and decode the barcode.
 </details>
 :::
 
-:::(Warning) ()
+:::tip Warning:
 <details>
 <summary><b>Do we have an interface technical overview document somewhere?</b></summary>
 <br />
@@ -70,14 +70,14 @@ Please refer to the following link for all technical overview and integration gu
 </details>
 :::
 
-:::(Warning) ()
+:::tip Warning:
 <details>
 <summary><b>Do we support periodic authentication challenges thrown when the session is active (Example: Hourly, twice hourly, etc.)?</b></summary>
 <br />
 We can do step-up authentication at a transactional level. As an example: If a user logs in using TouchID and transfers money, the user can be prompted to step up and authenticate using their FaceID. If they transfer money in excess of 1 Million USD, they could be asked to step up and authenticate using their LiveID.
 </details>
 :::
-:::(Warning) ()
+:::tip Warning:
 <details>
 <summary><b>What happens when a GIF with eyes blinking and a smile is used for FaceID authentication?</b></summary>
 <br />
@@ -85,11 +85,11 @@ It will fail the FaceID authentication. We have a test scheduled with a 3rd part
 </details>
 :::
 
-:::(Error) ()
+:::caution 
 ## BlockID Platform
 :::
 
-:::(Warning) ()
+:::tip Warning:
 <details>
 <summary><b>Does the AD user’s private certificate (obtained from the NDES/AD server) get written to IPFS on the Blockchain?</b></summary>
 <br />
@@ -97,7 +97,7 @@ No, the AD user’s private certificate gets saved on the mobile phone in the en
 </details>
 :::
 
-:::(Warning) ()
+:::tip Warning:
 <details>
 <summary><b>What happens to the AD user’s private certificate which is saved on the mobile phone when the mobile phone is lost or stolen?</b></summary>
 <br />
@@ -105,7 +105,7 @@ In this situation, the new private certificate will be issued to you and the old
 </details>
 :::
 
-:::(Warning) ()
+:::tip Warning:
 <details>
 <summary><b>What is the ROI on the solution?</b></summary>
 <br />
@@ -129,7 +129,7 @@ The following metrics can be targeted in a production deployment:
     </ul>
 </details>
 :::
-:::(Warning) ()
+:::tip Warning:
 <details>
 <summary><b>Do you code to industry standards, and, if yes, which standards do we use?</b></summary>
 <br />
@@ -137,7 +137,7 @@ Yes. *Standards (not yet answered)*?
 </details>
 :::
 
-:::(Warning) ()
+:::tip Warning:
 <details>
 <summary><b>1Kosmos will have NO way to log into the tenant's admin page? Can customers completely remove 1KUD once they set up their AD?</b></summary>
 <br />
