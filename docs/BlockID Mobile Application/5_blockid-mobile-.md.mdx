@@ -1,0 +1,546 @@
+---
+slug: /blockid-mobile-application-user-guide
+id: Zcf2a3abc-5b16-4aa5-9281-4023959f8301
+---
+# BlockID Mobile Application User Guide
+
+## Overview
+
+
+
+
+:::tip Note:
+This document is compatible with BlockID v1.5.2.
+:::
+            
+
+The BlockID mobile application is a consumer identity management solution that enhances the user experience by simplifying and streamlining registration and login processes while increasing security and privacy and reducing the risk of regulatory non-compliance. It enables a user to log in to your website, online store, or other secure applications by leveraging their biometrics instead of filling out forms or entering a username and password. The biometric options include TouchID / FaceID, and LiveID.
+
+This guide describes the  procedures to be performed within the BlockID mobile application.
+
+
+## Install the BlockID mobile application
+
+
+The BlockID mobile application is compatible with both iOS and Android platforms.
+
+1. Use the following links to download and install the BlockID mobile application:
+    *  **[iOS](https://apps.apple.com/us/app/blockid/id1539421428)**
+    *  **[Android](https://play.google.com/store/apps/details?id=com.onekosmos.kernel.blockid)**
+<br />
+
+2. Click **Install**.
+
+##  Application Setup
+1. After installation, open the BlockID mobile application to begin the registration process. 
+
+2. The application shows the initialization / setup process followed by the **Welcome** screen.
+
+
+![welcome-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/welcome-black.png){height="" width="200"}
+
+## <a name = "UserRegistration"></a> User Registration / Onboarding
+
+In this section, users can perform two different processes to onboard themselves depending on whether they are new or existing users.
+
+
+
+
+
+
+
+
+
+### <a name = "NewUserRegistration"></a> New User
+ 
+ For the new user, the registration/onboarding process involves setting a user **PIN** which will be registered to the device. 
+ 
+ For mobile devices that support **TouchID (fingerprint)** or **FaceID**, users can register their device using those methods after setting their user **PIN**.
+ 
+
+ 
+#### <a name = "NewUserRegistrationPIN"></a> Setting User Pin
+
+To onboard a new user for the mobile device, perform the following steps:
+
+1. On the **Pin Setup** screen, click the **Pin** button to register and enable a **Pin** for future logins. 
+
+![homescreenithpin-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/homescreenithpin-black.png){height="" width="200"}
+
+
+    
+
+2. On the **PIN Registration** screen:
+   * **Enter new PIN**: Enter an eight (8) digit pin.
+    
+    
+
+![pingregistration-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/pingregistration-black.png){height="" width="200"}
+
+
+
+
+   * **Confirm new PIN**: Enter the same pin again to confirm.<br />
+   
+
+![ConfirmNewPin-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/ConfirmNewPin-black.png){height="" width="200"}
+   
+   * The pop-up window is displayed with **Thank you! Account registration successful** message. The BlockID mobile application’s Home screen is displayed.
+    
+    
+
+![thankyouaccountreg-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/thankyouaccountreg-black.png){height="" width="200"}
+
+
+ 
+ :::caution Important:
+1. If the **biometric enrollment** feature is not available on your mobile device:  
+After the successful PIN registration, the BlockID mobile application’s Home screen is displayed.
+
+2. If the **biometric enrollment** feature is available but **disabled** on your mobile device: 
+After the successful PIN registration, the Settings screen of your mobile device will be displayed to enable the **biometric enrollment** feature on your mobile device.
+ 
+3. If the **biometric enrollment** feature is available and **enabled** on your mobile device: After the successful PIN registration, the **Enroll your identity** screen is displayed with the **Setup TouchID / FaceID** button to set up biometrics to enable seamless access to application sign-in requests. 
+:::
+
+
+#### <a name = "NewUserRegistrationTouchID"></a> Setup TouchID / FaceID (optional)
+1. When the **PIN** Registration is completed, the **Enroll your identity** screen is displayed for mobile devices that support **TouchID/FaceID**. Click the  **Setup TouchID/FaceID** button to enable biometric authentication for a passwordless sign-in experience.  
+
+![enrollidentity-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/enrollidentity-black.png){height="" width="200"}
+
+
+
+
+
+2. Click on the **Setup TouchID / FaceID** button. The **Biometric authentication** pop-up window is displayed with the **Do you want to allow this app to use biometric authentication?** message.
+
+| Android | iOS |
+| --- | --- |
+| ![enrollidandroid-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/enrollidandroid-black.png){height="" width="200"} | ![18EnrollyouridentitypopupenabledbioauthiOS-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/18EnrollyouridentitypopupenabledbioauthiOS-black.png){{height="" width="200"} |
+
+
+
+3. Touch and cover the fingerprint sensor properly using your finger. The application will match and authenticate the fingerprint details with the already enrolled fingerprint information on your mobile device.
+    * The pop-up window is displayed with **Thank you! TouchID / FaceID is now enabled.** message upon successful authentication of your enrolled fingerprint information.
+    * The BlockID mobile application’s Home screen is displayed.
+    
+  
+  
+
+![homescreenblack-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/homescreenblack-black.png){height="" width="200"}
+
+
+ 
+
+### <a name = "RestoreUserRegistration"></a> Restore User Account
+
+To restore a user's existing account, perform the following steps:
+
+ :::caution Important:
+ Restoring a user account is only possible when no user accounts are currently enrolled on the device. To restore an account, first remove any existing user accounts.
+ 
+ To restore an account, users must enter the 12 mnemonic phrases that were provided when backing up their accounts. **Users will not be able to restore an account without these 12 phrases**. 
+ 
+ 
+ :::
+ 
+
+1. In the **Welcome** screen, click on the **Restore** link given below the **Continue** button at the bottom of the screen. 
+
+![restore1-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/restore1-black.png){height="" width="200"}
+
+
+
+The **Restore Account** screen is displayed.
+  
+  
+
+![restore-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/restore-black.png){height="" width="200"}
+
+
+
+
+
+2. In the **Restore Account** screen, enter the saved 12 mnemonic phrases from the **[Account Backup](https://docs.1kosmos.com/docs/blockid-mobile-application-user-guide-2#BackupUserAccount)**  screen.
+
+![restorewithwords-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/restorewithwords-black.png){height="" width="200"}
+
+
+
+3. Click **Restore Account**. The **Restore Account** screen is displayed with the "**Fetching user data from server. Please wait. Please do not close the application**" message.
+
+![fetchingdatarestore-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/fetchingdatarestore-black.png){height="" width="200"}
+
+
+4. The **Verify LiveID** screen is displayed with the confirmation pop-up window asking to **Allow BlockID to take pictures and record video?**.
+    :::tip Note:
+    If you have already enrolled the device with **LiveID**, it will ask to verify  using **LiveID**,  else the default verify option will be **Pin** even though the **TouchID / FaceID** is enrolled.
+    :::
+    
+
+![verifyliveidblock-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/verifyliveidblock-black.png){height="" width="200"}
+
+
+
+5. In the confirmation pop-up window, click **Allow**. The front camera opens.
+
+6. Follow the instructions to adjust the face at the center of the scanning box and smile to get the live image captured.
+
+
+
+![restoreaccountsmile-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/restoreaccountsmile-black.png){height="" width="200"}
+
+
+
+
+7. The camera captures the frame of the live smile of the user.
+
+8. In the next scanning box, blink your eyes.
+
+![restoreaccountblinkeye-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/restoreaccountblinkeye-black.png){height="" width="200"}
+
+
+9. The pop-up window displays  **Thank you! Account restoration successful.**  The BlockID mobile application’s Home screen is displayed.
+
+## Home Page
+
+After successfully logging in, you will be directed to the **Home Page**. Your account username is visible in the upper left corner of the application. A current time-based one time password will be viewable in the center of the application, and will automatically refresh every sixty seconds. 
+
+ By scrolling left from the center of the application the menu to scan a QR becomes visible. 
+
+![Home-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/Home-black%281%29.png){height="" width="200"}
+
+
+
+### User Account Information
+User account information is visible at the top of the application. Your username and company logo will be visible. 
+
+### Manage Accounts
+To **Manage Accounts** on your device, click on your username and company logo at the top left of the application. 
+
+The **Manage Accounts** menu will appear. 
+![selectaccounts-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/selectaccounts-black%281%29.png){height="" width="200"}
+
+
+
+### Scan QR
+
+To login with a QR code, open the BlockID mobile application and authenticate using your pin, or by using biometrics. 
+
+1. Click  **Scan QR**. If this option is not visible on the center of the screen and is displaying an OTP code, *swipe left*. 
+
+![qrcodehome-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/qrcodehome-black.png){height="" width="200"}
+
+
+
+
+
+
+2. Scan the QR code with your device. 
+![scanningaqr-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/scanningaqr-black.png){height="" width="200"}
+
+3. You will be asked to authenticate the request using biometrics.  
+![approveqr-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/approveqr-black.png){height="" width="200"}
+
+
+4.  The screen will display the following message upon successfull authentication: 
+
+**Thank You! You have successfull authenticated to Log in** 
+
+![qrapproved.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/qrapproved.png){height="" width="200"}
+
+ You will be automatically logged in and redirected to home page of the application. 
+
+
+### Time-Based One Time Password (OTP)
+A **Time-based One Time Password** is viewable on your main screen after opening the application and authenticating. The code refreshes itself every sixty seconds.  
+
+When logging into a website that requests an **OTP** code, open the BlockID Mobile application and authenticate your user account. 
+
+After entering your username and password on the website, you will be asked to provide a **OTP** code. 
+
+
+Your  **OTP** code is a **6 digit number** and is displayed on main screen of the BlockID Mobile application. 
+
+
+![Home-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/Home-black.png){height="" width="200"}
+
+
+Enter this **6 digit** number on the website you are logging in to.  
+
+After successfully authenticating, you will be logged in and redirected to the home page of the website. 
+
+
+
+## <a name = "ManagingAccounts"></a>Manage User Accounts:
+
+By clicking on the account name in the upper left corner of the screen, a user will be able to view the number of existing accounts linked to your device within the application. Users can select a listed account by clicking on the account name. 
+
+Users can also change the password of a listed account, or remove and unlink an account from the device.
+
+![selectaccounts-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/selectaccounts-black.png){height="" width="200"}
+
+
+### <a name ="ResetPassword"></a>Reset Account Password
+To **Reset an account password:**
+
+ 1. Cick on your **Account Name and Company Logo**, visible at the top of the application.
+ 2. A list of enrolled accounts on the device will appear. Find the account you wish to reset the password for, and click **Reset Password**:
+![selectaccounts-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/selectaccounts-black%282%29.png){height="" width="200"}
+
+
+ 
+ 4. Enter a new password. After confirming the password, click **Ok**
+![resetpassword-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/resetpassword-black.png){height="" width="200"}
+
+
+
+ 5. You will be asked to authenticate the request using your configured authenticaton method
+ 
+
+![resetpwbio.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/resetpwbio.png){height="" width="200"}
+
+
+
+ 6. After authentication, the screen will display a confirmation message that your password was successfully reset: 		
+
+**Thank You! The password reset was successful.** 
+![resetpwthankyou-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/resetpwthankyou-black.png){height="" width="200"}
+
+
+
+
+ 
+
+### <a name = "BackupUserAccount"></a>Backup User Account
+
+ 
+
+ 1. To **backup a user account**, click on the three lines icon at the
+    top right of the screen to open the **[Menu](https://docs.1kosmos.com/docs/blockid-mobile-application-user-guide-2#MenuOptions)** and select **Recovery Mnemonic**.
+
+![menuscreen-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/menuscreen-black.png){height="" width="200"}
+
+
+
+ 2. The **Account Backup** screen is displayed. Click **Next** to continue. 
+    
+
+![accountbackup-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/accountbackup-black.png){height="" width="200"}
+
+
+
+ 3. The **Account Backup** screen is displayed with the list of 12 mnemonic phrases.
+  
+  :::caution  Users will not be able to restore an account without entering these 12 words. Save them somewhere safe and secret.
+  ::: 
+  
+  
+
+![RecoveryPhrases-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/RecoveryPhrases-black.png){height="" width="200"}
+
+
+
+   
+
+ 4. Click **Copy phrases** to copy these phrases or click **Screenshot** to save a screenshot of the phrases to your mobile device. 
+ 5. Click **Ok** to finish backing up your accocunt.
+  
+  
+
+### Remove User Account
+1. To **remove a user account** click on your username in the upper-left corner of the application.
+2. Find the account you wish to remove.
+3. Click **Remove Account** under the desired user account. The Confirmation pop-up window is displayed with  **Are you sure you want to remove account?**
+4. Click **yes**
+
+![28Removeaccount-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/28Removeaccount-black.png){height="" width="200"}
+
+
+
+
+5. The pop-up window displays **Thank you! Account has been successfully removed."**
+
+![29removeaccountsuccessful-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/29removeaccountsuccessful-black.png){height="" width="200"}
+
+
+
+## <a name ="ApplicationMenu"></a>Application Menu
+The **Menu** can be viewed from the main screen. 
+
+To access the **Menu**, click the three lines icon in the upper right corner of the application
+![menuscreen-black2.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/menuscreen-black2.png){height="" width="200"}
+
+
+
+
+
+
+
+The **Menu** will open, displaying the **[User Profile](https://docs.1kosmos.com/docs/blockid-mobile-application-user-guide-2#UserProfile)**, and has links to several other areas of the application.
+From the **Menu** you can view the following items:
+
+ - **[My Identity](https://docs.1kosmos.com/docs/blockid-mobile-application-user-guide-2#MyIdentity)**
+ - **[Recovery Mnemonic](https://docs.1kosmos.com/docs/blockid-mobile-application-user-guide-2#RecoveryMnemonic)**
+ - **[Offline Login](https://docs.1kosmos.com/docs/blockid-mobile-application-user-guide-2#OfflineLogin)**
+ - **[Zero Trust Security Check](https://docs.1kosmos.com/docs/blockid-mobile-application-user-guide-2#ZeroTrustSecurityCheck)**
+ - **[About](https://docs.1kosmos.com/docs/blockid-mobile-application-user-guide-2#About)**
+ - **[Privacy and Licenses](https://docs.1kosmos.com/docs/blockid-mobile-application-user-guide-2#PrivacyAndLicenses)**
+ 
+
+ 
+
+### User Profile
+To view the **User Profile**, access the **[Menu](https://docs.1kosmos.com/docs/blockid-mobile-application-user-guide-2#ApplicationMenu)** by clicking the three line icon in the upper right of the application. 
+
+The **User Profile** is visible at the top of the screen. The **User Profile** displays the following items: 
+
+ - **Profile Picture**
+ - **Device Account Name**
+ - **The number of accounts registered to the device**
+ - **Identity Assuance Level**
+
+
+#### Identity Assurance Level
+The **Identity Assurance Level** provides the user with a  baseline score on the confidence-level of your identity based enrolled biometric assets and uploaded identification documents. 
+
+To view you Identity Assurance Level, open the **Menu** by clicking the three lines icon in the upper right corner of the application.  The **User Profile** will be visible at the top of the screen. Underneath the **Device Name** you can see your **Identity Assurance Level**.
+  
+### My Identity
+This section contains information about the user's identity, and contains options to view and upload identification documents as well as enroll or remove biometric data assets. 
+
+#### <a name = "EnrollID"></a>Identification Documents
+In this section, the user can enroll or remove their **Driver's License** and **Passport**. Perform the following steps to enroll these user identification documents.
+
+1. On the BlockID mobile application’s Home screen, click on the three lines icon from the upper right corner. The **Menu** screen is displayed with different options.
+2. In the **Menu** screen, click **My Identity**. The **My Identity** screen is displayed.
+
+![myidentitytouchid-touch.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/myidentitytouchid-touch.png){height="" width="200"}
+
+
+
+
+3. In the  **My Identity** screen, from the list of **Identification Documents** options:
+
+#### <a name = "EnrollDL"></a>To enroll Driver's License:
+
+1. Click on the **Add** (Plus) icon for the **Drivers License** option. The Information screen for the driver's license enrollment is displayed with the instructions to be considered while scanning the driver's license image.
+2. Click **Next**.
+3. Follow the instructions to scan the **back side** of the driver's license.
+![driversback-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/driversback-black.png){height="" width="200"}
+
+
+
+4. In the next scanning box, scan the **front side** of the driver's license. 
+![driversfront-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/driversfront-black.png){height="" width="200"}
+
+
+
+6. The pop-up window is displayed with **Thank you! Drivers License enrollment successful.** message. The  **My Identity** screen is displayed with the success icon for the **Drivers License** option.
+
+#### <a name = "EnrollPass"></a>To enroll Passport:
+
+1. Click on the **Add** (Plus) icon for the **Passport** option. The Information screen for the passport enrollment is displayed with the instructions to be considered while scanning the passport image.
+2. Click **Next**.
+3. Follow the instructions to scan the photo page of the passport.
+![passport-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/passport-black.png){height="" width="200"}
+
+
+
+
+4. The camera captures the photo page of the passport. The pop-up window is displayed with **Thank you! Passport enrollment successful.** message. The **My Identity** screen is displayed with the success icon for the **Passport** option.
+
+
+
+
+#### <a name = "EnrollBio"></a> Biometric Assets
+
+In this section, the user can enroll and **TouchID / FaceID** and **LiveID**. 
+
+* After the **Pin** is enrolled during the registration process, the **TouchID / FaceID** and **LiveID** options will be available to enroll.
+* After enrolling  **TouchID / FaceID**, the   and **LiveID** option will be available to enroll.
+
+Perform the following steps to enroll these biometrics.
+
+1. On the BlockID mobile application’s Home screen, click on the three lines icon from the upper right corner. The **Menu** screen is displayed with different options.
+![menuscreen-black2.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/menuscreen-black2%281%29.png){height="" width="200"}
+
+
+
+2. In the **Menu** screen, click **My Identity**. The **My Identity** screen is displayed.
+
+
+#### <a name = "EnrollBioTouchID"></a>To enroll TouchID / FaceID: 
+
+1. Click on the **Add** (Plus) icon for the **TouchID / FaceID** option.
+2. The **Biometric authentication** pop-up window is displayed with the **Do you want to allow this app to use biometric authentication?** message.
+
+
+| Android | iOS |
+| --- | --- |
+| ![enrollidentandroid-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/enrollidentandroid-black.png){height="" width="200"} | ![enrollidentios-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/enrollidentios-black.png){height="" width="200"} |
+
+
+3. Touch and cover the fingerprint sensor properly using your finger. The application will match and authenticate the fingerprint details with the already enrolled fingerprint information on your mobile device.
+    * The pop-up window is displayed with **Thank you! TouchID / FaceID is now enabled.** message upon successful authentication of your enrolled fingerprint information.
+    * The **My Identity** screen is displayed with the success icon for the **TouchID / FaceID** option.
+![myidenttouchpin-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/myidenttouchpin-black.png){height="" width="200"}
+
+
+
+
+#### <a name = "EnrollBioLiveID"></a>To enroll **LiveID**:
+
+1. After successfully enrolling **TouchID/FaceID** click on the **Add** (Plus) icon for the **LiveID** option. The Information for the LiveID Enrollment screen is displayed with the instructions to be considered while scanning the **LiveID** image.
+2. Click **Next**.
+3. The confirmation pop-up window is displayed asking to **Allow BlockID to take pictures and record video?**.
+4. In the confirmation pop-up window, click **Allow**. The front camera opens.
+5. Follow the instructions to adjust the face at the center of the scanning box, blink your eyes.
+   
+
+![liveidenrollblink-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/liveidenrollblink-black.png){height="" width="200"}
+
+
+
+    
+
+
+
+6. In the next scanning box, smile your eyes to get the live image captured.
+
+![liveidsmile-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/liveidsmile-black.png){height="" width="200"}
+
+ 
+7. The camera captures the frame of the live blinking eyes of the user. The pop-up window is displayed with **Thank you! LiveID enrollment successful.** message. The **My Identity** screen is displayed with the success icon for the **LiveID** option.
+
+![myidtouchping-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/myidtouchping-black.png){height="" width="200"}
+
+
+
+
+#### Pin
+Your **[Pin](https://docs.1kosmos.com/docs/blockid-mobile-application-user-guide-2#PinRegistration)** was set during initial device setup
+
+---
+
+### Recovery Mnemonic 
+Your **recovery mnemonic** is used to **[backup](https://docs.1kosmos.com/docs/blockid-mobile-application-user-guide-2#BackupUserAccounts)** and **[restore](https://docs.1kosmos.com/docs/blockid-mobile-application-user-guide-2#RestoreUserRegistration)** your accounts.
+
+---
+
+
+### Zero Trust Security Check 
+The **Zero Trust Security Check** screen displays a list of enabled security options.
+![zerotrust-black.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/zerotrust-black.png){height="" width="200"}
+
+
+
+### About
+The **About** page provides information about the **BlockID Mobile Application**.
+
+### Privacy and Licenses
+The **Privacy and Licenses** page contains the **End-User Agreement** for the **BlockID Mobile Application**.   
+
+
+

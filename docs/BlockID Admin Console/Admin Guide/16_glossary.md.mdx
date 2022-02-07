@@ -1,0 +1,33 @@
+---
+slug: /glossary
+id: glossary
+---
+# Glossary
+
+[C](#C) | [D](#D) | [I](#I) | [L](#L) | [S](#S) |
+* * * 
+#### <a name = "C"></a> C:
+* **COT**:  A Circle of Trust (COT) is a group of identity providers (IDP) and service providers (SP) that trust each other and in effect represent the confines within which all federation communications are performed. The COT is created for each community with the link for the identity provider and entities.
+* * *
+
+#### <a name = "I"></a>I
+* **IDP**: The identity provider here is the BlockID Admin Console. It is a trusted system functionality that allows you to add and manage identity configurations, authentication, assertion, and service URL endpoint details. It lets you use an authenticated single sign-on (SSO) feature across many networks, platforms, and applications within a federation.
+
+* **IdP Signature Certificate**: BlockID Admin Console serves as an identity provider to its service providers to access multiple web and mobile applications in a secure manner. It provides an authentication certificate to its SPs (to add in their IDP configurations) which contain the identity information of the identity provider.
+
+* **IdP Single Sign-On URL**: This is a single sign-on URL where the end user’s login requests will be redirected to this URL to provide login credentials and will be authenticated to provide access to their apps directly if they are authenticated successfully.
+
+* **IDP Service URL Endpoints**: This includes both “Single SignOn Service” and “Single Logout Service” URLs to provide in service provider’s SAML configurations. 
+* * *
+
+#### <a name = "S"></a>S
+* **SP**: A service provider is an organization that hosts other applications or services and would use BlockID Admin Console’s single sign-on feature for passwordless authentication of their end-users. You will be able to import multiple service providers and add their configuration details.
+
+* **SAML**: The Security Assertion Markup Language (SAML) integration feature allows you to add the identity provider authorization credentials and provide these configurations to service providers (SP). Here, the identity provider is the BlockID Admin Console. It also provides you the ability to import multiple service providers and add their configurations in BlockID Admin Console. This will enable a passwordless authentication solution for your organization's users (who have logged into the service provider’s site) and allows them to log in to their SP account using their BlockID Admin Console credentials.
+
+* **Single Sign-On**: Single sign-on (SSO) is a user authentication feature that allows users to securely log in to multiple applications using single login credentials.
+
+* **SP Signing Certificate**: In the BlockID Admin console, you will be able to import multiple service providers (SPs) and allow them to use its passwordless authentication service. It imports the SP authentication certificate (to add in their SP configurations) which contains the identity information of the service provider.
+
+* **SP Assertion Claims Mapping**: The fields that are available under this section are selected and provided from the IDP assertions claims section. Select the required fields (to be configured with IDP claims and will be overridden at the service provider’s end) to map it to the fields required for the user to authenticate with that service provider.
+* * *

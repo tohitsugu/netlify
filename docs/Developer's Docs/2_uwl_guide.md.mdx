@@ -1,0 +1,141 @@
+---
+slug: /univeral-web-login-guide
+id: univeral-web-login-guide
+---
+# Universal Web Login (UWL) Guide
+
+## Overview
+BlockID’s Universal Web Login (UWL) is a flexible authentication framework for all your websites and applications that ensures the highest level of assurance by reaching IAL3 and AAL3 levels per the NIST 800-63-3 guidelines. It augments or replaces the traditional username, password & MFA-based login with a passwordless experience by leveraging the user’s biometrics using BlockID mobile app. The biometric options include TouchID / FaceID, and LiveID (true biometrics).
+
+Enable the UWL authentication by delegating the user authentication to the BlockID authentication service which verifies the user’s identity and redirects back to your application upon successful authentication. It only requires a few lines of JavaScript on your webpage to perform UWL authentication.
+
+## Before you Begin:
+1. Setup the BlockID tenant for your organization. Visit the **[Sign Up](https://www.1kosmos.com/blockid-free-trial)** page to set up a free BlockID tenant for your organization. This will create a tenant URL, community, tenant tag, and a license key for your respective organization within the BlockID platform.
+2. Install on your mobile device:
+    * Download and install the BlockID mobile application (Compatible with iOS and Android devices) on your mobile device. Visit **[BlockID for Android](https://play.google.com/store/apps/details?id=com.onekosmos.kernel.blockid)** or **[BlockID for iOS](https://apps.apple.com/us/app/blockid/id1539421428)** to download the application.
+    * Launch the BlockID mobile application and follow the on-screen instructions to register your app with the BlockID Platform to enroll your biometrics. Visit the [Enroll Biometrics (TouchID/ FaceID and LiveID) section of BlockID Mobile Application User Guide](https://1kosmos.document360.io/docs/blockid-mobile-application-user-guide#EnrollBio) for step by step understanding of the biometrics enrollment process within the BlockID mobile application.
+
+## Quick Start Guide – Single Page Application (SPA)
+This guide provides the steps to implement UWL authentication within the login page of your organization's SPA. 
+
+### Setup your SPA for Passwordless Login
+1. 1.	Host and run the proper SDK (`PHP`/`JAVA`/`NODE`/`.Net`) on your infrastructure.
+:::tip Info:
+
+
+Note that, the following steps are demonstrated for the `PHP`-SDK version.  The other SDKs will have a similar approach.
+
+:::
+
+2. Update the `blockid.js` with PHP SDK’s location as follows:
+```javascript
+//blockid.js
+let bidSDK = {
+   api: "./index.php"
+}
+```
+3. In the index.php page, provide the following values within the API origin metadata:
+```php
+$tenantTag = "<customer_tag>";
+$tenantURL = "https://<customer_name>.1kosmos.in";
+$communityName = "default";
+```
+4.  Add the following steps to implement UWL authentication within the login page of your organization's single page application:
+       * Add `blockid.js` to your login page.
+            ```javascript
+         <script type="text/javascript" src="./blockid.js">  </script>
+            ```
+ 
+    * Add the below script in the `<head>` section of the `<html>`: 
+   ```javascript
+     <script type="text/javascript">
+    
+        function createSession() {
+                createNewSession("Fingerprint", "firstname,did,userIdList", "qrcode",null 
+                , function(result, error) {client_dataRecieved(result)}
+                )
+        }
+
+        function client_dataRecieved(result) {
+            //logDebug("received decrypted data back: ", result,false)
+            let str = JSON.stringify(result, null, 4)
+            var obj = JSON.parse(str);
+            let accountdata  = JSON.stringify(obj.account_data, null, 4);
+            var oaccountdata = JSON.parse(accountdata);
+            userID = oaccountdata.userIdList[0];
+            alert(userID);
+        }
+    </script>
+   ```
+ 
+   * Call the method “createSession()” onload of a <body> section:
+   ```javascript
+            <body onload="createSession();">
+   ```
+   * Add the following code where the QR needs to be populated:
+   ```javascript
+        <div id="qrcode" style="z-index: 1;position:relative;margin:10px" align="center"> </div>
+   ```
+## Test the UWL authentication
+Since the SPA is set for UWL authentication, a user will log in to your organization's applications.
+1. Open your organization's website. The QR code is displayed.
+2. On the BlockID mobile application’s home screen, click Scan QR and scan the QR code available on the client portal login screen. The Authentication screen is displayed with the `Please authenticate using <Biometric_option>` message.
+3. Click **Authenticate** and perform the appropriate authentication method. The pop-up window is displayed with `Thank you! You have successfully authenticated to Log In` message upon successful authentication and you will be redirected to your website's home screen.
+
+## Handle authentication response from BlockID
+When the user scans the QR code and authenticates on the device, BlockID SDK will deliver the following payload to the session callback above. At this time, your website can allow the already linked user (below) to log in.
+```javascript
+    {
+    "id": "6026464ebe66fd0e55c74144",
+    "name": null,
+    "sessionId": "wmstshk3h69c8xnsvv0etp", //same as qr
+    "publicKey": "$mobile app’s public key",
+    "data": "$ecdsa_auth_data",
+    "did": "$user’s did",
+    "ial": "1",
+    "appid": "com.onekosmos.kernel.blockid",
+    "createdTS": 1613121102,
+    "idTS": 1613121102,
+       "user_data": { //as requested in scopes
+"userid": "$user id",      
+  "firstname": "$name of the user device",
+        "did": "$user's did"
+    },
+"account_data": {
+        "personId": "$user's did",
+        "userIdList": [
+            "$user id"
+        ],
+	}
+}	
+
+```
+For example: Note that this example includes dummy data.
+```javascript
+{
+    "id": "6026464ebe66fd0e55c74144",
+    "name": null,
+    "sessionId": "wmstshk3h69c8xnsvv0etp",
+    "publicKey": "jshbdhzfzsjipgjwoepSEGHoivAKBVLSDHVIGHANVdsjilSJdhsfbgAKJFHlajsFGSDJKFBJSDGFZESFODGJBVESJLJSFVKSAKF",
+    "data": "FbdmgjldfkgbsnvlsldjfnvfjvbseofAFFiipwruofipewweuFfdiwepfuiwvdcbEjdpiaoufhuwioeadklhcfjbjdsDSkjfvhesoigvdjbjoifvhesufiwDFrsguhfsklfiorushfvbxkjigjslhidjxviodufjkxvbiseodufhvisfdepirouyfuosfidlxj",
+    "did": "d789d8ys8d8gvb8sdyvb7tsf709sf877b67f6g98sf",
+    "ial": "1",
+    "appid": "com.onekosmos.kernel.blockid",
+    "createdTS": 1613121102,
+    "idTS": 1613121102,
+       "user_data": {
+        "userid": "anjali",
+        "firstname": "Samsung Note",
+        "did": "d789d8ys8d8gvb8sdyvb7tsf709sf877b67f6g98sf"
+    },
+"account_data": {
+        "personId": "d789d8ys8d8gvb8sdyvb7tsf709sf877b67f6g98sf",
+        "userIdList": [
+            "anjali"
+        ],
+}
+}
+
+```
+
+

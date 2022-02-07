@@ -1,0 +1,136 @@
+---
+slug: /samlv2
+id: samlv2
+---
+# SAML Configurations
+
+## Overview 
+
+The Security Assertion Markup Language (SAML) integration screen allows you to add your identity provider (IDP)’s information and set its authorization and configuration details. After adding these IDP details, provide these configurations to your service providers (SP). Here, the identity provider is the BlockID Admin Console application. It allows you to import one or more service providers and add their configurations to integrate with your identity provider.
+
+This will enable a passwordless authentication solution for your organization's users (who have logged into the service provider’s site). Thus, you can log in to your SP account by leveraging your biometrics. The biometric options include TouchID / FaceID, and LiveID.
+
+To view the SAML screen, perform the following step:
+*  Login to **BlockID Admin Console**, navigate to ***Administration Console** > **Federation** > **SAMLv2***. The **SAMLv2** screen is displayed.
+
+![SAMLv2Screen.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/SAMLv2Screen%281%29.jpg)
+
+In the SAMLv2 screen, there is a list that shows the number of added COTs, and each COT has its identity provider and a sub-list of one or more service providers.
+
+A Circle of Trust (COT) is a group of identity providers and entities (service providers) that trust each other and in effect represent the confines within which all federation communications are performed.
+
+The SAML integration is used for configuring settings in the following functionalities:
+* [Identity Providers (IDP)](#IdentityProviders)
+    * [IDP Core Configurations](#IdpCore)
+   * [IDP Assertion Claims Mapping](#IdpAssertion)
+   * [IDP Service URL End Points](#IdpService)
+* [Service Providers (SP)](#ServiceProviders)
+    * [Service Provider List](#SPList)
+    * [SP Info](#SPInfo)
+    * [SP Core Configurations](#SPCore)
+    * [SP Assertion Claims Mapping](#SPAssertion)
+    * [SP Service URL End Points](#SPServiceURLEnd)
+
+## <a name = "IdentityProviders"></a>Identity Providers
+In this section, you can manage your (hosted) SAMLv2 identity providers. Currently, the number of identity providers per tenant/community is limited to one. Subsequent releases of this platform will enable you to create and host multiple identity providers.
+
+* Click **Identity Provider** and click on the required identity provider’s link.
+
+![SAMLv2IdentityProviderscreenSN.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/SAMLv2IdentityProviderscreenSN.jpg)
+
+OR 
+
+* Click on the link provided in the **Identity Provider** column.
+
+![SAMLv2IdentityProvidercreen1.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/SAMLv2IdentityProvidercreen1%281%29.jpg)
+
+In the **Edit Identity Provider** screen, you will be introduced to view, verify, and edit details of the following subsections of the identity provider:
+
+ ### <a name = "IdpCore"></a>IDP Core Configurations
+
+In the **IDP Core Configurations** tab, view and edit core configuration fields such as:
+
+* **Authentication Request** - Select the required option.
+* **Signing Certificate** - Enter the signing certificate details.
+* **Encryption Certificate** - Enter the encryption certificate details.
+* **Key Size** - Select the  key size option.
+* **Algorithm** - Select the algorithm option.
+* Click **Save**.
+
+### <a name = "IdpAssertion"></a>IDP Assertion Claims Mapping
+In the **IDP Assertion Claims Mapping** tab, you can view and edit fields such as:
+
+* Link the appropriate **LDAP** and **Session attribute** values to the **Claims** for each **Label**.
+
+:::caution Important:
+It is mandatory to provide the appropriate LDAP and Session attribute values within Name Identifier Label.
+:::
+
+* Click **Save**.
+
+### <a name = "IdpService"></a>IDP Service URL End Points
+
+In the **IDP Service URL End Points** tab, you can view details such as:
+
+* Single SignOn Service
+* Single Logout Service
+* Click **Save**.
+
+## <a name = "ServiceProviders"></a>Service Providers:
+
+This section allows you to manage SAMLv2 service providers. 
+
+* Click **Service Providers**. The **Service Provider List** screen is displayed.
+
+![SAMLv2ServiceProviderscreen.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/SAMLv2ServiceProviderscreen%281%29.jpg)
+
+### <a name = "SPList"></a>Service Provider List
+
+* Click **Import Service Provider**.
+
+![SAMLv2ServiceProviderscreenImport.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/SAMLv2ServiceProviderscreenImport%281%29.jpg)
+
+ In **Import Service Provider**, import the SAMLv2 service providers by providing details for the following fields:
+
+* **Select Circle of Trust (COT)** - Select the appropriate option.
+* **Service Provider Logo** - Select an image file for the logo.
+* **Import Service Provider Metadata** - Select the metadata file of the service provider.
+* **Service Provider Name** - Enter the appropriate Name.
+* **Service Provider Initiated SSO URL** - Enter the SSO URL.
+* Click **Upload File**. 
+
+The imported service provider will be available under the list of service providers.
+
+After importing the service provider metadata, you can edit the configurations and specify the SAML assertion attributes and other required details. To edit the details:
+
+* Click on the required service provider’s link listed in the **Entity ID** or **Entities** column of the main screen.
+
+![SAMLv2ServiceProviderscreentabs.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/SAMLv2ServiceProviderscreentabs%281%29.jpg)
+
+In the Edit screen for the selected service provider screen, you will be introduced to view, verify, and edit details of the following subsections of the service provider:
+
+### <a name = "SPInfo"></a>SP Info
+In the **SP Info** tab, you can view and edit the fields such as:
+
+* **Service Provider Name** - Enter the appropriate name.
+* **Service Provider Initiated SSO URL**- Enter the single sign-on URL.
+* **Service Provider Logo** - Check and confirm the logo.
+* Click **Confirm and Save**.
+
+### <a name = "SPCore"></a>SP Core Configurations
+In the **SP Core Configurations** tab, you can view and edit appropriate core configuration fields and click **Confirm and Save**.
+
+### <a name = "SPAssertion"></a>SP Assertion Claims Mapping
+In the **SP Assertion Claims Mapping** tab, you can view and edit fields such as:
+
+* Enter and link the appropriate **Custom Claim Value** for desired **Default Claim Values** options.
+* Select the **Required** column check-box for the appropriate claims.
+* Select the **Override** column check-box for the appropriate claims.
+* Click **Confirm and Save**.
+
+### <a name = "SPServiceURLEnd"></a>SP Service URL Endpoints
+In the **SP Service URL End Points** tab, you can view and edit the details such as:
+
+* Single Logout Service
+* Assertion Consumer Service
+* Click **Confirm and Save**.

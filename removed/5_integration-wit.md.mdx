@@ -1,0 +1,320 @@
+---
+slug: /integration-with-pingfederate
+id: Zfe8fbb9a-e6cd-4663-a4d0-9b961faaa57c
+---
+# Integration with PingFederate
+
+## Overview
+
+This document describes the procedure to configure the BlockID Admin Console as a passwordless authentication solution for your organization's PingFederate users. This integration will allow your users to log in to their PingFederate account leveraging their biometrics. The biometric options include Fingerprint, Voice, or Face.
+
+### Before you Begin
+You will need the following resources and privileges to complete this integration:
+1. Admin access to the following:
+    * BlockID Admin Console. To register, visit (link) 
+    * PingFederate instance. 
+2. Install on your mobile device:
+    * BlockID Workforce mobile application (Compatible with iOS and Android devices). Visit the [BlockID Workforce for Android](https://play.google.com/store/apps/details?id=com.onekosmos.blockid.enterprise) OR [BlockID Workforce for iOS](https://apps.apple.com/us/app/blockid-workforce/id1491341550) links to download the application.
+
+### Assumptions
+* With the above pre-requisites, you should now successfully be registered and be able to log into:
+   * Your organization's PingFederate instance with access to the administrative console.
+   * BlockID Admin Console application. Ensure the email address used to login to the BlockID Admin Console is the same as the one used to login to PingFederate.
+* Installed and registered the BlockID Workforce mobile application.
+    * Ensure the email address used to login to the BlockID Workforce mobile application is the same as the one used to login to the BlockID Admin Console. 
+    * Enabled biometric authentication with Fingerprint, Voice or Face Recognition options.
+
+There are three sets of configurations that need to be performed to enable this integration:
+
+1. Add your organization's End User application as a Service Provider (SP) within PingFederate.
+2. Configure BlockID Admin Console as an Identity Provider (IDP) within PingFederate.
+3. Configure PingFederate as a Service Provider (SP) within the BlockID Admin Console application.
+
+**List of Topics:**
+1. [Add your organization's End User application as a Service Provider (SP) within PingFederate](#PINGSP)
+    a. [Define an Authentication Policy Contract within PingFederate](#PINGAuth)
+    b. [Generate a Request Signing Certificate](#PINGsignCerti)
+    c. [Add your organization's End User application as a Service Provider](#PINGSPApp)
+2. [Configure BlockID Admin Console as an Identity Provider within PingFederate](#PINGIDP)
+   a. [Download the SAML Metadata of your IDP](#IDPMetadata)
+3. [Configure PingFederate as a Service Provider within BlockID Admin Console](#BIDSP)
+   a. [Save Identity Provider's Certificate and Add IDP Assertion Claim details](#IDPCerti) 
+   b. [Add PingFederate As a Service Provider](#BIDPINGasSP) 
+4. [Test the SAML Single Sign-On Connection](#TestSAML)
+5. [References](#Ref)
+
+***
+## <a name = "#PINGSP"></a>Add your organization's End User application as a Service Provider (SP) within PingFederate
+Perform the below-mentioned steps:
+
+### <a name = "PINGAuth"></a>Define an Authentication Policy Contract within PingFederate
+
+In this screen, you will be able to map the authentication policy to your target application and also allows your IDP connections to map into SP connections using a shared contract. The policy contract act as a medium to carry user attributes from IdP connections to SP connections.
+
+1. Login to your **PigFederate** administrative console and navigate to ***Service Provider** > **Policy Contracts** > **Create New Contract***.
+2. In the **Authentication Policy Contract** screen:
+    * In the **Contact Info** tab:
+        * **Contract Name**: Enter the appropriate contract name for your application.
+        * Click **Next**.
+    * In the **Contact Attributes** tab:
+        * **Extend the Contract**: Add an attribute to exchange the user details from the IDP to SP. For example, FirstName, LastName, email, and so on.
+        * Click **Add**.
+        * Repeat the above two steps to add more attributes.
+        * Click **Next**.
+3. Click **Done**.
+4. Click **Save**. 
+
+### <a name = "PINGsignCerti"></a>Generate a Request Signing Certificate
+1. Login to your **PigFederate** site administrative console.
+2. Navigate to ***Seurity > CERTIFICATE AND KEY MANAGEMENT > Signing & Decryption Keys & Certificates > Create New***.
+3. In the **Create Certificate** tab:
+    * **COMMON NAME**: Enter the appropriate name for the certificate.
+    * **ORGANIZATION**: Enter your organization’s name.
+    * **COUNTRY**: Enter the country name where your organization is based.
+4. Click **Next**.
+5. In the **Create Certificate Summary** tab, click **Save**. 
+6. Navigate to ***Seurity > CERTIFICATE AND KEY MANAGEMENT > Signing & Decryption Keys & Certificates***.
+7. Note down the Serial number of the certificate you want to use with your application and click **Export**.
+
+ ### <a name = "PINGSPApp"></a>Add your organization's End User application as a Service Provider
+1. Navigate to ***Identity Provider** > **SP CONNECTIONS** > **Create New*** to create a new SP connection for your end user application.
+2. In the **SP Connection** screen:
+    * In the **Connection Template** tab:
+        * Use the default selected option and click **Next**.
+    * In the **Connection Type** tab: 
+        * **Connection Template**: Select the **BROWSER SSO PROFILES** option. The `SAML 2.0` value is auto-selected for the **PROTOCOL** option.
+        * Click **Next**.
+    * In the **Connection Options** tab:
+        * Select the check box for the **Browser SSO** option and click **Next**.
+    * In the **Metadata URL** tab:
+        * Click **Next**.
+    * In the **General Info** tab:
+        * **Partners Entity ID**: Enter the name for your application. For example, `TestSP`.
+        * **Connection Name**: enter any name required.
+        * Click **Next**. 
+    * In the **Browser SSO** tab, click **Configure Browser SSO**. The Browser SSO screen is displayed.
+        * **SAML Profiles**: 
+            * In the **Single Sign-On (SSO) Profiles** section, select the check boxes for both **IDP Initiated SSO** and **SP Initiated SSO** options, and click **Next**.
+            * **Assertion Lifetime**: The default value is `5` for the Assertion Lifetime settings.
+            * **Minutes Before**: Use the default timeframe of validity assertion before the assertion is issued to the SP.
+            * **Minutes After**: Use the default timeframe of validity assertion after the assertion is issued to the SP.
+      * **Assertion Creation**:
+        * Click **Configure Assertion Creation**. The Assertion Creation screen is displayed.
+          * **Identity Mapping**:
+            * Select the **Standard** option and click **Next**.
+           * **Attribute Contract**:
+              * Set the appropriate Attribute Contract values which you want to pass as declared in the added policy contract to the default for `SAML_SUBJECT`. For example, Name, Surname, email, and so on.
+                    * Click **Add**.
+                    * Repeat the above two steps to add more attributes.
+                    * Click **Next**.
+            * **Authentication Source Mapping**:
+                 * Click **Map New Authentication Policy**. 
+                * **Authentication Policy Contract**:
+                  * Select the previously created Authentication Policy Contract and click **Next**.
+                 * **Mapping Method**:
+                    * Select `USE ONLY THE AUTHENTICATIONPOLICY CONTRACT VALUES IN THE SAML ASSERTION` option and click **Next**.
+                 * **Attribute Contract Fulfillment**:
+                   * Map your attribute contract fields with the values from the previously created authentication policy contract.
+                    * Click **Next**.
+                  * In the **Insurance Criteria** tab, click **Next**.
+                  * In the **Summary** tab: 
+                    * Confirm all the details and click **Done**.
+                * In the **Authentication Source Mapping** tab:
+                    * Click **Next**.
+          * In the **Summary** tab within **Assertion Creation** section:
+            * Ensure all the details entered are correct and click **Done**.
+           * In the **Assertion Creation** tab, click **Next**.
+      * In the **Protocol Settings** tab:
+        * Click **Configure Protocol Settings**.
+        * In the **Assertion Consumer Service URL** tab, enter and select the following details:
+          *  **Index**: `0`
+          * **Binding**: `POST`
+          * **Endpoint URL**: Enter the correct URL of your application.
+          * Click **Add**.
+          * Click **Next**.
+        * In the **Allowable SAML Bindings** tab:
+            * Select `POST`.
+            * Click **Next**.
+         * In the **Signature Policy** tab:
+            * Select the required signature policies for assertions and click **Next**.
+        * In the **Encryption Policy** tab:
+            * Select the required encryption policy for assertions click **Next**.
+        * In the **Summary** tab: 
+            * Confirm all the details and click **Done**.
+        * In the **Protocol Settings** tab, click **Next**.
+        * In the **Summary** tab within the **Browser SSO** section, click **Done**.
+   * In the **Browser SSO** tab, click **Next**. 
+     * In the **Credentials** tab, click **Configure Credentials**.
+       * In the **Signature Verification Settings** tab, select and enter the following details:
+         * **SIGNING CERTIFICATE**: Select the appropriate signing certificate generated to use with the Single Sign-On service. To check the steps for creating request signing certificate, visit [Generate a Request Signing Certificate](#PINGsignCerti) topic.
+         * Select `INCLUDE THE CERTIFICATE IN THE SIGNATURE <KEYINFO> ELEMENT`. 
+         * Click **Next**.
+     * In the **Summary** tab, click **Done**.
+   * In the **Credentials** tab, click **Next**. 
+   * In the **Activation & Summary** tab:
+     * Set the **Connection Status** as **Active** and ensure all other details entered are correct.
+     * Copy your SSO Endpoint Application URL.
+    * Click **Save**. The SP connection is successfully created for your application.
+
+## <a name = "PINGIDP"></a>Configure BlockID Admin Console as an Identity Provider within PingFederate
+Perform the below-mentioned steps:
+
+1. Navigate to ***Service Provider** > **IDP CONNECTIONS** > **Create New*** to create a new SP connection for your end user application.
+2. In the **SP Connection** screen:
+    * In the Connection Type tab: 
+        * **Connection Template**: Select the **BROWSER SSO PROFILES** option. The `SAML 2.0` value is auto-selected for the **PROTOCOL** option.
+        * Click **Next**.
+    * In the **Connection Options** tab:
+        * Select the check box for the **Browser SSO** option and click **Next**.
+    * In the **Metadata URL** tab: Choose any one option from the below mentioned list.
+        * Select the **FILE** option and Click **Choose File** to locate and upload the authentication certificate issued by BlockID Admin Console as an Identity Provider. To check the steps on gettings certificate details, visit [Issue Certificate from BlockID Admin Console](#IDPCert) topic.
+      * Select the **URL** option and click Manage Partner Metadata URLs.
+        * Click **Add New URL**.
+        * Follow the further steps to add and load the remote metadata by adding the metadata URL of your application.
+        * Click **Save**.
+      * Select the **NONE** option to skip the Metadata URL section and manually enter the details.
+      * Click **Next**. The General Info tab is displayed with the auto-populated values for the following fields:
+        * PARTNER’S ENTITY ID
+        * CONNECTION NAME
+        * BASE URL
+    * In the **General Info** tab:
+        * Ensure all other details are correct and click **Next**. 
+     * In the **Browser SSO** tab, click **Configure Browser SSO**. The Browser SSO screen is displayed.
+          * In the **SAML Profiles** tab: 
+               * In the Single Sign-On (SSO) Profiles section, select the check box for **SP Initiated SSO** option, and click **Next**.
+           * In the **User-Session Creation** tab, click **Configure User-Session Creation**.
+                * In the **Identity Mapping** tab:
+                    * Select the **ACCOUNT MAPPING** option. This will dynamically map the set of attributes sent by the IDP application to the specific local account.
+                    * Click **Next**.
+                * In the **Attribute Contract** tab:
+                    * **Extend the Contract**: add the appropriate set of user attributes that your IDP will send in the assertion. For example, givenName, surname, mail, and so on.
+                    * Click **Add**.
+                    * Repeat the above two steps to add more attributes.
+                    * Click **Next**.
+                *  In the **Target Session mapping** tab, click **Map New Authentication Policy**. 
+                    * In the **Authentication Policy Contract** tab:
+                        * Select the previously created Authentication Policy Contract to be used by this IDP for the SAML connection and click **Next**.
+                    * In the **Attribute Retrival** tab:
+                        * Select `USE ONLY THE ATTRIBUTES AVAILABLE IN THE SSO ASSERTION` option and click Next.
+                    * In the **Contract Fulfillment** tab:
+                        * Select `assertion` from the Source drop down list for each attribute of your selected Authentication Policy Contract
+                        * The **Source** list options are - assertion, dynamic text, expressions, or from a data-store lookup.
+                        * From the **Value** drop down list, select the appropriate attributes defined for the IDP assertion.
+                        * Click **Next**.
+                    * In the **Insurance Criteria** tab, click **Next**.
+                    * In the **Summary** tab: 
+                        * Confirm all the details and click **Done**.
+                * In the **Target Session mapping** tab, click **Next**.
+                * In the **Summary** tab within **User-Session Creation** section: 
+                    * Confirm all the details and click **Done**.
+        * In the **Protocol Settings** tab:
+           * Click **Configure Protocol Settings**.
+           * In the **SSO Service URLs** tab:
+                * Use the default values and click **Next**.
+           *  In the **Allowable SAML Bindings** tab:
+                * Select `POST`.
+           *  In the **Overrides** tab:
+                * Use the default values and click **Next**. 
+           * In the Signature Policy tab:
+                * Select `SPECIFY ADDITIONAL SIGNATURE REQUIREMENTS`. 
+                * Select the check boxes for `SIGN AUTHN REQUESTS SENT OVER POST AND REDIRECT BINDINGS` and `REQUIRE SIGNED SAML ASSERTIONS (RATHER THAN SIGNED RESPONSES - ASSERTIONS ARE CONTAINED INSIDE SAML RESPONSES)` options.
+                * Click **Next**.
+            * In the **Encryption Policy** tab:
+                * Select **None**. 
+            * In the **Summary** tab: 
+                * Confirm all the details and click **Done**.
+       * In the **Protocol Settings** tab, click **Next**.
+        * In the **Summary** tab within the **Browser SSO** section, click **Done**.
+   * In the **Browser SSO** tab, click Next. 
+   * In the **Credentials** tab, click **Configure Credentials**.
+     * In the **Digital Signature Settings** tab:
+        * **SIGNING CERTIFICATE**: Select the appropriate signing certificate generated to use with the Single Sign-On service. To check the steps for creating request signing certificate, visit [Generate a Request Signing Certificate](#PingSignCerti) topic.
+         * Click **Next**.
+      * In the **Signature Verification Settings** tab:
+           * **SIGNING CERTIFICATE**: Select the appropriate signing certificate generated by BlockID Admin Console to use with the Single Sign-On service. To check the steps for creating request signing certificate, visit [Download a Signing Certificate](#BIDSignCert) topic.
+        * Click **Next**.
+      * In the **Summary** tab, click **Done**.
+    * In the **Credentials** tab, click **Next**. 
+    * In the **Activation & Summary** tab:
+        * Set the **Connection Status** as `Active` and ensure all other details entered are correct.
+        * Click **Save**. The IDP connection is successfully created for your application.
+
+### <a name = "IDPMetadata"></a>Download the SAML Metadata of your IDP
+
+1. Navigate to ***Service Provider** > **IDP CONNECTIONS** > **Manage All***.
+2. In the **SP Connections** screen:
+    * Locate the SP connection created for your Endpoint application.
+    * From the **Action** column, click **Select Action** and click **Export Metadata**.
+    * In the **Metadata Signing** tab:
+        * **SIGNING CERTIFICATE**: Select the appropriate signing certificate generated to use with the Single Sign-On service.
+        * Click **Next**.
+    * In the **Export & Summary** tab, click **Export**. 
+    * Click **Done**. Save the downloaded certificate. This certificate will be used while adding PingFederate as an SP within the BlockID Admin Console.
+
+* * * 
+## <a name = "BIDSP"></a>Configure PingFederate as a Service Provider within BlockID Admin Console
+
+Perform the below-mentioned steps:
+1. Login to **BlockID Admin Console**, navigate to ***Administration Console** > **Federation** > **SAMLv2***.
+The **SAMLv2** screen is displayed.
+
+### <a name = "IDPCerti"></a>Save Identity Provider's Certificate and Set IDP Assertion Claim details
+1. Click on the Identity provider’s URL link.
+2. From the **IDP Core configuration** >  **Signing Certificate** section, copy the certificate details and save it in the following format: 
+```
+-----BEGIN CERTIFICATE-----
+ Certificate details
+-----END CERTIFICATE-----
+```
+3. Save the certificate with .cert extension.
+4. In the **IDP Assertion Claims Mapping** tab, link the appropriate **LDAP** and **Session attribute** values to the **Claims** for each **Label**.
+     * Map the `nameIdentifier` to `email` attribute
+     * `privatepersonalidentifier`  to `email` attribute.
+     * `givenname` field to `firstname` attribute
+     * `surname` field to `lastname` attribute
+     * `locality` field to `locality` attribute
+     * `streetaddress` field to `streetaddress` attribute
+     * `stateorprovince` field to `state` attribute
+     * Click **Save**.
+
+:::tip Note:
+These mapped fields will be available under  **SAMLv2** > **Service Providers** > **SP Assertion Claims Mapping** tab for the imported service provider.
+:::
+ 
+### <a name = "BIDPINGasSP"></a>Add PingFederate As a Service Provider
+
+1. In the **SAMLv2** screen, navigate to **Service Providers** > **Import Service Provider**. 
+2. In the Import Service Provider screen, enter details for the following fields:
+    * **Select Circle of Trust (COT)** - Select the appropriate option.
+    Here, the [COT](#COT) is by default created for each Community with your Identity Provider link and list of Entities.
+    * **Service Provider Logo**(Optional) - Select the appropriate image file for the logo.
+    * **Import Service Provider Metadata** - Select the PingFederate's metadata file which we have downloaded from PingFederate's [Download the SAML Metadata of your IDP](#IDPMetadata)
+    * **Service Provider Name** - Enter the appropriate name for PingFederate. 
+* **Service Provider Initiated SSO URL** - Enter the SSO URL for your PingFederate domain. 
+    * Click **Upload File**. The newly imported SP link for PingFederate will be available under the list of Service Providers.
+3. Click on the newly added PingFederate link.
+4. In the Edit screen: 
+     * In the **SP Core Configuration** tab: check the following details are selected:
+        * **Select the checkbox for each request/response that should be signed**: ensure that the `Assertion` and `Authentication Request` options are selected.
+        * **NameID Value**:  Select the `nameidentifier` option.
+    * In the **SP Assertion Claims Mapping** tab: Select the check box for the following options:       	
+        * privatepersonalidentifier
+        * nameIdentifier
+        * givenname
+        * locality
+        * streetaddress
+    * In the **SP Service URL End Points** tab: 
+        * Select **POST**.
+        * Ensure **PingFederate** login URL is added. 
+   * Click **Confirm and Save**.
+
+## <a name = "TestSAML"></a>Test the SAML Single Sign-On Connection
+
+1. In your browser, enter your SP SSO Application Endpoint URL created within PingFederate.
+2. Check and you will notice the option to login using your Identity Provider. For example, the option here is **BlockID** . You will be redirected to the BlockID Admin Console’s single sign on page for your company.
+3. Click **Login with BlockID** option. The Login screen is displayed with the  **Barcode** to be scanned from your BlockID Workforce mobile app.
+4. From your **BlockID Workforce** mobile app: 
+5.  Scan the barcode available in the BlockID Admin console’s **Login** screen.
+6.  Enable biometric authentication to grant access.
+7. In the Login screen for BlockID Admin console, click **Link User**.  This will link your **BlockID Workforce** mobile app credentials to BlockID Admin Console and grant access to your PingFederate’s application upon successful authentication.
+

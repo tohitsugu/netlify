@@ -1,0 +1,160 @@
+---
+slug: /webauthn
+id: Ze3a67a1a-0728-4ed6-b42b-d040c4a89d6e
+---
+# WebAuthn
+
+## Overview
+
+
+## WebAuthn
+
+FIDO2 Web Authentication (WebAuthn) is a standard web API that is incorporated into web browsers and related web platform infrastructures that is used to securely authenticate users on the web across various sites and devices. 
+
+WebAuthn supports two different authentication mechanisms: platform authenticators and roaming authenticators (security keys). 
+
+Platform authenticators are built into your hardware can often be unlocked using biometrics. Security keys are separate pieces of hardware that connect to your device, such as Yubikeys. BlockID supports both platform authenticators and security keys.   
+
+
+
+## Supported Browsers
+
+WebAuthn is currently supported in Google Chrome, Mozilla Firefox, Microsoft Edge, and Apple Safari web browsers.
+
+![image-20220106140623141.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image-20220106140623141.png)
+
+:::caution (**Warning - Incognito Browsers**)
+WebAuthn is not supported on incognito browsers. 
+:::
+
+## Frequently Asked Questions
+
+<details>
+<summary>
+<b>How do I register a platform authenticator?</b>
+</summary>
+
+<br />
+Users can register a platform authenticator from the BlockID Admin Portal.
+
+- Select **My Profile** from the main menu dashboard
+
+![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2837%29.png)
+
+- Select **Setup a platform authenticator**
+
+
+- Review the instructions. Click **Use platform authenticator**
+
+<img src="https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image-20220106145653786.png" />
+
+- Enable permission in your browser
+
+<img src="https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image-20220106150105108.png" />
+
+- Enter a unique name and click **Done** 
+
+<img src="https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image-20220106150725313.png" />
+
+- The device associated as the platform authenticator will now be viewable under the **Devices** tab of your user profile
+
+
+![image-20220106150952335.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image-20220106150952335.png)
+</details>
+
+<details>
+<summary>
+How do I register a YubiKey?
+</summary>
+
+Users can register a security key from the BlockID Admin Portal.
+
+
+- Select **My Profile** from the main menu dashboard
+
+![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2837%29.png)
+
+- Select **Setup a security key**
+
+
+-  Review the instructions. Select **Use Security Key**
+
+<img src="https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image-20220106153945505.png" />
+
+- Insert the YubiKey into a USB-port and touch the YubiKey to verify you are human
+
+<img src="https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image-20220106154334237.png" />
+
+-  Enter a unique name when prompted and click **Done** 
+
+- The device associated with the security key will now be viewable under the **Devices** tab of your user profile
+
+<img src="https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image-20220106155652517.png" />
+
+</details>
+
+<details>
+<summary>
+How do I login using a FIDO authenticator?
+</summary>
+
+
+:::tip (**Note:**)
+Please setup a platform authenticator or security key for your account before continuing (see above for info on how)
+::: 
+
+- From the sign-in page, click **Username**. Enter your username and click **Next**
+
+![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2830%29.png)
+
+- Select **Security Key** from the displayed menu 
+
+![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2831%29.png)
+
+
+:::caution (**Note:**)
+This option will only be available if a FIDO authenticator is associated with your account 
+::: 
+
+- Confirm the request on your device with biometric or a pin (platform authenticators) or by tapping the device (security keys) to complete the sign-in request
+
+![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2832%29.png)
+</details>
+
+<details>
+<summary>
+How do I remove an authenticator?
+</summary>
+
+Users can remove a FIDO authenticator from the BlockID Admin Portal.  
+
+- Login using the account associated with the FIDO authenticator
+
+- Select **My Profile** from the main menu dashboard. Your devices will be displayed
+
+![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2834%29.png)
+
+
+- Click the **trash icon** of the authenticator you wish to remove, located to the right of the device name, in the Actions column 
+
+- Click **Remove** to finalize the removal of the authenticator
+
+![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2835%29.png)
+</details>
+
+<details>
+<summary>
+Can I use the same authenticator across different browsers?
+</summary>
+
+
+If you register an authenticator on a browser, you can use another browser to use the same authenticator.
+
+This feature is currently not supported on Mac due to OS limitations.
+
+</details>
+
+
+
+
+

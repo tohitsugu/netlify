@@ -1,0 +1,260 @@
+---
+slug: /integration-with-salesforce
+id: Z8c31c0dd-dd72-4b22-bee5-16a3cbedee0b
+---
+# Integration with Salesforce
+
+## Overview
+
+
+This document describes the procedure to configure BlockID Admin Console as a passwordless authentication solution for your organization's Salesforce users. This integration will allow your users to log in to their Salesforce account leveraging their biometrics. The biometric options include TouchID / FaceID and LiveID.
+
+
+### Before you Begin
+You will need the following resources and privileges to complete this integration:
+1. Admin access to the following:
+    * BlockID Admin Console. To register, visit **(link)** 
+    * Salesforce instance. To register for a trial subscription, visit  [Salesforce](https://www.salesforce.com/in/form/trial/freetrial/).
+2. Install on your mobile device:
+    * BlockID mobile application (Compatible with iOS and Android devices). Visit **[BlockID for Android](https://play.google.com/store/apps/details?id=com.onekosmos.kernel.blockid)** or **[BlockID for iOS](https://apps.apple.com/us/app/blockid/id1539421428)** to download the application.
+
+### Assumptions
+* With the above prerequisites, you should now successfully be registered and be able to login to:
+   * Your organization's Salesforce instance with access to the Setup screen.
+   * BlockID Admin Console application. Ensure the email address used to login to the BlockID Admin Console is the same as the one used to login to Salesforce.
+* Installed and registered the BlockID mobile application.
+    * Launch the BlockID mobile application and follow the on-screen instructions to register your app with the BlockID Platform to enroll your biometrics. Visit the [Enroll Biometrics (TouchID/ FaceID and LiveID) section of BlockID mobile application User Guide](https://1kosmos.document360.io/docs/blockid-mobile-application-user-guide#EnrollBio) for step by step understanding of the Biometrics Enrollment process within the BlockID mobile application.
+
+There are two sets of configurations that need to be performed to enable this integration:
+1. Configure BlockID Admin Console as an Identity Provider (IDP) within Salesforce.
+2. Configure Salesforce as a Service Provider (SP) within the BlockID Admin Console application.
+
+**List of Topics:**
+1. [Configure BlockID Admin Console as an Identity Provider within Salesforce](#SFIDP)
+    a. [Access the Setup screen from the Salesforce Home page](#SFSetup)
+    b. [Generate a Request Signing Certificate](#SFSignCert) 
+    c. [Update User Details](#SFUser)
+    d. [Setup Single Sign On (SSO)](#SFSSO)
+    e. [Set Default Authentication Configuration](#SFAuth) 
+   
+2. [Configure Salesforce as a Service Provider within BlockID Admin Console](#BIDSP)
+   a. [Save Identity Provider's Certificate and add IDP Assertion Claim details](#IDPCert) 
+   b. [Add Salesforce As a Service Provider](#BIDSFasSP) 
+3. [Test the SAML Single Sign-On Connection](#TestSAML)
+4. [References](#Ref)
+5. [Glossary](#Gl)
+ 
+
+## <a name = "SFIDP"></a>Configure BlockID Admin Console as an Identity Provider within Salesforce
+Perform the below-mentioned steps:
+
+:::tip Note:
+Steps mentioned in the guide are given as per the workflow provided in the Salesforce Lightning Experience site.
+:::
+
+### <a name = "SFSetup"></a>Access the Setup screen from the Salesforce Home page
+
+1. Login to your **Salesforce** site. 
+2. From the top right corner, navigate to ***Settings** (gear icon) > **Setup***.
+3. The Salesforce Home page is displayed with the **Setup** screen.
+
+* * *
+> [Previous](#overview) | [Next](#SFSignCert)
+* * *
+
+### <a name = "SFSignCert"></a>Generate a Request Signing Certificate
+
+1. In the left pane, navigate to ***SETTINGS** > **Security** > **Certificate and Key Management** > **Create Self-Signed Certificate***. 
+3. **Label**: Enter the certificate label.
+4. **Unique Name**: Enter a unique name. You can use the name that is automatically populated based on the certificate label you enter.
+5.  **Key Size**: Select a key size option.
+6. Click **Save**.
+8. Click on the newly created certificate name > click **Download Certificate**.
+9. Save the downloaded certificate. This certificate will be used in the **Single Sign-On setup** section.
+
+* * *
+> [Previous](#SFSetup) | [Next](#SFUser)
+* * *
+### <a name = "SFUser"></a>Update User details
+1.Navigate to ***ADMINISTRATION** > **Users** > **Users***.
+2. In the Users list, click **Edit** for your username. 
+3. In the **User Edit** screen, in the **Single Sign On Information** section: 
+      * **Federation ID**: Enter the email address which you have used while signing up with Salesforce. Also, this should be the same email address that is linked to your BlockID Admin Console's user account.
+4. Click **Save**.
+
+* * *
+> [Previous](#SFSignCert) | [Next](#SFSSO)
+* * *
+### <a name = "SFSSO"></a>Setup Single Sign-On (SSO)
+
+1. Navigate to ***SETTINGS** > **Identity** > click **Single Sign-On Settings**.*
+2. In the Single Sign-On Settings screen:
+   * Click **Edit**.
+   * Select the checkbox for the **SAML Enabled** option.
+   * Click **Save**.
+2. In the **SAML Single Sign-On Settings** section, click **New**.
+3. In the SAML Single Sign-On Settings screen, enter the following information:
+   * **Name**: Name that will refer to BlockID Admin Console. 
+   * **SAML Version**: Make sure this is set to 2.0. This enables by default.
+   * **API Name**: This appears by default and it is the same name as your application name added in the **Name** field.
+   * **Entity ID**: Enter your custom domain for Salesforce. For example,  “https://1k.my.salesforce.com/”. 
+     **Note**: If you do not have a custom domain setup, use https://saml.salesforce.com. However, we recommend first set your custom domain before setting up the single sign-on settings.
+    * **Issuer**: Your BlockID Admin Console URI. To get the issuer URI from your BlockID Admin Console, navigate to ***Administration Console** > **Federation** > **SAMLv2*** and copy the **IDP** URI link provided in the **Identity provider**’s column.
+    *  **Identity Provider Certificate**: Click **Choose File** to locate and upload the authentication certificate issued by BlockID Admin Console's identity provider.
+To check the steps on getting certificate details, visit [Issue Certificate from BlockID Admin Console](#IDPCert) topic.
+   * **Request Signing Certificate**: To select the certificate, navigate to ***SETTINGS** > **Security** > **Certificate and Key Management***. To check the steps for creating a request signing certificate, visit [Generate a Request Signing Certificate](#SFSignCert) topic.
+   * **SAML Identity Type**: select **Assertion contains the Federation ID from the User object**.
+   * **Service Provider Initiated Request Binding**: Select **HTTP Redirect**.
+   * **Identity Provider Login URL**: Enter your **BlockID Admin Console’s** login URL.
+ To get the IDP login URL from your BlockID Admin Console, navigate to ***Administration Console** > **Federation** > **SAMLv2*** and click on the URI link provided in the **Identity provider**’s column. In the **IDP Service URL End Points** tab, copy the URL available in the **Single SignOn Service** field.
+
+   *  **Custom Logout URL**: This is an optional field. Enter the custom logout screen URL. If you add a Salesforce initiated logout URL, then the identity provider will post a logout response to redirect the user back to Salesforce and Salesforce sends the user to the custom URL when clicked Logout.
+
+   * **Single Logout Enabled**: Select the checkbox to enable it. When you select the single logout Enabled option, you will be logged out from a single application  from all other connected applications.
+
+   * **Identity Provider Single Logout URL**: Enter the **BlockID Admin Console**’s Logout screen URL. To get the IDP logout URL from your BlockID Admin Console, navigate to ***Administration Console** > **Federation** > **SAMLv2*** and click on the URI link provided in the **Identity provider**’s column. In the **IDP Service URL End Points** tab, copy the URL available in the **Single Logout Service** field. 
+When a user clicks on the Logout button, Salesforce will send the logout response to BlockID Admin Console’s single logout endpoint.
+
+   * **Single Logout Request Binding**: Select **HTTP POST**.
+This setting is used for Single Logout (SLO) when it is initiated by the service provider.
+
+   * Click **Save**. The details will be saved, and the new Salesforce login and logout URLs will get generated for your organization.
+   * In the **Endpoints** section, copy and save the login URL details. 
+   * Click **Download Metadata**. Save the metadata file to use in the next steps. 
+* * *
+> [Previous](#SFUser) | [Next](#SFAuth)
+* * *
+### <a name = "SFAuth"></a>Set default Authentication Configuration
+1. Navigate to ***SETTINGS** > **Company Settings** > **My Domain** > **Authentication Configuration***. 
+     * Click **Edit**.
+     *  **Authentication Service**: select the checkbox next to the SSO instance created for the BlockID Admin Console.
+   * Click **Save**.
+* * *
+> [Previous](#SFSSO) | > [Next](#BIDSP)
+* * *
+## <a name = "BIDSP"></a>Configure Salesforce as a Service Provider within BlockID Admin Console
+
+Perform the below-mentioned steps:
+1. Login to **BlockID Admin Console**, navigate to ***Administration Console** > **Federation** > **SAMLv2***.
+The **SAMLv2** screen is displayed.
+
+* * *
+> [Previous](#SFAuth) | [Next](#IDPCerti)
+* * *
+### <a name = "IDPCerti"></a>Save Identity Provider's Certificate and Set IDP Assertion Claim details
+1. Click on the Identity provider’s URL link.
+2. From the **IDP Core configuration** >  **Signing Certificate** section, copy the certificate details and save it in the following format: 
+```
+-----BEGIN CERTIFICATE-----
+ Certificate details
+-----END CERTIFICATE-----
+```
+3. Save the certificate with .cert extension.
+4. In the **IDP Assertion Claims Mapping** tab, link the appropriate **LDAP** and **Session attribute** values to the **Claims** for each **Label**.
+     * Map the `nameIdentifier` to `email` attribute
+     * `privatepersonalidentifier`  to `email` attribute.
+     * `givenname` field to `firstname` attribute
+     * `surname` field to `lastname` attribute
+     * `locality` field to `locality` attribute
+     * `streetaddress` field to `streetaddress` attribute
+     * `stateorprovince` field to `state` attribute
+     * Click **Save**.
+
+:::tip Note:
+These mapped fields will be available in the  **SAMLv2** > **Service Providers** > **SP Assertion Claims Mapping** tab for the imported service provider.
+:::
+* * *
+> [Previous](#SFAuth) | [Next](#BIDSFasSP)
+* * *
+### <a name = "BIDSFasSP"></a>Add Salesforce as a Service Provider
+
+1. In the **SAMLv2** screen, navigate to **Service Providers** > **Import Service Provider**. 
+2. In the Import Service Provider screen, enter details for the following fields:
+    * **Select Circle of Trust (COT)** - Select the appropriate option.
+    Here, the [COT](#COT) is by default created for each Community with your Identity Provider link and list of Entities.
+    * **Service Provider Logo**(Optional) - Select the appropriate image file for the logo.
+    * **Import Service Provider Metadata** - Select the Salesforce metadata file which we have downloaded from Salesforce's [Setup Single Sign On](#SFSSO)
+    * **Service Provider Name** - Enter the appropriate name for Salesforce. 
+* **Service Provider Initiated SSO URL** - Enter the SSO URL for your Salesforce domain. For example, “https://1k.my.salesforce.com/”. 
+    * Click **Upload File**. The newly imported SP link for Salesforce will be available under the list of Service Providers.
+3. Click on the newly added salesforce link.
+4. In the Edit screen: 
+     * In the **SP Core Configuration** tab: check the following details are selected:
+        * **Select the checkbox for each request/response that should be signed**: ensure that the `Assertion` and `Authentication Request` options are selected.
+        * **NameID Value**:  Select the `nameidentifier` option.
+    * In the **SP Assertion Claims Mapping** tab: Select the check box for the following options:       	
+        * privatepersonalidentifier
+        * nameIdentifier
+        * givenname
+        * locality
+        * streetaddress
+    * In the **SP Service URL End Points** tab: 
+        * Select **POST**.
+        * Ensure **Salesforce** login URL is added. 
+   * Click **Confirm and Save**.
+* * *
+> [Previous](#IDPCerti) | [Next](#TestSAML)
+* * *
+## <a name = "TestSAML"></a>Test the SAML Single Sign-On Connection
+1. In your browser, enter the BlockID’s Salesforce domain URL.
+    * Check and you will notice the option to login using your identity provider. For example, the option here is the **BlockID Demo** .
+    * Click on the login option of your identity provider.
+
+![Login.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/Login.jpg){height="300" width=""}
+
+* Then you will be redirected to the BlockID Admin Console’s single sign on page for your company. 
+
+ ![BlockIDWorkforceWebApplication.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/BlockIDWorkforceWebApplication.jpg)
+
+2. Click the **Login with BlockID** option. The login screen is displayed with the  **Barcode** to be scanned from your BlockID mobile app.
+
+![BlockIDWorkforceWebApplicationwithBarcodeN.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/BlockIDWorkforceWebApplicationwithBarcodeN.jpg)
+
+3. On the BlockID mobile application’s Home screen, click on the ‘Scan QR’ button.
+4. Scan the QR code. The confirmation pop-up window is displayed asking to `Allow BlockID to access this device’s location?`.
+5. In the confirmation pop-up window, select `Allow only while using the app`. The Authentication screen is displayed with the `Please authenticate using <Biometric_option> from 1kosmos` message.
+6. Click **Authenticate** and perform the appropriate authentication method. The pop-up window is displayed with `Thank you! You have successfully authenticated to Log In` message upon successful authentication. 
+7. In the Login screen for BlockID Admin console, click **Link User**. 
+
+![LinkUserscreen.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/LinkUserscreen.jpg){height="200" width=""}
+
+This will link your BlockID mobile app credentials to BlockID Admin Console and grant access to your Salesforce site upon successful authentication.
+
+## <a name = "Ref"></a>References
+
+* [Salesforce Help](https://help.salesforce.com/articleView?id=sso_saml.htm&type=5){target="_blank"}
+* * *
+> [Top](#overview)
+
+***
+## <a name = "Gl"></a>Glossary
+* * *
+#### C:
+* **<a name = "COT"></a>COT**: A Circle of Trust (COT) is a group of identity providers (IDP) and service providers (SP) that trust each other and in effect represent the confines within which all federation communications are performed. The COT is created for each community with the link for the identity provider and entities.
+* * *
+> [Go back to the topic](#BIDSFasSP)
+* * *
+#### D
+* **Domain**: It is a unique name defined for your organization within Salesforce which will be used to access your Salesforce site.
+* * *
+#### I
+* **IDP**: The identity provider here is the BlockID Admin Console. It is a trusted system functionality that allows you to add and manage identity configurations, authentication, assertion, and service URL endpoint details. It lets you use an authenticated single sign-on (SSO) feature across many networks, platforms, and applications within a federation.
+
+* **IdP Signature Certificate**: BlockID Admin Console serves as an identity provider to its service providers to access multiple web and mobile applications in a secure manner. It provides an authentication certificate to its SPs (to add in their IDP configurations) which contain the identity information of the identity provider.
+
+* **IdP Single Sign-On URL**: This is a single sign-on URL where the end user’s login requests will be redirected to this URL to provide login credentials and will be authenticated to provide access to their apps directly if they are authenticated successfully.
+
+* **IDP Service URL End Points**: This includes both “Single SignOn Service” and “Single Logout Service” URLs to provide in service provider’s SAML configurations.
+* * *
+#### S
+* **SP**: A service provider is an organization that hosts other applications or services and would use BlockID Admin Console’s single sign-on feature for passwordless authentication of their end-users. You will be able to import multiple service providers and add their configuration details.
+
+
+* **SAML**: The Security Assertion Markup Language (SAML) integration feature allows you to add the identity provider authorization credentials and provide these configurations to service providers (SP). Here, the identity provider is the BlockID Admin Console. It also provides you the ability to import multiple service providers and add their configurations in BlockID Admin Console. This will enable a passwordless authentication solution for your organization's users (who have logged into the service provider’s site) and allows them to log in to their SP account using their BlockID Admin Console credentials.
+
+* **Single Sign-On**: Single sign-on (SSO) is a user authentication feature that allows users to securely log in to multiple applications using single login credentials.
+
+* **SP Signing Certificate**: In the BlockID Admin console, you will be able to import multiple service providers (SPs) and allow them to use its passwordless authentication service. It imports the SP authentication certificate (to add in their SP configurations) which contains the identity information of the service provider.
+
+* **SP Assertion Claims Mapping**: The fields that are available in this section are selected and provided from the IDP assertions claims section. Select the required fields (to be configured with IDP claims and will be overridden at the service provider’s end) to map it to the fields required for the user to authenticate with that service provider.
+* * *

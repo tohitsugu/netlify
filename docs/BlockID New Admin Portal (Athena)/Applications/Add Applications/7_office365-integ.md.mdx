@@ -1,0 +1,315 @@
+---
+slug: /office365-integration
+id: Z1b65946e-a6e7-45a8-8c9b-04d81aa9a32e
+---
+# Office365 Integration
+
+## Overview
+
+
+## Prerequisites
+
+1. Office 365 tenant
+
+2. Download Office365 metadata and store it locally: 
+
+   1. Download [Office metadata](https://nexus.microsoftonline-p.com/federationmetadata/saml20/federationmetadata.xml) and store it locally on your machine
+
+3. [LDAP](https://docs.1kosmos.com/docs/broker-installation#connect-to-ldap-through-broker) or [AD](https://docs.1kosmos.com/docs/broker-installation#connect-to-ad-through-broker) BlockID user directory
+4. Microsoft [AzureAD](https://www.powershellgallery.com/packages/AzureAD/2.0.2.140) module  for [Windows Powershell](https://docs.microsoft.com/en-us/powershell/azure/active-directory/install-adv2?view=azureadps-2.0)  
+
+:::
+
+## Integration Steps
+
+### Adding the ImmutableID Attribute to BlockID 
+To get started we first need to add a new attribute to BlockID:
+
+ 1. Navigate to your** BlockID Administration Panel** and login as a  **Community Administrator**.
+
+ 2. Select **Settings** -> **BlockID Attributes**
+
+![1.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/1.png){height="" width="200"}
+
+
+3. Click "**Add New**"
+
+![2.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/2.png){height="" width="200"}
+
+4. Under name, type  **`immutableid`** 
+
+5. Click **Create**
+
+   
+
+![3.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/3.png){height="" width="200"}
+
+6. Verify  the **```immutableid```** attribute has appeared under **BlockID Attributes**
+
+![4.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/4.png)
+
+
+
+### Add ImmutableID Attribute Mapping
+
+Our next step is to map the the **`immutableid`** **BlockID Attribute** to **Active Directory**:
+
+1. Using the left-hand menu, navigate to **Directory -> Directory Integrations**
+
+![5.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/5.png){height="" width="200"}
+
+
+2. Scroll to your **AD** or **LDAP** **User Directory** and click the **edit** icon to the right of the directory name
+
+![6.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/6.png){height="" width="400"}
+
+3.  Click on the **Attributes mapping** tab
+
+![7.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/7.png){height="" width="400"}
+
+   4. Select **Add new mapping**
+
+    
+
+![8.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/8.png){height="" width="200"}
+
+       
+
+   5. Enter a  **Directory attribute** name to map to your Active Directory infrastructure. 
+
+      For this example we are using the **`postalcode`** Active Directory atttribute.  
+
+      <br />
+
+      Enter the following details:
+
+       **Directory attribute**: **`postalcode`**  
+
+      **BlockID attribute** : **`immutableid`** 
+<br />
+      
+
+     6. Click **Create**
+
+      
+
+     
+
+![9.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/9.png){height="" width="200"}
+
+      
+
+7. Confirm that the attribute has appeared in the  **Attributes mapping** section.
+
+![10.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/10.png)
+
+
+
+## Setup Office365 in BlockID
+### Adding Office365 as a Service Provider
+Next we are going to setup **Office365** as a service provider in our **BlockID Administration Panel**
+
+
+
+1. From the left-hand menu, navigate to **Applications -> Add Application** 
+2. Scroll down to **SAML 2.0 Generic**  and select **Add Integration**
+
+![11.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/11.png){height="" width="400"}
+
+
+3. After reviewing the displayed information, select **Add Application**
+
+   
+
+![12.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/12.png){height="" width="400"}
+
+#### Step 1: Basic Settings
+1. **Basic Settings** 
+Provide the following details:
+
+   
+
+   **Application Name**: **`Office365`** (or any other name of your choosing)
+
+   **Instance**: **`Production`** or **`Sandbox`** 
+
+   **Application access URL:** **`https://login.microsoftonline.com/login.srf`**
+<br />
+   
+
+2.  Click **Next**.
+
+#### Step 2: SAML Settings
+1. Click **Upload** and select the [**Office metadata**](https://nexus.microsoftonline-p.com/federationmetadata/saml20/federationmetadata.xml) downloaded during the prerequisites. 
+
+![13.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/13.png){height="" width="200"}
+
+2. Under **Assertion Statement (NameID)*** select the following attributes from the drop-down menu:
+
+   **Format:** **`urn:oasis:names:tc:SAML:2.0:nameid-format:persistent`**
+
+   **Value:** **`immutableid`**<br /><br />
+   
+  3. Under **Claims Mapping** select **Add new** and enter the following attributes:
+
+     **Attribute:** **`email`**
+
+     **Format:** **`http://schemas.xmlsoap.org/ws/2005/05/identity/claims/mail`**
+     <br />
+  9. Click **Create**. <br /><br />
+10. Select **Next** to advance to the next page. 
+
+
+#### Step 3: Advanced Options
+ **Advanced Options**  will display several details that will have been populated by the uploaded metadata. 
+  
+1. Confirm **all the details** below:
+**Entity ID:** **`urn:federation:MicrosoftOnline`**
+<br />
+   
+   **Assertion Consumer Service:**
+
+   **Method:** **`POST`**   
+
+   **URL:** **`https://login.microsoftonline.com/login.srf`**
+<br />
+2. Confirm the following details:​	
+**Assertion**  and **Authentication request** switches are activated. 
+
+        **Signing Certificate** and **Encryption Certificate** boxes are populated
+
+    **Key Size:** `128` 
+    **Algorithm**: **`http://www.w3.org/2000/09/xmldsig#rsa-sha1`**
+<br />
+3. Click **Save**.
+
+
+
+​	
+
+![14.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/14.png)
+
+
+## Setup BlockID in Office365
+
+:::caution
+
+Ensure that the [AzureAD](powershellgallery.com/packages/AzureAD/2.0.2.140) module has been installed for [Windows Powershell](https://docs.microsoft.com/en-us/powershell/azure/active-directory/install-adv2?view=azureadps-2.0) has been installed before continuing. 
+
+:::
+
+Our next step is to configure Office365 to work with our BlockID tenant
+
+1. Launch Windows Powershell and connect to the **Azure AD** domain you wish to federate with the following command:
+```
+Connect-MsolService
+```
+![15.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/15.png){height="" width="300"}
+
+2. The Microsoft login page will launch. Enter the **Administrator** credentials for the domain.
+
+   
+
+![16.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/16.png){height="" width="200"}
+
+3. After successfuly signing-in, enter the following command to check the status of our domain:
+
+   ```
+   Get-MsolDomain -Domainname <domain name>
+   ```
+
+   Enter **your domain** in place of `<domain name>`
+
+ 
+
+![17.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/17.png){height="" width="400"}
+
+   4. Enter the following information 
+
+      :::caution
+
+      This example contains information that you will need to replace with details from your own domain
+
+      :::
+```
+$domainname = "blockiddemo.com"
+```
+Enter your domain name. <br />
+
+```
+$logoffuri = "https://1k-  dev.1kosmos.net/adminapi/community/default/slo"
+```
+Enter the landing page to direct your users to after they sign out of your application.<br />
+
+```
+$passivelogonuri = "https://1k-dev.1kosmos.net/adminapi/community/default/sso" 
+```
+Enter your identity provider SAML HTTP-POST endpoint
+ <br />
+ 
+```
+$cert =        "MIICujCCAaICCQCNoHT0ux7ydjANBgkqhkiG9w0BAQsFADAfMQsw  CQYDVQQGEwJQTDEQMA4GA1UECAwHU2xhc2tpZTAeFw0yMTAzMjIxNjU5NTBaFw0yMjAzMjIxNjU5NTBaMB8xCzAJBgNVBAYTAlBMMRAwDgYDVQQIDAdTbGFza2llMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1MqdTQX++i9Tec8IYbwCmjwilkQKu6c0ZHzG+IiSYVZTF4B+/eSH40MM/BJZ8yfrixRxi7nhmviSCweueEWR5JbO/XYEGkls0jkLTdmJIv8OWAif1HeYJTN4yct7PHJ6Xh5r6kPlW6aE2jIwAvUF2YT+BfSdNUDNz7C35YUU2JzF4JWLoPp0e287oeNJa2zsyDdGsx8ZOQjNg8ucl+XFvXMSE7BaBBh7OlwaN9rvb2APVWl20axwog3LTK/hwR4gLswwOpveS4IRvkS7ReaIH5TZ9bszLT/KBZ7vNHThsixwF7zmG7EpVcXW+K0NYWdnxMCoUeHFhhM5eCS+3CcvTQIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQDIgN+DJgouZJEe9ysEqTrAzDcgaWgVaSTrQGa1DNoWov0A3e35Bwensw61SKp20DB4SWF5GK9menIApfz30H6aoOd5mFcNWoYjkrVue+C5B2oEXCIua9TQc7iR7Np21Twb0Ylkxm/ThINdvPxnp4DXLoVF7BfOExEHvXoOOyw2Hmbpe1z57ds2g676cez4YwfTcZB+oYibvZVa+sO3f7KFjjHnBgoJC7ltxXzpreO+UcpSqVEnehhXj+rSRJ2wHcjHtyrcMxK7CkpVHgT9ZIJqd3MpQ3QKA5KxVt9q5QFr/4ZhdHFO8sq11XXwFDFkTB1Jjy5mYjqVHMj/lBQm2HPq"
+```
+Server certificate `.pem` file. Remove all spaces and newlines<br />
+
+```
+$issueruri = "https://1k-dev.1kosmos.net/newui/default/idp3"
+```
+Issuer URI set by your Identity Provider<br />
+```
+$protocol = "SAMLP"
+```
+To ensure domain uses SAML SSO<br />
+
+5. Next, run the following command to set the configuration for your Azure AD domain:
+```
+Set-MsolDomainAuthentication -DomainName $domainname -FederationBrandName Athena-1kdev -Authentication Federated -IssuerUri $issueruri -LogOffUri $logoffuri -PassiveLogOnUri $passivelogonuri -SigningCertificate $cert -PreferredAuthenticationProtocol $protocol
+```
+
+
+![18.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/18.png)
+
+6. Run the following commands to retrieve SSL configuration for your **Azure AD** domain and validate the information is correct:
+```
+Get-MsolDomainFederationSettings -DomainName <domain name> | Format-List
+```
+
+![19.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/19.png)
+
+
+
+## Testing Office365 Integration
+
+Next, we are going to test our **Office365 integration** to ensure everything is working.
+
+
+
+1. Open a web browser and navigate to [https://www.office.com](https://www.office.com)  and select **Sign-in**
+
+![20.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/20.png){height="" width="400"}
+
+2. You will be redirected to the Microsoft sign-in page. Enter your user **email address** and click **Next**.
+![21.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/21.png){height="" width="400"}
+
+
+3. After a quick loading message, users will will be redirected to the **BlockID Login Page**.
+
+![22.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/22.png){height="" width="400"}
+
+4. Scan the **QR** code with the **BlockID mobile application**
+
+![23.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/23.png){height="" width="400"}
+
+5. After successful authentication through the mobile application, the user is redirected to the **Office365** portal. 
+
+   
+
+   Select **Yes** when asked  if you wish to stay logged in.
+
+![24.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/24.png){height="" width="400"}
+
+6. That's it! Your user account will now be fully logged in to the **Office365** environment. 
+
+![25.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/25.png){height="" width="400"}
+
+

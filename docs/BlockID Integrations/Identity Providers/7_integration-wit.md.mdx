@@ -1,0 +1,197 @@
+---
+slug: /integration-with-gsuite
+id: Ze28be7cb-f7cc-45a6-8e44-8137ae7e9747
+---
+# Integration with G Suite
+
+## Overview
+
+This guide describes the procedure to configure the BlockID Admin Console as a passwordless authentication solution for your G Suite users. This integration will allow your users to log in to their G Suite account leveraging their biometrics. The biometric options include TouchID / FaceID and LiveID.
+
+### Before you Begin
+You will need the following resources and privileges to complete this integration:
+1. Admin access to the following:
+    * BlockID Admin Console. For example, `<customer>.1kosmos.net/<community_name>`
+    * G Suite instance and an account with admin rights on G Suite.
+2. Install on your mobile device:
+    * Download and install the BlockID mobile application (Compatible with iOS and Android devices) on your mobile device. Visit **[BlockID for Android](https://play.google.com/store/apps/details?id=com.onekosmos.kernel.blockid)** or **[BlockID for iOS](https://apps.apple.com/us/app/blockid/id1539421428)** to download the application.
+    * Launch the BlockID mobile application and follow the on-screen instructions to register your app with the BlockID Platform to enroll your biometrics. Visit the [Enroll Biometrics (TouchID/ FaceID and LiveID) section of BlockID Mobile Application User Guide](https://1kosmos.document360.io/docs/blockid-mobile-application-user-guide#EnrollBio) for step by step understanding of the Biometrics Enrollment process within the BlockID Mobile application.
+
+There are two sets of configurations that need to be performed to enable this integration:
+1. Configure the BlockID Admin Console as an Identity Provider (IDP) within G Suite.
+2. Configure G Suite as a Service Provider (SP) within the BlockID Admin Console application.
+
+**List of Topics:**
+1. Admin Configurations:
+    * [Configure the BlockID Admin Console as an Identity Provider within G Suite](#GSIDP)  
+        *  [Create and save a G Suite SAML SP Metadata XML file](#GoogleSAML) 
+        *  [Add BlockID Admin Console as a SAML Identity Provider](#GoogleSAMLIDP)
+    * [Configure G Suite as a Service Provider within the BlockID Admin Console](#BIDSP)
+        * [Save Identity Provider's Certificate and Set IDP Assertion Claim details](#IDPCerti)
+        * [Add G Suite as a Service Provider](#BIDGSuiteasSP)
+3. [Test the SAML Single Sign-On connection](#TestSAML) 
+4. [End User Workflow](#EUWorkflow)
+    * [Install, Register and Enroll Biometrics within the BlockID application](#InstallBA)
+    * [Register your BlockID mobile application](#RegisterwithBlockIDPlatform)
+    * [Login to your G Suite email account](#Loginto1KEmail)
+4. [Troubleshooting Steps](#TroubleshootingSteps)
+
+## <a name = "GSIDP"></a>Configure BlockID Admin Console as an Identity Provider within G Suite
+
+### <a name = "GoogleSAML"></a>Create and save a G Suite SAML SP metadata XML file
+Perform the following steps:
+
+1. Add the following template data in a text file within a text editor:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<EntityDescriptor entityID="google.com/a/<your_domain>" xmlns="urn:oasis:names:tc:SAML:2.0:metadata">
+<SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</NameIDFormat>
+<AssertionConsumerService index="1" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+Location="https://www.google.com/a/<your_domain>/acs"></AssertionConsumerService>
+</SPSSODescriptor>
+</EntityDescriptor>
+```
+2. Replace “<your_domain>” in entityID and “AssertionConsumerService Location” with your google domain name. For Example,
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<EntityDescriptor entityID="google.com/a/1kosmos.com" xmlns="urn:oasis:names:tc:SAML:2.0:metadata">
+<SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+<NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</NameIDFormat>
+<AssertionConsumerService index="1" Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+Location="https://www.google.com/a/1kosmos.com/acs"></AssertionConsumerService>
+</SPSSODescriptor>
+</EntityDescriptor>
+```
+3. Save the text file as an `XML` file.
+
+### <a name = "GoogleSAMLIDP"></a>Add BlockID Admin Console as a SAML Identity Provider
+
+1. Login to your Google site and navigate to the Admin console. For Example, `admin.google.com`.
+2. Navigate to ***Security > Set up single sign-on (SSO) with a third party IdP***:
+    * Select the checkbox for the `Set up SSO with third-party identity provider` option.
+    * **Sign-in page URL**: Enter the sign-in URL from the IdP. For example, `https://<Customer>.1kosmos.net/<community>/SingleSignOnService`. To get the IDP Single Sign-On URL from your BlockID Admin Console, navigate to ***Administration Console** > **Federation** > **SAMLv2*** and click on the URI link provided in the **Identity provider**’s column. In the **IDP Service URL End Points** tab, copy the URL available in the **Single SignOn Service** field. 
+    * **Sign-out page URL**: Enter the BlockID Admin Console’s Single Logout screen URL. For example, `https://<Customer>.1kosmos.net/<community>/SingleLogOutService`.To get the IDP logout URL from your BlockID Admin Console, navigate to ***Administration Console** > **Federation** > **SAMLv2*** and click on the URI link provided in the **Identity provider**’s column. In the **IDP Service URL End Points** tab, copy the URL available in the **Single Logout Service** field. When a user clicks on the **Logout** button, Google will send the logout response to BlockID Admin Console’s single logout endpoint.
+    * **Verification certificate**: Click **Browse files** and locate the certificate issued by BlockID Admin Console. To check the steps for getting the certificate details, visit [Issue Certificate from BlockID Admin Console Application](#IDPCerti) topic.
+    * Select the checkbox for `Use a domain specific issuer`. This option needs to be selected when a custom domain issuer is specified in the `entityID` key within Google’s metadata file.
+    * Change Password URL: Enter the BlockID Admin Console’s password reset screen URL. For Example, `https://<Customer>.1kosmos.net/<community>/dashboard/user#pwd`.
+    * Click  **Save**. 
+
+## <a name = "BIDSP"></a>Configure G Suite as a Service Provider within the BlockID Admin Console
+
+Perform the following steps:
+Login to **BlockID Admin Console**, navigate to ***Administration Console** > **Federation** > **SAMLv2***.
+The SAMLv2 screen is displayed.
+
+### <a name = "IDPCerti"></a>Save Identity Provider's Certificate and set IDP Assertion Claim details
+47. Click on the Identity provider’s URL link.
+48. From the ***IDP Core configuration** >  **Signing Certificate*** section, copy the certificate details and save it in the following format: 
+```
+-----BEGIN CERTIFICATE-----
+ Certificate details
+-----END CERTIFICATE-----
+```
+54. Save the certificate with the .cert extension.
+55. In the **IDP Assertion Claims Mapping** tab, link the appropriate **LDAP** and **Session attribute** values to the **Claims** for each **Label**.
+    56. Map the `nameIdentifier` to `email`.
+    57. `privatepersonalidentifier` to `email`.
+     58. `givenname` to `firstname`.
+     59. `surname` to `lastname`.
+     60. `locality` to `locality`.
+     61. `streetaddress` to `streetaddress`. 
+     62. `stateorprovince` to `state`.
+     * Click **Save**.
+
+:::tip Note:
+These mapped fields will be available in the  ***SAMLv2** > **Service Providers** > **SP Assertion Claims Mapping*** tab for the imported Service Provider.
+:::
+
+### <a name = "BIDGSuiteasSP"></a>Add G Suite as a Service Provider
+
+1. In the **SAMLv2** screen, navigate to ***Service Providers** > **Import Service Provider***. 
+2. In the Import Service Provider screen, enter details for the following fields:
+    * **Select Circle of Trust (COT)** - Select the appropriate option.
+    Here, the COT is by default created for each Community with your identity provider link and list of Entities.
+    * **Service Provider Logo** (Optional) - Select the appropriate image file for the logo.
+    * **Import Service Provider Metadata** - Select your SP metadata file downloaded from Google's [Create and save a G Suite SAML SP Metadata XML file](#GoogleSAML) Identity Provider section.
+    * **Service Provider Name** - Enter the appropriate name for G Suite.
+    * **Service Provider Initiated SSO URL** - Enter the SSO URL for your G Suite domain. For example, "http://mail.1kosmos.com/".
+    * Click **Upload File**.  The newly imported SP link for G Suite will now be available in the list of service providers.
+3. Click on the newly added G Suite link.
+4. In the Edit screen: 
+      * In the **SP Core Configuration** tab: check the following details are selected:
+        * **Select the checkbox for each request/response that should be signed**: ensure that the `Authentication Request` option is selected.
+        * **NameID Value**:  `emailaddress`.
+    * In the **SP Assertion Claims Mapping** tab: Select the check box for the following options:       	
+        * privatepersonalidentifier
+        * nameIdentifier
+        * givenname
+        * surname
+        * locality
+        * streetaddress
+        * stateorprovince
+    * In the **SP Service URL End Points** tab: 
+        * Select **POST**.
+        * Ensure G Suite login URL is added. 
+   * Click **Confirm and Save**.
+
+## <a name = "TestSAML"></a>Test the SAML Single Sign-On connection
+1. In your browser, enter the BlockID’s G Suite Domain URL. For Example, `https://<customer>.1kosmos.net/<community>/login?token=<tokan_id>`. You will be redirected to the BlockID Admin console’s login screen is displayed with the barcode to be scanned from your BlockID mobile app.
+3. On the BlockID mobile application’s Home screen, click ‘Scan QR’. 
+4. Scan the QR code. The confirmation pop-up window is displayed asking to `Allow BlockID to access this device’s location?`.
+5. In the confirmation pop-up window, select `Allow only while using the app`. The Authentication screen is displayed with the `Please authenticate using <Biometric_option> from 1kosmos` message.
+6. Click **Authenticate** and perform the appropriate authentication method. The pop-up window is displayed with `Thank you! You have successfully authenticated to Log In` message upon successful authentication. 
+7. In the web browser, the **My Profile** screen is displayed within the BlockID Admin Console application.
+8. From the top right corner, click on the **User Account** list (third list) and click **Logout**.
+
+## <a name = "EUWorkflow"></a>End User Workflow
+
+An end user receives an email from their organization's administrator to register to BlockID Admin Console and G Suite account using the BlockID mobile application. This section describes the following procedures:
+
+* Register to the BlockID Platform
+* Login to your G Suite email account
+
+### <a name = "InstallBA"></a> Install and register within the BlockID mobile application
+
+1. Install BlockID mobile application by performing one of the following steps:
+   * Scan one of the following QR codes (Play Store and App Store) from your mobile device:
+![Playstore BlockID.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/Playstore%20BlockID.png){height="" width="150"}
+
+   ![Appstore BlockID.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/Appstore%20BlockID.png){height="" width="150"}
+
+    **OR**
+   * Visit the **[BlockID for Android](https://play.google.com/store/apps/details?id=com.onekosmos.kernel.blockid)** or **[BlockID for iOS](https://apps.apple.com/us/app/blockid/id1539421428)** links to download and install the BlockID Mobile Application (Compatible with Android and iOS devices).
+4. Launch the BlockID mobile application and follow the on-screen instructions to register your app with the BlockID Platform to enroll your biometrics. Visit the [Enroll Biometrics (TouchID/ FaceID and LiveID) section of BlockID Mobile Application User Guide](https://1kosmos.document360.io/docs/blockid-mobile-application-user-guide#EnrollBio) for step by step understanding of the Biometrics Enrollment process within the BlockID Mobile application.
+
+### <a name = "RegisterwithBlockIDPlatform"></a>Register your BlockID mobile application:
+1. Open the email (that you have received from your administrator on your personal email Id) on a desktop or laptop browser.
+2. ![Employer Email.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/Employer%20Email%281%29.jpg)
+3. Click the personalized magic link (for BlockID Platform) given in the email that says `Click here` on your laptop. The BlockID platform’s single sign on screen is displayed with the QR code for your organization.
+4. On the BlockID mobile application’s Home screen, click on the ‘Scan QR’ button.
+5. Scan the QR code. The confirmation pop-up window is displayed asking to `Allow BlockID to access this device’s location?`.
+6. In the confirmation pop-up window, select `Allow only while using the app`. The Authentication screen is displayed with the `Please authenticate using <Biometric_option> from 1kosmos` message.
+7. Click **Authenticate** and perform the appropriate authentication method. The pop-up window is displayed with `Thank you! You have successfully authenticated to Log In` message upon successful authentication. 
+8. In the web browser, the **My Profile** screen is displayed within the BlockID Admin Console application.
+9. From the top right corner, click on the **User Account** list (third list) and click **Logout**.
+
+### <a name = "Loginto1KEmail"></a>Login to your G Suite email account:
+1. Click on the personalized G Suite email account’s magic link sent on your personal email id. For Example, `http://mail.1kosmos.com`. 
+2. The **Gmail Sign in** screen is displayed. 
+3. Enter the username and click **Next**.  The Google account is managing by `1Kosmos.com` message is displayed with the **Privacy Policy** and **Terms and Conditions** to accept.
+5. Click **Accept**.
+4. The BlockID platform’s single sign on screen is displayed with the QR code for your company.
+3. On the BlockID mobile application’s Home screen, click on the **Scan QR** button.
+4. Scan the QR code. You will be logged in to your G Suite email account.
+
+## <a name = "TroubleshootingSteps"></a>Troubleshooting Steps
+
+:::caution
+<details>
+<summary><b>G Suite - Server Error: `We are unable to process your request at this time, please try again later.`</b></summary>
+A user receives the above error message when tries to log in to Google mail and scans the QR code.
+<h3>Cause:</h3>The user’s email id was not registered correctly in the IDP configurations.
+<h3>Resolution:</h3>
+Please make sure the registered email id is correct in the IDP configurations.
+</details>
+:::
+
