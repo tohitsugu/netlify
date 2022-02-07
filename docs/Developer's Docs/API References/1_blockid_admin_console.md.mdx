@@ -1,0 +1,115 @@
+---
+slug: /blockid-admin-console-api
+id: blockid-admin-console-api
+---
+
+# BlockID Admin Console
+
+:::caution
+## Communities 
+:::
+
+:::caution
+<details>
+<summary><b>Description</b></summary>
+<br>
+<b>r1/system/community_info/update API</b>: In this API, Administrators of a community can limit the number of devices a persona can be registered on. In the “persons per account” limit rule, you can set the maximum limit for devices per community. The default limit is 1 for all communities and it can also be configurable. You can also configure the “persons Limit Rule” in which there are two configurable options to regulate the behavior when a user tries to add the same persona on an <b>n+1</b> device where the maximum limit of devices is <b>n</b>. 
+</details>
+:::
+
+:::caution
+<details>
+<summary><b>Parameters</b></summary>
+<br>
+The parameters are: 
+<ol>
+<li><b>personsPerAccount</b>: The default value is <b>1</b>.</li>
+<li><b>personsLimitRule</b>: The default option is <b>reject</b>. The configurable options are: </li>
+<ol>
+<li><b>reject</b>: If the maximum limit number for devices per community is reached, and the rule is set to reject then any attempts to link more accounts are rejected.</li>
+<li><b>cleanup</b>: If the maximum limit number for devices per community is reached, and the rule is cleanup then currently linked accounts are unlinked until there is room to add a new one.</li>
+</ol>
+</ol>
+</details>
+:::
+
+:::caution
+<details>
+<summary><b>Known side effects</b></summary>
+<br>
+When the “personsPerAccount” limit is set to 1 and the “personLimitRule” rule is set to ‘cleanup’, the passwordless login will happen on the first device (<b>device1</b>) and you can link the second device (<b>device2</b>) using the magic link. Now the <b>device1</b> is no longer authorized for the account, but your login session does not expire. However, once you log out, you should not be able to use <b>device1</b> for passwordless login.
+</details>
+:::
+
+:::caution
+<details>
+<summary><b>Swagger link</b></summary>
+
+[Update Tenant and Community Info](https://1k-dev.1kosmos.net/swagger-ui.html?urls.primaryName=System%20APIs#/Tenant/Community/updateTenantAndCommunityUsingPOST)
+:::
+
+:::danger
+## Magic Link
+:::
+
+:::caution
+<details>
+<summary><b>Description</b></summary>
+<br>
+<b>r2/acr/community/community/code</b> API: 
+In this API, a new option has been introduced to send the invitation magic link via SMS to end-users. The phone number of the user will be picked up from the directory and shown as an option to the administrator to be used for the delivery of the magic link.
+</details>
+:::
+
+:::caution
+<details>
+<summary><b>Parameters</b></summary>
+<br>
+There are two additional parameters <b>smsTo</b> and <b>smsTemplateB64</b> added these behave the same way as <b>emailTo</b> and <b>emailTemplateB64</b>.
+<ol>
+<li><b>smsTo</b>: The value includes a mobile number prefixed with the country code.</li>
+<li><b>smsTemplateB64</b>: This includes the invitation template created to send in the SMS invite.</li>
+</ol>
+</details>
+:::
+ 
+ :::danger
+ ## OTP Enhancements
+:::
+
+:::caution
+<details>
+<summary><b>Description</b></summary>
+<br>
+<b>/api/r2/otp/generate</b> API: 
+This API will be used to obtain the value of the OTP that was sent to the user.
+
+If any of the following attributes are provided, this API schedules OTP to be generated or delivered asynchronously.    
+•	emailTo
+•	smsTo
+•	voiceTo
+If none of the destinations is provided, this API will return the OTP code in response to the API as ECDSA encrypted JSON {code: “xxxx”} synchronously. 
+
+</details>
+:::
+
+:::caution
+<details>
+<summary><b>Parameters</b></summary>
+<br>
+If any of the following attributes are provided, this API schedules OTP to be generated or delivered asynchronously.    
+<ol>
+<li><b>emailTo</b>: The value includes the email address of the user.</li>
+<li><b>smsTo</b>: The value includes a mobile number prefixed with the country code.</li>
+<li><b>voiceTo</b>: The value includes a mobile number prefixed with the country code.</li>
+</ol>
+</details>
+:::
+
+:::caution
+<details>
+<summary><b>Swagger link</b></summary>
+
+[Request new OTP code](https://1k-dev.1kosmos.net/swagger-ui.html?urls.primaryName=OTP%20APIs#/OTP/generateNewOTPCodeUsingPOST)
+:::
+

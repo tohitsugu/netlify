@@ -1,0 +1,1733 @@
+---
+slug: /ios-100
+id: ios-100
+---
+# BlockID iOS SDK 1.0.0
+
+## Overview
+This document describes the procedure to configure the BlockID iOS SDK into your application. This integration will allow your users to use the features provided within the iOS SDK of the BlockID mobile application. The features include enrollment of the user’s LiveID (captures the live (real-time) facial images) details, Fingerprint, PIN, Driver's License (DL), and Passport details, etc. Also, it has various types of authentication mechanisms by which a user can log in to the organization’s target systems.
+
+## Dependencies
+You will need the following resource to complete this integration:
+* XCode 12.0 or higher
+* Swift 5.0 or higher
+* Cocoapods 1.9.3 or higher
+
+## BlockID SDK Setup
+The setup consists of the following four steps:
+1. [Add CocoaPods](#AddCocoapods)
+2. [Integrate the BlockID SDK module into your project](#IntegrateSDK)
+3. [SDK Initialization](#SDKIntialization)
+
+### <a name = "AddCocoapods"></a>Add CocoaPods
+
+1. Add the following pods to the podfile of the project and install those pods:
+```swift
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+ 
+target 'test-app' do
+  # Comment the next line if you do not want to use dynamic frameworks
+  use_frameworks!
+ 
+  # Pods for test-app
+  pod 'TrustWalletCore', '~> 0.12.31'
+  pod 'Alamofire','~> 4.9.1'
+  pod 'RijndaelSwift', '~> 0.2.0'
+  pod 'CryptoSwift', '~> 1.3.0'
+  pod 'BigInt', '~> 4.0'
+  pod 'SwiftyTesseract', '~> 2.2.3'
+end
+```
+
+2. Run the following command in the terminal:
+```swift
+ pod install 
+```
+3. Open the `.xcworkspace` in the XCode app.
+
+### <a name = "IntegrateSDK"></a> Integrate BlockID SDK
+1. Copy the `BlockIDSDK.framework` into your application.
+![BIDFramework.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/BIDFramework.jpg){height="" width=""}
+
+2.	Add the `BlockIDSDK.framework` folder into the Frameworks section.
+![Frameworksfolder.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/Frameworksfolder.jpg){height="" width=""}
+
+
+3.	In the project editor, navigate to ***General > Library > Frameworks > Frameworks, Libraries, and Embedded Content***, select `Embed & Sign` for `BlockIDSDK.framework`.
+![EmbedandSign.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/EmbedandSign.jpg){height="" width=""}
+
+### <a name = "SDKIntialization"></a> SDK Initialization
+Once the SDK is added to your application, add the license key and tenant details to obtain the SDK's features.
+
+You must set the following to your project under constants:
+1.	License key
+2.	Tenant details
+3.	Register tenant with the framework
+
+#### Setting License key for framework
+Use the following code m to set the license key:
+```swift
+BlockIDSDK.sharedInstance.setLicenseKey(key: LicenseKey)
+```
+
+**Request Params Description**: 
+| Params | Description |
+| ----------- | ----------- |
+| key | A string value of license key |
+
+#### Setting Tenant Details
+Use the following code to set the tenant details as an object in the framework for APIs.
+
+```swift
+static let defaultTenant = BIDTenant.makeTenant(tag: "tenantTag", community: "default", dns: "dns/url")
+```
+
+**Request Params Description**: 
+| Params | Description |
+| ----------- | ----------- |
+| tag | A string value of Tenant tag |
+| community | A string value of community |
+| dns | A string value of DNS |
+
+#### Initialize temporary wallet
+Use the following function to initialize the temporary wallet:
+```json
+ BlockIDSDK.sharedInstance.initiateTempWallet() {(status, error) in
+    //your code here
+}
+```
+
+**Response Params Description:**
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+         Boolean value: True / False
+        <ul>
+          <li>True - on success</li>
+          <li>False - on failure</li>
+          </ul>          
+      </td>
+   </tr>
+    <tr>
+    <td>error</td>
+      <td>
+      NSObject of ErrorResponse: The above object consists of two parameters
+        <ul>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ul>
+      </td>
+   </tr>
+  </tbody>
+</table>
+
+#### Register Tenant within the framework
+The following function is used to register tenant details within the framework. These details will be used when APIs will get executed while enrolling documents, or while getting a public key.
+
+When this function gets called, the Ethereum wallet gets created and a Distributed Identifier (DID) along with 12 Mnemonic phrases (recovery phrases) will be available for the user.
+```swift
+ BlockIDSDK.sharedInstance.registerTenant(tenant: bidTenant) {(status, error, tenant) in
+    //your code here
+}
+```
+**Request Params Description**: 
+| Params | Description |
+| ----------- | ----------- |
+| tenant |Type of BIDTenant |
+
+**Response Params Description:**
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+         Boolean value: True / False
+        <ul>
+          <li>True - on success</li>
+          <li>False - on failure</li>
+          </ul>          
+      </td>
+   </tr>
+    <tr>
+    <td>error</td>
+      <td>
+      NSObject of ErrorResponse: The above object consists of two parameters
+        <ul>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ul>
+      </td>
+   </tr>
+   <tr>
+    <td>tenant</td>
+      <td>
+      Type of BIDTenant
+   </td>
+   </tr>
+  </tbody>
+</table>
+
+#### Commit application wallet
+The following function is used to commit the temporary wallet. This function will be called on the success status of the registerTenant method.
+
+```json
+BlockIDSDK.getInstance().commitApplicationWallet();
+```
+
+## SDK / Data Security
+
+1. To prevent any kind of unauthorized access to the SDK, there is a locking mechanism implemented in the BlockID SDK.
+2. The SDK will always be in a locked state. Perform the successful login/register by any mode to unlock the SDK. After that, the SDK will be unlocked, and all the APIs will be accessible.
+3. If the SDK is locked and someone tries to access the API, it will show the message as “Unauthorized access”.
+4. For security purposes, on the app side, the developers must lock the SDK again, when the app goes in the background or the user is directed to the Login screen.
+5. Check SDK lock status before calling any enrollment APIs of SDK.
+
+The following methods are exposed to the application from SDK:
+1. Use the following method to lock the SDK:
+```swift
+BIDAuthProvider.shared.lockSDK()
+```
+2. Use the following method to check whether the SDK is locked or not:
+```swift
+BIDAuthProvider.shared.isSDKUnLocked()
+```
+
+## SDK Functions
+
+### Get Mnemonic Phrases
+Mnemonic phrases are twelve account recovery phrases. These phrases are used for the restoration of the wallet in the future. To get the mnemonic phrases, call the following function:
+
+```swift
+BlockIDSDK.sharedInstance.getMnemonicPhrases()
+```
+### Get Distributed Identifier (DID)
+Distributed Identifier (DID) is a globally unique Identifier. When you create a wallet, it is created along with it. All assets like documents, biometric will be enrolled against this DID. To get the DID details, use the following method:
+
+```swift
+BlockIDSDK.sharedInstance.getDID()
+```
+
+### Document Enrollment
+:::tip Note:
+Before using any scanning method, please make sure to check whether the camera permission is provided or not.
+:::
+
+#### Driver License Enrollment
+
+***Enroll Driver's License***
+Perform the following steps to enroll the driver's license:
+
+* To scan the driver's licenses, the app should call the `DriverLicnseScanHelper` class. This scanner scans the front and backside of the driver's license and handles the UI constraints of back and front screens. 
+* There are parameters for the scanning side of the driver's license. Based on this parameter the scanner will act and scan the document accordingly. 
+* The front side of the document will be scanned using `OCR`, and the backside of the document will be scanned for `PDF417`.
+* Check the following method that presents the DriverLicenseScanHelper class:
+
+```swift
+private var dlScannerHelper: DriverLicenseScanHelper?
+
+private let selectedMode: ScanningMode = .SCAN_LIVE // this will be .SCAN_LIVE, .SCAN_DEMO
+
+private let firstScanningDocSide: DLScanningSide = .DL_BACK // this parameter will be .DL_BACK or .DL_FRONT
+
+//initialize the scanner object
+dlScannerHelper = DriverLicenseScanHelper.init(scanningMode: selectedMode, bidScannerView: _viewLiveIDScan, dlScanResponseDelegate: self, cutoutView:_imgOverlay, expiryGracePeriod: 90)
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| scanningMode | There are two types of scanning modes. The recommended mode will always be `SCAN_LIVE` but for demo purposes, one can use `SCAN_DEMO`. |
+| bidScannerView | Type of BIDScannerView |
+| dlScanResponseDelegate | viewController |
+| cutoutView | Type of UIView |
+| expiryGracePeriod | Type of integer. To check the expiry of the document. |
+
+Use the following code to start DL scanning:
+
+```swift
+self.dlScannerHelper?.startDLScanning(scanningSide: firstScanningDocSide)
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| scanningSide | Type of `DLScanningSide`. The values of the above parameters are `.DL_BACK` and `.DL_FRONT`.|
+
+***DriverLicenseResponseDelegates***
+Extend your controller with this delegate to get a response from the DL scanner. 
+
+```swift
+extension yourViewController: DriverLicenseResponseDelegate {
+     //your code here
+}
+```
+
+List of delegate methods:
+1. readyForDetection
+2. scanBackSide	
+3. scanFrontSide
+4. dlScanCompleted
+
+**readyForDetection**
+
+Use the following method when the driver's license is ready for detection:
+
+```swift
+func readyForDetection(){ 
+     //your code here
+}
+```
+
+**scanBackSide**
+Use the following method when the DL is ready for back side scan:
+
+```swift
+func scanBackSide(){
+ //your code here
+   self.dlScannerHelper?.startDLScanning(scanningSide: .DL_BACK)
+} 
+```
+
+**scanFrontSide**
+Use the following method when the DL is ready for  front side scan:
+
+```swift
+func scanFrontSide(){
+   //your code here
+   self.dlScannerHelper?.startDLScanning(scanningSide: .DL_FRONT)
+}
+```
+
+**dlScanCompleted**
+Use the following method when the DL scanning is completed:
+
+```swift
+func dlScanCompleted(dlScanSide: DLScanningSide, bidDriveLicense: BIDDriverLicense?, signatureToken signToken: String?, error: ErrorResponse?) { //your code here
+}
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| dlScanSide | Type of `DLScanningSide`. The values of the above parameters are `.DL_BACK` and `.DL_FRONT`.|
+| bidDriverLicense | Type of `bidDriverLicense`. It returns the object of the scanned document. |
+| signatureToken | Type of string. The MD5 value of the BIDDriverLicense object. |
+| error | Type of `ErrorResponse`. It returns the errorObject if the DL scanning is not completed and fails with an error. |
+
+***Save Driver's License***
+To save a driver's license object, call the BlockID SDK  `registerDocument` method:
+
+```swift
+BlockIDSDK.sharedInstance.registerDocument(obj: dlObject, docType: .dl, sigToken: token){status, error in
+      //your code here
+}
+```
+
+Request Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>obj</td>
+      <td>
+        Type of BIDDocumentData       
+     </td>
+   </tr>
+    <tr>
+    <td>docType</td>
+      <td>
+     Type of BIDDocumentType
+     </td>
+   </tr>
+   <tr>
+    <td>signToken</td>
+      <td>
+     Type of string
+   </td>
+   </tr>
+  </tbody>
+</table>
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+  
+  </tbody>
+</table>
+
+***Check if the Driver's License is Enrolled***
+Use the following method to check if the DL is enrolled/registered with the BlockID:
+```swift
+BlockIDSDK.sharedInstance.isDLEnrolled()
+```
+***Unenroll Driver's License***
+Use the BlockID SDK unregisterDocument method, to unenroll a DL:
+```swift
+BlockIDSDK.sharedInstance.unregisterDocument(docType: .dl) {
+                status, error in
+}
+```
+
+Request Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>docType</td>
+      <td>
+     The object of `BIDDocumentType`. The values of the above parameters are as follows:
+       <ol>
+          <li>dl</li>
+          <li>passport</li>
+       </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>unenrollListener</td>
+      <td>
+     The object of interface type `BIDDocumentProvider.IDocumentUnEnrollmentListener`.   
+     </td>
+   </tr>
+   </tbody>
+</table>
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+ </tbody>
+</table>
+
+#### Passport Enrollment
+**Enroll Passport**
+To scan a passport, the app should call the PassportScanHelper class. This scanner scans the passport text as well as MRZ.
+
+The following method presents the `PassportScanHelper` class:
+```swift
+private var ppScannerHelper: PassportScanHelper?
+private let selectedMode: ScanningMode = .SCAN_LIVE
+
+self.ppScannerHelper = PassportScanHelper.init(scanningMode: self.selectedMode, bidScannerView: self._viewLiveIDScan, ppResponseDelegate: self, cutoutView: self._imgOverlay, expiryGracePeriod: 90)
+```
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| scanningMode | There are two types of scanning modes. The recommended mode will always be `SCAN_LIVE` but for demo purposes, one can use `SCAN_DEMO`. |
+| bidScannerView | Type of BIDScannerView |
+| ppResponseDelegate | viewController |
+| cutoutView | Type of UIView |
+| expiryGracePeriod | Type of integer. To check the expiry of the document. |
+
+Use the following code to start passport scanning:
+
+```swift
+self.ppScannerHelper?.startPassportScanning()
+```
+
+***PassportResponseDelegate***
+Extend your controller with this delegate to get a response from the passport scanner. 
+
+```swift
+extension yourViewController: PassportResponseDelegate {
+     //your code here
+}
+```
+
+List of delegate methods:
+1. readyForDetection
+2. passportScanCompleted	
+
+**readyForDetection**
+
+Use the following method when the passport is ready for detection:
+
+```swift
+func readyForDetection(){ 
+     //your code here
+}
+```
+
+**passportScanCompleted**
+Use the following method when the passport scanning  is completed:
+
+```swift
+func passportScanCompleted(withBidPassport obj: BIDPassport?, error: ErrorResponse?, signatureToken signToken: String?) {
+     //your code here
+}
+
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| withBidPassport | Type of `BidPassport`. It returns the object of the scanned document. |
+| signatureToken | Type of string. The MD5 value of BidPassport object. |
+| error | Type of `ErrorResponse`. It returns the errorObject if the passport scanning is not completed and fails with an error. |
+
+***Save Passport***
+To save a passport object, call the BlockID SDK  `registerDocument` method:
+
+```swift
+BlockIDSDK.sharedInstance.registerDocument(obj: passportObject, docType: .pp, sigToken: token){status, error in
+      //your code here
+}
+```
+
+Request Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>obj</td>
+      <td>
+        Type of BIDDocumentData       
+     </td>
+   </tr>
+    <tr>
+    <td>docType</td>
+      <td>
+     Type of BIDDocumentType
+     </td>
+   </tr>
+   <tr>
+    <td>signToken</td>
+      <td>
+     Type of string
+   </td>
+   </tr>
+  </tbody>
+</table>
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+  
+  </tbody>
+</table>
+
+***Check if the Passport is Enrolled***
+Use the following method to check if the DL is enrolled/registered with the BlockID:
+```swift
+BlockIDSDK.sharedInstance.isPassportEnrolled()
+```
+***Unenroll Passport***
+Use the BlockID SDK `unregisterDocument` method, to unenroll a passport:
+```swift
+BlockIDSDK.sharedInstance.unregisterDocument(docType: .passport) {
+                status, error in
+}
+```
+
+Request Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>docType</td>
+      <td>
+     The object of `BIDDocumentType`.
+The values of the above parameters are as follows:
+       <ol>
+          <li>dl</li>
+          <li>passport</li>
+         </ol>
+   </td>
+   </tr>
+      </tbody>
+</table>
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+ </tbody>
+</table>
+
+### Biometric Enrollment
+#### LiveID Enrollment
+**Enroll LiveID**
+ Call LiveID scanner for enrolling LiveID, create an object of a scanner:
+ 
+ ```swift
+ //create a liveID scanner object
+private var liveIdScannerHelper: LiveIDScannerHelper?
+
+//create a scanning mode object
+private let selectedMode: ScanningMode = .SCAN_LIVE
+
+//call function to start liveID scanning
+private func startLiveIDScanning() {
+//1. Check for Camera Permission
+        AVCaptureDevice.requestAccess(for: AVMediaType.video) { response in
+            if !response {
+                DispatchQueue.main.async {
+                    //2. Show Alert
+                }
+            } else {
+                DispatchQueue.main.async {
+                    //3. Initialize LiveIDScannerHelper
+                    if self.liveIdScannerHelper == nil {
+                        self.liveIdScannerHelper = LiveIDScannerHelper.init(scanningMode: self.selectedMode, bidScannerView: self._viewLiveIDScan, liveIdResponseDelegate: self)
+                    }
+                    //4. Start Scanning
+               self.liveIdScannerHelper?.startLiveIDScanning()
+                }
+            }
+        }
+    }
+ ```
+ 
+***LiveIDResponseDelegates***
+
+Extend your controller with this delegate to get a response from the LiveID scanner. 
+
+```swift
+extension yourViewController: LiveIDResponseDelegate {
+     //your code here
+}
+```
+
+List of delegate methods:
+1. focusOnFaceChanged
+2. readyForExpression
+3. liveIdDetectionCompleted
+
+**focusOnFaceChanged**
+
+Use the following delegate method when the face is in the camera frame, or removed from the camera frame:
+
+```swift
+func focusOnFaceChanged(isFocused: Bool?) {
+          // your code goes here
+}
+```
+
+
+**readyForExpression**
+
+Use the following delegate method that captures and returns the expression:
+The `LivenessFactorType`parameter has two options.
+
+* BLINK
+* SMILE
+
+```swift
+func readyForExpression(_ expression: LivenessFactorType) {
+       // your code goes here
+}
+```
+
+**liveIdDetectionCompleted**
+Use the following method when LiveID detection is successful:
+
+```swift
+func liveIdDetectionCompleted(_ photo: UIImage?, signatureToken: String?) { 
+         // your code goes here
+}
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| photo | Type of `UIImage`. It returns a photo captured when the face is in the camera frame. |
+| signatureToken | Type of string. The MD5 value of the image. |
+
+***Save enrolled LiveID in the BlockID environment***
+To register the LiveID with BlockID through SDK, call the following method:
+
+```swift
+BlockIDSDK.sharedInstance.setLiveID(image: photo, sigToken: token) { (status, error) in
+         // your code goes here
+}
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| photo | Type of `UIImage`. Send `uiimage` from the value received from the ‘liveIdDetectionCompleted’ delegate method. |
+| signatureToken | Type of string. Send `signatureToken` from the value received from the ‘liveIdDetectionCompleted’ delegate method. |
+
+**Response Params Description:**
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+         Boolean value: True / False
+        <ul>
+          <li>True - on success</li>
+          <li>False - on failure</li>
+          </ul>          
+      </td>
+   </tr>
+    <tr>
+    <td>error</td>
+      <td>
+      NSObject of ErrorResponse: The above object consists of two parameters
+        <ul>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ul>
+      </td>
+   </tr>
+   </tbody>
+</table>
+
+***Check if the LiveID is Enrolled***
+Use the following method to check if the LiveID is enrolled/registered with the BlockID:
+```swift
+BlockIDSDK.sharedInstance.isLiveIDRegisterd()
+```
+***Verify LiveID***
+Use the following method to verify face with already enrolled face with BlockID
+
+```swift
+BlockIDSDK.sharedInstance.verifyLiveID(image: photo, sigToken: token) { (status, error) in
+         // your code goes here
+}
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| photo | Type of `UIImage`. Send `uiimage` from the value received from the ‘liveIdDetectionCompleted’ delegate method. |
+| signatureToken | Type of string. Send `signatureToken` from the value received from the ‘liveIdDetectionCompleted’ delegate method. |
+
+**Response Params Description:**
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+         Boolean value: True / False
+        <ul>
+          <li>True - on success</li>
+          <li>False - on failure</li>
+          </ul>          
+      </td>
+   </tr>
+    <tr>
+    <td>error</td>
+      <td>
+      NSObject of ErrorResponse: The above object consists of two parameters
+        <ul>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ul>
+      </td>
+   </tr>
+   </tbody>
+</table>
+
+#### Device Auth Enrollment
+**To enroll Device Auth**:
+Use the following method to enroll the device auth (fingerprint).
+
+```swift
+BlockIDSDK.sharedInstance.isDeviceAuthRegisterd()
+```
+
+***Check if the Device Auth is Enrolled***
+Use the following method to check if the device auth is enrolled/registered with the BlockID:
+```swift
+BlockIDSDK.sharedInstance.isDeviceAuthRegisterd()
+```
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+    <tr>
+    <td>message</td>
+      <td>
+      A string value for message
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+***To unenroll the Device Auth:***
+Use the BlockID SDK unregisterDocument method, to unenroll a DL:
+```swift
+BlockIDSDK.sharedInstance.unenrollDeviceAuth (success, error, message) in
+      // your code goes here
+}
+```
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+    <tr>
+    <td>message</td>
+      <td>
+      A string value for message
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+**To verify device auth**:
+Use the following method to verify the device auth used to log in with already enrolled device auth.
+
+```json
+BidAuthProvider.shared.verifyDeviceAuth (success, error, message) in
+      // your code goes here
+}
+```
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+    <tr>
+    <td>message</td>
+      <td>
+      A string value for message
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+#### PIN Enrollment
+Use the following method to enroll the PIN.
+
+```swift
+BlockIDSDK.sharedInstance.setPin(pin: appPin) { (status, error) in
+   // your code goes here
+}
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| pin | A string value of application pin |
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+ </tbody>
+</table>
+
+**Check if the PIN is enrolled**:
+```swift
+BlockIDSDK.sharedInstance.isPinRegistered()
+```
+
+**To verify PIN**:
+Use the following method to verify the PIN used to log in with already enrolled PIN.
+
+```json
+BlockIDSDK.sharedInstance.verifyPin(pin: pin) { 
+// your code goes here
+}
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| pin | A string value of application pin |
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   </tbody>
+</table>
+
+
+**To unenroll PIN**:
+```swift
+BlockIDSDK.sharedInstance.removePin(pin: pin) { (status, error) in
+    // your code goes here
+}
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| pin | A string value of application pin |
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+ </tbody>
+</table>
+
+### License Checks / Modules
+
+License checks are necessary to get the state of modules, i.e., whether they are enabled for the license or not. The following methods return the list of modules enabled for the specific enrollments:
+
+#### Get Biometric Enrollment Options
+```swift
+let enrollments = BlockIDSDK.sharedInstance.getBiometricAssetEnrollments()
+
+let biometricEnabled = enrollments?.EnrollBiometric //This will return if biometric enrollment is enabled for license
+
+let liveIdEnabled = enrollments?.EnrollLiveID //This will return if liveID enrollment is enabled for license
+
+let pinEnabled = enrollments?.EnrollPin //This will return if pin enrollment is enabled for license
+```
+
+#### Get Document Enrollment Options
+```swift
+let enrollments = BlockIDSDK.sharedInstance.getDigitalAssetEnrollments()
+
+let dlEnabled = enrollments?.EnrollDL //This will return if dl enrollment is enabled for license
+
+let ppEnabled = enrollments?.EnrollPP // This will return if passport enrollment is enabled for license
+```
+
+### User Linking
+
+#### Magic Link (get info, redeem)
+
+When user details are added to the BlockID Admin Console, the console will send an email with a magic link to users. This link helps users to register themselves into the application.
+
+Magic link is a `base64` encoded string that carries information such as api, tag, community, and code. Decode the magic link using the following JSON object:
+
+```swift
+// MARK:-
+class MagicLinkModel: NSObject, Codable {
+    var api: String? = ""
+    var tag: String? = ""
+    var community: String? = ""
+    var code: String? = ""
+    
+    func getBidOrigin() -> BIDOrigin? {
+        let bidOrigin = BIDOrigin()
+        bidOrigin.api = self.api
+        bidOrigin.tag = self.tag
+        bidOrigin.community = self.community
+        return bidOrigin
+    }
+}
+```
+
+```swift
+let decodedString = String(data: decodedData, encoding: .utf8)!
+Let magicLinkData = CommonFunctions.jsonStringToObject(json: decodedString) as MagicLinkModel?
+```
+
+* Call the following function to check if the code is valid or not:
+```swift
+BlockIDSDK.sharedInstance.validateAccessCode(code: magicLinkData.code, origin: magicLinkData.getOrigin()) { (status, error, response) in
+  //your code here
+}
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| code | Type of string |
+| origin | Type of BidOrigin |
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+    <tr>
+    <td>response</td>
+      <td>
+     Type of AccessCodeValidationResponseDecryptedData
+    <ul>
+          <li>var id: String!</li>
+          <li>var uuid: String!</li>
+           <li>var type: String!</li>
+          <li>var tenantId: String!</li>
+           <li>var communityId: String!</li>
+          <li>var accesscodepayload:</li>
+           <li>AccessCodeResponseDataPayload!</li>
+          <li>var status: String!</li>
+          <li>public class AccessCodeResponseDataPayload: Codable {
+    var userid: String!
+    var authType: String!
+    var invite_email: String!
+    var otp_email: String! }</li>
+          </ul>
+     </td>
+   </tr>
+ </tbody>
+</table>
+
+* After receiving the response, check the `authType` to decide the user onboarding process.
+    * **If the authType is OTP or none**: If the `authType` received is none or OTP,  the application will call the public key of the tenant. The URL for the public key will be formed using the URL provided in the magic link.
+
+    ```swift
+    let baseUrl = magicLink?.baseUrl + magicLink?.path
+    let url = baseUrl + "/publickeys"
+    let headers = ["Content-Type": "application/json"]
+        BIDNetworkManager.sharedInstance.makeRequest(requestMethod: .get, serviceUrl: url, requestBody: nil, requestHeaders: headers) { (response: NetworkResponseCallback<ServerPublicKeyResponse>) in
+   //your code here
+    }
+   ```
+
+    * On the success of the above method, append the base64 encoded payload to the URL and present the webView with a newly formatted URL. 
+    * Once the webView presents, it will get an OTP on an email/SMS, and that OTP must be entered into the application. Once OTP is successfully verified, it will return the `scephash` and `signature token` to the application. Call the following method to onboard the user:
+ `BlockIDSDK.sharedInstance.addPreLinkedUser(userId: userid, scep_hash: scephash, scep_privatekey: signaturetoken, origin: origin) { (status, error) in
+ //your code here
+}`
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+ </tbody>
+</table>
+
+* **If the authType is authN**: If the `authType` is `authN`, the application should present the screen where the user will enter a password and will get linked against the `userid` and `magiccode`. Use the following method to onboard the user:
+
+```swift
+BlockIDSDK.sharedInstance.redeemAccessCode(code: magicLinkDataCode, userId: userid, password: password, origin: bidOrigin, deviceToken: apnsDeviceToken) { (status, error) in
+    //your code here
+}
+```
+#### Authentication without SCEP
+
+There are three types in which users can be linked that are as follows:
+
+1.	Account link through web URL
+2.	Adding a SCEP account
+3.	Adding a Non-SCEP account
+
+**Account link through web URL**
+After scanning the QR code,  the BIDOrigin module will be available in the QR code payload. The BIDOrigin module contains the `getAuthPage();` method to get the auth page details. The auth page cannot be null and if it is null, add an appropriate error message to be displayed on it. If the auth page contains a URL, the app should open the webView to show a dialog box of 6-digit alphanumeric code. If the code matches with the opened webView URL, the user should click on the `yes it's a match` button on the dialog box and enter the userid and password of the account which needs to be linked. After authentication, the webView will request the encrypted payload and decrypt it to receive the userid which will be linked by calling the following method.
+
+```swift
+BlockIDSDK.sharedInstance.linkUser(userId: userId, origin: origin, deviceToken: apnstoken) { (status, error) in
+    // your code here
+}
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| userID | A string value of userID received from QR scanning |
+| bidOrigin | BIDOrigin Object constructed from the data received from the QR scanning |
+| deviceToken | deviceToken |
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+ </tbody>
+</table>
+
+ **Adding a SCEP account**
+ If the auth page contains the native auth schema like "blockid://authenticate" and the method is SCEP (which means userid should have a valid signature token and hash to be able to login to Windows), ask the user for its AD credentials (username and password) and call the following API to validate the user and link the userid upon receiving the username and password from the user.
+
+```swift
+BlockIDSDK.sharedInstance.addNativeAccount(method: method, userId: userid, password: password, origin: bidOrigin!, deviceToken: devicetoken) { (status, error) in
+    // your code here
+}
+```
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| method | A string value received from authPage URL |
+| userID | A string value of userID received from QR scanning |
+| password | A string value of user password |
+| bidOrigin | BIDOrigin Object constructed from the data received from the QR scanning |
+| deviceToken | deviceToken |
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+      <tr>
+    <td>bidGenericResponse</td>
+      <td>
+Response object of type BIDGenericResponse
+      </td>
+   </tr>
+    <tr>
+    <td>userID</td>
+      <td>
+A string value of userID
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+**By Adding a Non-SCEP account**
+The whole process will be the same as adding the SCEP account shown above, the only difference will be in the method value. If the method value will be null or something else, it will be considered as a non-SCEP user which will be linked but the signature token and hash for Windows login will not be available.
+
+### Authentication (UWL workflows)
+
+#### Push Notification
+To make this feature available, link a user with DID and the user should be logged in once with Windows in online mode.
+At the time of link user or add SCEP account, the push token must be sent to the API(s) param name: `pushid`.
+
+1.	Once the device has been registered, the user should be able to unlock Windows via push notification.
+2.	On push, If the app is already not open (i.e., shut down or in the background), the user MUST be required to login first.
+3.	If an app was already running or if the user is already logged in, the application will process the push notification.
+4.	Push message contains origin information.
+5.	The application MUST verify that the requested userid for unlock matches the userId and origin of a linked account.
+6.	If point 5 is FALSE, i.e., the userid does not match,  show error toast: “Notification is for an account that is not linked to this device”, else continue reading.
+7.	Present the consent screen similar to login to Windows screen.
+
+#### QR Scan
+QR scanning functions are already mentioned in the above section of the document after scanning the QR code user should ask for the consent of the user before allowing the user to get logged in to the system. Check the following topic to get the detailed steps on asking for user consent.
+
+```swift
+//create a qr scanner object
+private var qrScannerHelper: QRScannerHelper?
+
+//create a scanning mode object
+private let selectedMode: ScanningMode = .SCAN_LIVE
+
+//set the object with Qrscanner
+qrScannerHelper = QRScannerHelper.init(scanningMode: selectedMode, bidScannerView: _viewQRScan, kQRScanResponseDelegate: self)
+ 
+//start the Qrscanner
+qrScannerHelper?.startQRScanning()
+```
+
+***QRScanResponseDelegates***
+Extend your controller with this delegate to get a response from the QRscanner. 
+```swift
+extension yourViewController: QRScanResponseDelegate {
+    func onQRScanResult(qrCodeData: String?) {
+        if qrCodeData == nil {
+              //your code here
+        }
+        qrScannerHelper?.stopQRScanning()
+   }
+ }
+```
+#### User Authentication With QR Code or Push notification
+Decode the string received from QRCode or push notification, and store it in the object pass that model value to the method.
+```swift
+BlockIDSDK.sharedInstance.authenticateUser(sessionId: datamodel.session, creds: datamodel.creds, scopes: datamodel.scopes, origin: datamodel.origin, userId: datamodel.userId) { (status, error) in
+
+              //your code here
+ }
+```
+
+#### User Consent
+The user consent screen represents the QRscopes asked while scanning the QR code. The qrCodeData string received after scanning the QR code is a `base64` encoded string. This must be converted to a JSON object after decoding. Following code snippet shows the QRScopes to be present on the User Consent screen and get the data of the scopes:
+
+```swift
+guard let decodedData = Data(base64Encoded: data) else {
+   //invalid qr code
+   return
+}
+
+// decoded string
+let decodedString = String(data: decodedData, encoding: .utf8)!
+
+
+//convert json string to object
+let qrModel = jsonStringToObject(json: decodedString) as AuthQRModel?
+
+//get the scope attribute
+let scopesAttributes = BlockIDSDK.sharedInstance.getScopesAttributesDic(scopes: qrModel.scopes, creds: qrModel.creds, origin: qrModel.getBidOrigin()
+, userId: selectedUserID)
+```
+
+#### Offline Authentication
+The offline authentication feature allows a user to log into the Windows workstation even when your phone is in offline mode. 
+
+For making this feature available, you should first have to link a user with DID and the user should be logged in at least once to Windows in online mode.
+
+Use the following method to get the count of linked users within the application:
+
+```swift
+BIDSDKHelper.shared.getLinkedUserAccounts()
+```
+
+* Use the following method to check if the offline feature is supported by the current user or not:
+
+```swift
+BIDSDKHelper.shared.getCurrentUserAccount()!.isOfflineAuthSupported()
+```
+* Perform the following method to generate the QRCode for authentication:
+    * Set the UIView to QRGenerator view:
+    ```swift
+     @IBOutlet weak private var _qrGenerator: QRGenerator!
+    ```
+    * Set the following variables in your viewcontroller:
+    ```swift
+    private var timer: Timer!
+    private var index: Int = 0
+    private var result: [String] = []
+    private let packageSize = 250
+    private let timeInterval = 200
+    ```
+    * Set the `viewWillAppear` method:
+    ```swift
+    override func viewWillAppear(_ animated: Bool) {
+        startQRGeneration
+    ()
+        NotificationCenter.default.addObserver(self, selector: #selector(setUIForAddAccountButton), name: NSNotification.Name(rawValue: "update_current_account"), object: nil)
+    }
+    ```
+    * Set the `viewwillDisappear` method:
+    ```swift
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self)
+        onFinish()
+    }
+    ```
+    * Set other methods:
+    ```swift
+    private func onFinish(){
+        self.resetQRGeneration()
+        self.onFinishCallback!(self)
+    }
+
+    @objc private func setUIForAddAccountButton() {
+        let currentUserAccount = BIDSDKHelper.shared.getCurrentUserAccount()
+        let linkedUserAccounts = BIDSDKHelper.shared.getLinkedUserAccounts()
+        if linkedUserAccounts.count == 0 {
+            //your add account code here
+        } else {
+            // your current user code here
+        }
+        DispatchQueue.main.async {
+            self.startQRGeneration()
+        }
+    }
+
+
+  private func resetQRGeneration() {
+        index = 0
+        result = []
+        if timer != nil {
+            timer.invalidate()
+            timer = nil
+        }
+    }
+    
+    private func startQRGeneration() {
+        self.resetQRGeneration()
+        self.actionQRGenerate()
+    }
+    
+    
+    @objc private func updateQRImage() {
+        if self.result.count == self.index {
+            self.index = 0
+        }
+        _qrGenerator.generateCode(self.result[self.index])
+        self.index += 1
+    }
+
+    private func actionQRGenerate() {
+        guard let currentUserAccount = BIDSDKHelper.shared.getCurrentUserAccount() else {
+            return self.onFinish()
+        }
+        
+        guard currentUserAccount.isOfflineAuthSupported() else {
+            return self.onFinish()
+        }
+
+        guard let offlinePayload = BlockIDSDK.sharedInstance.getOfflineAuthPayload(bidLinkedAccount: currentUserAccount) else {
+            return self.onFinish()
+        }
+
+        guard timer == nil else {
+            return
+        }
+                
+        result = QRSplitDataPacket.split(offlinePayload: offlinePayload, length: packageSize)
+        let interval = TimeInterval(Float(timeInterval)/1000)
+        self.timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: #selector(updateQRImage), userInfo: nil, repeats: true)
+    }
+    ```
+
+### Restore
+If a user wants to restore his wallet on another device, they need to provide **12 mnemonic phrases** which they have saved while performing registration. These phrases will be used to get the wallet back and restore all digital assets.
+
+Use the following method to get the wallet using mnemonic phrases:
+```swift
+let walletReady = BlockIDSDK.sharedInstance.generateWalletForRestore(mnemonics: mnemonicPhrases)
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| mnemonics | The object of type list of strings of 12 mnemonic phrases |
+
+Use the following method before restoration begins to set restore mode on:
+```swift
+BlockIDSDK.sharedInstance.setRestoreMode()
+```
+
+Use the following function to set the tenant details after generating wallet and setting restore mode on:
+
+```swift
+BlockIDSDK.sharedInstance.registerTenant(tenant: bidTenant) {(status, error, tenant) in
+    //your code here
+}
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| tenant | Type of BIDTenant |
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+      <tr>
+    <td>tenant</td>
+      <td>
+Type of BIDTenant
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+To fetch the digital assets for successful restoration, use the following method:
+```swift
+BlockIDSDK.sharedInstance.restoreUserDataFromWallet()
+        { (status, error) in
+     // your code here
+}
+```
+
+To save the restoration data into the device, use the following method:
+```swift
+BlockIDSDK.sharedInstance.commitTempData()
+```
+
+### Security Check
+There are two security checks for the application that are as follows:
+
+#### To check DeviceAuth
+Use the following method to get the authentication type and if this authentication type is enabled on a device or not. 
+
+```swift
+let deviceAuth = BlockIDSDK.sharedInstance.getDeviceAuth()
+```
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>deviceAuth</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>isEnabled - returns if device auth is enabled</li>
+          <li>authType - value of type BiometricType - `.none, .touchID, .faceID`</li>
+          <li>BiometricTypeString - return string/message</li>
+           </ol>
+     </td>
+   </tr>
+     
+ </tbody>
+</table>
+
+#### To check DeviceSecurity
+Use the following method to check if a device is jailbroken or not. It returns the value as `true` or `false`.
+
+```swift
+BlockIDSDK.sharedInstance.checkDeviceTrust()
+```
+
+#### To check if the screen lock is enabled
+Use the following method to check if the screen lock for the device is enabled or not. It returns the value as `true` or `false`.
+
+```swift
+BlockIDSDK.sharedInstance.isScreenLockEnabled()
+```
+
+## Error Codes
+This section provides a list of all error codes used in this guide.
+
+| Error Keys | Code | Message | 
+| ----------- | ----------- | ----------- |
+| kLiveIDMismatch | 401 | LiveID did not match |
+| kPassportDLNotMatch | 410 | Passport and Driver license data doesn't matched. |
+| kPassportDLNotMatch | 411 | Your photo on the document does not match with LiveID |
+| kInvalidDocument | 412 | Invalid Document. |
+| kDLBackFrontDataNotMatch | 413 | Driver License Front and Back doesn't match. |
+| kDocumentAboutToExpire | 414 | This Document is Expiring within 90 days, Would you still like to enroll it? |
+| kDocumentExpired | 415 | The document you are trying to enroll is already expired. |
+| kDocumentEnrolled | 416 | Document is already enrolled |
+| kDocumentPhotoNotFound | 417 | Document photo not found |
+| kNoMigrationNeeded | 418 | No migration needed |
+| kMagicLinkExpired | 1410 | Link expired |
+| kMagicLinkCodeRedeemed | 1429 | Code already redeemed |
+| kLicenseyKeyExpired | 1003 | License Key Expired |
+| kWalletCreationFailed | 1004 | Wallet creation failed |
+| kUserIdAlreadyExists | 1005 | UserId already exists |
+| kSomethingWentWrong | 1007 | Something went wrong! Please try again! |
+| kUnauthorizedAccess | 1111 | Unauthorized access |
+| kLicenseyKeyNotEnabled | 1112 | License key is not enabled for this module |

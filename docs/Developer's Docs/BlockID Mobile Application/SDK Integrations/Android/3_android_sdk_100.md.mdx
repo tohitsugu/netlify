@@ -1,0 +1,1858 @@
+---
+slug: /android-100
+id: android-100
+---
+# BlockID Android SDK 1.0.0
+
+## Overview
+This document describes the procedure to configure the BlockID Android SDK into your organization's mobile application. This integration will allow your users to use the features provided within the Android SDK of the BlockID mobile application. The features include enrollment of the user’s LiveID (captures the live, real-time facial images) details, Fingerprint, PIN, Driver's License (DL), and Passport details, etc. Also, it has various types of authentication mechanisms by which a user can log in to the organization’s target system.
+
+## Dependencies
+You will need the following resource to complete this integration:
+* Android Studio 4.0 or higher
+
+## BlockID SDK Setup
+The setup consists of the following four steps:
+1.	[Integrating the SDK module into your project](#SDKIntegrationfile)
+    * [Add SDK dependency in project's Build.gradle file](#SDKIntegrationSDKdep)
+2.	[Java Compatibility](#SDKIntJava)
+3.	[Enabling Permissions](#SDKIntEnable)
+4.	[Add SDK dependencies in the gradle file](#SDKIntegrationSDKdepM)
+
+### <a name = "SDKIntegrationfile"></a> Integration of BlockIDSDK_{version}-Release.aar file into the project
+Perform the following steps to integrate the BlockIDSDK_{version}-Release.aar file into your app’s project:
+
+:::tip Note:
+When adding `BlockIDSDK_{version}-Release.aar` file into your app’s project, remove the version number while renaming the aar file at the time of adding it into the app. For example, after removing the version the file name would be `BlockIDSDK-Release.aar`.
+:::
+
+1. Start the Android Studio.
+2. Navigate to ***File > Project Structure > Modules***.
+![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2814%29.png){height="350" width=""}
+
+![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2815%29.png){height="" width=""}
+
+3. Click on the `+` icon.
+4. Click `Choose import .JAR/.AAR`.
+![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2816%29.png){height="" width=""}
+
+
+5. Locate the `BlockIDSDK_{version}-Release.aar` file and click **Apply**.
+![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2820%29.png){height="" width=""}
+
+
+6. For module dependency, navigate to ***File > Project Structure > Dependencies app > declared dependencies tab > Module dependency***.
+![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2819%29.png){height="" width=""}
+
+
+7. Select `BlockIDSDK_{version}-Release`.
+
+![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2821%29.png){height="" width=""}
+
+8. Click **Apply**
+9. Click **OK**. The build process for the project starts.
+
+#### <a name = "SDKIntegrationSDKdep"></a>Add SDK dependency in project`s Build.gradle file
+Use the following code to add BlockIDSDK_{version}-Release.aar dependency into your project’s **Build.gradle** file:
+
+```json
+implementation project(path: ':BlockIDSDK-release');
+```
+
+### <a name = "SDKIntJava"></a> Java Compatibility
+The SDK source and target compatibility are now set to **Java 8**. Starting with **Voice Android SDK 5.4.1**, the SDK is no longer binary compatible with applications that target **Java 7**. To use this and future releases, developers must upgrade their applications to target Java 8. Refer to the following code snippet: 
+
+```json
+android {
+	compileOptions {
+		sourceCompatibility 1.8
+		targetCompatibility 1.8
+	}
+}
+```
+
+### <a name = "SDKIntEnable"></a> Enabling Permissions
+To target **Android API level 23** or later, you will need to ensure that your application requests runtime permissions for the camera and internet access. To do this, perform the following two steps:
+
+1. Add the following code to your Android Manifest file:
+```json
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+```
+2. Request permissions from within your application code:
+```json
+ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.{your_permission},PERMISSION_REQUEST_CODE);
+}
+```
+### <a name = "SDKIntegrationSDKdepM"> </a>Add dependencies in Project’s Build.gradle
+
+Add the following dependencies on the project’s project level `build.gradle` file:
+
+```json
+allprojects {
+   repositories {
+       google()
+       jcenter()
+       maven { url "https://jitpack.io" }
+       maven { url 'http://www.baka.sk/maven2' }
+   }
+}
+```
+
+Add the following dependencies on your app’s `build.gradle` file:
+
+<table>
+  <tbody>
+    <tr>
+      <th>Sr. No.</th>
+      <th>Dependency</th>
+      <th>Purpose</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>com.google.code.gson:gson:2.8.5</td>
+        <td>Gson</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>androidx.security:security-crypto:1.0.0-rc04</td>
+      <td>Secure Shared preference</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>androidx.lifecycle:lifecycle-extensions:2.2.0</td>
+      <td>lifecycle-extensions</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>androidx.lifecycle:lifecycle-runtime:2.2.0</td>
+      <td>lifecycle-extensions</td>
+    </tr>
+     <tr>
+      <td>5</td>
+      <td>com.google.android.gms:play-services-vision:20.1.2</td>
+      <td>QR Code scan</td>
+    </tr>
+      <tr>
+      <td>6</td>
+      <td>org.web3j:core:3.3.1-android</td>
+      <td>wallet</td>
+    </tr>
+     <tr>
+      <td>7</td>
+      <td>implementation('org.bitcoinj:bitcoinj-core:0.15.4') {
+        exclude group: 'com.google.protobuf', module: 'protobuf-java'
+    }
+</td>
+      <td>generate mnemonics</td>
+    </tr>
+     <tr>
+      <td>8</td>
+      <td>androidx.biometric:biometric:1.0.1</td>
+      <td>fingerprint and biometric</td>
+    </tr>
+     <tr>
+      <td>9</td>
+      <td>org.jetbrains:annotations:16.0.1</td>
+      <td>fingerprint and biometric</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>commons-codec:commons-codec:1.10</td>
+      <td>Base32 encode/decode</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>com.amitshekhar.android:android-networking:1.0.2</td>
+      <td>Network Call</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>com.rmtheis:tess-two:9.0.0</td>
+      <td>passport scan</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>implementation('org.jmrtd:jmrtd:0.5.13') {
+        exclude module: 'bcprov-jdk15on'
+        exclude module: 'bctls-jdk15on'
+    }
+</td>
+      <td>passport scan</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>org.innovatrics.mrz:mrz-java:0.4</td>
+      <td>passport scan</td>
+    </tr>
+     <tr>
+      <td>15</td>
+      <td>com.google.zxing:core:3.2.1</td>
+      <td>scanning dl</td>
+    </tr>
+  </tbody>
+</table>
+
+
+## SDK Initialization
+1. Once the SDK setup has been completed to access the SDK and its features, one needs to initialize the SDK and its key components.
+:::tip Note:
+We recommend using the setup code in the **MainApplication** class of your application.
+:::
+   * Use the following code to initialize the SDK within the Application class:
+   ```json
+    BlockIDSDK.initialize(Context);
+   ```
+    
+2. Once the SDK is initialized successfully, set up the license key so that the SDK can check whether you are authorized to use the SDK or not.
+    * Use the following code to set the license key:
+    ```json
+    BlockIDSDK.getInstance().setLicenseKey(licenseKey);
+    ```
+
+    **Request Params Description**: 
+    | Params | Description |
+    | ----------- | ----------- |
+   | licenseKey | A string value of license key |
+
+
+3. After setting the license key, the SDK will automatically check whether the license key is valid or not and set it within to access its features. 
+4. Once the license key setup is complete, perform the following tenant registration to complete the SDK setup.
+
+### Initialize temporary wallet
+Use the following function to initialize the temporary wallet:
+```json
+ BlockIDSDK.getInstance().initiateWallet();
+```
+
+### Register a Tenant
+The SDK pojo class called BIDTenant is necessary to perform tenant registration using the application. Use the following code to construct the BIDTenant object:    
+
+```json
+BIDTenant defaultTenant =new BIDTenant ("Your_TAG", "Your_COMMUNITY" ,"Your_DNS");
+```
+
+ **Request Params Description**: 
+| Params | Description |
+| ----------- | ----------- |
+| Your_TAG | A string value of Tenant tag |
+| Your_COMMUNITY | A string value of community |
+| Your_DNS | A string value of URL |
+
+Once the `BIDTenant` object is created, the same object can be sent for the registration by calling the following method:
+
+```json
+BlockIDSDK.getInstance().registerTenant(BidTenant,BIDTenantRegistryCallback);
+```
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| BidTenant | Type of BIDTenant |
+| BIDTenantRegistryCallback | Type of interface to get a response |
+
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+         Boolean value: True / False
+        <ul>
+          <li>True - on success</li>
+          <li>False - on failure</li>
+          </ul>          
+      </td>
+   </tr>
+    <tr>
+    <td>error</td>
+      <td>
+      NSObject of ErrorResponse: The above object consists of two parameters
+        <ul>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ul>
+      </td>
+   </tr>
+   <tr>
+    <td>tenant</td>
+      <td>
+      Type of BIDTenant
+   </td>
+   </tr>
+  </tbody>
+</table>
+
+### Commit application wallet
+The following function is used to commit the temporary wallet. This function will be called on the success status of the registerTenant method.
+
+```json
+BlockIDSDK.sharedInstance.commitApplicationWallet()
+```
+
+### Tenant Registration
+Application is expected to call ‘registerTenant’ once. If an existing tenant is set, the application will load it after validating licenseKey. The SDK will only allow tenant registration only if the license key is already added.
+
+#### What is Tenant?
+Tenants can be represented as the value or an object on which API calls can be registered. There are two types of tenants, one will be the root and the other will be the client tenant. Root tenant will be used to store the details regarding the user enrolled biometric and digital assets whereas the user's enrolled persona will be stored on the client tenant.
+
+## SDK / Data Security
+
+* To prevent any kind of unauthorized access to the SDK, there is a locking mechanism implemented in the BlockID SDK.
+* The SDK will always be in a locked state. So, to unlock the SDK one must do the successful login/register by any mode. After that, the SDK will be unlocked, and all the APIs will be accessible.
+* If the SDK is locked and someone tries to access the API, it will show the message as “Unauthorized access”.
+* For security purposes, on the app side, the developers must lock the SDK again, when the app goes in the background or the user is directed to the Login screen.
+* Check SDK lock status before calling any enrollment APIs of SDK for security purposes.
+
+The following methods are exposed to the application from SDK:
+1. Use the following method to lock the SDK:
+```json
+BIDAuthProvider.getInstance().lockSDK();
+```
+2. Use the following method to check whether the SDK is locked or not:
+```json
+BIDAuthProvider.getInstance().isSdkLocked();   
+```
+## SDK Functions
+### Document Enrollment
+:::tip Note:
+Before using any scanning method, please make sure to check whether the camera permission is provided or not.
+:::
+
+#### Driver's License Enrollment
+
+**Enroll Driver's License**
+Perform the following steps to enroll the driver's license:
+
+* To scan the driver's license, the app should call the `DLScannerHelper` class. This scanner scans the front and backside of the driver's license and handles the UI constraints of back and front screens. 
+* There are parameters for the scanning side of the driver's license. Based on this parameter the scanner will act and scan the document accordingly. 
+* The front side of the document will be scanned using `OCR`, and the backside of the document will be scanned for `PDF417`.
+* Check the following order in which the DL can be scanned while using the methods:
+    * `FIRST_FRONT_THEN_BACK`
+    * `FIRST_BACK_THEN_FRONT`
+* By default, the SDK will be set to `FIRST_BACK_THEN_FRONT` order. To set the order of DL scan, use the following method:
+```json
+DLScannerHelper.getInstance().setDLScanningOrder(DLScanningOrder.FIRST_BACK_THEN_FRONT);
+```
+* After setting the order of the DL then one can initiate the DL scan. To start the scanning, one needs to get the intent object by calling the following method:
+```json
+DLScannerHelper.getInstance().getDLScanIntent(this, K_DL_EXPIRY_GRACE_DAYS);
+```
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| this | Context of the current Activity |
+| K_DL_EXPIRY_GRACE_DAYS | Int value of expiry grace days |
+
+After getting the intent, start the intent like an activity with the result by using the following method:
+```json
+startActivityForResult(intent, K_DL_SCAN_REQUEST_CODE);
+```
+ Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| intent | An intent object is created by the above method |
+| K_DL_SCAN_REQUEST_CODE | Your custom request code for starting the DL scan activity |
+
+Once the activity for a result has started, you will get the result using the following method:
+
+```json
+@Override
+protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+   super.onActivityResult(requestCode, resultCode, data);
+}
+```
+You will receive the data in a bundle in data (intent) like any other activity and can extract the info by using the following strings from the bundle:
+
+| Keys | Description |
+| ----------- | ----------- |
+| K_DL_SCAN_DATA | A string value for getting the dl scan object (BIDDriverLicense) |
+| K_DL_EXPIRATION_STATUS | A string value for getting the int value of dl expiry status |
+| K_DL_SCAN_SIGNATURE_TOKEN | A string value for getting the string value of the signature token will be used while registering a document to check whether the data is valid or not|
+| K_DL_SCAN_ERROR | A string value for getting the string value of any error that occurred while scanning |
+
+Use the following list of methods to change the UI constraints of the scanning screen:
+```json
+DLScannerHelper.getInstance().setBackGroundColorHex(String colorHex);
+DLScannerHelper.getInstance().setTitleColorHex(String colorHex);
+DLScannerHelper.getInstance().setBackButtonColorHex(String colorHex);
+DLScannerHelper.getInstance().setErrorDailogTitleColorHexAndFont(String colorHex, String font);
+DLScannerHelper.getInstance().setErrorDailogMessageColorHexAndFont(String colorHex, String font);
+DLScannerHelper.getInstance().setErrorDialogButtonColorHex(String colorHex);
+DLScannerHelper.getInstance().setErrorDialogViewColor(String colorHex);
+DLScannerHelper.getInstance().setmErrorDialogMessageColor2(String colorHex);
+DLScannerHelper.getInstance().setBackgroundColorHex(String colorHex);
+DLScannerHelper.getInstance().setBackScanTitleFont(String font);
+DLScannerHelper.getInstance().setBackScanBackBtnFont(String font);
+DLScannerHelper.getInstance().setScanMessageColor(String colorHex);
+DLScannerHelper.getInstance().setFrontInfoColorAndFont(String colorHex, String font);
+DLScannerHelper.getInstance().setPleaseWaitFontAndColor(String colorHex, String font);
+DLScannerHelper.getInstance().setProgressBarColor(String colorHex);
+```
+
+**Save Driver's License**
+To save a driver's license object, call the BlockIDSDK  `registerDocument` method.
+```json
+BlockIDSDK.getInstance().registerDocument(context,dataObject,documentType,signToken,enrollListener);
+```
+
+Request Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>context</td>
+      <td>
+         Context of the current activity       
+     </td>
+   </tr>
+    <tr>
+    <td>dataobject</td>
+      <td>
+     The object received after scanning (BIDDocumentData)
+     </td>
+   </tr>
+   <tr>
+    <td>documentType</td>
+      <td>
+     The object of `BIDDocumentProvider.BIDDocumentType`. There are three types of documentType
+       <ol>
+          <li>passport</li>
+          <li>driverLicense</li>  
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>signToken</td>
+      <td>
+       A string value of signature token received after scanning DL       
+     </td>
+   </tr>
+   <tr>
+    <td>enrollListener</td>
+      <td>
+        The object of interface type BIDDocumentProvider.IDocumentEnrollmentListener     
+     </td>
+   </tr>
+  </tbody>
+</table>
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+  
+  </tbody>
+</table>
+
+**Check if the Driver's License is Enrolled**
+Use the following method to check if the DL is enrolled/registered with the BlockID:
+```json
+BlockIDSDK.getInstance().isDriversLicenseEnrolled();
+```
+**Unenroll Driver's License**
+Use the BlockIDSDK unregisterDocument method, to unenroll a DL:
+```json
+BlockIDSDK.getInstance().unRegisterDocument(context,docType,unenrollListener);
+```
+
+Request Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>context</td>
+      <td>
+         Context of the current activity       
+     </td>
+   </tr>
+    <tr>
+    <td>documentType</td>
+      <td>
+     The object of `BIDDocumentProvider.BIDDocumentType`.
+There are three types of documentType:
+       <ol>
+          <li>passport</li>
+          <li>driverLicense</li>
+        </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>unenrollListener</td>
+      <td>
+     The object of interface type `BIDDocumentProvider.IDocumentUnEnrollmentListener`.   
+     </td>
+   </tr>
+   </tbody>
+</table>
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+ </tbody>
+</table>
+
+#### Passport Enrollment
+**Enroll Passport**
+* To scan the passport, add the following UI attribute to the XML:
+```json
+<LinearLayout
+   android:id="@+id/layout_view"
+   android:layout_width="wrap_content"
+   android:layout_height="@dimen/dimen_0dp"
+   android:layout_marginTop="@dimen/dimen_8dp"
+   app:layout_constraintBottom_toBottomOf="parent"
+   app:layout_constraintEnd_toEndOf="parent"
+   app:layout_constraintStart_toStartOf="parent"
+   app:layout_constraintTop_toTopOf="parent">
+
+   <com.blockid.sdk.cameramodule.BIDScannerView
+       android:id="@+id/view_bid_scanner"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent" />
+</LinearLayout>
+```
+* Adjust the height and the width of the scanning frame by adding the above code in the java file.
+
+```json
+mBIDScannerView.setScannerWidthMargin(scannerOverlayMargin, overlay);
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| mBIDScannerView | The object of class BIDScanerView |
+| scannerOverlayMargin | Int value of margin by which the height and width of the scanning frame can be adjusted |
+| overlay | View object of overlay or frame can also be null if there is no overlay |
+
+* To scan the passport, use the following java method:
+
+```json
+new PassportScannerHelper(this, scanningMode, mBIDScannerView, mScannerOverlay, K_PASSPORT_EXPIRY_GRACE_DAYS, passportResponseListener
+).startPassportScanning();
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| this | Context of the current activity |
+| scanningMode | There are two types of modes. The recommended mode will be always `SCAN_LIVE` but for demo purposes, one can use `SCAN_DEMO`. |
+| mBIDScannerView | Custom UI object of class BIDScannerView |
+| mScannerOverlay | Custom UI object of view ScannerOverlay |
+| K_PASSPORT_EXPIRY_GRACE_DAYS | Int value of passport expiry grace days |
+| passportResponseListener | The interface of type IPassportResponseListener |
+
+Response Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| bidPassport | The object of type BidPassport class |
+| signToken | A string value of signatureToken |
+| error | The object of type ErrorManager.ErrorResponse |
+
+* To stop scanning, use the passport scanner object with the following method:
+
+```json
+mPassportScanner.stopScanning();
+```
+
+Response Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| bidPassport | The object of type BidPassport class |
+| signToken | A string value of signatureToken |
+| error | The object of type ErrorManager.ErrorResponse |
+
+**Check if a passport enrolled**
+To check if a passport is enrolled/registered with the BlockID, use the following method:
+
+```json
+BlockIDSDK.getInstance().isPassportEnrolled();
+```
+
+**Save passport**
+To save a passport object, call the BlockIDSDK method registerDocument:
+
+```json
+BlockIDSDK.getInstance().registerDocument(context,dataObject,documentType,signToken,enrollListener);
+```
+
+Request Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>context</td>
+      <td>
+         Context of the current activity       
+     </td>
+   </tr>
+    <tr>
+    <td>documentType</td>
+      <td>
+     The object of `BIDDocumentProvider.BIDDocumentType`.
+There are three types of documentType:
+       <ol>
+          <li>passport</li>
+          <li>driverLicense</li>
+        </ol>
+   </td>
+   </tr>
+    <tr>
+    <td>signToken</td>
+      <td>
+   A string value of signature token received after scanning a passport. 
+     </td>
+   </tr>
+   <tr>
+    <td>enrollListener</td>
+      <td>
+   The object of interface type BIDDocumentProvider.IDocumentEnrollmentListener 
+     </td>
+   </tr>
+   </tbody>
+</table>
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+ </tbody>
+</table>
+
+**Unenroll passport**
+To unenroll a passport, call the BlockIDSDK method unregisterDocument.
+
+```json
+BlockIDSDK.getInstance().unRegisterDocument(context,docType,unenrollListener);
+```
+Request Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>context</td>
+      <td>
+         Context of the current activity       
+     </td>
+   </tr>
+    <tr>
+    <td>documentType</td>
+      <td>
+     The object of `BIDDocumentProvider.BIDDocumentType`.
+There are three types of documentType:
+       <ol>
+          <li>passport</li>
+          <li>driverLicense</li>
+          </ol>
+   </td>
+   </tr>
+    <tr>
+    <td>unenrollListener</td>
+      <td>
+   The object of interface type BIDDocumentProvider.IDocumentUnEnrollmentListener
+     </td>
+   </tr>
+   </tbody>
+</table>
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+ </tbody>
+</table>
+
+### Biometric Enrollment
+#### LiveID Enrollment
+**Enroll LiveID**
+* To scan the LiveID, add the following UI attribute to the XML:
+```json
+<LinearLayout
+   android:id="@+id/layout_view"
+   android:layout_width="wrap_content"
+   android:layout_height="@dimen/dimen_0dp"
+   android:layout_marginTop="@dimen/dimen_8dp"
+   app:layout_constraintBottom_toBottomOf="parent"
+   app:layout_constraintEnd_toEndOf="parent"
+   app:layout_constraintStart_toStartOf="parent"
+   app:layout_constraintTop_toTopOf="parent">
+   <com.blockid.sdk.cameramodule.BIDScannerView
+       android:id="@+id/view_bid_scanner"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent" />
+</LinearLayout>
+```
+
+* Adjust the height and the width of the scanning frame by adding this in the java file.
+
+```json
+mBIDScannerView.setScannerWidthMargin(scannerOverlayMargin, overlay);
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| mBIDScannerView | The object of class BIDScanerView |
+| scannerOverlayMargin | Int value of margin by which the height and width of the scanning frame can be adjusted. |
+| overlay | View object of overlay or frame can also be null if there is no overlay. |
+
+* Call LiveID scanner for enrolling LiveID, create an object of a scanner:
+```json
+New LiveIDScannerHelper (this,ScanningMode.SCAN_LIVE, liveIDResponseListener,mBIDScannerView, mScannerOverlay). startLiveIDScanning();
+```
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| this | Context of the current activity |
+| scanningMode | There are two types of scanning modes. The recommended mode will be always `SCAN_LIVE` but for demo purposes, one can use `SCAN_DEMO`. |
+| mBIDScannerView | Custom UI object of class BIDScannerView |
+| mScannerOverlay | Custom UI object of view ScannerOverlay |
+| liveIDResponseListener | The interface of type ILiveIDResponseListener |
+
+Response Params Description: 
+`onFaceFocusChanged`
+| Params | Description |
+| ----------- | ----------- |
+| isFocused | Returns the Boolean value of the camera is focused or not. |
+| expression | A string value of the expression is currently underused. 1.Blink, 2.Smile |
+
+`onLiveIDCaptured`
+| Params | Description |
+| ----------- | ----------- |
+| bitmap | Bitmap object of the face trying to enroll. |
+| signatureToken | A string value of signature token received after scanning LiveID. |
+
+* To stop scanning, use the following method with the `liveScanner` object:
+```json
+mLiveIDScannerHelper.stopLiveIDScanning();
+```
+* To save enrolled LiveID into BlockID environment:
+The following method registers the LiveID with BlockID through SDK.
+```json
+BlockIDSDK.getInstance().setLiveID(bitmap, signatureToken , iLiveIDEnrollListener);
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| bitmap | Type of UIImage. Sends `uiimage` from the value received from the delegate method `liveIdDetectionCompleted` |
+| signatureToken | Type of string. Sends `signatureToken` value received from the delegate method `liveIdDetectionCompleted`|
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+ </tbody>
+</table>
+
+**Check if the LiveID is enrolled**:
+To check if LiveID is enrolled/registered with the BlockID, use the following SDK method:
+
+```json
+BlockIDSDK.getInstance().isLiveIDRegistered();
+```
+
+**Verify LiveID**:
+To verify face with already enrolled face with the BlockID, use the following method:
+```json
+BlockIDSDK.getInstance().verifyLiveID(this, bitmap, signatureToken,listener);
+```
+
+Request Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>this</td>
+      <td>
+         Context of the current activity       
+     </td>
+   </tr>
+    <tr>
+    <td>bitmap</td>
+      <td>
+     Type of UIImage. Send `uiimage` from the value received from the delegate method `liveIdDetectionCompleted`
+   </td>
+   </tr>
+    <tr>
+    <td>signatureToken</td>
+      <td>
+  Type of string. Sends `signatureToken`value received from the delegate method `liveIdDetectionCompleted`
+     </td>
+   </tr>
+   </tbody>
+</table>
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+ </tbody>
+</table>
+
+#### Device Auth Enrollment
+**To enroll the Device Auth**:
+Use the following method to enroll the device auth (fingerprint).
+
+```json
+BIDAuthProvider.getInstance().enrollDeviceAuth(this, title, desc,biometricResponseListener);
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| this | Context of current activity |
+| title | Title of the biometric dialog box |
+| desc | Description of the biometric dialog box |
+| biometricResponseListener | The interface of type of class `IBiometricResponseListener` |
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+ </tbody>
+</table>
+
+**Check if the device auth is enrolled**:
+Use the following method to check the device auth is enrolled or not.
+```json
+BlockIDSDK.getInstance().isDeviceAuthEnrolled();
+```
+**To unenroll the device auth**:
+```json
+BIDAuthProvider.getInstance().unEnrollDeviceAuth(this, title, desc,biometricResponseListener);
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| this | Context of current activity |
+| title | Title of the biometric dialog box |
+| desc | Description of the biometric dialog box |
+| biometricResponseListener | The interface of type of class `IBiometricResponseListener` |
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+ </tbody>
+</table>
+
+**To verify device auth**:
+Use the following method to verify the device auth used to log in with the already enrolled device auth.
+
+```json
+BlockIDSDK.getInstance().verifyDeviceAuth(this, title, desc,biometricResponseListener);
+```
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| this | Context of current activity |
+| title | Title of the biometric dialog box |
+| desc | Description of the biometric dialog box |
+| biometricResponseListener | The interface of type of class `IBiometricResponseListener` |
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+ </tbody>
+</table>
+
+#### PIN Enrollment
+Use the following method to enroll the PIN.
+
+```json
+BlockIDSDK.getInstance().enrollPin(pin,listener);
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| pin | A string value of application pin |
+| Listener | The interface of type `BIDDocumentProvider.IDocumentEnrollmentListener` |
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+ </tbody>
+</table>
+
+**Check if the PIN is enrolled**:
+```json
+BlockIDSDK.getInstance().isPinRegistered();
+```
+
+**To unenroll PIN**:
+```json
+BlockIDSDK.getInstance().unenrollPin(new listener );
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| Listener | The interface of type `BIDDocumentProvider.IDocumentUnEnrollmentListener` |
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+ </tbody>
+</table>
+
+**To verify PIN**:
+Use the following method to verify the PIN used to log in with the already enrolled PIN.
+
+```json
+BlockIDSDK.getInstance().verifyPin(pin);
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| pin | A string value of application pin |
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   </tbody>
+</table>
+
+## License Checks / Modules
+License checks are necessary to understand the state of modules. For example, whether they are enabled for the license or not. Following methods return the modules enabled for the specific enrollments.
+
+### To get biometric enrollments details:
+
+```json
+Enrollments.BiometricAssets enrollments = BlockIDSDK.getInstance().getBiometricAssetEnrollments();
+```
+
+To check the specific enrollment, use the following methods:
+```json
+enrollments.EnrollBiometric
+enrollments.EnrollLiveID
+enrollments.EnrollPin
+```
+
+### To get document enrollments details:
+
+```json
+Enrollments.DigitalAssetsenrollments=BlockIDSDK.getInstance().getDigitalAssetEnrollments();
+```
+
+To check the specific enrollment, use the following methods:
+```json
+enrollments.EnrollDL
+enrollments.EnrollPP
+```
+
+## Get Mnemonic Phrases
+Mnemonic phrases are twelve account recovery phrases. These phrases are used for the restoration of the wallet in the future. To get the mnemonic phrases, call the following function:
+
+```json
+BlockIDSDK.getInstance().getMnemonic();
+```
+## Get Distributed Identifier (DID)
+Distributed Identifier (DID) is a globally unique Identifier. When you create a wallet, it is created along with it. All assets like documents, biometric will be enrolled against this DID. To get the DID details, use the following method:
+
+```json
+BlockIDSDK.getInstance().getDID();
+```
+
+## Scanners (QR)
+To scan the QR code, add the following UI attribute to the XML:
+
+```json
+<LinearLayout
+   android:id="@+id/layout_view"
+   android:layout_width="wrap_content"
+   android:layout_height="@dimen/dimen_0dp"
+   android:layout_marginTop="@dimen/dimen_8dp"
+   app:layout_constraintBottom_toBottomOf="parent"
+   app:layout_constraintEnd_toEndOf="parent"
+   app:layout_constraintStart_toStartOf="parent"
+   app:layout_constraintTop_toTopOf="parent">
+
+   <com.blockid.sdk.cameramodule.BIDScannerView
+       android:id="@+id/view_bid_scanner"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent" />
+</LinearLayout>
+```
+
+Adjust the height and the width of the scanning frame by adding this in the java file.
+
+```json
+mBIDScannerView.setScannerWidthMargin(scannerOverlayMargin, overlay);
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| mBIDScannerView | The object of class BIDScanerView |
+| scannerOverlayMargin | Int value of margin by which the height and width of the scanning frame can be adjusted. |
+| overlay | View object of overlay or frame can also be null if there is no overlay. |
+
+To scan the QR for login or for adding an account, you must have access to the `QRScannerHelper`. This class presents with the QRScanner, it returns the QRScanned data.
+
+```json
+new QRScannerHelper(this,ScanningMode.SCAN_LIVE,listener,mBIDScannerView).startQRScanning();
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| this | Context of the current activity |
+| scanningMode | There are two types of scanning modes. The recommended mode will be always `SCAN_LIVE` but for demo purposes, one can use `SCAN_DEMO`. |
+| mBIDScannerView | Custom UI object of class BIDScannerView |
+| mScannerOverlay | Custom UI object of view ScannerOverlay |
+| Listener | The interface of type IOnQRScanResponseListener |
+
+Response Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| qrData | A string value of QR scan results |
+
+To stop the QR scanning, use the following `qrScannerHelper` method:
+
+```json
+QRScannerHelper.stopQRScanning();
+```
+
+## User Linking 
+### Magic Link
+
+When a magic link is resolved to an app, the app must call the `GET AccessCode` API. This will return info on the necessary `authType` required for the access code.
+* If it is an `OTP`, the app should use the pre-existing method of opening the ACR web component.
+* If it is an `authn`, the app must present a native UI asking the user for a username/password.
+
+#### To call the `GET AccessCode` API:
+Use the following code to call the `GET AccessCode` API :
+```json
+BlockIDSDK.getInstance().checkIfADRequired(code, tag, api, community,adValidationCallback);
+```
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| code  | A string value of code received from the magic link |
+| tag  | A string value of tag received from the magic link |
+| API  | A string value of URL received from the magic link |
+| community  | A string value of community received from the magic link |
+| adValidationCallback  | The interface of type IADValidationCallback |
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+      <tr>
+    <td>bidGenericResponse</td>
+      <td>
+Response object of type BIDGenericResponse
+      </td>
+   </tr>
+    <tr>
+    <td>userID</td>
+      <td>
+A string value of userID
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+#### To call Redeem 
+```json
+BlockIDSDK.getInstance().verifyUserAccount(code, userID,  password, api, tag, community, pushId, addScepAccountCallback);
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| code | A string value of code received from the magic link |
+| userID  | A string value of userIDreceived from the user |
+| password  | A string value of password received from the user |
+| bidTenant  | BIDTenant object constructed from the magic link data |
+| pushId  |Push notification ID received from the firebase while installing the app |
+| addScepAccountCallback | The interface of type AddScepAccountCallback |
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+      <tr>
+    <td>bidGenericResponse</td>
+      <td>
+Response object of type BIDGenericResponse
+      </td>
+   </tr>
+    <tr>
+    <td>userID</td>
+      <td>
+A string value of userID
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+### Authentication
+There are three types in which users can be linked that are as follows:
+1.	Account link through web URL
+2.	Adding a SCEP account
+3.	Adding a Non-SCEP account
+
+#### Account link through web URL
+After scanning the QR code,  the BIDOrigin module will be available in the QR code payload. The BIDOrigin module contains the getAuthPage() method to get the auth page details. The auth page cannot be null and if it is null, add an appropriate error message to be displayed on it. If the auth page contains a URL, the app should open the WebView to show a dialog box of 6-digit alphanumeric code. If the code matches with the opened WebView URL, the user should click on the `yes it's a match` button on the dialog box and enter the userid and password of the account which needs to be linked. After authentication, the WebView will request the encrypted payload and decrypt it to receive the userid which will be linked by calling the following method.
+
+```json
+BlockIDSDK.getInstance().linkUser(userId, pushid, bidOrigin,callback);
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| userID | A string value of userID received from QR scanning |
+| bidOrigin | BIDOrigin Object constructed from the data received from the QR scanning |
+| pushid  | Firebase push id for sending the push notification |
+| callback | The interface of type of LinkUserCallback |
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+      <tr>
+    <td>bidGenericResponse</td>
+      <td>
+Response object of type BIDGenericResponse
+      </td>
+   </tr>
+    <tr>
+    <td>userID</td>
+      <td>
+A string value of userID
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+#### By Adding a SCEP account
+If the auth page contains the native auth schema like "blockid://authenticate" and the method is SCEP (which means userid should have a valid signature token and hash to be able to login to Windows), ask the user for its AD credentials (username and password) and call the following API to validate the user and link the userid upon receiving the username and password from the user.
+
+```json
+BlockIDSDK.getInstance().addNativeAccount(pushId, userID, password), bidOrigin,
+addScepAccountCallback);
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| userID | A string value of userID received from QR scanning |
+| password | A string value of user password |
+| bidOrigin | BIDOrigin Object constructed from the data received from the QR scanning |
+| pushid  | Firebase push id for sending the push notification |
+| addScepAccountCallback | The interface of type of LinkUserCallback |
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+      <tr>
+    <td>bidGenericResponse</td>
+      <td>
+Response object of type BIDGenericResponse
+      </td>
+   </tr>
+    <tr>
+    <td>userID</td>
+      <td>
+A string value of userID
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+#### By Adding a Non-SCEP account
+The whole process will be the same as adding the SCEP account shown above, the only difference will be in the method value. If the method value will be null or something else, it will be considered as a non-SCEP user which will be linked but the signature token and hash for Windows login will not be available.
+
+## Authentication (UWL workflows)
+
+### Push Notification
+To make this feature available, you should first link a user with DID and the user should be logged in once with Windows in online mode.
+At the time of link user or add SCEP account, the push token must be sent to the API(s) param name: `pushid`.
+
+1.	Once the device has been registered, the user should be able to unlock Windows via push notification.
+2.	On push, If the app is already not open (i.e., shut down or in the background), the user MUST be required to login first.
+3.	If an app was already running or if the user is already logged in, the application will process the push notification.
+4.	Push message contains origin information.
+5.	The application MUST verify that the requested userid for unlock matches the userId and origin of a linked account.
+6.	If point 5 is FALSE, i.e., the userid does not match,  show error toast: “Notification is for an account that is not linked to this device”, else continue reading.
+7.	Present the consent screen similar to login to Windows screen.
+
+### QR Scan
+To scan QR for login or for adding an account, you must have access to the QRScannerHelper. This class presents the QRScanner method, which returns the QRScanned data.
+
+To use the above method, run the following code: 
+
+
+
+### User Consent
+The user consent screen represents the QRscopes asked while scanning the QR code. The qrCodeData string received after scanning the QR code is a `base64` encoded string. This must be converted to a JSON object after decoding. Following code snippet shows the QRScopes to be present on the User Consent screen and get the data of the scopes:
+
+```json
+BlockIDSDK.getInstance().getScopes(userId,scopes,creds,origin);
+```
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| userID | A string value of userID received from QR scanning |
+| scopes | A string value of scopes (comma separated string)received from QR scanning |
+| creds | A string value of creds received from QR scanning |
+| origin  | BIDOrigin Object constructed from the data received from the QR scanning |
+
+This method will return an object type of `BIDGenericResponse` from SDK.
+
+After getting the scope's data from the SDK, a user will be asked for the authentication to verify that the user itself is going to log in to the consent screen. After the successful authentication, call the authenticate API as shown in the following method:
+
+```json
+BlockIDSDK.getInstance().authenticateUser(userID,session,scopes,creds,origin,lat,lon,
+authenticateUserCallback);
+
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| userID | A string value of userID received from QR scanning |
+| session | A string value of sessionID received from QR scanning |
+| scopes  | A string value of scopes (comma separated string)received from QR scanning |
+| creds | A string value of creds received from QR scanning |
+| origin | BIDOrigin object constructed from the data received from the QR scanning |
+| lat | Latitude of the current location |
+| lon | Longitude of the current location |
+| authenticateUserCallback | The interface of type of AuthenticateUserCallback |
+
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+      <tr>
+    <td>bidGenericResponse</td>
+      <td>
+Response object of type BIDGenericResponse
+      </td>
+   </tr>
+    <tr>
+    <td>userID</td>
+      <td>
+A string value of userID
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+### Offline Authentication
+The offline authentication feature allows a user to log into the Windows workstation even when your phone is in offline mode. 
+
+For making this feature available, you should first link a user with DID and the user should be logged in at least once to Windows in online mode.
+
+Use the following method to get the count of linked users within the application:
+
+```json
+BlockIDSDK.getInstance().getLinkedUserList();
+```
+This method will return an object type of `BIDGenericResponse` from the SDK.
+
+Use the following method to check if the offline feature is supported by the current user or not:
+```json
+BlockIDSDK.getInstance().getSelectedAccount().getDataObject();
+```
+The above method will provide the current user info selected by the app user.
+
+```json
+BlockIDSDK.getInstance().getSelectedAccount().getDataObject().ifOfflineAuthSupported(selectedAccount);
+```
+The above method will provide information on whether it supports offline authentication and the `selectedAccount` object is received from the previous method.
+
+Use the following method to generate the QRCode for authentication:
+```json
+BlockIDSDK.getInstance().getOfflineAuthPayload(selectedAccount);
+```
+This method will return an object type of `BIDGenericResponse` from the SDK and the `selectedAccount` object will be received from the above method. To create time interval packets from the received BIDGenricResponse object, use this object following with getDataObject().toString().
+
+**Details**:
+If the selected persona does not have an associated `workstationauthorigin` entry, the Home tab will show `Unable to login offline with the selected account.`  error message when clicked on the offline option. 
+                      
+When a user attempts to access offline auth on a device, the app will perform the following actions:
+
+* Identify the origin based on the persona selected
+* Find the `WorkstationAuthOrigin` that has the same origin.
+* For generating offline QR payload
+    * Use the WorkstationAuthOrigin.scopes to prepare the QR payload like how we would if this were a QR scan.
+    * Use the selected persona to find the account details (e.g.: userid, SCEP hash, a token that needs to be sent, and any other info per scopes in the line above)
+    * Use the WorkstationAuthOrigin.publicKey for ECDSA.
+* If a user cancels the offline authentication (clicks Cancel or clicks Home tab or the application is running in the background or switching to another tab), it exits the offline auth workflow.
+
+## Restore
+If a user wants to restore his wallet on another device, they need to provide **12 mnemonic phrases** which they have saved while performing registration. These phrases will be used to get the wallet back and restore all digital assets.
+
+Use the following method to get the wallet using mnemonic phrases:
+```json
+BlockIDSDK.getInstance().restoreWallet(mnemonicPhrasesList);
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| mnemonicPhrasesList | The object of type list of strings of 12 mnemonic phrases |
+
+Use the following method before restoration begins to set the restore mode on:
+
+```json
+BlockIDSDK.getInstance().setRestoreMode();
+```
+
+Use the following function to set the tenant details after generating the wallet and setting the restore mode on:
+
+```json
+BlockIDSDK.getInstance().registerTenant(bidTenant,callback);
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| bidTenant | Type of BIDTenant |
+| callback | The interface type of `BIDTenantRegistryCallback` |
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+      <tr>
+    <td>tenant</td>
+      <td>
+Type of BIDTenant
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+To fetch the digital assets for successful restoration, use the following methods:
+```json
+BlockIDSDK.getInstance().restoreUserDataFromWallet(listener);
+```
+
+Request Params Description: 
+| Params | Description |
+| ----------- | ----------- |
+| listener | The interface type of IAccountRestoreListener |
+
+Response Params Description: 
+<table>
+  <tbody>
+    <tr>
+      <th>Params</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+    <td>status</td>
+      <td>
+      Boolean value: True / false
+       <ol>
+          <li>True: on success</li>
+          <li>False: on failure</li>
+          </ol>
+   </td>
+   </tr>
+   <tr>
+    <td>error</td>
+      <td>
+     NSObject of ErrorResponse. The above object consists of two parameters:
+     <ol>
+          <li>Code type of integer</li>
+          <li>The message type of string</li>
+          </ol>
+     </td>
+   </tr>
+      <tr>
+    <td>message</td>
+      <td>
+A string value of the message
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+
+## Security Check
+There are two security checks for the application that are as follows:
+
+### To check DeviceAuth
+Use the following method to get the authentication type and check if this authentication type is enabled on a device or not. 
+
+```json
+BlockIDSDK.getInstance().checkDeviceFingerPrintEnabled();
+```
+
+It returns the object of the `BIDGenericResponse` class of the SDK.
+
+### To check Device Security
+Use one of the following methods to check the device security:
+
+```json
+BlockIDSDK.getInstance().checkIfDeviceIsSecured();
+```
+OR
+```json
+BlockIDSDK.getInstance().isDeviceSecure(getApplicationContext());
+```
+
+It returns the object of the `BIDGenericResponse` class of the SDK.
+
+## Error Codes
+This section provides a list of all error codes used in this guide.
+
+| Error Keys | Code | Message | 
+| ----------- | ----------- | ----------- |
+| K_CONNECTION_ERROR | 0 | No internet connection. |
+| K_LIVE_ID_NOT_MATCH | 401 | LiveID did not match |
+| K_PP_DL_NOT_MATCH | 410 | Passport and Driver's license data do not match. |
+| K_LIVEID_DOC_FACE_NOT_MATCH | 411 | Your photo on the document does not match with LiveID enrolled on this device. |
+| K_INVALID_DOCUMENT | 412 | Invalid document |
+| K_DL_BACK_FRONT_DATA_NOT_MATCH | 413 | Driver License Front and back do not match. |
+| K_DOCUMENT_ABOUT_TO_EXPIRE | 414 | This Document is Expiring within 90 days, would you still like to enroll it? |
+| K_DOCUMENT_ALREADY_EXPIRED | 415 | The document you are trying to enroll is already expired. |
+| K_DOCUMENT_ENROLLED | 416 | The document is already enrolled |
+| K_NO_MIGRATION_NEEDED | 418 | No migration needed |
+| K_OFFLINE_AUTH_UNSUPPORTED | 510 | Unable to login offline with selected account. |
+| K_RESTORE_DOCS_FAILED | 610 | Account restoration failed. |
+| K_RESTORE_LIVE_ID_FAILED | 611 | Your LiveID verification failed. |
+| K_USERID_ALREADY_EXITS | 1005 | UserId already exists |
+| K_SOMETHING_WENT_WRONG | 1007 | Something went wrong! Please try again! |
+| K_UNAUTHORIZED_ACCESS | 1111 | Unauthorized access |
+| K_LICENSE_KEY_NOT_ENABLED | 1112 | License key is not enabled for this module |

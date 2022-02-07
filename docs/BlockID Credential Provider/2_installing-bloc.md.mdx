@@ -1,0 +1,452 @@
+---
+slug: /installing-blockid-credential-provider
+id: Zbce27641-b3b3-4c34-8c3e-b5a39c6164f7
+---
+# Installing BlockID Credential Provider
+
+## Overview
+
+This document describes the procedure to install and configure the BlockID Credential Provider (CP) application on your workstation. This will provide users a passwordless user authentication solution while logging into their Windows workstation. On the Windows login screen, you will get an alternate option to log in using BlockID. This allows users to log in to their workstation by scanning a QR code and allows the user to unlock their workstation via a push notification.  In both cases, authentication is achieved by leveraging your biometrics. The biometric options include TouchID / FaceID and LiveID.
+
+## Prerequisites:
+
+You will need the following resources and privileges to complete this installation:
+
+1. Workstation: Windows 10
+2. Compatible with Windows Server 2012 or higher
+3. RAM - 2 GB (Minimum)
+4. Registration with the BlockID Tenant (BlockID Admin Console)
+5. Computer with two cores
+
+## Permissions:
+
+1. Administrative permissions on the workstation to install the CP.
+2. BlockID CP Executable (.exe) file which is `blockIdSetup-<version number>.exe`. 
+
+To get the BlockID CP Executable file, please contact your 1Kosmos representative.
+
+## Installation Steps:
+
+1. Locate your `blockIdSetup-<version number>.exe` file, right-click on it and select **Run as administrator**.
+2. Follow the instructions in the Setup wizard. 
+    * While CP installation, the **BlockID Virtual Smart Card driver** installation pop-up is displayed. Click **OK** to install a BlockID virtual smart card reader service along with the CP on the Windows workstation. The virtual smart card reader handles all the smart card calls for CP to read the user certificate.
+The BlockID CP is installed successfully.
+:::tip Note:
+It is mandatory to restart the workstation after the installation of BlockID CP.
+::: 
+
+3. On the **Windows Login** screen, the **`BlockID <version number>`** option available with the other options for logging into your workstation.
+5. Log in to your workstation using your regular Windows login credentials.
+6. Double-click on the **BlockID** shortcut option on your desktop or navigate to ***Windows Start > BlockID > BlockID***.
+7. In the **Block Configuration** window:
+    * **General** tab: 
+        * **BlockID image**: By default, the **1Kosmos** logo is available for the **BlockID CP** image file. To change it, click on the **three-dotted (Browse)** button and select the appropriate image file for the logo in the **.bmp** format. This logo will be displayed on the **Windows Login** screen or **Windows GINA** screen. 
+        * **Message of the Day**: In the **BlockID MOTD** box, add a message that will be displayed next to the BlockID image. 
+            You can also use the following variables in the message:
+                * `%m` used for workstation name
+                * `%d` for Today’s date
+                * `%i` for IP address of the workstation
+                * `%n` for DNS name of the workstation
+                * `%v` for BlockID version
+ 
+            For example,  “**Login with BlockID - %d**” will be displayed as ‘**Login with BlockID - <today’s date>**’.
+      * **BlockID Service**: 
+            * **Show service status in logon UI**: By default, the checkbox for this option is **selected**. If this option is selected, the **BlockID CP** option will be seen on the **Windows Login** screen. 
+            * **State**: After the **BlockID CP** installation, this service will be available in the **Windows workstation** by default. The default **state** of the service is “**running**”. It should be in the ‘**running**’ state to make it work on the Windows Login screen. Click **Stop** to bring the service to the **Stopped** state whenever you are modifying the configurations. After the modification is done, click **Start** to start the service again.
+       * **Credential Provider BlockID Status**: Use the default settings for the below-mentioned options.
+             * **Registered**: The **Yes** value indicates that BlockID CP has been registered as a service and has a registry entry within the workstation. It also checks whether it is registered within the BlockID Admin Console or not. It is recommended to uninstall BlockID CP instead of clicking on the **Unregister** button. 
+            :::caution Info:
+            The Unregister button is given for future functionality where you can selectively unregister the BlockID CP application from your workstation.
+            :::
+
+        * **Enabled**: The **Yes** value indicates that BlockID CP has been enabled on your workstation. Click on the **Disable** option to remove the BlockID CP option from your Windows Login screen.
+    * **Advanced** tab: 
+        * **Proxy**:
+            * **URL**: Enter the URL of the proxy server.
+            * **Username**: Enter the username.
+            * **Password**: Enter the password.
+
+         :::tip Note:
+        The rest of the settings shown in this tab are disabled for now and will be used for future functionalities.
+        :::
+   * **BlockID Configurations** tab: Whenever you are performing any changes in the configurations, stop the service from the ***General** tab > BlockID Service > State > click **Stop***.
+     * **Transport Protocol**: This field indicates whether the BlockID CP should communicate with the Console using the **HyperText Transfer Protocol (HTTP)** or **Secure HyperText Transfer Protocol (HTTPS**). By default, the HTTP option is selected. It is recommended that you use the HTTPS option to be deployed within your environment. 
+        Based on the user selection, these values are auto-populated. For example, if the user selects **Secure HyperText Transfer Protocol (HTTPS)** then the WebSocket protocol is switched to "Secured WebSocket" and the port is populated to "**443**" like HTTP, WebSocket switches to  **WebSocket** and the port is populated to "**80**".
+        
+
+        | Transport Protocol | WebSocket Protocol | Port |
+        | --- | --- | --- |
+       | HyperText Transfer Protocol (HTTP) | WebSocket | 80 |
+       | Secure HyperText Transfer Protocol (HTTPS) | Secure WebSocket | 443 |
+    
+      * **WebSocket Protocol**: This parameter indicates whether the BlockID CP should communicate with the BlockID Admin Console using **WebSocket** or **Secure WebSocket**. By default, the WebSocket option is selected.
+       * **Port**: As per the selection of the Transport Protocol, the corresponding port option is displayed.
+       * **Tenant ID**: Add the URL of your tenant. For example, `testconnect.onekosmos.com`. This is the **DNS** name of the Tenant for the **BlockID Admin Console**.
+        * **Community ID**: Enter the name of your community with which the BlockID CP needs to communicate. By default, it is the `default` community.
+        * **Auth Type**: Enter the preferred authentication type. By default, the option added here is `Fingerprint`. You can add other authorization options (Pin, Face, Voice) as per the requirement.
+        * **Timeout in secs (5 to 240)**: Enter the time in seconds. This is the timeout setting for how long the BlockID CP will wait for a communication response from the BlockID Admin Console. By default, the value is `45` and it is the recommended value.
+     * **Connection Timeout (2 to 10)**: Enter the time in seconds. This is the timeout setting for how long the BlockID CP will wait for a WebSocket connection to establish.
+      * **Ping Cycle (10 to 30)**: Enter the time in seconds within the range of 10 to 30 seconds. This is the interval in which the CP will send PING messages to the Admin Console.
+     * **Ping Retries (2 to 5)**: Enter the number ranging between 2 to 5. It is the number of times CP sends PINGs and waits on the connection before it is terminated. For example, if it is set as 2 and the CP does not get a response after 2 consecutive PINGs it will disconnect the connection with the workstation.
+     * **Custom Error Message**: Add your error response message. If there is an error in the functionality of the CP, this error message will be shown to the user on the **Windows Login** screen. By default, it is set to **Error while receiving a response**.
+    * Make sure you have stopped the service, in case you are performing changes. And, if you have made any changes to the settings above, click **Apply Changes**. 
+    * In the Settings Saved dialog box, click **OK**. 
+    * Navigate to ***General > BlockID Service > State*** and click **Start** to start the service. 
+   * Click **Save & Close**.
+8. To verify the changes, sign out from the Windows screen, and navigate to the **Windows Login** screen. The BlockID CP option is available with the latest added message of the day.
+
+## Automated deployment and configuration
+To perform the automated deployment of the BlockID CP within the Windows workstation, a batch script “BlockIDConfiguration.bat” is available which can be used for either installation or configuration, or both. Depending upon the flags passed, the script can be used to perform a silent installation of the BlockID CP which creates desktop shortcuts for the BlockID Configurator and BlockID RDPHelper.
+The script can also be used to configure the BlockID CP by providing the configuration file as input while running the script.
+
+### Configuration file
+The configuration file contains the `key-value` data separated by `=`.
+
+Sample CONFIG file content:
+```json
+CONNECTION_PROTOCOL=https://
+CONNECTION_PORT=443
+TENANT_ID=abcinc.1kosmos.net
+TENANT_TAG=abcinc
+COMMUNITY=default
+AUTHZ_TYPE=fingerprint
+REQUEST_TIMEOUT=45
+CONN_TIMEOUT=5
+ERROR_MSG=Error while receiving response
+PROXY_URL=http://12.12.12.12:8083/proxy.pac
+PROXY_USER=proxyuser
+PROXY_PWD=proxypassword
+ENABLE_OFFLINE=0
+TILE_IMG=
+ENABLE_MOTD=1
+MOTD=BlockID Version: %v
+```
+Perform the following steps to install and configure the BlockID CP:
+:::tip Note:
+The flag `-install <executable file name>`should be used when the installation needs to be performed and `-configure <configuration file name>`  should be used to set the registry configuration.
+:::
+1. Open the command prompt with Administrator privileges.
+2. On the command prompt, go to the folder containing the script and installer package.
+3. Use the following commands to execute the script:
+    * For installation and configuration:
+    ```json
+    BlockIDConfiguration.bat -install <installer filename> -configure <config filename>
+    ```
+    * For installation:
+    ```json
+    BlockIDConfiguration.bat -install <installer filename>
+    ```
+    * For configuration:
+    ```json
+    BlockIDConfiguration.bat -configure <config filename>
+    ```
+    * For example:
+    ```json
+    BlockIDConfiguration.bat -install blockIdSetup-06.08.60375054.exe -configure CONFIG 
+    ```
+
+:::tip Note:
+The script should be run after uninstallation of an existing version of the BlockID CP for Windows workstation.
+:::
+
+
+| Name of Configuration | Description | Expected Values | Sample Values |
+| --- | --- | --- | --- |
+| CONNECTION_PROTOCOL | To define whether the connection should be secured or unsecured. | `http://`, `https://`| `https://` |
+| CONNECTION_PORT | Value of the port on tenant URL to which the connection would be established on. | Default values are `80` for `http` and `443` for `https`| 443 |
+| TENANT_ID | Contains the Tenant URL to connect to the BlockID Admin Console. | `<tenant url>` | abcinc.1kosmos.net |
+| TENANT_TAG | Contains the tenant tag. | `<tenant tag>` | abcinc |
+| COMMUNITY | Contains the community name. | `<community name>` | default |
+| AUTHZ_TYPE | Contains the mode of authentication to be used on the mobile device. | Values should be: fingerprint, face, pin | fingerprint |
+| REQUEST_TIMEOUT | The duration for which the credential provider will wait for the response from the BlockID Admin Console. The value is in seconds. | The value should ideally be kept in the range of 10 to 240. | 45 |
+| CONN_TIMEOUT | The timeout value for connection to be successfully established. The value is in seconds. | The value should ideally be kept in the range of 2 to 10. | 5 |
+| ERROR_MSG | Default error message to be displayed on the lock screen. | `<error message>` | Error while receiving response |
+| PROXY_URL | URL of the proxy. A URL to direct proxy or a PAC file can be given here. | `<proxy url>` | http://12.12.12.12:8083/proxy.pac |
+| PROXY_USER | Username in case of authenticated proxy. | `<username>` | proxyuser |
+| PROXY_PWD | Password in case of authenticated proxy. | `<password>` | proxypassword |
+| ENABLE_OFFLINE | Configuration to enable offline authentication. | “0” or empty value disables the functionality and any other value enables it. Default is `0`. | 0 |
+| TILE_IMG | Can be used to change the image on the BlockID tiles at the lock screen. It should contain the path to a bitmap file for a custom tile. Leaving the field empty uses the default BlockID image on the tile lock screen. | Should be left empty if default image is to be used or, the path to a bitmap file.  | D:\SampleIcon.bmp |
+| ENABLE_MOTD | Configuration to enable MOTD (Message of the Day). Used to enable the user-defined label on the BlockID tile for QR popup. | “0” or empty value disables the functionality and any other value enables it. Default is `1`. | 1 |
+| MOTD | MOTD (Message of the Day) string to display on the BlockID tile for QR on the lock screen. Valid substitutions: `%m - Machine name, %d - Today's date, %i - IP address, %n - DNS name, %v - BlockID version` | `<motd>` | BlockID Version: %v |
+
+4. Check the following criteria while adding values to the mentioned keys in the above table:
+    * The `keys` and `values` should not have any leading or trailing whitespaces.
+    * For `ENABLE_OFFLINE` and `ENABLE_MOTD`, “0” or empty value disables the functionality and any other value that enables it.
+    * The `TILE_IMG` should contain the path to a custom image file that would be used for BlockID tiles on the Windows lock screen. Keeping this value blank would mean the default BlockID icon will be used for the tiles at the Windows lock screen.
+
+## Test the Configuration:
+To test the BlockID CP is configured and working properly, you will need the BlockID mobile application. 
+Follow these steps to download and install it on your mobile device:
+* BlockID mobile application (Compatible with iOS and Android devices). Visit the **[BlockID for Android](https://play.google.com/store/apps/details?id=com.onekosmos.kernel.blockid)** or **[BlockID for iOS](https://apps.apple.com/us/app/blockid/id1539421428)** links to download the application.
+
+### Login using QR code
+To log in using a QR code, all users need to be logged out or you will need to sign in using a new user in your Windows workstation.
+
+1. On your Windows login screen, click on the BlockID CP option. The login screen is displayed with the QR code to be scanned from your BlockID mobile app.
+2. From your BlockID mobile app: 
+3. Scan the QR code available on the Windows login screen and authenticate using the required biometrics.
+
+The app will send the requested data to the **BlockID Credential Provider**. 
+This allows users to log in to their workstation by scanning a QR code and unlock their workstation via a push notification.
+
+
+### Login using Push Notifications
+To make push notifications work, make sure the push notification details are configured for iOS and Android applications within your BlocKID Admin Console. 
+Please complete the steps given within the [Administration Console](https://1kosmos.document360.io/v1/docs/administration-console)  topic for configuring Push Notification details. 
+
+1. Lock your Windows workstation and on the Windows login screen, click on the **BlockID** icon with your login name mentioned. The push notification will get sent to you on your mobile device with the message heading "BlockID authentication request Login Alert".
+2. Click on the push notification message.
+3. Click on the **Login with Fingerprint** (option added under ***BlockID Configuration > BlockID Configuration Parameters > Auth Type***) option.
+4. Provide your biometric authentication details. The app will send the requested data to the **BlockID Credential Provider**. 
+This allows users to log in to their workstation by scanning a QR code and unlock their workstation via a push notification.
+
+## Troubleshooting Steps:
+
+<details>
+<summary>
+If the BlockID CP is not installed properly.
+</summary>
+
+### Resolution:
+
+1. Check if you have administrator access to your Windows workstation
+2. Check the "Prerequisites" and "Permissions" sections in this guide to know what resources, privileges, and permissions you need to install the BlockID CP
+
+</details>
+
+
+
+<details>
+<summary>
+If the BlockID CP is down and you receive an error message that resembles the error message added within the `BlockID CP Console > BlockID Configuration > BlockID Configuration Parameters > Custom Error Message` field
+</summary>
+
+#### Resolution:
+
+1. In the BlockID CP console, navigate to  `BlockID Configuration > General > BlockID Service > State` and ensure that the service is in a **running** state
+
+2. If it is not, click**Start** to start the service and click **Save & Close**. If an issue still exists, perform the following step
+
+3. Navigate to the folder where the BlockID CP is installed that is `{your_Drive}:\{folder_location}\1Kosmos\BlockID\log` 
+
+4. Open the `blockId.Service.ServiceHost_log.txt` file. This file contains all the activity logs for BlockID CP
+
+5. Check for the following logs that would indicate BlockID CP is working properly:
+
+    `Found virtual card reader: BlockID VIRTUAL_CARD_READER 0`
+    `ConsoleConnect`
+If an issue still exists, contact your 1Kosmos representative
+
+</details>
+
+
+
+<details>
+<summary>
+Getting “Invalid URI: The hostname could not be parsed.” error message, after scanning the QR code from your BlockID mobile application
+</summary>
+
+### Resolution:
+
+1. Log in to your Windows workstation using your Windows admin credentials
+2. In the BlockID CP console:
+
+    Navigate to `BlockID Configuration > BlockID Configuration Parameters`, and check whether you have configured the correct tenant URL and community details under **Tenant ID**  and **Community ID**  fields, respectively
+
+    If the correct tenant URL and community details are not configured, navigate to `General > BlockID Service > State` and click **Stop** to stop the service
+
+    Navigate to `BlockID Configuration > BlockID Configuration Parameters`, configure the correct tenant URL and community details.
+    Click **Apply Changes**
+
+    In the **Settings Saved** dialog box, click **OK**
+
+    Navigate to `General > BlockID Service > State` and click **Start** to start the service
+    Click **Save & Close**
+
+</details>
+
+
+
+<details>
+<summary>
+If BlockID CP is not able to connect with BlockID Tenant
+</summary>
+
+#### Error log:
+
+You will get the following logs in the log file:
+```
+PluginDriver:<driver id>: <driver id> Threw an unexpected exception, assuming failure: System.UriFormatException: Invalid URI: The hostname could not be parsed.
+   at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   at WebSocket4Net.WebSocket.ResolveUri(String uri, Int32 defaultPort, Int32& port)
+   at WebSocket4Net.WebSocket.CreateClient(String uri)
+   at WebSocket4Net.WebSocket.Initialize(String uri, String subProtocol, List`1 cookies, List`1 customHeaderItems, String userAgent, String origin, WebSocketVersion version, EndPoint httpConnectProxy, Int32 receiveBufferSize)
+   at network.webSockets.WebSockets.InitSignWebSocketClient(String socketUrl, String sessionID, Int32 requestTimeout)
+   at network.webSockets.WebSockets.RequestHashToken(String socketUrl, String sessionID, Int32 requestTimeout)
+   at blockId.Plugin.HelloPlugin.PluginImpl.AuthenticateUser(SessionProperties properties)
+   at blockId.Core.PluginDriver.AuthenticateUser()
+Abstractions: can't send email: mailAddress array is empty
+PluginDriver:<driver id>: Failed to authenticate , Message: Invalid URI: The hostname could not be parsed.
+PluginDriver:<driver id>: End login chain, 1 stateful plugin(s).
+blockId.Plugin.HelloPlugin: EndChain
+RemoteLog[NativeLib]: [<drive>:\Codes\WindowsBlockID\Changes\ENGG1K-474_v1tov3\WindowsBlockIDHelloSC\blockId\src\CredentialProvider\Credential.cpp:814] Credential::Connect: Failed attempt
+RemoteLog[NativeLib]: [<drive>:\Codes\WindowsBlockID\Changes\ENGG1K-474_v1tov3\WindowsBlockIDHelloSC\blockId\src\CredentialProvider\Credential.cpp:1470] Credential::Thread_QRdialog: QR Dialog destroyed
+RemoteLog[NativeLib]: [<drive>:\Codes\WindowsBlockID\Changes\ENGG1K-474_v1tov3\WindowsBlockIDHelloSC\blockId\src\CredentialProvider\Credential.cpp:848] Credential::GetSerialization()
+RemoteLog[NativeLib]: [<drive>:\Codes\WindowsBlockID\Changes\ENGG1K-474_v1tov3\WindowsBlockIDHelloSC\blockId\src\CredentialProvider\Credential.cpp:273] Credential::SetDeselected()
+blockId.Service.Impl: SessionChange:9 5
+blockId.Service.Impl: SessionChange: 9 -> SessionLogon
+blockId.Plugin.HelloPlugin: SessionChange
+blockId.Plugin.HelloPlugin: [VirtualSCardHandler] CARD REMOVED
+```
+
+#### Resolution:
+
+1. Check the connectivity of your BlockID tenant console URL and ensure that it is reachable
+
+</details>
+
+
+
+<details>
+<summary>
+If the BlockID CP is not able to connect with Active Directory (AD)
+</summary>
+
+#### Resolution:
+
+1. Check the connectivity for AD ports `389` and `636` using Telnet.
+2. Check for the following logs that are created in a `blockId.Service.ServiceHost_log.txt` log file as per the user activities.
+
+    When a BlockID CP is installed properly and started successfully, then the following startup logs should be available:
+
+```shell
+PluginLoader: Plugins loaded, list follows: 
+PluginLoader:   Hello -> <server_name>
+PluginLoader:   Local Machine -> <local_machine_name>
+blockId.Service.Impl: blockId version: 5.12.9.1
+blockId.Service.Impl: Service created - PipeName: blockIdPipe MaxClients: 25
+blockId.Service.Impl: System Info: OS 10.0.14393 Runtime: 4.0.30319.42000 Culture: English (United States)
+blockId.Service.Impl: Using plugin directories: 
+blockId.Service.Impl:   <drive>:\<folder_name>\1Kosmos\BlockID\Hello
+blockId.Service.Impl: Starting service
+```
+    When a user is successfully logged in to the Windows workstation using BlockID CP, the following logs should be available:
+
+```shell
+REMAPPED USER TO DOMAIN = <your_domain_name>
+PluginDriver:e1eba4ed-f116-4e41-9ec1-3126e7edf2ac: <server_name> Succeeded
+PluginDriver:e1eba4ed-f116-4e41-9ec1-3126e7edf2ac: Successfully authorized 
+PluginDriver:e1eba4ed-f116-4e41-9ec1-3126e7edf2ac:           Processing gateways for user , 0 plugins available
+PluginDriver:e1eba4ed-f116-4e41-9ec1-3126e7edf2ac:  Successfully processed gateways for 
+PluginDriver:e1eba4ed-f116-4e41-9ec1-3126e7edf2ac: End login chain, 1 stateful plugin(s).
+blockId.Plugin.HelloPlugin: EndChain
+    
+blockId.Service.Impl: ses add LocalProfilePath:[]
+blockId.Service.Impl: add user  to sessioninfo:7    GUID:e1eba4ed-f116-4e41-9ec1-3126e7edf2ac CREDUI:false
+```
+If the above mentioned logs will not be available in the log file then, the issue is either with the BlockID CP and BlockID Admin Console connectivity or with the certificate
+</details>
+
+
+
+<details>
+<summary>
+BlockID authentication failed after scanning the QR code from the BlockID mobile application
+</summary>
+
+#### Cause:
+
+Windows system’s date and time were not in sync with the BlockID console.
+
+Resolution:
+
+1. On the Windows workstation, go to `Settings` and type "date & time"
+2. In the "Date & time" window, enable the `On` option for the `Set the time automatically` feature
+
+</details>
+
+
+
+<details>
+<summary>
+Getting "Error while receiving the response." error message, after scanning the QR code from the BlockID mobile application.
+</summary>
+
+#### Cause:
+ 
+Incorrect tenant details are configured in the `BlockID Configuration > BlockID Configuration Parameters` section of the BlockID CP application.
+
+#### Resolution:
+
+1. Log in to your Windows workstation using your Windows admin credentials
+2. In the BlockID CP console:
+
+    Navigate to `General > BlockID Service > State` and click **Stop**  to stop the service
+
+    Navigate to `BlockID Configuration > BlockID Configuration Parameters`, configure the correct tenant URL and community details.
+
+    Click **Apply Changes**
+
+    In the **Settings Saved** dialog box, click **OK**
+
+    Navigate to `General > BlockID Service > State` and click **Start**  to start the service
+
+    Click **Save & Close**
+
+</details>
+
+
+<details>
+<summary>
+The BlockID service gets stopped on a restart of a Windows workstation or shutting down and starting it again
+</summary>
+
+#### Cause:
+
+In the Event viewer screen, the log says that `the service did not start on time with the following eventID 7000`.
+
+#### Resolution:
+
+1. On the Windows workstation, in the search box, type `regedit`, and open the “Registry Editor” app
+2. Navigate to `HKEY_LOCAL_MACHINE > SYSTEM > CurrentControlSet > Control`
+3. In the right pane, locate the `ServicesPipeTimeout` entry
+4. If the `ServicesPipeTimeout` entry does not exist:
+
+Perform the following steps to create the `ServicesPipeTimeout` entry:
+
+1. On the **Edit** menu, select **New**, and click `DWORD (32-bit) Value`
+2. Type `ServicesPipeTimeout` and press **Enter**
+3. Right-click `ServicesPipeTimeout` and click **Modify**
+4. Select  `Decimal > enter the value as "90000" in the **Value data** field > click **OK**` 
+
+If the `ServicesPipeTimeout` entry already exists:
+
+1. Double click on the `ServicesPipeTimeout option > select the **Decimal** option > change the value from "60000" to 90000" in the **Value data** field > click **OK**` 
+
+This value represents the time in milliseconds before a service times out
+
+Restart the computer
+</details>
+
+
+
+<details>
+<summary>
+Getting `Unexpected character encountered while parsing value: & Path, line 0, position 0` error message while logging into the Windows workstation
+</summary>
+
+#### Cause:
+
+The IPFS Service Endpoint details were set to default (null) within the BlockID Admin Console.
+
+#### Resolution:
+
+1. Login to BlockID Admin Console
+2. From the top right corner, click on the `User Account` list (third list) and click `Core Configuration`
+3. In the **IPFS Service Endpoint** field, enter the appropriate Interplanetary File System (IPFS) service endpoint path
+4. Click **Save**
+
+</details>
+
+
+

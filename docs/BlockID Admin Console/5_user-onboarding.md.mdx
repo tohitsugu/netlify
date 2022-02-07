@@ -1,0 +1,53 @@
+---
+slug: /user-onboarding-process-guide
+id: user-onboarding-process-guide
+---
+# User Onboarding Process Guide
+
+## Overview
+
+The BlockID Admin Console provides features to onboard new users for passwordless login to their windows workstation and various web applications. These users can be onboarded from different datastores within your organization.
+
+## Before you Begin
+You will need the following resources and privileges to complete this integration:
+1.	Admin access to the BlockID Admin Console of your organization. For example <customer_name>.1kosmos.net/<community_name>
+2.	In the BlockID Admin Console: 
+    * Enable and configure the Microsoft Active Directory Module. Visit the [Authentication Modules](https://1kosmos.document360.io/v1/docs/authentication-modules) topic to get a detailed understanding of enabling authentication modules.
+    * Edit the `default`authentication scheme or create a new authentication scheme and add the AD authentication module in it. Visit the [Authentication Scheme](https://1kosmos.document360.io/v1/docs/authentication-scheme) topic to get a detailed understanding of adding authentication schemes.
+    * Enable and configure the One Time Passcode (OTP) module and edit the authentication scheme and add the OTP authentication module in it. Visit the [Email OTP Delivery Configuration]( https://docs.1kosmos.com/docs/software-and-hardware-otp-support#a-nameswotp-datatomarkpassasoftware-otp-support) topic to get the steps for email OTP delivery configuration.
+    * Configure push notification details for the iOS and Android applications. Visit the [Configure Push Notification details]( https://docs.1kosmos.com/docs/administration-console#ACPush) topic to get more information on push notification configurations.
+3.	Install on your mobile device:
+    * Download and install the BlockID mobile application (Compatible with iOS and Android devices) on your mobile device. Visit **[BlockID for Android](https://play.google.com/store/apps/details?id=com.onekosmos.kernel.blockid)** or **[BlockID for iOS](https://apps.apple.com/us/app/blockid/id1539421428)** to download the application.
+    * Launch the BlockID mobile application and follow the on-screen instructions to register your app with the BlockID Platform to enroll your biometrics. Visit the [Enroll Biometrics (TouchID/ FaceID and LiveID) section of BlockID Mobile Application User Guide](https://1kosmos.document360.io/docs/blockid-mobile-application-user-guide#EnrollBio) for step by step understanding of the biometrics enrollment process within the BlockID mobile application.
+
+## Onboard new User
+To onboard a new user, an administrator needs to perform the following steps within the BlockID Admin Console:
+1.	Login to **BlockID Admin Console**, navigate to ***Administration Console** > **Identity Management** > **User Management***.
+2.	Search for the appropriate user from the available data source option.
+3.	From the **Onboarding** column of the searched user record. 
+    * Click `Send Invite`.
+    * Select the appropriate email address and click **send email**.
+4.	The user will receive an onboarding email on their selected email address.
+
+## Passwordless Registration
+To register for passwordless login to Windows workstation and BlockID Admin Console, the following steps need to be performed by users on their mobile device:
+1.	Open the onboarding email you have received from your administrator on your registered (within your organization) email address.
+2.	Click on the registration link provided in the email. 
+    * The BlockID mobile application is displayed with the **Enter OTP** screen within the in-app browser. 
+    * The user will receive the One Time Passcode email.
+3.	Enter the OTP that you have received in the One Time Passcode email, and click `Submit`. If the OTP entered matches with the OTP received in the email, the authentication will be successful. The BlockID mobile application’s home screen is displayed with the added user persona in the **Accounts** list situated at the top right corner. The Windows workstation and BlockID Admin Console’s passwordless login is enabled for the user.
+
+## Test passwordless login to Windows workstation:
+1.	On your Windows login screen, click on the BlockID CP option. The login screen is displayed with the QR code to be scanned from your BlockID mobile app.
+2.	From your BlockID mobile app: 
+a.	Scan the QR code available on the Windows login screen and authenticate using the required biometrics. The app will send the requested data to the **BlockID Credential Provider**. 
+3.	This allows users to log in to their workstation by scanning a QR code and unlock their workstation via a push notification.
+
+## Test passwordless login to BlockID Admin Console:
+1. Login to the BlockID Admin Console by scanning the QR code.
+2. In the web browser, open the BlockID Admin Console application of your respective organization. 
+3. In the BlockID Admin Console, click **Login with BlockID**. The QR code is displayed.
+4. On the BlockID mobile application’s home screen, click `Scan QR`. The confirmation pop-up window is displayed asking to **Allow BlockID to access this device’s location?**.
+5. In the confirmation pop-up window, select the desired option. The Authentication screen is displayed with the **Please authenticate using <Biometric_option> from 1kosmos** message.
+6. Click **Authenticate** and perform the appropriate authentication method. The pop-up window is displayed with `Thank you! You have successfully authenticated to Log In` message upon successful authentication. 
+7. In the web browser, the **My Profile** screen is displayed within the **BlockID Admin Console**.

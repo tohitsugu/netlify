@@ -1,0 +1,158 @@
+---
+slug: /end-user-guide
+id: Ze5776a5b-8b2e-498a-9438-c665d9291260
+---
+# End User Guide
+
+## Overview
+
+
+<details>
+<summary>
+<b>What is BlockID?</b>
+</summary>
+
+<br />
+BlockID is a platform designed to enhance the security of an organization by eliminating passwords. It leverages biometric authentication to sign in users who need access to an organization's applications. 
+</details>
+
+
+
+
+<details>
+<summary>
+<b>Do I need to download the BlockID App?</b>
+</summary>
+<br />
+Yes, the BlockID app is an authenticator that allows you to enroll your identity and use your biometrics to log in. You can download the app here: 
+
+
+- <a href="https://apps.apple.com/us/app/blockid/id1539421428" target="_blank"> iOS </a>
+
+- <a href="https://play.google.com/store/apps/details?id=com.onekosmos.kernel.blockid" target="_blank"> Android </a>
+
+</details>
+
+<br />
+
+<details>
+<summary>
+<b> I am using BlockID mobile app for the first time. How do I setup? </b>
+</summary>
+
+To register into the BlockID mobile app, perform the following steps:
+
+1. In the Welcome screen, click Continue.
+2. Click on the Pin option. 
+3. In the Enter new PIN field, enter an eight 8 digit pin.
+4. In the Confirm new PIN field, the same pin again to confirm.
+5. The pop-up window is displayed with the  **Thank you! Account registration successful** message. 
+The BlockID mobile application’s Home screen is displayed. The Enroll tab is displayed with the success icon for the Pin option.
+
+</details>
+
+### Adding an account
+
+<details>
+<summary>
+<b>I have an invite to register my account for passwordless authentication. What should I do now?</b>
+</summary>
+
+<br />
+
+Make sure you have the BlockID app installed on your mobile device. On your mobile device, open the User Invitation email you have received for passwordless authentication on your registered (within your organization) email address.
+
+In the User Invitation email, click on the link and select `open with BlockID`. 
+
+The biometric authentication pop-up window is displayed. 
+
+Touch and cover the fingerprint sensor properly using your finger. The confirmation pop-up window is displayed asking to allow BlockID to access your device location
+
+In the confirmation pop-up window, select allow only while using the app.
+
+ The pop-up window is displayed with **Thank you! The new account has been added successfully.**
+
+Your account should now be linked to your device. 
+
+</details>
+
+
+
+<details>
+<summary>
+<b>My invite expired. What now?</b>
+</summary>
+<br />
+Passwordless access invites generally expire after 72 hours, in some cases administrators may choose to change this window. If your invite has expired, visit your `yourtenantdomain/admin/requestinvite`. This should allow you to request an invite to onboard your device. 
+</details>
+
+<details>
+<summary>
+<b>I deleted the BlockID app from my device. Can I reinstall and set it up without contacting an administrator?</b>
+</summary>
+<br />
+If you have a new device, then visit `yourtenantdomain/admin/requestinvite` 
+
+This should allow you to request an invite to onboard your device.
+</details>
+
+<details>
+<summary>
+<b>Can I use the BlockID app on more than one device? </b>
+</summary>
+<br />
+Yes, you can onboard more than one device to authenticate to your organization's apps. However, your administrator may choose to restrict the number of devices depending on your organization's security policies.
+</details>
+
+<details>
+<summary>
+<b>My device was compromised. How can I prevent my access from being misused?</b>
+</summary>
+<br />
+Login to the BlockID portal using Username and Password. Once you are logged in, you should be able to view a list of devices linked to your account. Click the 'Delete' icon to unlink the device. The device can no longer be used as an authenticator. 
+If you are unable to log in, then contact your administrator to unlink your device.
+</details>
+
+### Signing In
+
+<details>
+<summary>
+<b>How do I sign in to my organization's apps securely? </b>
+</summary>
+<br />
+Sign up for passwordless access using the invite sent by your administrator. When your device is onboarded, scan the QR code on the Login page to log in to a target application. 
+Alternatively, you can log in using `Username/Password + One-time passcode`. One-time passcodes are valid for 5 minutes and can be sent to a registered email address or phone number.  
+</details>
+
+
+<details>
+<summary>
+<b>How do I sign in from my mobile?</b>
+</summary>
+<br />
+Open the application that you are trying to log in to on a mobile browser. When you see the login page, you will see a button 'Login with BlockID'. This should open the login request on the BlockID app. 
+
+If you are unable to log in, then contact your administrator to unlink your device.
+</details>
+
+
+
+<details>
+<summary>
+<b>How do I sign in with QR? </b>
+</summary>
+<br />
+Simple! Every time you are challenged with the Login page, open your camera and scan the QR code. This should open the sign-in request on the BlockID app. Click **Accept** or **Reject** to respond to the request.   
+</details>
+
+
+### Viewing your profile 
+
+<details>
+<summary>
+<b>How can I view my BlockID profile? </b>
+</summary>
+<br />
+If you have a new device, then visit `yourtenantdomain/admin`. Login to the admin portal to view your profile. You should also be able to view devices linked to your account.  
+</details>
+

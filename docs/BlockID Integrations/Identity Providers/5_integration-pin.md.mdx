@@ -1,0 +1,159 @@
+---
+slug: /integration-pingfederate
+id: Zb71e5fd8-fb17-4e19-b274-eaa5ddff808e
+---
+# Integration PingFederate
+
+## Overview
+
+This document describes the procedure to configure the BlockID Admin Console as a passwordless authentication solution for the PingFederate protected applications. This integration will allow your users to log in to their respective applications using PingFederate leveraging their biometrics. The biometric options include TouchID / FaceID and LiveID.
+
+### Before you Begin
+You will need the following resources and privileges to complete this integration:
+1. Admin access to the following:
+    * BlockID tenant URL: If your organization is not registered for the BlockID tenant, visit the **[Sign Up](https://www.1kosmos.com/blockid-free-trial)** page to set up a free BlockID tenant for your organization. The 1Kosmos representative will create a tenant URL, community, tenant tag, and a license key for your respective organization within the BlockID platform.
+2. Pingconnector package. To obtain the Pingconnector package, please contact your 1Kosmos representative.
+3. Install on your mobile device:
+    * BlockID mobile application (Compatible with iOS and Android devices). Visit **[BlockID for Android](https://play.google.com/store/apps/details?id=com.onekosmos.kernel.blockid)** or **[BlockID for iOS](https://apps.apple.com/us/app/blockid/id1539421428)** to download the application.
+
+### Assumptions
+
+1.	With the above prerequisites, you should now successfully be registered and be able to login to:
+    * BlockID tenant. Ensure the email address used to log in to this application is the same as the one used to log in to the PingFederate account.
+2.	Copy the `Pingconnector.zip` file on your PingFederate server.
+3.	Installed and registered the BlockID mobile application.
+    * Launch the BlockID mobile application and follow the on-screen instructions to register your app with the BlockID platform to enroll your biometrics. Visit the [Enroll Biometrics (TouchID/ FaceID and LiveID) section of the BlockID Mobile Application User Guide]( https://docs.1kosmos.com/docs/blockid-mobile-application-user-guide#EnrollBio) for step by step understanding of the biometrics enrollment process within the BlockID mobile application.
+
+The user needs to install and configure the Ping BlockID connector to enable this integration:
+
+**List of Topics:**
+
+1. [Install and configure the Ping BlockID connector](#PingIDP)   
+2. [Test the PingFederated protected application login](#TestSAML)
+
+## <a name = "PingIDP"></a>Install the Ping BlockID Connector
+
+:::tip Note:
+The following steps will be performed by your PingFederate administrator. 
+:::
+
+1. Shut down the PingFederate server.
+2. Extract the `Pingconnector.zip` file, copy the “BlockIDAdapter.jar” file, and paste it into the`<PINGFEDERATE_HOME>/server/default/deploy` directory.
+3. Extract and open the `BlockIDSDK.war` file. 
+    * Navigate to `WEB-INF\classes\com\onekosmos\` location, open the `blockid.properties` file and update the following values as per your environment: 
+    
+    ```
+    my_public_key=enter your public key
+    my_private_key= enter your private key
+    tenantTag= enter your tenant tag
+    tenantURL= enter your tenant URL
+    communityName= enter your community name
+    licenseKey= enter your license key
+    appId=com.bid.jsp.sdk
+    ```
+
+4. Copy the `BlockIDSDK.war` file and paste it into the `<PINGFEDERATE_HOME>/server/default/deploy` directory.
+5.	Copy the `BlockIDDecrypt.jar`, `bcpkix-jdk15on-166.ar` and `bcprov-jdk15on-166.jar` files and paste them into `<PINGFEDERATE_HOME>/server/default/lib` directory.
+6.	Start the PingFederate server.
+7.	Open the default PingFederate login template from the `<PINGFEDERATE_HOME>/server/deploy/conf/template` directory, and perform the following changes in the `html.form.login.template` file to embed the `BlockID Universal Web Login (UWL)` in the login page.
+    * Import the following javascript code:
+    ```javascript
+    <script type="text/javascript" src="https:// <pingfedhostname>/BlockIDSDK/js/blockid.js"></script>
+    ```
+   
+    * Add the following code:
+    ```javascript
+    <script type="text/javascript">
+    function createSession() {        	
+               	 createNewSession("Fingerprint", "did,userid", "qrcode",null 
+             	   , function(result, error) {client_dataRecieved(result)}
+                )
+       	   }
+     	   function client_dataRecieved(result) {
+    let str = JSON.stringify(result, null, 4);
+			  var obj = JSON.parse(str);			  
+       	 }
+    createSession();
+    </script>
+    ```
+       
+      * Add the following form:
+       
+       ```javascript
+       <form id="loginbid" name="loginbid" method="POST" action="https://<pingfedhostname>/idp/startSSO.ping?PartnerSpId=TestSP2">
+        <input type="hidden" name="blockidAuthn" id="blockidAuthn" value="true" /> 
+        <input type="hidden" name="payload" id="payload"  /> </form>
+       ```   
+
+     * Add the following `div` code on the page where the QR code needs to be displayed:
+
+        ```javascript
+        <div id="qrcode" style="z-index: 1;position:relative;margin:10px"></div>
+        ```
+
+8. Login to the PingFederate admin console.
+9. Create a BlockID adapter with the following details:
+
+| Create Adapter Instance |
+| --- | --- |
+| **Type** | 
+| Instance Name | Blockidadapter |
+| Instance ID | Blockidadapter |
+| Type | BlockID Adapter v1.0.1 |
+| Class Name | com.onekosmos.pingfederate.challengeresponse.ChallengeResponseAdapter |
+| Parent Instance Name | None |
+| **IdP Adapter** |
+| Adapter | This adapter type has no individually configurable fields. |
+| **Extended Contract** |
+| Attribute | username |
+| **Adapter Attributes** |
+| Pseudonym | username |
+
+| Adapter Contract Mapping |
+| --- | --- |
+| **Attribute Sources & User Lookup** |
+| Data Sources | (None) |
+| **Adapter Contract Fulfillment** |
+| username | username (Adapter) |
+| **Issuance Criteria** |
+| Criterion | (None) |
+
+10. Create a selector with the following details:
+
+| Create Authentication Selector Instance |
+| --- | --- |
+| **Type** | 
+| Instance Name | BlockIDSelector1 |
+| Instance ID | BlockIDSelector1 |
+| Type | HTTP Request Parameter Authentication Selector |
+| Class Name | com.pingidentity.pf.selectors.http.HttpRequestParamAuthnSelector |
+| **Authentication Selector** |
+| HTTP Request Parameter Name | blockidAuthn |
+| Case-Sensitive Matching | true |
+| Enable 'Any' Result Value | false |
+| Enable 'No Match' Result Value | false |
+| Enable 'Not in Request' Result Value | true |
+| **Selector Result Values** |
+| Attribute | true |
+
+11. Perform the following steps to create the authentication policy:
+    * Navigate to ***Service Provider** > **Policy Contracts** > **Create New Contract***.
+    * In the **Authentication Policy Contract** screen:
+         * **Name**: Enter the appropriate name for the policy.
+        * **Description**: Enter the appropriate description for the policy.
+        * Select the **Enable** option for the policy 
+        * Click **Done**
+        * Click **Save**.
+
+![Ping.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/Ping%281%29.jpg)
+
+12. Restart the PingFederate server.
+
+## <a name = "TestSAML"></a>Test the PingFederated protected application login
+
+1.	In your browser, open your organization’s PingFederated protected application. The application is displayed with the barcode to be scanned from your BlockID mobile app.
+2. On the BlockID mobile application’s Home screen, click ‘Scan QR’.
+3. Scan the QR code. The confirmation pop-up window is displayed asking to `Allow BlockID to access this device’s location?`.
+4. In the confirmation pop-up window, select `Allow only while using the app`. The Authentication screen is displayed with the `Please authenticate using <Biometric_option> from 1kosmos` message.
+5. Click **Authenticate** and perform the appropriate authentication method. The pop-up window is displayed with `Thank you! You have successfully authenticated to Log In` message upon successful authentication.
+6. You will be logged in to your organization's **PingFederate** protected account.
