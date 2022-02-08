@@ -1,0 +1,27 @@
+{
+  "unversionedId": "Release Notes/Z158204c7-a371-44d5-bf91-23aa80e7fff4",
+  "id": "Release Notes/Z158204c7-a371-44d5-bf91-23aa80e7fff4",
+  "isDocsHomePage": false,
+  "title": "BlockID Release Notes",
+  "description": "2020",
+  "source": "@site/docs/Release Notes/2_blockid-release.md.mdx",
+  "sourceDirName": "Release Notes",
+  "slug": "/blockid-release-notes",
+  "permalink": "/docs/blockid-release-notes",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/blockid-release-notes",
+    "id": "Z158204c7-a371-44d5-bf91-23aa80e7fff4"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Android SDK 1.0.0",
+    "permalink": "/docs/android-100"
+  },
+  "next": {
+    "title": "Release Notes v3",
+    "permalink": "/docs/release-notes-v3"
+  }
+}

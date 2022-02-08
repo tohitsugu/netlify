@@ -583,8 +583,8 @@
                 "permalink": "/docs/role-management"
               },
               "next": {
-                "title": "BlockID Mobile Application User Guide",
-                "permalink": "/docs/blockid-mobile-application-user-guide"
+                "title": "Installing BlockID Authentication Broker",
+                "permalink": "/docs/installing-blockid-authentication-broker"
               }
             },
             {
@@ -768,8 +768,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Upgrading BlockID Authentication Broker",
-                "permalink": "/docs/upgrading-blockid-authentication-broker"
+                "title": "Internal FAQ guide for BlockID Product Suite",
+                "permalink": "/docs/internal-faq-guide-for-blockid-product-suite"
               },
               "next": {
                 "title": "User Onboarding Process Guide",
@@ -826,8 +826,8 @@
                 "permalink": "/docs/blockid-authentication-broker-user-guide"
               },
               "next": {
-                "title": "Installing BlockID Admin Console",
-                "permalink": "/docs/installing-blockid-admin-console"
+                "title": "BlockID Mobile Application User Guide",
+                "permalink": "/docs/blockid-mobile-application-user-guide"
               }
             },
             {
@@ -876,8 +876,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Installing BlockID Credential Provider",
-                "permalink": "/docs/installing-blockid-credential-provider"
+                "title": "Policy Management",
+                "permalink": "/docs/saml-configuration"
               },
               "next": {
                 "title": "BlockID Authentication Broker - User Guide",
@@ -907,8 +907,89 @@
                 "permalink": "/docs/uwl"
               },
               "next": {
-                "title": "Installing BlockID Authentication Broker",
-                "permalink": "/docs/installing-blockid-authentication-broker"
+                "title": "Frequently Asked Questions (FAQs)",
+                "permalink": "/docs/frequently-asked-questions-faq"
+              }
+            },
+            {
+              "unversionedId": "BlockID FAQ/Za49f1bb3-aba5-47e6-9a66-1248143e8c67",
+              "id": "BlockID FAQ/Za49f1bb3-aba5-47e6-9a66-1248143e8c67",
+              "isDocsHomePage": false,
+              "title": "Frequently Asked Questions (FAQs)",
+              "description": "This page will answer questions with respect to the BlockID platform. If you have any questions that are not addressed in the sections below, please send us an email at",
+              "source": "@site/docs/BlockID FAQ/2_frequently-aske.md.mdx",
+              "sourceDirName": "BlockID FAQ",
+              "slug": "/frequently-asked-questions-faq",
+              "permalink": "/docs/frequently-asked-questions-faq",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "slug": "/frequently-asked-questions-faq",
+                "id": "Za49f1bb3-aba5-47e6-9a66-1248143e8c67"
+              },
+              "sidebar": "mySidebar",
+              "previous": {
+                "title": "Installing BlockID Credential Provider",
+                "permalink": "/docs/installing-blockid-credential-provider"
+              },
+              "next": {
+                "title": "FAQ's related to the BlockID Product Suite",
+                "permalink": "/docs/faqs-related-to-the-blockid-product-suite"
+              }
+            },
+            {
+              "unversionedId": "BlockID FAQ/Zb0eccd8d-dfdc-48d7-bf4a-2444bd2c7822",
+              "id": "BlockID FAQ/Zb0eccd8d-dfdc-48d7-bf4a-2444bd2c7822",
+              "isDocsHomePage": false,
+              "title": "Internal FAQ guide for BlockID Product Suite",
+              "description": "This is an internal FAQ guide that includes responses to:",
+              "source": "@site/docs/BlockID FAQ/4_internal-faq-gu.md.mdx",
+              "sourceDirName": "BlockID FAQ",
+              "slug": "/internal-faq-guide-for-blockid-product-suite",
+              "permalink": "/docs/internal-faq-guide-for-blockid-product-suite",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "slug": "/internal-faq-guide-for-blockid-product-suite",
+                "id": "Zb0eccd8d-dfdc-48d7-bf4a-2444bd2c7822"
+              },
+              "sidebar": "mySidebar",
+              "previous": {
+                "title": "FAQ's related to the BlockID Product Suite",
+                "permalink": "/docs/faqs-related-to-the-blockid-product-suite"
+              },
+              "next": {
+                "title": "Installing BlockID Admin Console",
+                "permalink": "/docs/installing-blockid-admin-console"
+              }
+            },
+            {
+              "unversionedId": "BlockID FAQ/Zef1df47a-d435-421b-a375-61157ac1420f",
+              "id": "BlockID FAQ/Zef1df47a-d435-421b-a375-61157ac1420f",
+              "isDocsHomePage": false,
+              "title": "FAQ's related to the BlockID Product Suite",
+              "description": "* * *",
+              "source": "@site/docs/BlockID FAQ/3_faqs-related-to.md.mdx",
+              "sourceDirName": "BlockID FAQ",
+              "slug": "/faqs-related-to-the-blockid-product-suite",
+              "permalink": "/docs/faqs-related-to-the-blockid-product-suite",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "slug": "/faqs-related-to-the-blockid-product-suite",
+                "id": "Zef1df47a-d435-421b-a375-61157ac1420f"
+              },
+              "sidebar": "mySidebar",
+              "previous": {
+                "title": "Frequently Asked Questions (FAQs)",
+                "permalink": "/docs/frequently-asked-questions-faq"
+              },
+              "next": {
+                "title": "Internal FAQ guide for BlockID Product Suite",
+                "permalink": "/docs/internal-faq-guide-for-blockid-product-suite"
               }
             },
             {
@@ -930,8 +1011,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "BlockID iOS SDK 1.0.0",
-                "permalink": "/docs/ios-100"
+                "title": "Release Notes R1.02.03",
+                "permalink": "/docs/release-notes-r10300"
               },
               "next": {
                 "title": "Integration with Salesforce",
@@ -1256,10 +1337,6 @@
               "previous": {
                 "title": "Integration with Zscaler",
                 "permalink": "/docs/integration-with-zscaler"
-              },
-              "next": {
-                "title": "Frequently Asked Questions (FAQs)",
-                "permalink": "/docs/v2/frequently-asked-questions-faq"
               }
             },
             {
@@ -1308,8 +1385,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Policy Management",
-                "permalink": "/docs/saml-configuration"
+                "title": "Upgrading BlockID Authentication Broker",
+                "permalink": "/docs/upgrading-blockid-authentication-broker"
               },
               "next": {
                 "title": "Introduction to Athena Admin Portal",
@@ -1497,12 +1574,12 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "WebAuthn",
-                "permalink": "/docs/webauthn"
-              },
-              "next": {
                 "title": "Release Notes 2021.11.03",
                 "permalink": "/docs/v1/release-notes-20211103"
+              },
+              "next": {
+                "title": "BlockID Attributes",
+                "permalink": "/docs/blockid-attributes"
               }
             },
             {
@@ -1524,12 +1601,12 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Broker Installation",
-                "permalink": "/docs/broker-installation"
+                "title": "WebAuthn",
+                "permalink": "/docs/webauthn"
               },
               "next": {
-                "title": "BlockID Attributes",
-                "permalink": "/docs/blockid-attributes"
+                "title": "Broker Installation",
+                "permalink": "/docs/broker-installation"
               }
             },
             {
@@ -1551,8 +1628,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Release Notes 2021.11.03",
-                "permalink": "/docs/v1/release-notes-20211103"
+                "title": "Broker Installation",
+                "permalink": "/docs/broker-installation"
               },
               "next": {
                 "title": "Okta",
@@ -1717,8 +1794,8 @@
                 "permalink": "/docs/end-user-guide"
               },
               "next": {
-                "title": "Broker Installation",
-                "permalink": "/docs/broker-installation"
+                "title": "Release Notes 2021.11.03",
+                "permalink": "/docs/v1/release-notes-20211103"
               }
             },
             {
@@ -1798,8 +1875,8 @@
                 "permalink": "/docs/android-110"
               },
               "next": {
-                "title": "BlockID iOS SDK 1.4.1 and 1.4.2",
-                "permalink": "/docs/blockid-ios-sdk-141and142"
+                "title": "BlockID Release Notes",
+                "permalink": "/docs/blockid-release-notes"
               }
             },
             {
@@ -1848,8 +1925,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "iOS",
-                "permalink": "/docs/v1/ios-2"
+                "title": "BlockID iOS SDK 1.0.0",
+                "permalink": "/docs/ios-100"
               },
               "next": {
                 "title": "BlockID Android SDK 1.1.0",
@@ -1875,8 +1952,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "BlockID Android SDK 1.0.0",
-                "permalink": "/docs/android-100"
+                "title": "iOS",
+                "permalink": "/docs/v1/ios-2"
               },
               "next": {
                 "title": "BlockID iOS SDK 1.1.0",
@@ -1906,8 +1983,8 @@
                 "permalink": "/docs/ios-110"
               },
               "next": {
-                "title": "Intergration with Okta",
-                "permalink": "/docs/intergration-with-okta"
+                "title": "BlockID Android SDK 1.4.1 and 1.4.2",
+                "permalink": "/docs/blockid-android-sdk-141and142"
               }
             },
             {
@@ -2068,8 +2145,8 @@
                 "permalink": "/docs/v1/android-2"
               },
               "next": {
-                "title": "BlockID Android SDK 1.4.1 and 1.4.2",
-                "permalink": "/docs/blockid-android-sdk-141and142"
+                "title": "BlockID iOS SDK 1.4.1 and 1.4.2",
+                "permalink": "/docs/blockid-ios-sdk-141and142"
               }
             },
             {
@@ -2208,6 +2285,114 @@
               }
             },
             {
+              "unversionedId": "Release Notes/Z0f10a839-2257-4d53-a191-00722c59df7e",
+              "id": "Release Notes/Z0f10a839-2257-4d53-a191-00722c59df7e",
+              "isDocsHomePage": false,
+              "title": "Release Notes R1.02.00",
+              "description": "2021.01.15: Monthly Production release notes",
+              "source": "@site/docs/Release Notes/4_release-notes-r.md.mdx",
+              "sourceDirName": "Release Notes",
+              "slug": "/release-notes-r102",
+              "permalink": "/docs/release-notes-r102",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 4,
+              "frontMatter": {
+                "slug": "/release-notes-r102",
+                "id": "Z0f10a839-2257-4d53-a191-00722c59df7e"
+              },
+              "sidebar": "mySidebar",
+              "previous": {
+                "title": "Release Notes v3",
+                "permalink": "/docs/release-notes-v3"
+              },
+              "next": {
+                "title": "Release Notes R1.02.03",
+                "permalink": "/docs/release-notes-r10300"
+              }
+            },
+            {
+              "unversionedId": "Release Notes/Z158204c7-a371-44d5-bf91-23aa80e7fff4",
+              "id": "Release Notes/Z158204c7-a371-44d5-bf91-23aa80e7fff4",
+              "isDocsHomePage": false,
+              "title": "BlockID Release Notes",
+              "description": "2020",
+              "source": "@site/docs/Release Notes/2_blockid-release.md.mdx",
+              "sourceDirName": "Release Notes",
+              "slug": "/blockid-release-notes",
+              "permalink": "/docs/blockid-release-notes",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 2,
+              "frontMatter": {
+                "slug": "/blockid-release-notes",
+                "id": "Z158204c7-a371-44d5-bf91-23aa80e7fff4"
+              },
+              "sidebar": "mySidebar",
+              "previous": {
+                "title": "BlockID Android SDK 1.0.0",
+                "permalink": "/docs/android-100"
+              },
+              "next": {
+                "title": "Release Notes v3",
+                "permalink": "/docs/release-notes-v3"
+              }
+            },
+            {
+              "unversionedId": "Release Notes/Z89a4e212-0c52-480e-8072-3d62e7106a82",
+              "id": "Release Notes/Z89a4e212-0c52-480e-8072-3d62e7106a82",
+              "isDocsHomePage": false,
+              "title": "Release Notes R1.02.03",
+              "description": "2021.03.10: Monthly Production release notes",
+              "source": "@site/docs/Release Notes/5_release-notes-r.md.mdx",
+              "sourceDirName": "Release Notes",
+              "slug": "/release-notes-r10300",
+              "permalink": "/docs/release-notes-r10300",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "slug": "/release-notes-r10300",
+                "id": "Z89a4e212-0c52-480e-8072-3d62e7106a82"
+              },
+              "sidebar": "mySidebar",
+              "previous": {
+                "title": "Release Notes R1.02.00",
+                "permalink": "/docs/release-notes-r102"
+              },
+              "next": {
+                "title": "Intergration with Okta",
+                "permalink": "/docs/intergration-with-okta"
+              }
+            },
+            {
+              "unversionedId": "Release Notes/Zd4c725d7-840f-4e0e-a801-c775c6e281a8",
+              "id": "Release Notes/Zd4c725d7-840f-4e0e-a801-c775c6e281a8",
+              "isDocsHomePage": false,
+              "title": "Release Notes v3",
+              "description": "2020.05.12: Monthly Production release notes",
+              "source": "@site/docs/Release Notes/3_release-notes-v.md.mdx",
+              "sourceDirName": "Release Notes",
+              "slug": "/release-notes-v3",
+              "permalink": "/docs/release-notes-v3",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 3,
+              "frontMatter": {
+                "slug": "/release-notes-v3",
+                "id": "Zd4c725d7-840f-4e0e-a801-c775c6e281a8"
+              },
+              "sidebar": "mySidebar",
+              "previous": {
+                "title": "BlockID Release Notes",
+                "permalink": "/docs/blockid-release-notes"
+              },
+              "next": {
+                "title": "Release Notes R1.02.00",
+                "permalink": "/docs/release-notes-r102"
+              }
+            },
+            {
               "unversionedId": "uwl/uwl1",
               "id": "uwl/uwl1",
               "isDocsHomePage": false,
@@ -2233,191 +2418,6 @@
               "next": {
                 "title": "Installing BlockID Credential Provider",
                 "permalink": "/docs/installing-blockid-credential-provider"
-              }
-            },
-            {
-              "unversionedId": "v2/BlockID FAQ/Za49f1bb3-aba5-47e6-9a66-1248143e8c67",
-              "id": "v2/BlockID FAQ/Za49f1bb3-aba5-47e6-9a66-1248143e8c67",
-              "isDocsHomePage": false,
-              "title": "Frequently Asked Questions (FAQs)",
-              "description": "This page will answer questions with respect to the BlockID platform. If you have any questions that are not addressed in the sections below, please send us an email at",
-              "source": "@site/docs/v2/BlockID FAQ/2_frequently-aske.md.mdx",
-              "sourceDirName": "v2/BlockID FAQ",
-              "slug": "/v2/frequently-asked-questions-faq",
-              "permalink": "/docs/v2/frequently-asked-questions-faq",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "slug": "/v2/frequently-asked-questions-faq",
-                "id": "Za49f1bb3-aba5-47e6-9a66-1248143e8c67"
-              },
-              "sidebar": "mySidebar",
-              "previous": {
-                "title": "Integration with CISCO Check Point",
-                "permalink": "/docs/integration-with-cisco-check-point"
-              },
-              "next": {
-                "title": "FAQ's related to the BlockID Product Suite",
-                "permalink": "/docs/v2/faqs-related-to-the-blockid-product-suite"
-              }
-            },
-            {
-              "unversionedId": "v2/BlockID FAQ/Zb0eccd8d-dfdc-48d7-bf4a-2444bd2c7822",
-              "id": "v2/BlockID FAQ/Zb0eccd8d-dfdc-48d7-bf4a-2444bd2c7822",
-              "isDocsHomePage": false,
-              "title": "Internal FAQ guide for BlockID Product Suite",
-              "description": "This is an internal FAQ guide that includes responses to:",
-              "source": "@site/docs/v2/BlockID FAQ/4_internal-faq-gu.md.mdx",
-              "sourceDirName": "v2/BlockID FAQ",
-              "slug": "/v2/internal-faq-guide-for-blockid-product-suite",
-              "permalink": "/docs/v2/internal-faq-guide-for-blockid-product-suite",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 4,
-              "frontMatter": {
-                "slug": "/v2/internal-faq-guide-for-blockid-product-suite",
-                "id": "Zb0eccd8d-dfdc-48d7-bf4a-2444bd2c7822"
-              },
-              "sidebar": "mySidebar",
-              "previous": {
-                "title": "FAQ's related to the BlockID Product Suite",
-                "permalink": "/docs/v2/faqs-related-to-the-blockid-product-suite"
-              },
-              "next": {
-                "title": "BlockID Release Notes",
-                "permalink": "/docs/v2/blockid-release-notes"
-              }
-            },
-            {
-              "unversionedId": "v2/BlockID FAQ/Zef1df47a-d435-421b-a375-61157ac1420f",
-              "id": "v2/BlockID FAQ/Zef1df47a-d435-421b-a375-61157ac1420f",
-              "isDocsHomePage": false,
-              "title": "FAQ's related to the BlockID Product Suite",
-              "description": "* * *",
-              "source": "@site/docs/v2/BlockID FAQ/3_faqs-related-to.md.mdx",
-              "sourceDirName": "v2/BlockID FAQ",
-              "slug": "/v2/faqs-related-to-the-blockid-product-suite",
-              "permalink": "/docs/v2/faqs-related-to-the-blockid-product-suite",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 3,
-              "frontMatter": {
-                "slug": "/v2/faqs-related-to-the-blockid-product-suite",
-                "id": "Zef1df47a-d435-421b-a375-61157ac1420f"
-              },
-              "sidebar": "mySidebar",
-              "previous": {
-                "title": "Frequently Asked Questions (FAQs)",
-                "permalink": "/docs/v2/frequently-asked-questions-faq"
-              },
-              "next": {
-                "title": "Internal FAQ guide for BlockID Product Suite",
-                "permalink": "/docs/v2/internal-faq-guide-for-blockid-product-suite"
-              }
-            },
-            {
-              "unversionedId": "v2/Release Notes/Z0f10a839-2257-4d53-a191-00722c59df7e",
-              "id": "v2/Release Notes/Z0f10a839-2257-4d53-a191-00722c59df7e",
-              "isDocsHomePage": false,
-              "title": "Release Notes R1.02.00",
-              "description": "2021.01.15: Monthly Production release notes",
-              "source": "@site/docs/v2/Release Notes/4_release-notes-r.md.mdx",
-              "sourceDirName": "v2/Release Notes",
-              "slug": "/v2/release-notes-r102",
-              "permalink": "/docs/v2/release-notes-r102",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 4,
-              "frontMatter": {
-                "slug": "/v2/release-notes-r102",
-                "id": "Z0f10a839-2257-4d53-a191-00722c59df7e"
-              },
-              "sidebar": "mySidebar",
-              "previous": {
-                "title": "Release Notes v3",
-                "permalink": "/docs/v2/release-notes-v3"
-              },
-              "next": {
-                "title": "Release Notes R1.02.03",
-                "permalink": "/docs/v2/release-notes-r10300"
-              }
-            },
-            {
-              "unversionedId": "v2/Release Notes/Z158204c7-a371-44d5-bf91-23aa80e7fff4",
-              "id": "v2/Release Notes/Z158204c7-a371-44d5-bf91-23aa80e7fff4",
-              "isDocsHomePage": false,
-              "title": "BlockID Release Notes",
-              "description": "2020",
-              "source": "@site/docs/v2/Release Notes/2_blockid-release.md.mdx",
-              "sourceDirName": "v2/Release Notes",
-              "slug": "/v2/blockid-release-notes",
-              "permalink": "/docs/v2/blockid-release-notes",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 2,
-              "frontMatter": {
-                "slug": "/v2/blockid-release-notes",
-                "id": "Z158204c7-a371-44d5-bf91-23aa80e7fff4"
-              },
-              "sidebar": "mySidebar",
-              "previous": {
-                "title": "Internal FAQ guide for BlockID Product Suite",
-                "permalink": "/docs/v2/internal-faq-guide-for-blockid-product-suite"
-              },
-              "next": {
-                "title": "Release Notes v3",
-                "permalink": "/docs/v2/release-notes-v3"
-              }
-            },
-            {
-              "unversionedId": "v2/Release Notes/Z89a4e212-0c52-480e-8072-3d62e7106a82",
-              "id": "v2/Release Notes/Z89a4e212-0c52-480e-8072-3d62e7106a82",
-              "isDocsHomePage": false,
-              "title": "Release Notes R1.02.03",
-              "description": "2021.03.10: Monthly Production release notes",
-              "source": "@site/docs/v2/Release Notes/5_release-notes-r.md.mdx",
-              "sourceDirName": "v2/Release Notes",
-              "slug": "/v2/release-notes-r10300",
-              "permalink": "/docs/v2/release-notes-r10300",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 5,
-              "frontMatter": {
-                "slug": "/v2/release-notes-r10300",
-                "id": "Z89a4e212-0c52-480e-8072-3d62e7106a82"
-              },
-              "sidebar": "mySidebar",
-              "previous": {
-                "title": "Release Notes R1.02.00",
-                "permalink": "/docs/v2/release-notes-r102"
-              }
-            },
-            {
-              "unversionedId": "v2/Release Notes/Zd4c725d7-840f-4e0e-a801-c775c6e281a8",
-              "id": "v2/Release Notes/Zd4c725d7-840f-4e0e-a801-c775c6e281a8",
-              "isDocsHomePage": false,
-              "title": "Release Notes v3",
-              "description": "2020.05.12: Monthly Production release notes",
-              "source": "@site/docs/v2/Release Notes/3_release-notes-v.md.mdx",
-              "sourceDirName": "v2/Release Notes",
-              "slug": "/v2/release-notes-v3",
-              "permalink": "/docs/v2/release-notes-v3",
-              "tags": [],
-              "version": "current",
-              "sidebarPosition": 3,
-              "frontMatter": {
-                "slug": "/v2/release-notes-v3",
-                "id": "Zd4c725d7-840f-4e0e-a801-c775c6e281a8"
-              },
-              "sidebar": "mySidebar",
-              "previous": {
-                "title": "BlockID Release Notes",
-                "permalink": "/docs/v2/blockid-release-notes"
-              },
-              "next": {
-                "title": "Release Notes R1.02.00",
-                "permalink": "/docs/v2/release-notes-r102"
               }
             }
           ],
@@ -2521,21 +2521,21 @@
               },
               {
                 "type": "category",
-                "label": "BlockID Authentication Broker",
+                "label": "BlockID FAQ",
                 "collapsible": true,
                 "collapsed": true,
                 "items": [
                   {
                     "type": "doc",
-                    "id": "BlockID Authentication Broker/Zdae9610f-aaf7-4309-82e7-14a40f70d02a"
+                    "id": "BlockID FAQ/Za49f1bb3-aba5-47e6-9a66-1248143e8c67"
                   },
                   {
                     "type": "doc",
-                    "id": "BlockID Authentication Broker/Zd1256c41-99d9-4b0a-8a6c-48d13a499fa8"
+                    "id": "BlockID FAQ/Zef1df47a-d435-421b-a375-61157ac1420f"
                   },
                   {
                     "type": "doc",
-                    "id": "BlockID Authentication Broker/Z3ecf8e77-a029-4bfe-96d4-999e92d1484a"
+                    "id": "BlockID FAQ/Zb0eccd8d-dfdc-48d7-bf4a-2444bd2c7822"
                   }
                 ]
               },
@@ -2681,6 +2681,26 @@
               },
               {
                 "type": "category",
+                "label": "BlockID Authentication Broker",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "BlockID Authentication Broker/Zdae9610f-aaf7-4309-82e7-14a40f70d02a"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "BlockID Authentication Broker/Zd1256c41-99d9-4b0a-8a6c-48d13a499fa8"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "BlockID Authentication Broker/Z3ecf8e77-a029-4bfe-96d4-999e92d1484a"
+                  }
+                ]
+              },
+              {
+                "type": "category",
                 "label": "BlockID Mobile Application",
                 "collapsible": true,
                 "collapsed": true,
@@ -2727,18 +2747,6 @@
                   },
                   {
                     "type": "category",
-                    "label": "Directory Integrations",
-                    "collapsible": true,
-                    "collapsed": true,
-                    "items": [
-                      {
-                        "type": "doc",
-                        "id": "BlockID New Admin Portal (Athena)/Directory Integrations/Z422742d5-e5f4-4563-8b5b-75fe651251fc"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
                     "label": "Release Notes",
                     "collapsible": true,
                     "collapsed": true,
@@ -2746,6 +2754,18 @@
                       {
                         "type": "doc",
                         "id": "BlockID New Admin Portal (Athena)/Release Notes/Z7575ff9b-19c0-408e-bf74-0080f94cb7b2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "Directory Integrations",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "BlockID New Admin Portal (Athena)/Directory Integrations/Z422742d5-e5f4-4563-8b5b-75fe651251fc"
                       }
                     ]
                   },
@@ -2883,26 +2903,6 @@
                         "items": [
                           {
                             "type": "category",
-                            "label": "Android",
-                            "collapsible": true,
-                            "collapsed": true,
-                            "items": [
-                              {
-                                "type": "doc",
-                                "id": "Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/blockid-android-sdk-141and142"
-                              },
-                              {
-                                "type": "doc",
-                                "id": "Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/android-110"
-                              },
-                              {
-                                "type": "doc",
-                                "id": "Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/android-100"
-                              }
-                            ]
-                          },
-                          {
-                            "type": "category",
                             "label": "iOS",
                             "collapsible": true,
                             "collapsed": true,
@@ -2920,10 +2920,54 @@
                                 "id": "Developer's Docs/BlockID Mobile Application/SDK Integrations/iOS/ios-100"
                               }
                             ]
+                          },
+                          {
+                            "type": "category",
+                            "label": "Android",
+                            "collapsible": true,
+                            "collapsed": true,
+                            "items": [
+                              {
+                                "type": "doc",
+                                "id": "Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/blockid-android-sdk-141and142"
+                              },
+                              {
+                                "type": "doc",
+                                "id": "Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/android-110"
+                              },
+                              {
+                                "type": "doc",
+                                "id": "Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/android-100"
+                              }
+                            ]
                           }
                         ]
                       }
                     ]
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Release Notes",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "Release Notes/Z158204c7-a371-44d5-bf91-23aa80e7fff4"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Release Notes/Zd4c725d7-840f-4e0e-a801-c775c6e281a8"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Release Notes/Z0f10a839-2257-4d53-a191-00722c59df7e"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "Release Notes/Z89a4e212-0c52-480e-8072-3d62e7106a82"
                   }
                 ]
               },
@@ -3010,58 +3054,6 @@
                       {
                         "type": "doc",
                         "id": "BlockID Integrations/Remote Access/Zcc4b90f6-9a8e-413c-a39c-24f028a44f76"
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "type": "category",
-                "label": "v2",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
-                  {
-                    "type": "category",
-                    "label": "BlockID FAQ",
-                    "collapsible": true,
-                    "collapsed": true,
-                    "items": [
-                      {
-                        "type": "doc",
-                        "id": "v2/BlockID FAQ/Za49f1bb3-aba5-47e6-9a66-1248143e8c67"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v2/BlockID FAQ/Zef1df47a-d435-421b-a375-61157ac1420f"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v2/BlockID FAQ/Zb0eccd8d-dfdc-48d7-bf4a-2444bd2c7822"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
-                    "label": "Release Notes",
-                    "collapsible": true,
-                    "collapsed": true,
-                    "items": [
-                      {
-                        "type": "doc",
-                        "id": "v2/Release Notes/Z158204c7-a371-44d5-bf91-23aa80e7fff4"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v2/Release Notes/Zd4c725d7-840f-4e0e-a801-c775c6e281a8"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v2/Release Notes/Z0f10a839-2257-4d53-a191-00722c59df7e"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v2/Release Notes/Z89a4e212-0c52-480e-8072-3d62e7106a82"
                       }
                     ]
                   }

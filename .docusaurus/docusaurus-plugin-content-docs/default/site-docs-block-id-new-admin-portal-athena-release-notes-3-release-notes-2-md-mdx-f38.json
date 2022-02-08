@@ -17,11 +17,11 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "Broker Installation",
-    "permalink": "/docs/broker-installation"
+    "title": "WebAuthn",
+    "permalink": "/docs/webauthn"
   },
   "next": {
-    "title": "BlockID Attributes",
-    "permalink": "/docs/blockid-attributes"
+    "title": "Broker Installation",
+    "permalink": "/docs/broker-installation"
   }
 }

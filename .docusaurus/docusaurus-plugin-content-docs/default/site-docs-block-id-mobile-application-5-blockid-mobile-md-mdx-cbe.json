@@ -17,8 +17,8 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "Policy Management",
-    "permalink": "/docs/saml-configuration"
+    "title": "Upgrading BlockID Authentication Broker",
+    "permalink": "/docs/upgrading-blockid-authentication-broker"
   },
   "next": {
     "title": "Introduction to Athena Admin Portal",

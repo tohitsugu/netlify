@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID FAQ/Za49f1bb3-aba5-47e6-9a66-1248143e8c67",
+  "id": "BlockID FAQ/Za49f1bb3-aba5-47e6-9a66-1248143e8c67",
+  "isDocsHomePage": false,
+  "title": "Frequently Asked Questions (FAQs)",
+  "description": "This page will answer questions with respect to the BlockID platform. If you have any questions that are not addressed in the sections below, please send us an email at",
+  "source": "@site/docs/BlockID FAQ/2_frequently-aske.md.mdx",
+  "sourceDirName": "BlockID FAQ",
+  "slug": "/frequently-asked-questions-faq",
+  "permalink": "/docs/frequently-asked-questions-faq",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/frequently-asked-questions-faq",
+    "id": "Za49f1bb3-aba5-47e6-9a66-1248143e8c67"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Installing BlockID Credential Provider",
+    "permalink": "/docs/installing-blockid-credential-provider"
+  },
+  "next": {
+    "title": "FAQ's related to the BlockID Product Suite",
+    "permalink": "/docs/faqs-related-to-the-blockid-product-suite"
+  }
+}

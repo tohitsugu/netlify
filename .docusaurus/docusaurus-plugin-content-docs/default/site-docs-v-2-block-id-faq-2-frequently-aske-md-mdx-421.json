@@ -17,8 +17,8 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "Integration with CISCO Check Point",
-    "permalink": "/docs/integration-with-cisco-check-point"
+    "title": "Integration with ARCON",
+    "permalink": "/docs/integration-with-arcon"
   },
   "next": {
     "title": "FAQ's related to the BlockID Product Suite",

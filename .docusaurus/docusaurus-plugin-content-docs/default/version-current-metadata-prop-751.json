@@ -118,24 +118,24 @@
       },
       {
         "type": "category",
-        "label": "BlockID Authentication Broker",
+        "label": "BlockID FAQ",
         "collapsible": true,
         "collapsed": true,
         "items": [
           {
             "type": "link",
-            "label": "Installing BlockID Authentication Broker",
-            "href": "/docs/installing-blockid-authentication-broker"
+            "label": "Frequently Asked Questions (FAQs)",
+            "href": "/docs/frequently-asked-questions-faq"
           },
           {
             "type": "link",
-            "label": "BlockID Authentication Broker - User Guide",
-            "href": "/docs/blockid-authentication-broker-user-guide"
+            "label": "FAQ's related to the BlockID Product Suite",
+            "href": "/docs/faqs-related-to-the-blockid-product-suite"
           },
           {
             "type": "link",
-            "label": "Upgrading BlockID Authentication Broker",
-            "href": "/docs/upgrading-blockid-authentication-broker"
+            "label": "Internal FAQ guide for BlockID Product Suite",
+            "href": "/docs/internal-faq-guide-for-blockid-product-suite"
           }
         ]
       },
@@ -304,6 +304,29 @@
       },
       {
         "type": "category",
+        "label": "BlockID Authentication Broker",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Installing BlockID Authentication Broker",
+            "href": "/docs/installing-blockid-authentication-broker"
+          },
+          {
+            "type": "link",
+            "label": "BlockID Authentication Broker - User Guide",
+            "href": "/docs/blockid-authentication-broker-user-guide"
+          },
+          {
+            "type": "link",
+            "label": "Upgrading BlockID Authentication Broker",
+            "href": "/docs/upgrading-blockid-authentication-broker"
+          }
+        ]
+      },
+      {
+        "type": "category",
         "label": "BlockID Mobile Application",
         "collapsible": true,
         "collapsed": true,
@@ -358,19 +381,6 @@
           },
           {
             "type": "category",
-            "label": "Directory Integrations",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "Broker Installation",
-                "href": "/docs/broker-installation"
-              }
-            ]
-          },
-          {
-            "type": "category",
             "label": "Release Notes",
             "collapsible": true,
             "collapsed": true,
@@ -379,6 +389,19 @@
                 "type": "link",
                 "label": "Release Notes 2021.11.03",
                 "href": "/docs/v1/release-notes-20211103"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "label": "Directory Integrations",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Broker Installation",
+                "href": "/docs/broker-installation"
               }
             ]
           },
@@ -530,29 +553,6 @@
                 "items": [
                   {
                     "type": "category",
-                    "label": "Android",
-                    "collapsible": true,
-                    "collapsed": true,
-                    "items": [
-                      {
-                        "type": "link",
-                        "label": "BlockID Android SDK 1.4.1 and 1.4.2",
-                        "href": "/docs/blockid-android-sdk-141and142"
-                      },
-                      {
-                        "type": "link",
-                        "label": "BlockID Android SDK 1.1.0",
-                        "href": "/docs/android-110"
-                      },
-                      {
-                        "type": "link",
-                        "label": "BlockID Android SDK 1.0.0",
-                        "href": "/docs/android-100"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
                     "label": "iOS",
                     "collapsible": true,
                     "collapsed": true,
@@ -573,10 +573,61 @@
                         "href": "/docs/ios-100"
                       }
                     ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "Android",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "link",
+                        "label": "BlockID Android SDK 1.4.1 and 1.4.2",
+                        "href": "/docs/blockid-android-sdk-141and142"
+                      },
+                      {
+                        "type": "link",
+                        "label": "BlockID Android SDK 1.1.0",
+                        "href": "/docs/android-110"
+                      },
+                      {
+                        "type": "link",
+                        "label": "BlockID Android SDK 1.0.0",
+                        "href": "/docs/android-100"
+                      }
+                    ]
                   }
                 ]
               }
             ]
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Release Notes",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "BlockID Release Notes",
+            "href": "/docs/blockid-release-notes"
+          },
+          {
+            "type": "link",
+            "label": "Release Notes v3",
+            "href": "/docs/release-notes-v3"
+          },
+          {
+            "type": "link",
+            "label": "Release Notes R1.02.00",
+            "href": "/docs/release-notes-r102"
+          },
+          {
+            "type": "link",
+            "label": "Release Notes R1.02.03",
+            "href": "/docs/release-notes-r10300"
           }
         ]
       },
@@ -677,65 +728,6 @@
                 "type": "link",
                 "label": "Integration with CISCO Check Point",
                 "href": "/docs/integration-with-cisco-check-point"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "category",
-        "label": "v2",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "type": "category",
-            "label": "BlockID FAQ",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "Frequently Asked Questions (FAQs)",
-                "href": "/docs/v2/frequently-asked-questions-faq"
-              },
-              {
-                "type": "link",
-                "label": "FAQ's related to the BlockID Product Suite",
-                "href": "/docs/v2/faqs-related-to-the-blockid-product-suite"
-              },
-              {
-                "type": "link",
-                "label": "Internal FAQ guide for BlockID Product Suite",
-                "href": "/docs/v2/internal-faq-guide-for-blockid-product-suite"
-              }
-            ]
-          },
-          {
-            "type": "category",
-            "label": "Release Notes",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "BlockID Release Notes",
-                "href": "/docs/v2/blockid-release-notes"
-              },
-              {
-                "type": "link",
-                "label": "Release Notes v3",
-                "href": "/docs/v2/release-notes-v3"
-              },
-              {
-                "type": "link",
-                "label": "Release Notes R1.02.00",
-                "href": "/docs/v2/release-notes-r102"
-              },
-              {
-                "type": "link",
-                "label": "Release Notes R1.02.03",
-                "href": "/docs/v2/release-notes-r10300"
               }
             ]
           }
