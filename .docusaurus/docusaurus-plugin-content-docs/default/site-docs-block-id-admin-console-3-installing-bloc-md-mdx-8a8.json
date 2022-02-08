@@ -17,8 +17,8 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "Upgrading BlockID Authentication Broker",
-    "permalink": "/docs/upgrading-blockid-authentication-broker"
+    "title": "Installing BlockID Credential Provider",
+    "permalink": "/docs/installing-blockid-credential-provider"
   },
   "next": {
     "title": "User Onboarding Process Guide",

@@ -70,7 +70,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','676'),
+    component: ComponentCreator('/docs','6f2'),
     routes: [
       {
         path: '/docs/',
@@ -187,6 +187,12 @@ export default [
         'sidebar': "mySidebar"
       },
       {
+        path: '/docs/blockid-release-notes',
+        component: ComponentCreator('/docs/blockid-release-notes','b75'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
         path: '/docs/broker-installation',
         component: ComponentCreator('/docs/broker-installation','501'),
         exact: true,
@@ -243,6 +249,18 @@ export default [
       {
         path: '/docs/end-user-guide',
         component: ComponentCreator('/docs/end-user-guide','fc7'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/faqs-related-to-the-blockid-product-suite',
+        component: ComponentCreator('/docs/faqs-related-to-the-blockid-product-suite','a91'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/frequently-asked-questions-faq',
+        component: ComponentCreator('/docs/frequently-asked-questions-faq','9ed'),
         exact: true,
         'sidebar': "mySidebar"
       },
@@ -373,6 +391,12 @@ export default [
         'sidebar': "mySidebar"
       },
       {
+        path: '/docs/internal-faq-guide-for-blockid-product-suite',
+        component: ComponentCreator('/docs/internal-faq-guide-for-blockid-product-suite','fa6'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
         path: '/docs/introduction-to-athena-admin-portal',
         component: ComponentCreator('/docs/introduction-to-athena-admin-portal','366'),
         exact: true,
@@ -447,6 +471,24 @@ export default [
       {
         path: '/docs/radius-configuration',
         component: ComponentCreator('/docs/radius-configuration','64e'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/release-notes-r102',
+        component: ComponentCreator('/docs/release-notes-r102','c7f'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/release-notes-r10300',
+        component: ComponentCreator('/docs/release-notes-r10300','31b'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/release-notes-v3',
+        component: ComponentCreator('/docs/release-notes-v3','562'),
         exact: true,
         'sidebar': "mySidebar"
       },
@@ -549,48 +591,6 @@ export default [
       {
         path: '/docs/v1/release-notes-20211103',
         component: ComponentCreator('/docs/v1/release-notes-20211103','668'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v2/blockid-release-notes',
-        component: ComponentCreator('/docs/v2/blockid-release-notes','ff6'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v2/faqs-related-to-the-blockid-product-suite',
-        component: ComponentCreator('/docs/v2/faqs-related-to-the-blockid-product-suite','600'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v2/frequently-asked-questions-faq',
-        component: ComponentCreator('/docs/v2/frequently-asked-questions-faq','a2f'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v2/internal-faq-guide-for-blockid-product-suite',
-        component: ComponentCreator('/docs/v2/internal-faq-guide-for-blockid-product-suite','9f4'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v2/release-notes-r102',
-        component: ComponentCreator('/docs/v2/release-notes-r102','fc1'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v2/release-notes-r10300',
-        component: ComponentCreator('/docs/v2/release-notes-r10300','34b'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v2/release-notes-v3',
-        component: ComponentCreator('/docs/v2/release-notes-v3','6fc'),
         exact: true,
         'sidebar': "mySidebar"
       },

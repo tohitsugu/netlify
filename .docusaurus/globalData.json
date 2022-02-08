@@ -176,6 +176,21 @@
               "sidebar": "mySidebar"
             },
             {
+              "id": "BlockID FAQ/Za49f1bb3-aba5-47e6-9a66-1248143e8c67",
+              "path": "/docs/frequently-asked-questions-faq",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "BlockID FAQ/Zb0eccd8d-dfdc-48d7-bf4a-2444bd2c7822",
+              "path": "/docs/internal-faq-guide-for-blockid-product-suite",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "BlockID FAQ/Zef1df47a-d435-421b-a375-61157ac1420f",
+              "path": "/docs/faqs-related-to-the-blockid-product-suite",
+              "sidebar": "mySidebar"
+            },
+            {
               "id": "BlockID Integrations/Identity Providers/Z0010fc32-8540-4be0-98fd-831958d61e23",
               "path": "/docs/intergration-with-okta",
               "sidebar": "mySidebar"
@@ -416,43 +431,28 @@
               "sidebar": "mySidebar"
             },
             {
+              "id": "Release Notes/Z0f10a839-2257-4d53-a191-00722c59df7e",
+              "path": "/docs/release-notes-r102",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "Release Notes/Z158204c7-a371-44d5-bf91-23aa80e7fff4",
+              "path": "/docs/blockid-release-notes",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "Release Notes/Z89a4e212-0c52-480e-8072-3d62e7106a82",
+              "path": "/docs/release-notes-r10300",
+              "sidebar": "mySidebar"
+            },
+            {
+              "id": "Release Notes/Zd4c725d7-840f-4e0e-a801-c775c6e281a8",
+              "path": "/docs/release-notes-v3",
+              "sidebar": "mySidebar"
+            },
+            {
               "id": "uwl/uwl1",
               "path": "/docs/uwl",
-              "sidebar": "mySidebar"
-            },
-            {
-              "id": "v2/BlockID FAQ/Za49f1bb3-aba5-47e6-9a66-1248143e8c67",
-              "path": "/docs/v2/frequently-asked-questions-faq",
-              "sidebar": "mySidebar"
-            },
-            {
-              "id": "v2/BlockID FAQ/Zb0eccd8d-dfdc-48d7-bf4a-2444bd2c7822",
-              "path": "/docs/v2/internal-faq-guide-for-blockid-product-suite",
-              "sidebar": "mySidebar"
-            },
-            {
-              "id": "v2/BlockID FAQ/Zef1df47a-d435-421b-a375-61157ac1420f",
-              "path": "/docs/v2/faqs-related-to-the-blockid-product-suite",
-              "sidebar": "mySidebar"
-            },
-            {
-              "id": "v2/Release Notes/Z0f10a839-2257-4d53-a191-00722c59df7e",
-              "path": "/docs/v2/release-notes-r102",
-              "sidebar": "mySidebar"
-            },
-            {
-              "id": "v2/Release Notes/Z158204c7-a371-44d5-bf91-23aa80e7fff4",
-              "path": "/docs/v2/blockid-release-notes",
-              "sidebar": "mySidebar"
-            },
-            {
-              "id": "v2/Release Notes/Z89a4e212-0c52-480e-8072-3d62e7106a82",
-              "path": "/docs/v2/release-notes-r10300",
-              "sidebar": "mySidebar"
-            },
-            {
-              "id": "v2/Release Notes/Zd4c725d7-840f-4e0e-a801-c775c6e281a8",
-              "path": "/docs/v2/release-notes-v3",
               "sidebar": "mySidebar"
             }
           ]
