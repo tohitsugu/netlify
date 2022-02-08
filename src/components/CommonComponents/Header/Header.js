@@ -1,6 +1,6 @@
 /* Core */
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, Redirect } from "react-router-dom";
 import PropTypes from "prop-types";
 import {
   makeStyles,
@@ -9,14 +9,14 @@ import {
   Typography,
   Box,
 } from "@material-ui/core";
-import Link from "@docusaurus/Link";
 /* Components */
 import CustomButton from "../Button";
 import CustomSnackbar from "../Snakbar";
+import { HeaderMenu } from "./HeaderMenu";
 /* Hooks */
 import { useAuth } from "../../Auth/hooks/useAuth";
-import { useSession } from "./hooks/useSessions";
 import { useHeader } from "./hooks/useHeader";
+import { useSession } from "./hooks/useSessions";
 /* Config */
 import { links } from "../../../navigation/config";
 
@@ -29,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
       props.authenticated || props.rootPage
         ? theme.palette.neutral.white
         : "transparent",
-    //zIndex: "99999",
   },
   rootToolbar: {
     display: "flex",
@@ -65,42 +64,57 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#ffffff",
     color: theme.palette.secondary.light,
     marginRight: "20px",
+    [theme.breakpoints.down("sm")]: {
+      marginRight: "15px",
+      marginLeft: "10px",
+    },
   },
   gsBtn: {
     border: "1px solid #cbc8d3",
     backgroundColor: theme.palette.secondary.light,
     color: "#F7F9FA",
+    display: "block",
+    [theme.breakpoints.down("sm")]: {
+      display: "none",
+    },
   },
 }));
 
-const Header = ({ isLogin, isRegister }) => {
+const Header = ({ isLogin, isRegister, isHome }) => {
   const { pathname, search } = useLocation();
-  const { sessionIsReady } = useSession();
   const { handleSignIn, handleRegister } = useHeader();
   const { message, authenticated } = useAuth();
-  const registerPage = pathname === `${links.register}`;
+  const registerPage =
+    pathname === `${links.register}` || pathname === `${links.register}/`;
   const rootPage = pathname === `${links.root}`;
   const classes = useStyles({
     authenticated: authenticated,
     registerPage,
     rootPage,
   });
-  console.log("message", message);
+  if (!authenticated && !isLogin && !isHome && !isRegister) {
+    return <Redirect to={`${links.root}`} />;
+  }
+  if (authenticated && (isLogin || isHome || isRegister)) {
+    return <Redirect to={`${links.dashboard}`} />;
+  }
   const renderLogo = () => {
-    return <img className={classes.logoImg} src={"img/logo.svg"} alt="logo" />;
+    return (
+      <img
+        className={classes.logoImg}
+        src={`${window?.location?.protocol}//${window?.location?.host}/devportal/img/logo.svg`}
+        alt="logo"
+      />
+    );
   };
 
   if (isLogin && !isRegister) {
-    return message ? (
-      <CustomSnackbar message={message} />
-    ) : (
-      <CustomSnackbar message={message || ""} />
-    );
+    return message ? <CustomSnackbar message={message} /> : null;
   }
 
   return (
     <>
-      {message && <CustomSnackbar message={message} />}
+      {message && isHome && <CustomSnackbar message={message} />}
       {registerPage ? (
         <AppBar className={classes.rootAppBar}>
           <Toolbar>
@@ -147,18 +161,23 @@ const Header = ({ isLogin, isRegister }) => {
                 <Typography className={classes.title}>Developer</Typography>
                 <Typography className={classes.betaTag}>BETA</Typography>
               </Box>
-              <Box className={classes.container}>
-                <CustomButton
-                  value="Sign In"
-                  className={classes.signinBtn}
-                  onClick={handleSignIn}
-                />
-                <CustomButton
-                  value="Getting Started"
-                  className={classes.gsBtn}
-                  onClick={handleRegister}
-                />
-              </Box>
+              {!authenticated && (
+                <Box className={classes.container}>
+                  <CustomButton
+                    value="Sign In"
+                    className={classes.signinBtn}
+                    onClick={handleSignIn}
+                  />
+                  <CustomButton
+                    value="Getting Started"
+                    className={classes.gsBtn}
+                    onClick={handleRegister}
+                  />
+                </Box>
+              )}
+            </Box>
+            <Box flexGrow="1" display="flex" justifyContent="flex-end">
+              {authenticated && <HeaderMenu />}
             </Box>
           </Toolbar>
         </AppBar>
@@ -169,6 +188,14 @@ const Header = ({ isLogin, isRegister }) => {
 
 Header.propTypes = {
   isLogin: PropTypes.bool,
+  isRegister: PropTypes.bool,
+  isHome: PropTypes.bool,
+};
+
+Header.defaultProps = {
+  isLogin: false,
+  isRegister: false,
+  isHome: false,
 };
 
 export default Header;

@@ -118,6 +118,29 @@
       },
       {
         "type": "category",
+        "label": "BlockID Authentication Broker",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Installing BlockID Authentication Broker",
+            "href": "/docs/installing-blockid-authentication-broker"
+          },
+          {
+            "type": "link",
+            "label": "BlockID Authentication Broker - User Guide",
+            "href": "/docs/blockid-authentication-broker-user-guide"
+          },
+          {
+            "type": "link",
+            "label": "Upgrading BlockID Authentication Broker",
+            "href": "/docs/upgrading-blockid-authentication-broker"
+          }
+        ]
+      },
+      {
+        "type": "category",
         "label": "BlockID Admin Console",
         "collapsible": true,
         "collapsed": true,
@@ -195,29 +218,6 @@
               },
               {
                 "type": "category",
-                "label": "Enterprise Configuration",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
-                  {
-                    "type": "link",
-                    "label": "Datastore Configuration",
-                    "href": "/docs/datastore-configuration-1"
-                  },
-                  {
-                    "type": "link",
-                    "label": "SCEP Configuration",
-                    "href": "/docs/scep-configuration"
-                  },
-                  {
-                    "type": "link",
-                    "label": "Radius Configuration",
-                    "href": "/docs/radius-configuration"
-                  }
-                ]
-              },
-              {
-                "type": "category",
                 "label": "Authentication Configuration",
                 "collapsible": true,
                 "collapsed": true,
@@ -236,6 +236,29 @@
                     "type": "link",
                     "label": "Software and Hardware OTP Support",
                     "href": "/docs/software-and-hardware-otp-support"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Enterprise Configuration",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Datastore Configuration",
+                    "href": "/docs/datastore-configuration-1"
+                  },
+                  {
+                    "type": "link",
+                    "label": "SCEP Configuration",
+                    "href": "/docs/scep-configuration"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Radius Configuration",
+                    "href": "/docs/radius-configuration"
                   }
                 ]
               },
@@ -281,29 +304,6 @@
       },
       {
         "type": "category",
-        "label": "BlockID Authentication Broker",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "type": "link",
-            "label": "Installing BlockID Authentication Broker",
-            "href": "/docs/installing-blockid-authentication-broker"
-          },
-          {
-            "type": "link",
-            "label": "BlockID Authentication Broker - User Guide",
-            "href": "/docs/blockid-authentication-broker-user-guide"
-          },
-          {
-            "type": "link",
-            "label": "Upgrading BlockID Authentication Broker",
-            "href": "/docs/upgrading-blockid-authentication-broker"
-          }
-        ]
-      },
-      {
-        "type": "category",
         "label": "BlockID Mobile Application",
         "collapsible": true,
         "collapsed": true,
@@ -312,6 +312,134 @@
             "type": "link",
             "label": "BlockID Mobile Application User Guide",
             "href": "/docs/blockid-mobile-application-user-guide"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "BlockID New Admin Portal (Athena)",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Introduction to Athena Admin Portal",
+            "href": "/docs/introduction-to-athena-admin-portal"
+          },
+          {
+            "type": "link",
+            "label": "Login",
+            "href": "/docs/login-with-mfa"
+          },
+          {
+            "type": "link",
+            "label": "Create Native User",
+            "href": "/docs/create-native-user"
+          },
+          {
+            "type": "link",
+            "label": "Directory",
+            "href": "/docs/directory"
+          },
+          {
+            "type": "link",
+            "label": "Customizing the Branding of your BlockID Login Page",
+            "href": "/docs/customizing-the-branding-of-your-blockid-login-page"
+          },
+          {
+            "type": "link",
+            "label": "End User Guide",
+            "href": "/docs/end-user-guide"
+          },
+          {
+            "type": "link",
+            "label": "WebAuthn",
+            "href": "/docs/webauthn"
+          },
+          {
+            "type": "category",
+            "label": "Directory Integrations",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Broker Installation",
+                "href": "/docs/broker-installation"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "label": "Release Notes",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Release Notes 2021.11.03",
+                "href": "/docs/v1/release-notes-20211103"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "label": "Settings",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "BlockID Attributes",
+                "href": "/docs/blockid-attributes"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "label": "Applications",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "category",
+                "label": "Add Applications",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Okta",
+                    "href": "/docs/okta"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Auth0",
+                    "href": "/docs/auth0"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Salesforce",
+                    "href": "/docs/salesforce"
+                  },
+                  {
+                    "type": "link",
+                    "label": "G Suite",
+                    "href": "/docs/gsuite"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Generic SAML Application",
+                    "href": "/docs/generic-saml-application"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Office365 Integration",
+                    "href": "/docs/office365-integration"
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -454,161 +582,10 @@
       },
       {
         "type": "category",
-        "label": "BlockID New Admin Portal (Athena)",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "type": "link",
-            "label": "Introduction to Athena Admin Portal",
-            "href": "/docs/introduction-to-athena-admin-portal"
-          },
-          {
-            "type": "link",
-            "label": "Login",
-            "href": "/docs/login-with-mfa"
-          },
-          {
-            "type": "link",
-            "label": "Create Native User",
-            "href": "/docs/create-native-user"
-          },
-          {
-            "type": "link",
-            "label": "Directory",
-            "href": "/docs/directory"
-          },
-          {
-            "type": "link",
-            "label": "Email and SMS",
-            "href": "/docs/email-sms"
-          },
-          {
-            "type": "link",
-            "label": "Customizing the Branding of your BlockID Login Page",
-            "href": "/docs/customizing-the-branding-of-your-blockid-login-page"
-          },
-          {
-            "type": "link",
-            "label": "End User Guide",
-            "href": "/docs/end-user-guide"
-          },
-          {
-            "type": "link",
-            "label": "WebAuthn",
-            "href": "/docs/webauthn"
-          },
-          {
-            "type": "category",
-            "label": "Directory Integrations",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "Broker Installation",
-                "href": "/docs/broker-installation"
-              }
-            ]
-          },
-          {
-            "type": "category",
-            "label": "Release Notes",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "Release Notes 2021.11.03",
-                "href": "/docs/v1/release-notes-20211103"
-              }
-            ]
-          },
-          {
-            "type": "category",
-            "label": "Settings",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "BlockID Attributes",
-                "href": "/docs/blockid-attributes"
-              }
-            ]
-          },
-          {
-            "type": "category",
-            "label": "Applications",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "category",
-                "label": "Add Applications",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
-                  {
-                    "type": "link",
-                    "label": "Okta",
-                    "href": "/docs/okta"
-                  },
-                  {
-                    "type": "link",
-                    "label": "Auth0",
-                    "href": "/docs/auth0"
-                  },
-                  {
-                    "type": "link",
-                    "label": "Salesforce",
-                    "href": "/docs/salesforce"
-                  },
-                  {
-                    "type": "link",
-                    "label": "G Suite",
-                    "href": "/docs/gsuite"
-                  },
-                  {
-                    "type": "link",
-                    "label": "Generic SAML Application",
-                    "href": "/docs/generic-saml-application"
-                  },
-                  {
-                    "type": "link",
-                    "label": "Office365 Integration",
-                    "href": "/docs/office365-integration"
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "category",
         "label": "BlockID Integrations",
         "collapsible": true,
         "collapsed": true,
         "items": [
-          {
-            "type": "category",
-            "label": "PAM (Privilege Account Management)",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "Integration with CyberArk",
-                "href": "/docs/integration-with-cyberark"
-              },
-              {
-                "type": "link",
-                "label": "Integration with ARCON",
-                "href": "/docs/integration-with-arcon"
-              }
-            ]
-          },
           {
             "type": "category",
             "label": "Identity Providers",
@@ -659,6 +636,24 @@
                 "type": "link",
                 "label": "Integration with ForgeRock",
                 "href": "/docs/integration-with-forgerock"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "label": "PAM (Privilege Account Management)",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Integration with CyberArk",
+                "href": "/docs/integration-with-cyberark"
+              },
+              {
+                "type": "link",
+                "label": "Integration with ARCON",
+                "href": "/docs/integration-with-arcon"
               }
             ]
           },

@@ -81,7 +81,8 @@ instance.interceptors.response.use(
       error.response.config.url !== "/authenticate" &&
       error.response.config.url !== "/session/response/fetch" &&
       error.response.config.url !== "/verifyuser" &&
-      error.response.config.url !== "/authenticate/otp"
+      error.response.config.url !== "/authenticate/otp" &&
+      !error.response.config.url.includes("/response")
     ) {
       store.dispatch(
         authActions.logout({

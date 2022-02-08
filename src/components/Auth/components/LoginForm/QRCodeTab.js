@@ -1,6 +1,5 @@
 /* Core */
 import React from "react";
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import cx from "classnames";
 import QRCode from "react-qr-code";
@@ -10,10 +9,10 @@ import Box from "@material-ui/core/Box";
 /* Components */
 import CustomButton from "../../../CommonComponents/Button";
 import { AppLoading } from "../../../CommonComponents/AppLoading";
+/* Hooks */
+import { useHomePage } from "../../../Home/hooks/useHomePage";
 /* Icons */
-//import { PhoneIcon } from "icons/PhoneIcon";
-/* Navigation */
-import { links } from "../../../../navigation/config";
+import { PhoneIcon } from "../../../../icons/PhoneIcon";
 
 const useStyles = makeStyles((theme) => ({
   mobileButton: {
@@ -30,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
       padding: "24px",
     },
   },
-  requestInviteLink: {
+  tryForFreeLink: {
     textDecoration: "none",
     color: theme.palette.neutral[500],
     fontSize: "1rem",
@@ -38,10 +37,12 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       textDecoration: "underline",
     },
+    justifyContent: "center !important",
   },
 }));
 
 export const QRCodeTab = (props) => {
+  const { handleRegister } = useHomePage();
   const { sessionValue, renderLogo } = props;
   const classes = useStyles();
 
@@ -55,10 +56,16 @@ export const QRCodeTab = (props) => {
     >
       {renderLogo()}
       {!sessionValue ? (
-        <>
+        <Box
+          className={classes.qrCode}
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          textAlign="center"
+          position="relative"
+        >
           <AppLoading size={40} />
-          <span>WIP...</span>
-        </>
+        </Box>
       ) : (
         <>
           <Box
@@ -74,7 +81,7 @@ export const QRCodeTab = (props) => {
                 className={cx("redButton", classes.mobileButton)}
                 type="link"
                 variant="contained"
-                //icon={<PhoneIcon />}
+                icon={<PhoneIcon />}
                 href={sessionValue}
                 title={sessionValue}
                 target="blank"
@@ -96,12 +103,14 @@ export const QRCodeTab = (props) => {
               </a>
             )}
           </Box>
-          <Link
-            to={`/${links.requestAnInvite}`}
-            className={classes.requestInviteLink}
-          >
-            Request an invite
-          </Link>
+          <CustomButton
+            value="Try for free"
+            className={cx("linkButton", classes.tryForFreeLink)}
+            type="link"
+            variant="contained"
+            title={"Try for free"}
+            onClick={handleRegister}
+          />
         </>
       )}
     </Box>

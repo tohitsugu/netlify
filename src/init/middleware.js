@@ -2,8 +2,7 @@
 import { compose } from "redux";
 import createSagaMiddleware from "redux-saga";
 
-const developmentEnvironment = false; //process.env.NODE_ENV === "development";
-console.log("developmentEnvironment", developmentEnvironment);
+const developmentEnvironment = false;
 const devtools = window?.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 const composeEnhancers =
   developmentEnvironment && devtools ? devtools : compose;

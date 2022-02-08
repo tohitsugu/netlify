@@ -17,8 +17,8 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "Office365 Integration",
-    "permalink": "/docs/office365-integration"
+    "title": "Integration with ForgeRock",
+    "permalink": "/docs/integration-with-forgerock"
   },
   "next": {
     "title": "Integration with ARCON",

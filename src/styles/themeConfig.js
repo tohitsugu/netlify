@@ -86,7 +86,7 @@ export const themeConfig = {
   colorState10: "#D0F6DB",
   colorState11: "#F7F9FA",
   colorState12: "#93BFB1",
-  colorState13: "#F2F4F5",
+  colorState13: "#7281E8",
   //BackgroundColor
   colorOutlineLightGrey: "#ffffff33",
 

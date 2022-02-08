@@ -17,8 +17,8 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "Glossary",
-    "permalink": "/docs/glossary"
+    "title": "Software and Hardware OTP Support",
+    "permalink": "/docs/software-and-hardware-otp-support"
   },
   "next": {
     "title": "SCEP Configuration",

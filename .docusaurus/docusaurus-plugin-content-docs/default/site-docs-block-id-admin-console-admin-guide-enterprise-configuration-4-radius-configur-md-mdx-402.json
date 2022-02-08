@@ -21,7 +21,7 @@
     "permalink": "/docs/scep-configuration"
   },
   "next": {
-    "title": "Authentication Modules",
-    "permalink": "/docs/authentication-modules"
+    "title": "SAML Configurations",
+    "permalink": "/docs/samlv2"
   }
 }

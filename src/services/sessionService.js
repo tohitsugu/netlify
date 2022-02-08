@@ -1,12 +1,8 @@
 /* Services */
 import ECDSA from "./ECDSA";
-import jwt from "jwt-decode";
-import { store } from "../init/store";
-
 // localStorage is not available in gmail client webview on Android
 let webviewSessionStorage = {};
 let webviewLocalStorage = {};
-
 class SessionService {
   sessionKeysAreReady() {
     const serverPublicKey = sessionStorage
@@ -50,80 +46,47 @@ class SessionService {
     }
   }
 
-  getToken(communityId) {
-    if (communityId === undefined) {
-      const {
-        auth: { tenantCommunityInfo },
-      } = store.getState((state) => state.auth);
-      communityId = tenantCommunityInfo?.community?.id;
-    }
+  getToken() {
     return localStorage
-      ? localStorage?.getItem(`${communityId}_token`)
-      : webviewLocalStorage[`${communityId}_token`];
+      ? localStorage?.getItem(`18088bf3-d3f7-467b-9408-7b400c9e747d_token`)
+      : webviewLocalStorage[`18088bf3-d3f7-467b-9408-7b400c9e747d_token`];
   }
 
-  setSessionToken(communityId, token) {
+  setSessionToken(token) {
     if (token) {
       if (localStorage) {
-        localStorage?.setItem(`${communityId}_token`, token);
+        localStorage?.setItem(
+          `18088bf3-d3f7-467b-9408-7b400c9e747d_token`,
+          token
+        );
       } else {
-        webviewLocalStorage[`${communityId}_token`] = token;
+        webviewLocalStorage[`18088bf3-d3f7-467b-9408-7b400c9e747d_token`] =
+          token;
       }
     } else {
       if (localStorage) {
-        localStorage?.removeItem(`${communityId}_token`);
+        localStorage?.removeItem(`18088bf3-d3f7-467b-9408-7b400c9e747d_token`);
       } else {
-        webviewLocalStorage[`${communityId}_token`] = token;
+        webviewLocalStorage[`18088bf3-d3f7-467b-9408-7b400c9e747d_token`] =
+          token;
       }
     }
   }
 
   clearSession() {
-    const {
-      auth: { tenantCommunityInfo },
-    } = store.getState((state) => state.auth);
-
     if (sessionStorage) {
       sessionStorage?.removeItem("serverPublicKey");
       sessionStorage?.removeItem("communityKeys");
     }
     if (localStorage) {
-      localStorage?.removeItem(`${tenantCommunityInfo?.community?.id}_token`);
+      localStorage?.removeItem(`18088bf3-d3f7-467b-9408-7b400c9e747d_token`);
     }
     webviewSessionStorage = {};
     webviewLocalStorage = {};
   }
 
   getPermission() {
-    const {
-      auth: { tenantCommunityInfo },
-    } = store.getState((state) => state.auth);
-    let permission = "basic-user";
-    const jwt_token = this.getToken();
-    let token =
-      jwt_token !== null && jwt_token !== undefined ? jwt(jwt_token) : null;
-    if (token && token?.permissions && token?.permissions?.length > 0) {
-      const tenantAdmin = token.permissions.filter((item) => {
-        return (
-          item.subjectType === "tenant" &&
-          item.subjectId === tenantCommunityInfo?.tenant?.id
-        );
-      });
-
-      const communityAdmin = token.permissions.filter((item) => {
-        return (
-          item.subjectType === "community" &&
-          item.subjectId === tenantCommunityInfo?.community?.id
-        );
-      });
-      permission =
-        tenantAdmin.length > 0
-          ? tenantAdmin[0].permission
-          : communityAdmin.length > 0
-          ? communityAdmin[0].permission
-          : permission;
-    }
-    return permission;
+    return "basic-user";
   }
 }
 

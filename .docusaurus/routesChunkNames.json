@@ -25,6 +25,14 @@
     "component": "component---theme-blog-archive-page-9-e-4-1d8",
     "archive": "archive---blog-archiveb-2-f-393"
   },
+  "/dashboard-3a4": {
+    "component": "component---site-src-pages-dashboard-jsde-3-f66",
+    "config": "config---login-5-e-9-d49"
+  },
+  "/demo-041": {
+    "component": "component---site-src-pages-demo-js-0-ba-09a",
+    "config": "config---login-5-e-9-d49"
+  },
   "/login-61b": {
     "component": "component---site-src-pages-login-js-380-710",
     "config": "config---login-5-e-9-d49"
@@ -37,7 +45,7 @@
     "component": "component---site-src-pages-register-js-81-f-03a",
     "config": "config---login-5-e-9-d49"
   },
-  "/docs-a36": {
+  "/docs-676": {
     "component": "component---theme-doc-page-1-be-9be",
     "versionMetadata": "versionMetadata---docs-935-398"
   },
@@ -152,10 +160,6 @@
   "/docs/ecdsa/shared-key-e05": {
     "component": "component---theme-doc-item-178-a40",
     "content": "content---docs-ecdsa-shared-key-63-f-aa3"
-  },
-  "/docs/email-sms-223": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---docs-email-sms-30-f-7de"
   },
   "/docs/end-user-guide-fc7": {
     "component": "component---theme-doc-item-178-a40",

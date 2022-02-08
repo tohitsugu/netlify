@@ -44,6 +44,16 @@ export default [
     exact: true
   },
   {
+    path: '/dashboard',
+    component: ComponentCreator('/dashboard','3a4'),
+    exact: true
+  },
+  {
+    path: '/demo',
+    component: ComponentCreator('/demo','041'),
+    exact: true
+  },
+  {
     path: '/login',
     component: ComponentCreator('/login','61b'),
     exact: true
@@ -60,7 +70,7 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','a36'),
+    component: ComponentCreator('/docs','676'),
     routes: [
       {
         path: '/docs/',
@@ -227,12 +237,6 @@ export default [
       {
         path: '/docs/ecdsa/shared-key',
         component: ComponentCreator('/docs/ecdsa/shared-key','e05'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/email-sms',
-        component: ComponentCreator('/docs/email-sms','223'),
         exact: true,
         'sidebar': "mySidebar"
       },

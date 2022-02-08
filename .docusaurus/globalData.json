@@ -286,11 +286,6 @@
               "sidebar": "mySidebar"
             },
             {
-              "id": "BlockID New Admin Portal (Athena)/email-sms",
-              "path": "/docs/email-sms",
-              "sidebar": "mySidebar"
-            },
-            {
               "id": "BlockID New Admin Portal (Athena)/Release Notes/Z7575ff9b-19c0-408e-bf74-0080f94cb7b2",
               "path": "/docs/v1/release-notes-20211103",
               "sidebar": "mySidebar"

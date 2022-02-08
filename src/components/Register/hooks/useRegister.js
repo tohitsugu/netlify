@@ -1,5 +1,6 @@
 /* Core */
 import { useState, useCallback } from "react";
+import { useHistory } from "react-router-dom";
 import { useDispatch } from "react-redux";
 /* API */
 import { putUserCreate } from "../../../api/register";
@@ -8,9 +9,12 @@ import { authActions } from "../../Auth/actions";
 /* Hooks */
 import { useMountedState } from "../../../shared/hooks/useMountedState";
 import { useShowMessage } from "../../../shared/hooks/useShowMessage";
+/* Navigation */
+import { links } from "../../../navigation/config";
 
 export const useRegister = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
   const [loading, setLoading] = useState(false);
   const isMounted = useMountedState();
   const { showMessage } = useShowMessage();
@@ -47,40 +51,41 @@ export const useRegister = () => {
           message,
         })
       );
+      setTimeout(() => {
+        !isError && history.push(`${links.root}`);
+      }, 2500);
     },
     [dispatch]
   );
 
   const handleSubmit = (values) => {
     if (isMounted) {
-      try {
-        const { ...rest } = values;
-        setLoading(true);
+      const { ...rest } = values;
+      setLoading(true);
 
-        const params = {
-          firstname: rest.firstname,
-          lastname: rest.lastname,
-          email1: rest.email,
-          phone1: rest.phone,
-        };
-        putUserCreate(params)
-          .then((res) => {
-            const {
-              data: { data },
-            } = res;
-            if (isMounted()) {
-              createUserSuccess(data);
-              setLoading(false);
-            }
-          })
-          .catch((error) => {
-            let errorMessage = error?.response?.data?.message;
-            if (isMounted()) {
-              setLoading(false);
-            }
-            showMessage(errorMessage, "error");
-          });
-      } catch (err) {}
+      const params = {
+        firstname: rest.fname,
+        lastname: rest.lastname,
+        email1: rest.email,
+        phone1: rest.phone,
+      };
+      putUserCreate(params)
+        .then((res) => {
+          const {
+            data: { data },
+          } = res;
+          if (isMounted()) {
+            createUserSuccess(data);
+            setLoading(false);
+          }
+        })
+        .catch((error) => {
+          let errorMessage = error?.response?.data?.message;
+          if (isMounted()) {
+            setLoading(false);
+          }
+          showMessage(errorMessage, "error");
+        });
     }
   };
 

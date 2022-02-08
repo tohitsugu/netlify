@@ -9,7 +9,6 @@ export const INITIAL_STATE = {
   sessionIsReady: false,
   sessionError: null,
   loginError: null,
-  tenantCommunityInfo: null,
   message: null,
   redirectToLogin: false,
   isForceLogout: false,
@@ -47,10 +46,8 @@ export const prepareSessionSuccess = (state = INITIAL_STATE, action) => {
     ...state,
     sessionError: false,
     sessionIsReady: true,
-    tenantCommunityInfo: action.payload.tenantCommunityInfo,
     loadingSession: false,
     authenticated: action.payload.authenticated,
-    brandingSettings: action.payload.brandingSettings,
   };
 };
 
@@ -59,8 +56,6 @@ export const prepareSessionFailure = (state = INITIAL_STATE, action) => {
     ...state,
     sessionError: action.payload,
     sessionIsReady: true,
-    tenantCommunityInfo: null,
-    brandingSettings: null,
     loadingSession: false,
   };
 };
@@ -69,10 +64,9 @@ export const logoutSuccess = (state = INITIAL_STATE, action) => {
   return {
     ...state,
     sessionIsReady: false,
-    tenantCommunityInfo: null,
     redirectToLogin: action.payload.redirectToLogin,
     isForceLogout: action.payload.isForceLogout,
-    brandingSettings: null,
+    authenticated: false,
   };
 };
 

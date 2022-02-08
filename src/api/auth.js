@@ -5,11 +5,15 @@ export const getServerPublicKey = () => {
 };
 
 export const createNewSession = (data) => {
-  return axios.put("/sessions/session/new", data);
+  return axios.put("/session/new", data);
 };
 
-export const pwlLogin = (data) => {
-  return axios.post("/session/response/fetch", data);
+export const pwlLogin = (sessionId) => {
+  return axios.get(`/session/${sessionId}/response`);
+};
+
+export const pwlLoginDemo = (sessionId) => {
+  return axios.get(`/session/${sessionId}/poll/auth_result`);
 };
 
 export const verifyUser = (data) => {

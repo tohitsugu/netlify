@@ -12,6 +12,7 @@ import FormHelperText from "@material-ui/core/FormHelperText";
 import Popper from "@material-ui/core/Popper";
 import Box from "@material-ui/core/Box";
 /* Icons */
+import { CopyIcon } from "../../../icons/CopyIcon";
 import { FormErrorIcon } from "../../../icons/FormErrorIcon";
 import { TextAreaCornerIcon } from "../../../icons/TextAreaCornerIcon";
 import { EyeIcon } from "../../../icons/EyeIcon";
@@ -122,6 +123,14 @@ export const FormikInputField = (props) => {
         className={classes.eyeIcon}
       >
         {showPassword ? <EyeOffIcon /> : <EyeIcon />}
+      </IconButton>
+    ) : type === "withIcon" ? (
+      <IconButton
+        onClick={handleEyeClick}
+        edge="end"
+        className={classes.eyeIcon}
+      >
+        <CopyIcon />
       </IconButton>
     ) : null;
 

@@ -19,15 +19,9 @@ function* prepareSession(action) {
       yield call(sessionService.setServerPublicKey, publicKey);
       yield call(sessionService.setCommunityKeys);
     }
-
-    const authenticated = yield call(
-      sessionService.getToken,
-      data?.data?.community?.id
-    );
-
+    const authenticated = yield call(sessionService.getToken);
     yield put(
       authActions.prepareSessionSuccess({
-        tenantCommunityInfo: data?.data,
         authenticated: authenticated !== null && authenticated !== undefined,
       })
     );
@@ -54,18 +48,18 @@ function* prepareSession(action) {
 function* pwlLoginUser(action) {
   const { data, successCallBack, errorCallback } = action.payload;
   try {
-    const userInfo = yield call(pwlLogin, data);
+    const userInfo = yield call(pwlLogin, data.sessionId);
     const { jwt_token } = userInfo.data.data;
     let tokenInfo =
       jwt_token !== null && jwt_token !== undefined ? jwt(jwt_token) : null;
     if (tokenInfo) {
-      yield sessionService.setSessionToken(tokenInfo?.community?.id, jwt_token);
+      yield sessionService.setSessionToken(jwt_token);
       yield put(authActions.pwlLoginSuccess());
       yield call(successCallBack);
     }
   } catch (error) {
     const errorMessage = error?.response?.data?.message;
-
+    console.log("errorMessage", errorMessage);
     if (
       (errorMessage &&
         error?.response?.data?.code === 404 &&
@@ -83,7 +77,6 @@ function* pwlLoginUser(action) {
       );
       errorCallback();
     }
-
     yield put(authActions.pwlLoginFailure(error));
   }
 }

@@ -1,21 +1,16 @@
 /* Core */
 import React from "react";
 import { isMobile } from "react-device-detect";
-import SwipeableViews from "react-swipeable-views";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 /* Components */
-//import { Footer } from "components/Footer";
-import { AppLoading } from "../../../CommonComponents/AppLoading";
 import { QRCodeTab } from "./QRCodeTab";
-//import { UserNameTab } from "./UserNameTab/UserNameTab";
 /* Hooks */
 import { useAuth } from "../../hooks/useAuth";
 import { usePasswordLess } from "../../hooks/usePasswordLess";
-//import { useFidoLogin } from "../../hooks/useFidoLogin";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   tabsLabel: {
-    color: (props) => `#${props?.brandingSettings?.heading_text_color}`, // theme.palette.secondary.main
+    color: theme.palette.secondary.main,
     marginBottom: "12px",
     userSelect: "none",
   },
@@ -51,24 +46,6 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     flex: "1 0 auto",
   },
-  tab: {
-    border: "none",
-    textTransform: "uppercase",
-    color: theme.palette.neutral[400],
-    padding: "6px",
-    cursor: "pointer",
-    backgroundColor: "transparent",
-    userSelect: "none",
-    fontWeight: theme.palette.fontWeightSemiBold,
-    letterSpacing: "1.6px",
-    [theme.breakpoints.up("sm")]: {
-      fontSize: "0.75rem",
-      padding: "6px 10px",
-    },
-  },
-  active: {
-    color: (props) => `#${props?.brandingSettings?.active_tab_text_color}`, //"#EE0000"
-  },
   appsTitle: {
     fontSize: "0.875rem",
     color: theme.palette.secondary.light,
@@ -78,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   appsLink: {
-    color: (props) => `#${props?.brandingSettings?.links_color}`, //"#1C89B6"
+    color: "#1C89B6",
     marginLeft: "20px",
     textDecoration: "none",
     cursor: "pointer",
@@ -106,56 +83,61 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     userSelect: "none",
   },
+  background: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    width: "100%",
+    height: 285,
+    [theme.breakpoints.up("lg")]: {
+      backgroundColor: "#550095",
+      backgroundImage: `url(${window?.location?.protocol}//${window?.location?.host}/devportal/img/bc-login.svg)`,
+      backgroundRepeat: "no-repeat",
+      backgroundSize: "contain",
+      backgroundPositionY: "bottom",
+      backgroundPositionX: "center",
+      bottom: 0,
+      right: "unset",
+      width: "460px",
+      height: "100%",
+      position: "fixed",
+    },
+  },
 }));
 
 export const LoginForm = () => {
-  const {
-    sessionIsReady,
+  const { sessionIsReady, authenticated, loadingSession } = useAuth();
+  const { QRValue } = usePasswordLess({
     authenticated,
-    communityName,
-    userInfo,
-    setUserInfo,
-    isLoading,
     loadingSession,
-    brandingSettings,
-  } = useAuth();
-
-  const { QRValue, toggleAuthOption, index } = usePasswordLess({
-    userInfo,
-    setUserInfo,
-    authenticated,
+    sessionIsReady,
   });
 
   let containerHeight = isMobile ? 400 : 500;
 
-  const classes = useStyles({ containerHeight, userInfo, brandingSettings });
-  // console.log("sessionIsReady", sessionIsReady);
-  // console.log("loadingSession", loadingSession);
-  if (!sessionIsReady || loadingSession) {
-    return <AppLoading />;
-  }
+  const classes = useStyles({ containerHeight });
 
   const renderLogo = () => {
-    return brandingSettings?.community_logo_img ? (
+    return (
       <Box className={classes.loginLogo}>
         <img
           className={classes.logoImg}
-          src={brandingSettings?.community_logo_img}
+          src={`${window?.location?.protocol}//${window?.location?.host}/devportal/img/logo.svg`}
           alt="logo"
         />
       </Box>
-    ) : (
-      <></>
     );
   };
 
   return (
-    <Grid container spacing={3} className={classes.container}>
+    <Grid container className={classes.container}>
+      {<Box className={classes.background} />}
       <Grid item xs={12} sm={12}>
         <Box className={classes.tabsContainer}>
           <Box className={classes.formContainer}>
             <Typography variant="h1" className={classes.tabsLabel}>
-              Sign in
+              BlockID Developer Sign In
             </Typography>
             <Box className={classes.paperWrapper}>
               <Box
@@ -167,22 +149,7 @@ export const LoginForm = () => {
                 <div className={classes.tabsWrapper}></div>
               </Box>
               <Paper className={classes.root}>
-                <SwipeableViews
-                  index={index}
-                  onChangeIndex={(idx) => {
-                    if (idx < 2) {
-                      toggleAuthOption(idx);
-                    }
-                  }}
-                  className={classes.slide}
-                >
-                  <QRCodeTab
-                    renderLogo={renderLogo}
-                    communityName={communityName}
-                    sessionValue={QRValue}
-                    brandingSettings={brandingSettings}
-                  />
-                </SwipeableViews>
+                <QRCodeTab renderLogo={renderLogo} sessionValue={QRValue} />
               </Paper>
               <Box
                 display="flex"
@@ -220,7 +187,6 @@ export const LoginForm = () => {
               </Box>
             </Box>
           </Box>
-          {/* <Footer /> */}
         </Box>
       </Grid>
     </Grid>

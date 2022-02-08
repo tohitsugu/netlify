@@ -17,8 +17,8 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "Software and Hardware OTP Support",
-    "permalink": "/docs/software-and-hardware-otp-support"
+    "title": "Radius Configuration",
+    "permalink": "/docs/radius-configuration"
   },
   "next": {
     "title": "User Management",

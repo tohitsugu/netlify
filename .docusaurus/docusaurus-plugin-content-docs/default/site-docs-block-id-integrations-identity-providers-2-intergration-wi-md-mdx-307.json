@@ -17,8 +17,8 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "Integration with ARCON",
-    "permalink": "/docs/integration-with-arcon"
+    "title": "BlockID iOS SDK 1.0.0",
+    "permalink": "/docs/ios-100"
   },
   "next": {
     "title": "Integration with Salesforce",

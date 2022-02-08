@@ -1,13 +1,21 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
 import { Box, makeStyles, Typography } from "@material-ui/core";
+import { useSelector } from "react-redux";
 /* Components */
 import CustomButton from "../../CommonComponents/Button";
+import { AppLoading } from "../../CommonComponents/AppLoading";
 /* Hooks */
 import { useHomePage } from "../hooks/useHomePage";
+/* Navigation */
+import { links } from "../../../navigation/config";
 
 const useStyles = makeStyles((theme) => ({
   pageContainer: {
     padding: "65px 10%",
+    [theme.breakpoints.down("sm")]: {
+      padding: "65px 16%",
+    },
   },
   contentWrapper: {
     display: "flex",
@@ -15,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "top",
   },
   leftSec: {
-    width: "50%",
+    // width: "50%",
   },
   rightSec: {
     width: "50%",
@@ -26,6 +34,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "600",
     lineHeight: "38px",
     marginBottom: "15px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "24px",
+    },
   },
   content: {
     fontSize: "16px",
@@ -33,6 +44,9 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: "normal",
     lineHeight: "150%",
     marginBottom: "20px",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "14px",
+    },
   },
   QRBoxes: {
     float: "right",
@@ -40,7 +54,6 @@ const useStyles = makeStyles((theme) => ({
   QRImage: {
     marginTop: "-117px",
     float: "right",
-    cursor: "pointer",
   },
   tryBtn: {
     backgroundColor: "#CD040B",
@@ -50,9 +63,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export function HomePage(props) {
+export function HomePage() {
   const classes = useStyles();
-  const { handleRegister } = useHomePage();
+  const { handleRegister, loading } = useHomePage();
+  if (loading) {
+    return <AppLoading size={48} />;
+  }
   return (
     <>
       <Box className={classes.pageContainer}>
@@ -76,12 +92,12 @@ export function HomePage(props) {
           <Box className={classes.rightSec}>
             <img
               className={classes.QRBoxes}
-              src={"img/qr-boxes.png"}
+              src={`${window?.location?.protocol}//${window?.location?.host}/devportal/img/qr-boxes.png`}
               alt="logo"
             />
             <img
               className={classes.QRImage}
-              src={"img/landing-page-qr.png"}
+              src={`${window?.location?.protocol}//${window?.location?.host}/devportal/img/landing-page-qr.png`}
               alt="logo"
             />
           </Box>

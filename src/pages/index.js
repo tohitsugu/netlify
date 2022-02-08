@@ -10,7 +10,7 @@ export default function Home() {
         const Layout = require("../hoc/Layout").default;
         const HomePage = require("../components/Home").HomePage;
         return (
-          <Layout>
+          <Layout isHome={true}>
             <HomePage />
           </Layout>
         );
