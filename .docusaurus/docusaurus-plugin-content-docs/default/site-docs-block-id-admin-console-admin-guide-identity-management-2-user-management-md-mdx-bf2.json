@@ -17,8 +17,8 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "Radius Configuration",
-    "permalink": "/docs/radius-configuration"
+    "title": "SAML Configurations",
+    "permalink": "/docs/samlv2"
   },
   "next": {
     "title": "Role Management",

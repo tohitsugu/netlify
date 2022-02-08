@@ -21,7 +21,7 @@
     "permalink": "/docs/generic-saml-application"
   },
   "next": {
-    "title": "Getting Started",
-    "permalink": "/docs/getting-started"
+    "title": "Integration with CyberArk",
+    "permalink": "/docs/integration-with-cyberark"
   }
 }

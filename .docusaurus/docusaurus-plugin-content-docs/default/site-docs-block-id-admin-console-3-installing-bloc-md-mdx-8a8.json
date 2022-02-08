@@ -17,8 +17,8 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "Universal Web Login",
-    "permalink": "/docs/uwl"
+    "title": "Installing BlockID Credential Provider",
+    "permalink": "/docs/installing-blockid-credential-provider"
   },
   "next": {
     "title": "User Onboarding Process Guide",

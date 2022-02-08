@@ -21,7 +21,7 @@
     "permalink": "/docs/role-management"
   },
   "next": {
-    "title": "Installing BlockID Credential Provider",
-    "permalink": "/docs/installing-blockid-credential-provider"
+    "title": "Installing BlockID Authentication Broker",
+    "permalink": "/docs/installing-blockid-authentication-broker"
   }
 }

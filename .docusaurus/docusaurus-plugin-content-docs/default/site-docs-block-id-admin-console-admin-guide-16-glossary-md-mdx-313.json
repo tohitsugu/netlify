@@ -21,7 +21,7 @@
     "permalink": "/docs/core-configurations"
   },
   "next": {
-    "title": "Authentication Modules",
-    "permalink": "/docs/authentication-modules"
+    "title": "Datastore Configuration",
+    "permalink": "/docs/datastore-configuration-1"
   }
 }

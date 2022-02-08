@@ -17,8 +17,8 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "Integration with ARCON",
-    "permalink": "/docs/integration-with-arcon"
+    "title": "Integration with ForgeRock",
+    "permalink": "/docs/integration-with-forgerock"
   },
   "next": {
     "title": "Integration with Zscaler",

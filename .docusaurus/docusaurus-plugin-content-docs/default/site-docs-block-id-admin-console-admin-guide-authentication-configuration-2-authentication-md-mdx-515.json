@@ -17,8 +17,8 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "Glossary",
-    "permalink": "/docs/glossary"
+    "title": "Radius Configuration",
+    "permalink": "/docs/radius-configuration"
   },
   "next": {
     "title": "Authentication Scheme",

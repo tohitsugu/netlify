@@ -309,8 +309,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Glossary",
-                "permalink": "/docs/glossary"
+                "title": "Radius Configuration",
+                "permalink": "/docs/radius-configuration"
               },
               "next": {
                 "title": "Authentication Scheme",
@@ -417,8 +417,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "SAML Configurations",
-                "permalink": "/docs/samlv2"
+                "title": "Glossary",
+                "permalink": "/docs/glossary"
               },
               "next": {
                 "title": "SCEP Configuration",
@@ -448,8 +448,8 @@
                 "permalink": "/docs/scep-configuration"
               },
               "next": {
-                "title": "User Management",
-                "permalink": "/docs/user-management"
+                "title": "Authentication Modules",
+                "permalink": "/docs/authentication-modules"
               }
             },
             {
@@ -502,8 +502,8 @@
                 "permalink": "/docs/software-and-hardware-otp-support"
               },
               "next": {
-                "title": "Datastore Configuration",
-                "permalink": "/docs/datastore-configuration-1"
+                "title": "User Management",
+                "permalink": "/docs/user-management"
               }
             },
             {
@@ -529,8 +529,8 @@
                 "permalink": "/docs/core-configurations"
               },
               "next": {
-                "title": "Authentication Modules",
-                "permalink": "/docs/authentication-modules"
+                "title": "Datastore Configuration",
+                "permalink": "/docs/datastore-configuration-1"
               }
             },
             {
@@ -552,8 +552,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Radius Configuration",
-                "permalink": "/docs/radius-configuration"
+                "title": "SAML Configurations",
+                "permalink": "/docs/samlv2"
               },
               "next": {
                 "title": "Role Management",
@@ -583,8 +583,8 @@
                 "permalink": "/docs/role-management"
               },
               "next": {
-                "title": "Installing BlockID Credential Provider",
-                "permalink": "/docs/installing-blockid-credential-provider"
+                "title": "Installing BlockID Authentication Broker",
+                "permalink": "/docs/installing-blockid-authentication-broker"
               }
             },
             {
@@ -768,8 +768,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Universal Web Login",
-                "permalink": "/docs/uwl"
+                "title": "Installing BlockID Credential Provider",
+                "permalink": "/docs/installing-blockid-credential-provider"
               },
               "next": {
                 "title": "User Onboarding Process Guide",
@@ -826,8 +826,8 @@
                 "permalink": "/docs/blockid-authentication-broker-user-guide"
               },
               "next": {
-                "title": "Introduction to Athena Admin Portal",
-                "permalink": "/docs/introduction-to-athena-admin-portal"
+                "title": "BlockID Mobile Application User Guide",
+                "permalink": "/docs/blockid-mobile-application-user-guide"
               }
             },
             {
@@ -876,8 +876,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "BlockID Mobile Application User Guide",
-                "permalink": "/docs/blockid-mobile-application-user-guide"
+                "title": "Policy Management",
+                "permalink": "/docs/saml-configuration"
               },
               "next": {
                 "title": "BlockID Authentication Broker - User Guide",
@@ -903,12 +903,12 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Policy Management",
-                "permalink": "/docs/saml-configuration"
+                "title": "Universal Web Login",
+                "permalink": "/docs/uwl"
               },
               "next": {
-                "title": "BlockID Mobile Application User Guide",
-                "permalink": "/docs/blockid-mobile-application-user-guide"
+                "title": "Installing BlockID Admin Console",
+                "permalink": "/docs/installing-blockid-admin-console"
               }
             },
             {
@@ -930,8 +930,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "BlockID iOS SDK 1.0.0",
-                "permalink": "/docs/ios-100"
+                "title": "Integration with ARCON",
+                "permalink": "/docs/integration-with-arcon"
               },
               "next": {
                 "title": "Integration with Salesforce",
@@ -1015,8 +1015,8 @@
                 "permalink": "/docs/integration-with-cyberark-idaptive-identity"
               },
               "next": {
-                "title": "Integration with CyberArk",
-                "permalink": "/docs/integration-with-cyberark"
+                "title": "Integration with Citrix NetScaler",
+                "permalink": "/docs/integration-with-citrix-netscaler"
               }
             },
             {
@@ -1177,8 +1177,8 @@
                 "permalink": "/docs/integration-with-cyberark"
               },
               "next": {
-                "title": "Integration with Citrix NetScaler",
-                "permalink": "/docs/integration-with-citrix-netscaler"
+                "title": "Intergration with Okta",
+                "permalink": "/docs/intergration-with-okta"
               }
             },
             {
@@ -1200,8 +1200,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Integration with ForgeRock",
-                "permalink": "/docs/integration-with-forgerock"
+                "title": "Office365 Integration",
+                "permalink": "/docs/office365-integration"
               },
               "next": {
                 "title": "Integration with ARCON",
@@ -1227,8 +1227,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Integration with ARCON",
-                "permalink": "/docs/integration-with-arcon"
+                "title": "Integration with ForgeRock",
+                "permalink": "/docs/integration-with-forgerock"
               },
               "next": {
                 "title": "Integration with Zscaler",
@@ -1258,8 +1258,8 @@
                 "permalink": "/docs/integration-with-zscaler"
               },
               "next": {
-                "title": "BlockID Release Notes",
-                "permalink": "/docs/v2/blockid-release-notes"
+                "title": "Frequently Asked Questions (FAQs)",
+                "permalink": "/docs/v2/frequently-asked-questions-faq"
               }
             },
             {
@@ -1308,12 +1308,12 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Installing BlockID Credential Provider",
-                "permalink": "/docs/installing-blockid-credential-provider"
+                "title": "Upgrading BlockID Authentication Broker",
+                "permalink": "/docs/upgrading-blockid-authentication-broker"
               },
               "next": {
-                "title": "Installing BlockID Authentication Broker",
-                "permalink": "/docs/installing-blockid-authentication-broker"
+                "title": "Getting Started",
+                "permalink": "/docs/getting-started"
               }
             },
             {
@@ -1339,8 +1339,8 @@
                 "permalink": "/docs/generic-saml-application"
               },
               "next": {
-                "title": "Getting Started",
-                "permalink": "/docs/getting-started"
+                "title": "Integration with CyberArk",
+                "permalink": "/docs/integration-with-cyberark"
               }
             },
             {
@@ -1632,8 +1632,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Upgrading BlockID Authentication Broker",
-                "permalink": "/docs/upgrading-blockid-authentication-broker"
+                "title": "BlockID iOS SDK 1.0.0",
+                "permalink": "/docs/ios-100"
               },
               "next": {
                 "title": "Login",
@@ -1933,8 +1933,8 @@
                 "permalink": "/docs/ios-110"
               },
               "next": {
-                "title": "Intergration with Okta",
-                "permalink": "/docs/intergration-with-okta"
+                "title": "Introduction to Athena Admin Portal",
+                "permalink": "/docs/introduction-to-athena-admin-portal"
               }
             },
             {
@@ -1983,8 +1983,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Office365 Integration",
-                "permalink": "/docs/office365-integration"
+                "title": "BlockID Mobile Application User Guide",
+                "permalink": "/docs/blockid-mobile-application-user-guide"
               },
               "next": {
                 "title": "Universal Web Login (UWL) Guide",
@@ -2258,8 +2258,8 @@
                 "permalink": "/docs/otp/verify"
               },
               "next": {
-                "title": "Installing BlockID Admin Console",
-                "permalink": "/docs/installing-blockid-admin-console"
+                "title": "Installing BlockID Credential Provider",
+                "permalink": "/docs/installing-blockid-credential-provider"
               }
             },
             {
@@ -2281,8 +2281,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Release Notes R1.02.03",
-                "permalink": "/docs/v2/release-notes-r10300"
+                "title": "Integration with CISCO Check Point",
+                "permalink": "/docs/integration-with-cisco-check-point"
               },
               "next": {
                 "title": "FAQ's related to the BlockID Product Suite",
@@ -2310,6 +2310,10 @@
               "previous": {
                 "title": "FAQ's related to the BlockID Product Suite",
                 "permalink": "/docs/v2/faqs-related-to-the-blockid-product-suite"
+              },
+              "next": {
+                "title": "BlockID Release Notes",
+                "permalink": "/docs/v2/blockid-release-notes"
               }
             },
             {
@@ -2385,8 +2389,8 @@
               },
               "sidebar": "mySidebar",
               "previous": {
-                "title": "Integration with CISCO Check Point",
-                "permalink": "/docs/integration-with-cisco-check-point"
+                "title": "Internal FAQ guide for BlockID Product Suite",
+                "permalink": "/docs/v2/internal-faq-guide-for-blockid-product-suite"
               },
               "next": {
                 "title": "Release Notes v3",
@@ -2414,10 +2418,6 @@
               "previous": {
                 "title": "Release Notes R1.02.00",
                 "permalink": "/docs/v2/release-notes-r102"
-              },
-              "next": {
-                "title": "Frequently Asked Questions (FAQs)",
-                "permalink": "/docs/v2/frequently-asked-questions-faq"
               }
             },
             {
@@ -2536,6 +2536,18 @@
               },
               {
                 "type": "category",
+                "label": "BlockID Credential Provider",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "BlockID Credential Provider/Zbce27641-b3b3-4c34-8c3e-b5a39c6164f7"
+                  }
+                ]
+              },
+              {
+                "type": "category",
                 "label": "BlockID Admin Console",
                 "collapsible": true,
                 "collapsed": true,
@@ -2600,6 +2612,26 @@
                       },
                       {
                         "type": "category",
+                        "label": "Enterprise Configuration",
+                        "collapsible": true,
+                        "collapsed": true,
+                        "items": [
+                          {
+                            "type": "doc",
+                            "id": "BlockID Admin Console/Admin Guide/Enterprise Configuration/datastore-configuration-1"
+                          },
+                          {
+                            "type": "doc",
+                            "id": "BlockID Admin Console/Admin Guide/Enterprise Configuration/scep-configuration"
+                          },
+                          {
+                            "type": "doc",
+                            "id": "BlockID Admin Console/Admin Guide/Enterprise Configuration/radius-configuration"
+                          }
+                        ]
+                      },
+                      {
+                        "type": "category",
                         "label": "Authentication Configuration",
                         "collapsible": true,
                         "collapsed": true,
@@ -2632,26 +2664,6 @@
                       },
                       {
                         "type": "category",
-                        "label": "Enterprise Configuration",
-                        "collapsible": true,
-                        "collapsed": true,
-                        "items": [
-                          {
-                            "type": "doc",
-                            "id": "BlockID Admin Console/Admin Guide/Enterprise Configuration/datastore-configuration-1"
-                          },
-                          {
-                            "type": "doc",
-                            "id": "BlockID Admin Console/Admin Guide/Enterprise Configuration/scep-configuration"
-                          },
-                          {
-                            "type": "doc",
-                            "id": "BlockID Admin Console/Admin Guide/Enterprise Configuration/radius-configuration"
-                          }
-                        ]
-                      },
-                      {
-                        "type": "category",
                         "label": "Identity Management",
                         "collapsible": true,
                         "collapsed": true,
@@ -2671,30 +2683,6 @@
                         ]
                       }
                     ]
-                  }
-                ]
-              },
-              {
-                "type": "category",
-                "label": "BlockID Credential Provider",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
-                  {
-                    "type": "doc",
-                    "id": "BlockID Credential Provider/Zbce27641-b3b3-4c34-8c3e-b5a39c6164f7"
-                  }
-                ]
-              },
-              {
-                "type": "category",
-                "label": "BlockID Mobile Application",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
-                  {
-                    "type": "doc",
-                    "id": "BlockID Mobile Application/Zcf2a3abc-5b16-4aa5-9281-4023959f8301"
                   }
                 ]
               },
@@ -2720,117 +2708,13 @@
               },
               {
                 "type": "category",
-                "label": "BlockID New Admin Portal (Athena)",
+                "label": "BlockID Mobile Application",
                 "collapsible": true,
                 "collapsed": true,
                 "items": [
                   {
                     "type": "doc",
-                    "id": "BlockID New Admin Portal (Athena)/Z2cd6493e-3d85-4c46-91d5-0b93e239b73c"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "BlockID New Admin Portal (Athena)/Z3a4d60f8-4984-4f20-9d87-7d6f0800ed40"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "BlockID New Admin Portal (Athena)/Zb17b8cd6-f8b7-41c5-a294-400c23d8540d"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "BlockID New Admin Portal (Athena)/Z1d78dd72-0421-42cb-96da-4cb2a59eb0f8"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "BlockID New Admin Portal (Athena)/email-sms"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "BlockID New Admin Portal (Athena)/Z9725f068-c919-4fc9-a454-053fa9382a2f"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "BlockID New Admin Portal (Athena)/Ze5776a5b-8b2e-498a-9438-c665d9291260"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "BlockID New Admin Portal (Athena)/Ze3a67a1a-0728-4ed6-b42b-d040c4a89d6e"
-                  },
-                  {
-                    "type": "category",
-                    "label": "Directory Integrations",
-                    "collapsible": true,
-                    "collapsed": true,
-                    "items": [
-                      {
-                        "type": "doc",
-                        "id": "BlockID New Admin Portal (Athena)/Directory Integrations/Z422742d5-e5f4-4563-8b5b-75fe651251fc"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
-                    "label": "Release Notes",
-                    "collapsible": true,
-                    "collapsed": true,
-                    "items": [
-                      {
-                        "type": "doc",
-                        "id": "BlockID New Admin Portal (Athena)/Release Notes/Z7575ff9b-19c0-408e-bf74-0080f94cb7b2"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
-                    "label": "Settings",
-                    "collapsible": true,
-                    "collapsed": true,
-                    "items": [
-                      {
-                        "type": "doc",
-                        "id": "BlockID New Admin Portal (Athena)/Settings/Zc1f22108-c5aa-4b1c-b3d5-c2cf705d1fbb"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
-                    "label": "Applications",
-                    "collapsible": true,
-                    "collapsed": true,
-                    "items": [
-                      {
-                        "type": "category",
-                        "label": "Add Applications",
-                        "collapsible": true,
-                        "collapsed": true,
-                        "items": [
-                          {
-                            "type": "doc",
-                            "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z869ef4f5-309a-4480-a715-6c7a4148d3f9"
-                          },
-                          {
-                            "type": "doc",
-                            "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z6afecf9d-3c6f-418b-9aab-c0c99d48009b"
-                          },
-                          {
-                            "type": "doc",
-                            "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Zd8371067-2e6a-4730-9ef7-289dcab8c344"
-                          },
-                          {
-                            "type": "doc",
-                            "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z707bbbf3-7895-45bd-8b00-c4c64f09641b"
-                          },
-                          {
-                            "type": "doc",
-                            "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Ze12c6643-599c-41b6-b85d-1bcdb6691b0f"
-                          },
-                          {
-                            "type": "doc",
-                            "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z1b65946e-a6e7-45a8-8c9b-04d81aa9a32e"
-                          }
-                        ]
-                      }
-                    ]
+                    "id": "BlockID Mobile Application/Zcf2a3abc-5b16-4aa5-9281-4023959f8301"
                   }
                 ]
               },
@@ -2960,10 +2844,142 @@
               },
               {
                 "type": "category",
+                "label": "BlockID New Admin Portal (Athena)",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "doc",
+                    "id": "BlockID New Admin Portal (Athena)/Z2cd6493e-3d85-4c46-91d5-0b93e239b73c"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "BlockID New Admin Portal (Athena)/Z3a4d60f8-4984-4f20-9d87-7d6f0800ed40"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "BlockID New Admin Portal (Athena)/Zb17b8cd6-f8b7-41c5-a294-400c23d8540d"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "BlockID New Admin Portal (Athena)/Z1d78dd72-0421-42cb-96da-4cb2a59eb0f8"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "BlockID New Admin Portal (Athena)/email-sms"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "BlockID New Admin Portal (Athena)/Z9725f068-c919-4fc9-a454-053fa9382a2f"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "BlockID New Admin Portal (Athena)/Ze5776a5b-8b2e-498a-9438-c665d9291260"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "BlockID New Admin Portal (Athena)/Ze3a67a1a-0728-4ed6-b42b-d040c4a89d6e"
+                  },
+                  {
+                    "type": "category",
+                    "label": "Directory Integrations",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "BlockID New Admin Portal (Athena)/Directory Integrations/Z422742d5-e5f4-4563-8b5b-75fe651251fc"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "Release Notes",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "BlockID New Admin Portal (Athena)/Release Notes/Z7575ff9b-19c0-408e-bf74-0080f94cb7b2"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "Settings",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "BlockID New Admin Portal (Athena)/Settings/Zc1f22108-c5aa-4b1c-b3d5-c2cf705d1fbb"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "Applications",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "category",
+                        "label": "Add Applications",
+                        "collapsible": true,
+                        "collapsed": true,
+                        "items": [
+                          {
+                            "type": "doc",
+                            "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z869ef4f5-309a-4480-a715-6c7a4148d3f9"
+                          },
+                          {
+                            "type": "doc",
+                            "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z6afecf9d-3c6f-418b-9aab-c0c99d48009b"
+                          },
+                          {
+                            "type": "doc",
+                            "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Zd8371067-2e6a-4730-9ef7-289dcab8c344"
+                          },
+                          {
+                            "type": "doc",
+                            "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z707bbbf3-7895-45bd-8b00-c4c64f09641b"
+                          },
+                          {
+                            "type": "doc",
+                            "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Ze12c6643-599c-41b6-b85d-1bcdb6691b0f"
+                          },
+                          {
+                            "type": "doc",
+                            "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z1b65946e-a6e7-45a8-8c9b-04d81aa9a32e"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "category",
                 "label": "BlockID Integrations",
                 "collapsible": true,
                 "collapsed": true,
                 "items": [
+                  {
+                    "type": "category",
+                    "label": "PAM (Privilege Account Management)",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "BlockID Integrations/PAM (Privilege Account Management)/Z660bdd75-9447-48fe-84e8-b26029d4f403"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "BlockID Integrations/PAM (Privilege Account Management)/Z579bc6d1-e02a-48d4-9f27-78e9edb58aa0"
+                      }
+                    ]
+                  },
                   {
                     "type": "category",
                     "label": "Identity Providers",
@@ -3010,22 +3026,6 @@
                   },
                   {
                     "type": "category",
-                    "label": "PAM (Privilege Account Management)",
-                    "collapsible": true,
-                    "collapsed": true,
-                    "items": [
-                      {
-                        "type": "doc",
-                        "id": "BlockID Integrations/PAM (Privilege Account Management)/Z660bdd75-9447-48fe-84e8-b26029d4f403"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "BlockID Integrations/PAM (Privilege Account Management)/Z579bc6d1-e02a-48d4-9f27-78e9edb58aa0"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
                     "label": "Remote Access",
                     "collapsible": true,
                     "collapsed": true,
@@ -3054,6 +3054,26 @@
                 "items": [
                   {
                     "type": "category",
+                    "label": "BlockID FAQ",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "doc",
+                        "id": "v2/BlockID FAQ/Za49f1bb3-aba5-47e6-9a66-1248143e8c67"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "v2/BlockID FAQ/Zef1df47a-d435-421b-a375-61157ac1420f"
+                      },
+                      {
+                        "type": "doc",
+                        "id": "v2/BlockID FAQ/Zb0eccd8d-dfdc-48d7-bf4a-2444bd2c7822"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
                     "label": "Release Notes",
                     "collapsible": true,
                     "collapsed": true,
@@ -3073,26 +3093,6 @@
                       {
                         "type": "doc",
                         "id": "v2/Release Notes/Z89a4e212-0c52-480e-8072-3d62e7106a82"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
-                    "label": "BlockID FAQ",
-                    "collapsible": true,
-                    "collapsed": true,
-                    "items": [
-                      {
-                        "type": "doc",
-                        "id": "v2/BlockID FAQ/Za49f1bb3-aba5-47e6-9a66-1248143e8c67"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v2/BlockID FAQ/Zef1df47a-d435-421b-a375-61157ac1420f"
-                      },
-                      {
-                        "type": "doc",
-                        "id": "v2/BlockID FAQ/Zb0eccd8d-dfdc-48d7-bf4a-2444bd2c7822"
                       }
                     ]
                   }

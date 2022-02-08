@@ -17,8 +17,8 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "BlockID Mobile Application User Guide",
-    "permalink": "/docs/blockid-mobile-application-user-guide"
+    "title": "Policy Management",
+    "permalink": "/docs/saml-configuration"
   },
   "next": {
     "title": "BlockID Authentication Broker - User Guide",

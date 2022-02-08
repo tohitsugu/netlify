@@ -21,7 +21,7 @@
     "permalink": "/docs/scep-configuration"
   },
   "next": {
-    "title": "User Management",
-    "permalink": "/docs/user-management"
+    "title": "Authentication Modules",
+    "permalink": "/docs/authentication-modules"
   }
 }

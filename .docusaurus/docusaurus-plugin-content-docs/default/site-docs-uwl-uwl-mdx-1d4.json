@@ -22,7 +22,7 @@
     "permalink": "/docs/otp/verify"
   },
   "next": {
-    "title": "Installing BlockID Admin Console",
-    "permalink": "/docs/installing-blockid-admin-console"
+    "title": "Installing BlockID Credential Provider",
+    "permalink": "/docs/installing-blockid-credential-provider"
   }
 }
