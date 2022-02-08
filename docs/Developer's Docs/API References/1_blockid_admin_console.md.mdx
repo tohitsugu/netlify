@@ -12,7 +12,7 @@ id: blockid-admin-console-api
 :::caution
 <details>
 <summary><b>Description</b></summary>
-<br>
+<br />
 <b>r1/system/community_info/update API</b>: In this API, Administrators of a community can limit the number of devices a persona can be registered on. In the “persons per account” limit rule, you can set the maximum limit for devices per community. The default limit is 1 for all communities and it can also be configurable. You can also configure the “persons Limit Rule” in which there are two configurable options to regulate the behavior when a user tries to add the same persona on an <b>n+1</b> device where the maximum limit of devices is <b>n</b>. 
 </details>
 :::
@@ -20,7 +20,7 @@ id: blockid-admin-console-api
 :::caution
 <details>
 <summary><b>Parameters</b></summary>
-<br>
+<br />
 The parameters are: 
 <ol>
 <li><b>personsPerAccount</b>: The default value is <b>1</b>.</li>
@@ -36,7 +36,7 @@ The parameters are:
 :::caution
 <details>
 <summary><b>Known side effects</b></summary>
-<br>
+<br />
 When the “personsPerAccount” limit is set to 1 and the “personLimitRule” rule is set to ‘cleanup’, the passwordless login will happen on the first device (<b>device1</b>) and you can link the second device (<b>device2</b>) using the magic link. Now the <b>device1</b> is no longer authorized for the account, but your login session does not expire. However, once you log out, you should not be able to use <b>device1</b> for passwordless login.
 </details>
 :::
@@ -55,7 +55,7 @@ When the “personsPerAccount” limit is set to 1 and the “personLimitRule”
 :::caution
 <details>
 <summary><b>Description</b></summary>
-<br>
+<br />
 <b>r2/acr/community/community/code</b> API: 
 In this API, a new option has been introduced to send the invitation magic link via SMS to end-users. The phone number of the user will be picked up from the directory and shown as an option to the administrator to be used for the delivery of the magic link.
 </details>
@@ -64,7 +64,7 @@ In this API, a new option has been introduced to send the invitation magic link 
 :::caution
 <details>
 <summary><b>Parameters</b></summary>
-<br>
+<br />
 There are two additional parameters <b>smsTo</b> and <b>smsTemplateB64</b> added these behave the same way as <b>emailTo</b> and <b>emailTemplateB64</b>.
 <ol>
 <li><b>smsTo</b>: The value includes a mobile number prefixed with the country code.</li>
@@ -80,7 +80,7 @@ There are two additional parameters <b>smsTo</b> and <b>smsTemplateB64</b> added
 :::caution
 <details>
 <summary><b>Description</b></summary>
-<br>
+<br />
 <b>/api/r2/otp/generate</b> API: 
 This API will be used to obtain the value of the OTP that was sent to the user.
 
@@ -96,7 +96,7 @@ If none of the destinations is provided, this API will return the OTP code in re
 :::caution
 <details>
 <summary><b>Parameters</b></summary>
-<br>
+<br />
 If any of the following attributes are provided, this API schedules OTP to be generated or delivered asynchronously.    
 <ol>
 <li><b>emailTo</b>: The value includes the email address of the user.</li>
