@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID New Admin Portal (Athena)/Z2cd6493e-3d85-4c46-91d5-0b93e239b73c",
+  "id": "BlockID New Admin Portal (Athena)/Z2cd6493e-3d85-4c46-91d5-0b93e239b73c",
+  "isDocsHomePage": false,
+  "title": "Introduction to Athena Admin Portal",
+  "description": "Overview",
+  "source": "@site/docs/BlockID New Admin Portal (Athena)/2_introduction-to.md.mdx",
+  "sourceDirName": "BlockID New Admin Portal (Athena)",
+  "slug": "/introduction-to-athena-admin-portal",
+  "permalink": "/docs/introduction-to-athena-admin-portal",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/introduction-to-athena-admin-portal",
+    "id": "Z2cd6493e-3d85-4c46-91d5-0b93e239b73c"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Upgrading BlockID Authentication Broker",
+    "permalink": "/docs/upgrading-blockid-authentication-broker"
+  },
+  "next": {
+    "title": "Login",
+    "permalink": "/docs/login-with-mfa"
+  }
+}

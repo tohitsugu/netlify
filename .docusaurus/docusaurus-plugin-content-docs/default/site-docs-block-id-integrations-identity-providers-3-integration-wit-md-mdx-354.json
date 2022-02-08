@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID Integrations/Identity Providers/Z8c31c0dd-dd72-4b22-bee5-16a3cbedee0b",
+  "id": "BlockID Integrations/Identity Providers/Z8c31c0dd-dd72-4b22-bee5-16a3cbedee0b",
+  "isDocsHomePage": false,
+  "title": "Integration with Salesforce",
+  "description": "Overview",
+  "source": "@site/docs/BlockID Integrations/Identity Providers/3_integration-wit.md.mdx",
+  "sourceDirName": "BlockID Integrations/Identity Providers",
+  "slug": "/integration-with-salesforce",
+  "permalink": "/docs/integration-with-salesforce",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/integration-with-salesforce",
+    "id": "Z8c31c0dd-dd72-4b22-bee5-16a3cbedee0b"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Intergration with Okta",
+    "permalink": "/docs/intergration-with-okta"
+  },
+  "next": {
+    "title": "Integration with Microsoft ADFS",
+    "permalink": "/docs/integration-with-adfs"
+  }
+}

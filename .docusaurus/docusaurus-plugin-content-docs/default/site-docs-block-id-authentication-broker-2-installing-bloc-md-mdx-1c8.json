@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID Authentication Broker/Zdae9610f-aaf7-4309-82e7-14a40f70d02a",
+  "id": "BlockID Authentication Broker/Zdae9610f-aaf7-4309-82e7-14a40f70d02a",
+  "isDocsHomePage": false,
+  "title": "Installing BlockID Authentication Broker",
+  "description": "Overview",
+  "source": "@site/docs/BlockID Authentication Broker/2_installing-bloc.md.mdx",
+  "sourceDirName": "BlockID Authentication Broker",
+  "slug": "/installing-blockid-authentication-broker",
+  "permalink": "/docs/installing-blockid-authentication-broker",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/installing-blockid-authentication-broker",
+    "id": "Zdae9610f-aaf7-4309-82e7-14a40f70d02a"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Mobile Application User Guide",
+    "permalink": "/docs/blockid-mobile-application-user-guide"
+  },
+  "next": {
+    "title": "BlockID Authentication Broker - User Guide",
+    "permalink": "/docs/blockid-authentication-broker-user-guide"
+  }
+}

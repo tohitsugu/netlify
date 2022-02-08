@@ -18,11 +18,11 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "BlockID Developer SDK",
-    "permalink": "/docs/index"
+    "title": "Verifying One-Time Passcodes",
+    "permalink": "/docs/otp/verify"
   },
   "next": {
-    "title": "Block ID Proof of Concept (POC) Guide",
-    "permalink": "/docs/v1/block-id-proof-of-concept-poc-guide"
+    "title": "Installing BlockID Admin Console",
+    "permalink": "/docs/installing-blockid-admin-console"
   }
 }

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID Admin Console/Admin Guide/introduction-to-blockid-admin-console",
+  "id": "BlockID Admin Console/Admin Guide/introduction-to-blockid-admin-console",
+  "isDocsHomePage": false,
+  "title": "Introduction to BlockID Admin Console",
+  "description": "Getting Started",
+  "source": "@site/docs/BlockID Admin Console/Admin Guide/2_introduction-to.md.mdx",
+  "sourceDirName": "BlockID Admin Console/Admin Guide",
+  "slug": "/introduction-to-blockid-admin-console",
+  "permalink": "/docs/introduction-to-blockid-admin-console",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/introduction-to-blockid-admin-console",
+    "id": "introduction-to-blockid-admin-console"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "User Onboarding Process Guide",
+    "permalink": "/docs/user-onboarding-process-guide"
+  },
+  "next": {
+    "title": "Administration Console",
+    "permalink": "/docs/administration-console"
+  }
+}

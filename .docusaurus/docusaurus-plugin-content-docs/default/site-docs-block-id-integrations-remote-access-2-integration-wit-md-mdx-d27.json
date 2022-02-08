@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID Integrations/Remote Access/Z0eb76a07-d6bc-4163-884e-002f180996d3",
+  "id": "BlockID Integrations/Remote Access/Z0eb76a07-d6bc-4163-884e-002f180996d3",
+  "isDocsHomePage": false,
+  "title": "Integration with Citrix NetScaler",
+  "description": "Overview",
+  "source": "@site/docs/BlockID Integrations/Remote Access/2_integration-wit.md.mdx",
+  "sourceDirName": "BlockID Integrations/Remote Access",
+  "slug": "/integration-with-citrix-netscaler",
+  "permalink": "/docs/integration-with-citrix-netscaler",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/integration-with-citrix-netscaler",
+    "id": "Z0eb76a07-d6bc-4163-884e-002f180996d3"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Integration with ARCON",
+    "permalink": "/docs/integration-with-arcon"
+  },
+  "next": {
+    "title": "Integration with Zscaler",
+    "permalink": "/docs/integration-with-zscaler"
+  }
+}

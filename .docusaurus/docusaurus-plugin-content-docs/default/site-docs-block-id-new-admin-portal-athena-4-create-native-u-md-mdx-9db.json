@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID New Admin Portal (Athena)/Zb17b8cd6-f8b7-41c5-a294-400c23d8540d",
+  "id": "BlockID New Admin Portal (Athena)/Zb17b8cd6-f8b7-41c5-a294-400c23d8540d",
+  "isDocsHomePage": false,
+  "title": "Create Native User",
+  "description": "Overview",
+  "source": "@site/docs/BlockID New Admin Portal (Athena)/4_create-native-u.md.mdx",
+  "sourceDirName": "BlockID New Admin Portal (Athena)",
+  "slug": "/create-native-user",
+  "permalink": "/docs/create-native-user",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "slug": "/create-native-user",
+    "id": "Zb17b8cd6-f8b7-41c5-a294-400c23d8540d"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Login",
+    "permalink": "/docs/login-with-mfa"
+  },
+  "next": {
+    "title": "Directory",
+    "permalink": "/docs/directory"
+  }
+}

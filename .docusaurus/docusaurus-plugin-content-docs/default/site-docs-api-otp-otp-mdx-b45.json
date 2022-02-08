@@ -22,7 +22,7 @@
     "permalink": "/docs/api"
   },
   "next": {
-    "title": "ECDSA Encryption",
-    "permalink": "/docs/api/ecdsa"
+    "title": "BlockID Identity Verification",
+    "permalink": "/docs/api/idverify"
   }
 }

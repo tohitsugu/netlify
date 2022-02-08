@@ -1,0 +1,27 @@
+{
+  "unversionedId": "Developer's Docs/Integration Guides/BlockID Customer/Zbb76e7b9-89ce-4d65-a64b-29ec220cf034",
+  "id": "Developer's Docs/Integration Guides/BlockID Customer/Zbb76e7b9-89ce-4d65-a64b-29ec220cf034",
+  "isDocsHomePage": false,
+  "title": "iOS",
+  "description": "This document describes the procedure to configure the BlockID Consumer iOS SDK into your organization's application. This integration will allow your developers to use the features provided within the iOS SDK of the BlockID Consumer mobile application. The features include enrollment of the user’s FaceID (captures the live (real-time) facial images) details, Driving License (DL), and Passport details.",
+  "source": "@site/docs/Developer's Docs/Integration Guides/BlockID Customer/3_ios.md.mdx",
+  "sourceDirName": "Developer's Docs/Integration Guides/BlockID Customer",
+  "slug": "/v1/ios",
+  "permalink": "/docs/v1/ios",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/v1/ios",
+    "id": "Zbb76e7b9-89ce-4d65-a64b-29ec220cf034"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Android",
+    "permalink": "/docs/v1/android"
+  },
+  "next": {
+    "title": "Android",
+    "permalink": "/docs/v1/android-2"
+  }
+}

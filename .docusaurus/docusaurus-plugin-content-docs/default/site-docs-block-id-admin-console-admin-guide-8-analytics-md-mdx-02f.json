@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID Admin Console/Admin Guide/analytics",
+  "id": "BlockID Admin Console/Admin Guide/analytics",
+  "isDocsHomePage": false,
+  "title": "Analytics and Event Logging",
+  "description": "Overview",
+  "source": "@site/docs/BlockID Admin Console/Admin Guide/8_analytics.md.mdx",
+  "sourceDirName": "BlockID Admin Console/Admin Guide",
+  "slug": "/analytics",
+  "permalink": "/docs/analytics",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "slug": "/analytics",
+    "id": "analytics"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Administration Console",
+    "permalink": "/docs/administration-console"
+  },
+  "next": {
+    "title": "License Keys",
+    "permalink": "/docs/license-keys"
+  }
+}

@@ -17,14 +17,14 @@ export default {
       "@docusaurus/preset-classic",
       {
         "docs": {
-          "sidebarPath": "/Users/ifrench/netlify2/netlify/sidebars.js"
+          "sidebarPath": "/Users/ifrench/devx-content/older/netlify3/netlify/sidebars.js"
         },
         "blog": {
           "showReadingTime": true,
           "editUrl": "https://github.com/1KBlockID/devx_frontend/tree/develop/blog/"
         },
         "theme": {
-          "customCss": "/Users/ifrench/netlify2/netlify/src/css/custom.css"
+          "customCss": "/Users/ifrench/devx-content/older/netlify3/netlify/src/css/custom.css"
         }
       }
     ]
@@ -34,7 +34,7 @@ export default {
   ],
   "plugins": [
     "docusaurus-node-polyfills",
-    "/Users/ifrench/netlify2/netlify/src/docuplugin.js"
+    "/Users/ifrench/devx-content/older/netlify3/netlify/src/docuplugin.js"
   ],
   "themeConfig": {
     "navbar": {

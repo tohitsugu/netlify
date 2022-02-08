@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID Admin Console/Admin Guide/community-management",
+  "id": "BlockID Admin Console/Admin Guide/community-management",
+  "isDocsHomePage": false,
+  "title": "Community Management",
+  "description": "Overview",
+  "source": "@site/docs/BlockID Admin Console/Admin Guide/13_community-manag.md.mdx",
+  "sourceDirName": "BlockID Admin Console/Admin Guide",
+  "slug": "/community-management",
+  "permalink": "/docs/community-management",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 13,
+  "frontMatter": {
+    "slug": "/community-management",
+    "id": "community-management"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Deploying Smart Contract",
+    "permalink": "/docs/deploying-smart-contract"
+  },
+  "next": {
+    "title": "Profile Management",
+    "permalink": "/docs/profile"
+  }
+}

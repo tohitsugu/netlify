@@ -60,8 +60,38 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs','a58'),
+    component: ComponentCreator('/docs','a36'),
     routes: [
+      {
+        path: '/docs/',
+        component: ComponentCreator('/docs/','4fd'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/administration-console',
+        component: ComponentCreator('/docs/administration-console','719'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/analytics',
+        component: ComponentCreator('/docs/analytics','fb0'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/android-100',
+        component: ComponentCreator('/docs/android-100','dd3'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/android-110',
+        component: ComponentCreator('/docs/android-110','61a'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
       {
         path: '/docs/api',
         component: ComponentCreator('/docs/api','f43'),
@@ -81,8 +111,116 @@ export default [
         'sidebar': "mySidebar"
       },
       {
+        path: '/docs/api/idverify',
+        component: ComponentCreator('/docs/api/idverify','f1c'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
         path: '/docs/api/otp',
         component: ComponentCreator('/docs/api/otp','89f'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/auth0',
+        component: ComponentCreator('/docs/auth0','2ca'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/authentication-modules',
+        component: ComponentCreator('/docs/authentication-modules','92a'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/authentication-scheme',
+        component: ComponentCreator('/docs/authentication-scheme','a6b'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/blockid-admin-console-api',
+        component: ComponentCreator('/docs/blockid-admin-console-api','989'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/blockid-android-sdk-141and142',
+        component: ComponentCreator('/docs/blockid-android-sdk-141and142','d04'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/blockid-attributes',
+        component: ComponentCreator('/docs/blockid-attributes','3b2'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/blockid-authentication-broker-user-guide',
+        component: ComponentCreator('/docs/blockid-authentication-broker-user-guide','81a'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/blockid-ios-sdk-141and142',
+        component: ComponentCreator('/docs/blockid-ios-sdk-141and142','d97'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/blockid-mobile-application-user-guide',
+        component: ComponentCreator('/docs/blockid-mobile-application-user-guide','bef'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/broker-installation',
+        component: ComponentCreator('/docs/broker-installation','501'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/community-management',
+        component: ComponentCreator('/docs/community-management','149'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/core-configurations',
+        component: ComponentCreator('/docs/core-configurations','7ca'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/create-native-user',
+        component: ComponentCreator('/docs/create-native-user','bfc'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/customizing-the-branding-of-your-blockid-login-page',
+        component: ComponentCreator('/docs/customizing-the-branding-of-your-blockid-login-page','b78'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/datastore-configuration-1',
+        component: ComponentCreator('/docs/datastore-configuration-1','e14'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/deploying-smart-contract',
+        component: ComponentCreator('/docs/deploying-smart-contract','2bb'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/directory',
+        component: ComponentCreator('/docs/directory','3f0'),
         exact: true,
         'sidebar': "mySidebar"
       },
@@ -93,8 +231,188 @@ export default [
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/index',
-        component: ComponentCreator('/docs/index','29c'),
+        path: '/docs/email-sms',
+        component: ComponentCreator('/docs/email-sms','223'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/end-user-guide',
+        component: ComponentCreator('/docs/end-user-guide','fc7'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/generic-saml-application',
+        component: ComponentCreator('/docs/generic-saml-application','fbc'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/getting-started',
+        component: ComponentCreator('/docs/getting-started','98d'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/glossary',
+        component: ComponentCreator('/docs/glossary','ced'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/gsuite',
+        component: ComponentCreator('/docs/gsuite','e91'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/installing-blockid-admin-console',
+        component: ComponentCreator('/docs/installing-blockid-admin-console','3dd'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/installing-blockid-authentication-broker',
+        component: ComponentCreator('/docs/installing-blockid-authentication-broker','321'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/installing-blockid-credential-provider',
+        component: ComponentCreator('/docs/installing-blockid-credential-provider','2fb'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/integration-pingfederate',
+        component: ComponentCreator('/docs/integration-pingfederate','229'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/integration-with-adfs',
+        component: ComponentCreator('/docs/integration-with-adfs','085'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/integration-with-arcon',
+        component: ComponentCreator('/docs/integration-with-arcon','499'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/integration-with-cisco-check-point',
+        component: ComponentCreator('/docs/integration-with-cisco-check-point','3ee'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/integration-with-citrix-netscaler',
+        component: ComponentCreator('/docs/integration-with-citrix-netscaler','e28'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/integration-with-cyberark',
+        component: ComponentCreator('/docs/integration-with-cyberark','e94'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/integration-with-cyberark-idaptive-identity',
+        component: ComponentCreator('/docs/integration-with-cyberark-idaptive-identity','471'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/integration-with-forgerock',
+        component: ComponentCreator('/docs/integration-with-forgerock','239'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/integration-with-gsuite',
+        component: ComponentCreator('/docs/integration-with-gsuite','b5f'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/integration-with-oracle-idcs-identity-cloud-service',
+        component: ComponentCreator('/docs/integration-with-oracle-idcs-identity-cloud-service','d0b'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/integration-with-salesforce',
+        component: ComponentCreator('/docs/integration-with-salesforce','696'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/integration-with-windows',
+        component: ComponentCreator('/docs/integration-with-windows','878'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/integration-with-zscaler',
+        component: ComponentCreator('/docs/integration-with-zscaler','ae6'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/intergration-with-okta',
+        component: ComponentCreator('/docs/intergration-with-okta','3a3'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/introduction-to-athena-admin-portal',
+        component: ComponentCreator('/docs/introduction-to-athena-admin-portal','366'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/introduction-to-blockid-admin-console',
+        component: ComponentCreator('/docs/introduction-to-blockid-admin-console','01c'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/ios-100',
+        component: ComponentCreator('/docs/ios-100','14d'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/ios-110',
+        component: ComponentCreator('/docs/ios-110','630'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/license-keys',
+        component: ComponentCreator('/docs/license-keys','8ca'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/login-with-mfa',
+        component: ComponentCreator('/docs/login-with-mfa','005'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/office365-integration',
+        component: ComponentCreator('/docs/office365-integration','e2c'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/okta',
+        component: ComponentCreator('/docs/okta','599'),
         exact: true,
         'sidebar': "mySidebar"
       },
@@ -117,662 +435,116 @@ export default [
         'sidebar': "mySidebar"
       },
       {
+        path: '/docs/profile',
+        component: ComponentCreator('/docs/profile','256'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/radius-configuration',
+        component: ComponentCreator('/docs/radius-configuration','64e'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/role-management',
+        component: ComponentCreator('/docs/role-management','f3d'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/salesforce',
+        component: ComponentCreator('/docs/salesforce','a49'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/saml-configuration',
+        component: ComponentCreator('/docs/saml-configuration','53a'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/samlv2',
+        component: ComponentCreator('/docs/samlv2','0bd'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/scep-configuration',
+        component: ComponentCreator('/docs/scep-configuration','813'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/software-and-hardware-otp-support',
+        component: ComponentCreator('/docs/software-and-hardware-otp-support','d14'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/tenant-management',
+        component: ComponentCreator('/docs/tenant-management','a48'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/univeral-web-login-guide',
+        component: ComponentCreator('/docs/univeral-web-login-guide','178'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/upgrading-blockid-authentication-broker',
+        component: ComponentCreator('/docs/upgrading-blockid-authentication-broker','2b3'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/user-management',
+        component: ComponentCreator('/docs/user-management','96c'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/user-onboarding-process-guide',
+        component: ComponentCreator('/docs/user-onboarding-process-guide','d3a'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
         path: '/docs/uwl',
         component: ComponentCreator('/docs/uwl','bed'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/v1/1kmodule',
-        component: ComponentCreator('/docs/v1/1kmodule','df9'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/active-directory-or-ldap-server-configuration',
-        component: ComponentCreator('/docs/v1/active-directory-or-ldap-server-configuration','158'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/administration-console',
-        component: ComponentCreator('/docs/v1/administration-console','2ad'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/analytics',
-        component: ComponentCreator('/docs/v1/analytics','a99'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
         path: '/docs/v1/android',
-        component: ComponentCreator('/docs/v1/android','0f8'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/android-1',
-        component: ComponentCreator('/docs/v1/android-1','63a'),
+        component: ComponentCreator('/docs/v1/android','aed'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
         path: '/docs/v1/android-2',
-        component: ComponentCreator('/docs/v1/android-2','45d'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/applications',
-        component: ComponentCreator('/docs/v1/applications','479'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/auth0',
-        component: ComponentCreator('/docs/v1/auth0','0c4'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/authenticaition-modules-configuration',
-        component: ComponentCreator('/docs/v1/authenticaition-modules-configuration','91a'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/authentication-modules',
-        component: ComponentCreator('/docs/v1/authentication-modules','34e'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/authentication-scheme',
-        component: ComponentCreator('/docs/v1/authentication-scheme','e09'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/authentication-scheme-configuration',
-        component: ComponentCreator('/docs/v1/authentication-scheme-configuration','d96'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/block-id-proof-of-concept-poc-guide',
-        component: ComponentCreator('/docs/v1/block-id-proof-of-concept-poc-guide','29f'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/blockid-attributes',
-        component: ComponentCreator('/docs/v1/blockid-attributes','6b2'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/blockid-authentication-broker-user-guide',
-        component: ComponentCreator('/docs/v1/blockid-authentication-broker-user-guide','78b'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/blockid-connector-module',
-        component: ComponentCreator('/docs/v1/blockid-connector-module','5b6'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/blockid-mobile-application-user-guide',
-        component: ComponentCreator('/docs/v1/blockid-mobile-application-user-guide','261'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/blockid-sdk',
-        component: ComponentCreator('/docs/v1/blockid-sdk','de7'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/blockid-solutions',
-        component: ComponentCreator('/docs/v1/blockid-solutions','749'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/blockid-templates',
-        component: ComponentCreator('/docs/v1/blockid-templates','d53'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/blockid-user-interface-templates',
-        component: ComponentCreator('/docs/v1/blockid-user-interface-templates','cbe'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/blockid-user-journey',
-        component: ComponentCreator('/docs/v1/blockid-user-journey','3bb'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/blockid-workforce-mobile-application-user-guide-1',
-        component: ComponentCreator('/docs/v1/blockid-workforce-mobile-application-user-guide-1','b38'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/blockid-workforce-mobile-application-user-guideold',
-        component: ComponentCreator('/docs/v1/blockid-workforce-mobile-application-user-guideold','516'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/broker-installation',
-        component: ComponentCreator('/docs/v1/broker-installation','2ff'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/community-management',
-        component: ComponentCreator('/docs/v1/community-management','42f'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/core-concepts-of-blockid-credential-provider-guide',
-        component: ComponentCreator('/docs/v1/core-concepts-of-blockid-credential-provider-guide','08f'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/core-configurations',
-        component: ComponentCreator('/docs/v1/core-configurations','1ad'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/create-native-user',
-        component: ComponentCreator('/docs/v1/create-native-user','05d'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/customizing-the-branding-of-your-blockid-login-page',
-        component: ComponentCreator('/docs/v1/customizing-the-branding-of-your-blockid-login-page','517'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/dashboard',
-        component: ComponentCreator('/docs/v1/dashboard','324'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/datastore-configuration',
-        component: ComponentCreator('/docs/v1/datastore-configuration','903'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/datastore-configuration-1',
-        component: ComponentCreator('/docs/v1/datastore-configuration-1','54a'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/deploying-smart-contract',
-        component: ComponentCreator('/docs/v1/deploying-smart-contract','556'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/directory',
-        component: ComponentCreator('/docs/v1/directory','7a8'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/email-templates',
-        component: ComponentCreator('/docs/v1/email-templates','9d4'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/end-user-guide',
-        component: ComponentCreator('/docs/v1/end-user-guide','b22'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/forgerock',
-        component: ComponentCreator('/docs/v1/forgerock','caa'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/generic-saml-application',
-        component: ComponentCreator('/docs/v1/generic-saml-application','66e'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/getting-started-with-videos',
-        component: ComponentCreator('/docs/v1/getting-started-with-videos','727'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/glossary',
-        component: ComponentCreator('/docs/v1/glossary','990'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/google-cloud-platform-kubernetes-architecture-guide-for-blockid-platform',
-        component: ComponentCreator('/docs/v1/google-cloud-platform-kubernetes-architecture-guide-for-blockid-platform','7d3'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/gsuite',
-        component: ComponentCreator('/docs/v1/gsuite','268'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/idp-configuration',
-        component: ComponentCreator('/docs/v1/idp-configuration','267'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/installing-blockid-admin-console',
-        component: ComponentCreator('/docs/v1/installing-blockid-admin-console','fb7'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/installing-blockid-authentication-broker',
-        component: ComponentCreator('/docs/v1/installing-blockid-authentication-broker','45e'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/installing-blockid-credential-provider',
-        component: ComponentCreator('/docs/v1/installing-blockid-credential-provider','15d'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/integration-pingfederate',
-        component: ComponentCreator('/docs/v1/integration-pingfederate','c38'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/integration-with-adfs',
-        component: ComponentCreator('/docs/v1/integration-with-adfs','4b2'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/integration-with-appgate',
-        component: ComponentCreator('/docs/v1/integration-with-appgate','682'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/integration-with-arcon',
-        component: ComponentCreator('/docs/v1/integration-with-arcon','4cb'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/integration-with-auth0',
-        component: ComponentCreator('/docs/v1/integration-with-auth0','1fa'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/integration-with-beyondtrust',
-        component: ComponentCreator('/docs/v1/integration-with-beyondtrust','765'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/integration-with-broadcom',
-        component: ComponentCreator('/docs/v1/integration-with-broadcom','648'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/integration-with-cisco-check-point',
-        component: ComponentCreator('/docs/v1/integration-with-cisco-check-point','d9f'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/integration-with-citrix-netscaler',
-        component: ComponentCreator('/docs/v1/integration-with-citrix-netscaler','03d'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/integration-with-cyberark',
-        component: ComponentCreator('/docs/v1/integration-with-cyberark','f2a'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/integration-with-cyberark-idaptive-identity',
-        component: ComponentCreator('/docs/v1/integration-with-cyberark-idaptive-identity','9f4'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/integration-with-forgerock',
-        component: ComponentCreator('/docs/v1/integration-with-forgerock','c55'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/integration-with-gsuite',
-        component: ComponentCreator('/docs/v1/integration-with-gsuite','7e9'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/integration-with-oracle-idcs-identity-cloud-service',
-        component: ComponentCreator('/docs/v1/integration-with-oracle-idcs-identity-cloud-service','e64'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/integration-with-pingfederate',
-        component: ComponentCreator('/docs/v1/integration-with-pingfederate','67c'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/integration-with-salesforce',
-        component: ComponentCreator('/docs/v1/integration-with-salesforce','e48'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/integration-with-thycotic',
-        component: ComponentCreator('/docs/v1/integration-with-thycotic','c9a'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/integration-with-vmware',
-        component: ComponentCreator('/docs/v1/integration-with-vmware','5a8'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/integration-with-windows',
-        component: ComponentCreator('/docs/v1/integration-with-windows','9b8'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/integration-with-zscaler',
-        component: ComponentCreator('/docs/v1/integration-with-zscaler','62a'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/intergration-with-okta',
-        component: ComponentCreator('/docs/v1/intergration-with-okta','793'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/internal-doc-blockid-authentication-broker',
-        component: ComponentCreator('/docs/v1/internal-doc-blockid-authentication-broker','2b3'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/internal-guide-blockid-credential-provider',
-        component: ComponentCreator('/docs/v1/internal-guide-blockid-credential-provider','5d6'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/internal-process',
-        component: ComponentCreator('/docs/v1/internal-process','396'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/introduction-to-athena-admin-portal',
-        component: ComponentCreator('/docs/v1/introduction-to-athena-admin-portal','bc4'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/introduction-to-blockid',
-        component: ComponentCreator('/docs/v1/introduction-to-blockid','c39'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/introduction-to-blockid-admin-console',
-        component: ComponentCreator('/docs/v1/introduction-to-blockid-admin-console','caf'),
+        component: ComponentCreator('/docs/v1/android-2','5b4'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
         path: '/docs/v1/ios',
-        component: ComponentCreator('/docs/v1/ios','c99'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/ios-1',
-        component: ComponentCreator('/docs/v1/ios-1','c25'),
+        component: ComponentCreator('/docs/v1/ios','360'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
         path: '/docs/v1/ios-2',
-        component: ComponentCreator('/docs/v1/ios-2','53a'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/item-1',
-        component: ComponentCreator('/docs/v1/item-1','7cb'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/item-2',
-        component: ComponentCreator('/docs/v1/item-2','bd5'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/item-3',
-        component: ComponentCreator('/docs/v1/item-3','408'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/item-4',
-        component: ComponentCreator('/docs/v1/item-4','cd0'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/license-keys',
-        component: ComponentCreator('/docs/v1/license-keys','0b7'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/login-with-mfa',
-        component: ComponentCreator('/docs/v1/login-with-mfa','0f0'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/office365-integration',
-        component: ComponentCreator('/docs/v1/office365-integration','2de'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/okta',
-        component: ComponentCreator('/docs/v1/okta','4a6'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/one-time-passcode-module-configuration',
-        component: ComponentCreator('/docs/v1/one-time-passcode-module-configuration','f74'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/profile',
-        component: ComponentCreator('/docs/v1/profile','6a1'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/radius-configuration',
-        component: ComponentCreator('/docs/v1/radius-configuration','9cd'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/radius-integration-backup',
-        component: ComponentCreator('/docs/v1/radius-integration-backup','3e9'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/release-notes',
-        component: ComponentCreator('/docs/v1/release-notes','e31'),
+        component: ComponentCreator('/docs/v1/ios-2','4af'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
         path: '/docs/v1/release-notes-20211103',
-        component: ComponentCreator('/docs/v1/release-notes-20211103','65c'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/reports',
-        component: ComponentCreator('/docs/v1/reports','8b8'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/role-management',
-        component: ComponentCreator('/docs/v1/role-management','21a'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/salesforce',
-        component: ComponentCreator('/docs/v1/salesforce','4a0'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/saml-configuration',
-        component: ComponentCreator('/docs/v1/saml-configuration','02e'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/samlv2',
-        component: ComponentCreator('/docs/v1/samlv2','94f'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/scep-configuration',
-        component: ComponentCreator('/docs/v1/scep-configuration','32b'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/scep-integration',
-        component: ComponentCreator('/docs/v1/scep-integration','001'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/software-and-hardware-otp-support',
-        component: ComponentCreator('/docs/v1/software-and-hardware-otp-support','d4a'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/technical-guide-for-liveid-driving-license-and-passport-scan-support',
-        component: ComponentCreator('/docs/v1/technical-guide-for-liveid-driving-license-and-passport-scan-support','7b6'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/tenant-management',
-        component: ComponentCreator('/docs/v1/tenant-management','a75'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/test',
-        component: ComponentCreator('/docs/v1/test','107'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/upgrading-blockid-authentication-broker',
-        component: ComponentCreator('/docs/v1/upgrading-blockid-authentication-broker','92c'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/user-management',
-        component: ComponentCreator('/docs/v1/user-management','6e4'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/user-onboarding-process-guide',
-        component: ComponentCreator('/docs/v1/user-onboarding-process-guide','c80'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/users',
-        component: ComponentCreator('/docs/v1/users','b04'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/webauthn',
-        component: ComponentCreator('/docs/v1/webauthn','44e'),
-        exact: true,
-        'sidebar': "mySidebar"
-      },
-      {
-        path: '/docs/v1/white-label-templates',
-        component: ComponentCreator('/docs/v1/white-label-templates','86f'),
+        component: ComponentCreator('/docs/v1/release-notes-20211103','668'),
         exact: true,
         'sidebar': "mySidebar"
       },
@@ -815,6 +587,18 @@ export default [
       {
         path: '/docs/v2/release-notes-v3',
         component: ComponentCreator('/docs/v2/release-notes-v3','6fc'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/webauthn',
+        component: ComponentCreator('/docs/webauthn','170'),
+        exact: true,
+        'sidebar': "mySidebar"
+      },
+      {
+        path: '/docs/white-label-templates',
+        component: ComponentCreator('/docs/white-label-templates','c8f'),
         exact: true,
         'sidebar': "mySidebar"
       }

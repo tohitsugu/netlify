@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID Admin Console/Admin Guide/deploying-smart-contract",
+  "id": "BlockID Admin Console/Admin Guide/deploying-smart-contract",
+  "isDocsHomePage": false,
+  "title": "Deploying Smart Contract",
+  "description": "Overview",
+  "source": "@site/docs/BlockID Admin Console/Admin Guide/12_deploying-smart.md.mdx",
+  "sourceDirName": "BlockID Admin Console/Admin Guide",
+  "slug": "/deploying-smart-contract",
+  "permalink": "/docs/deploying-smart-contract",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 12,
+  "frontMatter": {
+    "slug": "/deploying-smart-contract",
+    "id": "deploying-smart-contract"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Tenant Management",
+    "permalink": "/docs/tenant-management"
+  },
+  "next": {
+    "title": "Community Management",
+    "permalink": "/docs/community-management"
+  }
+}

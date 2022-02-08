@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID Integrations/Identity Providers/Zb71e5fd8-fb17-4e19-b274-eaa5ddff808e",
+  "id": "BlockID Integrations/Identity Providers/Zb71e5fd8-fb17-4e19-b274-eaa5ddff808e",
+  "isDocsHomePage": false,
+  "title": "Integration PingFederate",
+  "description": "Overview",
+  "source": "@site/docs/BlockID Integrations/Identity Providers/5_integration-pin.md.mdx",
+  "sourceDirName": "BlockID Integrations/Identity Providers",
+  "slug": "/integration-pingfederate",
+  "permalink": "/docs/integration-pingfederate",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "slug": "/integration-pingfederate",
+    "id": "Zb71e5fd8-fb17-4e19-b274-eaa5ddff808e"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Integration with Microsoft ADFS",
+    "permalink": "/docs/integration-with-adfs"
+  },
+  "next": {
+    "title": "Integration with Windows",
+    "permalink": "/docs/integration-with-windows"
+  }
+}

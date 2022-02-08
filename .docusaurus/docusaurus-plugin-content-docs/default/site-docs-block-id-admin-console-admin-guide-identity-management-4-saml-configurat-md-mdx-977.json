@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID Admin Console/Admin Guide/Identity Management/Z58afb044-8b28-4ffe-b763-85ae2af99494",
+  "id": "BlockID Admin Console/Admin Guide/Identity Management/Z58afb044-8b28-4ffe-b763-85ae2af99494",
+  "isDocsHomePage": false,
+  "title": "Policy Management",
+  "description": "Overview",
+  "source": "@site/docs/BlockID Admin Console/Admin Guide/Identity Management/4_saml-configurat.md.mdx",
+  "sourceDirName": "BlockID Admin Console/Admin Guide/Identity Management",
+  "slug": "/saml-configuration",
+  "permalink": "/docs/saml-configuration",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "slug": "/saml-configuration",
+    "id": "Z58afb044-8b28-4ffe-b763-85ae2af99494"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Role Management",
+    "permalink": "/docs/role-management"
+  },
+  "next": {
+    "title": "Installing BlockID Credential Provider",
+    "permalink": "/docs/installing-blockid-credential-provider"
+  }
+}

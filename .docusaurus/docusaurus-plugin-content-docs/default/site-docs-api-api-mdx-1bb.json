@@ -17,6 +17,10 @@
     "id": "api1"
   },
   "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Developer SDK",
+    "permalink": "/docs/"
+  },
   "next": {
     "title": "One-Time Passcodes",
     "permalink": "/docs/api/otp"

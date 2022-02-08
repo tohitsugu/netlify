@@ -1,0 +1,27 @@
+{
+  "unversionedId": "Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/android-100",
+  "id": "Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/android-100",
+  "isDocsHomePage": false,
+  "title": "BlockID Android SDK 1.0.0",
+  "description": "Overview",
+  "source": "@site/docs/Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/3_android_sdk_100.md.mdx",
+  "sourceDirName": "Developer's Docs/BlockID Mobile Application/SDK Integrations/Android",
+  "slug": "/android-100",
+  "permalink": "/docs/android-100",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/android-100",
+    "id": "android-100"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Android SDK 1.1.0",
+    "permalink": "/docs/android-110"
+  },
+  "next": {
+    "title": "BlockID iOS SDK 1.4.1 and 1.4.2",
+    "permalink": "/docs/blockid-ios-sdk-141and142"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "unversionedId": "api/id1",
+  "id": "api/id1",
+  "isDocsHomePage": false,
+  "title": "BlockID Identity Verification",
+  "description": "BlockID identity verification performs single-source KYC and anti-money laundering verification, delivering a one-stop compliance solution to customers and developers. We combine digital identity checks with reports from credit bureaus, eKYC verifiers, DMVs, and global watchlist data to deliver comprehensive one-stop identity verification with a bring-your-own KYC provider model.",
+  "source": "@site/docs/api/blockidverify.mdx",
+  "sourceDirName": "api",
+  "slug": "/api/idverify",
+  "permalink": "/docs/api/idverify",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "slug": "/api/idverify",
+    "id": "id1"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "One-Time Passcodes",
+    "permalink": "/docs/api/otp"
+  },
+  "next": {
+    "title": "ECDSA Encryption",
+    "permalink": "/docs/api/ecdsa"
+  }
+}

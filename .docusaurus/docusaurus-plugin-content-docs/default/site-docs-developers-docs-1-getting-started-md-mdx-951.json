@@ -1,0 +1,27 @@
+{
+  "unversionedId": "Developer's Docs/getting-started",
+  "id": "Developer's Docs/getting-started",
+  "isDocsHomePage": false,
+  "title": "Getting Started",
+  "description": "Overview:",
+  "source": "@site/docs/Developer's Docs/1_getting_started.md.mdx",
+  "sourceDirName": "Developer's Docs",
+  "slug": "/getting-started",
+  "permalink": "/docs/getting-started",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "/getting-started",
+    "id": "getting-started"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Office365 Integration",
+    "permalink": "/docs/office365-integration"
+  },
+  "next": {
+    "title": "Universal Web Login (UWL) Guide",
+    "permalink": "/docs/univeral-web-login-guide"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID Admin Console/Admin Guide/Identity Management/Z0e74df61-4182-40d7-b7f2-a1a670207b0a",
+  "id": "BlockID Admin Console/Admin Guide/Identity Management/Z0e74df61-4182-40d7-b7f2-a1a670207b0a",
+  "isDocsHomePage": false,
+  "title": "User Management",
+  "description": "Overview",
+  "source": "@site/docs/BlockID Admin Console/Admin Guide/Identity Management/2_user-management.md.mdx",
+  "sourceDirName": "BlockID Admin Console/Admin Guide/Identity Management",
+  "slug": "/user-management",
+  "permalink": "/docs/user-management",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/user-management",
+    "id": "Z0e74df61-4182-40d7-b7f2-a1a670207b0a"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Radius Configuration",
+    "permalink": "/docs/radius-configuration"
+  },
+  "next": {
+    "title": "Role Management",
+    "permalink": "/docs/role-management"
+  }
+}

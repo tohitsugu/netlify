@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID Admin Console/installing-blockid-admin-console",
+  "id": "BlockID Admin Console/installing-blockid-admin-console",
+  "isDocsHomePage": false,
+  "title": "Installing BlockID Admin Console",
+  "description": "Overview",
+  "source": "@site/docs/BlockID Admin Console/3_installing-bloc.md.mdx",
+  "sourceDirName": "BlockID Admin Console",
+  "slug": "/installing-blockid-admin-console",
+  "permalink": "/docs/installing-blockid-admin-console",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/installing-blockid-admin-console",
+    "id": "installing-blockid-admin-console"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Universal Web Login",
+    "permalink": "/docs/uwl"
+  },
+  "next": {
+    "title": "User Onboarding Process Guide",
+    "permalink": "/docs/user-onboarding-process-guide"
+  }
+}

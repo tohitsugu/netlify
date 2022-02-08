@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID Admin Console/Admin Guide/core-configurations",
+  "id": "BlockID Admin Console/Admin Guide/core-configurations",
+  "isDocsHomePage": false,
+  "title": "Core Configurations",
+  "description": "Overview",
+  "source": "@site/docs/BlockID Admin Console/Admin Guide/15_core-configurat.md.mdx",
+  "sourceDirName": "BlockID Admin Console/Admin Guide",
+  "slug": "/core-configurations",
+  "permalink": "/docs/core-configurations",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 15,
+  "frontMatter": {
+    "slug": "/core-configurations",
+    "id": "core-configurations"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Profile Management",
+    "permalink": "/docs/profile"
+  },
+  "next": {
+    "title": "Glossary",
+    "permalink": "/docs/glossary"
+  }
+}

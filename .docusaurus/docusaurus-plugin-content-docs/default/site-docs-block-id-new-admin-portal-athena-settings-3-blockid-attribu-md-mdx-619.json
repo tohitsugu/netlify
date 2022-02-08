@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID New Admin Portal (Athena)/Settings/Zc1f22108-c5aa-4b1c-b3d5-c2cf705d1fbb",
+  "id": "BlockID New Admin Portal (Athena)/Settings/Zc1f22108-c5aa-4b1c-b3d5-c2cf705d1fbb",
+  "isDocsHomePage": false,
+  "title": "BlockID Attributes",
+  "description": "Overview",
+  "source": "@site/docs/BlockID New Admin Portal (Athena)/Settings/3_blockid-attribu.md.mdx",
+  "sourceDirName": "BlockID New Admin Portal (Athena)/Settings",
+  "slug": "/blockid-attributes",
+  "permalink": "/docs/blockid-attributes",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/blockid-attributes",
+    "id": "Zc1f22108-c5aa-4b1c-b3d5-c2cf705d1fbb"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Release Notes 2021.11.03",
+    "permalink": "/docs/v1/release-notes-20211103"
+  },
+  "next": {
+    "title": "Okta",
+    "permalink": "/docs/okta"
+  }
+}

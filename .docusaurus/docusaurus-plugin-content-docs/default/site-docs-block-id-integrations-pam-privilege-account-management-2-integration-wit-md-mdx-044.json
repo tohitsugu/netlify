@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID Integrations/PAM (Privilege Account Management)/Z660bdd75-9447-48fe-84e8-b26029d4f403",
+  "id": "BlockID Integrations/PAM (Privilege Account Management)/Z660bdd75-9447-48fe-84e8-b26029d4f403",
+  "isDocsHomePage": false,
+  "title": "Integration with CyberArk",
+  "description": "Overview",
+  "source": "@site/docs/BlockID Integrations/PAM (Privilege Account Management)/2_integration-wit.md.mdx",
+  "sourceDirName": "BlockID Integrations/PAM (Privilege Account Management)",
+  "slug": "/integration-with-cyberark",
+  "permalink": "/docs/integration-with-cyberark",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/integration-with-cyberark",
+    "id": "Z660bdd75-9447-48fe-84e8-b26029d4f403"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Integration with ForgeRock",
+    "permalink": "/docs/integration-with-forgerock"
+  },
+  "next": {
+    "title": "Integration with ARCON",
+    "permalink": "/docs/integration-with-arcon"
+  }
+}

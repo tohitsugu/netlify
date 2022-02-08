@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z6afecf9d-3c6f-418b-9aab-c0c99d48009b",
+  "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z6afecf9d-3c6f-418b-9aab-c0c99d48009b",
+  "isDocsHomePage": false,
+  "title": "Auth0",
+  "description": "Overview",
+  "source": "@site/docs/BlockID New Admin Portal (Athena)/Applications/Add Applications/3_auth0.md.mdx",
+  "sourceDirName": "BlockID New Admin Portal (Athena)/Applications/Add Applications",
+  "slug": "/auth0",
+  "permalink": "/docs/auth0",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/auth0",
+    "id": "Z6afecf9d-3c6f-418b-9aab-c0c99d48009b"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Okta",
+    "permalink": "/docs/okta"
+  },
+  "next": {
+    "title": "Salesforce",
+    "permalink": "/docs/salesforce"
+  }
+}

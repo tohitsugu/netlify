@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID Admin Console/user-onboarding-process-guide",
+  "id": "BlockID Admin Console/user-onboarding-process-guide",
+  "isDocsHomePage": false,
+  "title": "User Onboarding Process Guide",
+  "description": "Overview",
+  "source": "@site/docs/BlockID Admin Console/5_user-onboarding.md.mdx",
+  "sourceDirName": "BlockID Admin Console",
+  "slug": "/user-onboarding-process-guide",
+  "permalink": "/docs/user-onboarding-process-guide",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "slug": "/user-onboarding-process-guide",
+    "id": "user-onboarding-process-guide"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Installing BlockID Admin Console",
+    "permalink": "/docs/installing-blockid-admin-console"
+  },
+  "next": {
+    "title": "Introduction to BlockID Admin Console",
+    "permalink": "/docs/introduction-to-blockid-admin-console"
+  }
+}

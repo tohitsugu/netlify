@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID New Admin Portal (Athena)/email-sms",
+  "id": "BlockID New Admin Portal (Athena)/email-sms",
+  "isDocsHomePage": false,
+  "title": "Email and SMS",
+  "description": "Overview",
+  "source": "@site/docs/BlockID New Admin Portal (Athena)/9_email_sms.md.mdx",
+  "sourceDirName": "BlockID New Admin Portal (Athena)",
+  "slug": "/email-sms",
+  "permalink": "/docs/email-sms",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 9,
+  "frontMatter": {
+    "slug": "/email-sms",
+    "id": "email-sms"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Directory",
+    "permalink": "/docs/directory"
+  },
+  "next": {
+    "title": "Customizing the Branding of your BlockID Login Page",
+    "permalink": "/docs/customizing-the-branding-of-your-blockid-login-page"
+  }
+}
