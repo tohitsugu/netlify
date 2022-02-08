@@ -1,0 +1,27 @@
+{
+  "unversionedId": "BlockID FAQ/Zef1df47a-d435-421b-a375-61157ac1420f",
+  "id": "BlockID FAQ/Zef1df47a-d435-421b-a375-61157ac1420f",
+  "isDocsHomePage": false,
+  "title": "FAQ's related to the BlockID Product Suite",
+  "description": "* * *",
+  "source": "@site/docs/BlockID FAQ/3_faqs-related-to.md.mdx",
+  "sourceDirName": "BlockID FAQ",
+  "slug": "/faqs-related-to-the-blockid-product-suite",
+  "permalink": "/devportal/docs/faqs-related-to-the-blockid-product-suite",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "slug": "/faqs-related-to-the-blockid-product-suite",
+    "id": "Zef1df47a-d435-421b-a375-61157ac1420f"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Frequently Asked Questions (FAQs)",
+    "permalink": "/devportal/docs/frequently-asked-questions-faq"
+  },
+  "next": {
+    "title": "Internal FAQ guide for BlockID Product Suite",
+    "permalink": "/devportal/docs/internal-faq-guide-for-blockid-product-suite"
+  }
+}

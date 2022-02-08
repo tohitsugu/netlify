@@ -7,7 +7,7 @@
   "source": "@site/docs/otp/otp-verify.mdx",
   "sourceDirName": "otp",
   "slug": "/otp/verify",
-  "permalink": "/docs/otp/verify",
+  "permalink": "/devportal/docs/otp/verify",
   "tags": [],
   "version": "current",
   "sidebarPosition": 3,
@@ -19,10 +19,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "OTP Authentication",
-    "permalink": "/docs/otp"
+    "permalink": "/devportal/docs/otp"
   },
   "next": {
     "title": "Universal Web Login",
-    "permalink": "/docs/uwl"
+    "permalink": "/devportal/docs/uwl"
   }
 }

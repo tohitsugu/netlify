@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID Admin Console/Admin Guide/Identity Management/4_saml-configurat.md.mdx",
   "sourceDirName": "BlockID Admin Console/Admin Guide/Identity Management",
   "slug": "/saml-configuration",
-  "permalink": "/docs/saml-configuration",
+  "permalink": "/devportal/docs/saml-configuration",
   "tags": [],
   "version": "current",
   "sidebarPosition": 4,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Role Management",
-    "permalink": "/docs/role-management"
+    "permalink": "/devportal/docs/role-management"
   },
   "next": {
-    "title": "Installing BlockID Authentication Broker",
-    "permalink": "/docs/installing-blockid-authentication-broker"
+    "title": "SAML Configurations",
+    "permalink": "/devportal/docs/samlv2"
   }
 }

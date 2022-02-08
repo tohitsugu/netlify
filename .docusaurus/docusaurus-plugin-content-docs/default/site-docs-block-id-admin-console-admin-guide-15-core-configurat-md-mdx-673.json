@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID Admin Console/Admin Guide/15_core-configurat.md.mdx",
   "sourceDirName": "BlockID Admin Console/Admin Guide",
   "slug": "/core-configurations",
-  "permalink": "/docs/core-configurations",
+  "permalink": "/devportal/docs/core-configurations",
   "tags": [],
   "version": "current",
   "sidebarPosition": 15,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Profile Management",
-    "permalink": "/docs/profile"
+    "permalink": "/devportal/docs/profile"
   },
   "next": {
     "title": "Glossary",
-    "permalink": "/docs/glossary"
+    "permalink": "/devportal/docs/glossary"
   }
 }

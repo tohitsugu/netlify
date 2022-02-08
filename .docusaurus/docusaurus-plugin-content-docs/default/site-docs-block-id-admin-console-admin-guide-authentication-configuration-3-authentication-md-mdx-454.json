@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID Admin Console/Admin Guide/Authentication Configuration/3_authentication-.md.mdx",
   "sourceDirName": "BlockID Admin Console/Admin Guide/Authentication Configuration",
   "slug": "/authentication-scheme",
-  "permalink": "/docs/authentication-scheme",
+  "permalink": "/devportal/docs/authentication-scheme",
   "tags": [],
   "version": "current",
   "sidebarPosition": 3,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Authentication Modules",
-    "permalink": "/docs/authentication-modules"
+    "permalink": "/devportal/docs/authentication-modules"
   },
   "next": {
     "title": "Software and Hardware OTP Support",
-    "permalink": "/docs/software-and-hardware-otp-support"
+    "permalink": "/devportal/docs/software-and-hardware-otp-support"
   }
 }

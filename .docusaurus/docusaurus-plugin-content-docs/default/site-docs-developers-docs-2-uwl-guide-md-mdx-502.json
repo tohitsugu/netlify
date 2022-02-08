@@ -7,7 +7,7 @@
   "source": "@site/docs/Developer's Docs/2_uwl_guide.md.mdx",
   "sourceDirName": "Developer's Docs",
   "slug": "/univeral-web-login-guide",
-  "permalink": "/docs/univeral-web-login-guide",
+  "permalink": "/devportal/docs/univeral-web-login-guide",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Getting Started",
-    "permalink": "/docs/getting-started"
+    "permalink": "/devportal/docs/getting-started"
   },
   "next": {
     "title": "BlockID Admin Console",
-    "permalink": "/docs/blockid-admin-console-api"
+    "permalink": "/devportal/docs/blockid-admin-console-api"
   }
 }

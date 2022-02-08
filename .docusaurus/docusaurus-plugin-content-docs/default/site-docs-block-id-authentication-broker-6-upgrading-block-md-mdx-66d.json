@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID Authentication Broker/6_upgrading-block.md.mdx",
   "sourceDirName": "BlockID Authentication Broker",
   "slug": "/upgrading-blockid-authentication-broker",
-  "permalink": "/docs/upgrading-blockid-authentication-broker",
+  "permalink": "/devportal/docs/upgrading-blockid-authentication-broker",
   "tags": [],
   "version": "current",
   "sidebarPosition": 6,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "BlockID Authentication Broker - User Guide",
-    "permalink": "/docs/blockid-authentication-broker-user-guide"
+    "permalink": "/devportal/docs/blockid-authentication-broker-user-guide"
   },
   "next": {
-    "title": "BlockID Mobile Application User Guide",
-    "permalink": "/docs/blockid-mobile-application-user-guide"
+    "title": "Frequently Asked Questions (FAQs)",
+    "permalink": "/devportal/docs/frequently-asked-questions-faq"
   }
 }

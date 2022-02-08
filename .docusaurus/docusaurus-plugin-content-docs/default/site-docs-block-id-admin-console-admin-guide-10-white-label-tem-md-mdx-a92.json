@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID Admin Console/Admin Guide/10_white-label-tem.md.mdx",
   "sourceDirName": "BlockID Admin Console/Admin Guide",
   "slug": "/white-label-templates",
-  "permalink": "/docs/white-label-templates",
+  "permalink": "/devportal/docs/white-label-templates",
   "tags": [],
   "version": "current",
   "sidebarPosition": 10,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "License Keys",
-    "permalink": "/docs/license-keys"
+    "permalink": "/devportal/docs/license-keys"
   },
   "next": {
     "title": "Tenant Management",
-    "permalink": "/docs/tenant-management"
+    "permalink": "/devportal/docs/tenant-management"
   }
 }

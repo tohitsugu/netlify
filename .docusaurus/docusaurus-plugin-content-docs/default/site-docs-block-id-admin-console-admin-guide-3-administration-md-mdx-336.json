@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID Admin Console/Admin Guide/3_administration-.md.mdx",
   "sourceDirName": "BlockID Admin Console/Admin Guide",
   "slug": "/administration-console",
-  "permalink": "/docs/administration-console",
+  "permalink": "/devportal/docs/administration-console",
   "tags": [],
   "version": "current",
   "sidebarPosition": 3,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Introduction to BlockID Admin Console",
-    "permalink": "/docs/introduction-to-blockid-admin-console"
+    "permalink": "/devportal/docs/introduction-to-blockid-admin-console"
   },
   "next": {
     "title": "Analytics and Event Logging",
-    "permalink": "/docs/analytics"
+    "permalink": "/devportal/docs/analytics"
   }
 }

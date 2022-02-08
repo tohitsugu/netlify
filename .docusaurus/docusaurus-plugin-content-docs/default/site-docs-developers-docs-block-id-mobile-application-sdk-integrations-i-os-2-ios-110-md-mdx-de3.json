@@ -7,7 +7,7 @@
   "source": "@site/docs/Developer's Docs/BlockID Mobile Application/SDK Integrations/iOS/2_ios-110.md.mdx",
   "sourceDirName": "Developer's Docs/BlockID Mobile Application/SDK Integrations/iOS",
   "slug": "/ios-110",
-  "permalink": "/docs/ios-110",
+  "permalink": "/devportal/docs/ios-110",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "BlockID iOS SDK 1.4.1 and 1.4.2",
-    "permalink": "/docs/blockid-ios-sdk-141and142"
+    "permalink": "/devportal/docs/blockid-ios-sdk-141and142"
   },
   "next": {
     "title": "BlockID iOS SDK 1.0.0",
-    "permalink": "/docs/ios-100"
+    "permalink": "/devportal/docs/ios-100"
   }
 }

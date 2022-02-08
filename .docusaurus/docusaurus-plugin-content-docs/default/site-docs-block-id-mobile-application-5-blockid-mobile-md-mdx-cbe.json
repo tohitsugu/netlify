@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID Mobile Application/5_blockid-mobile-.md.mdx",
   "sourceDirName": "BlockID Mobile Application",
   "slug": "/blockid-mobile-application-user-guide",
-  "permalink": "/docs/blockid-mobile-application-user-guide",
+  "permalink": "/devportal/docs/blockid-mobile-application-user-guide",
   "tags": [],
   "version": "current",
   "sidebarPosition": 5,
@@ -17,11 +17,11 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "Upgrading BlockID Authentication Broker",
-    "permalink": "/docs/upgrading-blockid-authentication-broker"
+    "title": "Installing BlockID Credential Provider",
+    "permalink": "/devportal/docs/installing-blockid-credential-provider"
   },
   "next": {
     "title": "Introduction to Athena Admin Portal",
-    "permalink": "/docs/introduction-to-athena-admin-portal"
+    "permalink": "/devportal/docs/introduction-to-athena-admin-portal"
   }
 }

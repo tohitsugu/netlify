@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID Integrations/Identity Providers/3_integration-wit.md.mdx",
   "sourceDirName": "BlockID Integrations/Identity Providers",
   "slug": "/integration-with-salesforce",
-  "permalink": "/docs/integration-with-salesforce",
+  "permalink": "/devportal/docs/integration-with-salesforce",
   "tags": [],
   "version": "current",
   "sidebarPosition": 3,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Intergration with Okta",
-    "permalink": "/docs/intergration-with-okta"
+    "permalink": "/devportal/docs/intergration-with-okta"
   },
   "next": {
     "title": "Integration with Microsoft ADFS",
-    "permalink": "/docs/integration-with-adfs"
+    "permalink": "/devportal/docs/integration-with-adfs"
   }
 }

@@ -7,7 +7,7 @@
   "source": "@site/docs/Developer's Docs/Integration Guides/BlockID Workforce/4_ios-2.md.mdx",
   "sourceDirName": "Developer's Docs/Integration Guides/BlockID Workforce",
   "slug": "/v1/ios-2",
-  "permalink": "/docs/v1/ios-2",
+  "permalink": "/devportal/docs/v1/ios-2",
   "tags": [],
   "version": "current",
   "sidebarPosition": 4,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Android",
-    "permalink": "/docs/v1/android-2"
+    "permalink": "/devportal/docs/v1/android-2"
   },
   "next": {
     "title": "BlockID iOS SDK 1.4.1 and 1.4.2",
-    "permalink": "/docs/blockid-ios-sdk-141and142"
+    "permalink": "/devportal/docs/blockid-ios-sdk-141and142"
   }
 }

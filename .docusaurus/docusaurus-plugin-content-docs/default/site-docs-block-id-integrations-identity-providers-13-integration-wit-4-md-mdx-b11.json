@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID Integrations/Identity Providers/13_integration-wit(4).md.mdx",
   "sourceDirName": "BlockID Integrations/Identity Providers",
   "slug": "/integration-with-cyberark-idaptive-identity",
-  "permalink": "/docs/integration-with-cyberark-idaptive-identity",
+  "permalink": "/devportal/docs/integration-with-cyberark-idaptive-identity",
   "tags": [],
   "version": "current",
   "sidebarPosition": 13,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Integration with Oracle IDCS (Identity Cloud Service)",
-    "permalink": "/docs/integration-with-oracle-idcs-identity-cloud-service"
+    "permalink": "/devportal/docs/integration-with-oracle-idcs-identity-cloud-service"
   },
   "next": {
     "title": "Integration with ForgeRock",
-    "permalink": "/docs/integration-with-forgerock"
+    "permalink": "/devportal/docs/integration-with-forgerock"
   }
 }

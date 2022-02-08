@@ -7,7 +7,7 @@
   "source": "@site/docs/api/ecdsa/ecdsa.mdx",
   "sourceDirName": "api/ecdsa",
   "slug": "/api/ecdsa",
-  "permalink": "/docs/api/ecdsa",
+  "permalink": "/devportal/docs/api/ecdsa",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "BlockID Identity Verification",
-    "permalink": "/docs/api/idverify"
+    "permalink": "/devportal/docs/api/idverify"
   },
   "next": {
     "title": "User Private and Public Keys",
-    "permalink": "/docs/api/ecdsa/keys"
+    "permalink": "/devportal/docs/api/ecdsa/keys"
   }
 }

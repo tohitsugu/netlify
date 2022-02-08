@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID New Admin Portal (Athena)/15_webauthn.md.mdx",
   "sourceDirName": "BlockID New Admin Portal (Athena)",
   "slug": "/webauthn",
-  "permalink": "/docs/webauthn",
+  "permalink": "/devportal/docs/webauthn",
   "tags": [],
   "version": "current",
   "sidebarPosition": 15,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "End User Guide",
-    "permalink": "/docs/end-user-guide"
+    "permalink": "/devportal/docs/end-user-guide"
   },
   "next": {
-    "title": "Release Notes 2021.11.03",
-    "permalink": "/docs/v1/release-notes-20211103"
+    "title": "Broker Installation",
+    "permalink": "/devportal/docs/broker-installation"
   }
 }

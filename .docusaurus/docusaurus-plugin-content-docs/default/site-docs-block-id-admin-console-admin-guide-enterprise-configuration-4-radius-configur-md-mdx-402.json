@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID Admin Console/Admin Guide/Enterprise Configuration/4_radius-configur.md.mdx",
   "sourceDirName": "BlockID Admin Console/Admin Guide/Enterprise Configuration",
   "slug": "/radius-configuration",
-  "permalink": "/docs/radius-configuration",
+  "permalink": "/devportal/docs/radius-configuration",
   "tags": [],
   "version": "current",
   "sidebarPosition": 4,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "SCEP Configuration",
-    "permalink": "/docs/scep-configuration"
+    "permalink": "/devportal/docs/scep-configuration"
   },
   "next": {
-    "title": "SAML Configurations",
-    "permalink": "/docs/samlv2"
+    "title": "Authentication Modules",
+    "permalink": "/devportal/docs/authentication-modules"
   }
 }

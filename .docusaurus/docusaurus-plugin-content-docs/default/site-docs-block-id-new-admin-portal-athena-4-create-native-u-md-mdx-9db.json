@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID New Admin Portal (Athena)/4_create-native-u.md.mdx",
   "sourceDirName": "BlockID New Admin Portal (Athena)",
   "slug": "/create-native-user",
-  "permalink": "/docs/create-native-user",
+  "permalink": "/devportal/docs/create-native-user",
   "tags": [],
   "version": "current",
   "sidebarPosition": 4,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Login",
-    "permalink": "/docs/login-with-mfa"
+    "permalink": "/devportal/docs/login-with-mfa"
   },
   "next": {
     "title": "Directory",
-    "permalink": "/docs/directory"
+    "permalink": "/devportal/docs/directory"
   }
 }

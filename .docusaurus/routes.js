@@ -4,614 +4,614 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
-    path: '/__docusaurus/debug',
-    component: ComponentCreator('/__docusaurus/debug','3d6'),
+    path: '/devportal/',
+    component: ComponentCreator('/devportal/','b92'),
     exact: true
   },
   {
-    path: '/__docusaurus/debug/config',
-    component: ComponentCreator('/__docusaurus/debug/config','914'),
+    path: '/devportal/__docusaurus/debug',
+    component: ComponentCreator('/devportal/__docusaurus/debug','4ed'),
     exact: true
   },
   {
-    path: '/__docusaurus/debug/content',
-    component: ComponentCreator('/__docusaurus/debug/content','c28'),
+    path: '/devportal/__docusaurus/debug/config',
+    component: ComponentCreator('/devportal/__docusaurus/debug/config','6a2'),
     exact: true
   },
   {
-    path: '/__docusaurus/debug/globalData',
-    component: ComponentCreator('/__docusaurus/debug/globalData','3cf'),
+    path: '/devportal/__docusaurus/debug/content',
+    component: ComponentCreator('/devportal/__docusaurus/debug/content','8ef'),
     exact: true
   },
   {
-    path: '/__docusaurus/debug/metadata',
-    component: ComponentCreator('/__docusaurus/debug/metadata','31b'),
+    path: '/devportal/__docusaurus/debug/globalData',
+    component: ComponentCreator('/devportal/__docusaurus/debug/globalData','059'),
     exact: true
   },
   {
-    path: '/__docusaurus/debug/registry',
-    component: ComponentCreator('/__docusaurus/debug/registry','0da'),
+    path: '/devportal/__docusaurus/debug/metadata',
+    component: ComponentCreator('/devportal/__docusaurus/debug/metadata','b3a'),
     exact: true
   },
   {
-    path: '/__docusaurus/debug/routes',
-    component: ComponentCreator('/__docusaurus/debug/routes','244'),
+    path: '/devportal/__docusaurus/debug/registry',
+    component: ComponentCreator('/devportal/__docusaurus/debug/registry','d0b'),
     exact: true
   },
   {
-    path: '/blog/archive',
-    component: ComponentCreator('/blog/archive','f4c'),
+    path: '/devportal/__docusaurus/debug/routes',
+    component: ComponentCreator('/devportal/__docusaurus/debug/routes','923'),
     exact: true
   },
   {
-    path: '/dashboard',
-    component: ComponentCreator('/dashboard','3a4'),
+    path: '/devportal/blog/archive',
+    component: ComponentCreator('/devportal/blog/archive','5b5'),
     exact: true
   },
   {
-    path: '/demo',
-    component: ComponentCreator('/demo','041'),
+    path: '/devportal/dashboard',
+    component: ComponentCreator('/devportal/dashboard','489'),
     exact: true
   },
   {
-    path: '/login',
-    component: ComponentCreator('/login','61b'),
+    path: '/devportal/demo',
+    component: ComponentCreator('/devportal/demo','4e1'),
     exact: true
   },
   {
-    path: '/markdown-page',
-    component: ComponentCreator('/markdown-page','be1'),
+    path: '/devportal/login',
+    component: ComponentCreator('/devportal/login','108'),
     exact: true
   },
   {
-    path: '/register',
-    component: ComponentCreator('/register','e49'),
+    path: '/devportal/markdown-page',
+    component: ComponentCreator('/devportal/markdown-page','40d'),
     exact: true
   },
   {
-    path: '/docs',
-    component: ComponentCreator('/docs','6f2'),
+    path: '/devportal/register',
+    component: ComponentCreator('/devportal/register','8ff'),
+    exact: true
+  },
+  {
+    path: '/devportal/docs',
+    component: ComponentCreator('/devportal/docs','7a0'),
     routes: [
       {
-        path: '/docs/',
-        component: ComponentCreator('/docs/','4fd'),
+        path: '/devportal/docs/',
+        component: ComponentCreator('/devportal/docs/','d6e'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/administration-console',
-        component: ComponentCreator('/docs/administration-console','719'),
+        path: '/devportal/docs/administration-console',
+        component: ComponentCreator('/devportal/docs/administration-console','d3f'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/analytics',
-        component: ComponentCreator('/docs/analytics','fb0'),
+        path: '/devportal/docs/analytics',
+        component: ComponentCreator('/devportal/docs/analytics','937'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/android-100',
-        component: ComponentCreator('/docs/android-100','dd3'),
+        path: '/devportal/docs/android-100',
+        component: ComponentCreator('/devportal/docs/android-100','30c'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/android-110',
-        component: ComponentCreator('/docs/android-110','61a'),
+        path: '/devportal/docs/android-110',
+        component: ComponentCreator('/devportal/docs/android-110','a85'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/api',
-        component: ComponentCreator('/docs/api','f43'),
+        path: '/devportal/docs/api',
+        component: ComponentCreator('/devportal/docs/api','364'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/api/ecdsa',
-        component: ComponentCreator('/docs/api/ecdsa','82c'),
+        path: '/devportal/docs/api/ecdsa',
+        component: ComponentCreator('/devportal/docs/api/ecdsa','96c'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/api/ecdsa/keys',
-        component: ComponentCreator('/docs/api/ecdsa/keys','df4'),
+        path: '/devportal/docs/api/ecdsa/keys',
+        component: ComponentCreator('/devportal/docs/api/ecdsa/keys','75a'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/api/idverify',
-        component: ComponentCreator('/docs/api/idverify','f1c'),
+        path: '/devportal/docs/api/idverify',
+        component: ComponentCreator('/devportal/docs/api/idverify','4d9'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/api/otp',
-        component: ComponentCreator('/docs/api/otp','89f'),
+        path: '/devportal/docs/api/otp',
+        component: ComponentCreator('/devportal/docs/api/otp','b56'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/auth0',
-        component: ComponentCreator('/docs/auth0','2ca'),
+        path: '/devportal/docs/auth0',
+        component: ComponentCreator('/devportal/docs/auth0','042'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/authentication-modules',
-        component: ComponentCreator('/docs/authentication-modules','92a'),
+        path: '/devportal/docs/authentication-modules',
+        component: ComponentCreator('/devportal/docs/authentication-modules','02a'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/authentication-scheme',
-        component: ComponentCreator('/docs/authentication-scheme','a6b'),
+        path: '/devportal/docs/authentication-scheme',
+        component: ComponentCreator('/devportal/docs/authentication-scheme','574'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/blockid-admin-console-api',
-        component: ComponentCreator('/docs/blockid-admin-console-api','989'),
+        path: '/devportal/docs/blockid-admin-console-api',
+        component: ComponentCreator('/devportal/docs/blockid-admin-console-api','8db'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/blockid-android-sdk-141and142',
-        component: ComponentCreator('/docs/blockid-android-sdk-141and142','d04'),
+        path: '/devportal/docs/blockid-android-sdk-141and142',
+        component: ComponentCreator('/devportal/docs/blockid-android-sdk-141and142','8a1'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/blockid-attributes',
-        component: ComponentCreator('/docs/blockid-attributes','3b2'),
+        path: '/devportal/docs/blockid-attributes',
+        component: ComponentCreator('/devportal/docs/blockid-attributes','503'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/blockid-authentication-broker-user-guide',
-        component: ComponentCreator('/docs/blockid-authentication-broker-user-guide','81a'),
+        path: '/devportal/docs/blockid-authentication-broker-user-guide',
+        component: ComponentCreator('/devportal/docs/blockid-authentication-broker-user-guide','c87'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/blockid-ios-sdk-141and142',
-        component: ComponentCreator('/docs/blockid-ios-sdk-141and142','d97'),
+        path: '/devportal/docs/blockid-ios-sdk-141and142',
+        component: ComponentCreator('/devportal/docs/blockid-ios-sdk-141and142','718'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/blockid-mobile-application-user-guide',
-        component: ComponentCreator('/docs/blockid-mobile-application-user-guide','bef'),
+        path: '/devportal/docs/blockid-mobile-application-user-guide',
+        component: ComponentCreator('/devportal/docs/blockid-mobile-application-user-guide','783'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/blockid-release-notes',
-        component: ComponentCreator('/docs/blockid-release-notes','b75'),
+        path: '/devportal/docs/blockid-release-notes',
+        component: ComponentCreator('/devportal/docs/blockid-release-notes','7c4'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/broker-installation',
-        component: ComponentCreator('/docs/broker-installation','501'),
+        path: '/devportal/docs/broker-installation',
+        component: ComponentCreator('/devportal/docs/broker-installation','082'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/community-management',
-        component: ComponentCreator('/docs/community-management','149'),
+        path: '/devportal/docs/community-management',
+        component: ComponentCreator('/devportal/docs/community-management','282'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/core-configurations',
-        component: ComponentCreator('/docs/core-configurations','7ca'),
+        path: '/devportal/docs/core-configurations',
+        component: ComponentCreator('/devportal/docs/core-configurations','2de'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/create-native-user',
-        component: ComponentCreator('/docs/create-native-user','bfc'),
+        path: '/devportal/docs/create-native-user',
+        component: ComponentCreator('/devportal/docs/create-native-user','70e'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/customizing-the-branding-of-your-blockid-login-page',
-        component: ComponentCreator('/docs/customizing-the-branding-of-your-blockid-login-page','b78'),
+        path: '/devportal/docs/customizing-the-branding-of-your-blockid-login-page',
+        component: ComponentCreator('/devportal/docs/customizing-the-branding-of-your-blockid-login-page','1f6'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/datastore-configuration-1',
-        component: ComponentCreator('/docs/datastore-configuration-1','e14'),
+        path: '/devportal/docs/datastore-configuration-1',
+        component: ComponentCreator('/devportal/docs/datastore-configuration-1','46f'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/deploying-smart-contract',
-        component: ComponentCreator('/docs/deploying-smart-contract','2bb'),
+        path: '/devportal/docs/deploying-smart-contract',
+        component: ComponentCreator('/devportal/docs/deploying-smart-contract','a21'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/directory',
-        component: ComponentCreator('/docs/directory','3f0'),
+        path: '/devportal/docs/directory',
+        component: ComponentCreator('/devportal/docs/directory','37e'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/ecdsa/shared-key',
-        component: ComponentCreator('/docs/ecdsa/shared-key','e05'),
+        path: '/devportal/docs/ecdsa/shared-key',
+        component: ComponentCreator('/devportal/docs/ecdsa/shared-key','0c6'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/end-user-guide',
-        component: ComponentCreator('/docs/end-user-guide','fc7'),
+        path: '/devportal/docs/end-user-guide',
+        component: ComponentCreator('/devportal/docs/end-user-guide','e0e'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/faqs-related-to-the-blockid-product-suite',
-        component: ComponentCreator('/docs/faqs-related-to-the-blockid-product-suite','a91'),
+        path: '/devportal/docs/faqs-related-to-the-blockid-product-suite',
+        component: ComponentCreator('/devportal/docs/faqs-related-to-the-blockid-product-suite','163'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/frequently-asked-questions-faq',
-        component: ComponentCreator('/docs/frequently-asked-questions-faq','9ed'),
+        path: '/devportal/docs/frequently-asked-questions-faq',
+        component: ComponentCreator('/devportal/docs/frequently-asked-questions-faq','0ad'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/generic-saml-application',
-        component: ComponentCreator('/docs/generic-saml-application','fbc'),
+        path: '/devportal/docs/generic-saml-application',
+        component: ComponentCreator('/devportal/docs/generic-saml-application','189'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/getting-started',
-        component: ComponentCreator('/docs/getting-started','98d'),
+        path: '/devportal/docs/getting-started',
+        component: ComponentCreator('/devportal/docs/getting-started','44e'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/glossary',
-        component: ComponentCreator('/docs/glossary','ced'),
+        path: '/devportal/docs/glossary',
+        component: ComponentCreator('/devportal/docs/glossary','463'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/gsuite',
-        component: ComponentCreator('/docs/gsuite','e91'),
+        path: '/devportal/docs/gsuite',
+        component: ComponentCreator('/devportal/docs/gsuite','1e3'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/installing-blockid-admin-console',
-        component: ComponentCreator('/docs/installing-blockid-admin-console','3dd'),
+        path: '/devportal/docs/installing-blockid-admin-console',
+        component: ComponentCreator('/devportal/docs/installing-blockid-admin-console','6fb'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/installing-blockid-authentication-broker',
-        component: ComponentCreator('/docs/installing-blockid-authentication-broker','321'),
+        path: '/devportal/docs/installing-blockid-authentication-broker',
+        component: ComponentCreator('/devportal/docs/installing-blockid-authentication-broker','643'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/installing-blockid-credential-provider',
-        component: ComponentCreator('/docs/installing-blockid-credential-provider','2fb'),
+        path: '/devportal/docs/installing-blockid-credential-provider',
+        component: ComponentCreator('/devportal/docs/installing-blockid-credential-provider','6d2'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/integration-pingfederate',
-        component: ComponentCreator('/docs/integration-pingfederate','229'),
+        path: '/devportal/docs/integration-pingfederate',
+        component: ComponentCreator('/devportal/docs/integration-pingfederate','74e'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/integration-with-adfs',
-        component: ComponentCreator('/docs/integration-with-adfs','085'),
+        path: '/devportal/docs/integration-with-adfs',
+        component: ComponentCreator('/devportal/docs/integration-with-adfs','b32'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/integration-with-arcon',
-        component: ComponentCreator('/docs/integration-with-arcon','499'),
+        path: '/devportal/docs/integration-with-arcon',
+        component: ComponentCreator('/devportal/docs/integration-with-arcon','f3c'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/integration-with-cisco-check-point',
-        component: ComponentCreator('/docs/integration-with-cisco-check-point','3ee'),
+        path: '/devportal/docs/integration-with-cisco-check-point',
+        component: ComponentCreator('/devportal/docs/integration-with-cisco-check-point','6fb'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/integration-with-citrix-netscaler',
-        component: ComponentCreator('/docs/integration-with-citrix-netscaler','e28'),
+        path: '/devportal/docs/integration-with-citrix-netscaler',
+        component: ComponentCreator('/devportal/docs/integration-with-citrix-netscaler','4cd'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/integration-with-cyberark',
-        component: ComponentCreator('/docs/integration-with-cyberark','e94'),
+        path: '/devportal/docs/integration-with-cyberark',
+        component: ComponentCreator('/devportal/docs/integration-with-cyberark','df6'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/integration-with-cyberark-idaptive-identity',
-        component: ComponentCreator('/docs/integration-with-cyberark-idaptive-identity','471'),
+        path: '/devportal/docs/integration-with-cyberark-idaptive-identity',
+        component: ComponentCreator('/devportal/docs/integration-with-cyberark-idaptive-identity','868'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/integration-with-forgerock',
-        component: ComponentCreator('/docs/integration-with-forgerock','239'),
+        path: '/devportal/docs/integration-with-forgerock',
+        component: ComponentCreator('/devportal/docs/integration-with-forgerock','105'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/integration-with-gsuite',
-        component: ComponentCreator('/docs/integration-with-gsuite','b5f'),
+        path: '/devportal/docs/integration-with-gsuite',
+        component: ComponentCreator('/devportal/docs/integration-with-gsuite','3ba'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/integration-with-oracle-idcs-identity-cloud-service',
-        component: ComponentCreator('/docs/integration-with-oracle-idcs-identity-cloud-service','d0b'),
+        path: '/devportal/docs/integration-with-oracle-idcs-identity-cloud-service',
+        component: ComponentCreator('/devportal/docs/integration-with-oracle-idcs-identity-cloud-service','dd5'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/integration-with-salesforce',
-        component: ComponentCreator('/docs/integration-with-salesforce','696'),
+        path: '/devportal/docs/integration-with-salesforce',
+        component: ComponentCreator('/devportal/docs/integration-with-salesforce','1fd'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/integration-with-windows',
-        component: ComponentCreator('/docs/integration-with-windows','878'),
+        path: '/devportal/docs/integration-with-windows',
+        component: ComponentCreator('/devportal/docs/integration-with-windows','990'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/integration-with-zscaler',
-        component: ComponentCreator('/docs/integration-with-zscaler','ae6'),
+        path: '/devportal/docs/integration-with-zscaler',
+        component: ComponentCreator('/devportal/docs/integration-with-zscaler','0e7'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/intergration-with-okta',
-        component: ComponentCreator('/docs/intergration-with-okta','3a3'),
+        path: '/devportal/docs/intergration-with-okta',
+        component: ComponentCreator('/devportal/docs/intergration-with-okta','49f'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/internal-faq-guide-for-blockid-product-suite',
-        component: ComponentCreator('/docs/internal-faq-guide-for-blockid-product-suite','fa6'),
+        path: '/devportal/docs/internal-faq-guide-for-blockid-product-suite',
+        component: ComponentCreator('/devportal/docs/internal-faq-guide-for-blockid-product-suite','499'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/introduction-to-athena-admin-portal',
-        component: ComponentCreator('/docs/introduction-to-athena-admin-portal','366'),
+        path: '/devportal/docs/introduction-to-athena-admin-portal',
+        component: ComponentCreator('/devportal/docs/introduction-to-athena-admin-portal','31c'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/introduction-to-blockid-admin-console',
-        component: ComponentCreator('/docs/introduction-to-blockid-admin-console','01c'),
+        path: '/devportal/docs/introduction-to-blockid-admin-console',
+        component: ComponentCreator('/devportal/docs/introduction-to-blockid-admin-console','b21'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/ios-100',
-        component: ComponentCreator('/docs/ios-100','14d'),
+        path: '/devportal/docs/ios-100',
+        component: ComponentCreator('/devportal/docs/ios-100','9a6'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/ios-110',
-        component: ComponentCreator('/docs/ios-110','630'),
+        path: '/devportal/docs/ios-110',
+        component: ComponentCreator('/devportal/docs/ios-110','5e8'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/license-keys',
-        component: ComponentCreator('/docs/license-keys','8ca'),
+        path: '/devportal/docs/license-keys',
+        component: ComponentCreator('/devportal/docs/license-keys','96d'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/login-with-mfa',
-        component: ComponentCreator('/docs/login-with-mfa','005'),
+        path: '/devportal/docs/login-with-mfa',
+        component: ComponentCreator('/devportal/docs/login-with-mfa','b17'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/office365-integration',
-        component: ComponentCreator('/docs/office365-integration','e2c'),
+        path: '/devportal/docs/office365-integration',
+        component: ComponentCreator('/devportal/docs/office365-integration','a1b'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/okta',
-        component: ComponentCreator('/docs/okta','599'),
+        path: '/devportal/docs/okta',
+        component: ComponentCreator('/devportal/docs/okta','291'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/otp',
-        component: ComponentCreator('/docs/otp','480'),
+        path: '/devportal/docs/otp',
+        component: ComponentCreator('/devportal/docs/otp','11b'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/otp/request',
-        component: ComponentCreator('/docs/otp/request','a43'),
+        path: '/devportal/docs/otp/request',
+        component: ComponentCreator('/devportal/docs/otp/request','c5f'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/otp/verify',
-        component: ComponentCreator('/docs/otp/verify','d8a'),
+        path: '/devportal/docs/otp/verify',
+        component: ComponentCreator('/devportal/docs/otp/verify','343'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/profile',
-        component: ComponentCreator('/docs/profile','256'),
+        path: '/devportal/docs/profile',
+        component: ComponentCreator('/devportal/docs/profile','ae4'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/radius-configuration',
-        component: ComponentCreator('/docs/radius-configuration','64e'),
+        path: '/devportal/docs/radius-configuration',
+        component: ComponentCreator('/devportal/docs/radius-configuration','bf0'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/release-notes-r102',
-        component: ComponentCreator('/docs/release-notes-r102','c7f'),
+        path: '/devportal/docs/release-notes-r102',
+        component: ComponentCreator('/devportal/docs/release-notes-r102','b17'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/release-notes-r10300',
-        component: ComponentCreator('/docs/release-notes-r10300','31b'),
+        path: '/devportal/docs/release-notes-r10300',
+        component: ComponentCreator('/devportal/docs/release-notes-r10300','39d'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/release-notes-v3',
-        component: ComponentCreator('/docs/release-notes-v3','562'),
+        path: '/devportal/docs/release-notes-v3',
+        component: ComponentCreator('/devportal/docs/release-notes-v3','16b'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/role-management',
-        component: ComponentCreator('/docs/role-management','f3d'),
+        path: '/devportal/docs/role-management',
+        component: ComponentCreator('/devportal/docs/role-management','983'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/salesforce',
-        component: ComponentCreator('/docs/salesforce','a49'),
+        path: '/devportal/docs/salesforce',
+        component: ComponentCreator('/devportal/docs/salesforce','6ad'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/saml-configuration',
-        component: ComponentCreator('/docs/saml-configuration','53a'),
+        path: '/devportal/docs/saml-configuration',
+        component: ComponentCreator('/devportal/docs/saml-configuration','80e'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/samlv2',
-        component: ComponentCreator('/docs/samlv2','0bd'),
+        path: '/devportal/docs/samlv2',
+        component: ComponentCreator('/devportal/docs/samlv2','ecb'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/scep-configuration',
-        component: ComponentCreator('/docs/scep-configuration','813'),
+        path: '/devportal/docs/scep-configuration',
+        component: ComponentCreator('/devportal/docs/scep-configuration','ec2'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/software-and-hardware-otp-support',
-        component: ComponentCreator('/docs/software-and-hardware-otp-support','d14'),
+        path: '/devportal/docs/software-and-hardware-otp-support',
+        component: ComponentCreator('/devportal/docs/software-and-hardware-otp-support','e4d'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/tenant-management',
-        component: ComponentCreator('/docs/tenant-management','a48'),
+        path: '/devportal/docs/tenant-management',
+        component: ComponentCreator('/devportal/docs/tenant-management','e7a'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/univeral-web-login-guide',
-        component: ComponentCreator('/docs/univeral-web-login-guide','178'),
+        path: '/devportal/docs/univeral-web-login-guide',
+        component: ComponentCreator('/devportal/docs/univeral-web-login-guide','487'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/upgrading-blockid-authentication-broker',
-        component: ComponentCreator('/docs/upgrading-blockid-authentication-broker','2b3'),
+        path: '/devportal/docs/upgrading-blockid-authentication-broker',
+        component: ComponentCreator('/devportal/docs/upgrading-blockid-authentication-broker','4b3'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/user-management',
-        component: ComponentCreator('/docs/user-management','96c'),
+        path: '/devportal/docs/user-management',
+        component: ComponentCreator('/devportal/docs/user-management','13d'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/user-onboarding-process-guide',
-        component: ComponentCreator('/docs/user-onboarding-process-guide','d3a'),
+        path: '/devportal/docs/user-onboarding-process-guide',
+        component: ComponentCreator('/devportal/docs/user-onboarding-process-guide','e6d'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/uwl',
-        component: ComponentCreator('/docs/uwl','bed'),
+        path: '/devportal/docs/uwl',
+        component: ComponentCreator('/devportal/docs/uwl','77b'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/v1/android',
-        component: ComponentCreator('/docs/v1/android','aed'),
+        path: '/devportal/docs/v1/android',
+        component: ComponentCreator('/devportal/docs/v1/android','e34'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/v1/android-2',
-        component: ComponentCreator('/docs/v1/android-2','5b4'),
+        path: '/devportal/docs/v1/android-2',
+        component: ComponentCreator('/devportal/docs/v1/android-2','43f'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/v1/ios',
-        component: ComponentCreator('/docs/v1/ios','360'),
+        path: '/devportal/docs/v1/ios',
+        component: ComponentCreator('/devportal/docs/v1/ios','4f1'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/v1/ios-2',
-        component: ComponentCreator('/docs/v1/ios-2','4af'),
+        path: '/devportal/docs/v1/ios-2',
+        component: ComponentCreator('/devportal/docs/v1/ios-2','cde'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/v1/release-notes-20211103',
-        component: ComponentCreator('/docs/v1/release-notes-20211103','668'),
+        path: '/devportal/docs/v1/release-notes-20211103',
+        component: ComponentCreator('/devportal/docs/v1/release-notes-20211103','d9b'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/webauthn',
-        component: ComponentCreator('/docs/webauthn','170'),
+        path: '/devportal/docs/webauthn',
+        component: ComponentCreator('/devportal/docs/webauthn','345'),
         exact: true,
         'sidebar': "mySidebar"
       },
       {
-        path: '/docs/white-label-templates',
-        component: ComponentCreator('/docs/white-label-templates','c8f'),
+        path: '/devportal/docs/white-label-templates',
+        component: ComponentCreator('/devportal/docs/white-label-templates','91b'),
         exact: true,
         'sidebar': "mySidebar"
       }
     ]
-  },
-  {
-    path: '/',
-    component: ComponentCreator('/','deb'),
-    exact: true
   },
   {
     path: '*',

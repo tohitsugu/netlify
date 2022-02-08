@@ -7,7 +7,7 @@
   "source": "@site/docs/index.mdx",
   "sourceDirName": ".",
   "slug": "/",
-  "permalink": "/docs/",
+  "permalink": "/devportal/docs/",
   "tags": [],
   "version": "current",
   "sidebarPosition": 1,
@@ -19,6 +19,6 @@
   "sidebar": "mySidebar",
   "next": {
     "title": "BlockID Developer API",
-    "permalink": "/docs/api"
+    "permalink": "/devportal/docs/api"
   }
 }

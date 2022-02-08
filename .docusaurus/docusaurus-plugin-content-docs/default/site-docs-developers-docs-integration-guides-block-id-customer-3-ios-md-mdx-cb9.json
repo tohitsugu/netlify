@@ -7,7 +7,7 @@
   "source": "@site/docs/Developer's Docs/Integration Guides/BlockID Customer/3_ios.md.mdx",
   "sourceDirName": "Developer's Docs/Integration Guides/BlockID Customer",
   "slug": "/v1/ios",
-  "permalink": "/docs/v1/ios",
+  "permalink": "/devportal/docs/v1/ios",
   "tags": [],
   "version": "current",
   "sidebarPosition": 3,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Android",
-    "permalink": "/docs/v1/android"
+    "permalink": "/devportal/docs/v1/android"
   },
   "next": {
     "title": "Android",
-    "permalink": "/docs/v1/android-2"
+    "permalink": "/devportal/docs/v1/android-2"
   }
 }

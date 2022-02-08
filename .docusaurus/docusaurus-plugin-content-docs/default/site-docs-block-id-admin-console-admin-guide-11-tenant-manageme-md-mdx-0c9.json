@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID Admin Console/Admin Guide/11_tenant-manageme.md.mdx",
   "sourceDirName": "BlockID Admin Console/Admin Guide",
   "slug": "/tenant-management",
-  "permalink": "/docs/tenant-management",
+  "permalink": "/devportal/docs/tenant-management",
   "tags": [],
   "version": "current",
   "sidebarPosition": 11,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "White Label Templates",
-    "permalink": "/docs/white-label-templates"
+    "permalink": "/devportal/docs/white-label-templates"
   },
   "next": {
     "title": "Deploying Smart Contract",
-    "permalink": "/docs/deploying-smart-contract"
+    "permalink": "/devportal/docs/deploying-smart-contract"
   }
 }

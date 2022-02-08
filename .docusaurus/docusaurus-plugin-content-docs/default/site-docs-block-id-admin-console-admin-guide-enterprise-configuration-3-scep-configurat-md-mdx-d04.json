@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID Admin Console/Admin Guide/Enterprise Configuration/3_scep-configurat.md.mdx",
   "sourceDirName": "BlockID Admin Console/Admin Guide/Enterprise Configuration",
   "slug": "/scep-configuration",
-  "permalink": "/docs/scep-configuration",
+  "permalink": "/devportal/docs/scep-configuration",
   "tags": [],
   "version": "current",
   "sidebarPosition": 3,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Datastore Configuration",
-    "permalink": "/docs/datastore-configuration-1"
+    "permalink": "/devportal/docs/datastore-configuration-1"
   },
   "next": {
     "title": "Radius Configuration",
-    "permalink": "/docs/radius-configuration"
+    "permalink": "/devportal/docs/radius-configuration"
   }
 }

@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID Admin Console/Admin Guide/Enterprise Configuration/2_datastore-confi.md.mdx",
   "sourceDirName": "BlockID Admin Console/Admin Guide/Enterprise Configuration",
   "slug": "/datastore-configuration-1",
-  "permalink": "/docs/datastore-configuration-1",
+  "permalink": "/devportal/docs/datastore-configuration-1",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -17,11 +17,11 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "Software and Hardware OTP Support",
-    "permalink": "/docs/software-and-hardware-otp-support"
+    "title": "Glossary",
+    "permalink": "/devportal/docs/glossary"
   },
   "next": {
     "title": "SCEP Configuration",
-    "permalink": "/docs/scep-configuration"
+    "permalink": "/devportal/docs/scep-configuration"
   }
 }

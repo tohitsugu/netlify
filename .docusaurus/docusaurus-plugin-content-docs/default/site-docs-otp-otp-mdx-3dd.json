@@ -7,7 +7,7 @@
   "source": "@site/docs/otp/otp.mdx",
   "sourceDirName": "otp",
   "slug": "/otp",
-  "permalink": "/docs/otp",
+  "permalink": "/devportal/docs/otp",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -19,10 +19,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Requesting a One-Time Passcode",
-    "permalink": "/docs/otp/request"
+    "permalink": "/devportal/docs/otp/request"
   },
   "next": {
     "title": "Verifying One-Time Passcodes",
-    "permalink": "/docs/otp/verify"
+    "permalink": "/devportal/docs/otp/verify"
   }
 }

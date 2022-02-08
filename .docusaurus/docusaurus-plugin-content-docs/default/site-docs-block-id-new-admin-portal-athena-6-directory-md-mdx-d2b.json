@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID New Admin Portal (Athena)/6_directory.md.mdx",
   "sourceDirName": "BlockID New Admin Portal (Athena)",
   "slug": "/directory",
-  "permalink": "/docs/directory",
+  "permalink": "/devportal/docs/directory",
   "tags": [],
   "version": "current",
   "sidebarPosition": 6,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Create Native User",
-    "permalink": "/docs/create-native-user"
+    "permalink": "/devportal/docs/create-native-user"
   },
   "next": {
     "title": "Customizing the Branding of your BlockID Login Page",
-    "permalink": "/docs/customizing-the-branding-of-your-blockid-login-page"
+    "permalink": "/devportal/docs/customizing-the-branding-of-your-blockid-login-page"
   }
 }

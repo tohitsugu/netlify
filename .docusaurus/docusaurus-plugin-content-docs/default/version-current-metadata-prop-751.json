@@ -11,7 +11,7 @@
       {
         "type": "link",
         "label": "BlockID Developer SDK",
-        "href": "/docs/"
+        "href": "/devportal/docs/"
       },
       {
         "type": "category",
@@ -22,7 +22,7 @@
           {
             "type": "link",
             "label": "BlockID Developer API",
-            "href": "/docs/api"
+            "href": "/devportal/docs/api"
           },
           {
             "type": "category",
@@ -33,14 +33,14 @@
               {
                 "type": "link",
                 "label": "One-Time Passcodes",
-                "href": "/docs/api/otp"
+                "href": "/devportal/docs/api/otp"
               }
             ]
           },
           {
             "type": "link",
             "label": "BlockID Identity Verification",
-            "href": "/docs/api/idverify"
+            "href": "/devportal/docs/api/idverify"
           },
           {
             "type": "category",
@@ -51,17 +51,17 @@
               {
                 "type": "link",
                 "label": "ECDSA Encryption",
-                "href": "/docs/api/ecdsa"
+                "href": "/devportal/docs/api/ecdsa"
               },
               {
                 "type": "link",
                 "label": "User Private and Public Keys",
-                "href": "/docs/api/ecdsa/keys"
+                "href": "/devportal/docs/api/ecdsa/keys"
               },
               {
                 "type": "link",
                 "label": "Shared Key",
-                "href": "/docs/ecdsa/shared-key"
+                "href": "/devportal/docs/ecdsa/shared-key"
               }
             ]
           }
@@ -76,17 +76,17 @@
           {
             "type": "link",
             "label": "Requesting a One-Time Passcode",
-            "href": "/docs/otp/request"
+            "href": "/devportal/docs/otp/request"
           },
           {
             "type": "link",
             "label": "OTP Authentication",
-            "href": "/docs/otp"
+            "href": "/devportal/docs/otp"
           },
           {
             "type": "link",
             "label": "Verifying One-Time Passcodes",
-            "href": "/docs/otp/verify"
+            "href": "/devportal/docs/otp/verify"
           }
         ]
       },
@@ -99,206 +99,7 @@
           {
             "type": "link",
             "label": "Universal Web Login",
-            "href": "/docs/uwl"
-          }
-        ]
-      },
-      {
-        "type": "category",
-        "label": "BlockID Credential Provider",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "type": "link",
-            "label": "Installing BlockID Credential Provider",
-            "href": "/docs/installing-blockid-credential-provider"
-          }
-        ]
-      },
-      {
-        "type": "category",
-        "label": "BlockID FAQ",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "type": "link",
-            "label": "Frequently Asked Questions (FAQs)",
-            "href": "/docs/frequently-asked-questions-faq"
-          },
-          {
-            "type": "link",
-            "label": "FAQ's related to the BlockID Product Suite",
-            "href": "/docs/faqs-related-to-the-blockid-product-suite"
-          },
-          {
-            "type": "link",
-            "label": "Internal FAQ guide for BlockID Product Suite",
-            "href": "/docs/internal-faq-guide-for-blockid-product-suite"
-          }
-        ]
-      },
-      {
-        "type": "category",
-        "label": "BlockID Admin Console",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "type": "link",
-            "label": "Installing BlockID Admin Console",
-            "href": "/docs/installing-blockid-admin-console"
-          },
-          {
-            "type": "link",
-            "label": "User Onboarding Process Guide",
-            "href": "/docs/user-onboarding-process-guide"
-          },
-          {
-            "type": "category",
-            "label": "Admin Guide",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "Introduction to BlockID Admin Console",
-                "href": "/docs/introduction-to-blockid-admin-console"
-              },
-              {
-                "type": "link",
-                "label": "Administration Console",
-                "href": "/docs/administration-console"
-              },
-              {
-                "type": "link",
-                "label": "Analytics and Event Logging",
-                "href": "/docs/analytics"
-              },
-              {
-                "type": "link",
-                "label": "License Keys",
-                "href": "/docs/license-keys"
-              },
-              {
-                "type": "link",
-                "label": "White Label Templates",
-                "href": "/docs/white-label-templates"
-              },
-              {
-                "type": "link",
-                "label": "Tenant Management",
-                "href": "/docs/tenant-management"
-              },
-              {
-                "type": "link",
-                "label": "Deploying Smart Contract",
-                "href": "/docs/deploying-smart-contract"
-              },
-              {
-                "type": "link",
-                "label": "Community Management",
-                "href": "/docs/community-management"
-              },
-              {
-                "type": "link",
-                "label": "Profile Management",
-                "href": "/docs/profile"
-              },
-              {
-                "type": "link",
-                "label": "Core Configurations",
-                "href": "/docs/core-configurations"
-              },
-              {
-                "type": "link",
-                "label": "Glossary",
-                "href": "/docs/glossary"
-              },
-              {
-                "type": "category",
-                "label": "Authentication Configuration",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
-                  {
-                    "type": "link",
-                    "label": "Authentication Modules",
-                    "href": "/docs/authentication-modules"
-                  },
-                  {
-                    "type": "link",
-                    "label": "Authentication Scheme",
-                    "href": "/docs/authentication-scheme"
-                  },
-                  {
-                    "type": "link",
-                    "label": "Software and Hardware OTP Support",
-                    "href": "/docs/software-and-hardware-otp-support"
-                  }
-                ]
-              },
-              {
-                "type": "category",
-                "label": "Enterprise Configuration",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
-                  {
-                    "type": "link",
-                    "label": "Datastore Configuration",
-                    "href": "/docs/datastore-configuration-1"
-                  },
-                  {
-                    "type": "link",
-                    "label": "SCEP Configuration",
-                    "href": "/docs/scep-configuration"
-                  },
-                  {
-                    "type": "link",
-                    "label": "Radius Configuration",
-                    "href": "/docs/radius-configuration"
-                  }
-                ]
-              },
-              {
-                "type": "category",
-                "label": "Federation",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
-                  {
-                    "type": "link",
-                    "label": "SAML Configurations",
-                    "href": "/docs/samlv2"
-                  }
-                ]
-              },
-              {
-                "type": "category",
-                "label": "Identity Management",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
-                  {
-                    "type": "link",
-                    "label": "User Management",
-                    "href": "/docs/user-management"
-                  },
-                  {
-                    "type": "link",
-                    "label": "Role Management",
-                    "href": "/docs/role-management"
-                  },
-                  {
-                    "type": "link",
-                    "label": "Policy Management",
-                    "href": "/docs/saml-configuration"
-                  }
-                ]
-              }
-            ]
+            "href": "/devportal/docs/uwl"
           }
         ]
       },
@@ -311,17 +112,216 @@
           {
             "type": "link",
             "label": "Installing BlockID Authentication Broker",
-            "href": "/docs/installing-blockid-authentication-broker"
+            "href": "/devportal/docs/installing-blockid-authentication-broker"
           },
           {
             "type": "link",
             "label": "BlockID Authentication Broker - User Guide",
-            "href": "/docs/blockid-authentication-broker-user-guide"
+            "href": "/devportal/docs/blockid-authentication-broker-user-guide"
           },
           {
             "type": "link",
             "label": "Upgrading BlockID Authentication Broker",
-            "href": "/docs/upgrading-blockid-authentication-broker"
+            "href": "/devportal/docs/upgrading-blockid-authentication-broker"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "BlockID FAQ",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Frequently Asked Questions (FAQs)",
+            "href": "/devportal/docs/frequently-asked-questions-faq"
+          },
+          {
+            "type": "link",
+            "label": "FAQ's related to the BlockID Product Suite",
+            "href": "/devportal/docs/faqs-related-to-the-blockid-product-suite"
+          },
+          {
+            "type": "link",
+            "label": "Internal FAQ guide for BlockID Product Suite",
+            "href": "/devportal/docs/internal-faq-guide-for-blockid-product-suite"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "BlockID Admin Console",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Installing BlockID Admin Console",
+            "href": "/devportal/docs/installing-blockid-admin-console"
+          },
+          {
+            "type": "link",
+            "label": "User Onboarding Process Guide",
+            "href": "/devportal/docs/user-onboarding-process-guide"
+          },
+          {
+            "type": "category",
+            "label": "Admin Guide",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Introduction to BlockID Admin Console",
+                "href": "/devportal/docs/introduction-to-blockid-admin-console"
+              },
+              {
+                "type": "link",
+                "label": "Administration Console",
+                "href": "/devportal/docs/administration-console"
+              },
+              {
+                "type": "link",
+                "label": "Analytics and Event Logging",
+                "href": "/devportal/docs/analytics"
+              },
+              {
+                "type": "link",
+                "label": "License Keys",
+                "href": "/devportal/docs/license-keys"
+              },
+              {
+                "type": "link",
+                "label": "White Label Templates",
+                "href": "/devportal/docs/white-label-templates"
+              },
+              {
+                "type": "link",
+                "label": "Tenant Management",
+                "href": "/devportal/docs/tenant-management"
+              },
+              {
+                "type": "link",
+                "label": "Deploying Smart Contract",
+                "href": "/devportal/docs/deploying-smart-contract"
+              },
+              {
+                "type": "link",
+                "label": "Community Management",
+                "href": "/devportal/docs/community-management"
+              },
+              {
+                "type": "link",
+                "label": "Profile Management",
+                "href": "/devportal/docs/profile"
+              },
+              {
+                "type": "link",
+                "label": "Core Configurations",
+                "href": "/devportal/docs/core-configurations"
+              },
+              {
+                "type": "link",
+                "label": "Glossary",
+                "href": "/devportal/docs/glossary"
+              },
+              {
+                "type": "category",
+                "label": "Enterprise Configuration",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Datastore Configuration",
+                    "href": "/devportal/docs/datastore-configuration-1"
+                  },
+                  {
+                    "type": "link",
+                    "label": "SCEP Configuration",
+                    "href": "/devportal/docs/scep-configuration"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Radius Configuration",
+                    "href": "/devportal/docs/radius-configuration"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Authentication Configuration",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "Authentication Modules",
+                    "href": "/devportal/docs/authentication-modules"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Authentication Scheme",
+                    "href": "/devportal/docs/authentication-scheme"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Software and Hardware OTP Support",
+                    "href": "/devportal/docs/software-and-hardware-otp-support"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Identity Management",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "User Management",
+                    "href": "/devportal/docs/user-management"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Role Management",
+                    "href": "/devportal/docs/role-management"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Policy Management",
+                    "href": "/devportal/docs/saml-configuration"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Federation",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "SAML Configurations",
+                    "href": "/devportal/docs/samlv2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "BlockID Credential Provider",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Installing BlockID Credential Provider",
+            "href": "/devportal/docs/installing-blockid-credential-provider"
           }
         ]
       },
@@ -334,7 +334,7 @@
           {
             "type": "link",
             "label": "BlockID Mobile Application User Guide",
-            "href": "/docs/blockid-mobile-application-user-guide"
+            "href": "/devportal/docs/blockid-mobile-application-user-guide"
           }
         ]
       },
@@ -347,50 +347,37 @@
           {
             "type": "link",
             "label": "Introduction to Athena Admin Portal",
-            "href": "/docs/introduction-to-athena-admin-portal"
+            "href": "/devportal/docs/introduction-to-athena-admin-portal"
           },
           {
             "type": "link",
             "label": "Login",
-            "href": "/docs/login-with-mfa"
+            "href": "/devportal/docs/login-with-mfa"
           },
           {
             "type": "link",
             "label": "Create Native User",
-            "href": "/docs/create-native-user"
+            "href": "/devportal/docs/create-native-user"
           },
           {
             "type": "link",
             "label": "Directory",
-            "href": "/docs/directory"
+            "href": "/devportal/docs/directory"
           },
           {
             "type": "link",
             "label": "Customizing the Branding of your BlockID Login Page",
-            "href": "/docs/customizing-the-branding-of-your-blockid-login-page"
+            "href": "/devportal/docs/customizing-the-branding-of-your-blockid-login-page"
           },
           {
             "type": "link",
             "label": "End User Guide",
-            "href": "/docs/end-user-guide"
+            "href": "/devportal/docs/end-user-guide"
           },
           {
             "type": "link",
             "label": "WebAuthn",
-            "href": "/docs/webauthn"
-          },
-          {
-            "type": "category",
-            "label": "Release Notes",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "Release Notes 2021.11.03",
-                "href": "/docs/v1/release-notes-20211103"
-              }
-            ]
+            "href": "/devportal/docs/webauthn"
           },
           {
             "type": "category",
@@ -401,7 +388,20 @@
               {
                 "type": "link",
                 "label": "Broker Installation",
-                "href": "/docs/broker-installation"
+                "href": "/devportal/docs/broker-installation"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "label": "Release Notes",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Release Notes 2021.11.03",
+                "href": "/devportal/docs/v1/release-notes-20211103"
               }
             ]
           },
@@ -414,7 +414,7 @@
               {
                 "type": "link",
                 "label": "BlockID Attributes",
-                "href": "/docs/blockid-attributes"
+                "href": "/devportal/docs/blockid-attributes"
               }
             ]
           },
@@ -433,32 +433,32 @@
                   {
                     "type": "link",
                     "label": "Okta",
-                    "href": "/docs/okta"
+                    "href": "/devportal/docs/okta"
                   },
                   {
                     "type": "link",
                     "label": "Auth0",
-                    "href": "/docs/auth0"
+                    "href": "/devportal/docs/auth0"
                   },
                   {
                     "type": "link",
                     "label": "Salesforce",
-                    "href": "/docs/salesforce"
+                    "href": "/devportal/docs/salesforce"
                   },
                   {
                     "type": "link",
                     "label": "G Suite",
-                    "href": "/docs/gsuite"
+                    "href": "/devportal/docs/gsuite"
                   },
                   {
                     "type": "link",
                     "label": "Generic SAML Application",
-                    "href": "/docs/generic-saml-application"
+                    "href": "/devportal/docs/generic-saml-application"
                   },
                   {
                     "type": "link",
                     "label": "Office365 Integration",
-                    "href": "/docs/office365-integration"
+                    "href": "/devportal/docs/office365-integration"
                   }
                 ]
               }
@@ -475,12 +475,12 @@
           {
             "type": "link",
             "label": "Getting Started",
-            "href": "/docs/getting-started"
+            "href": "/devportal/docs/getting-started"
           },
           {
             "type": "link",
             "label": "Universal Web Login (UWL) Guide",
-            "href": "/docs/univeral-web-login-guide"
+            "href": "/devportal/docs/univeral-web-login-guide"
           },
           {
             "type": "category",
@@ -491,7 +491,7 @@
               {
                 "type": "link",
                 "label": "BlockID Admin Console",
-                "href": "/docs/blockid-admin-console-api"
+                "href": "/devportal/docs/blockid-admin-console-api"
               }
             ]
           },
@@ -510,12 +510,12 @@
                   {
                     "type": "link",
                     "label": "Android",
-                    "href": "/docs/v1/android"
+                    "href": "/devportal/docs/v1/android"
                   },
                   {
                     "type": "link",
                     "label": "iOS",
-                    "href": "/docs/v1/ios"
+                    "href": "/devportal/docs/v1/ios"
                   }
                 ]
               },
@@ -528,12 +528,12 @@
                   {
                     "type": "link",
                     "label": "Android",
-                    "href": "/docs/v1/android-2"
+                    "href": "/devportal/docs/v1/android-2"
                   },
                   {
                     "type": "link",
                     "label": "iOS",
-                    "href": "/docs/v1/ios-2"
+                    "href": "/devportal/docs/v1/ios-2"
                   }
                 ]
               }
@@ -560,17 +560,17 @@
                       {
                         "type": "link",
                         "label": "BlockID iOS SDK 1.4.1 and 1.4.2",
-                        "href": "/docs/blockid-ios-sdk-141and142"
+                        "href": "/devportal/docs/blockid-ios-sdk-141and142"
                       },
                       {
                         "type": "link",
                         "label": "BlockID iOS SDK 1.1.0",
-                        "href": "/docs/ios-110"
+                        "href": "/devportal/docs/ios-110"
                       },
                       {
                         "type": "link",
                         "label": "BlockID iOS SDK 1.0.0",
-                        "href": "/docs/ios-100"
+                        "href": "/devportal/docs/ios-100"
                       }
                     ]
                   },
@@ -583,17 +583,17 @@
                       {
                         "type": "link",
                         "label": "BlockID Android SDK 1.4.1 and 1.4.2",
-                        "href": "/docs/blockid-android-sdk-141and142"
+                        "href": "/devportal/docs/blockid-android-sdk-141and142"
                       },
                       {
                         "type": "link",
                         "label": "BlockID Android SDK 1.1.0",
-                        "href": "/docs/android-110"
+                        "href": "/devportal/docs/android-110"
                       },
                       {
                         "type": "link",
                         "label": "BlockID Android SDK 1.0.0",
-                        "href": "/docs/android-100"
+                        "href": "/devportal/docs/android-100"
                       }
                     ]
                   }
@@ -612,22 +612,22 @@
           {
             "type": "link",
             "label": "BlockID Release Notes",
-            "href": "/docs/blockid-release-notes"
+            "href": "/devportal/docs/blockid-release-notes"
           },
           {
             "type": "link",
             "label": "Release Notes v3",
-            "href": "/docs/release-notes-v3"
+            "href": "/devportal/docs/release-notes-v3"
           },
           {
             "type": "link",
             "label": "Release Notes R1.02.00",
-            "href": "/docs/release-notes-r102"
+            "href": "/devportal/docs/release-notes-r102"
           },
           {
             "type": "link",
             "label": "Release Notes R1.02.03",
-            "href": "/docs/release-notes-r10300"
+            "href": "/devportal/docs/release-notes-r10300"
           }
         ]
       },
@@ -646,47 +646,47 @@
               {
                 "type": "link",
                 "label": "Intergration with Okta",
-                "href": "/docs/intergration-with-okta"
+                "href": "/devportal/docs/intergration-with-okta"
               },
               {
                 "type": "link",
                 "label": "Integration with Salesforce",
-                "href": "/docs/integration-with-salesforce"
+                "href": "/devportal/docs/integration-with-salesforce"
               },
               {
                 "type": "link",
                 "label": "Integration with Microsoft ADFS",
-                "href": "/docs/integration-with-adfs"
+                "href": "/devportal/docs/integration-with-adfs"
               },
               {
                 "type": "link",
                 "label": "Integration PingFederate",
-                "href": "/docs/integration-pingfederate"
+                "href": "/devportal/docs/integration-pingfederate"
               },
               {
                 "type": "link",
                 "label": "Integration with Windows",
-                "href": "/docs/integration-with-windows"
+                "href": "/devportal/docs/integration-with-windows"
               },
               {
                 "type": "link",
                 "label": "Integration with G Suite",
-                "href": "/docs/integration-with-gsuite"
+                "href": "/devportal/docs/integration-with-gsuite"
               },
               {
                 "type": "link",
                 "label": "Integration with Oracle IDCS (Identity Cloud Service)",
-                "href": "/docs/integration-with-oracle-idcs-identity-cloud-service"
+                "href": "/devportal/docs/integration-with-oracle-idcs-identity-cloud-service"
               },
               {
                 "type": "link",
                 "label": "Integration with CyberArk Idaptive Identity",
-                "href": "/docs/integration-with-cyberark-idaptive-identity"
+                "href": "/devportal/docs/integration-with-cyberark-idaptive-identity"
               },
               {
                 "type": "link",
                 "label": "Integration with ForgeRock",
-                "href": "/docs/integration-with-forgerock"
+                "href": "/devportal/docs/integration-with-forgerock"
               }
             ]
           },
@@ -699,12 +699,12 @@
               {
                 "type": "link",
                 "label": "Integration with CyberArk",
-                "href": "/docs/integration-with-cyberark"
+                "href": "/devportal/docs/integration-with-cyberark"
               },
               {
                 "type": "link",
                 "label": "Integration with ARCON",
-                "href": "/docs/integration-with-arcon"
+                "href": "/devportal/docs/integration-with-arcon"
               }
             ]
           },
@@ -717,17 +717,17 @@
               {
                 "type": "link",
                 "label": "Integration with Citrix NetScaler",
-                "href": "/docs/integration-with-citrix-netscaler"
+                "href": "/devportal/docs/integration-with-citrix-netscaler"
               },
               {
                 "type": "link",
                 "label": "Integration with Zscaler",
-                "href": "/docs/integration-with-zscaler"
+                "href": "/devportal/docs/integration-with-zscaler"
               },
               {
                 "type": "link",
                 "label": "Integration with CISCO Check Point",
-                "href": "/docs/integration-with-cisco-check-point"
+                "href": "/devportal/docs/integration-with-cisco-check-point"
               }
             ]
           }

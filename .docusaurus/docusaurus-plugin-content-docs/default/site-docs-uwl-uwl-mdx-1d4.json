@@ -7,7 +7,7 @@
   "source": "@site/docs/uwl/uwl.mdx",
   "sourceDirName": "uwl",
   "slug": "/uwl",
-  "permalink": "/docs/uwl",
+  "permalink": "/devportal/docs/uwl",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -19,10 +19,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Verifying One-Time Passcodes",
-    "permalink": "/docs/otp/verify"
+    "permalink": "/devportal/docs/otp/verify"
   },
   "next": {
-    "title": "Installing BlockID Credential Provider",
-    "permalink": "/docs/installing-blockid-credential-provider"
+    "title": "Installing BlockID Authentication Broker",
+    "permalink": "/devportal/docs/installing-blockid-authentication-broker"
   }
 }

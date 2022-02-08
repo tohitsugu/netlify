@@ -140,15 +140,18 @@ We recommend using the setup code in the **MainApplication** class of your appli
    ```
     
 2. Once the SDK is initialized successfully, set up the license key so that the SDK can check whether you are authorized to use the SDK or not.
-    * Use the following code to set the license key:
-    ```json
-    BlockIDSDK.getInstance().setLicenseKey(licenseKey);
-    ```
 
-    **Request Params Description**: 
-    | Params | Description |
-    | ----------- | ----------- |
-   | licenseKey | A string value of license key |
+* Use the following code to set the license key:
+
+```json
+BlockIDSDK.getInstance().setLicenseKey(licenseKey);
+```
+
+**Request Params Description**: 
+
+| Params | Description |
+| ----------- | ----------- |
+| licenseKey | A string value of license key |
 
 
 3. After setting the license key, the SDK will automatically check whether the license key is valid or not and set it within to access its features. 

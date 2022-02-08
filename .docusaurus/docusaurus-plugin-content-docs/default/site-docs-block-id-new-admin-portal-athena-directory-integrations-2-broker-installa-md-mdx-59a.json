@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID New Admin Portal (Athena)/Directory Integrations/2_broker-installa.md.mdx",
   "sourceDirName": "BlockID New Admin Portal (Athena)/Directory Integrations",
   "slug": "/broker-installation",
-  "permalink": "/docs/broker-installation",
+  "permalink": "/devportal/docs/broker-installation",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -17,11 +17,11 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "Release Notes 2021.11.03",
-    "permalink": "/docs/v1/release-notes-20211103"
+    "title": "WebAuthn",
+    "permalink": "/devportal/docs/webauthn"
   },
   "next": {
-    "title": "BlockID Attributes",
-    "permalink": "/docs/blockid-attributes"
+    "title": "Release Notes 2021.11.03",
+    "permalink": "/devportal/docs/v1/release-notes-20211103"
   }
 }

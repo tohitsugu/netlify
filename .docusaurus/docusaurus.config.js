@@ -2,7 +2,7 @@ export default {
   "title": "Developer Documentation",
   "tagline": "1Kosmos BlockID Developer Portal",
   "url": "https://pedantic-meitner-0011.netlify.app",
-  "baseUrl": "/",
+  "baseUrl": "/devportal/",
   "onBrokenLinks": "warn",
   "onBrokenMarkdownLinks": "warn",
   "favicon": "img/favicon.ico",
@@ -17,14 +17,14 @@ export default {
       "@docusaurus/preset-classic",
       {
         "docs": {
-          "sidebarPath": "/Users/ifrench/devx-content/older/netlify3/netlify/sidebars.js"
+          "sidebarPath": "/Users/ifrench/devx-content/older/netlify3/netlify/devx_frontend/sidebars.js"
         },
         "blog": {
           "showReadingTime": true,
           "editUrl": "https://github.com/1KBlockID/devx_frontend/tree/develop/blog/"
         },
         "theme": {
-          "customCss": "/Users/ifrench/devx-content/older/netlify3/netlify/src/css/custom.css"
+          "customCss": "/Users/ifrench/devx-content/older/netlify3/netlify/devx_frontend/src/css/custom.css"
         }
       }
     ]
@@ -34,7 +34,7 @@ export default {
   ],
   "plugins": [
     "docusaurus-node-polyfills",
-    "/Users/ifrench/devx-content/older/netlify3/netlify/src/docuplugin.js"
+    "/Users/ifrench/devx-content/older/netlify3/netlify/devx_frontend/src/docuplugin.js"
   ],
   "themeConfig": {
     "navbar": {

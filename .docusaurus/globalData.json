@@ -1,458 +1,458 @@
 {
   "docusaurus-plugin-content-docs": {
     "default": {
-      "path": "/docs",
+      "path": "/devportal/docs",
       "versions": [
         {
           "name": "current",
           "label": "Next",
           "isLast": true,
-          "path": "/docs",
+          "path": "/devportal/docs",
           "mainDocId": "index",
           "docs": [
             {
               "id": "api/api1",
-              "path": "/docs/api",
+              "path": "/devportal/docs/api",
               "sidebar": "mySidebar"
             },
             {
               "id": "api/ecdsa/ecdsa",
-              "path": "/docs/api/ecdsa",
+              "path": "/devportal/docs/api/ecdsa",
               "sidebar": "mySidebar"
             },
             {
               "id": "api/ecdsa/ecdsa-keys",
-              "path": "/docs/api/ecdsa/keys",
+              "path": "/devportal/docs/api/ecdsa/keys",
               "sidebar": "mySidebar"
             },
             {
               "id": "api/ecdsa/shared-key",
-              "path": "/docs/ecdsa/shared-key",
+              "path": "/devportal/docs/ecdsa/shared-key",
               "sidebar": "mySidebar"
             },
             {
               "id": "api/id1",
-              "path": "/docs/api/idverify",
+              "path": "/devportal/docs/api/idverify",
               "sidebar": "mySidebar"
             },
             {
               "id": "api/otp/api2",
-              "path": "/docs/api/otp",
+              "path": "/devportal/docs/api/otp",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/administration-console",
-              "path": "/docs/administration-console",
+              "path": "/devportal/docs/administration-console",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/analytics",
-              "path": "/docs/analytics",
+              "path": "/devportal/docs/analytics",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/Authentication Configuration/Z73440ef0-77e6-4977-8eab-98c41255b244",
-              "path": "/docs/authentication-scheme",
+              "path": "/devportal/docs/authentication-scheme",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/Authentication Configuration/Za142b8e4-90fd-4362-a0c0-1501a23cb26b",
-              "path": "/docs/software-and-hardware-otp-support",
+              "path": "/devportal/docs/software-and-hardware-otp-support",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/Authentication Configuration/Zb59060b5-cc5e-48a5-8474-432054668177",
-              "path": "/docs/authentication-modules",
+              "path": "/devportal/docs/authentication-modules",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/community-management",
-              "path": "/docs/community-management",
+              "path": "/devportal/docs/community-management",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/core-configurations",
-              "path": "/docs/core-configurations",
+              "path": "/devportal/docs/core-configurations",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/deploying-smart-contract",
-              "path": "/docs/deploying-smart-contract",
+              "path": "/devportal/docs/deploying-smart-contract",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/Enterprise Configuration/datastore-configuration-1",
-              "path": "/docs/datastore-configuration-1",
+              "path": "/devportal/docs/datastore-configuration-1",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/Enterprise Configuration/radius-configuration",
-              "path": "/docs/radius-configuration",
+              "path": "/devportal/docs/radius-configuration",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/Enterprise Configuration/scep-configuration",
-              "path": "/docs/scep-configuration",
+              "path": "/devportal/docs/scep-configuration",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/Federation/samlv2",
-              "path": "/docs/samlv2",
+              "path": "/devportal/docs/samlv2",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/glossary",
-              "path": "/docs/glossary",
+              "path": "/devportal/docs/glossary",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/Identity Management/Z0e74df61-4182-40d7-b7f2-a1a670207b0a",
-              "path": "/docs/user-management",
+              "path": "/devportal/docs/user-management",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/Identity Management/Z58afb044-8b28-4ffe-b763-85ae2af99494",
-              "path": "/docs/saml-configuration",
+              "path": "/devportal/docs/saml-configuration",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/Identity Management/Z625d6a5a-5b85-4db1-9a2f-d03d88f7a7f5",
-              "path": "/docs/role-management",
+              "path": "/devportal/docs/role-management",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/introduction-to-blockid-admin-console",
-              "path": "/docs/introduction-to-blockid-admin-console",
+              "path": "/devportal/docs/introduction-to-blockid-admin-console",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/license-keys",
-              "path": "/docs/license-keys",
+              "path": "/devportal/docs/license-keys",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/profile",
-              "path": "/docs/profile",
+              "path": "/devportal/docs/profile",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/tenant-management",
-              "path": "/docs/tenant-management",
+              "path": "/devportal/docs/tenant-management",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/Admin Guide/white-label-templates",
-              "path": "/docs/white-label-templates",
+              "path": "/devportal/docs/white-label-templates",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/installing-blockid-admin-console",
-              "path": "/docs/installing-blockid-admin-console",
+              "path": "/devportal/docs/installing-blockid-admin-console",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Admin Console/user-onboarding-process-guide",
-              "path": "/docs/user-onboarding-process-guide",
+              "path": "/devportal/docs/user-onboarding-process-guide",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Authentication Broker/Z3ecf8e77-a029-4bfe-96d4-999e92d1484a",
-              "path": "/docs/upgrading-blockid-authentication-broker",
+              "path": "/devportal/docs/upgrading-blockid-authentication-broker",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Authentication Broker/Zd1256c41-99d9-4b0a-8a6c-48d13a499fa8",
-              "path": "/docs/blockid-authentication-broker-user-guide",
+              "path": "/devportal/docs/blockid-authentication-broker-user-guide",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Authentication Broker/Zdae9610f-aaf7-4309-82e7-14a40f70d02a",
-              "path": "/docs/installing-blockid-authentication-broker",
+              "path": "/devportal/docs/installing-blockid-authentication-broker",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Credential Provider/Zbce27641-b3b3-4c34-8c3e-b5a39c6164f7",
-              "path": "/docs/installing-blockid-credential-provider",
+              "path": "/devportal/docs/installing-blockid-credential-provider",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID FAQ/Za49f1bb3-aba5-47e6-9a66-1248143e8c67",
-              "path": "/docs/frequently-asked-questions-faq",
+              "path": "/devportal/docs/frequently-asked-questions-faq",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID FAQ/Zb0eccd8d-dfdc-48d7-bf4a-2444bd2c7822",
-              "path": "/docs/internal-faq-guide-for-blockid-product-suite",
+              "path": "/devportal/docs/internal-faq-guide-for-blockid-product-suite",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID FAQ/Zef1df47a-d435-421b-a375-61157ac1420f",
-              "path": "/docs/faqs-related-to-the-blockid-product-suite",
+              "path": "/devportal/docs/faqs-related-to-the-blockid-product-suite",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Integrations/Identity Providers/Z0010fc32-8540-4be0-98fd-831958d61e23",
-              "path": "/docs/intergration-with-okta",
+              "path": "/devportal/docs/intergration-with-okta",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Integrations/Identity Providers/Z2ed41a6b-e482-44aa-98d0-f695b4b1d021",
-              "path": "/docs/integration-with-cyberark-idaptive-identity",
+              "path": "/devportal/docs/integration-with-cyberark-idaptive-identity",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Integrations/Identity Providers/Z3556b698-4818-461b-8781-ed4911a8f856",
-              "path": "/docs/integration-with-windows",
+              "path": "/devportal/docs/integration-with-windows",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Integrations/Identity Providers/Z3ec44e40-4852-4fc4-884c-598943e2182d",
-              "path": "/docs/integration-with-forgerock",
+              "path": "/devportal/docs/integration-with-forgerock",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Integrations/Identity Providers/Z8c31c0dd-dd72-4b22-bee5-16a3cbedee0b",
-              "path": "/docs/integration-with-salesforce",
+              "path": "/devportal/docs/integration-with-salesforce",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Integrations/Identity Providers/Z9f3ceb9a-2550-4d70-a0d3-d4432e92ecfd",
-              "path": "/docs/integration-with-adfs",
+              "path": "/devportal/docs/integration-with-adfs",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Integrations/Identity Providers/Zb71e5fd8-fb17-4e19-b274-eaa5ddff808e",
-              "path": "/docs/integration-pingfederate",
+              "path": "/devportal/docs/integration-pingfederate",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Integrations/Identity Providers/Ze28be7cb-f7cc-45a6-8e44-8137ae7e9747",
-              "path": "/docs/integration-with-gsuite",
+              "path": "/devportal/docs/integration-with-gsuite",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Integrations/Identity Providers/Zefe715f0-3149-41a9-b7df-8f2f0f14bc05",
-              "path": "/docs/integration-with-oracle-idcs-identity-cloud-service",
+              "path": "/devportal/docs/integration-with-oracle-idcs-identity-cloud-service",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Integrations/PAM (Privilege Account Management)/Z579bc6d1-e02a-48d4-9f27-78e9edb58aa0",
-              "path": "/docs/integration-with-arcon",
+              "path": "/devportal/docs/integration-with-arcon",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Integrations/PAM (Privilege Account Management)/Z660bdd75-9447-48fe-84e8-b26029d4f403",
-              "path": "/docs/integration-with-cyberark",
+              "path": "/devportal/docs/integration-with-cyberark",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Integrations/Remote Access/Z0eb76a07-d6bc-4163-884e-002f180996d3",
-              "path": "/docs/integration-with-citrix-netscaler",
+              "path": "/devportal/docs/integration-with-citrix-netscaler",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Integrations/Remote Access/Zcc4b90f6-9a8e-413c-a39c-24f028a44f76",
-              "path": "/docs/integration-with-cisco-check-point",
+              "path": "/devportal/docs/integration-with-cisco-check-point",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Integrations/Remote Access/Ze62c960c-81e8-46b4-8f42-744e6c09e5e2",
-              "path": "/docs/integration-with-zscaler",
+              "path": "/devportal/docs/integration-with-zscaler",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID Mobile Application/Zcf2a3abc-5b16-4aa5-9281-4023959f8301",
-              "path": "/docs/blockid-mobile-application-user-guide",
+              "path": "/devportal/docs/blockid-mobile-application-user-guide",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z1b65946e-a6e7-45a8-8c9b-04d81aa9a32e",
-              "path": "/docs/office365-integration",
+              "path": "/devportal/docs/office365-integration",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z6afecf9d-3c6f-418b-9aab-c0c99d48009b",
-              "path": "/docs/auth0",
+              "path": "/devportal/docs/auth0",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z707bbbf3-7895-45bd-8b00-c4c64f09641b",
-              "path": "/docs/gsuite",
+              "path": "/devportal/docs/gsuite",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z869ef4f5-309a-4480-a715-6c7a4148d3f9",
-              "path": "/docs/okta",
+              "path": "/devportal/docs/okta",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Zd8371067-2e6a-4730-9ef7-289dcab8c344",
-              "path": "/docs/salesforce",
+              "path": "/devportal/docs/salesforce",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Ze12c6643-599c-41b6-b85d-1bcdb6691b0f",
-              "path": "/docs/generic-saml-application",
+              "path": "/devportal/docs/generic-saml-application",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID New Admin Portal (Athena)/Directory Integrations/Z422742d5-e5f4-4563-8b5b-75fe651251fc",
-              "path": "/docs/broker-installation",
+              "path": "/devportal/docs/broker-installation",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID New Admin Portal (Athena)/Release Notes/Z7575ff9b-19c0-408e-bf74-0080f94cb7b2",
-              "path": "/docs/v1/release-notes-20211103",
+              "path": "/devportal/docs/v1/release-notes-20211103",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID New Admin Portal (Athena)/Settings/Zc1f22108-c5aa-4b1c-b3d5-c2cf705d1fbb",
-              "path": "/docs/blockid-attributes",
+              "path": "/devportal/docs/blockid-attributes",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID New Admin Portal (Athena)/Z1d78dd72-0421-42cb-96da-4cb2a59eb0f8",
-              "path": "/docs/directory",
+              "path": "/devportal/docs/directory",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID New Admin Portal (Athena)/Z2cd6493e-3d85-4c46-91d5-0b93e239b73c",
-              "path": "/docs/introduction-to-athena-admin-portal",
+              "path": "/devportal/docs/introduction-to-athena-admin-portal",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID New Admin Portal (Athena)/Z3a4d60f8-4984-4f20-9d87-7d6f0800ed40",
-              "path": "/docs/login-with-mfa",
+              "path": "/devportal/docs/login-with-mfa",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID New Admin Portal (Athena)/Z9725f068-c919-4fc9-a454-053fa9382a2f",
-              "path": "/docs/customizing-the-branding-of-your-blockid-login-page",
+              "path": "/devportal/docs/customizing-the-branding-of-your-blockid-login-page",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID New Admin Portal (Athena)/Zb17b8cd6-f8b7-41c5-a294-400c23d8540d",
-              "path": "/docs/create-native-user",
+              "path": "/devportal/docs/create-native-user",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID New Admin Portal (Athena)/Ze3a67a1a-0728-4ed6-b42b-d040c4a89d6e",
-              "path": "/docs/webauthn",
+              "path": "/devportal/docs/webauthn",
               "sidebar": "mySidebar"
             },
             {
               "id": "BlockID New Admin Portal (Athena)/Ze5776a5b-8b2e-498a-9438-c665d9291260",
-              "path": "/docs/end-user-guide",
+              "path": "/devportal/docs/end-user-guide",
               "sidebar": "mySidebar"
             },
             {
               "id": "Developer's Docs/API References/blockid-admin-console-api",
-              "path": "/docs/blockid-admin-console-api",
+              "path": "/devportal/docs/blockid-admin-console-api",
               "sidebar": "mySidebar"
             },
             {
               "id": "Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/android-100",
-              "path": "/docs/android-100",
+              "path": "/devportal/docs/android-100",
               "sidebar": "mySidebar"
             },
             {
               "id": "Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/android-110",
-              "path": "/docs/android-110",
+              "path": "/devportal/docs/android-110",
               "sidebar": "mySidebar"
             },
             {
               "id": "Developer's Docs/BlockID Mobile Application/SDK Integrations/Android/blockid-android-sdk-141and142",
-              "path": "/docs/blockid-android-sdk-141and142",
+              "path": "/devportal/docs/blockid-android-sdk-141and142",
               "sidebar": "mySidebar"
             },
             {
               "id": "Developer's Docs/BlockID Mobile Application/SDK Integrations/iOS/blockid-ios-sdk-141and142",
-              "path": "/docs/blockid-ios-sdk-141and142",
+              "path": "/devportal/docs/blockid-ios-sdk-141and142",
               "sidebar": "mySidebar"
             },
             {
               "id": "Developer's Docs/BlockID Mobile Application/SDK Integrations/iOS/ios-100",
-              "path": "/docs/ios-100",
+              "path": "/devportal/docs/ios-100",
               "sidebar": "mySidebar"
             },
             {
               "id": "Developer's Docs/BlockID Mobile Application/SDK Integrations/iOS/ios-110",
-              "path": "/docs/ios-110",
+              "path": "/devportal/docs/ios-110",
               "sidebar": "mySidebar"
             },
             {
               "id": "Developer's Docs/getting-started",
-              "path": "/docs/getting-started",
+              "path": "/devportal/docs/getting-started",
               "sidebar": "mySidebar"
             },
             {
               "id": "Developer's Docs/Integration Guides/BlockID Customer/Zb472749f-bb61-44eb-8fac-031da891f016",
-              "path": "/docs/v1/android",
+              "path": "/devportal/docs/v1/android",
               "sidebar": "mySidebar"
             },
             {
               "id": "Developer's Docs/Integration Guides/BlockID Customer/Zbb76e7b9-89ce-4d65-a64b-29ec220cf034",
-              "path": "/docs/v1/ios",
+              "path": "/devportal/docs/v1/ios",
               "sidebar": "mySidebar"
             },
             {
               "id": "Developer's Docs/Integration Guides/BlockID Workforce/Z84b846a1-7451-45fd-90e0-40f33d176310",
-              "path": "/docs/v1/android-2",
+              "path": "/devportal/docs/v1/android-2",
               "sidebar": "mySidebar"
             },
             {
               "id": "Developer's Docs/Integration Guides/BlockID Workforce/Zbdaddfbc-c6b9-4fc2-bd42-35c3c77b0956",
-              "path": "/docs/v1/ios-2",
+              "path": "/devportal/docs/v1/ios-2",
               "sidebar": "mySidebar"
             },
             {
               "id": "Developer's Docs/univeral-web-login-guide",
-              "path": "/docs/univeral-web-login-guide",
+              "path": "/devportal/docs/univeral-web-login-guide",
               "sidebar": "mySidebar"
             },
             {
               "id": "index",
-              "path": "/docs/",
+              "path": "/devportal/docs/",
               "sidebar": "mySidebar"
             },
             {
               "id": "otp/otp1",
-              "path": "/docs/otp",
+              "path": "/devportal/docs/otp",
               "sidebar": "mySidebar"
             },
             {
               "id": "otp/otp2",
-              "path": "/docs/otp/request",
+              "path": "/devportal/docs/otp/request",
               "sidebar": "mySidebar"
             },
             {
               "id": "otp/otp3",
-              "path": "/docs/otp/verify",
+              "path": "/devportal/docs/otp/verify",
               "sidebar": "mySidebar"
             },
             {
               "id": "Release Notes/Z0f10a839-2257-4d53-a191-00722c59df7e",
-              "path": "/docs/release-notes-r102",
+              "path": "/devportal/docs/release-notes-r102",
               "sidebar": "mySidebar"
             },
             {
               "id": "Release Notes/Z158204c7-a371-44d5-bf91-23aa80e7fff4",
-              "path": "/docs/blockid-release-notes",
+              "path": "/devportal/docs/blockid-release-notes",
               "sidebar": "mySidebar"
             },
             {
               "id": "Release Notes/Z89a4e212-0c52-480e-8072-3d62e7106a82",
-              "path": "/docs/release-notes-r10300",
+              "path": "/devportal/docs/release-notes-r10300",
               "sidebar": "mySidebar"
             },
             {
               "id": "Release Notes/Zd4c725d7-840f-4e0e-a801-c775c6e281a8",
-              "path": "/docs/release-notes-v3",
+              "path": "/devportal/docs/release-notes-v3",
               "sidebar": "mySidebar"
             },
             {
               "id": "uwl/uwl1",
-              "path": "/docs/uwl",
+              "path": "/devportal/docs/uwl",
               "sidebar": "mySidebar"
             }
           ]

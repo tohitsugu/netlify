@@ -7,7 +7,7 @@
   "source": "@site/docs/api/ecdsa/ecdsa-keys.mdx",
   "sourceDirName": "api/ecdsa",
   "slug": "/api/ecdsa/keys",
-  "permalink": "/docs/api/ecdsa/keys",
+  "permalink": "/devportal/docs/api/ecdsa/keys",
   "tags": [],
   "version": "current",
   "sidebarPosition": 3,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "ECDSA Encryption",
-    "permalink": "/docs/api/ecdsa"
+    "permalink": "/devportal/docs/api/ecdsa"
   },
   "next": {
     "title": "Shared Key",
-    "permalink": "/docs/ecdsa/shared-key"
+    "permalink": "/devportal/docs/ecdsa/shared-key"
   }
 }

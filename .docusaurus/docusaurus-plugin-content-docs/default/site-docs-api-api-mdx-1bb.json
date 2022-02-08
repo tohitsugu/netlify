@@ -7,7 +7,7 @@
   "source": "@site/docs/api/api.mdx",
   "sourceDirName": "api",
   "slug": "/api",
-  "permalink": "/docs/api",
+  "permalink": "/devportal/docs/api",
   "tags": [],
   "version": "current",
   "sidebarPosition": 1,
@@ -19,10 +19,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "BlockID Developer SDK",
-    "permalink": "/docs/"
+    "permalink": "/devportal/docs/"
   },
   "next": {
     "title": "One-Time Passcodes",
-    "permalink": "/docs/api/otp"
+    "permalink": "/devportal/docs/api/otp"
   }
 }

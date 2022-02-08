@@ -7,7 +7,7 @@
   "source": "@site/docs/api/otp/otp.mdx",
   "sourceDirName": "api/otp",
   "slug": "/api/otp",
-  "permalink": "/docs/api/otp",
+  "permalink": "/devportal/docs/api/otp",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -19,10 +19,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "BlockID Developer API",
-    "permalink": "/docs/api"
+    "permalink": "/devportal/docs/api"
   },
   "next": {
     "title": "BlockID Identity Verification",
-    "permalink": "/docs/api/idverify"
+    "permalink": "/devportal/docs/api/idverify"
   }
 }

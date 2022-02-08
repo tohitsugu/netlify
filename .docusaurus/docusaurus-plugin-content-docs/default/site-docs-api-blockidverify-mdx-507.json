@@ -7,7 +7,7 @@
   "source": "@site/docs/api/blockidverify.mdx",
   "sourceDirName": "api",
   "slug": "/api/idverify",
-  "permalink": "/docs/api/idverify",
+  "permalink": "/devportal/docs/api/idverify",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -19,10 +19,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "One-Time Passcodes",
-    "permalink": "/docs/api/otp"
+    "permalink": "/devportal/docs/api/otp"
   },
   "next": {
     "title": "ECDSA Encryption",
-    "permalink": "/docs/api/ecdsa"
+    "permalink": "/devportal/docs/api/ecdsa"
   }
 }

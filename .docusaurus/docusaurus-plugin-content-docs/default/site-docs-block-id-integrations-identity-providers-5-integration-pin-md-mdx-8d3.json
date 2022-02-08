@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID Integrations/Identity Providers/5_integration-pin.md.mdx",
   "sourceDirName": "BlockID Integrations/Identity Providers",
   "slug": "/integration-pingfederate",
-  "permalink": "/docs/integration-pingfederate",
+  "permalink": "/devportal/docs/integration-pingfederate",
   "tags": [],
   "version": "current",
   "sidebarPosition": 5,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Integration with Microsoft ADFS",
-    "permalink": "/docs/integration-with-adfs"
+    "permalink": "/devportal/docs/integration-with-adfs"
   },
   "next": {
     "title": "Integration with Windows",
-    "permalink": "/docs/integration-with-windows"
+    "permalink": "/devportal/docs/integration-with-windows"
   }
 }

@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID New Admin Portal (Athena)/Applications/Add Applications/3_auth0.md.mdx",
   "sourceDirName": "BlockID New Admin Portal (Athena)/Applications/Add Applications",
   "slug": "/auth0",
-  "permalink": "/docs/auth0",
+  "permalink": "/devportal/docs/auth0",
   "tags": [],
   "version": "current",
   "sidebarPosition": 3,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Okta",
-    "permalink": "/docs/okta"
+    "permalink": "/devportal/docs/okta"
   },
   "next": {
     "title": "Salesforce",
-    "permalink": "/docs/salesforce"
+    "permalink": "/devportal/docs/salesforce"
   }
 }

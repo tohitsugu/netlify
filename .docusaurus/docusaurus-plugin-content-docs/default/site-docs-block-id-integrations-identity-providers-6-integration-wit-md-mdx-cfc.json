@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID Integrations/Identity Providers/6_integration-wit.md.mdx",
   "sourceDirName": "BlockID Integrations/Identity Providers",
   "slug": "/integration-with-windows",
-  "permalink": "/docs/integration-with-windows",
+  "permalink": "/devportal/docs/integration-with-windows",
   "tags": [],
   "version": "current",
   "sidebarPosition": 6,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Integration PingFederate",
-    "permalink": "/docs/integration-pingfederate"
+    "permalink": "/devportal/docs/integration-pingfederate"
   },
   "next": {
     "title": "Integration with G Suite",
-    "permalink": "/docs/integration-with-gsuite"
+    "permalink": "/devportal/docs/integration-with-gsuite"
   }
 }

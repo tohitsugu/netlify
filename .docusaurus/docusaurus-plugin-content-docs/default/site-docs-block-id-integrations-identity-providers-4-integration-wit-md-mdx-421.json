@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID Integrations/Identity Providers/4_integration-wit.md.mdx",
   "sourceDirName": "BlockID Integrations/Identity Providers",
   "slug": "/integration-with-adfs",
-  "permalink": "/docs/integration-with-adfs",
+  "permalink": "/devportal/docs/integration-with-adfs",
   "tags": [],
   "version": "current",
   "sidebarPosition": 4,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Integration with Salesforce",
-    "permalink": "/docs/integration-with-salesforce"
+    "permalink": "/devportal/docs/integration-with-salesforce"
   },
   "next": {
     "title": "Integration PingFederate",
-    "permalink": "/docs/integration-pingfederate"
+    "permalink": "/devportal/docs/integration-pingfederate"
   }
 }

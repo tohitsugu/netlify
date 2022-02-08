@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID Admin Console/Admin Guide/16_glossary.md.mdx",
   "sourceDirName": "BlockID Admin Console/Admin Guide",
   "slug": "/glossary",
-  "permalink": "/docs/glossary",
+  "permalink": "/devportal/docs/glossary",
   "tags": [],
   "version": "current",
   "sidebarPosition": 16,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Core Configurations",
-    "permalink": "/docs/core-configurations"
+    "permalink": "/devportal/docs/core-configurations"
   },
   "next": {
-    "title": "Authentication Modules",
-    "permalink": "/docs/authentication-modules"
+    "title": "Datastore Configuration",
+    "permalink": "/devportal/docs/datastore-configuration-1"
   }
 }

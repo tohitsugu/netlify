@@ -7,7 +7,7 @@
   "source": "@site/docs/BlockID Admin Console/Admin Guide/14_profile.md.mdx",
   "sourceDirName": "BlockID Admin Console/Admin Guide",
   "slug": "/profile",
-  "permalink": "/docs/profile",
+  "permalink": "/devportal/docs/profile",
   "tags": [],
   "version": "current",
   "sidebarPosition": 14,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Community Management",
-    "permalink": "/docs/community-management"
+    "permalink": "/devportal/docs/community-management"
   },
   "next": {
     "title": "Core Configurations",
-    "permalink": "/docs/core-configurations"
+    "permalink": "/devportal/docs/core-configurations"
   }
 }

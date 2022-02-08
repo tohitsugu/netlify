@@ -7,7 +7,7 @@
   "source": "@site/docs/Developer's Docs/API References/1_blockid_admin_console.md.mdx",
   "sourceDirName": "Developer's Docs/API References",
   "slug": "/blockid-admin-console-api",
-  "permalink": "/docs/blockid-admin-console-api",
+  "permalink": "/devportal/docs/blockid-admin-console-api",
   "tags": [],
   "version": "current",
   "sidebarPosition": 1,
@@ -18,10 +18,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Universal Web Login (UWL) Guide",
-    "permalink": "/docs/univeral-web-login-guide"
+    "permalink": "/devportal/docs/univeral-web-login-guide"
   },
   "next": {
     "title": "Android",
-    "permalink": "/docs/v1/android"
+    "permalink": "/devportal/docs/v1/android"
   }
 }
