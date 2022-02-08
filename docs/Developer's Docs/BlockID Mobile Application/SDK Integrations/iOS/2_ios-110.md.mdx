@@ -48,14 +48,14 @@ end
 
 ### <a name = "IntegrateSDK"></a> Integrate BlockID SDK
 1. Copy the `BlockIDSDK.framework` into your application.
-![BIDFramework.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/BIDFramework.jpg){height="" width=""}
+![BIDFramework.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/BIDFramework.jpg)
 
 2.	Add the `BlockIDSDK.framework` folder into the Frameworks section.
-![Frameworksfolder.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/Frameworksfolder.jpg){height="" width=""}
+![Frameworksfolder.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/Frameworksfolder.jpg)
 
 
 3.	In the project editor, navigate to ***General > Library > Frameworks > Frameworks, Libraries, and Embedded Content***, select `Embed & Sign` for `BlockIDSDK.framework`.
-![EmbedandSign.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/EmbedandSign.jpg){height="" width=""}
+![EmbedandSign.jpg](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/EmbedandSign.jpg)
 4. Copy `OpenSSL.framework` into your application. and add it into the Frameworks section.
 5. In the project editor, navigate to ***General > Library > Frameworks > Frameworks, Libraries, and Embedded Content***, select `Embed & Sign` and add the `libcrypto.a`and `libssl.a` files into the ***Build Phase > Link Binary With Libraries*** section.
 
@@ -1429,55 +1429,11 @@ Request Params Description:
 | origin | Type of BidOrigin |
 
 Response Params Description: 
-<table>
-  <tbody>
-    <tr>
-      <th>Params</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-    <td>status</td>
-      <td>
-      Boolean value: True / false
-       <ol>
-          <li>True: on success</li>
-          <li>False: on failure</li>
-          </ol>
-   </td>
-   </tr>
-   <tr>
-    <td>error</td>
-      <td>
-     NSObject of ErrorResponse. The above object consists of two parameters:
-     <ol>
-          <li>Code type of integer</li>
-          <li>The message type of string</li>
-          </ol>
-     </td>
-   </tr>
-    <tr>
-    <td>response</td>
-      <td>
-     Type of AccessCodeValidationResponseDecryptedData
-    <ul>
-          <li>var id: String!</li>
-          <li>var uuid: String!</li>
-           <li>var type: String!</li>
-          <li>var tenantId: String!</li>
-           <li>var communityId: String!</li>
-          <li>var accesscodepayload:</li>
-           <li>AccessCodeResponseDataPayload!</li>
-          <li>var status: String!</li>
-          <li>public class AccessCodeResponseDataPayload: Codable {
-    var userid: String!
-    var authType: String!
-    var invite_email: String!
-    var otp_email: String! }</li>
-          </ul>
-     </td>
-   </tr>
- </tbody>
-</table>
+|  Params  |                                                                                                                                                                                    Description                                                                                                                                                                                    |
+|:--------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| status   | Boolean value: True / false True: on success False: on failure                                                                                                                                                                                                                                                                                                                    |
+| error    | NSObject of ErrorResponse. The above object consists of two parameters: Code type of integer The message type of string                                                                                                                                                                                                                                                           |
+| response | Type of AccessCodeValidationResponseDecryptedData var id: String! var uuid: String! var type: String! var tenantId: String! var communityId: String! var accesscodepayload: AccessCodeResponseDataPayload! var status: String! public class AccessCodeResponseDataPayload: Codable { var userid: String! var authType: String! var invite_email: String! var otp_email: String! } |
 
 * After receiving the response, check the `authType` to decide the user onboarding process.
     * **If the authType is OTP or none**: If the `authType` received is none or OTP,  the application will call the public key of the tenant. The URL for the public key will be formed using the URL provided in the magic link.

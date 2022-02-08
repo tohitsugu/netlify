@@ -31,24 +31,24 @@ When adding `BlockIDSDK_{version}-Release.aar` file into your app’s project, r
 2. Navigate to ***File > Project Structure > Modules***.
 ![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2814%29.png){height="350" width=""}
 
-![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2815%29.png){height="" width=""}
+![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2815%29.png)
 
 3. Click on the `+` icon.
 4. Click `Choose import .JAR/.AAR`.
-![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2816%29.png){height="" width=""}
+![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2816%29.png)
 
 
 5. Locate the `BlockIDSDK_{version}-Release.aar` file and click **Apply**.
-![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2820%29.png){height="" width=""}
+![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2820%29.png)
 
 
 6. For module dependency, navigate to ***File > Project Structure > Dependencies app > declared dependencies tab > Module dependency***.
-![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2819%29.png){height="" width=""}
+![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2819%29.png)
 
 
 7. Select `BlockIDSDK_{version}-Release`.
 
-![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2821%29.png){height="" width=""}
+![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2821%29.png)
 
 8. Click **Apply**
 9. Click **OK**. The build process for the project starts.
@@ -101,97 +101,28 @@ allprojects {
 }
 ```
 
-<table>
-  <tbody>
-    <tr>
-      <th>Sr. No.</th>
-      <th>Dependency</th>
-      <th>Purpose</th>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>com.google.code.gson:gson:2.8.5</td>
-        <td>Gson</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>androidx.security:security-crypto:1.0.0-rc04</td>
-      <td>Secure Shared preference</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>androidx.lifecycle:lifecycle-extensions:2.2.0</td>
-      <td>lifecycle-extensions</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>androidx.lifecycle:lifecycle-runtime:2.2.0</td>
-      <td>lifecycle-extensions</td>
-    </tr>
-     <tr>
-      <td>5</td>
-      <td>com.google.android.gms:play-services-vision:20.1.2</td>
-      <td>QR Code scan</td>
-    </tr>
-      <tr>
-      <td>6</td>
-      <td>org.web3j:core:3.3.1-android</td>
-      <td>wallet</td>
-    </tr>
-     <tr>
-      <td>7</td>
-      <td>implementation('org.bitcoinj:bitcoinj-core:0.15.4') {
-        exclude group: 'com.google.protobuf', module: 'protobuf-java'
-    }
-</td>
-      <td>generate mnemonics</td>
-    </tr>
-     <tr>
-      <td>8</td>
-      <td>androidx.biometric:biometric:1.0.1</td>
-      <td>fingerprint and biometric</td>
-    </tr>
-     <tr>
-      <td>9</td>
-      <td>org.jetbrains:annotations:16.0.1</td>
-      <td>fingerprint and biometric</td>
-    </tr>
-    <tr>
-      <td>10</td>
-      <td>commons-codec:commons-codec:1.10</td>
-      <td>Base32 encode/decode</td>
-    </tr>
-    <tr>
-      <td>11</td>
-      <td>com.amitshekhar.android:android-networking:1.0.2</td>
-      <td>Network Call</td>
-    </tr>
-    <tr>
-      <td>12</td>
-      <td>com.rmtheis:tess-two:9.0.0</td>
-      <td>passport scan</td>
-    </tr>
-    <tr>
-      <td>13</td>
-      <td>implementation('org.jmrtd:jmrtd:0.5.13') {
-        exclude module: 'bcprov-jdk15on'
-        exclude module: 'bctls-jdk15on'
-    }
-</td>
-      <td>passport scan</td>
-    </tr>
-    <tr>
-      <td>14</td>
-      <td>org.innovatrics.mrz:mrz-java:0.4</td>
-      <td>passport scan</td>
-    </tr>
-     <tr>
-      <td>15</td>
-      <td>com.google.zxing:core:3.2.1</td>
-      <td>scanning dl</td>
-    </tr>
-  </tbody>
-</table>
+| Sr. No. |                                                       Dependency                                                      |          Purpose          |
+|:-------:|:---------------------------------------------------------------------------------------------------------------------:|:-------------------------:|
+| 1       | com.google.code.gson:gson:2.8.5                                                                                       | Gson                      |
+| 2       | androidx.security:security-crypto:1.0.0-rc04                                                                          | Secure Shared preference  |
+| 3       | androidx.lifecycle:lifecycle-extensions:2.2.0                                                                         | lifecycle-extensions      |
+| 4       | androidx.lifecycle:lifecycle-runtime:2.2.0                                                                            | lifecycle-extensions      |
+| 5       | com.google.android.gms:play-services-vision:20.1.2                                                                    | QR Code scan              |
+| 6       | org.web3j:core:3.3.1-android                                                                                          | wallet                    |
+| 7       | implementation('org.bitcoinj:bitcoinj-core:0.15.4') { exclude group: 'com.google.protobuf', module: 'protobuf-java' } | generate mnemonics        |
+| 8       | androidx.biometric:biometric:1.0.1                                                                                    | fingerprint and biometric |
+| 9       | org.jetbrains:annotations:16.0.1                                                                                      | fingerprint and biometric |
+| 10      | commons-codec:commons-codec:1.10                                                                                      | Base32 encode/decode      |
+| 11      | com.amitshekhar.android:android-networking:1.0.2                                                                      | Network Call              |
+| 12      | com.rmtheis:tess-two:9.0.0                                                                                            | passport scan             |
+| 13      | implementation('org.jmrtd:jmrtd:0.5.13') { exclude module: 'bcprov-jdk15on' exclude module: 'bctls-jdk15on' }         | passport scan             |
+| 14      | org.innovatrics.mrz:mrz-java:0.4                                                                                      | passport scan             |
+| 15      | com.google.zxing:core:3.2.1                                                                                           | scanning dl               |
+| 16      |                                                                                                                       |                           |
+| 17      |                                                                                                                       |                           |
+| 18      |                                                                                                                       |                           |
+| 19      |                                                                                                                       |                           |
+| 20      |                                                                                                                       |                           |
 
 
 ## SDK Initialization
