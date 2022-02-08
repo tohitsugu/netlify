@@ -19,7 +19,9 @@ id: blockid-admin-console-api
 
 :::caution
 <details>
-<summary><b>Parameters</b></summary>
+<summary>
+<b>Parameters</b>
+</summary>
 <br />
 The parameters are: 
 <ol>
@@ -30,22 +32,31 @@ The parameters are:
 <li><b>cleanup</b>: If the maximum limit number for devices per community is reached, and the rule is cleanup then currently linked accounts are unlinked until there is room to add a new one.</li>
 </ol>
 </ol>
+
 </details>
+
 :::
 
 :::caution
 <details>
-<summary><b>Known side effects</b></summary>
+<summary>
+<b>Known side effects</b>
+</summary>
 <br />
 When the “personsPerAccount” limit is set to 1 and the “personLimitRule” rule is set to ‘cleanup’, the passwordless login will happen on the first device (<b>device1</b>) and you can link the second device (<b>device2</b>) using the magic link. Now the <b>device1</b> is no longer authorized for the account, but your login session does not expire. However, once you log out, you should not be able to use <b>device1</b> for passwordless login.
+
 </details>
+
 :::
 
 :::caution
 <details>
-<summary><b>Swagger link</b></summary>
+<summary>
+<b>Swagger link</b>
+</summary>
 
 [Update Tenant and Community Info](https://1k-dev.1kosmos.net/swagger-ui.html?urls.primaryName=System%20APIs#/Tenant/Community/updateTenantAndCommunityUsingPOST)
+</details>
 :::
 
 :::danger
