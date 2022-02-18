@@ -25,19 +25,19 @@ export const Highlight = ({children, color}) => (
 
 #### <Highlight color="#d62718">COMING SOON</Highlight>
 
-Verify user identity information, including social security numbers, names and addresses. Visual identity verification is available using photos, including liveness checks with 1Kosmos LiveID.       
+Verify user identity information, including social security numbers, names, and addresses. Visual identity verification is available using photos, including liveness checks with 1Kosmos LiveID.       
 
 ## **Perform a Social Security Number Verification**
 
 
-To perform an identity verification you will need to provide some required information for the type of verification being performed. A social security verification requires the user's social security number, while visual face comparison and face liveness verifications require a user's facial photos. 
+To perform an identity verification, you will need to provide some required information for the type of verification being performed. A social security verification requires the user's social security number, while visual face comparison and face liveness verifications require a user's facial photos. 
 
 
 ### Parameters
 
 
 :::tip Please note:
-Additional identity information beyond a social security information may be required for the most accurate results, including a user's full name, date of birth, and address. If you are not able to provide all the requested user data, our platform will make a best effort with the information given
+Additional identity information beyond a social security number may be required for the most accurate results, including a user's full name, date of birth, and address. If you are not able to provide all the requested user data, our platform will make the best effort with the information given
 :::
 
 
@@ -52,7 +52,7 @@ The following identity information is requested for a social security number ver
 - `type`: document type (required)
 - `ssn`: social security number (required)
 - `firstName`: user's first name 
-- `lastName`: user's last name (required if first name given)
+- `lastName`: user's last name (required if the first name is given)
 - `dob`: date of birth
 - `country`: recorded mailing address country 
 - `street`: recorded mailing address street name and number  
@@ -92,7 +92,7 @@ The following identity information is requested for a social security number ver
 
 <TabItem value="combined" label="Combined Verification">
 
-#### Social Security Number, Drivers License, Face Compare, and Face Liveness Verifications
+#### Social Security Number, Drivers License, Face Compare and Face Liveness Verifications
 
 Identity verifications can be combined if desired. 
 
