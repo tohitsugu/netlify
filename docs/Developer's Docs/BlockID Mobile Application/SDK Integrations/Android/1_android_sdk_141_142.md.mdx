@@ -9,14 +9,14 @@ id: blockid-android-sdk-141and142
 This document is compatible with Android SDK v1.4.1 and v1.4.2.
 :::
 
-## Overview
+## **Overview**
 This document describes the procedure to configure the BlockID Android SDK into your organization's mobile application. This integration will allow your users to use the features provided within the Android SDK of the BlockID mobile application. The features include enrollment of the user’s LiveID (captures the live, real-time facial images) details, Fingerprint, PIN, Driver's License (DL), and Passport details, etc. Also, it has various types of authentication mechanisms by which a user can log in to the organization’s target system.
 
-## Dependencies
+## **Dependencies**
 You will need the following resource to complete this integration:
 * Android Studio 4.0 or higher
 
-## BlockID SDK Setup
+## **BlockID SDK Setup**
 The setup consists of the following four steps:
 1.	[Integrating the SDK module into your project](#SDKIntegrationfile)
     * [Add SDK dependency in project's Build.gradle file](#SDKIntegrationSDKdep)
@@ -24,7 +24,7 @@ The setup consists of the following four steps:
 3.	[Enabling Permissions](#SDKIntEnable)
 4.	[Add SDK dependencies in the gradle file](#SDKIntegrationSDKdepM)
 
-### <a name = "SDKIntegrationfile"></a> Integration of BlockIDSDK_{version}-Release.aar file into the project
+### Integration of BlockIDSDK_{version}-Release.aar file into the project
 Perform the following steps to integrate the BlockIDSDK_{version}-Release.aar file into your app’s project:
 
 :::tip Note:
@@ -33,16 +33,25 @@ When adding `BlockIDSDK_{version}-Release.aar` file into your app’s project, r
 
 1. Start the Android Studio.
 2. Navigate to ***File > Project Structure > Modules***.
+
 ![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2814%29.png)
+
+<br />
 
 ![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2815%29.png)
 
 3. Click on the `+` icon.
 4. Click `Choose import .JAR/.AAR`.
+
+<br />
+
 ![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2816%29.png)
 
 
 5. Locate the `BlockIDSDK_{version}-Release.aar` file and click **Apply**.
+
+<br />
+
 ![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2820%29.png)
 
 
@@ -55,19 +64,20 @@ When adding `BlockIDSDK_{version}-Release.aar` file into your app’s project, r
 ![image.png](https://cdn.document360.io/aeae7c88-d2f4-4a9c-bba9-c4f368260d78/Images/Documentation/image%2821%29.png)
 
 8. Click **Apply**
+
 9. Click **OK**. The build process for the project starts.
 
-#### <a name = "SDKIntegrationSDKdep"></a>Add SDK dependency in project`s Build.gradle file
+#### Add SDK dependency in project`s Build.gradle file
 Use the following code to add BlockIDSDK_{version}-Release.aar dependency into your project’s **Build.gradle** file:
 
-```json
+```jsx title="build.gradle"
 implementation project(path: ':BlockIDSDK-release');
 ```
 
-### <a name = "SDKIntJava"></a> Java Compatibility
+### Java Compatibility
 The SDK source and target compatibility are now set to **Java 8**. Starting with **Voice Android SDK 5.4.1**, the SDK is no longer binary compatible with applications that target **Java 7**. To use this and future releases, developers must upgrade their applications to target Java 8. Refer to the following code snippet: 
 
-```json
+```jsx
 android {
 	compileOptions {
 		sourceCompatibility 1.8
@@ -76,21 +86,26 @@ android {
 }
 ```
 
-### <a name = "SDKIntEnable"></a> Enabling Permissions
+### Enabling Permissions
+
 To target **Android API level 23** or later, you will need to ensure that your application requests runtime permissions for the camera and internet access. To do this, perform the following two steps:
 
 1. Add the following code to your Android Manifest file:
+
 ```json
 <uses-permission android:name="android.permission.CAMERA" />
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
+
 2. Request permissions from within your application code:
+
 ```json
 ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.{your_permission},PERMISSION_REQUEST_CODE);
 }
 ```
-### <a name = "SDKIntegrationSDKdepM"> </a>Add dependencies in Project’s Build.gradle
+
+### Add dependencies in Project’s Build.gradle
 
 Add the following dependencies on your app’s `build.gradle` file:
 
@@ -130,14 +145,18 @@ allprojects {
 
 
 ## SDK Initialization
+
 1. Once the SDK setup has been completed to access the SDK and its features, one needs to initialize the SDK and its key components.
+
 :::tip Note:
 We recommend using the setup code in the **MainApplication** class of your application.
 :::
-   * Use the following code to initialize the SDK within the Application class:
-   ```json
-    BlockIDSDK.initialize(Context);
-   ```
+
+* Use the following code to initialize the SDK within the Application class:
+
+```json
+BlockIDSDK.initialize(Context);
+```
     
 2. Once the SDK is initialized successfully, set up the license key so that the SDK can check whether you are authorized to use the SDK or not.
 
@@ -149,47 +168,56 @@ BlockIDSDK.getInstance().setLicenseKey(licenseKey);
 
 **Request Params Description**: 
 
-| Params | Description |
-| ----------- | ----------- |
+| Params     | Description                   |
+|------------|-------------------------------|
 | licenseKey | A string value of license key |
 
 
 3. After setting the license key, the SDK will automatically check whether the license key is valid or not and set it within to access its features. 
+
 4. Once the license key setup is complete, perform the following tenant registration to complete the SDK setup.
 
 ### Initialize temporary wallet
+
 Use the following function to initialize the temporary wallet:
-```json
- BlockIDSDK.getInstance().initiateWallet();
+
+```jsx
+BlockIDSDK.getInstance().initiateWallet();
 ```
 
 ### Register a Tenant
+
 The SDK pojo class called BIDTenant is necessary to perform tenant registration using the application. Use the following code to construct the BIDTenant object:    
 
-```json
-BIDTenant defaultTenant =new BIDTenant ("Your_TAG", "Your_COMMUNITY" ,"Your_DNS");
+```jsx
+BIDTenant defaultTenant =new BIDTenant ("Your_TAG", "Your_COMMUNITY", "Your_DNS");
 ```
 
- **Request Params Description**: 
-| Params | Description |
-| ----------- | ----------- |
-| Your_TAG | A string value of Tenant tag |
-| Your_COMMUNITY | A string value of community |
-| Your_DNS | A string value of URL |
+**Request Params Description**: 
+
+| Params         | Description                  |
+|----------------|------------------------------|
+| Your_TAG       | A string value of Tenant tag |
+| Your_COMMUNITY | A string value of community  |
+| Your_DNS       | A string value of URL        |
+
 
 Once the `BIDTenant` object is created, the same object can be sent for the registration by calling the following method:
 
 ```json
 BlockIDSDK.getInstance().registerTenant(BidTenant,BIDTenantRegistryCallback);
 ```
-Request Params Description: 
-| Params | Description |
-| ----------- | ----------- |
-| BidTenant | Type of BIDTenant |
+
+**Request Params Description**:
+
+| Params                    | Description                         |
+|---------------------------|-------------------------------------|
+| BidTenant                 | Type of BIDTenant                   |
 | BIDTenantRegistryCallback | Type of interface to get a response |
 
 
-Response Params Description: 
+**Response Params Description**:
+
 <table>
   <tbody>
     <tr>
@@ -226,6 +254,7 @@ Response Params Description:
 </table>
 
 ### Commit application wallet
+
 The following function is used to commit the temporary wallet. This function will be called on the success status of the registerTenant method.
 
 ```json
@@ -233,9 +262,11 @@ BlockIDSDK.sharedInstance.commitApplicationWallet()
 ```
 
 ### Tenant Registration
+
 Application is expected to call ‘registerTenant’ once. If an existing tenant is set, the application will load it after validating licenseKey. The SDK will only allow tenant registration only if the license key is already added.
 
-#### What is Tenant?
+#### What is a Tenant?
+
 Tenants can be represented as the value or an object on which API calls can be registered. There are two types of tenants, one will be the root and the other will be the client tenant. Root tenant will be used to store the details regarding the user enrolled biometric and digital assets whereas the user's enrolled persona will be stored on the client tenant.
 
 ## SDK / Data Security
@@ -247,16 +278,20 @@ Tenants can be represented as the value or an object on which API calls can be r
 * Check SDK lock status before calling any enrollment APIs of SDK for security purposes.
 
 The following methods are exposed to the application from SDK:
-1. Use the following method to lock the SDK:
-```json
+1. Use the following method to lock the SDK
+
+```jsx
 BIDAuthProvider.getInstance().lockSDK();
 ```
 2. Use the following method to check whether the SDK is locked or not:
-```json
+
+```jsx
 BIDAuthProvider.getInstance().isSdkLocked();   
 ```
-## SDK Functions
+## **SDK Functions**
+
 ### Document Enrollment
+
 :::tip Note:
 Before using any scanning method, please make sure to check whether the camera permission is provided or not.
 :::
@@ -264,51 +299,65 @@ Before using any scanning method, please make sure to check whether the camera p
 #### Driver's License Enrollment
 
 **Enroll Driver's License**
+
 Perform the following steps to enroll the driver's license:
 
 * To scan the driver's license, the app should call the `DLScannerHelper` class. This scanner scans the front and backside of the driver's license and handles the UI constraints of back and front screens. 
+
 * There are parameters for the scanning side of the driver's license. Based on this parameter the scanner will act and scan the document accordingly. 
+
 * The front side of the document will be scanned using `OCR`, and the backside of the document will be scanned for `PDF417`.
+
 * Check the following order in which the DL can be scanned while using the methods:
     * `FIRST_FRONT_THEN_BACK`
     * `FIRST_BACK_THEN_FRONT`
+
 * By default, the SDK will be set to `FIRST_BACK_THEN_FRONT` order. To set the order of DL scan, use the following method:
-```json
+
+```jsx
 DLScannerHelper.getInstance().setDLScanningOrder(DLScanningOrder.FIRST_BACK_THEN_FRONT);
 ```
+
 * After setting the order of the DL then one can initiate the DL scan. To start the scanning, one needs to get the intent object by calling the following method:
-```json
+
+```jsx
 DLScannerHelper.getInstance().getDLScanIntent(this, K_DL_EXPIRY_GRACE_DAYS,iDriverLicenseListener);
 ```
-Request Params Description: 
-| Params | Description |
-| ----------- | ----------- |
-| this | Context of the current Activity |
-| K_DL_EXPIRY_GRACE_DAYS | Int value of expiry grace days |
-| iDriverLicenseListener | The interface of type IDriverLicenseListener|
+
+**Request Params Description:** 
+
+| Params                 | Description                                  |
+|------------------------|----------------------------------------------|
+| K_DL_EXPIRY_GRACE_DAYS | Int value of expiry grace days               |
+| iDriverLicenseListener | The interface of type IDriverLicenseListener |
 
 After getting the intent, start the intent like an activity with the result by using the following method:
-```json
+
+```jsx
 startActivity(intent);
 ```
- Request Params Description: 
-| Params | Description |
-| ----------- | ----------- |
-| intent | An intent object is created by the above method |
 
  Request Params Description: 
-| Params | Description |
-| ----------- | ----------- |
-| bidDriverLicense | The object of type BIDDriverLicense class. |
-| signToken | The string value of signatureToken |
-| error | The object of type ErrorManager.ErrorResponse |
+
+| Params | Description                                     |
+|--------|-------------------------------------------------|
+| intent | An intent object is created by the above method |
+
+
+ Request Params Description: 
+
+| Params           | Description                                   |
+|------------------|-----------------------------------------------|
+| bidDriverLicense | The object of type BIDDriverLicense class.    |
+| signToken        | The string value of signatureToken            |
+| error            | The object of type ErrorManager.ErrorResponse |
 
 Use the following list of methods to change the UI constraints of the scanning screen:
 
 Add the [font](#https://drive.google.com/drive/folders/1gyrOcO2hvZDkJoSh1HIR3Uj1vloyfj7C) folder in the project app assets folder. 
-```
 
-```json
+
+```jsx
 DLScannerHelper.getInstance().setBackGroundColorHex(String colorHex);
 DLScannerHelper.getInstance().setTitleColorHex(String colorHex);
 DLScannerHelper.getInstance().setBackButtonColorHex(String colorHex);
@@ -327,12 +376,15 @@ DLScannerHelper.getInstance().setProgressBarColor(String colorHex);
 ```
 
 **Save Driver's License**
-To save a driver's license object, call the BlockIDSDK  `registerDocument` method.
-```json
+
+To save a driver's license object, call the BlockIDSDK `registerDocument` method.
+
+```jsx
 BlockIDSDK.getInstance().registerDocument(context,dataObject,documentType,signToken,enrollListener);
 ```
 
 Request Params Description: 
+
 <table>
   <tbody>
     <tr>
@@ -420,6 +472,7 @@ BlockIDSDK.getInstance().unRegisterDocument(context,docType,unenrollListener);
 ```
 
 Request Params Description: 
+
 <table>
   <tbody>
     <tr>
@@ -454,6 +507,7 @@ There are three types of documentType:
 </table>
 
 Response Params Description: 
+
 <table>
   <tbody>
     <tr>
@@ -484,9 +538,12 @@ Response Params Description:
 </table>
 
 #### Passport Enrollment
+
 **Enroll Passport**
+
 * To scan the passport, add the following UI attribute to the XML:
-```json
+
+```jsx
 <LinearLayout
    android:id="@+id/layout_view"
    android:layout_width="wrap_content"
@@ -503,105 +560,119 @@ Response Params Description:
        android:layout_height="match_parent" />
 </LinearLayout>
 ```
+
 * Adjust the height and the width of the scanning frame by adding the above code in the java file.
 
-```json
+```jsx
 mBIDScannerView.setScannerWidthMargin(scannerOverlayMargin, overlay);
 ```
 
 Request Params Description: 
-| Params | Description |
-| ----------- | ----------- |
-| mBIDScannerView | The object of class BIDScanerView |
+
+| Params               | Description                                                                             |
+|----------------------|-----------------------------------------------------------------------------------------|
+| mBIDScannerView      | The object of class BIDScanerView                                                       |
 | scannerOverlayMargin | Int value of margin by which the height and width of the scanning frame can be adjusted |
-| overlay | View object of overlay or frame can also be null if there is no overlay |
+| overlay              | View object of overlay or frame can also be null if there is no overlay                 |
 
 * To scan the passport, use the following java method:
 
-```json
+```jsx
 new PassportScannerHelper(this, scanningMode, mBIDScannerView, mScannerOverlay, K_PASSPORT_EXPIRY_GRACE_DAYS, passportResponseListener
 ).startPassportScanning();
 ```
 
 Request Params Description: 
-| Params | Description |
-| ----------- | ----------- |
-| this | Context of the current activity |
-| scanningMode | There are two types of modes. The recommended mode will be always `SCAN_LIVE` but for demo purposes, one can use `SCAN_DEMO`. |
-| mBIDScannerView | Custom UI object of class BIDScannerView |
-| mScannerOverlay | Custom UI object of view ScannerOverlay |
-| K_PASSPORT_EXPIRY_GRACE_DAYS | Int value of passport expiry grace days |
-| passportResponseListener | The interface of type IPassportResponseListener |
 
-Response Params Description: 
-| Params | Description |
-| ----------- | ----------- |
-| bidPassport | The object of type BidPassport class |
-| signToken | A string value of signatureToken |
-| error | The object of type ErrorManager.ErrorResponse |
+| Params                       | Description                                                                                                                   |
+|------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| scanningMode                 | There are two types of modes. The recommended mode will be always `SCAN_LIVE` but for demo purposes, one can use `SCAN_DEMO`. |
+| mBIDScannerView              | Custom UI object of class BIDScannerView                                                                                      |
+| mScannerOverlay              | Custom UI object of view ScannerOverlay                                                                                       |
+| K_PASSPORT_EXPIRY_GRACE_DAYS | Int value of passport expiry grace days                                                                                       |
+| passportResponseListener     | The interface of type IPassportResponseListener                                                                               |
+
+
+Response Params Description:
+ 
+| Params      | Description                                   |
+|-------------|-----------------------------------------------|
+| bidPassport | The object of type BidPassport class          |
+| signToken   | A string value of signatureToken              |
+| error       | The object of type ErrorManager.ErrorResponse |
 
 * To stop scanning, use the passport scanner object with the following method:
 
-```json
+```jsx
 mPassportScanner.stopScanning();
 ```
-* Scan the e-passport chip:
-    * Add the following permission in the manifest file:
-    ```json
-    <uses-permission android:name="android.permission.NFC" />
-    ```
-    * To scan the e-passport chip, use the following java method:
-    ```json
-     new PassportScannerHelper(this,K_PASSPORT_EXPIRY_GRACE_DAYS, passportResponseListener).startRFIDScanning();
-    ```
 
-Request Params Description: 
-| Params | Description |
-| ----------- | ----------- |
-| this | Context of the current activity |
-| K_PASSPORT_EXPIRY_GRACE_DAYS | Int value of passport expiry grace days |
-| passportResponseListener | The interface of type IPassportResponseListener |
+* Scan the e-passport chip:
+  * Add the following permission in the manifest file:
+
+```json
+<uses-permission android:name="android.permission.NFC" />
+```
+  * To scan the e-passport chip, use the following java method:
+
+```json
+new PassportScannerHelper(this,K_PASSPORT_EXPIRY_GRACE_DAYS, passportResponseListener).startRFIDScanning();
+```
+
+Request Params Description:
+
+| Params                       | Description                                     |
+|------------------------------|-------------------------------------------------|
+| K_PASSPORT_EXPIRY_GRACE_DAYS | Int value of passport expiry grace days         |
+| passportResponseListener     | The interface of type IPassportResponseListener |
 
 * When e-passport chip scanning starts, you will get e-passport chip data in the `onNewIntent()` activity overridden method.
 
-```json
+```jsx
 mPassportScannerHelper.onNewIntent(tag);
 ```
 
 Request Params Description: 
-| Params | Description |
-| ----------- | ----------- |
+
+| Params                 | Description                                                |
+|------------------------|------------------------------------------------------------|
 | mPassportScannerHelper | The object of a helper is created when RFID scanning start |
-| tag | RFID chip data detected in `onNewIntent()` |
+| tag                    | RFID chip data detected in `onNewIntent()`                 |
+
 
 Response Params Description: 
-| Params | Description |
-| ----------- | ----------- |
-| bidPassport | The object of type BidPassport class |
-| signToken | A string value of signatureToken |
-| error | The object of type ErrorManager.ErrorResponse |
+
+| Params      | Description                                   |
+|-------------|-----------------------------------------------|
+| bidPassport | The object of type BidPassport class          |
+| signToken   | A string value of signatureToken              |
+| error       | The object of type ErrorManager.ErrorResponse |
+
 
 * To stop e-passport chip scanning, use passport scanner object with the following method:
 
-```json
+```jsx
 mPassportScanner.stopRFIDScanning();
 ```
 
 **Check if a passport enrolled**
+
 To check if a passport is enrolled/registered with the BlockID, use the following method:
 
-```json
+```jsx
 BlockIDSDK.getInstance().isPassportEnrolled();
 ```
 
 **Save passport**
+
 To save a passport object, call the BlockIDSDK method registerDocument:
 
-```json
+```jsx
 BlockIDSDK.getInstance().registerDocument(context,dataObject,documentType,signToken,enrollListener);
 ```
 
 Request Params Description: 
+
 <table>
   <tbody>
     <tr>
@@ -642,6 +713,7 @@ There are three types of documentType:
 </table>
 
 Response Params Description: 
+
 <table>
   <tbody>
     <tr>
@@ -672,12 +744,15 @@ Response Params Description:
 </table>
 
 **Unenroll passport**
+
 To unenroll a passport, call the BlockIDSDK method unregisterDocument.
 
-```json
+```jsx
 BlockIDSDK.getInstance().unRegisterDocument(context,docType,unenrollListener);
 ```
+
 Request Params Description: 
+
 <table>
   <tbody>
     <tr>
@@ -712,6 +787,7 @@ There are three types of documentType:
 </table>
 
 Response Params Description: 
+
 <table>
   <tbody>
     <tr>
@@ -742,12 +818,16 @@ Response Params Description:
 </table>
 
 ### NationalID Enrollment
+
 #### Enroll NationalID 
+
 To scan NationalID, the app should call the NationalIDScanHelper class. This scanner scans the front and backside of the document. 
 
 There is one parameter for the scanning side of the NationalID. Based on this parameter, the scanner will act and scan the document accordingly. The front side of the document will be scanned using OCR, and the backside of the document will be used to scan OCR, MRZ, and QRCode.
+
 * Add the following UI attribute to the XML:
-```json
+
+```jsx
 <LinearLayout
    android:id="@+id/layout_view"
    android:layout_width="wrap_content"
@@ -763,18 +843,20 @@ There is one parameter for the scanning side of the NationalID. Based on this pa
        android:layout_height="match_parent" />
 </LinearLayout>
 ```
+
 * Adjust the height and the width of the scanning frame by adding this in the java file.
 
-```json
+```jsx
 mBIDScannerView.setScannerWidthMargin(scannerOverlayMargin, overlay);
 ```
 
 Request Params Description: 
-| Params | Description |
-| ----------- | ----------- |
-| mBIDScannerView | The object of class BIDScanerView |
+| Params               | Description                                                                              |
+|----------------------|------------------------------------------------------------------------------------------|
+| mBIDScannerView      | The object of class BIDScanerView                                                        |
 | scannerOverlayMargin | Int value of margin by which the height and width of the scanning frame can be adjusted. |
-| overlay | View object of overlay or frame can also be null if there is no overlay. |
+| overlay              | View object of overlay or frame can also be null if there is no overlay.                 |
+
 
 * Check the following order in which the NationalID can be scanned while using the methods:
     * `FIRST_FRONT_THEN_BACK`

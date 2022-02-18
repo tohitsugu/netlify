@@ -1,0 +1,537 @@
+---
+sidebar_position: 2
+slug: /otp
+id: otp1
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import OTPBrowser from './assets/otpbrowser.png'
+import BrowserWindow from '@site/src/components/BrowserWindow';
+import OTPSMS from './assets/otpsms.png'
+import OTPEmail from './assets/otpemail.png';
+
+# OTP Authentication
+
+
+
+BlockID one-time passcodes are a great way to add additional authentication to your login experience. Integration is simple using our SDK and only requires a few lines of code. 
+
+BlockID one-time passcodes work with all valid email addresses. Phone numbers from most countries are currently supported. 
+
+## **How it Works**
+
+As part of your sign-in process, users will receive an SMS message or an email containing a one-time passcode after entering their username and password. 
+
+Users will need to verify that one-time passcode on your application or website to complete their sign-in.
+
+<BrowserWindow url="http://blockid-trial.1kosmos.net/">
+<img src={OTPBrowser} alt="Example banner" />
+</BrowserWindow>
+ 
+
+One-Time Passcodes can be sent via **[SMS](/docs/otp/request#sending-a-one-time-passcode-via-sms)** or **[Email](/docs/otp/request#sending-a-one-time-passcode-via-email)**. 
+
+### Requirements
+
+- BlockID SDK - installed and initialized with license key and tenant information.
+- Phone number or email address you wish to send the one-time passcode to.
+
+
+See [Getting Started](/docs/index#gettingstarted) for more information on installing and initializng the BlockID SDK. 
+
+## **Request a One-Time Passcode**
+
+After configuring the SDK with your [tenant information and license key](/docs/index#gettingstarted) found on the [BlockID Developer Dashboard](https://1k-dev.1kosmos.net/devportal/), you are ready to request a one-time passcode. 
+
+### Parameters 
+
+- `username`: BlockID username (required)
+- `emailTo`: email to send OTP 
+- `smsTo`: phone number, including area code, to send OTP
+- `ISDCode`: international subscriber dialing code of the phone number
+
+:::tip Important:
+Not all the parameters are necessary for each request. 
+To send an OTP to only an email, or only a phone number, 
+simply omit the parameters you don't wish to use. 
+::: 
+
+
+
+### Request Format
+
+<Tabs groupId="OS">
+<TabItem value="node" label="Node.js SDK">
+
+
+- Initialize the SDK and request OTP
+```jsx
+const loaded = await bidsdk.setupTenant({dns: "1k-dev.1kosmos.net", communityName: "default"}, "<your license key>")`;
+let otpResponse = await BIDOTP.requestOTP("<username>", "<emailTo>", "<smsTo>", "<smsIsdCode>");    
+```
+
+
+</TabItem>
+
+<TabItem value="php" label="PHP SDK">
+
+- Initialize the SDK and request OTP
+```php
+require_once("./BIDSDK.php");
+require_once("./BIDOTP.php");
+
+BIDSDK::getInstance()->setupTenant($tenant, $license);
+BIDOTP::requestOTP("$userId", "$emailorNull", "$phoneOrNull", "$countryCode");
+```
+</TabItem>
+
+<TabItem value="java" label="Java SDK">
+
+- Initialize the SDK and request OTP
+```java
+BIDSDK.getInstance().setupTenant(<your tenant>, "<your license key>");
+BIDOtpResponse otpResponse = BIDOTP.requestOTP("<username>", "<emailTo>", "<smsTo>", "1");
+```
+</TabItem>
+</Tabs>        
+
+## **Examples**
+
+### Example OTP Request
+
+We've provided some example OTP requests using the BlockID SDK. 
+
+Please note that these are just examples - you will probably want to configure your development environment to request a one-time passcode as part of a sign-in request or something similar. You will note that we need to initialize the SDK with your license key and community name for each request.  
+
+
+
+<Tabs groupId="OS">
+<TabItem value="node" label="Node.js SDK">
+
+<br/>
+
+#### Example OTP Request -  SMS and Email
+
+Send a one-time passcode to both a user's phone number and an email. The same passcode will be sent simultaneously to the number and email entered.
+
+
+```jsx 
+const BIDSDK = require('blockid-nodejs-helpers/BIDSDK.js');
+const loaded = await BIDSDK.setupTenant({dns: "1k-dev.1kosmos.net", communityName: "default"}, "0005c9f8-1918-40be-aa00-e319043f7eee");
+
+const BIDOTP = require('blockid-nodejs-helpers/BIDOTP.js');
+var otpResponse = await BIDOTP.requestOTP("john.smith", "john.smith@company.com", "3333333333", "1");
+```
+   
+
+<br/>
+
+#### Example OTP Request - SMS Only
+
+To send a one-time passcode to only an email address or phone number, simply omit the parameters that you do not wish to use. 
+
+```jsx 
+const BIDSDK = require('blockid-nodejs-helpers/BIDSDK.js');
+const loaded = await BIDSDK.setupTenant({dns: "1k-dev.1kosmos.net", communityName: "default"}, "0005c9f8-1918-40be-aa00-e319043f7eee");
+
+const BIDOTP = require('blockid-nodejs-helpers/BIDOTP.js');
+var otpResponse = await BIDOTP.requestOTP("john.smith", "3333333333", "1");
+```
+<br/>
+
+#### Example OTP Request - Email Only
+
+```jsx 
+const BIDSDK = require('blockid-nodejs-helpers/BIDSDK.js');
+const loaded = await BIDSDK.setupTenant({dns: "1k-dev.1kosmos.net", communityName: "default"}, "0005c9f8-1918-40be-aa00-e319043f7eee");
+
+const BIDOTP = require('blockid-nodejs-helpers/BIDOTP.js');
+var otpResponse = await BIDOTP.requestOTP("john.smith", "john.smith@company.com");
+```
+
+
+
+</TabItem>
+<TabItem value="php" label="PHP SDK">
+
+<br/>
+
+#### Example OTP Request -  SMS and Email
+
+Send a one-time passcode to both a user's phone number and an email. The same passcode will be sent simultaneously to the number and email entered.   
+
+```php 
+require_once("./BIDSDK.php");
+require_once("./BIDOTP.php");
+BIDSDK::getInstance()->setupTenant({dns: "1k-dev.1kosmos.net", communityName: "default"}, "0005c9f8-1918-40be-aa00-e319043f7eee");
+
+BIDOTP::requestOTP("john.smith", "john.smith@company.com", "3333333333", "1");
+```
+
+
+
+<br/>
+
+#### Example OTP Request -  SMS Only
+
+To send a one-time passcode to only an email address or phone number, simply omit the parameters that you do not wish to use. 
+
+```php 
+require_once("./BIDSDK.php");
+require_once("./BIDOTP.php");
+BIDSDK::getInstance()->setupTenant({dns: "1k-dev.1kosmos.net", communityName: "default"}, "0005c9f8-1918-40be-aa00-e319043f7eee");
+
+BIDOTP::requestOTP("john.smith", "3333333333", "1");
+```
+<br/>
+
+#### Example OTP Request - Email Only
+
+```php 
+require_once("./BIDSDK.php");
+require_once("./BIDOTP.php");
+BIDSDK::getInstance()->setupTenant({dns: "1k-dev.1kosmos.net", communityName: "default"}, "0005c9f8-1918-40be-aa00-e319043f7eee");
+
+BIDOTP::requestOTP("john.smith", "john.smith@company.com");
+```
+
+
+</TabItem>
+<TabItem value="java" label="Java SDK">  
+
+<br/>
+
+#### Example OTP Request - SMS and Email
+
+Send a one-time passcode to both a user's phone number and an email. The same passcode will be sent simultaneously to the number and email entered. 
+
+```java 
+BIDSDK.getInstance().setupTenant({dns: "1k-dev.1kosmos.net", communityName: "default"}, "0005c9f8-1918-40be-aa00-e319043f7eee");
+
+BIDOtpResponse otpResponse = BIDOTP.requestOTP("john.smith", "john.smith@company.com", "3333333333", "1");
+```
+
+  
+
+<br/>
+
+#### Example OTP Request - SMS Only
+
+ To send a one-time passcode to only an email address or phone number, simply omit the parameters that you do not wish to use. 
+
+```java 
+BIDSDK.getInstance().setupTenant({dns: "1k-dev.1kosmos.net", communityName: "default"}, "0005c9f8-1918-40be-aa00-e319043f7eee");
+
+BIDOtpResponse otpResponse = BIDOTP.requestOTP("john.smith", "3333333333", "1");
+```
+
+<br/>
+
+#### Example OTP Request - Email Only
+
+ To send a one-time passcode to only an email address or phone number, simply omit the parameters that you do not wish to use. 
+
+```java 
+BIDSDK.getInstance().setupTenant({dns: "1k-dev.1kosmos.net", communityName: "default"}, "0005c9f8-1918-40be-aa00-e319043f7eee");
+
+BIDOtpResponse otpResponse = BIDOTP.requestOTP("john.smith", "john.smith@company.com");
+```
+
+</TabItem>
+</Tabs>
+
+
+
+
+
+### Example Server Responses
+
+
+The SDK will return an immediate response from our API. The responses are the same across each of the SDKs and are JSON formatted. Possible response codes you might receive include: 
+
+#### Server Responses
+
+<Tabs groupId="responses">
+
+  <TabItem value="202" label="202">
+
+```jsx title="202 OK"
+
+{
+    "messageId":"15f9dd86-9a8a-4c66-900a-f711f5acceb1",
+    "info":"OTP request accepted"
+}
+```
+The OTP request was accepted, and a one-time passcode was sent to the phone or email.
+
+  </TabItem>
+
+  <TabItem value="401" label="401">
+
+```jsx title="401 Unauthorized"
+
+{
+    "error_code": 401,
+    "message":"Unauthorized"
+}
+
+```
+The request was not authorized. 
+  </TabItem>
+
+  <TabItem value="403" label="403">
+
+```jsx title="403 Locked"
+
+{
+    "error_code": 403,
+    "message":"OTP locked for the user"
+}
+
+```
+The incorrect one-time passcode was entered more than five times in a 24 hour period, resulting in an account lockout. User accounts will automatically unlock after 30 minutes.  
+
+  </TabItem>
+
+  <TabItem value="404" label="404">
+
+```jsx title="404 Not Found"
+
+{
+    "error_code": 404,
+    "message":"Unable to load tenant/community"
+}
+
+```
+The tenant domain or community name was not recognized, or the SDK was not initialized. See [configuring the sdk](#configure-the-sdk-with-your-tenant-and-license-key) for instructions. 
+
+  </TabItem>
+</Tabs>
+
+ ## **Verifying One-Time Passcodes**
+
+You can verify an OTP request immediately after receiving your six-digit one-time passcode.
+
+:::warning Please Note: 
+Each one-time passcode is only valid for a single verification. 
+Submitting an incorrect one-time passcode more than five times in 24 hours will result in a 30-minute account lockout. 
+:::
+
+
+
+### Parameters 
+
+- `username`: BlockID username (required)
+- `code`: Six-digit one-time passcode you received (required) 
+
+### Verification Format
+
+<Tabs groupId="OS">
+<TabItem value="node" label="Node.js SDK">
+
+
+- Initialize the SDK and verify OTP
+
+```jsx
+const loaded = await bidsdk.setupTenant({dns: "1k-dev.1kosmos.net", communityName: "default"}, "<your license key>")`;
+let otpVerify = await BIDOTP.verifyOTP("<username>", "<code>");
+```
+
+</TabItem>
+
+<TabItem value="php" label="PHP SDK">
+
+- Initialize the SDK and verify OTP
+
+```php
+require_once("./BIDSDK.php");
+require_once("./BIDOTP.php");
+
+BIDSDK::getInstance()->setupTenant($tenant, $license);
+BIDOTP::verifyOTP("$userId", "$code");
+```
+</TabItem>
+
+<TabItem value="java" label="Java SDK">
+
+- Initialize the SDK and verify OTP
+
+```java
+BIDSDK.getInstance().setupTenant(<your tenant>, "<your license key>");
+BIDOtpVerifyResult result = BIDOTP.verifyOTP("<username>", "<otpcode>");
+```
+</TabItem>
+</Tabs>  
+
+## **Examples**
+
+### Example OTP Verification
+
+We've provided some example OTP verifications using the BlockID SDK. 
+
+Please note that these are just examples - a typical use-case would be to require verification of a a one-time passcode as part of a sign-in request. 
+    
+
+
+<Tabs groupId="OS">
+<TabItem value="node" label="Node.js SDK">
+
+Verify a one-time passcode request using the six digits you received via email or SMS.  
+
+
+#### Example OTP Request - SMS
+
+Example SMS containing six-digit one-time passcode. 
+
+<img src={OTPSMS} alt="OTP SMS" width='250' />
+
+
+
+#### Example OTP Verifcation 
+
+ ```jsx 
+const BIDSDK = require('blockid-nodejs-helpers/BIDSDK.js');
+const loaded = await BIDSDK.setupTenant({dns: "1k-dev.1kosmos.net", communityName: "default"}, "0005c9f8-1918-40be-aa00-e319043f7eee");
+const BIDOTP = require('blockid-nodejs-helpers/BIDOTP.js');
+
+var otpVerify = await BIDOTP.verifyOTP("john.smith", "062423");
+```
+
+
+</TabItem>
+<TabItem value="php" label="PHP SDK">
+
+Verify a one-time passcode request using the six digits you received via email or SMS.  
+
+#### Example OTP Request - SMS
+
+Example SMS containing six-digit one-time passcode. 
+
+<img src={OTPSMS} alt="OTP SMS" width='250' />
+
+#### Example OTP Verifcation 
+
+```php 
+require_once("./BIDSDK.php");
+require_once("./BIDOTP.php");
+BIDSDK::getInstance()->setupTenant({dns: "1k-dev.1kosmos.net", communityName: "default"}, "0005c9f8-1918-40be-aa00-e319043f7eee");
+
+BIDOTP::verifyOTP("john.smith", "062423");
+```
+</TabItem>
+<TabItem value="java" label="Java SDK">
+
+Verify a one-time passcode request using the six digits you received via email or SMS.  
+
+
+#### Example OTP Request - SMS
+
+Example SMS containing six-digit one-time passcode. 
+
+<img src={OTPSMS} alt="OTP SMS" width='250' />
+
+
+#### Example OTP Verifcation 
+
+```java
+BIDSDK.getInstance().setupTenant({dns: "1k-dev.1kosmos.net", communityName: "default"}, "0005c9f8-1918-40be-aa00-e319043f7eee");
+
+BIDOtpVerifyResult result = BIDOTP.verifyOTP("john.smith", "062423");
+```
+</TabItem>
+</Tabs>
+
+Verify a request with the six-digit one-time passcode you received via SMS or email. 
+
+
+### Example Server Responses
+
+
+The SDK will return an immediate response from our API. The responses are the same across each the SDKs and are JSON formatted. Possible response codes you might receive include: 
+
+#### Server Responses
+
+<Tabs groupId="responses">
+
+  <TabItem value="202" label="202">
+
+```jsx title="202 OK"
+
+{
+    "messageId":"15f9dd86-9a8a-4c66-900a-f711f5acceb1",
+    "info":"OTP request verified"
+}
+```
+The one-time passcode was verified and accepted. 
+
+  </TabItem>
+
+  <TabItem value="401" label="401">
+
+```jsx title="401 Unauthorized"
+
+{
+    "error_code": 401,
+    "message":"Unauthorized"
+}
+
+```
+The request was not authorized. 
+
+  </TabItem>
+
+  <TabItem value="403" label="403">
+
+```jsx title="403 Locked"
+
+{
+    "error_code": 403,
+    "message":"OTP locked for the user"
+}
+The incorrect one-time passcode was entered more than five times in 24 hours, resulting in an account lockout. User accounts will automatically unlock after 30 minutes. 
+
+```
+
+  </TabItem>
+
+  <TabItem value="404" label="404">
+
+```jsx title="404 Not Found"
+
+{
+    "error_code": 404,
+    "message":"OTP is Invalid"
+}
+
+```
+The incorrect one-time passcode was entered.
+  </TabItem>
+
+   <TabItem value="409" label="409">
+
+```jsx title="409 Error"
+
+{
+    "error_code": 409,
+    "message":"OTP is already used"
+}
+
+```
+The provided one-time passcode has already been used. 
+
+
+  </TabItem>
+   <TabItem value="410" label="410">
+
+```jsx title="410 Error"
+
+{
+    "error_code": 410,
+    "message":"OTP match found, but the validity time has expired"
+}
+
+```
+A valid one-time passcode was entered, but the validation time frame has expired. 
+  </TabItem>
+</Tabs>
