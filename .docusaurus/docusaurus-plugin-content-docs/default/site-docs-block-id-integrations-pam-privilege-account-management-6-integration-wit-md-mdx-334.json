@@ -1,13 +1,12 @@
 {
   "unversionedId": "BlockID Integrations/PAM (Privilege Account Management)/Z579bc6d1-e02a-48d4-9f27-78e9edb58aa0",
   "id": "BlockID Integrations/PAM (Privilege Account Management)/Z579bc6d1-e02a-48d4-9f27-78e9edb58aa0",
-  "isDocsHomePage": false,
   "title": "Integration with ARCON",
   "description": "Overview",
   "source": "@site/docs/BlockID Integrations/PAM (Privilege Account Management)/6_integration-wit.md.mdx",
   "sourceDirName": "BlockID Integrations/PAM (Privilege Account Management)",
   "slug": "/integration-with-arcon",
-  "permalink": "/devportal/docs/integration-with-arcon",
+  "permalink": "/docs/integration-with-arcon",
   "tags": [],
   "version": "current",
   "sidebarPosition": 6,
@@ -18,10 +17,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Integration with CyberArk",
-    "permalink": "/devportal/docs/integration-with-cyberark"
+    "permalink": "/docs/integration-with-cyberark"
   },
   "next": {
-    "title": "Integration with Citrix NetScaler",
-    "permalink": "/devportal/docs/integration-with-citrix-netscaler"
+    "title": "Intergration with Okta",
+    "permalink": "/docs/intergration-with-okta"
   }
 }

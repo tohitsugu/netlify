@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Developers Docs/getting-started",
+  "id": "Developers Docs/getting-started",
+  "title": "Getting Started",
+  "description": "Overview:",
+  "source": "@site/docs/Developers Docs/1_getting_started.md.mdx",
+  "sourceDirName": "Developers Docs",
+  "slug": "/getting-started",
+  "permalink": "/docs/getting-started",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "/getting-started",
+    "id": "getting-started"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Mobile Application User Guide",
+    "permalink": "/docs/blockid-mobile-application-user-guide"
+  },
+  "next": {
+    "title": "Universal Web Login (UWL) Guide",
+    "permalink": "/docs/univeral-web-login-guide"
+  }
+}

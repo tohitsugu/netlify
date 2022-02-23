@@ -1,13 +1,12 @@
 {
   "unversionedId": "BlockID Admin Console/Admin Guide/profile",
   "id": "BlockID Admin Console/Admin Guide/profile",
-  "isDocsHomePage": false,
   "title": "Profile Management",
   "description": "Overview",
   "source": "@site/docs/BlockID Admin Console/Admin Guide/14_profile.md.mdx",
   "sourceDirName": "BlockID Admin Console/Admin Guide",
   "slug": "/profile",
-  "permalink": "/devportal/docs/profile",
+  "permalink": "/docs/profile",
   "tags": [],
   "version": "current",
   "sidebarPosition": 14,
@@ -18,10 +17,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Community Management",
-    "permalink": "/devportal/docs/community-management"
+    "permalink": "/docs/community-management"
   },
   "next": {
     "title": "Core Configurations",
-    "permalink": "/devportal/docs/core-configurations"
+    "permalink": "/docs/core-configurations"
   }
 }

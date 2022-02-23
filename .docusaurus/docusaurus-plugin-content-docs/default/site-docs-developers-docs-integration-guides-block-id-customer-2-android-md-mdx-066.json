@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Developers Docs/Integration Guides/BlockID Customer/Zb472749f-bb61-44eb-8fac-031da891f016",
+  "id": "Developers Docs/Integration Guides/BlockID Customer/Zb472749f-bb61-44eb-8fac-031da891f016",
+  "title": "Android",
+  "description": "This document describes the procedure to configure the BlockID Customer Android SDK into your organization's application. This integration will allow your users to use the features provided within the Android SDK of the BlockID Customer mobile application. The features include enrollment of the user’s LiveID (captures the live (real-time) facial images) details, Fingerprint, PIN, Driving License (DL), and Passport details, etc.",
+  "source": "@site/docs/Developers Docs/Integration Guides/BlockID Customer/2_android.md.mdx",
+  "sourceDirName": "Developers Docs/Integration Guides/BlockID Customer",
+  "slug": "/v1/android",
+  "permalink": "/docs/v1/android",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/v1/android",
+    "id": "Zb472749f-bb61-44eb-8fac-031da891f016"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "BlockID Admin Console",
+    "permalink": "/docs/blockid-admin-console-api"
+  },
+  "next": {
+    "title": "iOS",
+    "permalink": "/docs/v1/ios"
+  }
+}

@@ -1,13 +1,12 @@
 {
   "unversionedId": "BlockID New Admin Portal (Athena)/Z9725f068-c919-4fc9-a454-053fa9382a2f",
   "id": "BlockID New Admin Portal (Athena)/Z9725f068-c919-4fc9-a454-053fa9382a2f",
-  "isDocsHomePage": false,
   "title": "Customizing the Branding of your BlockID Login Page",
   "description": "Overview",
   "source": "@site/docs/BlockID New Admin Portal (Athena)/15_customizing-the.md.mdx",
   "sourceDirName": "BlockID New Admin Portal (Athena)",
   "slug": "/customizing-the-branding-of-your-blockid-login-page",
-  "permalink": "/devportal/docs/customizing-the-branding-of-your-blockid-login-page",
+  "permalink": "/docs/customizing-the-branding-of-your-blockid-login-page",
   "tags": [],
   "version": "current",
   "sidebarPosition": 15,
@@ -18,10 +17,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Directory",
-    "permalink": "/devportal/docs/directory"
+    "permalink": "/docs/directory"
   },
   "next": {
     "title": "End User Guide",
-    "permalink": "/devportal/docs/end-user-guide"
+    "permalink": "/docs/end-user-guide"
   }
 }

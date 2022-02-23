@@ -1,13 +1,12 @@
 {
   "unversionedId": "Release Notes/Zd4c725d7-840f-4e0e-a801-c775c6e281a8",
   "id": "Release Notes/Zd4c725d7-840f-4e0e-a801-c775c6e281a8",
-  "isDocsHomePage": false,
   "title": "Release Notes v3",
   "description": "2020.05.12: Monthly Production release notes",
   "source": "@site/docs/Release Notes/3_release-notes-v.md.mdx",
   "sourceDirName": "Release Notes",
   "slug": "/release-notes-v3",
-  "permalink": "/devportal/docs/release-notes-v3",
+  "permalink": "/docs/release-notes-v3",
   "tags": [],
   "version": "current",
   "sidebarPosition": 3,
@@ -18,10 +17,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "BlockID Release Notes",
-    "permalink": "/devportal/docs/blockid-release-notes"
+    "permalink": "/docs/blockid-release-notes"
   },
   "next": {
     "title": "Release Notes R1.02.00",
-    "permalink": "/devportal/docs/release-notes-r102"
+    "permalink": "/docs/release-notes-r102"
   }
 }

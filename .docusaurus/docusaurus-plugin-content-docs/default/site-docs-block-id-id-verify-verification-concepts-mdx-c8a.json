@@ -1,0 +1,23 @@
+{
+  "unversionedId": "BlockID IDVerify/id1",
+  "id": "BlockID IDVerify/id1",
+  "title": "Verification Concepts",
+  "description": "<span",
+  "source": "@site/docs/BlockID IDVerify/verification-concepts.mdx",
+  "sourceDirName": "BlockID IDVerify",
+  "slug": "/idverify/verification-concepts",
+  "permalink": "/docs/idverify/verification-concepts",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "slug": "/idverify/verification-concepts",
+    "id": "id1"
+  },
+  "sidebar": "mySidebar",
+  "next": {
+    "title": "Social Security Number Verification",
+    "permalink": "/docs/idverify/ssn"
+  }
+}

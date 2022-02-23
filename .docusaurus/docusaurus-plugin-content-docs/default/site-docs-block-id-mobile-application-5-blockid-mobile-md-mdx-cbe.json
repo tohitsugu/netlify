@@ -1,13 +1,12 @@
 {
   "unversionedId": "BlockID Mobile Application/Zcf2a3abc-5b16-4aa5-9281-4023959f8301",
   "id": "BlockID Mobile Application/Zcf2a3abc-5b16-4aa5-9281-4023959f8301",
-  "isDocsHomePage": false,
   "title": "BlockID Mobile Application User Guide",
   "description": "Overview",
   "source": "@site/docs/BlockID Mobile Application/5_blockid-mobile-.md.mdx",
   "sourceDirName": "BlockID Mobile Application",
   "slug": "/blockid-mobile-application-user-guide",
-  "permalink": "/devportal/docs/blockid-mobile-application-user-guide",
+  "permalink": "/docs/blockid-mobile-application-user-guide",
   "tags": [],
   "version": "current",
   "sidebarPosition": 5,
@@ -17,11 +16,11 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "Installing BlockID Credential Provider",
-    "permalink": "/devportal/docs/installing-blockid-credential-provider"
+    "title": "Office365 Integration",
+    "permalink": "/docs/office365-integration"
   },
   "next": {
-    "title": "Introduction to Athena Admin Portal",
-    "permalink": "/devportal/docs/introduction-to-athena-admin-portal"
+    "title": "Getting Started",
+    "permalink": "/docs/getting-started"
   }
 }

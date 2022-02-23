@@ -1,13 +1,12 @@
 {
   "unversionedId": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z869ef4f5-309a-4480-a715-6c7a4148d3f9",
   "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z869ef4f5-309a-4480-a715-6c7a4148d3f9",
-  "isDocsHomePage": false,
   "title": "Okta",
   "description": "Overview",
   "source": "@site/docs/BlockID New Admin Portal (Athena)/Applications/Add Applications/2_okta.md.mdx",
   "sourceDirName": "BlockID New Admin Portal (Athena)/Applications/Add Applications",
   "slug": "/okta",
-  "permalink": "/devportal/docs/okta",
+  "permalink": "/docs/okta",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -18,10 +17,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "BlockID Attributes",
-    "permalink": "/devportal/docs/blockid-attributes"
+    "permalink": "/docs/blockid-attributes"
   },
   "next": {
     "title": "Auth0",
-    "permalink": "/devportal/docs/auth0"
+    "permalink": "/docs/auth0"
   }
 }

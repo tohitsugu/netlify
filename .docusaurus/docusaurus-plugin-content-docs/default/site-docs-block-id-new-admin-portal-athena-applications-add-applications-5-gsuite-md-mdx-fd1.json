@@ -1,13 +1,12 @@
 {
   "unversionedId": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z707bbbf3-7895-45bd-8b00-c4c64f09641b",
   "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z707bbbf3-7895-45bd-8b00-c4c64f09641b",
-  "isDocsHomePage": false,
   "title": "G Suite",
   "description": "Overview",
   "source": "@site/docs/BlockID New Admin Portal (Athena)/Applications/Add Applications/5_gsuite.md.mdx",
   "sourceDirName": "BlockID New Admin Portal (Athena)/Applications/Add Applications",
   "slug": "/gsuite",
-  "permalink": "/devportal/docs/gsuite",
+  "permalink": "/docs/gsuite",
   "tags": [],
   "version": "current",
   "sidebarPosition": 5,
@@ -18,10 +17,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Salesforce",
-    "permalink": "/devportal/docs/salesforce"
+    "permalink": "/docs/salesforce"
   },
   "next": {
     "title": "Generic SAML Application",
-    "permalink": "/devportal/docs/generic-saml-application"
+    "permalink": "/docs/generic-saml-application"
   }
 }

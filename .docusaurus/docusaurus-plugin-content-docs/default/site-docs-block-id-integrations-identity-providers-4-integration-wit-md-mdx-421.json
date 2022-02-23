@@ -1,13 +1,12 @@
 {
   "unversionedId": "BlockID Integrations/Identity Providers/Z9f3ceb9a-2550-4d70-a0d3-d4432e92ecfd",
   "id": "BlockID Integrations/Identity Providers/Z9f3ceb9a-2550-4d70-a0d3-d4432e92ecfd",
-  "isDocsHomePage": false,
   "title": "Integration with Microsoft ADFS",
   "description": "Overview",
   "source": "@site/docs/BlockID Integrations/Identity Providers/4_integration-wit.md.mdx",
   "sourceDirName": "BlockID Integrations/Identity Providers",
   "slug": "/integration-with-adfs",
-  "permalink": "/devportal/docs/integration-with-adfs",
+  "permalink": "/docs/integration-with-adfs",
   "tags": [],
   "version": "current",
   "sidebarPosition": 4,
@@ -18,10 +17,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Integration with Salesforce",
-    "permalink": "/devportal/docs/integration-with-salesforce"
+    "permalink": "/docs/integration-with-salesforce"
   },
   "next": {
     "title": "Integration PingFederate",
-    "permalink": "/devportal/docs/integration-pingfederate"
+    "permalink": "/docs/integration-pingfederate"
   }
 }

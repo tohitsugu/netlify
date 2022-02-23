@@ -1,13 +1,12 @@
 {
   "unversionedId": "BlockID Integrations/Identity Providers/Z0010fc32-8540-4be0-98fd-831958d61e23",
   "id": "BlockID Integrations/Identity Providers/Z0010fc32-8540-4be0-98fd-831958d61e23",
-  "isDocsHomePage": false,
   "title": "Intergration with Okta",
   "description": "Overview",
   "source": "@site/docs/BlockID Integrations/Identity Providers/2_intergration-wi.md.mdx",
   "sourceDirName": "BlockID Integrations/Identity Providers",
   "slug": "/intergration-with-okta",
-  "permalink": "/devportal/docs/intergration-with-okta",
+  "permalink": "/docs/intergration-with-okta",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -17,11 +16,11 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "Release Notes R1.02.03",
-    "permalink": "/devportal/docs/release-notes-r10300"
+    "title": "Integration with ARCON",
+    "permalink": "/docs/integration-with-arcon"
   },
   "next": {
     "title": "Integration with Salesforce",
-    "permalink": "/devportal/docs/integration-with-salesforce"
+    "permalink": "/docs/integration-with-salesforce"
   }
 }

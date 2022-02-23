@@ -1,13 +1,12 @@
 {
   "unversionedId": "Release Notes/Z89a4e212-0c52-480e-8072-3d62e7106a82",
   "id": "Release Notes/Z89a4e212-0c52-480e-8072-3d62e7106a82",
-  "isDocsHomePage": false,
   "title": "Release Notes R1.02.03",
   "description": "2021.03.10: Monthly Production release notes",
   "source": "@site/docs/Release Notes/5_release-notes-r.md.mdx",
   "sourceDirName": "Release Notes",
   "slug": "/release-notes-r10300",
-  "permalink": "/devportal/docs/release-notes-r10300",
+  "permalink": "/docs/release-notes-r10300",
   "tags": [],
   "version": "current",
   "sidebarPosition": 5,
@@ -18,10 +17,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Release Notes R1.02.00",
-    "permalink": "/devportal/docs/release-notes-r102"
+    "permalink": "/docs/release-notes-r102"
   },
   "next": {
-    "title": "Intergration with Okta",
-    "permalink": "/devportal/docs/intergration-with-okta"
+    "title": "Integration with CyberArk",
+    "permalink": "/docs/integration-with-cyberark"
   }
 }

@@ -1,13 +1,12 @@
 {
   "unversionedId": "BlockID Integrations/Identity Providers/Zefe715f0-3149-41a9-b7df-8f2f0f14bc05",
   "id": "BlockID Integrations/Identity Providers/Zefe715f0-3149-41a9-b7df-8f2f0f14bc05",
-  "isDocsHomePage": false,
   "title": "Integration with Oracle IDCS (Identity Cloud Service)",
   "description": "Overview",
   "source": "@site/docs/BlockID Integrations/Identity Providers/13_integration-wit(1).md.mdx",
   "sourceDirName": "BlockID Integrations/Identity Providers",
   "slug": "/integration-with-oracle-idcs-identity-cloud-service",
-  "permalink": "/devportal/docs/integration-with-oracle-idcs-identity-cloud-service",
+  "permalink": "/docs/integration-with-oracle-idcs-identity-cloud-service",
   "tags": [],
   "version": "current",
   "sidebarPosition": 13,
@@ -18,10 +17,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Integration with G Suite",
-    "permalink": "/devportal/docs/integration-with-gsuite"
+    "permalink": "/docs/integration-with-gsuite"
   },
   "next": {
     "title": "Integration with CyberArk Idaptive Identity",
-    "permalink": "/devportal/docs/integration-with-cyberark-idaptive-identity"
+    "permalink": "/docs/integration-with-cyberark-idaptive-identity"
   }
 }

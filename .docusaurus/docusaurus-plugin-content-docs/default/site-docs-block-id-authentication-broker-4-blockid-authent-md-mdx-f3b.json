@@ -1,13 +1,12 @@
 {
   "unversionedId": "BlockID Authentication Broker/Zd1256c41-99d9-4b0a-8a6c-48d13a499fa8",
   "id": "BlockID Authentication Broker/Zd1256c41-99d9-4b0a-8a6c-48d13a499fa8",
-  "isDocsHomePage": false,
   "title": "BlockID Authentication Broker - User Guide",
   "description": "Overview",
   "source": "@site/docs/BlockID Authentication Broker/4_blockid-authent.md.mdx",
   "sourceDirName": "BlockID Authentication Broker",
   "slug": "/blockid-authentication-broker-user-guide",
-  "permalink": "/devportal/docs/blockid-authentication-broker-user-guide",
+  "permalink": "/docs/blockid-authentication-broker-user-guide",
   "tags": [],
   "version": "current",
   "sidebarPosition": 4,
@@ -18,10 +17,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Installing BlockID Authentication Broker",
-    "permalink": "/devportal/docs/installing-blockid-authentication-broker"
+    "permalink": "/docs/installing-blockid-authentication-broker"
   },
   "next": {
     "title": "Upgrading BlockID Authentication Broker",
-    "permalink": "/devportal/docs/upgrading-blockid-authentication-broker"
+    "permalink": "/docs/upgrading-blockid-authentication-broker"
   }
 }

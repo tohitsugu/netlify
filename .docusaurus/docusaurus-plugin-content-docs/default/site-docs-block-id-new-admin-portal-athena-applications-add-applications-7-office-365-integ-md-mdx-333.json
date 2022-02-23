@@ -1,13 +1,12 @@
 {
   "unversionedId": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z1b65946e-a6e7-45a8-8c9b-04d81aa9a32e",
   "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z1b65946e-a6e7-45a8-8c9b-04d81aa9a32e",
-  "isDocsHomePage": false,
   "title": "Office365 Integration",
   "description": "Overview",
   "source": "@site/docs/BlockID New Admin Portal (Athena)/Applications/Add Applications/7_office365-integ.md.mdx",
   "sourceDirName": "BlockID New Admin Portal (Athena)/Applications/Add Applications",
   "slug": "/office365-integration",
-  "permalink": "/devportal/docs/office365-integration",
+  "permalink": "/docs/office365-integration",
   "tags": [],
   "version": "current",
   "sidebarPosition": 7,
@@ -18,10 +17,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Generic SAML Application",
-    "permalink": "/devportal/docs/generic-saml-application"
+    "permalink": "/docs/generic-saml-application"
   },
   "next": {
-    "title": "Getting Started",
-    "permalink": "/devportal/docs/getting-started"
+    "title": "BlockID Mobile Application User Guide",
+    "permalink": "/docs/blockid-mobile-application-user-guide"
   }
 }

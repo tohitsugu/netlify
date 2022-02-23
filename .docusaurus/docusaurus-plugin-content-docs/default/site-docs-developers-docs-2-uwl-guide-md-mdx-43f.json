@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Developers Docs/univeral-web-login-guide",
+  "id": "Developers Docs/univeral-web-login-guide",
+  "title": "Universal Web Login (UWL) Guide",
+  "description": "Overview",
+  "source": "@site/docs/Developers Docs/2_uwl_guide.md.mdx",
+  "sourceDirName": "Developers Docs",
+  "slug": "/univeral-web-login-guide",
+  "permalink": "/docs/univeral-web-login-guide",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "slug": "/univeral-web-login-guide",
+    "id": "univeral-web-login-guide"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/docs/getting-started"
+  },
+  "next": {
+    "title": "BlockID Admin Console",
+    "permalink": "/docs/blockid-admin-console-api"
+  }
+}

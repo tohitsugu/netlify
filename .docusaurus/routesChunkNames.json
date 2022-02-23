@@ -1,412 +1,384 @@
 {
-  "/devportal/-b92": {
-    "component": "component---site-src-pages-index-jsc-4-f-f99",
-    "config": "config---devportal-5-e-9-e5e"
-  },
-  "/devportal/__docusaurus/debug-4ed": {
+  "/__docusaurus/debug-3d6": {
     "component": "component---theme-debug-config-23-a-2ff"
   },
-  "/devportal/__docusaurus/debug/config-6a2": {
+  "/__docusaurus/debug/config-914": {
     "component": "component---theme-debug-config-23-a-2ff"
   },
-  "/devportal/__docusaurus/debug/content-8ef": {
+  "/__docusaurus/debug/content-c28": {
     "component": "component---theme-debug-contentba-8-ce7",
-    "allContent": "allContent---devportal-docusaurus-debug-content-246-72f"
+    "allContent": "allContent---docusaurus-debug-content-246-9aa"
   },
-  "/devportal/__docusaurus/debug/globalData-059": {
+  "/__docusaurus/debug/globalData-3cf": {
     "component": "component---theme-debug-global-dataede-0fa"
   },
-  "/devportal/__docusaurus/debug/metadata-b3a": {
+  "/__docusaurus/debug/metadata-31b": {
     "component": "component---theme-debug-site-metadata-68-e-3d4"
   },
-  "/devportal/__docusaurus/debug/registry-d0b": {
+  "/__docusaurus/debug/registry-0da": {
     "component": "component---theme-debug-registry-679-501"
   },
-  "/devportal/__docusaurus/debug/routes-923": {
+  "/__docusaurus/debug/routes-244": {
     "component": "component---theme-debug-routes-946-699"
   },
-  "/devportal/blog/archive-5b5": {
+  "/blog/archive-f4c": {
     "component": "component---theme-blog-archive-page-9-e-4-1d8",
-    "archive": "archive---devportal-blog-archived-40-ad4"
+    "archive": "archive---blog-archiveb-2-f-393"
   },
-  "/devportal/dashboard-489": {
+  "/dashboard-3a4": {
     "component": "component---site-src-pages-dashboard-jsde-3-f66",
-    "config": "config---devportal-5-e-9-e5e"
+    "config": "config---dashboard-5-e-9-f57"
   },
-  "/devportal/demo-4e1": {
+  "/demo-041": {
     "component": "component---site-src-pages-demo-js-0-ba-09a",
-    "config": "config---devportal-5-e-9-e5e"
+    "config": "config---dashboard-5-e-9-f57"
   },
-  "/devportal/login-108": {
+  "/login-61b": {
     "component": "component---site-src-pages-login-js-380-710",
-    "config": "config---devportal-5-e-9-e5e"
+    "config": "config---dashboard-5-e-9-f57"
   },
-  "/devportal/markdown-page-40d": {
+  "/markdown-page-be1": {
     "component": "component---theme-mdx-page-1-f-3-b90",
-    "content": "content---devportal-markdown-page-393-0bd"
+    "content": "content---markdown-page-393-028"
   },
-  "/devportal/register-8ff": {
+  "/register-e49": {
     "component": "component---site-src-pages-register-js-81-f-03a",
-    "config": "config---devportal-5-e-9-e5e"
+    "config": "config---dashboard-5-e-9-f57"
   },
-  "/devportal/docs-7a0": {
+  "/docs-e61": {
     "component": "component---theme-doc-page-1-be-9be",
-    "versionMetadata": "versionMetadata---devportal-docs-935-430"
+    "versionMetadata": "versionMetadata---docs-935-398"
   },
-  "/devportal/docs/-d6e": {
+  "/docs/administration-console-719": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-4-ed-621"
+    "content": "content---docs-administration-console-336-4ee"
   },
-  "/devportal/docs/administration-console-d3f": {
+  "/docs/analytics-fb0": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-administration-console-336-675"
+    "content": "content---docs-analytics-02-f-b57"
   },
-  "/devportal/docs/analytics-937": {
+  "/docs/android-100-c3a": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-analytics-02-f-1f7"
+    "content": "content---docs-android-100498-cd1"
   },
-  "/devportal/docs/android-100-30c": {
+  "/docs/android-110-ae6": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-android-10007-c-572"
+    "content": "content---docs-android-110-e-9-f-073"
   },
-  "/devportal/docs/android-110-a85": {
+  "/docs/auth0-2ca": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-android-1108-f-9-275"
+    "content": "content---docs-auth-042-f-1c3"
   },
-  "/devportal/docs/api-364": {
+  "/docs/authentication-modules-92a": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-api-1-bb-ef0"
+    "content": "content---docs-authentication-modules-515-57e"
   },
-  "/devportal/docs/api/ecdsa-96c": {
+  "/docs/authentication-scheme-a6b": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-api-ecdsa-4-d-2-e89"
+    "content": "content---docs-authentication-scheme-454-078"
   },
-  "/devportal/docs/api/ecdsa/keys-75a": {
+  "/docs/blockid-admin-console-api-932": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-api-ecdsa-keys-9-d-5-6b2"
+    "content": "content---docs-blockid-admin-console-api-4-ad-aef"
   },
-  "/devportal/docs/api/idverify-4d9": {
+  "/docs/blockid-android-sdk-141and142-e82": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-api-idverify-507-d21"
+    "content": "content---docs-blockid-android-sdk-141-and-14288-c-899"
   },
-  "/devportal/docs/api/otp-b56": {
+  "/docs/blockid-attributes-3b2": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-api-otpb-45-bdf"
+    "content": "content---docs-blockid-attributes-619-0b3"
   },
-  "/devportal/docs/auth0-042": {
+  "/docs/blockid-authentication-broker-user-guide-81a": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-auth-042-f-f19"
+    "content": "content---docs-blockid-authentication-broker-user-guidef-3-b-ef1"
   },
-  "/devportal/docs/authentication-modules-02a": {
+  "/docs/blockid-ios-sdk-141and142-837": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-authentication-modules-515-957"
+    "content": "content---docs-blockid-ios-sdk-141-and-14210-f-e7a"
   },
-  "/devportal/docs/authentication-scheme-574": {
+  "/docs/blockid-mobile-application-user-guide-bef": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-authentication-scheme-454-63e"
+    "content": "content---docs-blockid-mobile-application-user-guidecbe-c2b"
   },
-  "/devportal/docs/blockid-admin-console-api-8db": {
+  "/docs/blockid-release-notes-b75": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-blockid-admin-console-apiab-5-fa0"
+    "content": "content---docs-blockid-release-notes-4-f-8-baa"
   },
-  "/devportal/docs/blockid-android-sdk-141and142-8a1": {
+  "/docs/broker-installation-501": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-blockid-android-sdk-141-and-142-bec-249"
+    "content": "content---docs-broker-installation-59-a-f1e"
   },
-  "/devportal/docs/blockid-attributes-503": {
+  "/docs/community-management-149": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-blockid-attributes-619-d6b"
+    "content": "content---docs-community-management-13-a-7ba"
   },
-  "/devportal/docs/blockid-authentication-broker-user-guide-c87": {
+  "/docs/core-configurations-7ca": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-blockid-authentication-broker-user-guidef-3-b-1e3"
+    "content": "content---docs-core-configurations-673-966"
   },
-  "/devportal/docs/blockid-ios-sdk-141and142-718": {
+  "/docs/create-native-user-bfc": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-blockid-ios-sdk-141-and-1427-a-8-83b"
+    "content": "content---docs-create-native-user-9-db-81b"
   },
-  "/devportal/docs/blockid-mobile-application-user-guide-783": {
+  "/docs/customizing-the-branding-of-your-blockid-login-page-b78": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-blockid-mobile-application-user-guidecbe-4b3"
+    "content": "content---docs-customizing-the-branding-of-your-blockid-login-page-0-d-9-379"
   },
-  "/devportal/docs/blockid-release-notes-7c4": {
+  "/docs/datastore-configuration-1-e14": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-blockid-release-notes-4-f-8-4d4"
+    "content": "content---docs-datastore-configuration-1886-d61"
   },
-  "/devportal/docs/broker-installation-082": {
+  "/docs/deploying-smart-contract-2bb": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-broker-installation-59-a-af6"
+    "content": "content---docs-deploying-smart-contractb-4-c-ad9"
   },
-  "/devportal/docs/community-management-282": {
+  "/docs/directory-3f0": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-community-management-13-a-cb9"
+    "content": "content---docs-directoryd-2-b-080"
   },
-  "/devportal/docs/core-configurations-2de": {
+  "/docs/end-user-guide-fc7": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-core-configurations-673-e3b"
+    "content": "content---docs-end-user-guidef-7-e-6c3"
   },
-  "/devportal/docs/create-native-user-70e": {
+  "/docs/faqs-related-to-the-blockid-product-suite-a91": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-create-native-user-9-db-a03"
+    "content": "content---docs-faqs-related-to-the-blockid-product-suite-177-d27"
   },
-  "/devportal/docs/customizing-the-branding-of-your-blockid-login-page-1f6": {
+  "/docs/frequently-asked-questions-faq-9ed": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-customizing-the-branding-of-your-blockid-login-page-0-d-9-e7d"
+    "content": "content---docs-frequently-asked-questions-faq-38-c-179"
   },
-  "/devportal/docs/datastore-configuration-1-46f": {
+  "/docs/generic-saml-application-fbc": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-datastore-configuration-1886-f19"
+    "content": "content---docs-generic-saml-application-9-d-6-418"
   },
-  "/devportal/docs/deploying-smart-contract-a21": {
+  "/docs/getting-started-263": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-deploying-smart-contractb-4-c-3a2"
+    "content": "content---docs-getting-started-3-c-7-cc4"
   },
-  "/devportal/docs/directory-37e": {
+  "/docs/glossary-ced": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-directoryd-2-b-70e"
+    "content": "content---docs-glossary-313-c80"
   },
-  "/devportal/docs/ecdsa/shared-key-0c6": {
+  "/docs/gsuite-e91": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-ecdsa-shared-key-63-f-b91"
+    "content": "content---docs-gsuitefd-1-7ab"
   },
-  "/devportal/docs/end-user-guide-e0e": {
+  "/docs/idverify/dl-d56": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-end-user-guidef-7-e-f10"
+    "content": "content---docs-idverify-dl-0-c-3-8bb"
   },
-  "/devportal/docs/faqs-related-to-the-blockid-product-suite-163": {
+  "/docs/idverify/face-compare-97d": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-faqs-related-to-the-blockid-product-suite-177-c8c"
+    "content": "content---docs-idverify-face-compare-09-a-302"
   },
-  "/devportal/docs/frequently-asked-questions-faq-0ad": {
+  "/docs/idverify/face-liveness-2ad": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-frequently-asked-questions-faq-38-c-874"
+    "content": "content---docs-idverify-face-liveness-516-2ac"
   },
-  "/devportal/docs/generic-saml-application-189": {
+  "/docs/idverify/ssn-146": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-generic-saml-application-9-d-6-41b"
+    "content": "content---docs-idverify-ssn-290-cde"
   },
-  "/devportal/docs/getting-started-44e": {
+  "/docs/idverify/verification-concepts-545": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-getting-started-951-32f"
+    "content": "content---docs-idverify-verification-conceptsc-8-a-96f"
   },
-  "/devportal/docs/glossary-463": {
+  "/docs/installing-blockid-authentication-broker-321": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-glossary-313-757"
+    "content": "content---docs-installing-blockid-authentication-broker-1-c-8-e12"
   },
-  "/devportal/docs/gsuite-1e3": {
+  "/docs/installing-blockid-credential-provider-2fb": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-gsuitefd-1-a8b"
+    "content": "content---docs-installing-blockid-credential-provider-01-f-f1f"
   },
-  "/devportal/docs/installing-blockid-admin-console-6fb": {
+  "/docs/integration-pingfederate-229": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-installing-blockid-admin-console-8-a-8-35a"
+    "content": "content---docs-integration-pingfederate-8-d-3-13d"
   },
-  "/devportal/docs/installing-blockid-authentication-broker-643": {
+  "/docs/integration-with-adfs-085": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-installing-blockid-authentication-broker-1-c-8-ed8"
+    "content": "content---docs-integration-with-adfs-421-a0b"
   },
-  "/devportal/docs/installing-blockid-credential-provider-6d2": {
+  "/docs/integration-with-arcon-499": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-installing-blockid-credential-provider-01-f-e99"
+    "content": "content---docs-integration-with-arcon-334-d5c"
   },
-  "/devportal/docs/integration-pingfederate-74e": {
+  "/docs/integration-with-cisco-check-point-3ee": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-integration-pingfederate-8-d-3-8d2"
+    "content": "content---docs-integration-with-cisco-check-point-47-f-bf1"
   },
-  "/devportal/docs/integration-with-adfs-b32": {
+  "/docs/integration-with-citrix-netscaler-e28": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-integration-with-adfs-421-c2b"
+    "content": "content---docs-integration-with-citrix-netscalerd-27-c13"
   },
-  "/devportal/docs/integration-with-arcon-f3c": {
+  "/docs/integration-with-cyberark-e94": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-integration-with-arcon-334-9e9"
+    "content": "content---docs-integration-with-cyberark-044-4af"
   },
-  "/devportal/docs/integration-with-cisco-check-point-6fb": {
+  "/docs/integration-with-cyberark-idaptive-identity-471": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-integration-with-cisco-check-point-47-f-309"
+    "content": "content---docs-integration-with-cyberark-idaptive-identityb-11-f79"
   },
-  "/devportal/docs/integration-with-citrix-netscaler-4cd": {
+  "/docs/integration-with-forgerock-239": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-integration-with-citrix-netscalerd-27-2d1"
+    "content": "content---docs-integration-with-forgerock-520-8ec"
   },
-  "/devportal/docs/integration-with-cyberark-df6": {
+  "/docs/integration-with-gsuite-b5f": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-integration-with-cyberark-044-9c2"
+    "content": "content---docs-integration-with-gsuite-1-fa-a6b"
   },
-  "/devportal/docs/integration-with-cyberark-idaptive-identity-868": {
+  "/docs/integration-with-oracle-idcs-identity-cloud-service-d0b": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-integration-with-cyberark-idaptive-identityb-11-597"
+    "content": "content---docs-integration-with-oracle-idcs-identity-cloud-service-63-c-77c"
   },
-  "/devportal/docs/integration-with-forgerock-105": {
+  "/docs/integration-with-salesforce-696": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-integration-with-forgerock-520-65a"
+    "content": "content---docs-integration-with-salesforce-354-ee6"
   },
-  "/devportal/docs/integration-with-gsuite-3ba": {
+  "/docs/integration-with-windows-878": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-integration-with-gsuite-1-fa-70d"
+    "content": "content---docs-integration-with-windowscfc-88a"
   },
-  "/devportal/docs/integration-with-oracle-idcs-identity-cloud-service-dd5": {
+  "/docs/integration-with-zscaler-ae6": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-integration-with-oracle-idcs-identity-cloud-service-63-c-714"
+    "content": "content---docs-integration-with-zscalera-3-b-e3f"
   },
-  "/devportal/docs/integration-with-salesforce-1fd": {
+  "/docs/intergration-with-okta-3a3": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-integration-with-salesforce-354-0df"
+    "content": "content---docs-intergration-with-okta-307-fd0"
   },
-  "/devportal/docs/integration-with-windows-990": {
+  "/docs/internal-faq-guide-for-blockid-product-suite-fa6": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-integration-with-windowscfc-d8d"
+    "content": "content---docs-internal-faq-guide-for-blockid-product-suite-931-83b"
   },
-  "/devportal/docs/integration-with-zscaler-0e7": {
+  "/docs/introduction-to-athena-admin-portal-366": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-integration-with-zscalera-3-b-31c"
+    "content": "content---docs-introduction-to-athena-admin-portal-77-f-4a1"
   },
-  "/devportal/docs/intergration-with-okta-49f": {
+  "/docs/introduction-to-blockid-admin-console-01c": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-intergration-with-okta-307-b2e"
+    "content": "content---docs-introduction-to-blockid-admin-consoleaff-5f9"
   },
-  "/devportal/docs/internal-faq-guide-for-blockid-product-suite-499": {
+  "/docs/ios-100-fda": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-internal-faq-guide-for-blockid-product-suite-931-b4e"
+    "content": "content---docs-ios-100355-1f3"
   },
-  "/devportal/docs/introduction-to-athena-admin-portal-31c": {
+  "/docs/ios-110-514": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-introduction-to-athena-admin-portal-77-f-ed0"
+    "content": "content---docs-ios-1106-fb-277"
   },
-  "/devportal/docs/introduction-to-blockid-admin-console-b21": {
+  "/docs/license-keys-8ca": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-introduction-to-blockid-admin-consoleaff-412"
+    "content": "content---docs-license-keys-47-a-1ca"
   },
-  "/devportal/docs/ios-100-9a6": {
+  "/docs/login-with-mfa-005": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-ios-100-d-53-189"
+    "content": "content---docs-login-with-mfafed-c65"
   },
-  "/devportal/docs/ios-110-5e8": {
+  "/docs/office365-integration-e2c": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-ios-110-de-3-41a"
+    "content": "content---docs-office-365-integration-333-045"
   },
-  "/devportal/docs/license-keys-96d": {
+  "/docs/okta-599": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-license-keys-47-a-fee"
+    "content": "content---docs-okta-9-de-c64"
   },
-  "/devportal/docs/login-with-mfa-b17": {
+  "/docs/profile-256": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-login-with-mfafed-3f1"
+    "content": "content---docs-profile-0-f-3-cc0"
   },
-  "/devportal/docs/office365-integration-a1b": {
+  "/docs/radius-configuration-64e": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-office-365-integration-333-d83"
+    "content": "content---docs-radius-configuration-402-837"
   },
-  "/devportal/docs/okta-291": {
+  "/docs/release-notes-r102-c7f": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-okta-9-de-c3c"
+    "content": "content---docs-release-notes-r-102-b-81-68a"
   },
-  "/devportal/docs/otp-11b": {
+  "/docs/release-notes-r10300-31b": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-otp-3-dd-109"
+    "content": "content---docs-release-notes-r-10300-ead-bb1"
   },
-  "/devportal/docs/otp/request-c5f": {
+  "/docs/release-notes-v3-562": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-otp-requestb-42-54f"
+    "content": "content---docs-release-notes-v-3-dcd-c4a"
   },
-  "/devportal/docs/otp/verify-343": {
+  "/docs/role-management-f3d": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-otp-verify-434-51f"
+    "content": "content---docs-role-managemente-1-a-3fb"
   },
-  "/devportal/docs/profile-ae4": {
+  "/docs/salesforce-a49": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-profile-0-f-3-ab0"
+    "content": "content---docs-salesforce-204-019"
   },
-  "/devportal/docs/radius-configuration-bf0": {
+  "/docs/saml-configuration-53a": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-radius-configuration-402-03e"
+    "content": "content---docs-saml-configuration-977-b96"
   },
-  "/devportal/docs/release-notes-r102-b17": {
+  "/docs/samlv2-0bd": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-release-notes-r-102-b-81-9a6"
+    "content": "content---docs-samlv-275-f-50c"
   },
-  "/devportal/docs/release-notes-r10300-39d": {
+  "/docs/scep-configuration-813": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-release-notes-r-10300-ead-6a3"
+    "content": "content---docs-scep-configurationd-04-ade"
   },
-  "/devportal/docs/release-notes-v3-16b": {
+  "/docs/software-and-hardware-otp-support-d14": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-release-notes-v-3-dcd-1c3"
+    "content": "content---docs-software-and-hardware-otp-supportc-1-c-882"
   },
-  "/devportal/docs/role-management-983": {
+  "/docs/tenant-management-a48": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-role-managemente-1-a-186"
+    "content": "content---docs-tenant-management-0-c-9-628"
   },
-  "/devportal/docs/salesforce-6ad": {
+  "/docs/univeral-web-login-guide-2fa": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-salesforce-204-e64"
+    "content": "content---docs-univeral-web-login-guide-43-f-3b3"
   },
-  "/devportal/docs/saml-configuration-80e": {
+  "/docs/upgrading-blockid-authentication-broker-2b3": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-saml-configuration-977-052"
+    "content": "content---docs-upgrading-blockid-authentication-broker-66-d-627"
   },
-  "/devportal/docs/samlv2-ecb": {
+  "/docs/user-management-96c": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-samlv-275-f-cf2"
+    "content": "content---docs-user-managementbf-2-50e"
   },
-  "/devportal/docs/scep-configuration-ec2": {
+  "/docs/user-onboarding-process-guide-d3a": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-scep-configurationd-04-8e0"
+    "content": "content---docs-user-onboarding-process-guide-310-ef6"
   },
-  "/devportal/docs/software-and-hardware-otp-support-e4d": {
+  "/docs/v1/android-bb3": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-software-and-hardware-otp-supportc-1-c-2d3"
+    "content": "content---docs-v-1-android-066-3ef"
   },
-  "/devportal/docs/tenant-management-e7a": {
+  "/docs/v1/android-2-462": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-tenant-management-0-c-9-97c"
+    "content": "content---docs-v-1-android-2587-61c"
   },
-  "/devportal/docs/univeral-web-login-guide-487": {
+  "/docs/v1/ios-4ee": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-univeral-web-login-guide-502-105"
+    "content": "content---docs-v-1-ios-9-c-7-262"
   },
-  "/devportal/docs/upgrading-blockid-authentication-broker-4b3": {
+  "/docs/v1/ios-2-14b": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-upgrading-blockid-authentication-broker-66-d-7e4"
+    "content": "content---docs-v-1-ios-215-c-0fb"
   },
-  "/devportal/docs/user-management-13d": {
+  "/docs/v1/release-notes-20211103-668": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-user-managementbf-2-a27"
+    "content": "content---docs-v-1-release-notes-20211103-f-38-653"
   },
-  "/devportal/docs/user-onboarding-process-guide-e6d": {
+  "/docs/webauthn-170": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-user-onboarding-process-guide-310-348"
+    "content": "content---docs-webauthn-329-4dd"
   },
-  "/devportal/docs/uwl-77b": {
+  "/docs/white-label-templates-c8f": {
     "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-uwl-1-d-4-2f4"
+    "content": "content---docs-white-label-templatesa-92-d71"
   },
-  "/devportal/docs/v1/android-e34": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-v-1-android-944-805"
-  },
-  "/devportal/docs/v1/android-2-43f": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-v-1-android-2293-af1"
-  },
-  "/devportal/docs/v1/ios-4f1": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-v-1-ioscb-9-372"
-  },
-  "/devportal/docs/v1/ios-2-cde": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-v-1-ios-24-d-2-012"
-  },
-  "/devportal/docs/v1/release-notes-20211103-d9b": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-v-1-release-notes-20211103-f-38-d77"
-  },
-  "/devportal/docs/webauthn-345": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-webauthn-329-23b"
-  },
-  "/devportal/docs/white-label-templates-91b": {
-    "component": "component---theme-doc-item-178-a40",
-    "content": "content---devportal-docs-white-label-templatesa-92-216"
+  "/-deb": {
+    "component": "component---site-src-pages-index-jsc-4-f-f99",
+    "config": "config---dashboard-5-e-9-f57"
   }
 }

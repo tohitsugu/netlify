@@ -1,13 +1,12 @@
 {
   "unversionedId": "BlockID Admin Console/Admin Guide/license-keys",
   "id": "BlockID Admin Console/Admin Guide/license-keys",
-  "isDocsHomePage": false,
   "title": "License Keys",
   "description": "Overview",
   "source": "@site/docs/BlockID Admin Console/Admin Guide/9_license-keys.md.mdx",
   "sourceDirName": "BlockID Admin Console/Admin Guide",
   "slug": "/license-keys",
-  "permalink": "/devportal/docs/license-keys",
+  "permalink": "/docs/license-keys",
   "tags": [],
   "version": "current",
   "sidebarPosition": 9,
@@ -18,10 +17,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Analytics and Event Logging",
-    "permalink": "/devportal/docs/analytics"
+    "permalink": "/docs/analytics"
   },
   "next": {
     "title": "White Label Templates",
-    "permalink": "/devportal/docs/white-label-templates"
+    "permalink": "/docs/white-label-templates"
   }
 }

@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Developers Docs/API References/blockid-admin-console-api",
+  "id": "Developers Docs/API References/blockid-admin-console-api",
+  "title": "BlockID Admin Console",
+  "description": "Communities",
+  "source": "@site/docs/Developers Docs/API References/1_blockid_admin_console.md.mdx",
+  "sourceDirName": "Developers Docs/API References",
+  "slug": "/blockid-admin-console-api",
+  "permalink": "/docs/blockid-admin-console-api",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "slug": "/blockid-admin-console-api",
+    "id": "blockid-admin-console-api"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Universal Web Login (UWL) Guide",
+    "permalink": "/docs/univeral-web-login-guide"
+  },
+  "next": {
+    "title": "Android",
+    "permalink": "/docs/v1/android"
+  }
+}

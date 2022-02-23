@@ -1,13 +1,12 @@
 {
   "unversionedId": "BlockID New Admin Portal (Athena)/Release Notes/Z7575ff9b-19c0-408e-bf74-0080f94cb7b2",
   "id": "BlockID New Admin Portal (Athena)/Release Notes/Z7575ff9b-19c0-408e-bf74-0080f94cb7b2",
-  "isDocsHomePage": false,
   "title": "Release Notes 2021.11.03",
   "description": "Nov 03, 2021, The 1Kosmos Team",
   "source": "@site/docs/BlockID New Admin Portal (Athena)/Release Notes/3_release-notes-2.md.mdx",
   "sourceDirName": "BlockID New Admin Portal (Athena)/Release Notes",
   "slug": "/v1/release-notes-20211103",
-  "permalink": "/devportal/docs/v1/release-notes-20211103",
+  "permalink": "/docs/v1/release-notes-20211103",
   "tags": [],
   "version": "current",
   "sidebarPosition": 3,
@@ -18,10 +17,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Broker Installation",
-    "permalink": "/devportal/docs/broker-installation"
+    "permalink": "/docs/broker-installation"
   },
   "next": {
     "title": "BlockID Attributes",
-    "permalink": "/devportal/docs/blockid-attributes"
+    "permalink": "/docs/blockid-attributes"
   }
 }

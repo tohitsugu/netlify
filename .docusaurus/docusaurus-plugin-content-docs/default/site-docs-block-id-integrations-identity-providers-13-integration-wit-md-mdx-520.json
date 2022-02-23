@@ -1,13 +1,12 @@
 {
   "unversionedId": "BlockID Integrations/Identity Providers/Z3ec44e40-4852-4fc4-884c-598943e2182d",
   "id": "BlockID Integrations/Identity Providers/Z3ec44e40-4852-4fc4-884c-598943e2182d",
-  "isDocsHomePage": false,
   "title": "Integration with ForgeRock",
   "description": "Overview",
   "source": "@site/docs/BlockID Integrations/Identity Providers/13_integration-wit.md.mdx",
   "sourceDirName": "BlockID Integrations/Identity Providers",
   "slug": "/integration-with-forgerock",
-  "permalink": "/devportal/docs/integration-with-forgerock",
+  "permalink": "/docs/integration-with-forgerock",
   "tags": [],
   "version": "current",
   "sidebarPosition": 13,
@@ -18,10 +17,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Integration with CyberArk Idaptive Identity",
-    "permalink": "/devportal/docs/integration-with-cyberark-idaptive-identity"
+    "permalink": "/docs/integration-with-cyberark-idaptive-identity"
   },
   "next": {
-    "title": "Integration with CyberArk",
-    "permalink": "/devportal/docs/integration-with-cyberark"
+    "title": "Integration with Citrix NetScaler",
+    "permalink": "/docs/integration-with-citrix-netscaler"
   }
 }

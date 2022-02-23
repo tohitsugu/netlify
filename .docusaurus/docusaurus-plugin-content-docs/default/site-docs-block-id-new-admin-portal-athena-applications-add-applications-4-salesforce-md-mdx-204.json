@@ -1,13 +1,12 @@
 {
   "unversionedId": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Zd8371067-2e6a-4730-9ef7-289dcab8c344",
   "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Zd8371067-2e6a-4730-9ef7-289dcab8c344",
-  "isDocsHomePage": false,
   "title": "Salesforce",
   "description": "Overview",
   "source": "@site/docs/BlockID New Admin Portal (Athena)/Applications/Add Applications/4_salesforce.md.mdx",
   "sourceDirName": "BlockID New Admin Portal (Athena)/Applications/Add Applications",
   "slug": "/salesforce",
-  "permalink": "/devportal/docs/salesforce",
+  "permalink": "/docs/salesforce",
   "tags": [],
   "version": "current",
   "sidebarPosition": 4,
@@ -18,10 +17,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Auth0",
-    "permalink": "/devportal/docs/auth0"
+    "permalink": "/docs/auth0"
   },
   "next": {
     "title": "G Suite",
-    "permalink": "/devportal/docs/gsuite"
+    "permalink": "/docs/gsuite"
   }
 }

@@ -227,28 +227,18 @@ BlockIDSDK.getInstance().registerTenant(BidTenant,BIDTenantRegistryCallback);
     <tr>
     <td>status</td>
       <td>
-         Boolean value: True / False
-        <ul>
-          <li>True - on success</li>
-          <li>False - on failure</li>
-          </ul>          
+         Boolean value
       </td>
    </tr>
     <tr>
     <td>error</td>
       <td>
-      NSObject of ErrorResponse: The above object consists of two parameters
+      An object of ErrorResponse containing:
         <ul>
-          <li>Code type of integer</li>
-          <li>The message type of string</li>
+          <li>code: integer</li>
+          <li>message: string</li>
           </ul>
       </td>
-   </tr>
-   <tr>
-    <td>tenant</td>
-      <td>
-      Type of BIDTenant
-   </td>
    </tr>
   </tbody>
 </table>

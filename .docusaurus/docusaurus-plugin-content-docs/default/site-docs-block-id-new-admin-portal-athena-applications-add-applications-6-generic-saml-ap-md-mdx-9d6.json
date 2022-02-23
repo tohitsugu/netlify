@@ -1,13 +1,12 @@
 {
   "unversionedId": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Ze12c6643-599c-41b6-b85d-1bcdb6691b0f",
   "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Ze12c6643-599c-41b6-b85d-1bcdb6691b0f",
-  "isDocsHomePage": false,
   "title": "Generic SAML Application",
   "description": "Overview",
   "source": "@site/docs/BlockID New Admin Portal (Athena)/Applications/Add Applications/6_generic-saml-ap.md.mdx",
   "sourceDirName": "BlockID New Admin Portal (Athena)/Applications/Add Applications",
   "slug": "/generic-saml-application",
-  "permalink": "/devportal/docs/generic-saml-application",
+  "permalink": "/docs/generic-saml-application",
   "tags": [],
   "version": "current",
   "sidebarPosition": 6,
@@ -18,10 +17,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "G Suite",
-    "permalink": "/devportal/docs/gsuite"
+    "permalink": "/docs/gsuite"
   },
   "next": {
     "title": "Office365 Integration",
-    "permalink": "/devportal/docs/office365-integration"
+    "permalink": "/docs/office365-integration"
   }
 }

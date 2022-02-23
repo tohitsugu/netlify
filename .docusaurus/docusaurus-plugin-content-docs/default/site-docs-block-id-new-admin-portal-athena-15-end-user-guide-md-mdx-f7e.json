@@ -1,13 +1,12 @@
 {
   "unversionedId": "BlockID New Admin Portal (Athena)/Ze5776a5b-8b2e-498a-9438-c665d9291260",
   "id": "BlockID New Admin Portal (Athena)/Ze5776a5b-8b2e-498a-9438-c665d9291260",
-  "isDocsHomePage": false,
   "title": "End User Guide",
   "description": "Overview",
   "source": "@site/docs/BlockID New Admin Portal (Athena)/15_end-user-guide.md.mdx",
   "sourceDirName": "BlockID New Admin Portal (Athena)",
   "slug": "/end-user-guide",
-  "permalink": "/devportal/docs/end-user-guide",
+  "permalink": "/docs/end-user-guide",
   "tags": [],
   "version": "current",
   "sidebarPosition": 15,
@@ -18,10 +17,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Customizing the Branding of your BlockID Login Page",
-    "permalink": "/devportal/docs/customizing-the-branding-of-your-blockid-login-page"
+    "permalink": "/docs/customizing-the-branding-of-your-blockid-login-page"
   },
   "next": {
     "title": "WebAuthn",
-    "permalink": "/devportal/docs/webauthn"
+    "permalink": "/docs/webauthn"
   }
 }

@@ -1,0 +1,26 @@
+{
+  "unversionedId": "Developers Docs/Integration Guides/BlockID Workforce/Zbdaddfbc-c6b9-4fc2-bd42-35c3c77b0956",
+  "id": "Developers Docs/Integration Guides/BlockID Workforce/Zbdaddfbc-c6b9-4fc2-bd42-35c3c77b0956",
+  "title": "iOS",
+  "description": "This document describes the procedure to configure the BlockID Workforce iOS SDK into your organization's application. This integration will allow your users to use the features provided within the iOS SDK of the BlockID Workforce mobile application. The features include enrollment of the user’s LiveID (captures the live (real-time) facial images) details, Fingerprint, and PIN, etc.",
+  "source": "@site/docs/Developers Docs/Integration Guides/BlockID Workforce/4_ios-2.md.mdx",
+  "sourceDirName": "Developers Docs/Integration Guides/BlockID Workforce",
+  "slug": "/v1/ios-2",
+  "permalink": "/docs/v1/ios-2",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "slug": "/v1/ios-2",
+    "id": "Zbdaddfbc-c6b9-4fc2-bd42-35c3c77b0956"
+  },
+  "sidebar": "mySidebar",
+  "previous": {
+    "title": "Android",
+    "permalink": "/docs/v1/android-2"
+  },
+  "next": {
+    "title": "BlockID Android SDK 1.4.1 and 1.4.2",
+    "permalink": "/docs/blockid-android-sdk-141and142"
+  }
+}

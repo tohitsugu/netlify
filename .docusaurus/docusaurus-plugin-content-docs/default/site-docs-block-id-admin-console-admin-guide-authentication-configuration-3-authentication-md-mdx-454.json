@@ -1,13 +1,12 @@
 {
   "unversionedId": "BlockID Admin Console/Admin Guide/Authentication Configuration/Z73440ef0-77e6-4977-8eab-98c41255b244",
   "id": "BlockID Admin Console/Admin Guide/Authentication Configuration/Z73440ef0-77e6-4977-8eab-98c41255b244",
-  "isDocsHomePage": false,
   "title": "Authentication Scheme",
   "description": "Authentication schemes are a series of building blocks for authentication. Each block represents a different mechanism for authenticating and enables multi-factor authentication (MFA).",
   "source": "@site/docs/BlockID Admin Console/Admin Guide/Authentication Configuration/3_authentication-.md.mdx",
   "sourceDirName": "BlockID Admin Console/Admin Guide/Authentication Configuration",
   "slug": "/authentication-scheme",
-  "permalink": "/devportal/docs/authentication-scheme",
+  "permalink": "/docs/authentication-scheme",
   "tags": [],
   "version": "current",
   "sidebarPosition": 3,
@@ -18,10 +17,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "Authentication Modules",
-    "permalink": "/devportal/docs/authentication-modules"
+    "permalink": "/docs/authentication-modules"
   },
   "next": {
     "title": "Software and Hardware OTP Support",
-    "permalink": "/devportal/docs/software-and-hardware-otp-support"
+    "permalink": "/docs/software-and-hardware-otp-support"
   }
 }

@@ -1,13 +1,12 @@
 {
   "unversionedId": "BlockID New Admin Portal (Athena)/Directory Integrations/Z422742d5-e5f4-4563-8b5b-75fe651251fc",
   "id": "BlockID New Admin Portal (Athena)/Directory Integrations/Z422742d5-e5f4-4563-8b5b-75fe651251fc",
-  "isDocsHomePage": false,
   "title": "Broker Installation",
   "description": "Overview",
   "source": "@site/docs/BlockID New Admin Portal (Athena)/Directory Integrations/2_broker-installa.md.mdx",
   "sourceDirName": "BlockID New Admin Portal (Athena)/Directory Integrations",
   "slug": "/broker-installation",
-  "permalink": "/devportal/docs/broker-installation",
+  "permalink": "/docs/broker-installation",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -18,10 +17,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "WebAuthn",
-    "permalink": "/devportal/docs/webauthn"
+    "permalink": "/docs/webauthn"
   },
   "next": {
     "title": "Release Notes 2021.11.03",
-    "permalink": "/devportal/docs/v1/release-notes-20211103"
+    "permalink": "/docs/v1/release-notes-20211103"
   }
 }

@@ -1,13 +1,12 @@
 {
   "unversionedId": "Developer's Docs/Integration Guides/BlockID Workforce/Z84b846a1-7451-45fd-90e0-40f33d176310",
   "id": "Developer's Docs/Integration Guides/BlockID Workforce/Z84b846a1-7451-45fd-90e0-40f33d176310",
-  "isDocsHomePage": false,
   "title": "Android",
   "description": "This document describes the procedure to configure the BlockID Workforce Android SDK into your organization's application. This integration will allow your users to use the features provided within the Android SDK of the BlockID Workforce mobile application. The features include enrollment of the user’s LiveID (captures the live (real-time) facial images) details, VoiceID, Fingerprint, and PIN, etc.",
   "source": "@site/docs/Developer's Docs/Integration Guides/BlockID Workforce/4_android-2.md.mdx",
   "sourceDirName": "Developer's Docs/Integration Guides/BlockID Workforce",
   "slug": "/v1/android-2",
-  "permalink": "/devportal/docs/v1/android-2",
+  "permalink": "/docs/v1/android-2",
   "tags": [],
   "version": "current",
   "sidebarPosition": 4,
@@ -18,10 +17,10 @@
   "sidebar": "mySidebar",
   "previous": {
     "title": "iOS",
-    "permalink": "/devportal/docs/v1/ios"
+    "permalink": "/docs/v1/ios"
   },
   "next": {
     "title": "iOS",
-    "permalink": "/devportal/docs/v1/ios-2"
+    "permalink": "/docs/v1/ios-2"
   }
 }

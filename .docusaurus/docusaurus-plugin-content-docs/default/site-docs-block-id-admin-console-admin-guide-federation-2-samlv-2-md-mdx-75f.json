@@ -1,13 +1,12 @@
 {
   "unversionedId": "BlockID Admin Console/Admin Guide/Federation/samlv2",
   "id": "BlockID Admin Console/Admin Guide/Federation/samlv2",
-  "isDocsHomePage": false,
   "title": "SAML Configurations",
   "description": "Overview",
   "source": "@site/docs/BlockID Admin Console/Admin Guide/Federation/2_samlv2.md.mdx",
   "sourceDirName": "BlockID Admin Console/Admin Guide/Federation",
   "slug": "/samlv2",
-  "permalink": "/devportal/docs/samlv2",
+  "permalink": "/docs/samlv2",
   "tags": [],
   "version": "current",
   "sidebarPosition": 2,
@@ -17,11 +16,11 @@
   },
   "sidebar": "mySidebar",
   "previous": {
-    "title": "Policy Management",
-    "permalink": "/devportal/docs/saml-configuration"
+    "title": "Radius Configuration",
+    "permalink": "/docs/radius-configuration"
   },
   "next": {
-    "title": "Installing BlockID Credential Provider",
-    "permalink": "/devportal/docs/installing-blockid-credential-provider"
+    "title": "User Management",
+    "permalink": "/docs/user-management"
   }
 }

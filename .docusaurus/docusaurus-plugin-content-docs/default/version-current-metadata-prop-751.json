@@ -9,143 +9,40 @@
   "docsSidebars": {
     "mySidebar": [
       {
-        "type": "link",
-        "label": "BlockID Developer SDK",
-        "href": "/devportal/docs/"
-      },
-      {
         "type": "category",
-        "label": "BlockID Developer API",
+        "label": "BlockID IDVerify",
         "collapsible": true,
         "collapsed": true,
         "items": [
           {
             "type": "link",
-            "label": "BlockID Developer API",
-            "href": "/devportal/docs/api"
-          },
-          {
-            "type": "category",
-            "label": "One-Time Passcodes (OTP)",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "One-Time Passcodes",
-                "href": "/devportal/docs/api/otp"
-              }
-            ]
+            "label": "Verification Concepts",
+            "href": "/docs/idverify/verification-concepts",
+            "docId": "BlockID IDVerify/id1"
           },
           {
             "type": "link",
-            "label": "BlockID Identity Verification",
-            "href": "/devportal/docs/api/idverify"
-          },
-          {
-            "type": "category",
-            "label": "ECDSA Encryption",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "ECDSA Encryption",
-                "href": "/devportal/docs/api/ecdsa"
-              },
-              {
-                "type": "link",
-                "label": "User Private and Public Keys",
-                "href": "/devportal/docs/api/ecdsa/keys"
-              },
-              {
-                "type": "link",
-                "label": "Shared Key",
-                "href": "/devportal/docs/ecdsa/shared-key"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "type": "category",
-        "label": "BlockID One-Time Passcodes (OTP)",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "type": "link",
-            "label": "Requesting a One-Time Passcode",
-            "href": "/devportal/docs/otp/request"
+            "label": "Social Security Number Verification",
+            "href": "/docs/idverify/ssn",
+            "docId": "BlockID IDVerify/id2"
           },
           {
             "type": "link",
-            "label": "OTP Authentication",
-            "href": "/devportal/docs/otp"
+            "label": "Driver's License Verification",
+            "href": "/docs/idverify/dl",
+            "docId": "BlockID IDVerify/id3"
           },
           {
             "type": "link",
-            "label": "Verifying One-Time Passcodes",
-            "href": "/devportal/docs/otp/verify"
-          }
-        ]
-      },
-      {
-        "type": "category",
-        "label": "BlockID Universal Web Login (UWL)",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "type": "link",
-            "label": "Universal Web Login",
-            "href": "/devportal/docs/uwl"
-          }
-        ]
-      },
-      {
-        "type": "category",
-        "label": "BlockID Authentication Broker",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "type": "link",
-            "label": "Installing BlockID Authentication Broker",
-            "href": "/devportal/docs/installing-blockid-authentication-broker"
+            "label": "Face Compare Verification",
+            "href": "/docs/idverify/face-compare",
+            "docId": "BlockID IDVerify/id4"
           },
           {
             "type": "link",
-            "label": "BlockID Authentication Broker - User Guide",
-            "href": "/devportal/docs/blockid-authentication-broker-user-guide"
-          },
-          {
-            "type": "link",
-            "label": "Upgrading BlockID Authentication Broker",
-            "href": "/devportal/docs/upgrading-blockid-authentication-broker"
-          }
-        ]
-      },
-      {
-        "type": "category",
-        "label": "BlockID FAQ",
-        "collapsible": true,
-        "collapsed": true,
-        "items": [
-          {
-            "type": "link",
-            "label": "Frequently Asked Questions (FAQs)",
-            "href": "/devportal/docs/frequently-asked-questions-faq"
-          },
-          {
-            "type": "link",
-            "label": "FAQ's related to the BlockID Product Suite",
-            "href": "/devportal/docs/faqs-related-to-the-blockid-product-suite"
-          },
-          {
-            "type": "link",
-            "label": "Internal FAQ guide for BlockID Product Suite",
-            "href": "/devportal/docs/internal-faq-guide-for-blockid-product-suite"
+            "label": "Face Liveness Verification",
+            "href": "/docs/idverify/face-liveness",
+            "docId": "BlockID IDVerify/id5"
           }
         ]
       },
@@ -157,13 +54,9 @@
         "items": [
           {
             "type": "link",
-            "label": "Installing BlockID Admin Console",
-            "href": "/devportal/docs/installing-blockid-admin-console"
-          },
-          {
-            "type": "link",
             "label": "User Onboarding Process Guide",
-            "href": "/devportal/docs/user-onboarding-process-guide"
+            "href": "/docs/user-onboarding-process-guide",
+            "docId": "BlockID Admin Console/user-onboarding-process-guide"
           },
           {
             "type": "category",
@@ -174,80 +67,68 @@
               {
                 "type": "link",
                 "label": "Introduction to BlockID Admin Console",
-                "href": "/devportal/docs/introduction-to-blockid-admin-console"
+                "href": "/docs/introduction-to-blockid-admin-console",
+                "docId": "BlockID Admin Console/Admin Guide/introduction-to-blockid-admin-console"
               },
               {
                 "type": "link",
                 "label": "Administration Console",
-                "href": "/devportal/docs/administration-console"
+                "href": "/docs/administration-console",
+                "docId": "BlockID Admin Console/Admin Guide/administration-console"
               },
               {
                 "type": "link",
                 "label": "Analytics and Event Logging",
-                "href": "/devportal/docs/analytics"
+                "href": "/docs/analytics",
+                "docId": "BlockID Admin Console/Admin Guide/analytics"
               },
               {
                 "type": "link",
                 "label": "License Keys",
-                "href": "/devportal/docs/license-keys"
+                "href": "/docs/license-keys",
+                "docId": "BlockID Admin Console/Admin Guide/license-keys"
               },
               {
                 "type": "link",
                 "label": "White Label Templates",
-                "href": "/devportal/docs/white-label-templates"
+                "href": "/docs/white-label-templates",
+                "docId": "BlockID Admin Console/Admin Guide/white-label-templates"
               },
               {
                 "type": "link",
                 "label": "Tenant Management",
-                "href": "/devportal/docs/tenant-management"
+                "href": "/docs/tenant-management",
+                "docId": "BlockID Admin Console/Admin Guide/tenant-management"
               },
               {
                 "type": "link",
                 "label": "Deploying Smart Contract",
-                "href": "/devportal/docs/deploying-smart-contract"
+                "href": "/docs/deploying-smart-contract",
+                "docId": "BlockID Admin Console/Admin Guide/deploying-smart-contract"
               },
               {
                 "type": "link",
                 "label": "Community Management",
-                "href": "/devportal/docs/community-management"
+                "href": "/docs/community-management",
+                "docId": "BlockID Admin Console/Admin Guide/community-management"
               },
               {
                 "type": "link",
                 "label": "Profile Management",
-                "href": "/devportal/docs/profile"
+                "href": "/docs/profile",
+                "docId": "BlockID Admin Console/Admin Guide/profile"
               },
               {
                 "type": "link",
                 "label": "Core Configurations",
-                "href": "/devportal/docs/core-configurations"
+                "href": "/docs/core-configurations",
+                "docId": "BlockID Admin Console/Admin Guide/core-configurations"
               },
               {
                 "type": "link",
                 "label": "Glossary",
-                "href": "/devportal/docs/glossary"
-              },
-              {
-                "type": "category",
-                "label": "Enterprise Configuration",
-                "collapsible": true,
-                "collapsed": true,
-                "items": [
-                  {
-                    "type": "link",
-                    "label": "Datastore Configuration",
-                    "href": "/devportal/docs/datastore-configuration-1"
-                  },
-                  {
-                    "type": "link",
-                    "label": "SCEP Configuration",
-                    "href": "/devportal/docs/scep-configuration"
-                  },
-                  {
-                    "type": "link",
-                    "label": "Radius Configuration",
-                    "href": "/devportal/docs/radius-configuration"
-                  }
-                ]
+                "href": "/docs/glossary",
+                "docId": "BlockID Admin Console/Admin Guide/glossary"
               },
               {
                 "type": "category",
@@ -258,40 +139,46 @@
                   {
                     "type": "link",
                     "label": "Authentication Modules",
-                    "href": "/devportal/docs/authentication-modules"
+                    "href": "/docs/authentication-modules",
+                    "docId": "BlockID Admin Console/Admin Guide/Authentication Configuration/Zb59060b5-cc5e-48a5-8474-432054668177"
                   },
                   {
                     "type": "link",
                     "label": "Authentication Scheme",
-                    "href": "/devportal/docs/authentication-scheme"
+                    "href": "/docs/authentication-scheme",
+                    "docId": "BlockID Admin Console/Admin Guide/Authentication Configuration/Z73440ef0-77e6-4977-8eab-98c41255b244"
                   },
                   {
                     "type": "link",
                     "label": "Software and Hardware OTP Support",
-                    "href": "/devportal/docs/software-and-hardware-otp-support"
+                    "href": "/docs/software-and-hardware-otp-support",
+                    "docId": "BlockID Admin Console/Admin Guide/Authentication Configuration/Za142b8e4-90fd-4362-a0c0-1501a23cb26b"
                   }
                 ]
               },
               {
                 "type": "category",
-                "label": "Identity Management",
+                "label": "Enterprise Configuration",
                 "collapsible": true,
                 "collapsed": true,
                 "items": [
                   {
                     "type": "link",
-                    "label": "User Management",
-                    "href": "/devportal/docs/user-management"
+                    "label": "Datastore Configuration",
+                    "href": "/docs/datastore-configuration-1",
+                    "docId": "BlockID Admin Console/Admin Guide/Enterprise Configuration/datastore-configuration-1"
                   },
                   {
                     "type": "link",
-                    "label": "Role Management",
-                    "href": "/devportal/docs/role-management"
+                    "label": "SCEP Configuration",
+                    "href": "/docs/scep-configuration",
+                    "docId": "BlockID Admin Console/Admin Guide/Enterprise Configuration/scep-configuration"
                   },
                   {
                     "type": "link",
-                    "label": "Policy Management",
-                    "href": "/devportal/docs/saml-configuration"
+                    "label": "Radius Configuration",
+                    "href": "/docs/radius-configuration",
+                    "docId": "BlockID Admin Console/Admin Guide/Enterprise Configuration/radius-configuration"
                   }
                 ]
               },
@@ -304,11 +191,64 @@
                   {
                     "type": "link",
                     "label": "SAML Configurations",
-                    "href": "/devportal/docs/samlv2"
+                    "href": "/docs/samlv2",
+                    "docId": "BlockID Admin Console/Admin Guide/Federation/samlv2"
+                  }
+                ]
+              },
+              {
+                "type": "category",
+                "label": "Identity Management",
+                "collapsible": true,
+                "collapsed": true,
+                "items": [
+                  {
+                    "type": "link",
+                    "label": "User Management",
+                    "href": "/docs/user-management",
+                    "docId": "BlockID Admin Console/Admin Guide/Identity Management/Z0e74df61-4182-40d7-b7f2-a1a670207b0a"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Role Management",
+                    "href": "/docs/role-management",
+                    "docId": "BlockID Admin Console/Admin Guide/Identity Management/Z625d6a5a-5b85-4db1-9a2f-d03d88f7a7f5"
+                  },
+                  {
+                    "type": "link",
+                    "label": "Policy Management",
+                    "href": "/docs/saml-configuration",
+                    "docId": "BlockID Admin Console/Admin Guide/Identity Management/Z58afb044-8b28-4ffe-b763-85ae2af99494"
                   }
                 ]
               }
             ]
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "BlockID Authentication Broker",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "Installing BlockID Authentication Broker",
+            "href": "/docs/installing-blockid-authentication-broker",
+            "docId": "BlockID Authentication Broker/Zdae9610f-aaf7-4309-82e7-14a40f70d02a"
+          },
+          {
+            "type": "link",
+            "label": "BlockID Authentication Broker - User Guide",
+            "href": "/docs/blockid-authentication-broker-user-guide",
+            "docId": "BlockID Authentication Broker/Zd1256c41-99d9-4b0a-8a6c-48d13a499fa8"
+          },
+          {
+            "type": "link",
+            "label": "Upgrading BlockID Authentication Broker",
+            "href": "/docs/upgrading-blockid-authentication-broker",
+            "docId": "BlockID Authentication Broker/Z3ecf8e77-a029-4bfe-96d4-999e92d1484a"
           }
         ]
       },
@@ -321,20 +261,34 @@
           {
             "type": "link",
             "label": "Installing BlockID Credential Provider",
-            "href": "/devportal/docs/installing-blockid-credential-provider"
+            "href": "/docs/installing-blockid-credential-provider",
+            "docId": "BlockID Credential Provider/Zbce27641-b3b3-4c34-8c3e-b5a39c6164f7"
           }
         ]
       },
       {
         "type": "category",
-        "label": "BlockID Mobile Application",
+        "label": "BlockID FAQ",
         "collapsible": true,
         "collapsed": true,
         "items": [
           {
             "type": "link",
-            "label": "BlockID Mobile Application User Guide",
-            "href": "/devportal/docs/blockid-mobile-application-user-guide"
+            "label": "Frequently Asked Questions (FAQs)",
+            "href": "/docs/frequently-asked-questions-faq",
+            "docId": "BlockID FAQ/Za49f1bb3-aba5-47e6-9a66-1248143e8c67"
+          },
+          {
+            "type": "link",
+            "label": "FAQ's related to the BlockID Product Suite",
+            "href": "/docs/faqs-related-to-the-blockid-product-suite",
+            "docId": "BlockID FAQ/Zef1df47a-d435-421b-a375-61157ac1420f"
+          },
+          {
+            "type": "link",
+            "label": "Internal FAQ guide for BlockID Product Suite",
+            "href": "/docs/internal-faq-guide-for-blockid-product-suite",
+            "docId": "BlockID FAQ/Zb0eccd8d-dfdc-48d7-bf4a-2444bd2c7822"
           }
         ]
       },
@@ -347,37 +301,44 @@
           {
             "type": "link",
             "label": "Introduction to Athena Admin Portal",
-            "href": "/devportal/docs/introduction-to-athena-admin-portal"
+            "href": "/docs/introduction-to-athena-admin-portal",
+            "docId": "BlockID New Admin Portal (Athena)/Z2cd6493e-3d85-4c46-91d5-0b93e239b73c"
           },
           {
             "type": "link",
             "label": "Login",
-            "href": "/devportal/docs/login-with-mfa"
+            "href": "/docs/login-with-mfa",
+            "docId": "BlockID New Admin Portal (Athena)/Z3a4d60f8-4984-4f20-9d87-7d6f0800ed40"
           },
           {
             "type": "link",
             "label": "Create Native User",
-            "href": "/devportal/docs/create-native-user"
+            "href": "/docs/create-native-user",
+            "docId": "BlockID New Admin Portal (Athena)/Zb17b8cd6-f8b7-41c5-a294-400c23d8540d"
           },
           {
             "type": "link",
             "label": "Directory",
-            "href": "/devportal/docs/directory"
+            "href": "/docs/directory",
+            "docId": "BlockID New Admin Portal (Athena)/Z1d78dd72-0421-42cb-96da-4cb2a59eb0f8"
           },
           {
             "type": "link",
             "label": "Customizing the Branding of your BlockID Login Page",
-            "href": "/devportal/docs/customizing-the-branding-of-your-blockid-login-page"
+            "href": "/docs/customizing-the-branding-of-your-blockid-login-page",
+            "docId": "BlockID New Admin Portal (Athena)/Z9725f068-c919-4fc9-a454-053fa9382a2f"
           },
           {
             "type": "link",
             "label": "End User Guide",
-            "href": "/devportal/docs/end-user-guide"
+            "href": "/docs/end-user-guide",
+            "docId": "BlockID New Admin Portal (Athena)/Ze5776a5b-8b2e-498a-9438-c665d9291260"
           },
           {
             "type": "link",
             "label": "WebAuthn",
-            "href": "/devportal/docs/webauthn"
+            "href": "/docs/webauthn",
+            "docId": "BlockID New Admin Portal (Athena)/Ze3a67a1a-0728-4ed6-b42b-d040c4a89d6e"
           },
           {
             "type": "category",
@@ -388,7 +349,8 @@
               {
                 "type": "link",
                 "label": "Broker Installation",
-                "href": "/devportal/docs/broker-installation"
+                "href": "/docs/broker-installation",
+                "docId": "BlockID New Admin Portal (Athena)/Directory Integrations/Z422742d5-e5f4-4563-8b5b-75fe651251fc"
               }
             ]
           },
@@ -401,7 +363,8 @@
               {
                 "type": "link",
                 "label": "Release Notes 2021.11.03",
-                "href": "/devportal/docs/v1/release-notes-20211103"
+                "href": "/docs/v1/release-notes-20211103",
+                "docId": "BlockID New Admin Portal (Athena)/Release Notes/Z7575ff9b-19c0-408e-bf74-0080f94cb7b2"
               }
             ]
           },
@@ -414,7 +377,8 @@
               {
                 "type": "link",
                 "label": "BlockID Attributes",
-                "href": "/devportal/docs/blockid-attributes"
+                "href": "/docs/blockid-attributes",
+                "docId": "BlockID New Admin Portal (Athena)/Settings/Zc1f22108-c5aa-4b1c-b3d5-c2cf705d1fbb"
               }
             ]
           },
@@ -433,32 +397,38 @@
                   {
                     "type": "link",
                     "label": "Okta",
-                    "href": "/devportal/docs/okta"
+                    "href": "/docs/okta",
+                    "docId": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z869ef4f5-309a-4480-a715-6c7a4148d3f9"
                   },
                   {
                     "type": "link",
                     "label": "Auth0",
-                    "href": "/devportal/docs/auth0"
+                    "href": "/docs/auth0",
+                    "docId": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z6afecf9d-3c6f-418b-9aab-c0c99d48009b"
                   },
                   {
                     "type": "link",
                     "label": "Salesforce",
-                    "href": "/devportal/docs/salesforce"
+                    "href": "/docs/salesforce",
+                    "docId": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Zd8371067-2e6a-4730-9ef7-289dcab8c344"
                   },
                   {
                     "type": "link",
                     "label": "G Suite",
-                    "href": "/devportal/docs/gsuite"
+                    "href": "/docs/gsuite",
+                    "docId": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z707bbbf3-7895-45bd-8b00-c4c64f09641b"
                   },
                   {
                     "type": "link",
                     "label": "Generic SAML Application",
-                    "href": "/devportal/docs/generic-saml-application"
+                    "href": "/docs/generic-saml-application",
+                    "docId": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Ze12c6643-599c-41b6-b85d-1bcdb6691b0f"
                   },
                   {
                     "type": "link",
                     "label": "Office365 Integration",
-                    "href": "/devportal/docs/office365-integration"
+                    "href": "/docs/office365-integration",
+                    "docId": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z1b65946e-a6e7-45a8-8c9b-04d81aa9a32e"
                   }
                 ]
               }
@@ -468,19 +438,35 @@
       },
       {
         "type": "category",
-        "label": "Developer's Docs",
+        "label": "BlockID Mobile Application",
+        "collapsible": true,
+        "collapsed": true,
+        "items": [
+          {
+            "type": "link",
+            "label": "BlockID Mobile Application User Guide",
+            "href": "/docs/blockid-mobile-application-user-guide",
+            "docId": "BlockID Mobile Application/Zcf2a3abc-5b16-4aa5-9281-4023959f8301"
+          }
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Developers Docs",
         "collapsible": true,
         "collapsed": true,
         "items": [
           {
             "type": "link",
             "label": "Getting Started",
-            "href": "/devportal/docs/getting-started"
+            "href": "/docs/getting-started",
+            "docId": "Developers Docs/getting-started"
           },
           {
             "type": "link",
             "label": "Universal Web Login (UWL) Guide",
-            "href": "/devportal/docs/univeral-web-login-guide"
+            "href": "/docs/univeral-web-login-guide",
+            "docId": "Developers Docs/univeral-web-login-guide"
           },
           {
             "type": "category",
@@ -491,7 +477,8 @@
               {
                 "type": "link",
                 "label": "BlockID Admin Console",
-                "href": "/devportal/docs/blockid-admin-console-api"
+                "href": "/docs/blockid-admin-console-api",
+                "docId": "Developers Docs/API References/blockid-admin-console-api"
               }
             ]
           },
@@ -510,12 +497,14 @@
                   {
                     "type": "link",
                     "label": "Android",
-                    "href": "/devportal/docs/v1/android"
+                    "href": "/docs/v1/android",
+                    "docId": "Developers Docs/Integration Guides/BlockID Customer/Zb472749f-bb61-44eb-8fac-031da891f016"
                   },
                   {
                     "type": "link",
                     "label": "iOS",
-                    "href": "/devportal/docs/v1/ios"
+                    "href": "/docs/v1/ios",
+                    "docId": "Developers Docs/Integration Guides/BlockID Customer/Zbb76e7b9-89ce-4d65-a64b-29ec220cf034"
                   }
                 ]
               },
@@ -528,12 +517,14 @@
                   {
                     "type": "link",
                     "label": "Android",
-                    "href": "/devportal/docs/v1/android-2"
+                    "href": "/docs/v1/android-2",
+                    "docId": "Developers Docs/Integration Guides/BlockID Workforce/Z84b846a1-7451-45fd-90e0-40f33d176310"
                   },
                   {
                     "type": "link",
                     "label": "iOS",
-                    "href": "/devportal/docs/v1/ios-2"
+                    "href": "/docs/v1/ios-2",
+                    "docId": "Developers Docs/Integration Guides/BlockID Workforce/Zbdaddfbc-c6b9-4fc2-bd42-35c3c77b0956"
                   }
                 ]
               }
@@ -553,29 +544,6 @@
                 "items": [
                   {
                     "type": "category",
-                    "label": "iOS",
-                    "collapsible": true,
-                    "collapsed": true,
-                    "items": [
-                      {
-                        "type": "link",
-                        "label": "BlockID iOS SDK 1.4.1 and 1.4.2",
-                        "href": "/devportal/docs/blockid-ios-sdk-141and142"
-                      },
-                      {
-                        "type": "link",
-                        "label": "BlockID iOS SDK 1.1.0",
-                        "href": "/devportal/docs/ios-110"
-                      },
-                      {
-                        "type": "link",
-                        "label": "BlockID iOS SDK 1.0.0",
-                        "href": "/devportal/docs/ios-100"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "category",
                     "label": "Android",
                     "collapsible": true,
                     "collapsed": true,
@@ -583,17 +551,46 @@
                       {
                         "type": "link",
                         "label": "BlockID Android SDK 1.4.1 and 1.4.2",
-                        "href": "/devportal/docs/blockid-android-sdk-141and142"
+                        "href": "/docs/blockid-android-sdk-141and142",
+                        "docId": "Developers Docs/BlockID Mobile Application/SDK Integrations/Android/blockid-android-sdk-141and142"
                       },
                       {
                         "type": "link",
                         "label": "BlockID Android SDK 1.1.0",
-                        "href": "/devportal/docs/android-110"
+                        "href": "/docs/android-110",
+                        "docId": "Developers Docs/BlockID Mobile Application/SDK Integrations/Android/android-110"
                       },
                       {
                         "type": "link",
                         "label": "BlockID Android SDK 1.0.0",
-                        "href": "/devportal/docs/android-100"
+                        "href": "/docs/android-100",
+                        "docId": "Developers Docs/BlockID Mobile Application/SDK Integrations/Android/android-100"
+                      }
+                    ]
+                  },
+                  {
+                    "type": "category",
+                    "label": "iOS",
+                    "collapsible": true,
+                    "collapsed": true,
+                    "items": [
+                      {
+                        "type": "link",
+                        "label": "BlockID iOS SDK 1.4.1 and 1.4.2",
+                        "href": "/docs/blockid-ios-sdk-141and142",
+                        "docId": "Developers Docs/BlockID Mobile Application/SDK Integrations/iOS/blockid-ios-sdk-141and142"
+                      },
+                      {
+                        "type": "link",
+                        "label": "BlockID iOS SDK 1.1.0",
+                        "href": "/docs/ios-110",
+                        "docId": "Developers Docs/BlockID Mobile Application/SDK Integrations/iOS/ios-110"
+                      },
+                      {
+                        "type": "link",
+                        "label": "BlockID iOS SDK 1.0.0",
+                        "href": "/docs/ios-100",
+                        "docId": "Developers Docs/BlockID Mobile Application/SDK Integrations/iOS/ios-100"
                       }
                     ]
                   }
@@ -612,22 +609,26 @@
           {
             "type": "link",
             "label": "BlockID Release Notes",
-            "href": "/devportal/docs/blockid-release-notes"
+            "href": "/docs/blockid-release-notes",
+            "docId": "Release Notes/Z158204c7-a371-44d5-bf91-23aa80e7fff4"
           },
           {
             "type": "link",
             "label": "Release Notes v3",
-            "href": "/devportal/docs/release-notes-v3"
+            "href": "/docs/release-notes-v3",
+            "docId": "Release Notes/Zd4c725d7-840f-4e0e-a801-c775c6e281a8"
           },
           {
             "type": "link",
             "label": "Release Notes R1.02.00",
-            "href": "/devportal/docs/release-notes-r102"
+            "href": "/docs/release-notes-r102",
+            "docId": "Release Notes/Z0f10a839-2257-4d53-a191-00722c59df7e"
           },
           {
             "type": "link",
             "label": "Release Notes R1.02.03",
-            "href": "/devportal/docs/release-notes-r10300"
+            "href": "/docs/release-notes-r10300",
+            "docId": "Release Notes/Z89a4e212-0c52-480e-8072-3d62e7106a82"
           }
         ]
       },
@@ -639,59 +640,6 @@
         "items": [
           {
             "type": "category",
-            "label": "Identity Providers",
-            "collapsible": true,
-            "collapsed": true,
-            "items": [
-              {
-                "type": "link",
-                "label": "Intergration with Okta",
-                "href": "/devportal/docs/intergration-with-okta"
-              },
-              {
-                "type": "link",
-                "label": "Integration with Salesforce",
-                "href": "/devportal/docs/integration-with-salesforce"
-              },
-              {
-                "type": "link",
-                "label": "Integration with Microsoft ADFS",
-                "href": "/devportal/docs/integration-with-adfs"
-              },
-              {
-                "type": "link",
-                "label": "Integration PingFederate",
-                "href": "/devportal/docs/integration-pingfederate"
-              },
-              {
-                "type": "link",
-                "label": "Integration with Windows",
-                "href": "/devportal/docs/integration-with-windows"
-              },
-              {
-                "type": "link",
-                "label": "Integration with G Suite",
-                "href": "/devportal/docs/integration-with-gsuite"
-              },
-              {
-                "type": "link",
-                "label": "Integration with Oracle IDCS (Identity Cloud Service)",
-                "href": "/devportal/docs/integration-with-oracle-idcs-identity-cloud-service"
-              },
-              {
-                "type": "link",
-                "label": "Integration with CyberArk Idaptive Identity",
-                "href": "/devportal/docs/integration-with-cyberark-idaptive-identity"
-              },
-              {
-                "type": "link",
-                "label": "Integration with ForgeRock",
-                "href": "/devportal/docs/integration-with-forgerock"
-              }
-            ]
-          },
-          {
-            "type": "category",
             "label": "PAM (Privilege Account Management)",
             "collapsible": true,
             "collapsed": true,
@@ -699,12 +647,76 @@
               {
                 "type": "link",
                 "label": "Integration with CyberArk",
-                "href": "/devportal/docs/integration-with-cyberark"
+                "href": "/docs/integration-with-cyberark",
+                "docId": "BlockID Integrations/PAM (Privilege Account Management)/Z660bdd75-9447-48fe-84e8-b26029d4f403"
               },
               {
                 "type": "link",
                 "label": "Integration with ARCON",
-                "href": "/devportal/docs/integration-with-arcon"
+                "href": "/docs/integration-with-arcon",
+                "docId": "BlockID Integrations/PAM (Privilege Account Management)/Z579bc6d1-e02a-48d4-9f27-78e9edb58aa0"
+              }
+            ]
+          },
+          {
+            "type": "category",
+            "label": "Identity Providers",
+            "collapsible": true,
+            "collapsed": true,
+            "items": [
+              {
+                "type": "link",
+                "label": "Intergration with Okta",
+                "href": "/docs/intergration-with-okta",
+                "docId": "BlockID Integrations/Identity Providers/Z0010fc32-8540-4be0-98fd-831958d61e23"
+              },
+              {
+                "type": "link",
+                "label": "Integration with Salesforce",
+                "href": "/docs/integration-with-salesforce",
+                "docId": "BlockID Integrations/Identity Providers/Z8c31c0dd-dd72-4b22-bee5-16a3cbedee0b"
+              },
+              {
+                "type": "link",
+                "label": "Integration with Microsoft ADFS",
+                "href": "/docs/integration-with-adfs",
+                "docId": "BlockID Integrations/Identity Providers/Z9f3ceb9a-2550-4d70-a0d3-d4432e92ecfd"
+              },
+              {
+                "type": "link",
+                "label": "Integration PingFederate",
+                "href": "/docs/integration-pingfederate",
+                "docId": "BlockID Integrations/Identity Providers/Zb71e5fd8-fb17-4e19-b274-eaa5ddff808e"
+              },
+              {
+                "type": "link",
+                "label": "Integration with Windows",
+                "href": "/docs/integration-with-windows",
+                "docId": "BlockID Integrations/Identity Providers/Z3556b698-4818-461b-8781-ed4911a8f856"
+              },
+              {
+                "type": "link",
+                "label": "Integration with G Suite",
+                "href": "/docs/integration-with-gsuite",
+                "docId": "BlockID Integrations/Identity Providers/Ze28be7cb-f7cc-45a6-8e44-8137ae7e9747"
+              },
+              {
+                "type": "link",
+                "label": "Integration with Oracle IDCS (Identity Cloud Service)",
+                "href": "/docs/integration-with-oracle-idcs-identity-cloud-service",
+                "docId": "BlockID Integrations/Identity Providers/Zefe715f0-3149-41a9-b7df-8f2f0f14bc05"
+              },
+              {
+                "type": "link",
+                "label": "Integration with CyberArk Idaptive Identity",
+                "href": "/docs/integration-with-cyberark-idaptive-identity",
+                "docId": "BlockID Integrations/Identity Providers/Z2ed41a6b-e482-44aa-98d0-f695b4b1d021"
+              },
+              {
+                "type": "link",
+                "label": "Integration with ForgeRock",
+                "href": "/docs/integration-with-forgerock",
+                "docId": "BlockID Integrations/Identity Providers/Z3ec44e40-4852-4fc4-884c-598943e2182d"
               }
             ]
           },
@@ -717,22 +729,519 @@
               {
                 "type": "link",
                 "label": "Integration with Citrix NetScaler",
-                "href": "/devportal/docs/integration-with-citrix-netscaler"
+                "href": "/docs/integration-with-citrix-netscaler",
+                "docId": "BlockID Integrations/Remote Access/Z0eb76a07-d6bc-4163-884e-002f180996d3"
               },
               {
                 "type": "link",
                 "label": "Integration with Zscaler",
-                "href": "/devportal/docs/integration-with-zscaler"
+                "href": "/docs/integration-with-zscaler",
+                "docId": "BlockID Integrations/Remote Access/Ze62c960c-81e8-46b4-8f42-744e6c09e5e2"
               },
               {
                 "type": "link",
                 "label": "Integration with CISCO Check Point",
-                "href": "/devportal/docs/integration-with-cisco-check-point"
+                "href": "/docs/integration-with-cisco-check-point",
+                "docId": "BlockID Integrations/Remote Access/Zcc4b90f6-9a8e-413c-a39c-24f028a44f76"
               }
             ]
           }
         ]
       }
     ]
+  },
+  "docs": {
+    "BlockID Admin Console/Admin Guide/administration-console": {
+      "id": "BlockID Admin Console/Admin Guide/administration-console",
+      "title": "Administration Console",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/Admin Guide/analytics": {
+      "id": "BlockID Admin Console/Admin Guide/analytics",
+      "title": "Analytics and Event Logging",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/Admin Guide/Authentication Configuration/Z73440ef0-77e6-4977-8eab-98c41255b244": {
+      "id": "BlockID Admin Console/Admin Guide/Authentication Configuration/Z73440ef0-77e6-4977-8eab-98c41255b244",
+      "title": "Authentication Scheme",
+      "description": "Authentication schemes are a series of building blocks for authentication. Each block represents a different mechanism for authenticating and enables multi-factor authentication (MFA).",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/Admin Guide/Authentication Configuration/Za142b8e4-90fd-4362-a0c0-1501a23cb26b": {
+      "id": "BlockID Admin Console/Admin Guide/Authentication Configuration/Za142b8e4-90fd-4362-a0c0-1501a23cb26b",
+      "title": "Software and Hardware OTP Support",
+      "description": "The One Time Passcode (OTP) authentication module implements two-factor identification (2FA) and multi-factor authentication (MFA) authentication to authenticate users when they are logging in to the BlockID Admin Console application. It provides a higher level of security than the traditional authentication method i.e. using username and password. The two-factor authentication method includes entering a username and password as a first factor and an OTP as a second factor.",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/Admin Guide/Authentication Configuration/Zb59060b5-cc5e-48a5-8474-432054668177": {
+      "id": "BlockID Admin Console/Admin Guide/Authentication Configuration/Zb59060b5-cc5e-48a5-8474-432054668177",
+      "title": "Authentication Modules",
+      "description": "The Authentication modules options are used to authenticate a user while logging in into the BlockID Admin Console application. There are three default authentication modules available during the installation process: Microsoft Active Directory, Lightweight Directory Services, and BlockID Connector. You can select one option out of Microsoft Active Directory (AD) and Lightweight Directory Services (LDAP) modules as per the datastore you own and both follow the same authentication process that is logging in by entering a username and password. The BlockID Connector module will enable you to perform authentication by allowing you to scan the QR code from your BlockID mobile application.",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/Admin Guide/community-management": {
+      "id": "BlockID Admin Console/Admin Guide/community-management",
+      "title": "Community Management",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/Admin Guide/core-configurations": {
+      "id": "BlockID Admin Console/Admin Guide/core-configurations",
+      "title": "Core Configurations",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/Admin Guide/deploying-smart-contract": {
+      "id": "BlockID Admin Console/Admin Guide/deploying-smart-contract",
+      "title": "Deploying Smart Contract",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/Admin Guide/Enterprise Configuration/datastore-configuration-1": {
+      "id": "BlockID Admin Console/Admin Guide/Enterprise Configuration/datastore-configuration-1",
+      "title": "Datastore Configuration",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/Admin Guide/Enterprise Configuration/radius-configuration": {
+      "id": "BlockID Admin Console/Admin Guide/Enterprise Configuration/radius-configuration",
+      "title": "Radius Configuration",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/Admin Guide/Enterprise Configuration/scep-configuration": {
+      "id": "BlockID Admin Console/Admin Guide/Enterprise Configuration/scep-configuration",
+      "title": "SCEP Configuration",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/Admin Guide/Federation/samlv2": {
+      "id": "BlockID Admin Console/Admin Guide/Federation/samlv2",
+      "title": "SAML Configurations",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/Admin Guide/glossary": {
+      "id": "BlockID Admin Console/Admin Guide/glossary",
+      "title": "Glossary",
+      "description": "C | D | I | L | S |",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/Admin Guide/Identity Management/Z0e74df61-4182-40d7-b7f2-a1a670207b0a": {
+      "id": "BlockID Admin Console/Admin Guide/Identity Management/Z0e74df61-4182-40d7-b7f2-a1a670207b0a",
+      "title": "User Management",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/Admin Guide/Identity Management/Z58afb044-8b28-4ffe-b763-85ae2af99494": {
+      "id": "BlockID Admin Console/Admin Guide/Identity Management/Z58afb044-8b28-4ffe-b763-85ae2af99494",
+      "title": "Policy Management",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/Admin Guide/Identity Management/Z625d6a5a-5b85-4db1-9a2f-d03d88f7a7f5": {
+      "id": "BlockID Admin Console/Admin Guide/Identity Management/Z625d6a5a-5b85-4db1-9a2f-d03d88f7a7f5",
+      "title": "Role Management",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/Admin Guide/introduction-to-blockid-admin-console": {
+      "id": "BlockID Admin Console/Admin Guide/introduction-to-blockid-admin-console",
+      "title": "Introduction to BlockID Admin Console",
+      "description": "Getting Started",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/Admin Guide/license-keys": {
+      "id": "BlockID Admin Console/Admin Guide/license-keys",
+      "title": "License Keys",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/Admin Guide/profile": {
+      "id": "BlockID Admin Console/Admin Guide/profile",
+      "title": "Profile Management",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/Admin Guide/tenant-management": {
+      "id": "BlockID Admin Console/Admin Guide/tenant-management",
+      "title": "Tenant Management",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/Admin Guide/white-label-templates": {
+      "id": "BlockID Admin Console/Admin Guide/white-label-templates",
+      "title": "White Label Templates",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Admin Console/user-onboarding-process-guide": {
+      "id": "BlockID Admin Console/user-onboarding-process-guide",
+      "title": "User Onboarding Process Guide",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Authentication Broker/Z3ecf8e77-a029-4bfe-96d4-999e92d1484a": {
+      "id": "BlockID Authentication Broker/Z3ecf8e77-a029-4bfe-96d4-999e92d1484a",
+      "title": "Upgrading BlockID Authentication Broker",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Authentication Broker/Zd1256c41-99d9-4b0a-8a6c-48d13a499fa8": {
+      "id": "BlockID Authentication Broker/Zd1256c41-99d9-4b0a-8a6c-48d13a499fa8",
+      "title": "BlockID Authentication Broker - User Guide",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Authentication Broker/Zdae9610f-aaf7-4309-82e7-14a40f70d02a": {
+      "id": "BlockID Authentication Broker/Zdae9610f-aaf7-4309-82e7-14a40f70d02a",
+      "title": "Installing BlockID Authentication Broker",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Credential Provider/Zbce27641-b3b3-4c34-8c3e-b5a39c6164f7": {
+      "id": "BlockID Credential Provider/Zbce27641-b3b3-4c34-8c3e-b5a39c6164f7",
+      "title": "Installing BlockID Credential Provider",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID FAQ/Za49f1bb3-aba5-47e6-9a66-1248143e8c67": {
+      "id": "BlockID FAQ/Za49f1bb3-aba5-47e6-9a66-1248143e8c67",
+      "title": "Frequently Asked Questions (FAQs)",
+      "description": "This page will answer questions with respect to the BlockID platform. If you have any questions that are not addressed in the sections below, please send us an email at",
+      "sidebar": "mySidebar"
+    },
+    "BlockID FAQ/Zb0eccd8d-dfdc-48d7-bf4a-2444bd2c7822": {
+      "id": "BlockID FAQ/Zb0eccd8d-dfdc-48d7-bf4a-2444bd2c7822",
+      "title": "Internal FAQ guide for BlockID Product Suite",
+      "description": "This is an internal FAQ guide that includes responses to:",
+      "sidebar": "mySidebar"
+    },
+    "BlockID FAQ/Zef1df47a-d435-421b-a375-61157ac1420f": {
+      "id": "BlockID FAQ/Zef1df47a-d435-421b-a375-61157ac1420f",
+      "title": "FAQ's related to the BlockID Product Suite",
+      "description": "* * *",
+      "sidebar": "mySidebar"
+    },
+    "BlockID IDVerify/id1": {
+      "id": "BlockID IDVerify/id1",
+      "title": "Verification Concepts",
+      "description": "<span",
+      "sidebar": "mySidebar"
+    },
+    "BlockID IDVerify/id2": {
+      "id": "BlockID IDVerify/id2",
+      "title": "Social Security Number Verification",
+      "description": "<span",
+      "sidebar": "mySidebar"
+    },
+    "BlockID IDVerify/id3": {
+      "id": "BlockID IDVerify/id3",
+      "title": "Driver's License Verification",
+      "description": "<span",
+      "sidebar": "mySidebar"
+    },
+    "BlockID IDVerify/id4": {
+      "id": "BlockID IDVerify/id4",
+      "title": "Face Compare Verification",
+      "description": "<span",
+      "sidebar": "mySidebar"
+    },
+    "BlockID IDVerify/id5": {
+      "id": "BlockID IDVerify/id5",
+      "title": "Face Liveness Verification",
+      "description": "<span",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Integrations/Identity Providers/Z0010fc32-8540-4be0-98fd-831958d61e23": {
+      "id": "BlockID Integrations/Identity Providers/Z0010fc32-8540-4be0-98fd-831958d61e23",
+      "title": "Intergration with Okta",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Integrations/Identity Providers/Z2ed41a6b-e482-44aa-98d0-f695b4b1d021": {
+      "id": "BlockID Integrations/Identity Providers/Z2ed41a6b-e482-44aa-98d0-f695b4b1d021",
+      "title": "Integration with CyberArk Idaptive Identity",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Integrations/Identity Providers/Z3556b698-4818-461b-8781-ed4911a8f856": {
+      "id": "BlockID Integrations/Identity Providers/Z3556b698-4818-461b-8781-ed4911a8f856",
+      "title": "Integration with Windows",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Integrations/Identity Providers/Z3ec44e40-4852-4fc4-884c-598943e2182d": {
+      "id": "BlockID Integrations/Identity Providers/Z3ec44e40-4852-4fc4-884c-598943e2182d",
+      "title": "Integration with ForgeRock",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Integrations/Identity Providers/Z8c31c0dd-dd72-4b22-bee5-16a3cbedee0b": {
+      "id": "BlockID Integrations/Identity Providers/Z8c31c0dd-dd72-4b22-bee5-16a3cbedee0b",
+      "title": "Integration with Salesforce",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Integrations/Identity Providers/Z9f3ceb9a-2550-4d70-a0d3-d4432e92ecfd": {
+      "id": "BlockID Integrations/Identity Providers/Z9f3ceb9a-2550-4d70-a0d3-d4432e92ecfd",
+      "title": "Integration with Microsoft ADFS",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Integrations/Identity Providers/Zb71e5fd8-fb17-4e19-b274-eaa5ddff808e": {
+      "id": "BlockID Integrations/Identity Providers/Zb71e5fd8-fb17-4e19-b274-eaa5ddff808e",
+      "title": "Integration PingFederate",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Integrations/Identity Providers/Ze28be7cb-f7cc-45a6-8e44-8137ae7e9747": {
+      "id": "BlockID Integrations/Identity Providers/Ze28be7cb-f7cc-45a6-8e44-8137ae7e9747",
+      "title": "Integration with G Suite",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Integrations/Identity Providers/Zefe715f0-3149-41a9-b7df-8f2f0f14bc05": {
+      "id": "BlockID Integrations/Identity Providers/Zefe715f0-3149-41a9-b7df-8f2f0f14bc05",
+      "title": "Integration with Oracle IDCS (Identity Cloud Service)",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Integrations/PAM (Privilege Account Management)/Z579bc6d1-e02a-48d4-9f27-78e9edb58aa0": {
+      "id": "BlockID Integrations/PAM (Privilege Account Management)/Z579bc6d1-e02a-48d4-9f27-78e9edb58aa0",
+      "title": "Integration with ARCON",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Integrations/PAM (Privilege Account Management)/Z660bdd75-9447-48fe-84e8-b26029d4f403": {
+      "id": "BlockID Integrations/PAM (Privilege Account Management)/Z660bdd75-9447-48fe-84e8-b26029d4f403",
+      "title": "Integration with CyberArk",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Integrations/Remote Access/Z0eb76a07-d6bc-4163-884e-002f180996d3": {
+      "id": "BlockID Integrations/Remote Access/Z0eb76a07-d6bc-4163-884e-002f180996d3",
+      "title": "Integration with Citrix NetScaler",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Integrations/Remote Access/Zcc4b90f6-9a8e-413c-a39c-24f028a44f76": {
+      "id": "BlockID Integrations/Remote Access/Zcc4b90f6-9a8e-413c-a39c-24f028a44f76",
+      "title": "Integration with CISCO Check Point",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Integrations/Remote Access/Ze62c960c-81e8-46b4-8f42-744e6c09e5e2": {
+      "id": "BlockID Integrations/Remote Access/Ze62c960c-81e8-46b4-8f42-744e6c09e5e2",
+      "title": "Integration with Zscaler",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID Mobile Application/Zcf2a3abc-5b16-4aa5-9281-4023959f8301": {
+      "id": "BlockID Mobile Application/Zcf2a3abc-5b16-4aa5-9281-4023959f8301",
+      "title": "BlockID Mobile Application User Guide",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z1b65946e-a6e7-45a8-8c9b-04d81aa9a32e": {
+      "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z1b65946e-a6e7-45a8-8c9b-04d81aa9a32e",
+      "title": "Office365 Integration",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z6afecf9d-3c6f-418b-9aab-c0c99d48009b": {
+      "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z6afecf9d-3c6f-418b-9aab-c0c99d48009b",
+      "title": "Auth0",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z707bbbf3-7895-45bd-8b00-c4c64f09641b": {
+      "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z707bbbf3-7895-45bd-8b00-c4c64f09641b",
+      "title": "G Suite",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z869ef4f5-309a-4480-a715-6c7a4148d3f9": {
+      "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Z869ef4f5-309a-4480-a715-6c7a4148d3f9",
+      "title": "Okta",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID New Admin Portal (Athena)/Applications/Add Applications/Zd8371067-2e6a-4730-9ef7-289dcab8c344": {
+      "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Zd8371067-2e6a-4730-9ef7-289dcab8c344",
+      "title": "Salesforce",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID New Admin Portal (Athena)/Applications/Add Applications/Ze12c6643-599c-41b6-b85d-1bcdb6691b0f": {
+      "id": "BlockID New Admin Portal (Athena)/Applications/Add Applications/Ze12c6643-599c-41b6-b85d-1bcdb6691b0f",
+      "title": "Generic SAML Application",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID New Admin Portal (Athena)/Directory Integrations/Z422742d5-e5f4-4563-8b5b-75fe651251fc": {
+      "id": "BlockID New Admin Portal (Athena)/Directory Integrations/Z422742d5-e5f4-4563-8b5b-75fe651251fc",
+      "title": "Broker Installation",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID New Admin Portal (Athena)/Release Notes/Z7575ff9b-19c0-408e-bf74-0080f94cb7b2": {
+      "id": "BlockID New Admin Portal (Athena)/Release Notes/Z7575ff9b-19c0-408e-bf74-0080f94cb7b2",
+      "title": "Release Notes 2021.11.03",
+      "description": "Nov 03, 2021, The 1Kosmos Team",
+      "sidebar": "mySidebar"
+    },
+    "BlockID New Admin Portal (Athena)/Settings/Zc1f22108-c5aa-4b1c-b3d5-c2cf705d1fbb": {
+      "id": "BlockID New Admin Portal (Athena)/Settings/Zc1f22108-c5aa-4b1c-b3d5-c2cf705d1fbb",
+      "title": "BlockID Attributes",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID New Admin Portal (Athena)/Z1d78dd72-0421-42cb-96da-4cb2a59eb0f8": {
+      "id": "BlockID New Admin Portal (Athena)/Z1d78dd72-0421-42cb-96da-4cb2a59eb0f8",
+      "title": "Directory",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID New Admin Portal (Athena)/Z2cd6493e-3d85-4c46-91d5-0b93e239b73c": {
+      "id": "BlockID New Admin Portal (Athena)/Z2cd6493e-3d85-4c46-91d5-0b93e239b73c",
+      "title": "Introduction to Athena Admin Portal",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID New Admin Portal (Athena)/Z3a4d60f8-4984-4f20-9d87-7d6f0800ed40": {
+      "id": "BlockID New Admin Portal (Athena)/Z3a4d60f8-4984-4f20-9d87-7d6f0800ed40",
+      "title": "Login",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID New Admin Portal (Athena)/Z9725f068-c919-4fc9-a454-053fa9382a2f": {
+      "id": "BlockID New Admin Portal (Athena)/Z9725f068-c919-4fc9-a454-053fa9382a2f",
+      "title": "Customizing the Branding of your BlockID Login Page",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID New Admin Portal (Athena)/Zb17b8cd6-f8b7-41c5-a294-400c23d8540d": {
+      "id": "BlockID New Admin Portal (Athena)/Zb17b8cd6-f8b7-41c5-a294-400c23d8540d",
+      "title": "Create Native User",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID New Admin Portal (Athena)/Ze3a67a1a-0728-4ed6-b42b-d040c4a89d6e": {
+      "id": "BlockID New Admin Portal (Athena)/Ze3a67a1a-0728-4ed6-b42b-d040c4a89d6e",
+      "title": "WebAuthn",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "BlockID New Admin Portal (Athena)/Ze5776a5b-8b2e-498a-9438-c665d9291260": {
+      "id": "BlockID New Admin Portal (Athena)/Ze5776a5b-8b2e-498a-9438-c665d9291260",
+      "title": "End User Guide",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "Developers Docs/API References/blockid-admin-console-api": {
+      "id": "Developers Docs/API References/blockid-admin-console-api",
+      "title": "BlockID Admin Console",
+      "description": "Communities",
+      "sidebar": "mySidebar"
+    },
+    "Developers Docs/BlockID Mobile Application/SDK Integrations/Android/android-100": {
+      "id": "Developers Docs/BlockID Mobile Application/SDK Integrations/Android/android-100",
+      "title": "BlockID Android SDK 1.0.0",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "Developers Docs/BlockID Mobile Application/SDK Integrations/Android/android-110": {
+      "id": "Developers Docs/BlockID Mobile Application/SDK Integrations/Android/android-110",
+      "title": "BlockID Android SDK 1.1.0",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "Developers Docs/BlockID Mobile Application/SDK Integrations/Android/blockid-android-sdk-141and142": {
+      "id": "Developers Docs/BlockID Mobile Application/SDK Integrations/Android/blockid-android-sdk-141and142",
+      "title": "BlockID Android SDK 1.4.1 and 1.4.2",
+      "description": "This document is compatible with Android SDK v1.4.1 and v1.4.2.",
+      "sidebar": "mySidebar"
+    },
+    "Developers Docs/BlockID Mobile Application/SDK Integrations/iOS/blockid-ios-sdk-141and142": {
+      "id": "Developers Docs/BlockID Mobile Application/SDK Integrations/iOS/blockid-ios-sdk-141and142",
+      "title": "BlockID iOS SDK 1.4.1 and 1.4.2",
+      "description": "This document is compatible with iOS SDK v1.4.1 and v1.4.2.",
+      "sidebar": "mySidebar"
+    },
+    "Developers Docs/BlockID Mobile Application/SDK Integrations/iOS/ios-100": {
+      "id": "Developers Docs/BlockID Mobile Application/SDK Integrations/iOS/ios-100",
+      "title": "BlockID iOS SDK 1.0.0",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "Developers Docs/BlockID Mobile Application/SDK Integrations/iOS/ios-110": {
+      "id": "Developers Docs/BlockID Mobile Application/SDK Integrations/iOS/ios-110",
+      "title": "BlockID iOS SDK 1.1.0",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "Developers Docs/getting-started": {
+      "id": "Developers Docs/getting-started",
+      "title": "Getting Started",
+      "description": "Overview:",
+      "sidebar": "mySidebar"
+    },
+    "Developers Docs/Integration Guides/BlockID Customer/Zb472749f-bb61-44eb-8fac-031da891f016": {
+      "id": "Developers Docs/Integration Guides/BlockID Customer/Zb472749f-bb61-44eb-8fac-031da891f016",
+      "title": "Android",
+      "description": "This document describes the procedure to configure the BlockID Customer Android SDK into your organization's application. This integration will allow your users to use the features provided within the Android SDK of the BlockID Customer mobile application. The features include enrollment of the user’s LiveID (captures the live (real-time) facial images) details, Fingerprint, PIN, Driving License (DL), and Passport details, etc.",
+      "sidebar": "mySidebar"
+    },
+    "Developers Docs/Integration Guides/BlockID Customer/Zbb76e7b9-89ce-4d65-a64b-29ec220cf034": {
+      "id": "Developers Docs/Integration Guides/BlockID Customer/Zbb76e7b9-89ce-4d65-a64b-29ec220cf034",
+      "title": "iOS",
+      "description": "This document describes the procedure to configure the BlockID Consumer iOS SDK into your organization's application. This integration will allow your developers to use the features provided within the iOS SDK of the BlockID Consumer mobile application. The features include enrollment of the user’s FaceID (captures the live (real-time) facial images) details, Driving License (DL), and Passport details.",
+      "sidebar": "mySidebar"
+    },
+    "Developers Docs/Integration Guides/BlockID Workforce/Z84b846a1-7451-45fd-90e0-40f33d176310": {
+      "id": "Developers Docs/Integration Guides/BlockID Workforce/Z84b846a1-7451-45fd-90e0-40f33d176310",
+      "title": "Android",
+      "description": "This document describes the procedure to configure the BlockID Workforce Android SDK into your organization's application. This integration will allow your users to use the features provided within the Android SDK of the BlockID Workforce mobile application. The features include enrollment of the user’s LiveID (captures the live (real-time) facial images) details, VoiceID, Fingerprint, and PIN, etc.",
+      "sidebar": "mySidebar"
+    },
+    "Developers Docs/Integration Guides/BlockID Workforce/Zbdaddfbc-c6b9-4fc2-bd42-35c3c77b0956": {
+      "id": "Developers Docs/Integration Guides/BlockID Workforce/Zbdaddfbc-c6b9-4fc2-bd42-35c3c77b0956",
+      "title": "iOS",
+      "description": "This document describes the procedure to configure the BlockID Workforce iOS SDK into your organization's application. This integration will allow your users to use the features provided within the iOS SDK of the BlockID Workforce mobile application. The features include enrollment of the user’s LiveID (captures the live (real-time) facial images) details, Fingerprint, and PIN, etc.",
+      "sidebar": "mySidebar"
+    },
+    "Developers Docs/univeral-web-login-guide": {
+      "id": "Developers Docs/univeral-web-login-guide",
+      "title": "Universal Web Login (UWL) Guide",
+      "description": "Overview",
+      "sidebar": "mySidebar"
+    },
+    "Release Notes/Z0f10a839-2257-4d53-a191-00722c59df7e": {
+      "id": "Release Notes/Z0f10a839-2257-4d53-a191-00722c59df7e",
+      "title": "Release Notes R1.02.00",
+      "description": "2021.01.15: Monthly Production release notes",
+      "sidebar": "mySidebar"
+    },
+    "Release Notes/Z158204c7-a371-44d5-bf91-23aa80e7fff4": {
+      "id": "Release Notes/Z158204c7-a371-44d5-bf91-23aa80e7fff4",
+      "title": "BlockID Release Notes",
+      "description": "2020",
+      "sidebar": "mySidebar"
+    },
+    "Release Notes/Z89a4e212-0c52-480e-8072-3d62e7106a82": {
+      "id": "Release Notes/Z89a4e212-0c52-480e-8072-3d62e7106a82",
+      "title": "Release Notes R1.02.03",
+      "description": "2021.03.10: Monthly Production release notes",
+      "sidebar": "mySidebar"
+    },
+    "Release Notes/Zd4c725d7-840f-4e0e-a801-c775c6e281a8": {
+      "id": "Release Notes/Zd4c725d7-840f-4e0e-a801-c775c6e281a8",
+      "title": "Release Notes v3",
+      "description": "2020.05.12: Monthly Production release notes",
+      "sidebar": "mySidebar"
+    }
   }
 }
